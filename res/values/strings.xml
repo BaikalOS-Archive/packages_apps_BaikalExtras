@@ -27,7 +27,9 @@
     <string name="system_category">System</string>
     <string name="other_category">Other</string>
 
-
+    <!-- Device parts -->
+    <string name="device_part_title">Device features</string>
+    <string name="device_part_category">Device</string>
 
     <!-- Status bar -->
 
