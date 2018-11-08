@@ -16,7 +16,7 @@
  * limitations under the License.
  */
 --><resources>
-  <string name="app_name">Aicp Extras</string>
+  <string name="app_name">BaikalOS Extras</string>
   <!-- Dashboard -->
   <string name="user_interface_category">Instellingen</string>
   <string name="system_category">Systeem</string>
@@ -43,7 +43,7 @@
   <string name="clock_date_string_edittext_summary">Voer de waarde in</string>
   <string name="menu_cancel">Annuleren</string>
   <string name="menu_save">Opslaan</string>
-  <!-- Statusbar AICP logo -->
+  <!-- Statusbar BAIKALOS logo -->
   <!-- Statusbar categories -->
   <!-- Show 4G instead of LTE -->
   <!-- Notifications -->
@@ -122,7 +122,7 @@
   <string name="system_animations_title">Display en animaties</string>
   <string name="system_animations_summary">Systeem animaties</string>
   <string name="custom_bootanimation_title">Opstartanimatie</string>
-  <string name="custom_bootanimation_summary">Selecteer een aangepaste bootanimatie. Bij elke wijziging zal van de huidige animatie een backup worden gemaakt naar de AICP_backup map in uw interne opslag. Oude backups moeten worden handmatig verwijderd als ze niet meer nodig zijn.</string>
+  <string name="custom_bootanimation_summary">Selecteer een aangepaste bootanimatie. Bij elke wijziging zal van de huidige animatie een backup worden gemaakt naar de BAIKALOS_backup map in uw interne opslag. Oude backups moeten worden handmatig verwijderd als ze niet meer nodig zijn.</string>
   <string name="bootanimation_preview">Voorvertoning opstartanimatie</string>
   <string name="bootanimation_set_custom">Aangepaste instellen...</string>
   <string name="bootanimation_creating_preview">Voorbeeldweergave maken...</string>
@@ -162,12 +162,12 @@
   <string name="log_it_dialog_title">Aan de slag</string>
   <string name="logcat_warning">Deel het of GTFO!</string>
   <string name="share_title">Delen...</string>
-  <string name="log_it_share_subject">AICP logs</string>
+  <string name="log_it_share_subject">BAIKALOS logs</string>
   <string name="log_it_now_summary">Tik hier om de logbestanden aan te maken</string>
   <string name="log_it_logs_in_progress">Logboeken worden aangemaakt…</string>
   <string name="log_it_share_type_title">Deel methode</string>
   <string name="log_it_share_type_zip">ZIP-bestand</string>
-  <string name="log_it_share_type_haste">Uploaden naar AICP-site</string>
+  <string name="log_it_share_type_haste">Uploaden naar BAIKALOS-site</string>
   <string name="log_it_share_via">Delen via</string>
   <!-- Panel porn -->
   <string name="panel_porn_title">Paneelporno</string>
@@ -176,7 +176,7 @@
   <!-- Power menu and dialogs opacity -->
   <!-- AE settings -->
   <string name="ae_settings_title">AE-aanpassingen</string>
-  <string name="ae_settings_summary">Aanpassen van het uiterlijk en gedrag van AICP Extras</string>
+  <string name="ae_settings_summary">Aanpassen van het uiterlijk en gedrag van BAIKALOS Extras</string>
   <string name="theme_title">Thema</string>
   <string name="theme_default">Thema voor standaardinstellingen</string>
   <string name="theme_default_more_accent">Accentkleuren</string>
@@ -185,25 +185,25 @@
   <string name="theme_dark">Donker</string>
   <string name="theme_dark_more_accent">Donker met meer accentkleuren</string>
   <string name="ae_launcher_enabled_title">Launcher pictogram weergeven</string>
-  <string name="ae_launcher_enabled_summary">Toon AICP Extras in app-overzicht</string>
+  <string name="ae_launcher_enabled_summary">Toon BAIKALOS Extras in app-overzicht</string>
   <string name="ae_launcher_enabled_update">Zichtbaarheid startpictogram bijgewerkt. Het kan even duren voor de wijziging zichtbaar is</string>
   <!-- About -->
   <string name="about_title">Over</string>
   <string name="about_summary">Informatie weergeven over deze ROM</string>
   <string name="weblinks_category">Weblinks</string>
   <string name="info_category">Info</string>
-  <string name="aicp_website_title">Website</string>
-  <string name="aicp_website_summary">Bezoek de AICP website</string>
+  <string name="baikalos_website_title">Website</string>
+  <string name="baikalos_website_summary">Bezoek de BAIKALOS website</string>
   <string name="g_plus_title">G+ community</string>
   <string name="g_plus_summary">Bezoek onze Google+ Community</string>
-  <string name="aicp_gerrit_title">Bezoek Gerrit</string>
-  <string name="aicp_gerrit_summary">Bzeoek onze Gerrit om te zien waar we aan werken</string>
-  <string name="aicp_changelog_title">Overzicht van wijzigingen</string>
-  <string name="aicp_changelog_summary">Bekijk recente wijzigingen in de AICP ROM</string>
-  <string name="aicp_downloads_title">Downloads</string>
-  <string name="aicp_downloads_summary">Bezoek de AICP downloadpagina voor jouw apparaat</string>
-  <string name="aicp_ota_title">OTA update centrum</string>
-  <string name="aicp_ota_summary">Controleer op AICP updates</string>
+  <string name="baikalos_gerrit_title">Bezoek Gerrit</string>
+  <string name="baikalos_gerrit_summary">Bzeoek onze Gerrit om te zien waar we aan werken</string>
+  <string name="baikalos_changelog_title">Overzicht van wijzigingen</string>
+  <string name="baikalos_changelog_summary">Bekijk recente wijzigingen in de BAIKALOS ROM</string>
+  <string name="baikalos_downloads_title">Downloads</string>
+  <string name="baikalos_downloads_summary">Bezoek de BAIKALOS downloadpagina voor jouw apparaat</string>
+  <string name="baikalos_ota_title">OTA update centrum</string>
+  <string name="baikalos_ota_summary">Controleer op BAIKALOS updates</string>
   <string name="stats_title">Statistieken</string>
   <string name="stats_summary">Aan- of afmelden voor anonieme statistieken</string>
   <string name="device_maintainer_title">Apparaat onderhouder</string>

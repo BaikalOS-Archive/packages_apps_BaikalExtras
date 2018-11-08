@@ -32,8 +32,8 @@ LOCAL_STATIC_ANDROID_LIBRARIES := \
     android-support-v7-recyclerview \
     android-support-v14-preference \
     android-support-design \
-    AicpGear-preference \
-    AicpGear-util
+    BaikalOSGear-preference \
+    BaikalOSGear-util
 
 LOCAL_STATIC_JAVA_LIBRARIES := \
     particles
@@ -43,7 +43,7 @@ LOCAL_JAVA_LIBRARIES := org.apache.http.legacy
 
 LOCAL_USE_AAPT2 := true
 
-LOCAL_PACKAGE_NAME := AicpExtras
+LOCAL_PACKAGE_NAME := BaikalOSExtras
 
 LOCAL_PRIVATE_PLATFORM_APIS := true
 LOCAL_CERTIFICATE := platform

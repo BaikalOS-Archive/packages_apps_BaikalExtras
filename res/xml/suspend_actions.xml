@@ -17,34 +17,34 @@
 <PreferenceScreen
     android:title="@string/screen_state_toggles_title"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:aicpextras="http://schemas.android.com/apk/res/com.aicp.extras">
+    xmlns:baikalosextras="http://schemas.android.com/apk/res/ru.baikalos.extras">
 
-    <com.aicp.gear.preference.SystemSettingSwitchPreference
+    <ru.baikalos.gear.preference.SystemSettingSwitchPreference
         android:key="screen_state_toggles_enable_key"
         android:title="@string/screen_state_toggles_enable_title"
         android:summary="@string/screen_state_toggles_enable_summary"
         android:defaultValue="false"/>
 
-    <com.aicp.gear.preference.SeekBarPreferenceCham
+    <ru.baikalos.gear.preference.SeekBarPreferenceCham
         android:key="screen_state_off_delay"
         android:title="@string/screen_state_off_delay_title"
         android:summary="@string/screen_state_off_delay_summary"
         android:max="30"
         android:min="0"
-        aicpextras:unitsLeft=""
-        aicpextras:unitsRight="m"
+        baikalosextras:unitsLeft=""
+        baikalosextras:unitsRight="m"
         android:defaultValue="0"
         android:persistent="false"
         android:dependency="screen_state_toggles_enable_key" />
 
-    <com.aicp.gear.preference.SeekBarPreferenceCham
+    <ru.baikalos.gear.preference.SeekBarPreferenceCham
         android:key="screen_state_on_delay"
         android:title="@string/screen_state_on_delay_title"
         android:summary="@string/screen_state_on_delay_summary"
         android:max="30"
         android:min="0"
-        aicpextras:unitsLeft=""
-        aicpextras:unitsRight="m"
+        baikalosextras:unitsLeft=""
+        baikalosextras:unitsRight="m"
         android:defaultValue="0"
         android:persistent="false"
         android:dependency="screen_state_toggles_enable_key" />
@@ -53,13 +53,13 @@
         android:key="screen_state_toggles_mobile_key"
         android:title="@string/screen_state_toggles_mobile_title">
 
-       <com.aicp.gear.preference.SystemSettingSwitchPreference
+       <ru.baikalos.gear.preference.SystemSettingSwitchPreference
             android:key="screen_state_toggles_twog"
             android:title="@string/screen_state_toggles_twog"
             android:summary="@string/screen_state_toggles_twog_summary"
             android:defaultValue="false"/>
 
-       <com.aicp.gear.preference.SystemSettingSwitchPreference
+       <ru.baikalos.gear.preference.SystemSettingSwitchPreference
             android:key="screen_state_toggles_mobile_data"
             android:title="@string/screen_state_toggles_mobile_data"
             android:summary="@string/screen_state_toggles_mobile_data_summary"
@@ -70,7 +70,7 @@
         android:key="screen_state_toggles_location_key"
         android:title="@string/screen_state_toggles_location_title">
 
-       <com.aicp.gear.preference.SystemSettingSwitchPreference
+       <ru.baikalos.gear.preference.SystemSettingSwitchPreference
             android:key="screen_state_toggles_gps"
             android:title="@string/screen_state_toggles_gps"
             android:summary="@string/screen_state_toggles_gps_summary"

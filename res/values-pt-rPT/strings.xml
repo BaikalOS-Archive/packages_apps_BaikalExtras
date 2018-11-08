@@ -16,7 +16,7 @@
  * limitations under the License.
  */
 --><resources>
-  <string name="app_name">AICP Extras</string>
+  <string name="app_name">BAIKALOS Extras</string>
   <!-- Dashboard -->
   <string name="user_interface_category">Interface do utilizador</string>
   <string name="system_category">Sistema</string>
@@ -43,7 +43,7 @@
   <string name="clock_date_string_edittext_summary">Digite a seqüência de caracteres</string>
   <string name="menu_cancel">Cancelar</string>
   <string name="menu_save">Guardar</string>
-  <!-- Statusbar AICP logo -->
+  <!-- Statusbar BAIKALOS logo -->
   <!-- Statusbar categories -->
   <!-- Show 4G instead of LTE -->
   <!-- Notifications -->
@@ -161,12 +161,12 @@
   <string name="log_it_dialog_title">Envolver-se</string>
   <string name="logcat_warning">Compartilhá-lo, ou vá embora!</string>
   <string name="share_title">A partilhar...</string>
-  <string name="log_it_share_subject">Logs de AICP</string>
+  <string name="log_it_share_subject">Logs de BAIKALOS</string>
   <string name="log_it_now_summary">Ser paciente para os logs a serem criados</string>
   <string name="log_it_logs_in_progress">Os logs estão sendo criados…</string>
   <string name="log_it_share_type_title">Método de compartilhamento</string>
   <string name="log_it_share_type_zip">Arquivo ZIP</string>
-  <string name="log_it_share_type_haste">Upload para pressa AICP</string>
+  <string name="log_it_share_type_haste">Upload para pressa BAIKALOS</string>
   <string name="log_it_share_via">Partilhar através de</string>
   <!-- Panel porn -->
   <string name="panel_porn_title">Pornô de painel</string>
@@ -175,7 +175,7 @@
   <!-- Power menu and dialogs opacity -->
   <!-- AE settings -->
   <string name="ae_settings_title">Personalização de ROM</string>
-  <string name="ae_settings_summary">Personalizar a aparência e o comportamento da Aicp Extras</string>
+  <string name="ae_settings_summary">Personalizar a aparência e o comportamento da BaikalOS Extras</string>
   <string name="theme_title">Tema</string>
   <string name="theme_default">Tema de configurações padrão</string>
   <string name="theme_default_more_accent">Mais cores</string>
@@ -184,25 +184,25 @@
   <string name="theme_dark">Escuro</string>
   <string name="theme_dark_more_accent">Escuro, com mais cor</string>
   <string name="ae_launcher_enabled_title">Mostrar ícone no launcher</string>
-  <string name="ae_launcher_enabled_summary">Mostrar AICP Extras no lançador</string>
+  <string name="ae_launcher_enabled_summary">Mostrar BAIKALOS Extras no lançador</string>
   <string name="ae_launcher_enabled_update">Visibilidade de ícone lançador atualizada. Pode levar algum tempo para que a alteração tenha efeito</string>
   <!-- About -->
   <string name="about_title">Acerca</string>
   <string name="about_summary">Exibir informações sobre esta ROM</string>
   <string name="weblinks_category">Ligações Web</string>
   <string name="info_category">Informação</string>
-  <string name="aicp_website_title">Website</string>
-  <string name="aicp_website_summary">Visite o site da AICP</string>
+  <string name="baikalos_website_title">Website</string>
+  <string name="baikalos_website_summary">Visite o site da BAIKALOS</string>
   <string name="g_plus_title">G + Comunidade</string>
   <string name="g_plus_summary">Visite nossa comunidade do Google +</string>
-  <string name="aicp_gerrit_title">Gerrit</string>
-  <string name="aicp_gerrit_summary">Visite nosso gerrit para saber o que estamos a trabalhar na</string>
-  <string name="aicp_changelog_title">Registo de alterações</string>
-  <string name="aicp_changelog_summary">Exibir alterações recentes feitas AICP</string>
-  <string name="aicp_downloads_title">Transferências</string>
-  <string name="aicp_downloads_summary">Visite a página de transferências do AICP para seu dispositivo</string>
-  <string name="aicp_ota_title">Central de atualizações</string>
-  <string name="aicp_ota_summary">Verificar se há atualizações AICP</string>
+  <string name="baikalos_gerrit_title">Gerrit</string>
+  <string name="baikalos_gerrit_summary">Visite nosso gerrit para saber o que estamos a trabalhar na</string>
+  <string name="baikalos_changelog_title">Registo de alterações</string>
+  <string name="baikalos_changelog_summary">Exibir alterações recentes feitas BAIKALOS</string>
+  <string name="baikalos_downloads_title">Transferências</string>
+  <string name="baikalos_downloads_summary">Visite a página de transferências do BAIKALOS para seu dispositivo</string>
+  <string name="baikalos_ota_title">Central de atualizações</string>
+  <string name="baikalos_ota_summary">Verificar se há atualizações BAIKALOS</string>
   <string name="stats_title">Estatísticas</string>
   <string name="stats_summary">Optar em/fora por estatísticas anônimas</string>
   <string name="device_maintainer_title">Responsável pela manutenção do dispositivo</string>

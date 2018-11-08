@@ -17,7 +17,7 @@
  */
 --><resources>
   <!-- About device screen, list item title. Takes the user to the screen about opting in or out of anonymous statistics. -->
-  <string name="anonymous_statistics_title">Statistiques AICP</string>
+  <string name="anonymous_statistics_title">Statistiques BAIKALOS</string>
   <string name="anonymous_statistics_warning_title">À propos</string>
   <string name="enable_reporting_title">Activer le rapport</string>
   <string name="preview_data_title">Aperçu des données</string>
@@ -37,6 +37,6 @@
   <string name="preview_country_title">Pays</string>
   <string name="preview_carrier_title">Opérateur</string>
   <string name="preview_romname_title">Nom de la ROM</string>
-  <string name="preview_romversion_title">Version d\'AICP</string>
-  <string name="preview_buildtype_title">Type de la build d\'AICP</string>
+  <string name="preview_romversion_title">Version d\'BAIKALOS</string>
+  <string name="preview_buildtype_title">Type de la build d\'BAIKALOS</string>
 </resources>

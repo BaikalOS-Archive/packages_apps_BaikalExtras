@@ -16,7 +16,7 @@
  * limitations under the License.
  */
 --><resources>
-  <string name="app_name">AICP Rozšírenia</string>
+  <string name="app_name">BAIKALOS Rozšírenia</string>
   <!-- Dashboard -->
   <string name="user_interface_category">Používateľské rozhranie (UI)</string>
   <string name="system_category">Systém</string>
@@ -43,7 +43,7 @@
   <string name="clock_date_string_edittext_summary">Zadajte reťazec</string>
   <string name="menu_cancel">Zrušiť</string>
   <string name="menu_save">Uložiť</string>
-  <!-- Statusbar AICP logo -->
+  <!-- Statusbar BAIKALOS logo -->
   <!-- Statusbar categories -->
   <!-- Show 4G instead of LTE -->
   <!-- Notifications -->
@@ -122,7 +122,7 @@
   <string name="system_animations_title">Animácie</string>
   <string name="system_animations_summary">Systémové animácie</string>
   <string name="custom_bootanimation_title">Spúšťacia animácia</string>
-  <string name="custom_bootanimation_summary">Vyberte vlastnú spúšťaciu animáciu. Pri každej zmene bude aktuálna animácia zálohovaná do priečinka AICP_backup vo vnútornej pamäti. Stará, ak je to nutné, musí byť odstránená ručne.</string>
+  <string name="custom_bootanimation_summary">Vyberte vlastnú spúšťaciu animáciu. Pri každej zmene bude aktuálna animácia zálohovaná do priečinka BAIKALOS_backup vo vnútornej pamäti. Stará, ak je to nutné, musí byť odstránená ručne.</string>
   <string name="bootanimation_preview">Ukážka animácie pri spustení</string>
   <string name="bootanimation_set_custom">Nastaviť vlastnú...</string>
   <string name="bootanimation_creating_preview">Vytváranie náhľadu...</string>
@@ -162,12 +162,12 @@
   <string name="log_it_dialog_title">Zapojiť sa</string>
   <string name="logcat_warning">Zdielať alebo ísť preč!</string>
   <string name="share_title">Zdieľanie...</string>
-  <string name="log_it_share_subject">Protokoly AICP</string>
+  <string name="log_it_share_subject">Protokoly BAIKALOS</string>
   <string name="log_it_now_summary">Buďte trpezliví, protokoly sa vytvárajú</string>
   <string name="log_it_logs_in_progress">Protokoly sa vytvárajú…</string>
   <string name="log_it_share_type_title">Metóda zdieľania</string>
   <string name="log_it_share_type_zip">ZIP súbor</string>
-  <string name="log_it_share_type_haste">Nahrať na AICP Haste</string>
+  <string name="log_it_share_type_haste">Nahrať na BAIKALOS Haste</string>
   <string name="log_it_share_via">Zdieľať cez</string>
   <!-- Panel porn -->
   <string name="panel_porn_title">Úpravy UI</string>
@@ -176,7 +176,7 @@
   <!-- Power menu and dialogs opacity -->
   <!-- AE settings -->
   <string name="ae_settings_title">Vlastné nastavenia AE</string>
-  <string name="ae_settings_summary">Prispôsobiť vzhľad a správanie AICPA Extras</string>
+  <string name="ae_settings_summary">Prispôsobiť vzhľad a správanie BAIKALOSA Extras</string>
   <string name="theme_title">Téma</string>
   <string name="theme_default">Predvolené nastavenia témy</string>
   <string name="theme_default_more_accent">Viac farieb</string>
@@ -185,25 +185,25 @@
   <string name="theme_dark">Tmavá</string>
   <string name="theme_dark_more_accent">Viac tmavých farieb</string>
   <string name="ae_launcher_enabled_title">Zobraziť ikonu spúšťača</string>
-  <string name="ae_launcher_enabled_summary">Zobraziť AICP Extras v spúšťači</string>
+  <string name="ae_launcher_enabled_summary">Zobraziť BAIKALOS Extras v spúšťači</string>
   <string name="ae_launcher_enabled_update">Ikona spúšťača bola aktualizovaná. Prejavenie zmeny môže chvíľu trvať</string>
   <!-- About -->
   <string name="about_title">O aplikácii</string>
   <string name="about_summary">Ďalšie informácie o tejto ROM</string>
   <string name="weblinks_category">Odkazy</string>
   <string name="info_category">Informácie</string>
-  <string name="aicp_website_title">Webstránka</string>
-  <string name="aicp_website_summary">Navštíviť webovú stránku AICP</string>
+  <string name="baikalos_website_title">Webstránka</string>
+  <string name="baikalos_website_summary">Navštíviť webovú stránku BAIKALOS</string>
   <string name="g_plus_title">Komunita G+</string>
   <string name="g_plus_summary">Navštívte našu G+ komunitu</string>
-  <string name="aicp_gerrit_title">Gerrit</string>
-  <string name="aicp_gerrit_summary">Navštívte náš Gerrit, aby ste vedeli, na čom pracujeme</string>
-  <string name="aicp_changelog_title">Zoznam zmien</string>
-  <string name="aicp_changelog_summary">Zobrazenie posledných zmeny vykonaných v AICPA</string>
-  <string name="aicp_downloads_title">Prevzatia</string>
-  <string name="aicp_downloads_summary">Navštívte stránku sťahovania AICPA pre vaše zariadenie</string>
-  <string name="aicp_ota_title">Centrum aktualizácií</string>
-  <string name="aicp_ota_summary">Skontrolovať AICP aktualizácie</string>
+  <string name="baikalos_gerrit_title">Gerrit</string>
+  <string name="baikalos_gerrit_summary">Navštívte náš Gerrit, aby ste vedeli, na čom pracujeme</string>
+  <string name="baikalos_changelog_title">Zoznam zmien</string>
+  <string name="baikalos_changelog_summary">Zobrazenie posledných zmeny vykonaných v BAIKALOSA</string>
+  <string name="baikalos_downloads_title">Prevzatia</string>
+  <string name="baikalos_downloads_summary">Navštívte stránku sťahovania BAIKALOSA pre vaše zariadenie</string>
+  <string name="baikalos_ota_title">Centrum aktualizácií</string>
+  <string name="baikalos_ota_summary">Skontrolovať BAIKALOS aktualizácie</string>
   <string name="stats_title">Štatistiky</string>
   <string name="stats_summary">Povoliť/zakázať anonymné štatistiky</string>
   <string name="device_maintainer_title">Správcovia zariadenia</string>

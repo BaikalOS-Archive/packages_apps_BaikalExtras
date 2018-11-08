@@ -31,7 +31,7 @@
 
     <PreferenceScreen
         android:title="@string/preview_data_title"
-        android:fragment="com.aicp.extras.romstats.Preview" />
+        android:fragment="ru.baikalos.extras.romstats.Preview" />
 
     <Preference
         android:key="pref_view_stats"

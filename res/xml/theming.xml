@@ -18,10 +18,10 @@
 -->
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:aicpextras="http://schemas.android.com/apk/res-auto"
+    xmlns:baikalosextras="http://schemas.android.com/apk/res-auto"
     android:title="@string/theming_title">
 
-    <com.aicp.gear.preference.SystemSettingIntListPreference
+    <ru.baikalos.gear.preference.SystemSettingIntListPreference
         android:key="theming_base"
         android:title="@string/theming_base_title"
         android:entries="@array/theming_base_entries"
@@ -29,7 +29,7 @@
         android:defaultValue="0" />
 
 
-    <com.aicp.gear.preference.SystemSettingIntListPreference
+    <ru.baikalos.gear.preference.SystemSettingIntListPreference
         android:key="theming_accent"
         android:title="@string/theming_accent_title"
         android:entries="@array/theming_accent_entries"

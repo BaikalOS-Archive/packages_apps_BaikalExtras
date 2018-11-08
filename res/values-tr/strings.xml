@@ -16,7 +16,7 @@
  * limitations under the License.
  */
 --><resources>
-  <string name="app_name">Aicp Extras</string>
+  <string name="app_name">BaikalOS Extras</string>
   <!-- Dashboard -->
   <string name="user_interface_category">Arayüz</string>
   <string name="system_category">Sistem</string>
@@ -43,7 +43,7 @@
   <string name="clock_date_string_edittext_summary">Yazı girin</string>
   <string name="menu_cancel">İptal</string>
   <string name="menu_save">Kaydet</string>
-  <!-- Statusbar AICP logo -->
+  <!-- Statusbar BAIKALOS logo -->
   <!-- Statusbar categories -->
   <!-- Show 4G instead of LTE -->
   <!-- Notifications -->
@@ -122,7 +122,7 @@
   <string name="system_animations_title">Animasyonlar</string>
   <string name="system_animations_summary">Çeşitli sistem animasyonları</string>
   <string name="custom_bootanimation_title">Açılış animasyonu</string>
-  <string name="custom_bootanimation_summary">Özel ön yükleme seçin. Her değişiklikte, geçerli animasyon dahili depolama alanınızdaki AICP_backup klasörüne yedeklenecektir. Eskiler, gerek duyulmadıkça manuel olarak silinmelidir.</string>
+  <string name="custom_bootanimation_summary">Özel ön yükleme seçin. Her değişiklikte, geçerli animasyon dahili depolama alanınızdaki BAIKALOS_backup klasörüne yedeklenecektir. Eskiler, gerek duyulmadıkça manuel olarak silinmelidir.</string>
   <string name="bootanimation_preview">Açılış animasyonu ön izleme</string>
   <string name="bootanimation_set_custom">Özel ayarla</string>
   <string name="bootanimation_creating_preview">Önizleme oluşturuluyor...</string>
@@ -162,12 +162,12 @@
   <string name="log_it_dialog_title">Oluşturuldu</string>
   <string name="logcat_warning">Paylaş veya GTFO!</string>
   <string name="share_title">Paylaş</string>
-  <string name="log_it_share_subject">Aicp verileri</string>
+  <string name="log_it_share_subject">BaikalOS verileri</string>
   <string name="log_it_now_summary">Veriler oluşturulurken lütfen bekleyin!</string>
   <string name="log_it_logs_in_progress">Günlükler oluşturuluyor…</string>
   <string name="log_it_share_type_title">Paylaşım yöntemi</string>
   <string name="log_it_share_type_zip">Zip dosyasına yükle</string>
-  <string name="log_it_share_type_haste">Aicp hasteye yükle</string>
+  <string name="log_it_share_type_haste">BaikalOS hasteye yükle</string>
   <string name="log_it_share_via">Şununla paylaş</string>
   <!-- Panel porn -->
   <string name="panel_porn_title">Saydamlık</string>
@@ -176,7 +176,7 @@
   <!-- Power menu and dialogs opacity -->
   <!-- AE settings -->
   <string name="ae_settings_title">AE özelleştirmeleri</string>
-  <string name="ae_settings_summary">Aicp Extras görünüşünü ve davranışını özelleştirme</string>
+  <string name="ae_settings_summary">BaikalOS Extras görünüşünü ve davranışını özelleştirme</string>
   <string name="theme_title">Temalar</string>
   <string name="theme_default">Varsayılan tema ayarları</string>
   <string name="theme_default_more_accent">Daha fazla renk</string>
@@ -185,25 +185,25 @@
   <string name="theme_dark">Karanlık</string>
   <string name="theme_dark_more_accent">Daha fazla karanlık renk</string>
   <string name="ae_launcher_enabled_title">Başlatıcı simgesini göster</string>
-  <string name="ae_launcher_enabled_summary">Başlatıcıda AICP Ekstraları göster</string>
+  <string name="ae_launcher_enabled_summary">Başlatıcıda BAIKALOS Ekstraları göster</string>
   <string name="ae_launcher_enabled_update">Başlatıcı simgesi görünürlüğü güncellendi. Yapılan değişikliklerin görünmesi biraz zaman alabilir</string>
   <!-- About -->
   <string name="about_title">Hakkında</string>
-  <string name="about_summary">Aicp hakkındaki bilgileri görüntüle</string>
+  <string name="about_summary">BaikalOS hakkındaki bilgileri görüntüle</string>
   <string name="weblinks_category">Web bağlantısı</string>
   <string name="info_category">Bilgiler</string>
-  <string name="aicp_website_title">İnternet sitesi</string>
-  <string name="aicp_website_summary">AICP İnternet sitesini ziyaret et</string>
+  <string name="baikalos_website_title">İnternet sitesi</string>
+  <string name="baikalos_website_summary">BAIKALOS İnternet sitesini ziyaret et</string>
   <string name="g_plus_title">G+ toğluluğu</string>
   <string name="g_plus_summary">Google+ topluluğumuzu ziyaret et</string>
-  <string name="aicp_gerrit_title">Gerrit</string>
-  <string name="aicp_gerrit_summary">Neler üzerinde çalıştığımızı görmek için gerrit sayfamızı ziyaret et</string>
-  <string name="aicp_changelog_title">Değişiklikler</string>
-  <string name="aicp_changelog_summary">AICP\'de yapılan son değişiklikleri görüntüle</string>
-  <string name="aicp_downloads_title">İndirmeler</string>
-  <string name="aicp_downloads_summary">AICP indirme sayfasını ziyaret et</string>
-  <string name="aicp_ota_title">Güncelleme merkezi</string>
-  <string name="aicp_ota_summary">AICP güncellemelerini denetle</string>
+  <string name="baikalos_gerrit_title">Gerrit</string>
+  <string name="baikalos_gerrit_summary">Neler üzerinde çalıştığımızı görmek için gerrit sayfamızı ziyaret et</string>
+  <string name="baikalos_changelog_title">Değişiklikler</string>
+  <string name="baikalos_changelog_summary">BAIKALOS\'de yapılan son değişiklikleri görüntüle</string>
+  <string name="baikalos_downloads_title">İndirmeler</string>
+  <string name="baikalos_downloads_summary">BAIKALOS indirme sayfasını ziyaret et</string>
+  <string name="baikalos_ota_title">Güncelleme merkezi</string>
+  <string name="baikalos_ota_summary">BAIKALOS güncellemelerini denetle</string>
   <string name="stats_title">İstatistikler</string>
   <string name="stats_summary">Anonim istatistiklerin seçilmesi ve açılması</string>
   <string name="device_maintainer_title">Cihaz sorumlusu</string>

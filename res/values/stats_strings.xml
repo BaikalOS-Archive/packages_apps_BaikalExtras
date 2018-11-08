@@ -18,9 +18,9 @@
 --><resources>
 
     <!-- About device screen, list item title. Takes the user to the screen about opting in or out of anonymous statistics. -->
-    <string name="anonymous_statistics_title">AICP Stats</string>
+    <string name="anonymous_statistics_title">BAIKALOS Stats</string>
     <string name="anonymous_statistics_warning_title">About</string>
-    <string name="anonymous_statistics_warning">Opting into AICP Stats will allow non-personal data to be submitted to
+    <string name="anonymous_statistics_warning">Opting into BAIKALOS Stats will allow non-personal data to be submitted to
          our servers. The information submitted includes an unique identifier, which does not compromise your privacy or personal data.
          The data is submitted every 7 days.\n\nFor an example of the data that is submitted, tap on Preview Data.</string>
 
@@ -45,7 +45,7 @@
     <string name="preview_country_title">Country</string>
     <string name="preview_carrier_title">Carrier</string>
     <string name="preview_romname_title">ROM Name</string>
-    <string name="preview_romversion_title">AICP Version</string>
-    <string name="preview_buildtype_title">AICP Build Type</string>
+    <string name="preview_romversion_title">BAIKALOS Version</string>
+    <string name="preview_buildtype_title">BAIKALOS Build Type</string>
 
 </resources>

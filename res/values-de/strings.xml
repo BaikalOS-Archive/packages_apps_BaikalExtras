@@ -16,7 +16,7 @@
  * limitations under the License.
  */
 --><resources>
-  <string name="app_name">AICP Extras</string>
+  <string name="app_name">BAIKALOS Extras</string>
   <!-- Dashboard -->
   <string name="user_interface_category">UI</string>
   <string name="system_category">System</string>
@@ -43,7 +43,7 @@
   <string name="clock_date_string_edittext_summary">Eingabe</string>
   <string name="menu_cancel">Abbrechen</string>
   <string name="menu_save">Speichern</string>
-  <!-- Statusbar AICP logo -->
+  <!-- Statusbar BAIKALOS logo -->
   <!-- Statusbar categories -->
   <!-- Show 4G instead of LTE -->
   <!-- Notifications -->
@@ -123,7 +123,7 @@
   <string name="system_animations_summary">Einstellungen zu verschiedenen Animationen</string>
   <string name="custom_bootanimation_title">Boot Animation</string>
   <string name="custom_bootanimation_summary">Wählen Sie Ihre neue Boot Animation.\nJede Änderung der aktuellen Animation wird im
-Ordner AICP_backup gesichert.\nAlte Sicherungen müssen manuell gelöscht werden, wenn sie nicht mehr benötigt werden.</string>
+Ordner BAIKALOS_backup gesichert.\nAlte Sicherungen müssen manuell gelöscht werden, wenn sie nicht mehr benötigt werden.</string>
   <string name="bootanimation_preview">Vorschau der Bootanimation</string>
   <string name="bootanimation_set_custom">Eigene aktivieren...</string>
   <string name="bootanimation_creating_preview">Erzeuge Vorschau...</string>
@@ -163,12 +163,12 @@ Ordner AICP_backup gesichert.\nAlte Sicherungen müssen manuell gelöscht werden
   <string name="log_it_dialog_title">Loslegen</string>
   <string name="logcat_warning">Teile das oder GTFO!</string>
   <string name="share_title">Teilen...</string>
-  <string name="log_it_share_subject">AICP logs</string>
+  <string name="log_it_share_subject">BAIKALOS logs</string>
   <string name="log_it_now_summary">Bitte warten, während die Logdateien erzeugt werden</string>
   <string name="log_it_logs_in_progress">Logdateien werden erzeugt…</string>
   <string name="log_it_share_type_title">Methode zur Übermittlung</string>
   <string name="log_it_share_type_zip">ZIP-Datei</string>
-  <string name="log_it_share_type_haste">Upload zur AICP hastebin-Seite</string>
+  <string name="log_it_share_type_haste">Upload zur BAIKALOS hastebin-Seite</string>
   <string name="log_it_share_via">Teilen über</string>
   <!-- Panel porn -->
   <string name="panel_porn_title">UI-Anpassungen</string>
@@ -177,7 +177,7 @@ Ordner AICP_backup gesichert.\nAlte Sicherungen müssen manuell gelöscht werden
   <!-- Power menu and dialogs opacity -->
   <!-- AE settings -->
   <string name="ae_settings_title">AE-Anpassung</string>
-  <string name="ae_settings_summary">Passe das Aussehen und Verhalten der Aicp Extras an</string>
+  <string name="ae_settings_summary">Passe das Aussehen und Verhalten der BaikalOS Extras an</string>
   <string name="theme_title">Design</string>
   <string name="theme_default">Standard-Design der Einstellungen</string>
   <string name="theme_default_more_accent">Akzentfarbe nutzen</string>
@@ -186,25 +186,25 @@ Ordner AICP_backup gesichert.\nAlte Sicherungen müssen manuell gelöscht werden
   <string name="theme_dark">Dunkel</string>
   <string name="theme_dark_more_accent">Dunkel mit Akzentfarbe</string>
   <string name="ae_launcher_enabled_title">Symbol in App-Übersicht anzeigen</string>
-  <string name="ae_launcher_enabled_summary">Zeigen AICP Extras in der App-Übersicht</string>
+  <string name="ae_launcher_enabled_summary">Zeigen BAIKALOS Extras in der App-Übersicht</string>
   <string name="ae_launcher_enabled_update">Sichtbarkeit des Symbols aktualisiert. Es kann etwas dauern bis die Änderung wirksam wird</string>
   <!-- About -->
   <string name="about_title">Über</string>
   <string name="about_summary">Informationen zu diesem ROM anzeigen</string>
   <string name="weblinks_category">Web-Links</string>
   <string name="info_category">Informationen</string>
-  <string name="aicp_website_title">Internetseite</string>
-  <string name="aicp_website_summary">Besuche die Website vom AICP</string>
+  <string name="baikalos_website_title">Internetseite</string>
+  <string name="baikalos_website_summary">Besuche die Website vom BAIKALOS</string>
   <string name="g_plus_title">G+ Community</string>
   <string name="g_plus_summary">Besuche unsere Google+ Community</string>
-  <string name="aicp_gerrit_title">Gerrit</string>
-  <string name="aicp_gerrit_summary">Besuche unser Review-System online, um zu erfahren, an was wir gerade arbeiten</string>
-  <string name="aicp_changelog_title">Änderungsprotokoll</string>
-  <string name="aicp_changelog_summary">Zeige letzte Änderungen im ROM</string>
-  <string name="aicp_downloads_title">Downloads</string>
-  <string name="aicp_downloads_summary">Besuche die AICP Webseite mit Downloads für dein Gerät</string>
-  <string name="aicp_ota_title">OTA Aktualisierung</string>
-  <string name="aicp_ota_summary">Aktualisierungsprüfung für die installierte ROM-Version</string>
+  <string name="baikalos_gerrit_title">Gerrit</string>
+  <string name="baikalos_gerrit_summary">Besuche unser Review-System online, um zu erfahren, an was wir gerade arbeiten</string>
+  <string name="baikalos_changelog_title">Änderungsprotokoll</string>
+  <string name="baikalos_changelog_summary">Zeige letzte Änderungen im ROM</string>
+  <string name="baikalos_downloads_title">Downloads</string>
+  <string name="baikalos_downloads_summary">Besuche die BAIKALOS Webseite mit Downloads für dein Gerät</string>
+  <string name="baikalos_ota_title">OTA Aktualisierung</string>
+  <string name="baikalos_ota_summary">Aktualisierungsprüfung für die installierte ROM-Version</string>
   <string name="stats_title">Statistiken</string>
   <string name="stats_summary">Ein-/Austragen für anonyme Statistiken</string>
   <string name="device_maintainer_title">Geräte-Betreuer</string>

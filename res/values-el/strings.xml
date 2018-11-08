@@ -42,7 +42,7 @@
   <string name="clock_date_string_edittext_summary">Εισαγωγή</string>
   <string name="menu_cancel">Άκυρο</string>
   <string name="menu_save">Αποθήκευση</string>
-  <!-- Statusbar AICP logo -->
+  <!-- Statusbar BAIKALOS logo -->
   <!-- Statusbar categories -->
   <!-- Show 4G instead of LTE -->
   <!-- Notifications -->
@@ -110,7 +110,7 @@
   <!-- System animations -->
   <string name="system_animations_title">Εμφάνιση και κινήσεις</string>
   <string name="custom_bootanimation_title">Γραφικά εκκίνησης</string>
-  <string name="custom_bootanimation_summary">Επιλέξτε προσαρμοσμένα γραφικά εκκίνησης. Σε κάθε αλλαγή, το τρέχον γραφικό θα αποθηκεύεται στο φάκελο AICP_backup στον εσωτερικό χώρο αποθήκευσης. Το παλιό πρέπει να διαγραφεί χειροκίνητα εάν δεν χρειάζεται.</string>
+  <string name="custom_bootanimation_summary">Επιλέξτε προσαρμοσμένα γραφικά εκκίνησης. Σε κάθε αλλαγή, το τρέχον γραφικό θα αποθηκεύεται στο φάκελο BAIKALOS_backup στον εσωτερικό χώρο αποθήκευσης. Το παλιό πρέπει να διαγραφεί χειροκίνητα εάν δεν χρειάζεται.</string>
   <!-- System behaviour -->
   <string name="system_behaviour_title">Συμπεριφορά συστήματος.</string>
   <string name="selinux_category">SELinux</string>
@@ -138,7 +138,7 @@
   <string name="log_it_logs_in_progress">Αρχεία καταγραφής δημιουργούνται …</string>
   <string name="log_it_share_type_title">Μέθοδος διαμοιρασμού</string>
   <string name="log_it_share_type_zip">ZIP-αρχείο</string>
-  <string name="log_it_share_type_haste">Ανεβάστε AICP βιαστικά</string>
+  <string name="log_it_share_type_haste">Ανεβάστε BAIKALOS βιαστικά</string>
   <string name="log_it_share_via">Κοινοποίηση μέσω</string>
   <!-- Panel porn -->
   <string name="panel_porn_title">Ροζ πανέλ</string>
@@ -146,29 +146,29 @@
   <!-- Power menu and dialogs opacity -->
   <!-- AE settings -->
   <string name="ae_settings_title">Προσαρμογή ΑΕ</string>
-  <string name="ae_settings_summary">Προσαρμόστε την εμφάνιση και τη συμπεριφορά των πρόσθετων Aicp</string>
+  <string name="ae_settings_summary">Προσαρμόστε την εμφάνιση και τη συμπεριφορά των πρόσθετων BaikalOS</string>
   <string name="theme_title">Θέμα</string>
   <string name="theme_default">Θέμα προεπιλεγμένων ρυθμίσεων</string>
   <string name="ae_launcher_enabled_title">Εμφάνιση εικονιδίου εκκινητή</string>
-  <string name="ae_launcher_enabled_summary">Εμφάνιση AICP πρόσθετα στον εκκινητή</string>
+  <string name="ae_launcher_enabled_summary">Εμφάνιση BAIKALOS πρόσθετα στον εκκινητή</string>
   <string name="ae_launcher_enabled_update">Η απεικόνιση του εικονιδίου εκκινητή ενημερώθηκε. Μπορεί να χρειαστεί λίγος χρόνος για να ισχύσει η αλλαγή</string>
   <!-- About -->
   <string name="about_title">Σχετικά</string>
   <string name="about_summary">Δείτε πληροφορίες σχετικά με αυτή την ROM</string>
   <string name="weblinks_category">Σύνδεσμοι</string>
   <string name="info_category">Πληροφορίες</string>
-  <string name="aicp_website_title">Ιστοσελίδα</string>
-  <string name="aicp_website_summary">Επισκεφθείτε την ιστοσελίδα της AICP</string>
+  <string name="baikalos_website_title">Ιστοσελίδα</string>
+  <string name="baikalos_website_summary">Επισκεφθείτε την ιστοσελίδα της BAIKALOS</string>
   <string name="g_plus_title">Κοινότητα G+</string>
   <string name="g_plus_summary">Επισκεφθείτε την κοινότητα μας στο Google +</string>
-  <string name="aicp_gerrit_title">Gerrit</string>
-  <string name="aicp_gerrit_summary">Για να δείτε τι ετοιμάζουμε, επισκεφτείτε μας στο Gerrit</string>
-  <string name="aicp_changelog_title">Πρόσφατες Αλλαγές</string>
-  <string name="aicp_changelog_summary">Δείτε τις πρόσφατες αλλαγές στην AICP</string>
-  <string name="aicp_downloads_title">Λήψεις</string>
-  <string name="aicp_downloads_summary">Επισκεφτείτε τη σελίδα λήψεων AICP για τη συσκευή σας</string>
-  <string name="aicp_ota_title">Κέντρο ενημερώσεων</string>
-  <string name="aicp_ota_summary">Έλεγχος για ενημερωμένες εκδόσεις AICP</string>
+  <string name="baikalos_gerrit_title">Gerrit</string>
+  <string name="baikalos_gerrit_summary">Για να δείτε τι ετοιμάζουμε, επισκεφτείτε μας στο Gerrit</string>
+  <string name="baikalos_changelog_title">Πρόσφατες Αλλαγές</string>
+  <string name="baikalos_changelog_summary">Δείτε τις πρόσφατες αλλαγές στην BAIKALOS</string>
+  <string name="baikalos_downloads_title">Λήψεις</string>
+  <string name="baikalos_downloads_summary">Επισκεφτείτε τη σελίδα λήψεων BAIKALOS για τη συσκευή σας</string>
+  <string name="baikalos_ota_title">Κέντρο ενημερώσεων</string>
+  <string name="baikalos_ota_summary">Έλεγχος για ενημερωμένες εκδόσεις BAIKALOS</string>
   <string name="stats_title">Στατιστικά</string>
   <string name="device_maintainer_title">Συντηρητής συσκευής</string>
   <string name="device_maintainer_dialog">Συντηρητής συσκευής</string>

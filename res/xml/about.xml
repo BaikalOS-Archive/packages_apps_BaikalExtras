@@ -20,35 +20,35 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     android:title="@string/about_title">
 
-    <!-- AICP logo -->
+    <!-- BAIKALOS logo -->
     <Preference
-        android:key="aicp_logo"
+        android:key="baikalos_logo"
         android:layout="@layout/about_logo" />
 
     <PreferenceScreen
-        android:title="@string/aicp_changelog_title"
-        android:summary="@string/aicp_changelog_summary">
-        <intent android:action="com.aicp.extras.ViewChangelog" />
+        android:title="@string/baikalos_changelog_title"
+        android:summary="@string/baikalos_changelog_summary">
+        <intent android:action="ru.baikalos.extras.ViewChangelog" />
     </PreferenceScreen>
 
     <PreferenceScreen
         android:title="@string/stats_title"
         android:summary="@string/stats_summary"
-        android:fragment="com.aicp.extras.romstats.AnonymousStats" />
+        android:fragment="ru.baikalos.extras.romstats.AnonymousStats" />
 
     <PreferenceCategory
         android:title="@string/weblinks_category">
 
         <Preference
-            android:key="aicp_downloads"
-            android:title="@string/aicp_downloads_title"
-            android:summary="@string/aicp_downloads_summary" />
+            android:key="baikalos_downloads"
+            android:title="@string/baikalos_downloads_title"
+            android:summary="@string/baikalos_downloads_summary" />
 
         <Preference
-            android:title="@string/aicp_website_title"
-            android:summary="@string/aicp_website_summary">
+            android:title="@string/baikalos_website_title"
+            android:summary="@string/baikalos_website_summary">
             <intent android:action="android.intent.action.VIEW"
-                android:data="@string/aicp_website_link" />
+                android:data="@string/baikalos_website_link" />
         </Preference>
 
         <Preference
@@ -59,10 +59,10 @@
         </Preference>
 
         <Preference
-            android:title="@string/aicp_gerrit_title"
-            android:summary="@string/aicp_gerrit_summary">
+            android:title="@string/baikalos_gerrit_title"
+            android:summary="@string/baikalos_gerrit_summary">
             <intent android:action="android.intent.action.VIEW"
-                android:data="@string/aicp_gerrit_link" />
+                android:data="@string/baikalos_gerrit_link" />
         </Preference>
 
     </PreferenceCategory>

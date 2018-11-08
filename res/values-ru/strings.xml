@@ -16,7 +16,7 @@
  * limitations under the License.
  */
 --><resources>
-  <string name="app_name">AICP Extras</string>
+  <string name="app_name">BAIKALOS Extras</string>
   <!-- Dashboard -->
   <string name="user_interface_category">Интерфейс</string>
   <string name="system_category">Система</string>
@@ -43,7 +43,7 @@
   <string name="clock_date_string_edittext_summary">Введите значение</string>
   <string name="menu_cancel">Отмена</string>
   <string name="menu_save">Сохранить</string>
-  <!-- Statusbar AICP logo -->
+  <!-- Statusbar BAIKALOS logo -->
   <!-- Statusbar categories -->
   <!-- Show 4G instead of LTE -->
   <!-- Notifications -->
@@ -122,7 +122,7 @@
   <string name="system_animations_title">Анимации</string>
   <string name="system_animations_summary">Системные анимации</string>
   <string name="custom_bootanimation_title">Анимация загрузки</string>
-  <string name="custom_bootanimation_summary">Выберите пользовательскую анимацию загрузки. При каждом изменении, текущая анимация будет скопирована в папку AICP_backup в вашей внутренней памяти. Старые анимации необходимо удалить вручную, если они не нужны.</string>
+  <string name="custom_bootanimation_summary">Выберите пользовательскую анимацию загрузки. При каждом изменении, текущая анимация будет скопирована в папку BAIKALOS_backup в вашей внутренней памяти. Старые анимации необходимо удалить вручную, если они не нужны.</string>
   <string name="bootanimation_preview">Предварительный просмотр анимации загрузки</string>
   <string name="bootanimation_set_custom">Выбрать свою...</string>
   <string name="bootanimation_creating_preview">Создание предварительного просмотра...</string>
@@ -162,12 +162,12 @@
   <string name="log_it_dialog_title">Логи собраны</string>
   <string name="logcat_warning">Поделись ими или уходи!</string>
   <string name="share_title">Поделиться...</string>
-  <string name="log_it_share_subject">Логи AICP</string>
+  <string name="log_it_share_subject">Логи BAIKALOS</string>
   <string name="log_it_now_summary">Ожидайте создания логов</string>
   <string name="log_it_logs_in_progress">Создаются логи …</string>
   <string name="log_it_share_type_title">Метод отправки</string>
   <string name="log_it_share_type_zip">ZIP-файл</string>
-  <string name="log_it_share_type_haste">Загрузить на AICP Haste</string>
+  <string name="log_it_share_type_haste">Загрузить на BAIKALOS Haste</string>
   <string name="log_it_share_via">Поделиться через</string>
   <!-- Panel porn -->
   <string name="panel_porn_title">Настройки панелей</string>
@@ -175,8 +175,8 @@
   <!-- Volume dialog opacity -->
   <!-- Power menu and dialogs opacity -->
   <!-- AE settings -->
-  <string name="ae_settings_title">Расширенные настройки AICP Extras</string>
-  <string name="ae_settings_summary">Настроить внешний вид и поведение AICP Extras</string>
+  <string name="ae_settings_title">Расширенные настройки BAIKALOS Extras</string>
+  <string name="ae_settings_summary">Настроить внешний вид и поведение BAIKALOS Extras</string>
   <string name="theme_title">Тема</string>
   <string name="theme_default">Тема по умолчанию</string>
   <string name="theme_default_more_accent">Другие цвета</string>
@@ -185,25 +185,25 @@
   <string name="theme_dark">Тёмная</string>
   <string name="theme_dark_more_accent">Тёмный с большим цветом</string>
   <string name="ae_launcher_enabled_title">Показать иконку лаунчера</string>
-  <string name="ae_launcher_enabled_summary">Показать AICP Extras в лаунчере</string>
+  <string name="ae_launcher_enabled_summary">Показать BAIKALOS Extras в лаунчере</string>
   <string name="ae_launcher_enabled_update">Обновлена видимость иконки лаунчера. Вступление в силу изменения может занять некоторое время</string>
   <!-- About -->
   <string name="about_title">Сведения</string>
   <string name="about_summary">Просмотр сведений об этой прошивке</string>
   <string name="weblinks_category">Веб-ссылки</string>
   <string name="info_category">Информация</string>
-  <string name="aicp_website_title">Веб-сайт</string>
-  <string name="aicp_website_summary">Посетить веб-сайт AICP</string>
+  <string name="baikalos_website_title">Веб-сайт</string>
+  <string name="baikalos_website_summary">Посетить веб-сайт BAIKALOS</string>
   <string name="g_plus_title">G+ сообщество</string>
   <string name="g_plus_summary">Посетить наше сообщество Google+</string>
-  <string name="aicp_gerrit_title">Gerrit</string>
-  <string name="aicp_gerrit_summary">Посетите наш Gerrit, чтобы узнать, над чем мы работаем</string>
-  <string name="aicp_changelog_title">Список изменений</string>
-  <string name="aicp_changelog_summary">Посмотреть последние изменения в AICP</string>
-  <string name="aicp_downloads_title">Загрузки</string>
-  <string name="aicp_downloads_summary">Переход на страницу загрузки AICP для вашего устройства</string>
-  <string name="aicp_ota_title">Центр обновлений</string>
-  <string name="aicp_ota_summary">Проверка обновлений AICP</string>
+  <string name="baikalos_gerrit_title">Gerrit</string>
+  <string name="baikalos_gerrit_summary">Посетите наш Gerrit, чтобы узнать, над чем мы работаем</string>
+  <string name="baikalos_changelog_title">Список изменений</string>
+  <string name="baikalos_changelog_summary">Посмотреть последние изменения в BAIKALOS</string>
+  <string name="baikalos_downloads_title">Загрузки</string>
+  <string name="baikalos_downloads_summary">Переход на страницу загрузки BAIKALOS для вашего устройства</string>
+  <string name="baikalos_ota_title">Центр обновлений</string>
+  <string name="baikalos_ota_summary">Проверка обновлений BAIKALOS</string>
   <string name="stats_title">Статистика</string>
   <string name="stats_summary">Включить/отключить анонимную статистику</string>
   <string name="device_maintainer_title">Разработчик</string>

@@ -16,7 +16,7 @@
  * limitations under the License.
  */
 --><resources>
-  <string name="app_name">Aicp 추가설정</string>
+  <string name="app_name">BaikalOS 추가설정</string>
   <!-- Dashboard -->
   <string name="user_interface_category">UI</string>
   <string name="system_category">시스템</string>
@@ -40,7 +40,7 @@
   <string name="clock_date_string_edittext_summary">문자열을 입력</string>
   <string name="menu_cancel">취소</string>
   <string name="menu_save">저장</string>
-  <!-- Statusbar AICP logo -->
+  <!-- Statusbar BAIKALOS logo -->
   <!-- Statusbar categories -->
   <!-- Show 4G instead of LTE -->
   <!-- Notifications -->
@@ -110,7 +110,7 @@
   <!-- System animations -->
   <string name="system_animations_title">애니메이션</string>
   <string name="system_animations_summary">시스템 애니메이션</string>
-  <string name="custom_bootanimation_summary">사용자 정의 부트 애니메이션을 선택하십시오. 모든 변경시 현재 애니메이션이 내부 저장 장치의 AICP_backup 폴더에 백업됩니다. 오래된 것들은 필요하지 않은 경우 수동으로 삭제해야합니다.</string>
+  <string name="custom_bootanimation_summary">사용자 정의 부트 애니메이션을 선택하십시오. 모든 변경시 현재 애니메이션이 내부 저장 장치의 BAIKALOS_backup 폴더에 백업됩니다. 오래된 것들은 필요하지 않은 경우 수동으로 삭제해야합니다.</string>
   <string name="bootanimation_preview">Bootanimation 미리보기</string>
   <string name="bootanimation_creating_preview">인쇄 미리보기...</string>
   <string name="bootanimation_error_creating_preview">미리보기를 만드는 중 오류 발생</string>
@@ -132,12 +132,12 @@
   <string name="log_it_now_title">참여</string>
   <string name="log_it_dialog_title">참여</string>
   <string name="share_title">공유...</string>
-  <string name="log_it_share_subject">Aicp 로그</string>
+  <string name="log_it_share_subject">BaikalOS 로그</string>
   <string name="log_it_now_summary">로그가 생성되는 동안 기다려주세요</string>
   <string name="log_it_logs_in_progress">로그가 생성되었습니다…</string>
   <string name="log_it_share_type_title">공유 방법</string>
   <string name="log_it_share_type_zip">ZIP 파일</string>
-  <string name="log_it_share_type_haste">AICP 메모장에 업로드</string>
+  <string name="log_it_share_type_haste">BAIKALOS 메모장에 업로드</string>
   <!-- Panel porn -->
   <string name="panel_porn_title">패널 설정</string>
   <string name="panel_porn_summary">Davor world!</string>
@@ -149,17 +149,17 @@
   <string name="theme_dark">검은색</string>
   <string name="theme_dark_more_accent">더 많은 색상으로 어둡게</string>
   <string name="ae_launcher_enabled_title">런쳐 아이콘 표시</string>
-  <string name="ae_launcher_enabled_summary">실행기에 AICP Extras 표시</string>
+  <string name="ae_launcher_enabled_summary">실행기에 BAIKALOS Extras 표시</string>
   <string name="ae_launcher_enabled_update">실행기 아이콘 가시성이 업데이트되었습니다. 변경 사항이 적용 되려면 약간의 시간이 걸릴 수 있습니다.</string>
   <!-- About -->
   <string name="about_title">소개</string>
   <string name="about_summary">이 ROM에 대한 정보보기</string>
   <string name="g_plus_title">G+ 커뮤니티</string>
-  <string name="aicp_gerrit_title">Gerrit</string>
-  <string name="aicp_gerrit_summary">우리가 일하고있는 것을 알기 위해 우리의 gerrit를 방문하십시오.</string>
-  <string name="aicp_changelog_title">변경 사항</string>
-  <string name="aicp_downloads_title">다운로드</string>
-  <string name="aicp_ota_summary">새로운 AICP 업데이트 확인</string>
+  <string name="baikalos_gerrit_title">Gerrit</string>
+  <string name="baikalos_gerrit_summary">우리가 일하고있는 것을 알기 위해 우리의 gerrit를 방문하십시오.</string>
+  <string name="baikalos_changelog_title">변경 사항</string>
+  <string name="baikalos_downloads_title">다운로드</string>
+  <string name="baikalos_ota_summary">새로운 BAIKALOS 업데이트 확인</string>
   <string name="stats_summary">익명 통계를 위한 송/수신 선택</string>
   <string name="no_root_title">루팅되지 않음</string>
   <!-- Other / general purpose -->

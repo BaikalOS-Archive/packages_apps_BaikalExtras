@@ -18,32 +18,32 @@
 -->
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:aicpextras="http://schemas.android.com/apk/res-auto"
+    xmlns:baikalosextras="http://schemas.android.com/apk/res-auto"
     android:title="@string/status_bar_title">
 
-    <com.aicp.extras.preference.SystemSettingMasterSwitchPreference
+    <ru.baikalos.extras.preference.SystemSettingMasterSwitchPreference
         android:key="statusbar_battery_bar"
         android:title="@string/battery_bar_title"
         android:defaultValue="false"
-        android:fragment="com.aicp.extras.fragments.BatteryBar" />
+        android:fragment="ru.baikalos.extras.fragments.BatteryBar" />
 
    <PreferenceCategory
         android:key="statusbar_icons_category"
         android:title="@string/status_bar_icons_category_title">
 
         <!-- Show Network Traffic State on Statusbar -->
-        <com.aicp.gear.preference.SystemSettingSwitchPreference
+        <ru.baikalos.gear.preference.SystemSettingSwitchPreference
             android:key="network_traffic_state"
             android:title="@string/network_traffic_state_title"
             android:defaultValue="false" />
 
-        <com.aicp.gear.preference.SystemSettingSeekBarPreference
+        <ru.baikalos.gear.preference.SystemSettingSeekBarPreference
            android:key="network_traffic_autohide_threshold"
            android:title="@string/network_traffic_autohide_threshold_title"
            android:max="10"
            android:min="0"
-           aicpextras:unitsLeft=""
-           aicpextras:unitsRight=""
+           baikalosextras:unitsLeft=""
+           baikalosextras:unitsRight=""
            android:defaultValue="1"
            android:dependency="network_traffic_state" />
 

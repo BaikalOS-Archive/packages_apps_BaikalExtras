@@ -16,7 +16,7 @@
  * limitations under the License.
  */
 --><resources>
-  <string name="app_name">AICP Extrák</string>
+  <string name="app_name">BAIKALOS Extrák</string>
   <!-- Dashboard -->
   <string name="user_interface_category">Felhasználói felület</string>
   <string name="system_category">Rendszer</string>
@@ -43,7 +43,7 @@
   <string name="clock_date_string_edittext_summary">Szövegbevitel</string>
   <string name="menu_cancel">Törlés</string>
   <string name="menu_save">Mentés</string>
-  <!-- Statusbar AICP logo -->
+  <!-- Statusbar BAIKALOS logo -->
   <!-- Statusbar categories -->
   <!-- Show 4G instead of LTE -->
   <!-- Notifications -->
@@ -122,7 +122,7 @@
   <string name="system_animations_title">Kijelző és animációk</string>
   <string name="system_animations_summary">Rendszeranimációk</string>
   <string name="custom_bootanimation_title">Bootanimáció</string>
-  <string name="custom_bootanimation_summary">Válassza ki a bootanimációt. Minden egyes változtatásakor biztonsági mentés készül a jelenlegi animációról a belső tároló AICP_backup mappába. Amire nincs szükség törölje manuálisan.</string>
+  <string name="custom_bootanimation_summary">Válassza ki a bootanimációt. Minden egyes változtatásakor biztonsági mentés készül a jelenlegi animációról a belső tároló BAIKALOS_backup mappába. Amire nincs szükség törölje manuálisan.</string>
   <string name="bootanimation_preview">Bootanimation előnézete</string>
   <string name="bootanimation_set_custom">Egyedi beállítása...</string>
   <string name="bootanimation_creating_preview">Előnézet létrehozása...</string>
@@ -162,12 +162,12 @@
   <string name="log_it_dialog_title">Foglalás</string>
   <string name="logcat_warning">Osszd meg vagy GTFO!</string>
   <string name="share_title">Megosztás...</string>
-  <string name="log_it_share_subject">Aicp naplók</string>
+  <string name="log_it_share_subject">BaikalOS naplók</string>
   <string name="log_it_now_summary">Légy türelemmel míg a jelentés elkészül</string>
   <string name="log_it_logs_in_progress">Naplók létrehozása folyamatban…</string>
   <string name="log_it_share_type_title">Megosztási módszer</string>
   <string name="log_it_share_type_zip">ZIP-fájl</string>
-  <string name="log_it_share_type_haste">Feltöltés AICP Haste használatával</string>
+  <string name="log_it_share_type_haste">Feltöltés BAIKALOS Haste használatával</string>
   <string name="log_it_share_via">Megosztás ezzel</string>
   <!-- Panel porn -->
   <string name="panel_porn_title">Áttetszősségi beállítások</string>
@@ -176,7 +176,7 @@
   <!-- Power menu and dialogs opacity -->
   <!-- AE settings -->
   <string name="ae_settings_title">AE testreszabás</string>
-  <string name="ae_settings_summary">Az AICP extrák viselkedésének és kinézetének módosítása</string>
+  <string name="ae_settings_summary">Az BAIKALOS extrák viselkedésének és kinézetének módosítása</string>
   <string name="theme_title">Téma</string>
   <string name="theme_default">Alapértelmezett beállítások téma</string>
   <string name="theme_default_more_accent">Több szín</string>
@@ -185,25 +185,25 @@
   <string name="theme_dark">Sötét</string>
   <string name="theme_dark_more_accent">Sötét több színnel</string>
   <string name="ae_launcher_enabled_title">Indító ikon megjelenítése</string>
-  <string name="ae_launcher_enabled_summary">AICP extrák megjelenítése az indítón</string>
+  <string name="ae_launcher_enabled_summary">BAIKALOS extrák megjelenítése az indítón</string>
   <string name="ae_launcher_enabled_update">Az indító ikon megjelenítése frissítve. A változás érvénybelépéséhez szükséges néhány perc</string>
   <!-- About -->
   <string name="about_title">Rólunk</string>
   <string name="about_summary">További információk a ROM-ról</string>
   <string name="weblinks_category">Linkek</string>
   <string name="info_category">Infó</string>
-  <string name="aicp_website_title">Weboldal</string>
-  <string name="aicp_website_summary">Látogasson el a AICP honlapjára</string>
+  <string name="baikalos_website_title">Weboldal</string>
+  <string name="baikalos_website_summary">Látogasson el a BAIKALOS honlapjára</string>
   <string name="g_plus_title">G+ közösség</string>
   <string name="g_plus_summary">Látogasson el a Google + közösségünkhöz</string>
-  <string name="aicp_gerrit_title">Gerrit</string>
-  <string name="aicp_gerrit_summary">Látogassa meg a Gerrit-et, hogy tudja min dologzunk jelenleg</string>
-  <string name="aicp_changelog_title">Változások</string>
-  <string name="aicp_changelog_summary">Nézd meg a legutóbbi változásokat a ROM-ban</string>
-  <string name="aicp_downloads_title">Letöltések</string>
-  <string name="aicp_downloads_summary">Látogassa meg készüléke AICP letöltőközpontját</string>
-  <string name="aicp_ota_title">Rendszerfrissítés</string>
-  <string name="aicp_ota_summary">AICP frissítések keresése</string>
+  <string name="baikalos_gerrit_title">Gerrit</string>
+  <string name="baikalos_gerrit_summary">Látogassa meg a Gerrit-et, hogy tudja min dologzunk jelenleg</string>
+  <string name="baikalos_changelog_title">Változások</string>
+  <string name="baikalos_changelog_summary">Nézd meg a legutóbbi változásokat a ROM-ban</string>
+  <string name="baikalos_downloads_title">Letöltések</string>
+  <string name="baikalos_downloads_summary">Látogassa meg készüléke BAIKALOS letöltőközpontját</string>
+  <string name="baikalos_ota_title">Rendszerfrissítés</string>
+  <string name="baikalos_ota_summary">BAIKALOS frissítések keresése</string>
   <string name="stats_title">Statisztika</string>
   <string name="stats_summary">Belépés/kilépés a névtelen statisztika programba/ból</string>
   <string name="device_maintainer_title">Készülékfelelősök</string>

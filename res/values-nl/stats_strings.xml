@@ -17,9 +17,9 @@
  */
 --><resources>
   <!-- About device screen, list item title. Takes the user to the screen about opting in or out of anonymous statistics. -->
-  <string name="anonymous_statistics_title">AICP Statistieken</string>
+  <string name="anonymous_statistics_title">BAIKALOS Statistieken</string>
   <string name="anonymous_statistics_warning_title">Over</string>
-  <string name="anonymous_statistics_warning">Met het inschakelen van AICP statistieken geef je toestemming om niet-persoonlijke data naar onze servers
+  <string name="anonymous_statistics_warning">Met het inschakelen van BAIKALOS statistieken geef je toestemming om niet-persoonlijke data naar onze servers
          te sturen. De doorgestuurde informatie bevat een unieke sleutel die de privacy op geen enkele wijze zal schaden.
          De data wordt elke 7 dagen gegenereerd.\n\nDoor op Preview Data te tikken, zie je een voorbeeld van de data die wordt doorgestuurd.</string>
   <string name="enable_reporting_title">Rapportage inschakelen</string>
@@ -41,6 +41,6 @@
   <string name="preview_country_title">Land</string>
   <string name="preview_carrier_title">Provider</string>
   <string name="preview_romname_title">ROM-naam</string>
-  <string name="preview_romversion_title">AICP versie</string>
-  <string name="preview_buildtype_title">AICP bouwtype</string>
+  <string name="preview_romversion_title">BAIKALOS versie</string>
+  <string name="preview_buildtype_title">BAIKALOS bouwtype</string>
 </resources>

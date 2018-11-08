@@ -5,12 +5,12 @@
         android:enabled="true"
         android:icon="@drawable/ic_launcher_shortcut_changelog"
         android:shortcutDisabledMessage="@string/launcher_shortcut_disabled_message"
-        android:shortcutLongLabel="@string/aicp_changelog_title"
-        android:shortcutShortLabel="@string/aicp_changelog_title">
+        android:shortcutLongLabel="@string/baikalos_changelog_title"
+        android:shortcutShortLabel="@string/baikalos_changelog_title">
         <intent
             android:action="android.intent.action.VIEW"
-            android:targetClass="com.aicp.extras.changelog.ChangelogActivity"
-            android:targetPackage="com.aicp.extras" />
+            android:targetClass="ru.baikalos.extras.changelog.ChangelogActivity"
+            android:targetPackage="ru.baikalos.extras" />
     </shortcut>
 
     <shortcut
@@ -18,11 +18,11 @@
         android:enabled="true"
         android:icon="@drawable/ic_launcher_shortcut_gerrit"
         android:shortcutDisabledMessage="@string/launcher_shortcut_disabled_message"
-        android:shortcutLongLabel="@string/aicp_gerrit_title"
-        android:shortcutShortLabel="@string/aicp_gerrit_title">
+        android:shortcutLongLabel="@string/baikalos_gerrit_title"
+        android:shortcutShortLabel="@string/baikalos_gerrit_title">
         <intent
             android:action="android.intent.action.VIEW"
-            android:data="http://gerrit.aicp-rom.com"/>
+            android:data="http://gerrit.baikalos-rom.com"/>
     </shortcut>
 
     <shortcut

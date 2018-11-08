@@ -33,7 +33,7 @@
   <!-- Statusbar Clock options -->
   <string name="status_bar_am_pm_info">L\'horloge au format 24 heures est activée</string>
   <string name="menu_cancel">Annuler</string>
-  <!-- Statusbar AICP logo -->
+  <!-- Statusbar BAIKALOS logo -->
   <!-- Statusbar categories -->
   <!-- Show 4G instead of LTE -->
   <!-- Notifications -->
@@ -97,7 +97,7 @@
   <!-- System animations -->
   <string name="system_animations_title">Affichage et animations</string>
   <string name="custom_bootanimation_title">Animation de démarrage</string>
-  <string name="custom_bootanimation_summary">Sélectionner une animation de démarrage. Pour chaque changement, l\'animation de démarrage sera sauvegardée dans le dossier AICP_backup dans votre mémoire interne. Les anciennes animations doivent être supprimées manuellement si vous ne les utilisez plus.</string>
+  <string name="custom_bootanimation_summary">Sélectionner une animation de démarrage. Pour chaque changement, l\'animation de démarrage sera sauvegardée dans le dossier BAIKALOS_backup dans votre mémoire interne. Les anciennes animations doivent être supprimées manuellement si vous ne les utilisez plus.</string>
   <string name="bootanimation_apply">Appliquer</string>
   <!-- System behaviour -->
   <string name="selinux_category">SELinux</string>
@@ -114,7 +114,7 @@
   <string name="log_it_dialog_title">Engage</string>
   <string name="logcat_warning">Partage la ou va te faire voir !</string>
   <string name="share_title">Partage...</string>
-  <string name="log_it_share_subject">Journaux AICP</string>
+  <string name="log_it_share_subject">Journaux BAIKALOS</string>
   <string name="log_it_now_summary">Soyez patiens le temps que les logs soient crées</string>
   <string name="log_it_logs_in_progress">Des journées ont été créés…</string>
   <string name="log_it_share_type_title">Partager la méthode</string>
@@ -131,17 +131,17 @@
   <string name="about_title">A propos</string>
   <string name="about_summary">Afficher des informations au sujet de cette ROM</string>
   <string name="info_category">Information</string>
-  <string name="aicp_website_title">Site web</string>
-  <string name="aicp_website_summary">Visiter le site WEB d\'AICP</string>
+  <string name="baikalos_website_title">Site web</string>
+  <string name="baikalos_website_summary">Visiter le site WEB d\'BAIKALOS</string>
   <string name="g_plus_title">Communauté G+</string>
   <string name="g_plus_summary">Visitez notre communauté Google +</string>
-  <string name="aicp_gerrit_title">Gerrit</string>
-  <string name="aicp_changelog_title">Journal des modifications</string>
-  <string name="aicp_changelog_summary">Voir les récentes modifications de la ROM</string>
-  <string name="aicp_downloads_title">Téléchargements</string>
-  <string name="aicp_downloads_summary">Visiter la page de téléchargement AICP pour votre appareil</string>
-  <string name="aicp_ota_title">Centre de mise à jour</string>
-  <string name="aicp_ota_summary">Rechercher des mises à jour AICP</string>
+  <string name="baikalos_gerrit_title">Gerrit</string>
+  <string name="baikalos_changelog_title">Journal des modifications</string>
+  <string name="baikalos_changelog_summary">Voir les récentes modifications de la ROM</string>
+  <string name="baikalos_downloads_title">Téléchargements</string>
+  <string name="baikalos_downloads_summary">Visiter la page de téléchargement BAIKALOS pour votre appareil</string>
+  <string name="baikalos_ota_title">Centre de mise à jour</string>
+  <string name="baikalos_ota_summary">Rechercher des mises à jour BAIKALOS</string>
   <string name="stats_title">Statistiques</string>
   <string name="device_maintainer_title">Mainteneur de l\'appareil</string>
   <string name="device_maintainer_dialog">Mainteneur de l\'appareil</string>

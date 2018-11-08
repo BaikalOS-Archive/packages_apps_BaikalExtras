@@ -16,7 +16,7 @@
  * limitations under the License.
  */
 --><resources>
-  <string name="app_name">AICP Extras</string>
+  <string name="app_name">BAIKALOS Extras</string>
   <!-- Dashboard -->
   <string name="user_interface_category">UI</string>
   <string name="system_category">Sistema</string>
@@ -43,7 +43,7 @@
   <string name="clock_date_string_edittext_summary">Digite a sequência de caracteres</string>
   <string name="menu_cancel">Cancelar</string>
   <string name="menu_save">Salvar</string>
-  <!-- Statusbar AICP logo -->
+  <!-- Statusbar BAIKALOS logo -->
   <!-- Statusbar categories -->
   <!-- Show 4G instead of LTE -->
   <!-- Notifications -->
@@ -122,7 +122,7 @@
   <string name="system_animations_title">Visor e animações</string>
   <string name="system_animations_summary">Animações do sistema</string>
   <string name="custom_bootanimation_title">Animação de inicialização</string>
-  <string name="custom_bootanimation_summary">Selecionar animação de inicialização personalizada. Em cada troca, a animação atual será copiada para a pasta AICP_backup no seu armazenamento interno. Animações antigas deverão ser excluídas manualmente se não forem mais necessárias.</string>
+  <string name="custom_bootanimation_summary">Selecionar animação de inicialização personalizada. Em cada troca, a animação atual será copiada para a pasta BAIKALOS_backup no seu armazenamento interno. Animações antigas deverão ser excluídas manualmente se não forem mais necessárias.</string>
   <string name="bootanimation_preview">Visualizar animação de inicialização</string>
   <string name="bootanimation_set_custom">Definindo personalização...</string>
   <string name="bootanimation_creating_preview">Criando visualização...</string>
@@ -161,12 +161,12 @@
   <string name="log_it_dialog_title">Engage</string>
   <string name="logcat_warning">Share it or GTFO!</string>
   <string name="share_title">Share...</string>
-  <string name="log_it_share_subject">Aicp logs</string>
+  <string name="log_it_share_subject">BaikalOS logs</string>
   <string name="log_it_now_summary">Seja paciente para que os logs sejam criados</string>
   <string name="log_it_logs_in_progress">Os logs estão sendo criados …</string>
   <string name="log_it_share_type_title">Método de compartilhamento</string>
   <string name="log_it_share_type_zip">Arquivos ZIP</string>
-  <string name="log_it_share_type_haste">Carregar para AICP Haste</string>
+  <string name="log_it_share_type_haste">Carregar para BAIKALOS Haste</string>
   <string name="log_it_share_via">Compartilhar via</string>
   <!-- Panel porn -->
   <string name="panel_porn_title">Panel porn</string>
@@ -175,7 +175,7 @@
   <!-- Power menu and dialogs opacity -->
   <!-- AE settings -->
   <string name="ae_settings_title">Personalização de AE</string>
-  <string name="ae_settings_summary">Personalizar a aparência e o comportamento do Aicp Extras</string>
+  <string name="ae_settings_summary">Personalizar a aparência e o comportamento do BaikalOS Extras</string>
   <string name="theme_title">Tema</string>
   <string name="theme_default">Tema de configurações padrão</string>
   <string name="theme_default_more_accent">Mais cores</string>
@@ -184,25 +184,25 @@
   <string name="theme_dark">Escuro</string>
   <string name="theme_dark_more_accent">Escuro com mais cor</string>
   <string name="ae_launcher_enabled_title">Mostrar ícone do launcher</string>
-  <string name="ae_launcher_enabled_summary">Mostrar AICP Extras no launcher</string>
+  <string name="ae_launcher_enabled_summary">Mostrar BAIKALOS Extras no launcher</string>
   <string name="ae_launcher_enabled_update">Visibilidade de ícone do launcher atualizada. Pode levar algum tempo para que a alteração tenha efeito</string>
   <!-- About -->
   <string name="about_title">About</string>
   <string name="about_summary">Exibir informações sobre esta ROM</string>
   <string name="weblinks_category">Links da web</string>
   <string name="info_category">Informações</string>
-  <string name="aicp_website_title">Site</string>
-  <string name="aicp_website_summary">Visite o site do AICP</string>
+  <string name="baikalos_website_title">Site</string>
+  <string name="baikalos_website_summary">Visite o site do BAIKALOS</string>
   <string name="g_plus_title">G+ community</string>
   <string name="g_plus_summary">Participe da nossa comunidade do Google +</string>
-  <string name="aicp_gerrit_title">Gerrit</string>
-  <string name="aicp_gerrit_summary">Visite o nosso Gerrit para saber no que estamos trabalhando</string>
-  <string name="aicp_changelog_title">Mudanças</string>
-  <string name="aicp_changelog_summary">Exibir alterações recentes feitas no AICP</string>
-  <string name="aicp_downloads_title">Downloads</string>
-  <string name="aicp_downloads_summary">Visite a página de download AICP para o seu dispositivo</string>
-  <string name="aicp_ota_title">Centro de Atualização</string>
-  <string name="aicp_ota_summary">Verificar se há atualizações</string>
+  <string name="baikalos_gerrit_title">Gerrit</string>
+  <string name="baikalos_gerrit_summary">Visite o nosso Gerrit para saber no que estamos trabalhando</string>
+  <string name="baikalos_changelog_title">Mudanças</string>
+  <string name="baikalos_changelog_summary">Exibir alterações recentes feitas no BAIKALOS</string>
+  <string name="baikalos_downloads_title">Downloads</string>
+  <string name="baikalos_downloads_summary">Visite a página de download BAIKALOS para o seu dispositivo</string>
+  <string name="baikalos_ota_title">Centro de Atualização</string>
+  <string name="baikalos_ota_summary">Verificar se há atualizações</string>
   <string name="stats_title">Estatísticas</string>
   <string name="stats_summary">Opt in/out para estatísticas anônimas</string>
   <string name="device_maintainer_title">Mantenedor do dispositivo</string>

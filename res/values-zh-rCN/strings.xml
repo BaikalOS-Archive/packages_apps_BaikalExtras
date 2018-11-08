@@ -16,7 +16,7 @@
  * limitations under the License.
  */
 --><resources>
-  <string name="app_name">Aicp 附加设置</string>
+  <string name="app_name">BaikalOS 附加设置</string>
   <!-- Dashboard -->
   <string name="user_interface_category">界面</string>
   <string name="system_category">系统</string>
@@ -43,7 +43,7 @@
   <string name="clock_date_string_edittext_summary">输入字符串</string>
   <string name="menu_cancel">取消</string>
   <string name="menu_save">保存</string>
-  <!-- Statusbar AICP logo -->
+  <!-- Statusbar BAIKALOS logo -->
   <!-- Statusbar categories -->
   <!-- Show 4G instead of LTE -->
   <!-- Notifications -->
@@ -122,7 +122,7 @@
   <string name="system_animations_title">显示和动画</string>
   <string name="system_animations_summary">系统动画</string>
   <string name="custom_bootanimation_title">启动动画</string>
-  <string name="custom_bootanimation_summary">选择自定义 bootanimation。在每次更改时, 当前动画将备份到内部存储中的 AICP_backup 文件夹中。如果不需要, 必须手动删除旧的。</string>
+  <string name="custom_bootanimation_summary">选择自定义 bootanimation。在每次更改时, 当前动画将备份到内部存储中的 BAIKALOS_backup 文件夹中。如果不需要, 必须手动删除旧的。</string>
   <string name="bootanimation_preview">预览开机动画</string>
   <string name="bootanimation_set_custom">自定义...</string>
   <string name="bootanimation_creating_preview">正在创建预览...</string>
@@ -162,12 +162,12 @@
   <string name="log_it_dialog_title">执行</string>
   <string name="logcat_warning">分享或者离开</string>
   <string name="share_title">分享...</string>
-  <string name="log_it_share_subject">Aicp 日志</string>
+  <string name="log_it_share_subject">BaikalOS 日志</string>
   <string name="log_it_now_summary">请耐心等待日志创建</string>
   <string name="log_it_logs_in_progress">日志已创建&amp;#8230</string>
   <string name="log_it_share_type_title">分享方式</string>
   <string name="log_it_share_type_zip">压缩文件</string>
-  <string name="log_it_share_type_haste">上传到 AICP Haste</string>
+  <string name="log_it_share_type_haste">上传到 BAIKALOS Haste</string>
   <string name="log_it_share_via">通过分享</string>
   <!-- Panel porn -->
   <string name="panel_porn_title">界面颜色设置</string>
@@ -176,7 +176,7 @@
   <!-- Power menu and dialogs opacity -->
   <!-- AE settings -->
   <string name="ae_settings_title">AE 定制</string>
-  <string name="ae_settings_summary">自定义 Aicp 附加设置的外观和行为</string>
+  <string name="ae_settings_summary">自定义 BaikalOS 附加设置的外观和行为</string>
   <string name="theme_title">主题</string>
   <string name="theme_default">默认设置</string>
   <string name="theme_default_more_accent">更多颜色</string>
@@ -185,25 +185,25 @@
   <string name="theme_dark">深色</string>
   <string name="theme_dark_more_accent">暗色与更多颜色</string>
   <string name="ae_launcher_enabled_title">显示启动器图标</string>
-  <string name="ae_launcher_enabled_summary">在启动器中显示 AICP 附加设置</string>
+  <string name="ae_launcher_enabled_summary">在启动器中显示 BAIKALOS 附加设置</string>
   <string name="ae_launcher_enabled_update">启动器图标可见性已更新。更改可能需要一些时间才能生效</string>
   <!-- About -->
   <string name="about_title">关于</string>
   <string name="about_summary">查看有关此 ROM 的信息</string>
   <string name="weblinks_category">网页链接</string>
   <string name="info_category">信息</string>
-  <string name="aicp_website_title">网站</string>
-  <string name="aicp_website_summary">访问 GIMP 网站</string>
+  <string name="baikalos_website_title">网站</string>
+  <string name="baikalos_website_summary">访问 GIMP 网站</string>
   <string name="g_plus_title">G+ 社区</string>
   <string name="g_plus_summary">访问我们的 G+ 社区</string>
-  <string name="aicp_gerrit_title">Gerrit 代码审查</string>
-  <string name="aicp_gerrit_summary">访问我们的 Gerrit 来知道我们在为什么而工作</string>
-  <string name="aicp_changelog_title">更新日志</string>
-  <string name="aicp_changelog_summary">查看 ROM 的更新日志</string>
-  <string name="aicp_downloads_title">下载地址</string>
-  <string name="aicp_downloads_summary">访问您设备的 AICP 下载页面</string>
-  <string name="aicp_ota_title">Ota 中心</string>
-  <string name="aicp_ota_summary">检查 AICP 更新</string>
+  <string name="baikalos_gerrit_title">Gerrit 代码审查</string>
+  <string name="baikalos_gerrit_summary">访问我们的 Gerrit 来知道我们在为什么而工作</string>
+  <string name="baikalos_changelog_title">更新日志</string>
+  <string name="baikalos_changelog_summary">查看 ROM 的更新日志</string>
+  <string name="baikalos_downloads_title">下载地址</string>
+  <string name="baikalos_downloads_summary">访问您设备的 BAIKALOS 下载页面</string>
+  <string name="baikalos_ota_title">Ota 中心</string>
+  <string name="baikalos_ota_summary">检查 BAIKALOS 更新</string>
   <string name="stats_title">统计</string>
   <string name="stats_summary">提交匿名统计</string>
   <string name="device_maintainer_title">设备维护人员</string>

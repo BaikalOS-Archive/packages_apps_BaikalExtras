@@ -31,7 +31,7 @@
   <!-- Double tap to sleep on status bar -->
   <!-- Statusbar Clock options -->
   <string name="menu_cancel">Avbryt</string>
-  <!-- Statusbar AICP logo -->
+  <!-- Statusbar BAIKALOS logo -->
   <!-- Statusbar categories -->
   <!-- Show 4G instead of LTE -->
   <!-- Notifications -->
@@ -103,9 +103,9 @@
   <!-- AE settings -->
   <!-- About -->
   <string name="about_title">Om</string>
-  <string name="aicp_changelog_title">Endringslogg</string>
-  <string name="aicp_downloads_title">Nedlastinger</string>
-  <string name="aicp_ota_summary">Se etter AICP oppdateringer</string>
+  <string name="baikalos_changelog_title">Endringslogg</string>
+  <string name="baikalos_downloads_title">Nedlastinger</string>
+  <string name="baikalos_ota_summary">Se etter BAIKALOS oppdateringer</string>
   <!-- Other / general purpose -->
   <string name="on">På</string>
   <string name="off">Av</string>

@@ -17,9 +17,9 @@
  */
 --><resources>
   <!-- About device screen, list item title. Takes the user to the screen about opting in or out of anonymous statistics. -->
-  <string name="anonymous_statistics_title">AICP Statistiken</string>
+  <string name="anonymous_statistics_title">BAIKALOS Statistiken</string>
   <string name="anonymous_statistics_warning_title">Über</string>
-  <string name="anonymous_statistics_warning">Der Beitritt zu AICP Stats erlaubt die Übersendung nicht-personenbezogener Daten an unsere Server.
+  <string name="anonymous_statistics_warning">Der Beitritt zu BAIKALOS Stats erlaubt die Übersendung nicht-personenbezogener Daten an unsere Server.
          Die übertragenen Informationen erhalten einen eindeutigen Identifizierungscode (ID), der nicht die Privatsphäre oder persönliche Daten gefährdet.
          Die Daten werden alle 7 Tage übermittelt.\n\nUm ein Beispiel der übertragenen Daten zu sehen, tippe auf Datenvorschau.</string>
   <string name="enable_reporting_title">Übertragung aktivieren</string>
@@ -41,6 +41,6 @@
   <string name="preview_country_title">Land</string>
   <string name="preview_carrier_title">Anbieter</string>
   <string name="preview_romname_title">ROM Name</string>
-  <string name="preview_romversion_title">AICP Version</string>
-  <string name="preview_buildtype_title">AICP Versionsart</string>
+  <string name="preview_romversion_title">BAIKALOS Version</string>
+  <string name="preview_buildtype_title">BAIKALOS Versionsart</string>
 </resources>

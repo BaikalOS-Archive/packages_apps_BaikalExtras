@@ -42,7 +42,7 @@
   <string name="clock_date_string_edittext_summary">أدخل السلسلة</string>
   <string name="menu_cancel">إلغاء</string>
   <string name="menu_save">حفظ</string>
-  <!-- Statusbar AICP logo -->
+  <!-- Statusbar BAIKALOS logo -->
   <!-- Statusbar categories -->
   <!-- Show 4G instead of LTE -->
   <!-- Notifications -->
@@ -121,7 +121,7 @@
   <string name="system_animations_title">المؤثرات الحركية</string>
   <string name="system_animations_summary">الرسوم المتحركة للنظام</string>
   <string name="custom_bootanimation_title">الرسوم المتحركة لبداية التشغيل</string>
-  <string name="custom_bootanimation_summary">حدد الرسم المتحرك للتشغيل المخصص. في كل تغيير، سوف يتم عمل نسخة لرسم التشغيل الحالي إلى المجلد AICP_backup في وحدة التخزين الداخلية. الرسومات القديمة يجب حذفها يدوياً اذا لم تعد بحاجة اليها.</string>
+  <string name="custom_bootanimation_summary">حدد الرسم المتحرك للتشغيل المخصص. في كل تغيير، سوف يتم عمل نسخة لرسم التشغيل الحالي إلى المجلد BAIKALOS_backup في وحدة التخزين الداخلية. الرسومات القديمة يجب حذفها يدوياً اذا لم تعد بحاجة اليها.</string>
   <string name="bootanimation_preview">معاينة الرسوم المتحركة للتشغيل</string>
   <string name="bootanimation_set_custom">تعيين مخصص...</string>
   <string name="bootanimation_creating_preview">إنشاء معاينة...</string>
@@ -160,12 +160,12 @@
   <string name="log_it_dialog_title">استخدام</string>
   <string name="logcat_warning">مشاركة او الخروج!</string>
   <string name="share_title">مشاركة...</string>
-  <string name="log_it_share_subject">سجلات Aicp</string>
+  <string name="log_it_share_subject">سجلات BaikalOS</string>
   <string name="log_it_now_summary">كن صبورا للسجلات المراد إنشاؤها</string>
   <string name="log_it_logs_in_progress">يتم الآن إنشاء سجلات…</string>
   <string name="log_it_share_type_title">طريقة المشاركة</string>
   <string name="log_it_share_type_zip">ملف ZIP</string>
-  <string name="log_it_share_type_haste">تحميل الى عجلة AICP</string>
+  <string name="log_it_share_type_haste">تحميل الى عجلة BAIKALOS</string>
   <string name="log_it_share_via">مشاركة عبر</string>
   <!-- Panel porn -->
   <string name="panel_porn_title">لوحة الشفافية</string>
@@ -174,7 +174,7 @@
   <!-- Power menu and dialogs opacity -->
   <!-- AE settings -->
   <string name="ae_settings_title">تخصيصات AE</string>
-  <string name="ae_settings_summary">تخصيص مظهر وسلوك من إضافات Aicp</string>
+  <string name="ae_settings_summary">تخصيص مظهر وسلوك من إضافات BaikalOS</string>
   <string name="theme_title">السمة</string>
   <string name="theme_default">سمة الإعدادات الافتراضية</string>
   <string name="theme_default_more_accent">المزيد من الألوان</string>
@@ -183,25 +183,25 @@
   <string name="theme_dark">مظلم</string>
   <string name="theme_dark_more_accent">الظلام مع المزيد من الألوان</string>
   <string name="ae_launcher_enabled_title">إظهار رمز المشغل</string>
-  <string name="ae_launcher_enabled_summary">إظهار إضافات AICP في المشغل</string>
+  <string name="ae_launcher_enabled_summary">إظهار إضافات BAIKALOS في المشغل</string>
   <string name="ae_launcher_enabled_update">تحديث رؤية رمز المشغل. قد يستغرق الأمر بعض الوقت لتكون نافذة المفعول</string>
   <!-- About -->
   <string name="about_title">حول</string>
   <string name="about_summary">عرض معلومات حول هذا الروم</string>
   <string name="weblinks_category">الروابط</string>
   <string name="info_category">معلومات</string>
-  <string name="aicp_website_title">الموقع الإلكتروني</string>
-  <string name="aicp_website_summary">قم بزيارة موقع AICP</string>
+  <string name="baikalos_website_title">الموقع الإلكتروني</string>
+  <string name="baikalos_website_summary">قم بزيارة موقع BAIKALOS</string>
   <string name="g_plus_title">مجتمع G+</string>
   <string name="g_plus_summary">انضم إلى مجتمعنا +Google</string>
-  <string name="aicp_gerrit_title">جيريت</string>
-  <string name="aicp_gerrit_summary">قم بزيارة موقعنا لتعرف ما نحن نعمل عليه</string>
-  <string name="aicp_changelog_title">سجل التغييرات</string>
-  <string name="aicp_changelog_summary">عرض التغييرات التي أدخلت مؤخرا AICP</string>
-  <string name="aicp_downloads_title">التنزيلات</string>
-  <string name="aicp_downloads_summary">قم بزيارة صفحة تنزيل AICP للجهاز الخاص بك</string>
-  <string name="aicp_ota_title">مركز التحديث</string>
-  <string name="aicp_ota_summary">التحقق من وجود تحديثات AICP</string>
+  <string name="baikalos_gerrit_title">جيريت</string>
+  <string name="baikalos_gerrit_summary">قم بزيارة موقعنا لتعرف ما نحن نعمل عليه</string>
+  <string name="baikalos_changelog_title">سجل التغييرات</string>
+  <string name="baikalos_changelog_summary">عرض التغييرات التي أدخلت مؤخرا BAIKALOS</string>
+  <string name="baikalos_downloads_title">التنزيلات</string>
+  <string name="baikalos_downloads_summary">قم بزيارة صفحة تنزيل BAIKALOS للجهاز الخاص بك</string>
+  <string name="baikalos_ota_title">مركز التحديث</string>
+  <string name="baikalos_ota_summary">التحقق من وجود تحديثات BAIKALOS</string>
   <string name="stats_title">الإحصائيات</string>
   <string name="stats_summary">اختر داخل/خارج لإحصائيات مجهولة المصدر</string>
   <string name="device_maintainer_title">مشرف الجهاز</string>

@@ -21,7 +21,7 @@
     android:title="@string/log_it_title">
 
     <ListPreference
-        android:key="aicp_log_share_type"
+        android:key="baikalos_log_share_type"
         android:title="@string/log_it_share_type_title"
         android:entries="@array/log_it_share_type_entries"
         android:entryValues="@array/log_it_share_type_values"
@@ -48,7 +48,7 @@
         android:defaultValue="false" />
 
     <Preference
-        android:key="aicp_log_it_now"
+        android:key="baikalos_log_it_now"
         android:title="@string/log_it_now_title"
         android:summary="@string/log_it_now_summary" />
 

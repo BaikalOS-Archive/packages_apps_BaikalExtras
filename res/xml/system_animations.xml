@@ -18,7 +18,7 @@
 -->
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:aicpextras="http://schemas.android.com/apk/res-auto"
+    xmlns:baikalosextras="http://schemas.android.com/apk/res-auto"
     android:title="@string/system_animations_title">
 
     <Preference
@@ -26,7 +26,7 @@
         android:title="@string/custom_bootanimation_title"
         android:summary="@string/custom_bootanimation_summary" />
 
-    <com.aicp.gear.preference.SystemSettingIntListPreference
+    <ru.baikalos.gear.preference.SystemSettingIntListPreference
         android:key="screen_off_animation"
         android:title="@string/screen_off_animation_title"
         android:dialogTitle="@string/screen_off_animation_title"

@@ -16,7 +16,7 @@
  * limitations under the License.
  */
 --><resources>
-  <string name="app_name">Dodatki AICP</string>
+  <string name="app_name">Dodatki BAIKALOS</string>
   <!-- Dashboard -->
   <string name="user_interface_category">UI</string>
   <string name="system_category">System</string>
@@ -38,7 +38,7 @@
   <string name="clock_date_string_edittext_summary">Wprowadź ciąg znaków</string>
   <string name="menu_cancel">Anuluj</string>
   <string name="menu_save">Zapisz</string>
-  <!-- Statusbar AICP logo -->
+  <!-- Statusbar BAIKALOS logo -->
   <!-- Statusbar categories -->
   <!-- Show 4G instead of LTE -->
   <!-- Notifications -->
@@ -103,7 +103,7 @@
   <string name="system_animations_title">Animacje</string>
   <string name="custom_bootanimation_title">Animacja uruchamiania
 </string>
-  <string name="custom_bootanimation_summary">Wybierz niestandardową animacje uruchamiania. Po każdej zmianie zostaje wykonana kopia obecnej animacji do AICP_backup w pamięci urządzenia. Starsze kopie muszą zostać usunięte manualnie.</string>
+  <string name="custom_bootanimation_summary">Wybierz niestandardową animacje uruchamiania. Po każdej zmianie zostaje wykonana kopia obecnej animacji do BAIKALOS_backup w pamięci urządzenia. Starsze kopie muszą zostać usunięte manualnie.</string>
   <!-- System behaviour -->
   <string name="system_behaviour_title">Zachowanie systemu</string>
   <string name="selinux_category">SELinux</string>
@@ -126,25 +126,25 @@
   <string name="theme_title">Motyw</string>
   <string name="theme_default">Domyślny motyw ustawień</string>
   <string name="ae_launcher_enabled_title">Pokaż ikonę launchera</string>
-  <string name="ae_launcher_enabled_summary">Pokaż ikonę dodatków AICP w liście aplikacji</string>
+  <string name="ae_launcher_enabled_summary">Pokaż ikonę dodatków BAIKALOS w liście aplikacji</string>
   <string name="ae_launcher_enabled_update">Zaktualizowano widoczność ikon w launcherze. Wprowadzenie zmian może chwile potrwać</string>
   <!-- About -->
   <string name="about_title">O</string>
   <string name="about_summary">Wyświetlanie informacji o tym ROMie</string>
   <string name="weblinks_category">Linki</string>
   <string name="info_category">Informacje</string>
-  <string name="aicp_website_title">Strona WWW</string>
-  <string name="aicp_website_summary">Odwiedź witrynę AICP</string>
+  <string name="baikalos_website_title">Strona WWW</string>
+  <string name="baikalos_website_summary">Odwiedź witrynę BAIKALOS</string>
   <string name="g_plus_title">Społeczność G+</string>
   <string name="g_plus_summary">Przejdź na stronę społeczności Google +</string>
-  <string name="aicp_gerrit_title">Gerrit</string>
-  <string name="aicp_gerrit_summary">Odwiedź nasz gerrit, aby wiedzieć nad czym pracujemy</string>
-  <string name="aicp_changelog_title">Dziennik zmian</string>
-  <string name="aicp_changelog_summary">Zobacz najświeższe zmiany w AICP</string>
-  <string name="aicp_downloads_title">Pobrane</string>
-  <string name="aicp_downloads_summary">Odwiedź stronę pobierania AICP dla Twojego urządzenia</string>
-  <string name="aicp_ota_title">Centrum aktualizacji</string>
-  <string name="aicp_ota_summary">Sprawdź aktualizacje</string>
+  <string name="baikalos_gerrit_title">Gerrit</string>
+  <string name="baikalos_gerrit_summary">Odwiedź nasz gerrit, aby wiedzieć nad czym pracujemy</string>
+  <string name="baikalos_changelog_title">Dziennik zmian</string>
+  <string name="baikalos_changelog_summary">Zobacz najświeższe zmiany w BAIKALOS</string>
+  <string name="baikalos_downloads_title">Pobrane</string>
+  <string name="baikalos_downloads_summary">Odwiedź stronę pobierania BAIKALOS dla Twojego urządzenia</string>
+  <string name="baikalos_ota_title">Centrum aktualizacji</string>
+  <string name="baikalos_ota_summary">Sprawdź aktualizacje</string>
   <string name="stats_title">Statystyki</string>
   <string name="stats_summary">Zezwalam na anonimowe zbieranie danych</string>
   <string name="device_maintainer_title">Opiekun urządzenia</string>

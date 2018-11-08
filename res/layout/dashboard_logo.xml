@@ -23,7 +23,7 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/aicp_logo_bg"
+        android:src="@drawable/baikalos_logo_bg"
         android:layout_gravity="bottom"
         android:scaleType="centerCrop" />
     -->
@@ -31,6 +31,6 @@
         android:id="@+id/logo_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/aicp_logo_droid"
+        android:src="@drawable/baikalos_logo_droid"
         android:layout_gravity="center_horizontal" />
 </FrameLayout>

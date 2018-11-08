@@ -17,9 +17,9 @@
  */
 --><resources>
   <!-- About device screen, list item title. Takes the user to the screen about opting in or out of anonymous statistics. -->
-  <string name="anonymous_statistics_title">Статистика AICP</string>
+  <string name="anonymous_statistics_title">Статистика BAIKALOS</string>
   <string name="anonymous_statistics_warning_title">Сведения</string>
-  <string name="anonymous_statistics_warning">Анонимные отчёты позволяют разработчикам AICP отслеживать работу ОС на различных устройствах. Отправляемая информация включает название устройства, версию прошивки и уникальный идентификатор, что никоим образом не затрагивает вашу конфиденциальность. Информация отправляется каждые 7 дней.\n\nЧтобы просмотреть пример информации, нажмите «Просмотр данных».</string>
+  <string name="anonymous_statistics_warning">Анонимные отчёты позволяют разработчикам BAIKALOS отслеживать работу ОС на различных устройствах. Отправляемая информация включает название устройства, версию прошивки и уникальный идентификатор, что никоим образом не затрагивает вашу конфиденциальность. Информация отправляется каждые 7 дней.\n\nЧтобы просмотреть пример информации, нажмите «Просмотр данных».</string>
   <string name="enable_reporting_title">Разрешить отправку отчётов</string>
   <string name="disable_reporting_persistent">Запретить отправку отчётов</string>
   <string name="preview_data_title">Просмотр данных</string>
@@ -35,6 +35,6 @@
   <string name="preview_country_title">Страна</string>
   <string name="preview_carrier_title">Оператор связи</string>
   <string name="preview_romname_title">Название прошивки</string>
-  <string name="preview_romversion_title">Версия AICP</string>
-  <string name="preview_buildtype_title">Тип сборки AICP</string>
+  <string name="preview_romversion_title">Версия BAIKALOS</string>
+  <string name="preview_buildtype_title">Тип сборки BAIKALOS</string>
 </resources>

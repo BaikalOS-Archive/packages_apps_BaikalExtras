@@ -17,9 +17,9 @@
  */
 --><resources>
   <!-- About device screen, list item title. Takes the user to the screen about opting in or out of anonymous statistics. -->
-  <string name="anonymous_statistics_title">AICP Statisztika</string>
+  <string name="anonymous_statistics_title">BAIKALOS Statisztika</string>
   <string name="anonymous_statistics_warning_title">Rólunk</string>
-  <string name="anonymous_statistics_warning">Az AICP Statisztika engedélyezése nem terjed ki személyes adatokra, csak egy egyedi azonosítóval azonosítjuk az eszközöket. A statisztikák 7 naponta kerülnek elküldésre. \n\n Az elküldött adatok előnézetének megtekintéséhez érintse meg az Elküldött adatok előnézete gombot.</string>
+  <string name="anonymous_statistics_warning">Az BAIKALOS Statisztika engedélyezése nem terjed ki személyes adatokra, csak egy egyedi azonosítóval azonosítjuk az eszközöket. A statisztikák 7 naponta kerülnek elküldésre. \n\n Az elküldött adatok előnézetének megtekintéséhez érintse meg az Elküldött adatok előnézete gombot.</string>
   <string name="enable_reporting_title">Telemetria engedélyezése</string>
   <string name="disable_reporting_persistent">Jelentések állandó letiltása</string>
   <string name="preview_data_title">Elküldött adatok előnézete</string>
@@ -39,6 +39,6 @@
   <string name="preview_country_title">Ország</string>
   <string name="preview_carrier_title">Szolgáltató</string>
   <string name="preview_romname_title">ROM név</string>
-  <string name="preview_romversion_title">AICP Verzió</string>
-  <string name="preview_buildtype_title">AICP Build készítés típusa</string>
+  <string name="preview_romversion_title">BAIKALOS Verzió</string>
+  <string name="preview_buildtype_title">BAIKALOS Build készítés típusa</string>
 </resources>

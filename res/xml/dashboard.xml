@@ -19,9 +19,9 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     android:title="@string/app_name">
 
-    <!-- AICP logo -->
-    <com.aicp.gear.preference.LongClickablePreference
-        android:key="aicp_logo"
+    <!-- BAIKALOS logo -->
+    <ru.baikalos.gear.preference.LongClickablePreference
+        android:key="baikalos_logo"
         android:layout="@layout/dashboard_logo" />
 
     <PreferenceCategory
@@ -31,13 +31,13 @@
             android:title="@string/navigation_title"
             android:summary="@string/navigation_summary"
             android:icon="@drawable/ic_settings_navbar"
-            android:fragment="com.aicp.extras.fragments.Navigation" />
+            android:fragment="ru.baikalos.extras.fragments.Navigation" />
 
         <PreferenceScreen
             android:title="@string/recents_title"
             android:summary="@string/recents_summary"
             android:icon="@drawable/ic_settings_recents"
-            android:fragment="com.aicp.extras.fragments.Recents" />
+            android:fragment="ru.baikalos.extras.fragments.Recents" />
 
     </PreferenceCategory>
 
@@ -48,43 +48,43 @@
             android:title="@string/status_bar_title"
             android:summary="@string/status_bar_summary"
             android:icon="@drawable/ic_settings_status_bar"
-            android:fragment="com.aicp.extras.fragments.StatusBar" />
+            android:fragment="ru.baikalos.extras.fragments.StatusBar" />
 
         <PreferenceScreen
             android:title="@string/notifications_title"
             android:summary="@string/notifications_summary"
             android:icon="@drawable/ic_settings_notifications"
-            android:fragment="com.aicp.extras.fragments.Notifications" />
+            android:fragment="ru.baikalos.extras.fragments.Notifications" />
 
         <PreferenceScreen
             android:title="@string/quick_settings_title"
             android:summary="@string/quick_settings_summary"
             android:icon="@drawable/ic_settings_quick_settings"
-            android:fragment="com.aicp.extras.fragments.QuickSettings" />
+            android:fragment="ru.baikalos.extras.fragments.QuickSettings" />
 
         <PreferenceScreen
             android:title="@string/lockscreen_title"
             android:summary="@string/lockscreen_summary"
             android:icon="@drawable/ic_settings_lockscreen"
-            android:fragment="com.aicp.extras.fragments.Lockscreen" />
+            android:fragment="ru.baikalos.extras.fragments.Lockscreen" />
 
         <PreferenceScreen
             android:title="@string/panel_porn_title"
             android:summary="@string/panel_porn_summary"
             android:icon="@drawable/ic_settings_panel_porn"
-            android:fragment="com.aicp.extras.fragments.PanelPorn" />
+            android:fragment="ru.baikalos.extras.fragments.PanelPorn" />
 
         <PreferenceScreen
             android:title="@string/theming_title"
             android:summary="@string/theming_summary"
             android:icon="@drawable/ic_settings_theming"
-            android:fragment="com.aicp.extras.fragments.Theming" />
+            android:fragment="ru.baikalos.extras.fragments.Theming" />
 
         <PreferenceScreen
             android:title="@string/other_ui_title"
             android:summary="@string/other_ui_summary"
             android:icon="@drawable/ic_settings_other_ui"
-            android:fragment="com.aicp.extras.fragments.OtherUi" />
+            android:fragment="ru.baikalos.extras.fragments.OtherUi" />
 
     </PreferenceCategory>
 
@@ -95,19 +95,19 @@
             android:title="@string/system_animations_title"
             android:summary="@string/system_animations_summary"
             android:icon="@drawable/ic_settings_system_animations"
-            android:fragment="com.aicp.extras.fragments.SystemAnimations" />
+            android:fragment="ru.baikalos.extras.fragments.SystemAnimations" />
 
         <PreferenceScreen
             android:title="@string/system_behaviour_title"
             android:summary="@string/system_behaviour_summary"
             android:icon="@drawable/ic_settings_system_behaviour"
-            android:fragment="com.aicp.extras.fragments.SystemBehaviour" />
+            android:fragment="ru.baikalos.extras.fragments.SystemBehaviour" />
 
         <PreferenceScreen
             android:title="@string/system_extensions_title"
             android:summary="@string/system_extensions_summary"
             android:icon="@drawable/ic_settings_system_extensions"
-            android:fragment="com.aicp.extras.fragments.SystemExtensions" />
+            android:fragment="ru.baikalos.extras.fragments.SystemExtensions" />
 
     </PreferenceCategory>
 
@@ -118,12 +118,12 @@
             android:title="@string/about_title"
             android:summary="@string/about_summary"
             android:icon="@drawable/ic_settings_about"
-            android:fragment="com.aicp.extras.fragments.About" />
+            android:fragment="ru.baikalos.extras.fragments.About" />
 
         <Preference
-            android:key="aicp_ota"
-            android:title="@string/aicp_ota_title"
-            android:summary="@string/aicp_ota_summary"
+            android:key="baikalos_ota"
+            android:title="@string/baikalos_ota_title"
+            android:summary="@string/baikalos_ota_summary"
             android:icon="@drawable/ic_settings_ota" />
 
         <PreferenceScreen
@@ -131,13 +131,13 @@
             android:title="@string/log_it_title"
             android:summary="@string/log_it_summary"
             android:icon="@drawable/ic_settings_log_it"
-            android:fragment="com.aicp.extras.fragments.LogIt" />
+            android:fragment="ru.baikalos.extras.fragments.LogIt" />
 
         <PreferenceScreen
             android:title="@string/ae_settings_title"
             android:summary="@string/ae_settings_summary"
             android:icon="@drawable/ic_settings_ae_customization"
-            android:fragment="com.aicp.extras.fragments.AeSettings" />
+            android:fragment="ru.baikalos.extras.fragments.AeSettings" />
 
     </PreferenceCategory>
 </PreferenceScreen>

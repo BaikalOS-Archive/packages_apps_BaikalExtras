@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2016 AICP
+<!-- Copyright (C) 2016 BAIKALOS
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -23,14 +23,14 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/aicp_logo_bg"
+        android:src="@drawable/baikalos_logo_bg"
         android:layout_gravity="bottom"
         android:scaleType="centerCrop" />
     -->
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/aicp_logo_letters"
+        android:src="@drawable/baikalos_logo_letters"
         android:tint="?android:attr/colorAccent"
         android:layout_gravity="center_horizontal" />
 </FrameLayout>

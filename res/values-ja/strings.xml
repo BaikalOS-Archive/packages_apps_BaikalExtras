@@ -16,7 +16,7 @@
  * limitations under the License.
  */
 --><resources>
-  <string name="app_name">AICP Extras</string>
+  <string name="app_name">BAIKALOS Extras</string>
   <!-- Dashboard -->
   <string name="user_interface_category">インターフェース</string>
   <string name="system_category">システム</string>
@@ -43,7 +43,7 @@
   <string name="clock_date_string_edittext_summary">文字列を入力</string>
   <string name="menu_cancel">キャンセル</string>
   <string name="menu_save">保存</string>
-  <!-- Statusbar AICP logo -->
+  <!-- Statusbar BAIKALOS logo -->
   <!-- Statusbar categories -->
   <!-- Show 4G instead of LTE -->
   <!-- Notifications -->
@@ -122,7 +122,7 @@
   <string name="system_animations_title">アニメーション</string>
   <string name="system_animations_summary">システムのアニメーション設定</string>
   <string name="custom_bootanimation_title">ブートアニメーション</string>
-  <string name="custom_bootanimation_summary">カスタムブートアニメーションを選択してください。変更する度に現在のアニメーションが日付と共に内部ストレージの AICP_backup フォルダにバックアップされます。必要なければ削除してください。</string>
+  <string name="custom_bootanimation_summary">カスタムブートアニメーションを選択してください。変更する度に現在のアニメーションが日付と共に内部ストレージの BAIKALOS_backup フォルダにバックアップされます。必要なければ削除してください。</string>
   <string name="bootanimation_preview">ブートアニメーションのプレビュー</string>
   <string name="bootanimation_set_custom">カスタムを設定...</string>
   <string name="bootanimation_creating_preview">プレビューの生成中...</string>
@@ -162,12 +162,12 @@
   <string name="log_it_dialog_title">ログの取得</string>
   <string name="logcat_warning">共有しよう！</string>
   <string name="share_title">共有する...</string>
-  <string name="log_it_share_subject">AICP ログ</string>
+  <string name="log_it_share_subject">BAIKALOS ログ</string>
   <string name="log_it_now_summary">ログが作成されるまでお待ちください</string>
   <string name="log_it_logs_in_progress">ログを作成しました…</string>
   <string name="log_it_share_type_title">共有方法</string>
   <string name="log_it_share_type_zip">ZIP ファイル</string>
-  <string name="log_it_share_type_haste">AICP Haste にアップロード</string>
+  <string name="log_it_share_type_haste">BAIKALOS Haste にアップロード</string>
   <string name="log_it_share_via">共有...</string>
   <!-- Panel porn -->
   <string name="panel_porn_title">パネル</string>
@@ -175,8 +175,8 @@
   <!-- Volume dialog opacity -->
   <!-- Power menu and dialogs opacity -->
   <!-- AE settings -->
-  <string name="ae_settings_title">AICP Extras の設定</string>
-  <string name="ae_settings_summary">AICP Extras の見た目や動作をカスタマイズします</string>
+  <string name="ae_settings_title">BAIKALOS Extras の設定</string>
+  <string name="ae_settings_summary">BAIKALOS Extras の見た目や動作をカスタマイズします</string>
   <string name="theme_title">テーマ</string>
   <string name="theme_default">デフォルトのテーマ</string>
   <string name="theme_default_more_accent">他の色</string>
@@ -185,25 +185,25 @@
   <string name="theme_dark">ダーク</string>
   <string name="theme_dark_more_accent">ダークとアクセント</string>
   <string name="ae_launcher_enabled_title">ランチャーアイコンの表示</string>
-  <string name="ae_launcher_enabled_summary">AICP Extrasのアイコンをランチャーに表示する</string>
+  <string name="ae_launcher_enabled_summary">BAIKALOS Extrasのアイコンをランチャーに表示する</string>
   <string name="ae_launcher_enabled_update">ランチャーアイコンの表示設定を更新しました。変更の反映には少し時間がかかることがあります</string>
   <!-- About -->
-  <string name="about_title">AICP Extrasについて</string>
+  <string name="about_title">BAIKALOS Extrasについて</string>
   <string name="about_summary">この ROM についての情報を表示します</string>
   <string name="weblinks_category">ウェブリンク</string>
   <string name="info_category">情報</string>
-  <string name="aicp_website_title">ウェブサイト</string>
-  <string name="aicp_website_summary">AICP のウェブサイトにアクセスします</string>
+  <string name="baikalos_website_title">ウェブサイト</string>
+  <string name="baikalos_website_summary">BAIKALOS のウェブサイトにアクセスします</string>
   <string name="g_plus_title">Google+ コミュニティ</string>
   <string name="g_plus_summary">Google+ コミュニティにアクセスします</string>
-  <string name="aicp_gerrit_title">Gerrit Code Review</string>
-  <string name="aicp_gerrit_summary">Gerrit で AICP の開発の最前線をチェックします</string>
-  <string name="aicp_changelog_title">更新履歴</string>
-  <string name="aicp_changelog_summary">AICP の最近の更新履歴を確認します</string>
-  <string name="aicp_downloads_title">ダウンロード</string>
-  <string name="aicp_downloads_summary">最新のビルドをダウンロードします</string>
-  <string name="aicp_ota_title">アップデートセンター</string>
-  <string name="aicp_ota_summary">AICP の更新を確認します</string>
+  <string name="baikalos_gerrit_title">Gerrit Code Review</string>
+  <string name="baikalos_gerrit_summary">Gerrit で BAIKALOS の開発の最前線をチェックします</string>
+  <string name="baikalos_changelog_title">更新履歴</string>
+  <string name="baikalos_changelog_summary">BAIKALOS の最近の更新履歴を確認します</string>
+  <string name="baikalos_downloads_title">ダウンロード</string>
+  <string name="baikalos_downloads_summary">最新のビルドをダウンロードします</string>
+  <string name="baikalos_ota_title">アップデートセンター</string>
+  <string name="baikalos_ota_summary">BAIKALOS の更新を確認します</string>
   <string name="stats_title">利用統計</string>
   <string name="stats_summary">匿名の統計をオプトイン/アウトします</string>
   <string name="device_maintainer_title">メンテナ</string>

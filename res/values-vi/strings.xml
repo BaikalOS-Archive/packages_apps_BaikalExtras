@@ -31,7 +31,7 @@
   <!-- Double tap to sleep on status bar -->
   <!-- Statusbar Clock options -->
   <string name="menu_cancel">Hủy</string>
-  <!-- Statusbar AICP logo -->
+  <!-- Statusbar BAIKALOS logo -->
   <!-- Statusbar categories -->
   <!-- Show 4G instead of LTE -->
   <!-- Notifications -->
@@ -110,12 +110,12 @@
   <string name="log_it_dialog_title">Tham gia</string>
   <string name="logcat_warning">Chia sẻ nó hoặc GTFO!</string>
   <string name="share_title">Chia sẻ...</string>
-  <string name="log_it_share_subject">Bản ghi Aicp</string>
+  <string name="log_it_share_subject">Bản ghi BaikalOS</string>
   <string name="log_it_now_summary">Kiên nhẫn trong khi các bản ghi được tạo ra</string>
   <string name="log_it_logs_in_progress">Các bản ghi đang được tạo …</string>
   <string name="log_it_share_type_title">Phương pháp chia sẻ</string>
   <string name="log_it_share_type_zip">File ZIP</string>
-  <string name="log_it_share_type_haste">Tải lên AICP Haste</string>
+  <string name="log_it_share_type_haste">Tải lên BAIKALOS Haste</string>
   <!-- Panel porn -->
   <string name="panel_porn_title">Bảng điều khiển</string>
   <!-- Volume dialog opacity -->
@@ -124,10 +124,10 @@
   <!-- About -->
   <string name="about_title">Thông tin</string>
   <string name="g_plus_title">Cộng đồng G+</string>
-  <string name="aicp_gerrit_title">Gerrit</string>
-  <string name="aicp_changelog_title">Nhật ký thay đổi</string>
-  <string name="aicp_downloads_title">Tải xuống</string>
-  <string name="aicp_ota_summary">Kiểm tra các cập nhật mới</string>
+  <string name="baikalos_gerrit_title">Gerrit</string>
+  <string name="baikalos_changelog_title">Nhật ký thay đổi</string>
+  <string name="baikalos_downloads_title">Tải xuống</string>
+  <string name="baikalos_ota_summary">Kiểm tra các cập nhật mới</string>
   <!-- Other / general purpose -->
   <string name="on">Bật</string>
   <string name="off">Tắt</string>
