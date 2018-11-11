@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+    <!-- Audio Tweaks -->
+    <string name="audio_tweaks_title">Audio Tweaks</string>
+    <string name="audio_tweaks_summary">Audio related tweaks and hacks</string>
+
+    <string name="audio_tweaks_anc_title">Enable ANC</string>
+    <string name="audio_tweaks_anc_summary">Enable analog noise cancellation for voice calls</string>
+
+    <string name="audio_tweaks_fluence_title">Enable Dual-mic</string>
+    <string name="audio_tweaks_fluence_summary">Enable dual-mic config for voice calls</string>
+
+    <string name="audio_tweaks_whatsapp_title">WhatsApp hack</string>
+    <string name="audio_tweaks_whatsapp_summary">Use voice recording mic for whatsapp voice messages</string>
+
+    <string name="audio_tweaks_hp_detect_title">Disable HP detect</string>
+    <string name="audio_tweaks_hp_detect_summary">Disable detection of headphones. For devices with broken USB-C port.</string>
+
+</resources>

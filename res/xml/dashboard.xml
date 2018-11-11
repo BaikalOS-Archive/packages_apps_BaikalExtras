@@ -126,6 +126,19 @@
             android:icon="@drawable/ic_settings_system_extensions"
             android:fragment="ru.baikalos.extras.fragments.SystemExtensions" />
 
+
+        <PreferenceScreen
+            android:title="@string/audio_tweaks_title"
+            android:summary="@string/audio_tweaks_summary"
+            android:icon="@drawable/ic_settings_system_extensions"
+            android:fragment="ru.baikalos.extras.fragments.AudioTweaks" />
+
+        <PreferenceScreen
+            android:title="@string/powersave_title"
+            android:summary="@string/powersave_summary"
+            android:icon="@drawable/ic_settings_system_extensions"
+            android:fragment="ru.baikalos.extras.fragments.PowerSave" />
+
     </PreferenceCategory>
 
     <PreferenceCategory
