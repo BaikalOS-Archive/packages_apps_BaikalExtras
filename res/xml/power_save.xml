@@ -21,6 +21,17 @@
     xmlns:baikalosextras="http://schemas.android.com/apk/res-auto"
     android:title="@string/powersave_title">
 
+    <PreferenceScreen
+        android:key="suspend_actions"
+        android:title="@string/screen_state_toggles_title"
+        android:fragment="ru.baikalos.extras.fragments.SuspendActions" />
+
+    <ru.baikalos.gear.preference.SystemSettingSwitchPreference
+        android:key="sensor_block"
+        android:title="@string/sensor_block_title"
+        android:summary="@string/sensor_block_summary"
+        android:defaultValue="false" />
+
     <ru.baikalos.gear.preference.GlobalSettingSwitchPreference
         android:key="device_idle_aggressive_enabled"
         android:title="@string/device_idle_aggressive_title"

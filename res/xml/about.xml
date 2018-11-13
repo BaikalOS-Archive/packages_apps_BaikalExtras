@@ -36,7 +36,7 @@
         android:summary="@string/stats_summary"
         android:fragment="ru.baikalos.extras.romstats.AnonymousStats" />
 
-    <PreferenceCategory
+    <!-- PreferenceCategory
         android:title="@string/weblinks_category">
 
         <Preference
@@ -65,7 +65,7 @@
                 android:data="@string/baikalos_gerrit_link" />
         </Preference>
 
-    </PreferenceCategory>
+    </PreferenceCategory -->
 
     <PreferenceCategory
         android:title="@string/info_category">

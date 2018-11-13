@@ -22,17 +22,6 @@
     xmlns:lineage="http://schemas.android.com/apk/res/lineageos.platform"
     android:title="@string/system_behaviour_title">
 
-    <PreferenceScreen
-        android:key="suspend_actions"
-        android:title="@string/screen_state_toggles_title"
-        android:fragment="ru.baikalos.extras.fragments.SuspendActions" />
-
-    <ru.baikalos.gear.preference.SystemSettingSwitchPreference
-        android:key="sensor_block"
-        android:title="@string/sensor_block_title"
-        android:summary="@string/sensor_block_summary"
-        android:defaultValue="false" />
-
     <!-- SELinux -->
     <PreferenceCategory
         android:key="selinux"
