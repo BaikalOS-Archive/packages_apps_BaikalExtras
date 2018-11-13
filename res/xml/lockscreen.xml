@@ -31,6 +31,13 @@
               android:summaryOn="@string/fprint_sucess_vib_summary_on"
               android:summaryOff="@string/fprint_sucess_vib_summary_off"
               android:defaultValue="true" />
+
+        <ru.baikalos.gear.preference.SecureSettingSwitchPreference
+            android:key="smartlock_auto_unlock"
+            android:title="@string/smartlock_auto_unlock_title"
+            android:summary="@string/smartlock_auto_unlock_summary"
+            android:defaultValue="false" />
+
     </PreferenceCategory>
 
 </PreferenceScreen>

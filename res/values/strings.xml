@@ -159,6 +159,9 @@
     <!-- Show Lockscreen clock, date, & alarm -->
     <!-- Hide statusbar on lockscreen -->
     <!-- Other UI tweaks -->
+    <!-- Smartlock Auto Unlock -->
+    <string name="smartlock_auto_unlock_title">Smartlock Auto Unlock</string>
+    <string name="smartlock_auto_unlock_summary">Auto unlock if smartlock authenticated</string>
 
     <string name="other_ui_title">Other UI tweaks</string>
     <string name="other_ui_summary">Various misc</string>
