@@ -259,7 +259,7 @@
     <!-- Power menu and dialogs opacity -->
     <!-- AE settings -->
 
-    <string name="ae_settings_title">AE customization</string>
+    <string name="ae_settings_title">BE customization</string>
     <string name="ae_settings_summary">Customize the look and behaviour of BaikalOS Extras</string>
 
     <string name="theme_title">Theme</string>
