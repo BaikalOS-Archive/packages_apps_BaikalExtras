@@ -80,7 +80,7 @@
     <string name="menu_cancel">Cancel</string>
     <string name="menu_save">Save</string>
 
-    <!-- Statusbar BAIKALOS logo -->
+    <!-- Statusbar BaikalOS logo -->
     <!-- Statusbar categories -->
     <string name="status_bar_icons_category_title">Icons</string>
     <!-- Show 4G instead of LTE -->
@@ -185,7 +185,7 @@
     <string name="system_animations_summary">System animations</string>
 
     <string name="custom_bootanimation_title">Bootanimation</string>
-    <string name="custom_bootanimation_summary">Select custom bootanimation. On every change, the current animation will be backed up to the BAIKALOS_backup folder in your internal storage. Old ones must be deleted manually if not needed.</string>
+    <string name="custom_bootanimation_summary">Select custom bootanimation. On every change, the current animation will be backed up to the baikalos_backup folder in your internal storage. Old ones must be deleted manually if not needed.</string>
     <string name="bootanimation_preview">Bootanimation preview</string>
     <string name="bootanimation_set_custom">Set custom...</string>
     <string name="bootanimation_creating_preview">Creating preview...</string>
@@ -245,7 +245,7 @@
     <string name="log_it_logs_in_progress">Logs are being created…</string>
     <string name="log_it_share_type_title">Share method</string>
     <string name="log_it_share_type_zip">ZIP-File</string>
-    <string name="log_it_share_type_haste">Upload to BAIKALOS Haste</string>
+    <string name="log_it_share_type_haste">Upload to BaikalOS Haste</string>
     <string name="log_it_share_via">Share via</string>
 
 
@@ -272,7 +272,7 @@
     <string name="theme_dark_more_accent">Dark with more color</string>
 
     <string name="ae_launcher_enabled_title">Show launcher icon</string>
-    <string name="ae_launcher_enabled_summary">Show BAIKALOS Extras in launcher</string>
+    <string name="ae_launcher_enabled_summary">Show BaikalOS Extras in launcher</string>
     <string name="ae_launcher_enabled_update">Launcher icon visibility updated. It might take some time for the change to take effect</string>
 
 
@@ -286,7 +286,7 @@
     <string name="info_category">Info</string>
 
     <string name="baikalos_website_title">Website</string>
-    <string name="baikalos_website_summary">Visit the BAIKALOS website</string>
+    <string name="baikalos_website_summary">Visit the BaikalOS website</string>
     <string name="baikalos_website_link" translatable="false">"http://baikalos-rom.com"</string>
 
     <string name="g_plus_title">G+ community</string>
@@ -298,13 +298,13 @@
     <string name="baikalos_gerrit_link" translatable="false">"http://gerrit.baikalos-rom.com"</string>
 
     <string name="baikalos_changelog_title">Changelog</string>
-    <string name="baikalos_changelog_summary">View recent changes made to BAIKALOS</string>
+    <string name="baikalos_changelog_summary">View recent changes made to BaikalOS</string>
 
     <string name="baikalos_downloads_title">Downloads</string>
-    <string name="baikalos_downloads_summary">Visit the BAIKALOS download page for your device</string>
+    <string name="baikalos_downloads_summary">Visit the BaikalOS download page for your device</string>
 
     <string name="baikalos_ota_title">Update center</string>
-    <string name="baikalos_ota_summary">Check for BAIKALOS updates</string>
+    <string name="baikalos_ota_summary">Check for BaikalOS updates</string>
 
     <string name="stats_title">Statistics</string>
     <string name="stats_summary">Opt in/out for anonymous stats</string>
@@ -335,8 +335,8 @@
 
     <string name="launcher_shortcut_disabled_message">Shortcut disabled</string>
 
-    <string name="hidden_anim_activity_title">Yoga time!!!</string>
-    <string name="hidden_anim_more_nice">NICE</string>
+    <string name="hidden_anim_activity_title">Lets drink vodka!</string>
+    <string name="hidden_anim_more_nice">YEA</string>
 
     <!-- Sensor block per-package -->
     <string name="sensor_block_title">Sensor block per-package</string>
