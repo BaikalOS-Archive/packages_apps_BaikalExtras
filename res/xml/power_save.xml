@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/**
+ * Copyright (C) 2017 AICP
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+-->
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:baikalosextras="http://schemas.android.com/apk/res-auto"
+    android:title="@string/powersave_title">
+
+    <PreferenceScreen
+        android:key="suspend_actions"
+        android:title="@string/screen_state_toggles_title"
+        android:fragment="ru.baikalos.extras.fragments.SuspendActions" />
+
+    <ru.baikalos.gear.preference.SystemSettingSwitchPreference
+        android:key="sensor_block"
+        android:title="@string/sensor_block_title"
+        android:summary="@string/sensor_block_summary"
+        android:defaultValue="false" />
+
+    <ru.baikalos.gear.preference.GlobalSettingSwitchPreference
+        android:key="device_idle_aggressive_enabled"
+        android:title="@string/device_idle_aggressive_title"
+        android:summary="@string/device_idle_aggressive_summary"
+        android:defaultValue="false"
+        android:disableDependentsState="true" />
+
+    <ru.baikalos.gear.preference.GlobalSettingSwitchPreference
+        android:key="powersave_wl_block_enabled"
+        android:title="@string/powersave_wl_block_title"
+        android:summary="@string/powersave_wl_block_summary"
+        android:defaultValue="false"
+        android:disableDependentsState="true" />
+
+    <ru.baikalos.gear.preference.GlobalSettingSwitchPreference
+        android:key="powersave_throttle_alarms_enabled"
+        android:title="@string/powersave_throttle_alarms_title"
+        android:summary="@string/powersave_throttle_alarms_summary"
+        android:defaultValue="false"
+        android:disableDependentsState="true" />
+
+</PreferenceScreen>

@@ -25,6 +25,23 @@
         android:layout="@layout/dashboard_logo" />
 
     <PreferenceCategory
+        android:title="@string/device_part_category">
+
+        <!-- Device Part -->
+        <Preference
+            android:key="device_part"
+            android:persistent="false"
+            android:title="@string/device_part_title"
+            android:icon="@drawable/ic_settings_device">
+            <intent android:action="android.intent.action.MAIN"
+                 android:targetPackage="org.omnirom.device"
+                 android:targetClass="org.omnirom.device.DeviceSettings"/>
+        </Preference>
+
+    </PreferenceCategory>
+
+
+    <!-- PreferenceCategory
         android:title="@string/navigation_category">
 
         <PreferenceScreen
@@ -39,7 +56,7 @@
             android:icon="@drawable/ic_settings_recents"
             android:fragment="ru.baikalos.extras.fragments.Recents" />
 
-    </PreferenceCategory>
+    </PreferenceCategory -->
 
     <PreferenceCategory
         android:title="@string/user_interface_category">
@@ -56,11 +73,11 @@
             android:icon="@drawable/ic_settings_notifications"
             android:fragment="ru.baikalos.extras.fragments.Notifications" />
 
-        <PreferenceScreen
+        <!-- PreferenceScreen
             android:title="@string/quick_settings_title"
             android:summary="@string/quick_settings_summary"
             android:icon="@drawable/ic_settings_quick_settings"
-            android:fragment="ru.baikalos.extras.fragments.QuickSettings" />
+            android:fragment="ru.baikalos.extras.fragments.QuickSettings" /-->
 
         <PreferenceScreen
             android:title="@string/lockscreen_title"
@@ -68,11 +85,11 @@
             android:icon="@drawable/ic_settings_lockscreen"
             android:fragment="ru.baikalos.extras.fragments.Lockscreen" />
 
-        <PreferenceScreen
+        <!-- PreferenceScreen
             android:title="@string/panel_porn_title"
             android:summary="@string/panel_porn_summary"
             android:icon="@drawable/ic_settings_panel_porn"
-            android:fragment="ru.baikalos.extras.fragments.PanelPorn" />
+            android:fragment="ru.baikalos.extras.fragments.PanelPorn" / -->
 
         <PreferenceScreen
             android:title="@string/theming_title"
@@ -80,11 +97,11 @@
             android:icon="@drawable/ic_settings_theming"
             android:fragment="ru.baikalos.extras.fragments.Theming" />
 
-        <PreferenceScreen
+        <!-- PreferenceScreen
             android:title="@string/other_ui_title"
             android:summary="@string/other_ui_summary"
             android:icon="@drawable/ic_settings_other_ui"
-            android:fragment="ru.baikalos.extras.fragments.OtherUi" />
+            android:fragment="ru.baikalos.extras.fragments.OtherUi" / -->
 
     </PreferenceCategory>
 
@@ -97,17 +114,30 @@
             android:icon="@drawable/ic_settings_system_animations"
             android:fragment="ru.baikalos.extras.fragments.SystemAnimations" />
 
-        <PreferenceScreen
+        <!--PreferenceScreen
             android:title="@string/system_behaviour_title"
             android:summary="@string/system_behaviour_summary"
             android:icon="@drawable/ic_settings_system_behaviour"
-            android:fragment="ru.baikalos.extras.fragments.SystemBehaviour" />
+            android:fragment="ru.baikalos.extras.fragments.SystemBehaviour" / -->
 
         <PreferenceScreen
             android:title="@string/system_extensions_title"
             android:summary="@string/system_extensions_summary"
             android:icon="@drawable/ic_settings_system_extensions"
             android:fragment="ru.baikalos.extras.fragments.SystemExtensions" />
+
+
+        <PreferenceScreen
+            android:title="@string/audio_tweaks_title"
+            android:summary="@string/audio_tweaks_summary"
+            android:icon="@drawable/ic_settings_system_extensions"
+            android:fragment="ru.baikalos.extras.fragments.AudioTweaks" />
+
+        <PreferenceScreen
+            android:title="@string/powersave_title"
+            android:summary="@string/powersave_summary"
+            android:icon="@drawable/ic_settings_system_extensions"
+            android:fragment="ru.baikalos.extras.fragments.PowerSave" />
 
     </PreferenceCategory>
 

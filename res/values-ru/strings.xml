@@ -21,6 +21,9 @@
   <string name="user_interface_category">Интерфейс</string>
   <string name="system_category">Система</string>
   <string name="other_category">Другое</string>
+  <!-- Device parts -->
+  <string name="device_part_title">Возможности устройства</string>
+  <string name="device_part_category">Устройство</string>
   <!-- Status bar -->
   <string name="status_bar_title">Строка состояния</string>
   <string name="status_bar_summary">Изменить вид строки состояния</string>
