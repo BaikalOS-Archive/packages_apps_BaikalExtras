@@ -20,12 +20,12 @@ public abstract class Constants {
     /**
      * Package name of BAIKALOS OTA
      */
-    public static final String BAIKALOS_OTA_PACKAGE = "ru.baikalos.updater";
+    public static final String BAIKALOS_OTA_PACKAGE = "eu.chainfire.opendelta";
 
     /**
      * Default activity of BAIKALOS OTA
      */
-    public static final String BAIKALOS_OTA_ACTIVITY = BAIKALOS_OTA_PACKAGE + ".Settings";
+    public static final String BAIKALOS_OTA_ACTIVITY = BAIKALOS_OTA_PACKAGE + ".MainActivity";
 
     /**
      * Key for SharedPreferences for selinux switch
