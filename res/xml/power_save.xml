@@ -53,4 +53,15 @@
         android:defaultValue="false"
         android:disableDependentsState="true" />
 
+    <Preference android:title="@string/prefs_battery_saver_title" 
+		    android:summary="@string/prefs_battery_saver_summary">
+	    <intent android:action="android.settings.IGNORE_BATTERY_OPTIMIZATION_SETTINGS"/>
+    </Preference>
+
+    <!-- Preference android:title="@string/prefs_app_options_title" 
+		    android:summary="@string/prefs_app_options_summary">
+	    <intent android:action="android.settings.APP_OPS_SETTINGS"/>
+    </Preference -->
+
+
 </PreferenceScreen>

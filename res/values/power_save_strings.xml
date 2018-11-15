@@ -9,4 +9,13 @@
     <string name="powersave_wl_block_summary">Block wakelocks from all regular apps except system and whitelist.</string>
     <string name="powersave_throttle_alarms_title">Throttle Alarms</string>
     <string name="powersave_throttle_alarms_summary">Throttle wakeup alarms for regular apps except system and whitelist.</string>
+
+    <!-- Batery whitelist -->
+    <string name="prefs_battery_saver_title">Whitelist</string>
+    <string name="prefs_battery_saver_summary">Device Whitelist</string>
+
+    <!-- App ops -->
+    <string name="prefs_app_options_title">App Options</string>
+    <string name="prefs_app_options_summary">App Options</string>
+
 </resources>
