@@ -58,10 +58,15 @@
 	    <intent android:action="android.settings.IGNORE_BATTERY_OPTIMIZATION_SETTINGS"/>
     </Preference>
 
-    <!-- Preference android:title="@string/prefs_app_options_title" 
+    <!--Preference
+            android:title="@string/prefs_app_options_title"
+            android:summary="@string/prefs_app_options_summary"
+            android:fragment="com.android.settings.applications.appops.AppOpsSummary"/ -->
+
+    <Preference android:title="@string/prefs_app_options_title" 
 		    android:summary="@string/prefs_app_options_summary">
 	    <intent android:action="android.settings.APP_OPS_SETTINGS"/>
-    </Preference -->
+    </Preference>
 
 
 </PreferenceScreen>
