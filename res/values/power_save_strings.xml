@@ -4,7 +4,7 @@
     <string name="powersave_title">Power Save</string>
     <string name="powersave_summary">Power Saving Tweaks</string>
     <string name="device_idle_aggressive_title">Aggressive Idle</string>
-    <string name="device_idle_aggressive_summary">Sned device into Idle Mode 1 min after screen off. Ignore movement.</string>
+    <string name="device_idle_aggressive_summary">Send device into Idle Mode 1 min after screen off. Ignore movement.</string>
     <string name="powersave_wl_block_title">Wakelock Blocker</string>
     <string name="powersave_wl_block_summary">Block wakelocks from all regular apps except system and whitelist.</string>
     <string name="powersave_throttle_alarms_title">Throttle Alarms</string>

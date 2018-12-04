@@ -5,7 +5,7 @@
     <string name="audio_tweaks_summary">Audio related tweaks and hacks</string>
 
     <string name="audio_tweaks_anc_title">Enable ANC</string>
-    <string name="audio_tweaks_anc_summary">Enable analog noise cancellation for voice calls</string>
+    <string name="audio_tweaks_anc_summary">Enable analog noise cancellation for voice calls. Overlaps Dual-Mic.</string>
 
     <string name="audio_tweaks_fluence_title">Enable Dual-mic</string>
     <string name="audio_tweaks_fluence_summary">Enable dual-mic config for voice calls</string>
