@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+    <!-- Power Save -->
+    <string name="powersave_title">Энергосбережение</string>
+    <string name="powersave_summary">Энергосбережение</string>
+    <string name="device_idle_aggressive_title">Агрессивный сон</string>
+    <string name="device_idle_aggressive_summary">Переходить в режим сна через 1 минуту после отключения экрана. Игнорировать движение.</string>
+    <string name="powersave_wl_block_title">Блокировка вейклоков</string>
+    <string name="powersave_wl_block_summary">Блокировать вейклоки от пользовательских приложений, кроме белого списка.</string>
+    <string name="powersave_throttle_alarms_title">Уменьшать пробуждения</string>
+    <string name="powersave_throttle_alarms_summary">Уменьшить количество пробуждений.</string>
+
+    <!-- Batery whitelist -->
+    <string name="prefs_battery_saver_title">Белый список</string>
+    <string name="prefs_battery_saver_summary">Белый список</string>
+
+    <!-- App ops -->
+    <string name="prefs_app_options_title">Настройки приложений</string>
+    <string name="prefs_app_options_summary">Настройки приложений</string>
+
+</resources>

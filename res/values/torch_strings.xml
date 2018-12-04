@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+
+    <string name="torch_title">Torch</string>
+    <string name="torch_summary">Torch related settings</string>
+    <string name="torch_long_press_power_gesture_title">Torch on Power Button</string>
+    <string name="torch_long_press_power_gesture_summary">Torch on Power Button long press while screen is off</string>
+    <string name="torch_on_incoming_call_title">Flash on Incoming Call</string>
+    <string name="torch_on_incoming_call_summary">Flash on incoming call</string>
+
+</resources>
