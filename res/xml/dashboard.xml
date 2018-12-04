@@ -139,11 +139,17 @@
             android:icon="@drawable/ic_settings_system_powersave"
             android:fragment="ru.baikalos.extras.fragments.PowerSave" />
 
-
         <PreferenceScreen
             android:title="@string/torch_title"
             android:summary="@string/torch_summary"
+            android:icon="@drawable/ic_settings_torch"
             android:fragment="ru.baikalos.extras.fragments.Torch" />
+
+        <PreferenceScreen
+            android:title="@string/vibrator_title"
+            android:summary="@string/vibrator_summary"
+            android:icon="@drawable/ic_settings_vibrator"
+            android:fragment="ru.baikalos.extras.fragments.Vibrator" />
 
     </PreferenceCategory>
 

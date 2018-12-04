@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+
+    <string name="vibrator_title">Vibrate</string>
+    <string name="vibrator_summary">Vibrate related settings</string>
+    <!-- Incall vibrate options -->
+    <string name="incall_vibration_category">In-call Vibration</string>
+    <string name="incall_vibrate_connect_title">Vibrate on Connect</string>
+    <string name="incall_vibrate_connect_summary">Vibrate on Connect</string>
+    <string name="incall_vibrate_call_wait_title">Vibrate on Call Waiting</string>
+    <string name="incall_vibrate_call_wait_summary">Vibrate on Call Waiting</string>
+    <string name="incall_vibrate_disconnect_title">Vibrate on Disconnect</string>
+    <string name="incall_vibrate_disconnect_summary">Vibrate on Disconnect</string>
+
+</resources>

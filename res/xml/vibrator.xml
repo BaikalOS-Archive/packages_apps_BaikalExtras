@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 /**
- * Copyright (C) 2017 AICP
+ * Copyright (C) 2018 BaikalOS
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -19,31 +19,29 @@
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:baikalosextras="http://schemas.android.com/apk/res-auto"
-    android:title="@string/lockscreen_title">
+    android:title="@string/vibrator_title">
 
     <PreferenceCategory
-        android:key="lockscreen_security_category"
-        android:title="@string/lockscreen_security_category">
+        android:key="incall_vibration_category"
+        android:title="@string/incall_vibration_category">
 
         <ru.baikalos.gear.preference.SystemSettingSwitchPreference
-            android:key="fingerprint_success_vib"
-            android:title="@string/fprint_sucess_vib_title"
-            android:summaryOn="@string/fprint_sucess_vib_summary_on"
-            android:summaryOff="@string/fprint_sucess_vib_summary_off"
-            android:defaultValue="true" />
-
-        <ru.baikalos.gear.preference.SecureSettingSwitchPreference
-            android:key="smartlock_auto_unlock"
-            android:title="@string/smartlock_auto_unlock_title"
-            android:summary="@string/smartlock_auto_unlock_summary"
+            android:key="vibrate_on_connect"
+            android:title="@string/incall_vibrate_connect_title"
+            android:summary="@string/incall_vibrate_connect_summary"
             android:defaultValue="false" />
 
         <ru.baikalos.gear.preference.SystemSettingSwitchPreference
-            android:key="fp_unlock_keystore"
-            android:title="@string/fp_unlock_keystore_title"
-            android:summary="@string/fp_unlock_keystore_summary"
+            android:key="vibrate_on_callwaiting"
+            android:title="@string/incall_vibrate_call_wait_title"
+            android:summary="@string/incall_vibrate_call_wait_summary"
             android:defaultValue="false" />
 
+        <ru.baikalos.gear.preference.SystemSettingSwitchPreference
+            android:key="vibrate_on_disconnect"
+            android:title="@string/incall_vibrate_disconnect_title"
+            android:summary="@string/incall_vibrate_disconnect_summary"
+            android:defaultValue="false" />
     </PreferenceCategory>
 
 </PreferenceScreen>
