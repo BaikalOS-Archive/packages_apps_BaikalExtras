@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+    <!-- Audio Tweaks -->
+    <string name="audio_tweaks_title">Твики звука</string>
+    <string name="audio_tweaks_summary">Твики и хаки звука</string>
+
+    <string name="audio_tweaks_anc_title">Включить ANC</string>
+    <string name="audio_tweaks_anc_summary">Включить аналоговое шумоподавление для голосовых вызовов. Перекрывает Dual-mic.</string>
+
+    <string name="audio_tweaks_fluence_title">Включить Dual-mic</string>
+    <string name="audio_tweaks_fluence_summary">Использовать два микрофона для голосовых вызовов.</string>
+
+    <string name="audio_tweaks_whatsapp_title">WhatsApp хак</string>
+    <string name="audio_tweaks_whatsapp_summary">Использовать микрофон громкой связи для записи сообщений в WhatsApp.</string>
+
+    <string name="audio_tweaks_hp_detect_title">Отключить наушники</string>
+    <string name="audio_tweaks_hp_detect_summary">Отключить определение проводных наушников или гарнитуры. Для аппаратов с поврежденным портом USB.</string>
+
+</resources>
