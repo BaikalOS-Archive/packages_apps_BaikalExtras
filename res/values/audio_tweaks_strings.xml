@@ -16,4 +16,7 @@
     <string name="audio_tweaks_hp_detect_title">Disable HP detect</string>
     <string name="audio_tweaks_hp_detect_summary">Disable detection of headphones. For devices with broken USB-C port.</string>
 
+    <string name="audio_tweaks_suspend_play_title">Suspend while play</string>
+    <string name="audio_tweaks_suspend_play_summary">Allow system suspend while player active. Not all media players compatible.</string>
+
 </resources>

@@ -33,6 +33,12 @@
         android:defaultValue="false" />
 
     <SwitchPreference
+        android:key="audio_tweaks_suspend_play"
+        android:title="@string/audio_tweaks_suspend_play_title"
+        android:summary="@string/audio_tweaks_suspend_play_summary"
+        android:defaultValue="false" />
+
+    <SwitchPreference
         android:key="audio_tweaks_whatsapp"
         android:title="@string/audio_tweaks_whatsapp_title"
         android:summary="@string/audio_tweaks_whatsapp_summary"

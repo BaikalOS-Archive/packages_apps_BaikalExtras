@@ -16,4 +16,7 @@
     <string name="audio_tweaks_hp_detect_title">Отключить наушники</string>
     <string name="audio_tweaks_hp_detect_summary">Отключить определение проводных наушников или гарнитуры. Для аппаратов с поврежденным портом USB.</string>
 
+    <string name="audio_tweaks_suspend_play_title">Усыплять при проигрывании</string>
+    <string name="audio_tweaks_suspend_play_summary">Разрешить сон системы при проигрывании музыки. Совместимо не со всеми проигрывателями.</string>
+
 </resources>

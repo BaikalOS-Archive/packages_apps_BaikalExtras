@@ -45,11 +45,15 @@ public class AudioTweaks extends BaseSettingsFragment
     private static final String AUDIO_TWEAKS_FLUENCE = "audio_tweaks_fluence";
     private static final String AUDIO_TWEAKS_WHATSAPP = "audio_tweaks_whatsapp";
     private static final String AUDIO_TWEAKS_HP_DETECT = "audio_tweaks_hp_detect";
+    private static final String AUDIO_TWEAKS_SUSPEND_PLAY = "audio_tweaks_suspend_play";
 
     private static final String SYSTEM_PROPERTY_HP_DETECT = "persist.fx.hp_detect";
     private static final String SYSTEM_PROPERTY_WHATSAPP_HACK = "persist.vendor.audio.whatsapp";
     private static final String SYSTEM_PROPERTY_ENABLE_ANC = "persist.ps.anc.enable";
     private static final String SYSTEM_PROPERTY_ENABLE_FLUENCE = "persist.ps.audio.use_fluence";
+
+    private static final String SYSTEM_PROPERTY_SUSPEND_PLAY = "persist.audio.offload.suspend";
+
 
 
     private Context mContext;
@@ -58,6 +62,7 @@ public class AudioTweaks extends BaseSettingsFragment
     private SwitchPreference mEnableFluence;
     private SwitchPreference mEnableWhatsAppHack;
     private SwitchPreference mEnableHeadphonesDetection;
+    private SwitchPreference mEnableSuspendPlay;
 
     @Override
     protected int getPreferenceResource() {
@@ -92,6 +97,12 @@ public class AudioTweaks extends BaseSettingsFragment
                 mEnableHeadphonesDetection.setOnPreferenceChangeListener(this);
         }
 
+        mEnableSuspendPlay = (SwitchPreference) findPreference(AUDIO_TWEAKS_SUSPEND_PLAY);
+        if( mEnableSuspendPlay != null ) { 
+                mEnableSuspendPlay.setChecked(SystemProperties.getBoolean(SYSTEM_PROPERTY_SUSPEND_PLAY, false));
+                mEnableSuspendPlay.setOnPreferenceChangeListener(this);
+        }
+
     }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
@@ -111,6 +122,9 @@ public class AudioTweaks extends BaseSettingsFragment
         } else if (preference == mEnableHeadphonesDetection) {
             ((SwitchPreference)preference).setChecked((Boolean) newValue);
             setSystemPropertyBoolean(SYSTEM_PROPERTY_HP_DETECT, (Boolean) newValue);
+        } else if (preference == mEnableSuspendPlay) {
+            ((SwitchPreference)preference).setChecked((Boolean) newValue);
+            setSystemPropertyBoolean(SYSTEM_PROPERTY_SUSPEND_PLAY, (Boolean) newValue);
         }
 
         return true;
