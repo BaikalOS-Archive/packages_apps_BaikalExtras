@@ -31,6 +31,7 @@ import android.support.v7.preference.PreferenceScreen;
 import android.support.v7.preference.Preference.OnPreferenceChangeListener;
 import android.support.v14.preference.SwitchPreference;
 import android.provider.Settings;
+import android.view.View;
 
 import ru.baikalos.extras.BaseSettingsFragment;
 import ru.baikalos.extras.R;
@@ -46,6 +47,9 @@ public class AudioTweaks extends BaseSettingsFragment
     private static final String AUDIO_TWEAKS_WHATSAPP = "audio_tweaks_whatsapp";
     private static final String AUDIO_TWEAKS_HP_DETECT = "audio_tweaks_hp_detect";
     private static final String AUDIO_TWEAKS_SUSPEND_PLAY = "audio_tweaks_suspend_play";
+    private static final String AUDIO_TWEAKS_A2DP_SBC_HD = "audio_tweaks_a2dp_sbc_hd";
+    private static final String AUDIO_TWEAKS_A2DP_SBC_HDX = "audio_tweaks_a2dp_sbc_hdx";
+    private static final String AUDIO_TWEAKS_A2DP_SBC_PREFER = "audio_tweaks_a2dp_sbc_prefer";
 
     private static final String SYSTEM_PROPERTY_HP_DETECT = "persist.fx.hp_detect";
     private static final String SYSTEM_PROPERTY_WHATSAPP_HACK = "persist.vendor.audio.whatsapp";
@@ -53,6 +57,10 @@ public class AudioTweaks extends BaseSettingsFragment
     private static final String SYSTEM_PROPERTY_ENABLE_FLUENCE = "persist.ps.audio.use_fluence";
 
     private static final String SYSTEM_PROPERTY_SUSPEND_PLAY = "persist.audio.offload.suspend";
+
+    private static final String SYSTEM_PROPERTY_A2DP_SBC_HD = "persist.bluetooth.sbc_hd";
+    private static final String SYSTEM_PROPERTY_A2DP_SBC_HDX = "persist.bluetooth.sbc_hdx";
+    private static final String SYSTEM_PROPERTY_A2DP_SBC_PREFER = "persist.bluetooth.sbc_prefer";
 
 
 
@@ -63,6 +71,9 @@ public class AudioTweaks extends BaseSettingsFragment
     private SwitchPreference mEnableWhatsAppHack;
     private SwitchPreference mEnableHeadphonesDetection;
     private SwitchPreference mEnableSuspendPlay;
+    private SwitchPreference mEnableA2DPHD;
+    private SwitchPreference mEnableA2DPHDX;
+    private SwitchPreference mEnableA2DPSbcPrefer;
 
     @Override
     protected int getPreferenceResource() {
@@ -103,6 +114,34 @@ public class AudioTweaks extends BaseSettingsFragment
                 mEnableSuspendPlay.setOnPreferenceChangeListener(this);
         }
 
+        boolean enableSbcHd = false;
+        mEnableA2DPHD = (SwitchPreference) findPreference(AUDIO_TWEAKS_A2DP_SBC_HD);
+        if( mEnableA2DPHD != null ) { 
+                enableSbcHd = SystemProperties.getBoolean(SYSTEM_PROPERTY_A2DP_SBC_HD,false);
+                mEnableA2DPHD.setChecked(enableSbcHd);
+                mEnableA2DPHD.setOnPreferenceChangeListener(this);
+        }
+
+        mEnableA2DPHDX = (SwitchPreference) findPreference(AUDIO_TWEAKS_A2DP_SBC_HDX);
+        if( mEnableA2DPHDX != null ) { 
+                if( !enableSbcHd ) {
+                    setSystemPropertyBoolean(SYSTEM_PROPERTY_A2DP_SBC_HDX, false);
+                    mEnableA2DPHDX.setEnabled(false);
+                }
+                mEnableA2DPHDX.setChecked(SystemProperties.getBoolean(SYSTEM_PROPERTY_A2DP_SBC_HDX, false));
+                mEnableA2DPHDX.setOnPreferenceChangeListener(this);
+        }
+
+        mEnableA2DPSbcPrefer = (SwitchPreference) findPreference(AUDIO_TWEAKS_A2DP_SBC_PREFER);
+        if( mEnableA2DPSbcPrefer != null ) { 
+            mEnableA2DPSbcPrefer.setVisible(false);
+                if( !enableSbcHd ) {
+                    setSystemPropertyBoolean(SYSTEM_PROPERTY_A2DP_SBC_PREFER, false);
+                    mEnableA2DPSbcPrefer.setEnabled(false);
+                }
+                mEnableA2DPSbcPrefer.setChecked(SystemProperties.getBoolean(SYSTEM_PROPERTY_A2DP_SBC_PREFER, false));
+                mEnableA2DPSbcPrefer.setOnPreferenceChangeListener(this);
+        }
     }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
@@ -125,8 +164,27 @@ public class AudioTweaks extends BaseSettingsFragment
         } else if (preference == mEnableSuspendPlay) {
             ((SwitchPreference)preference).setChecked((Boolean) newValue);
             setSystemPropertyBoolean(SYSTEM_PROPERTY_SUSPEND_PLAY, (Boolean) newValue);
+        } else if (preference == mEnableA2DPHD) {
+            ((SwitchPreference)preference).setChecked((Boolean) newValue);
+            setSystemPropertyBoolean(SYSTEM_PROPERTY_A2DP_SBC_HD, (Boolean) newValue);
+            if( ! (Boolean)newValue ) {
+                mEnableA2DPHDX.setChecked(false);
+                mEnableA2DPHDX.setEnabled(false);
+                mEnableA2DPSbcPrefer.setChecked(false);
+                mEnableA2DPSbcPrefer.setEnabled(false);
+                setSystemPropertyBoolean(SYSTEM_PROPERTY_A2DP_SBC_HDX, false);
+                setSystemPropertyBoolean(SYSTEM_PROPERTY_A2DP_SBC_PREFER, false);
+            } else {
+                mEnableA2DPHDX.setEnabled(true);
+                mEnableA2DPSbcPrefer.setEnabled(true);
+            }
+        } else if (preference == mEnableA2DPHDX) {
+            ((SwitchPreference)preference).setChecked((Boolean) newValue);
+            setSystemPropertyBoolean(SYSTEM_PROPERTY_A2DP_SBC_HDX, (Boolean) newValue);
+        } else if (preference == mEnableA2DPSbcPrefer) {
+            ((SwitchPreference)preference).setChecked((Boolean) newValue);
+            setSystemPropertyBoolean(SYSTEM_PROPERTY_A2DP_SBC_PREFER, (Boolean) newValue);
         }
-
         return true;
     }
 
