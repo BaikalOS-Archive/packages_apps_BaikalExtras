@@ -26,6 +26,14 @@
         android:title="@string/hardware_brightness_keys_title"
         android:summary="@string/hardware_brightness_keys_title_summary"
         android:defaultValue="0" />
+     <ru.baikalos.gear.preference.SystemSettingIntListPreference
+        android:key="button_timeout"
+        android:title="@string/hardware_button_backlight_timeout"
+        android:summary="@string/hardware_button_backlight_timeout_summary"
+        android:entries="@array/backlight_timeout_entries"
+        android:entryValues="@array/backlight_timeout_values"
+        android:dependency="button_brightness_enabled"
+        android:defaultValue="5000" />
      <PreferenceCategory
         android:key="home_key"
         android:title="@string/home_key_title">
