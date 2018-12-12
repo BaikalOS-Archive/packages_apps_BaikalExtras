@@ -40,6 +40,14 @@
 
     </PreferenceCategory>
 
+    <PreferenceCategory
+        android:title="@string/navigation_category">
+         <PreferenceScreen
+            android:title="@string/button_settings_title"
+            android:summary="@string/button_settings_title_summary"
+            android:icon="@drawable/ic_settings_buttons"
+            android:fragment="ru.baikalos.extras.fragments.ButtonsSettings" />
+     </PreferenceCategory>
 
     <!-- PreferenceCategory
         android:title="@string/navigation_category">
