@@ -9,6 +9,7 @@
     <string name="navigation_bar_title">Navigation bar</string>
     <string name="navigation_bar_title_summary">Enable on-screen navigation keys</string>
     <!-- Button brightness -->
+    <string name="button_backlight_title">Hardware buttons backlight</string>
     <string name="hardware_brightness_keys_title">Backlight</string>
     <string name="hardware_brightness_keys_title_summary">Enable navigation keys backlight</string>
     <string name="button_brightness_title">Backlight brightness</string>
