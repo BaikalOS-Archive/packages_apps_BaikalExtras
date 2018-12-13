@@ -42,6 +42,12 @@
         android:entryValues="@array/backlight_timeout_values"
         android:dependency="button_brightness_enabled"
         android:defaultValue="5000" />
+     <ru.baikalos.gear.preference.SystemSettingSwitchPreference
+        android:key="button_backlight_on_touch_only"
+        android:title="@string/button_backlight_on_touch_only_title"
+        android:summary="@string/button_backlight_on_touch_only_summary"
+        android:defaultValue="0"
+        android:dependency="button_brightness_enabled" />
      <PreferenceCategory
         android:key="home_key"
         android:title="@string/home_key_title">
