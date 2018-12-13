@@ -11,9 +11,8 @@
   See the License for the specific language governing permissions and
   limitations under the License.
   -->
- <PreferenceScreen
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:settings="http://schemas.android.com/apk/res-auto"
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:baikalosextras="http://schemas.android.com/apk/res-auto"
     android:key="button_settings"
     android:title="@string/button_settings_title">
      <ru.baikalos.gear.preference.SystemSettingSwitchPreference
@@ -26,6 +25,15 @@
         android:title="@string/hardware_brightness_keys_title"
         android:summary="@string/hardware_brightness_keys_title_summary"
         android:defaultValue="0" />
+     <ru.baikalos.gear.preference.SystemSettingSeekBarPreference
+        android:key="button_brightness"
+        android:title="@string/button_brightness_title"
+        android:max="255"
+        android:min="1"
+        baikalosextras:unitsLeft=""
+        baikalosextras:unitsRight=""
+        android:defaultValue="100"
+        android:dependency="button_brightness_enabled" />
      <ru.baikalos.gear.preference.SystemSettingIntListPreference
         android:key="button_timeout"
         android:title="@string/hardware_button_backlight_timeout"

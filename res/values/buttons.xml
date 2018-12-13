@@ -11,6 +11,7 @@
     <!-- Button brightness -->
     <string name="hardware_brightness_keys_title">Backlight</string>
     <string name="hardware_brightness_keys_title_summary">Enable navigation keys backlight</string>
+    <string name="button_brightness_title">Backlight brightness</string>
     <string name="hardware_button_backlight_timeout">Navigation keys backlight timeout</string>
     <string name="hardware_button_backlight_timeout_summary">Navigation keys backlight timeout (disable if 0)</string>
     <!-- Buttons backlight timeout -->
