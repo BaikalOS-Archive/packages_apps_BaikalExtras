@@ -16,11 +16,6 @@
     android:key="button_settings"
     android:title="@string/button_settings_title">
      <ru.baikalos.gear.preference.SystemSettingSwitchPreference
-        android:key="navigation_bar_enabled"
-        android:title="@string/navigation_bar_title"
-        android:summary="@string/navigation_bar_title_summary"
-        android:defaultValue="0" />
-     <ru.baikalos.gear.preference.SystemSettingSwitchPreference
         android:key="button_brightness_enabled"
         android:title="@string/hardware_brightness_keys_title"
         android:summary="@string/hardware_brightness_keys_title_summary"

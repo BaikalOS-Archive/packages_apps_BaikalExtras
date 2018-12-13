@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+
+    <!-- Navigation bar -->
+    <string name="navigation_bar_title">Navigation bar</string>
+    <string name="navigation_bar_title_summary">Enable on-screen navigation keys</string>
+
+</resources>

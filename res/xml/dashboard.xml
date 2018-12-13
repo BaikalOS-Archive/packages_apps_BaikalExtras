@@ -49,7 +49,7 @@
             android:fragment="ru.baikalos.extras.fragments.ButtonsSettings" />
      </PreferenceCategory>
 
-    <!-- PreferenceCategory
+    <PreferenceCategory
         android:title="@string/navigation_category">
 
         <PreferenceScreen
@@ -57,14 +57,14 @@
             android:summary="@string/navigation_summary"
             android:icon="@drawable/ic_settings_navbar"
             android:fragment="ru.baikalos.extras.fragments.Navigation" />
-
+   <!--
         <PreferenceScreen
             android:title="@string/recents_title"
             android:summary="@string/recents_summary"
             android:icon="@drawable/ic_settings_recents"
             android:fragment="ru.baikalos.extras.fragments.Recents" />
-
-    </PreferenceCategory -->
+    -->
+    </PreferenceCategory>
 
     <PreferenceCategory
         android:title="@string/user_interface_category">
