@@ -53,6 +53,13 @@
         android:defaultValue="false"
         android:disableDependentsState="true" />
 
+    <ru.baikalos.gear.preference.GlobalSettingSwitchPreference
+        android:key="powersave_restrict_screen_on_enabled"
+        android:title="@string/powersave_restrict_screen_on_enabled_title"
+        android:summary="@string/powersave_restrict_screen_on_enabled_summary"
+        android:defaultValue="false"
+        android:disableDependentsState="true" />
+
     <Preference android:title="@string/prefs_battery_saver_title" 
 		    android:summary="@string/prefs_battery_saver_summary">
 	    <intent android:action="android.settings.IGNORE_BATTERY_OPTIMIZATION_SETTINGS"/>

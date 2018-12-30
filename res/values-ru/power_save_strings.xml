@@ -9,6 +9,8 @@
     <string name="powersave_wl_block_summary">Блокировать вейклоки от пользовательских приложений, кроме белого списка.</string>
     <string name="powersave_throttle_alarms_title">Уменьшать пробуждения</string>
     <string name="powersave_throttle_alarms_summary">Уменьшить количество пробуждений.</string>
+    <string name="powersave_restrict_screen_on_enabled_title">Ограничения ВКЛ экран</string>
+    <string name="powersave_restrict_screen_on_enabled_summary">Применять ограничения приложений при включенном экране</string>
 
     <!-- Batery whitelist -->
     <string name="prefs_battery_saver_title">Белый список</string>
