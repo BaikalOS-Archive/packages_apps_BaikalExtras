@@ -45,6 +45,12 @@
         android:defaultValue="false" />
 
     <SwitchPreference
+        android:key="audio_tweaks_a2dp_sbc_hde"
+        android:title="@string/audio_tweaks_a2dp_sbc_hde_title"
+        android:summary="@string/audio_tweaks_a2dp_sbc_hde_summary"
+        android:defaultValue="false" />
+
+    <SwitchPreference
         android:key="audio_tweaks_a2dp_sbc_prefer"
         android:title="@string/audio_tweaks_a2dp_sbc_prefer_title"
         android:summary="@string/audio_tweaks_a2dp_sbc_prefer_summary"

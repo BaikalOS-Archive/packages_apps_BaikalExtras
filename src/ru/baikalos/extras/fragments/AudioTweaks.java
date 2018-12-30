@@ -49,6 +49,7 @@ public class AudioTweaks extends BaseSettingsFragment
     private static final String AUDIO_TWEAKS_SUSPEND_PLAY = "audio_tweaks_suspend_play";
     private static final String AUDIO_TWEAKS_A2DP_SBC_HD = "audio_tweaks_a2dp_sbc_hd";
     private static final String AUDIO_TWEAKS_A2DP_SBC_HDX = "audio_tweaks_a2dp_sbc_hdx";
+    private static final String AUDIO_TWEAKS_A2DP_SBC_HDE = "audio_tweaks_a2dp_sbc_hdx";
     private static final String AUDIO_TWEAKS_A2DP_SBC_PREFER = "audio_tweaks_a2dp_sbc_prefer";
 
     private static final String SYSTEM_PROPERTY_HP_DETECT = "persist.fx.hp_detect";
@@ -60,6 +61,7 @@ public class AudioTweaks extends BaseSettingsFragment
 
     private static final String SYSTEM_PROPERTY_A2DP_SBC_HD = "persist.bluetooth.sbc_hd";
     private static final String SYSTEM_PROPERTY_A2DP_SBC_HDX = "persist.bluetooth.sbc_hdx";
+    private static final String SYSTEM_PROPERTY_A2DP_SBC_HDE = "persist.bluetooth.sbc_hde";
     private static final String SYSTEM_PROPERTY_A2DP_SBC_PREFER = "persist.bluetooth.sbc_prefer";
 
 
@@ -73,6 +75,7 @@ public class AudioTweaks extends BaseSettingsFragment
     private SwitchPreference mEnableSuspendPlay;
     private SwitchPreference mEnableA2DPHD;
     private SwitchPreference mEnableA2DPHDX;
+    private SwitchPreference mEnableA2DPHDE;
     private SwitchPreference mEnableA2DPSbcPrefer;
 
     @Override
@@ -132,6 +135,16 @@ public class AudioTweaks extends BaseSettingsFragment
                 mEnableA2DPHDX.setOnPreferenceChangeListener(this);
         }
 
+        mEnableA2DPHDE = (SwitchPreference) findPreference(AUDIO_TWEAKS_A2DP_SBC_HDE);
+        if( mEnableA2DPHDE != null ) { 
+                if( !enableSbcHd ) {
+                    setSystemPropertyBoolean(SYSTEM_PROPERTY_A2DP_SBC_HDE, false);
+                    mEnableA2DPHDE.setEnabled(false);
+                }
+                mEnableA2DPHDE.setChecked(SystemProperties.getBoolean(SYSTEM_PROPERTY_A2DP_SBC_HDE, false));
+                mEnableA2DPHDE.setOnPreferenceChangeListener(this);
+        }
+
         mEnableA2DPSbcPrefer = (SwitchPreference) findPreference(AUDIO_TWEAKS_A2DP_SBC_PREFER);
         if( mEnableA2DPSbcPrefer != null ) { 
             mEnableA2DPSbcPrefer.setVisible(false);
@@ -170,17 +183,24 @@ public class AudioTweaks extends BaseSettingsFragment
             if( ! (Boolean)newValue ) {
                 mEnableA2DPHDX.setChecked(false);
                 mEnableA2DPHDX.setEnabled(false);
+                mEnableA2DPHDE.setChecked(false);
+                mEnableA2DPHDE.setEnabled(false);
                 mEnableA2DPSbcPrefer.setChecked(false);
                 mEnableA2DPSbcPrefer.setEnabled(false);
                 setSystemPropertyBoolean(SYSTEM_PROPERTY_A2DP_SBC_HDX, false);
+                setSystemPropertyBoolean(SYSTEM_PROPERTY_A2DP_SBC_HDE, false);
                 setSystemPropertyBoolean(SYSTEM_PROPERTY_A2DP_SBC_PREFER, false);
             } else {
                 mEnableA2DPHDX.setEnabled(true);
+                mEnableA2DPHDE.setEnabled(true);
                 mEnableA2DPSbcPrefer.setEnabled(true);
             }
         } else if (preference == mEnableA2DPHDX) {
             ((SwitchPreference)preference).setChecked((Boolean) newValue);
             setSystemPropertyBoolean(SYSTEM_PROPERTY_A2DP_SBC_HDX, (Boolean) newValue);
+        } else if (preference == mEnableA2DPHDE) {
+            ((SwitchPreference)preference).setChecked((Boolean) newValue);
+            setSystemPropertyBoolean(SYSTEM_PROPERTY_A2DP_SBC_HDE, (Boolean) newValue);
         } else if (preference == mEnableA2DPSbcPrefer) {
             ((SwitchPreference)preference).setChecked((Boolean) newValue);
             setSystemPropertyBoolean(SYSTEM_PROPERTY_A2DP_SBC_PREFER, (Boolean) newValue);

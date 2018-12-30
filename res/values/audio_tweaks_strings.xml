@@ -25,6 +25,9 @@
     <string name="audio_tweaks_a2dp_sbc_hdx_title">Highest SBC bitrate</string>
     <string name="audio_tweaks_a2dp_sbc_hdx_summary">Use Highest SBC bitrate for A2DP Bluetooth Profile</string>
 
+    <string name="audio_tweaks_a2dp_sbc_hde_title">Extreme SBC bitrate</string>
+    <string name="audio_tweaks_a2dp_sbc_hde_summary">Use Extreme SBC bitrate for A2DP Bluetooth Profile</string>
+
     <string name="audio_tweaks_a2dp_sbc_prefer_title">Prefer SBC</string>
     <string name="audio_tweaks_a2dp_sbc_prefer_summary">Prefer SBC over AAC or AptX</string>
 
