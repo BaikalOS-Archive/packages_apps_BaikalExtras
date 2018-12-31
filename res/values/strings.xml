@@ -223,21 +223,6 @@
     <string name="selinux_permissive_toast_title">Selinux set to permissive!</string>
     <string name="selinux_enforcing_toast_title">Selinux set to enforcing!</string>
 
-
-
-    <!-- System extensions -->
-
-    <string name="system_extensions_title">System extensions</string>
-    <string name="system_extensions_summary">System addons</string>
-
-    <!-- System app remover -->
-    <string name="system_app_remover_title">System App Remover</string>
-    <string name="system_app_remover_summary">Remove pre-installed apps</string>
-    <string name="system_app_remover_message_delete">Are you sure you want to delete this app?</string>
-    <string name="system_app_remover_message_noselect">Nothing selected</string>
-
-
-
     <!-- Log it -->
 
     <string name="log_it_title">Log that shit!</string>

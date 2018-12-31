@@ -146,14 +146,6 @@
   <string name="selinux_persistence_summary">Восстановить выбранный режим SEPolicy после каждой перезагрузки</string>
   <string name="selinux_permissive_toast_title">Режим SELinux - только предупреждение!</string>
   <string name="selinux_enforcing_toast_title">SELinux выставлен в принудительный режим!</string>
-  <!-- System extensions -->
-  <string name="system_extensions_title">Системные расширения</string>
-  <string name="system_extensions_summary">Системные дополнения</string>
-  <!-- System app remover -->
-  <string name="system_app_remover_title">Удаление системных приложений</string>
-  <string name="system_app_remover_summary">Удаление предустановленных приложений</string>
-  <string name="system_app_remover_message_delete">Вы уверены, что хотите удалить данное приложение?</string>
-  <string name="system_app_remover_message_noselect">Ничего не выбрано</string>
   <!-- Log it -->
   <string name="log_it_title">Снять лог!</string>
   <string name="log_it_summary">Logcat, kmesg, dmesg</string>

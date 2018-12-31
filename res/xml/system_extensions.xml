@@ -21,6 +21,34 @@
     xmlns:baikalosextras="http://schemas.android.com/apk/res-auto"
     android:title="@string/system_extensions_title">
 
+
+    <PreferenceCategory
+        android:key="proximity"
+        android:title="@string/proximity_category">
+
+        <ru.baikalos.gear.preference.GlobalSettingSwitchPreference
+            android:key="baikal_wakeup_proximity_enabled"
+            android:title="@string/baikal_wakeup_proximity_enabled_title"
+            android:summary="@string/baikal_wakeup_proximity_enabled_summary"
+            android:defaultValue="false"
+            android:disableDependentsState="true" />
+
+        <ru.baikalos.gear.preference.GlobalSettingSwitchPreference
+            android:key="baikal_sleep_proximity_enabled"
+            android:title="@string/baikal_sleep_proximity_enabled_title"
+            android:summary="@string/baikal_sleep_proximity_enabled_summary"
+            android:defaultValue="false"
+            android:disableDependentsState="true" />
+
+    </PreferenceCategory>
+
+    <ru.baikalos.gear.preference.GlobalSettingSwitchPreference
+        android:key="baikal_hall_sensor_enabled"
+        android:title="@string/baikal_hall_sensor_enabled_title"
+        android:summary="@string/baikal_hall_sensor_enabled_summary"
+        android:defaultValue="false"
+        android:disableDependentsState="true" />
+
     <Preference
         android:key="system_app_remover"
         android:title="@string/system_app_remover_title"
