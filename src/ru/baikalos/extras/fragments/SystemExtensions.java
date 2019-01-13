@@ -19,6 +19,7 @@ package ru.baikalos.extras.fragments;
 
 import android.os.Bundle;
 import android.support.v7.preference.Preference;
+import android.content.res.Resources;
 
 import ru.baikalos.extras.BaseSettingsFragment;
 import ru.baikalos.extras.R;
@@ -36,6 +37,26 @@ public class SystemExtensions extends BaseSettingsFragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        final Resources res = getActivity().getResources();
+
+        boolean mHallSensor = res.getBoolean(
+                com.android.internal.R.bool.config_deviceHasHallSensor);
+
+        boolean mLidSensor = res.getBoolean(
+                com.android.internal.R.bool.config_deviceHasLidSensor);
+
+        if( !mHallSensor ) {
+            Preference mHallSensorPref = findPreference("baikal_hall_sensor_enabled");
+            mHallSensorPref.setVisible(false);
+        }
+
+        if( !mLidSensor ) {
+            Preference mLidSensorPref = findPreference("baikal_lid_sensor_enabled");
+            Preference mLidReversePref = findPreference("baikal_lid_sensor_reverse");
+            mLidSensorPref.setVisible(false);
+            mLidReversePref.setVisible(false);
+        }
 
         Preference systemAppRemover = findPreference(PREF_SYSTEM_APP_REMOVER);
         Util.requireRoot(getActivity(), systemAppRemover);

@@ -36,4 +36,10 @@
     <string name="baikal_hall_sensor_enabled_title">HALL Sensor</string>
     <string name="baikal_hall_sensor_enabled_summary">Enable HALL Sensor</string>
 
+    <string name="baikal_lid_sensor_enabled_title">Enable Smart Cover</string>
+    <string name="baikal_lid_sensor_enabled_summary">Enable Smart Cover</string>
+
+    <string name="baikal_lid_sensor_reverse_title">Reverse Smart Cover</string>
+    <string name="baikal_lid_sensor_reverse_summary">Reverse Smart Cover Action</string>
+
 </resources>

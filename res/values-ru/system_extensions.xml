@@ -29,10 +29,16 @@
 
     <string name="proximity_category">Датчик приближения</string>
     <string name="baikal_wakeup_proximity_enabled_title">Пробуждать</string>
-    <string name="baikal_wakeup_proximity_enabled_summary">Пробуждать по даойному взмаху</string>
+    <string name="baikal_wakeup_proximity_enabled_summary">Пробуждать по двойному взмаху</string>
     <string name="baikal_sleep_proximity_enabled_title">Усыплять</string>
-    <string name="baikal_sleep_proximity_enabled_summary">Усыплять по даойному взмаху</string>
+    <string name="baikal_sleep_proximity_enabled_summary">Усыплять по двойному взмаху</string>
     <string name="baikal_hall_sensor_enabled_title">Датчик Холла</string>
     <string name="baikal_hall_sensor_enabled_summary">Включить датчик Холла</string>
+
+    <string name="baikal_lid_sensor_enabled_title">Умный чехол</string>
+    <string name="baikal_lid_sensor_enabled_summary">Включить обработку умного чехла</string>
+
+    <string name="baikal_lid_sensor_reverse_title">Инвертировать Умный чехол</string>
+    <string name="baikal_lid_sensor_reverse_summary">Инвертировать поведение умного чехла</string>
 
 </resources>
