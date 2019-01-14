@@ -120,13 +120,21 @@ public class AudioTweaks extends BaseSettingsFragment
         }
         mEnableWhatsAppHack = (SwitchPreference) findPreference(AUDIO_TWEAKS_WHATSAPP);
         if( mEnableWhatsAppHack != null ) { 
-                mEnableWhatsAppHack.setChecked(SystemProperties.getBoolean(SYSTEM_PROPERTY_WHATSAPP_HACK, false));
-                mEnableWhatsAppHack.setOnPreferenceChangeListener(this);
+                if( !mBaikal8996AudioHal ) {
+                    mEnableWhatsAppHack.setVisible(false);
+                } else {
+                    mEnableWhatsAppHack.setChecked(SystemProperties.getBoolean(SYSTEM_PROPERTY_WHATSAPP_HACK, false));
+                    mEnableWhatsAppHack.setOnPreferenceChangeListener(this);
+                }
         }
         mEnableHeadphonesDetection = (SwitchPreference) findPreference(AUDIO_TWEAKS_HP_DETECT);
         if( mEnableHeadphonesDetection != null ) { 
-                mEnableHeadphonesDetection.setChecked(SystemProperties.getBoolean(SYSTEM_PROPERTY_HP_DETECT, false));
-                mEnableHeadphonesDetection.setOnPreferenceChangeListener(this);
+                if( !mBaikal8996AudioHal ) {
+                    mEnableHeadphonesDetection.setVisible(false);
+                } else {
+                    mEnableHeadphonesDetection.setChecked(SystemProperties.getBoolean(SYSTEM_PROPERTY_HP_DETECT, false));
+                    mEnableHeadphonesDetection.setOnPreferenceChangeListener(this);
+                }
         }
 
         mEnableSuspendPlay = (SwitchPreference) findPreference(AUDIO_TWEAKS_SUSPEND_PLAY);
