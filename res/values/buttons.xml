@@ -50,4 +50,18 @@
     <string name="action_last_app">Launch last app</string>
     <string name="action_splitscreen">Splitscreen</string>
 
+    <string name="volume_key_title">Volume buttons</string>
+
+    <string name="volume_answer_call_title">Answer call</string>
+    <string name="volume_answer_call_summary">Answer call with Up button if Reject is on, or with any if off</string>
+
+    <string name="volume_reject_call_title">Reject call</string>
+    <string name="volume_reject_call_summary">Reject call with Down button if Answer is on, or with any if off</string>
+
+    <string name="volume_end_call_title">End call</string>
+    <string name="volume_end_call_summary">End active call</string>
+
+    <string name="volume_button_music_control_title">Media control</string>
+    <string name="volume_button_music_control_summary">Long press controls media playback while screen is off</string>
+
 </resources>

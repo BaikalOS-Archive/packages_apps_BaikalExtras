@@ -58,6 +58,7 @@ public class ButtonsSettings extends BaseSettingsFragment {
     private static final String KEY_CATEGORY_ASSIST        = "assist_key";
     private static final String KEY_CATEGORY_APP_SWITCH    = "app_switch_key";
     private static final String KEY_CATEGORY_CAMERA        = "camera_key";
+    private static final String KEY_CATEGORY_BUTTON_BACKLIGHT = "button_backlight_key";
 
     // Masked keys
     private static final int KEY_MASK_HOME = 0x01;
@@ -68,6 +69,7 @@ public class ButtonsSettings extends BaseSettingsFragment {
     private static final int KEY_MASK_CAMERA = 0x20;
 
     private int mDeviceHardwareKeys;
+    private Boolean mDeviceHasVariableButtonBrightness;
 
     @Override
     protected int getPreferenceResource() {
@@ -87,6 +89,9 @@ public class ButtonsSettings extends BaseSettingsFragment {
 
         mDeviceHardwareKeys = res.getInteger(
                 com.android.internal.R.integer.config_deviceHardwareKeys);
+
+        mDeviceHasVariableButtonBrightness = res.getBoolean(
+                com.android.internal.R.bool.config_deviceHasVariableButtonBrightness);
 
         final boolean hasHome = (mDeviceHardwareKeys & KEY_MASK_HOME) != 0 || navigationBarEnabled;
         final boolean hasMenu = (mDeviceHardwareKeys & KEY_MASK_MENU) != 0;
@@ -113,6 +118,12 @@ public class ButtonsSettings extends BaseSettingsFragment {
         final PreferenceCategory cameraCategory =
                 (PreferenceCategory) screen.findPreference(KEY_CATEGORY_CAMERA);
 
+        final PreferenceCategory backlightCategory =
+                (PreferenceCategory) screen.findPreference(KEY_CATEGORY_BUTTON_BACKLIGHT);
+
+        if (!mDeviceHasVariableButtonBrightness && backlightCategory != null ) {
+            screen.removePreference(backlightCategory);
+        }
         if (!hasMenu && menuCategory != null) {
             screen.removePreference(menuCategory);
         }
