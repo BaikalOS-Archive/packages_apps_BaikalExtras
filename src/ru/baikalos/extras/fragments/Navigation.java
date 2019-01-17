@@ -20,10 +20,31 @@ package ru.baikalos.extras.fragments;
 import ru.baikalos.extras.BaseSettingsFragment;
 import ru.baikalos.extras.R;
 
+import android.os.Bundle;
+import android.util.Log;
+import android.support.v7.preference.Preference;
+import android.support.v7.preference.PreferenceScreen;
+
+import com.android.settingslib.widget.FooterPreference;
+import android.widget.TextView;
+import android.widget.LinearLayout;
+import android.widget.LinearLayout.LayoutParams;
+
+
+
 public class Navigation extends BaseSettingsFragment {
+
+    private static final String TAG = "BENavigation";
+
+    private FooterPreference mFooterPreference;
 
     @Override
     protected int getPreferenceResource() {
         return R.xml.navigation;
     }
+
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+    }
+
 }
