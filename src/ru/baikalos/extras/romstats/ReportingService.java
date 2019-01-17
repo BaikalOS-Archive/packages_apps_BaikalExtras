@@ -183,7 +183,7 @@ public class ReportingService extends Service {
             } else {
                 httpClient = new DefaultHttpClient();
             }
-            HttpPost httpPost = new HttpPost(romStatsUrl + "submit");
+            HttpPost httpPost = new HttpPost(romStatsUrl + "submit.php");
             boolean success = false;
 
             try {
