@@ -16,7 +16,7 @@
  * limitations under the License.
  */
 --><resources>
-  <string name="app_name">BAIKALOS Extras</string>
+  <string name="app_name">BaikalOS Extras</string>
   <!-- Dashboard -->
   <string name="user_interface_category">Uživatelské rozhraní</string>
   <string name="system_category">Systém</string>
@@ -43,7 +43,7 @@
   <string name="clock_date_string_edittext_summary">Zadejte řetězec</string>
   <string name="menu_cancel">Zrušit</string>
   <string name="menu_save">Uložit</string>
-  <!-- Statusbar BAIKALOS logo -->
+  <!-- Statusbar BaikalOS logo -->
   <!-- Statusbar categories -->
   <!-- Show 4G instead of LTE -->
   <!-- Notifications -->
@@ -122,7 +122,7 @@
   <string name="system_animations_title">Animace</string>
   <string name="system_animations_summary">Systémové animace</string>
   <string name="custom_bootanimation_title">Spouštěcí animace</string>
-  <string name="custom_bootanimation_summary">Vyberte vlastní spouštěcí animaci. Při každé změně bude aktuální animace zálohována do složky BAIKALOS_backup ve vnitřní paměti. Stará, je-li to nutné, musí být odstraněna ručně.</string>
+  <string name="custom_bootanimation_summary">Vyberte vlastní spouštěcí animaci. Při každé změně bude aktuální animace zálohována do složky BaikalOS_backup ve vnitřní paměti. Stará, je-li to nutné, musí být odstraněna ručně.</string>
   <string name="bootanimation_preview">Náhled spouštěcí animace</string>
   <string name="bootanimation_set_custom">Nastavit vlastní...</string>
   <string name="bootanimation_creating_preview">Vytváření náhledu...</string>
@@ -162,12 +162,12 @@
   <string name="log_it_dialog_title">Zapojit se</string>
   <string name="logcat_warning">Sdílet nebo jít pryč!</string>
   <string name="share_title">Sdílet...</string>
-  <string name="log_it_share_subject">Protokoly BAIKALOS</string>
+  <string name="log_it_share_subject">Protokoly BaikalOS</string>
   <string name="log_it_now_summary">Buďte trpěliví, protokoly se vytváří</string>
   <string name="log_it_logs_in_progress">Protokoly jsou vytvořeny…</string>
   <string name="log_it_share_type_title">Metoda sdílení</string>
   <string name="log_it_share_type_zip">ZIP soubor</string>
-  <string name="log_it_share_type_haste">Nahrát na BAIKALOS Hastebin</string>
+  <string name="log_it_share_type_haste">Nahrát na BaikalOS Hastebin</string>
   <string name="log_it_share_via">Sdílet pomocí</string>
   <!-- Panel porn -->
   <string name="panel_porn_title">Úpravy UI</string>
@@ -185,25 +185,25 @@
   <string name="theme_dark">Tmavý</string>
   <string name="theme_dark_more_accent">Tmavý motiv s více barvami</string>
   <string name="ae_launcher_enabled_title">Zobrazit ikonu spouštěče</string>
-  <string name="ae_launcher_enabled_summary">Zobrazit BAIKALOS Extras ve spouštěči</string>
+  <string name="ae_launcher_enabled_summary">Zobrazit BaikalOS Extras ve spouštěči</string>
   <string name="ae_launcher_enabled_update">Ikona spouštěče byla aktualizována. Projevení změny může chvíli trvat</string>
   <!-- About -->
-  <string name="about_title">O BAIKALOS</string>
+  <string name="about_title">O BaikalOS</string>
   <string name="about_summary">Zobrazit informace o této ROM</string>
   <string name="weblinks_category">Odkazy</string>
   <string name="info_category">Informace</string>
   <string name="baikalos_website_title">Webová stránka</string>
-  <string name="baikalos_website_summary">Navštívit webovou stránku BAIKALOS</string>
+  <string name="baikalos_website_summary">Navštívit webovou stránku BaikalOS</string>
   <string name="g_plus_title">Komunita G+</string>
   <string name="g_plus_summary">Navštivte naši komunitu G+</string>
   <string name="baikalos_gerrit_title">Gerrit</string>
   <string name="baikalos_gerrit_summary">Navštivte náš Gerrit, abyste věděli, na čem pracujeme</string>
   <string name="baikalos_changelog_title">Seznam změn</string>
-  <string name="baikalos_changelog_summary">Zobrazit poslední změny provedené v BAIKALOS</string>
+  <string name="baikalos_changelog_summary">Zobrazit poslední změny provedené v BaikalOS</string>
   <string name="baikalos_downloads_title">Stahování</string>
-  <string name="baikalos_downloads_summary">Navštivte stránku stahování BAIKALOS pro vaše zařízení</string>
+  <string name="baikalos_downloads_summary">Navštivte stránku stahování BaikalOS pro vaše zařízení</string>
   <string name="baikalos_ota_title">Centrum aktualizací</string>
-  <string name="baikalos_ota_summary">Zkontrolovat aktualizace BAIKALOS</string>
+  <string name="baikalos_ota_summary">Zkontrolovat aktualizace BaikalOS</string>
   <string name="stats_title">Statistiky</string>
   <string name="stats_summary">Povolit/zakázat anonymní statistiky</string>
   <string name="device_maintainer_title">Správce zařízení</string>
