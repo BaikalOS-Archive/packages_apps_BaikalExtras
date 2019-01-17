@@ -41,4 +41,7 @@
     <string name="baikal_lid_sensor_reverse_title">Инвертировать Умный чехол</string>
     <string name="baikal_lid_sensor_reverse_summary">Инвертировать поведение умного чехла</string>
 
+    <string name="use_google_sans_title">Google Sans по умолчанию</string>
+    <string name="use_google_sans_summary">Использовать Google Sans как шрифт по умолчанию. Требуется перезагрузка!</string>
+
 </resources>

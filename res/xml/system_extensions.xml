@@ -22,6 +22,12 @@
     android:title="@string/system_extensions_title">
 
 
+    <SwitchPreference
+        android:key="use_google_sans"
+        android:title="@string/use_google_sans_title"
+        android:summary="@string/use_google_sans_summary"
+        android:defaultValue="false" />
+
     <PreferenceCategory
         android:key="proximity"
         android:title="@string/proximity_category">

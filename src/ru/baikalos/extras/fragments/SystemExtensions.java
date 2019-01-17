@@ -24,10 +24,23 @@ import android.content.res.Resources;
 import ru.baikalos.extras.BaseSettingsFragment;
 import ru.baikalos.extras.R;
 import ru.baikalos.extras.utils.Util;
+import android.util.Log;
 
-public class SystemExtensions extends BaseSettingsFragment {
+import android.support.v14.preference.SwitchPreference;
+
+import android.content.Context;
+import android.os.SystemProperties;
+
+public class SystemExtensions extends BaseSettingsFragment 
+            implements Preference.OnPreferenceChangeListener{
 
     private static final String PREF_SYSTEM_APP_REMOVER = "system_app_remover";
+
+    private static final String BAIKAL_USE_SANS_KEY = "persist.baikal.use_google_sans";
+
+    private SwitchPreference mBaikalUseGoogleSans;
+    private Context mContext;
+
 
     @Override
     protected int getPreferenceResource() {
@@ -37,6 +50,15 @@ public class SystemExtensions extends BaseSettingsFragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        mContext = (Context) getActivity();
+
+        mBaikalUseGoogleSans = (SwitchPreference) findPreference("use_google_sans");
+        if( mBaikalUseGoogleSans != null ) { 
+            mBaikalUseGoogleSans.setChecked(SystemProperties.getBoolean(BAIKAL_USE_SANS_KEY, false));
+            mBaikalUseGoogleSans.setOnPreferenceChangeListener(this);
+        }
+
 
         final Resources res = getActivity().getResources();
 
@@ -60,5 +82,22 @@ public class SystemExtensions extends BaseSettingsFragment {
 
         Preference systemAppRemover = findPreference(PREF_SYSTEM_APP_REMOVER);
         Util.requireRoot(getActivity(), systemAppRemover);
+    }
+
+    @Override
+    public boolean onPreferenceChange(Preference preference, Object newValue) {
+        if (preference == mBaikalUseGoogleSans) {
+            ((SwitchPreference)preference).setChecked((Boolean) newValue);
+            setSystemPropertyBoolean(BAIKAL_USE_SANS_KEY, (Boolean) newValue);
+            return true;
+        } else {
+            return true;
+        }
+    }
+
+    private void setSystemPropertyBoolean(String key, boolean value) {
+        String text = value?"1":"0";
+        Log.e("BaikalSystemTweaks", "setSystemPropertyBoolean: key=" + key + ", value=" + value);
+        SystemProperties.set(key, text);
     }
 }
