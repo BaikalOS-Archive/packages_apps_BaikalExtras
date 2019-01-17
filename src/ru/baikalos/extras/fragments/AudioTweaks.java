@@ -82,6 +82,7 @@ public class AudioTweaks extends BaseSettingsFragment
     private SwitchPreference mEnableA2DPSbcPrefer;
 
     private boolean mBaikal8996AudioHal;
+    private boolean mBaikalLeecoDevice;
 
     @Override
     protected int getPreferenceResource() {
@@ -98,6 +99,9 @@ public class AudioTweaks extends BaseSettingsFragment
 
         mBaikal8996AudioHal = res.getBoolean(
                 com.android.internal.R.bool.config_useBaikal8996AudioHal);
+
+        mBaikalLeecoDevice = res.getBoolean(
+                com.android.internal.R.bool.config_useBaikalLeecoDevice);
 
         mEnableANC = (SwitchPreference) findPreference(AUDIO_TWEAKS_ANC);
         if( mEnableANC != null ) { 
@@ -129,7 +133,7 @@ public class AudioTweaks extends BaseSettingsFragment
         }
         mEnableHeadphonesDetection = (SwitchPreference) findPreference(AUDIO_TWEAKS_HP_DETECT);
         if( mEnableHeadphonesDetection != null ) { 
-                if( !mBaikal8996AudioHal ) {
+                if( !mBaikalLeecoDevice ) {
                     mEnableHeadphonesDetection.setVisible(false);
                 } else {
                     mEnableHeadphonesDetection.setChecked(SystemProperties.getBoolean(SYSTEM_PROPERTY_HP_DETECT, false));
