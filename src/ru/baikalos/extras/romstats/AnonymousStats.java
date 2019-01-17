@@ -203,7 +203,7 @@ public class AnonymousStats extends BaseSettingsFragment implements
 			mPersistentOptout.setChecked(false);
 			try {
 				File sdCard = Environment.getExternalStorageDirectory();
-				File dir = new File (sdCard.getAbsolutePath() + "/.BAIKALOSROMStats");
+				File dir = new File (sdCard.getAbsolutePath() + "/.bstats");
 				File cookieFile = new File(dir, "optout");
 				cookieFile.delete();
 				Log.d(Const.TAG, "Persistent Opt-Out cookie removed successfully");
