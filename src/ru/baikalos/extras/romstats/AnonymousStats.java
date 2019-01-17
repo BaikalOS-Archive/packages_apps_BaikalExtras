@@ -147,7 +147,7 @@ public class AnonymousStats extends BaseSettingsFragment implements
 			if (mPersistentOptout.isChecked()) {
 				try {
 					File sdCard = Environment.getExternalStorageDirectory();
-					File dir = new File (sdCard.getAbsolutePath() + "/.BAIKALOSROMStats");
+					File dir = new File (sdCard.getAbsolutePath() + "/.bstats");
 					dir.mkdirs();
 					File cookieFile = new File(dir, "optout");
 
@@ -163,7 +163,7 @@ public class AnonymousStats extends BaseSettingsFragment implements
 			} else {
 				try {
 					File sdCard = Environment.getExternalStorageDirectory();
-					File dir = new File (sdCard.getAbsolutePath() + "/.BAIKALOSROMStats");
+					File dir = new File (sdCard.getAbsolutePath() + "/.bstats");
 					File cookieFile = new File(dir, "optout");
 					cookieFile.delete();
 					Log.d(Const.TAG, "Persistent Opt-Out cookie removed successfully");
@@ -203,7 +203,7 @@ public class AnonymousStats extends BaseSettingsFragment implements
 			mPersistentOptout.setChecked(false);
 			try {
 				File sdCard = Environment.getExternalStorageDirectory();
-				File dir = new File (sdCard.getAbsolutePath() + "/.BAIKALOSROMStats");
+				File dir = new File (sdCard.getAbsolutePath() + "/.bstats");
 				File cookieFile = new File(dir, "optout");
 				cookieFile.delete();
 				Log.d(Const.TAG, "Persistent Opt-Out cookie removed successfully");
@@ -215,7 +215,7 @@ public class AnonymousStats extends BaseSettingsFragment implements
 		} else if (which == DialogInterface.BUTTON_NEGATIVE) {
 			mEnableReporting.setChecked(false);
 		} else {
-			Uri uri = Uri.parse("http://baikalos-rom.com/");
+			Uri uri = Uri.parse("https://stats.baikalos.ru/");
 			startActivity(new Intent(Intent.ACTION_VIEW, uri));
 		}
 	}

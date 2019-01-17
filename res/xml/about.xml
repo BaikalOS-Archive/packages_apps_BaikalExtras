@@ -20,7 +20,7 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     android:title="@string/about_title">
 
-    <!-- BAIKALOS logo -->
+    <!-- BaikalOS logo -->
     <Preference
         android:key="baikalos_logo"
         android:layout="@layout/about_logo" />

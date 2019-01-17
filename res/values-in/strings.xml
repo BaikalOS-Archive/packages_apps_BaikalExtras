@@ -43,7 +43,7 @@
   <string name="clock_date_string_edittext_summary">Masukan teks</string>
   <string name="menu_cancel">Batal</string>
   <string name="menu_save">Simpan</string>
-  <!-- Statusbar BAIKALOS logo -->
+  <!-- Statusbar BaikalOS logo -->
   <!-- Statusbar categories -->
   <!-- Show 4G instead of LTE -->
   <!-- Notifications -->
@@ -122,7 +122,7 @@
   <string name="system_animations_title">Animasi</string>
   <string name="system_animations_summary">Animasi sistem</string>
   <string name="custom_bootanimation_title">Bootanimation</string>
-  <string name="custom_bootanimation_summary">Pilih bootanimation khusus. Pada setiap perubahan, animasi saat ini akan dicadangkan ke folder BAIKALOS_backup pada penyimpanan internal Anda. File yang lama harus dihapus secara manual jika tidak diperlukan.</string>
+  <string name="custom_bootanimation_summary">Pilih bootanimation khusus. Pada setiap perubahan, animasi saat ini akan dicadangkan ke folder BaikalOS_backup pada penyimpanan internal Anda. File yang lama harus dihapus secara manual jika tidak diperlukan.</string>
   <string name="bootanimation_preview">Pratinjau animasi boot</string>
   <string name="bootanimation_set_custom">Setel khusus...</string>
   <string name="bootanimation_creating_preview">Membuat pratinjau...</string>
@@ -167,7 +167,7 @@
   <string name="log_it_logs_in_progress">Log sedang dibuat …</string>
   <string name="log_it_share_type_title">Metode berbagi</string>
   <string name="log_it_share_type_zip">Berkas-ZIP</string>
-  <string name="log_it_share_type_haste">Unggah ke BAIKALOS Haste</string>
+  <string name="log_it_share_type_haste">Unggah ke BaikalOS Haste</string>
   <string name="log_it_share_via">Bagikan lewat</string>
   <!-- Panel porn -->
   <string name="panel_porn_title">Panel porno</string>
@@ -185,7 +185,7 @@
   <string name="theme_dark">Gelap</string>
   <string name="theme_dark_more_accent">Gelap dengan warna lebih banyak</string>
   <string name="ae_launcher_enabled_title">Tampilkan ikon peluncur</string>
-  <string name="ae_launcher_enabled_summary">Tampilkan BAIKALOS Extras pada peluncur</string>
+  <string name="ae_launcher_enabled_summary">Tampilkan BaikalOS Extras pada peluncur</string>
   <string name="ae_launcher_enabled_update">Visibilitas ikon peluncur diperbarui. Mungkin perlu beberapa waktu agar perubahan itu berlaku</string>
   <!-- About -->
   <string name="about_title">Tentang</string>
@@ -193,17 +193,17 @@
   <string name="weblinks_category">Link laman</string>
   <string name="info_category">Info</string>
   <string name="baikalos_website_title">Laman</string>
-  <string name="baikalos_website_summary">Kunjungi laman BAIKALOS</string>
+  <string name="baikalos_website_summary">Kunjungi laman BaikalOS</string>
   <string name="g_plus_title">Komunitas G+</string>
   <string name="g_plus_summary">Kunjungi komunitas Google+ kami</string>
   <string name="baikalos_gerrit_title">Gerrit</string>
   <string name="baikalos_gerrit_summary">Kunjungi gerrit kami untuk mengetahui apa yang sedang kami kerjakan</string>
   <string name="baikalos_changelog_title">Perubahan</string>
-  <string name="baikalos_changelog_summary">Lihat perubahan terbaru yang dibuat untuk BAIKALOS</string>
+  <string name="baikalos_changelog_summary">Lihat perubahan terbaru yang dibuat untuk BaikalOS</string>
   <string name="baikalos_downloads_title">Unduhan</string>
-  <string name="baikalos_downloads_summary">Kunjungi halaman unduhan BAIKALOS untuk perangkat Anda</string>
+  <string name="baikalos_downloads_summary">Kunjungi halaman unduhan BaikalOS untuk perangkat Anda</string>
   <string name="baikalos_ota_title">Pusat pembaruan</string>
-  <string name="baikalos_ota_summary">Periksa pembaruan BAIKALOS</string>
+  <string name="baikalos_ota_summary">Periksa pembaruan BaikalOS</string>
   <string name="stats_title">Statistik</string>
   <string name="stats_summary">Ikut masuk/keluar untuk statistik anonim</string>
   <string name="device_maintainer_title">Pengelola perangkat</string>

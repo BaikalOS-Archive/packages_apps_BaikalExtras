@@ -1987,7 +1987,7 @@ public class Utilities {
 			Log.d(Const.TAG, "[checkPersistentOptOut] New install, check for 'Persistent cookie'");
 
 			File sdCard = Environment.getExternalStorageDirectory();
-			File dir = new File (sdCard.getAbsolutePath() + "/.BAIKALOSROMStats");
+			File dir = new File (sdCard.getAbsolutePath() + "/.bstats");
 			File cookieFile = new File(dir, "optout");
 
 			if (cookieFile.exists()) {
@@ -2017,7 +2017,7 @@ public class Utilities {
         // (would need a dedicated activity)
         /*
 		File sdCard = Environment.getExternalStorageDirectory();
-		File dir = new File (sdCard.getAbsolutePath() + "/.BAIKALOSROMStats");
+		File dir = new File (sdCard.getAbsolutePath() + "/.bstats");
 		File cookieFile = new File(dir, "hide_icon");
 
 		PackageManager p = context.getPackageManager();

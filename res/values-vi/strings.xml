@@ -31,7 +31,7 @@
   <!-- Double tap to sleep on status bar -->
   <!-- Statusbar Clock options -->
   <string name="menu_cancel">Hủy</string>
-  <!-- Statusbar BAIKALOS logo -->
+  <!-- Statusbar BaikalOS logo -->
   <!-- Statusbar categories -->
   <!-- Show 4G instead of LTE -->
   <!-- Notifications -->
@@ -115,7 +115,7 @@
   <string name="log_it_logs_in_progress">Các bản ghi đang được tạo …</string>
   <string name="log_it_share_type_title">Phương pháp chia sẻ</string>
   <string name="log_it_share_type_zip">File ZIP</string>
-  <string name="log_it_share_type_haste">Tải lên BAIKALOS Haste</string>
+  <string name="log_it_share_type_haste">Tải lên BaikalOS Haste</string>
   <!-- Panel porn -->
   <string name="panel_porn_title">Bảng điều khiển</string>
   <!-- Volume dialog opacity -->
