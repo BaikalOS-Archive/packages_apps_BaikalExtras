@@ -46,8 +46,6 @@
             android:summary="@string/button_backlight_on_touch_only_summary"
             android:defaultValue="0"
             android:dependency="button_brightness_enabled" />
-     </PreferenceCategory>
-     <PreferenceCategory
         android:title="@string/anbi_title">
         <ru.baikalos.gear.preference.SystemSettingSwitchPreference
             android:key="anbi_enabled_option"

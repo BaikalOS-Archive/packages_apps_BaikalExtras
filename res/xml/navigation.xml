@@ -15,8 +15,9 @@
      limitations under the License.
 -->
 
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:baikalosextras="http://schemas.android.com/apk/res-auto"
+<PreferenceScreen 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
     android:key="navigation_key"
     android:title="@string/navigation_title">
 
@@ -25,5 +26,19 @@
         android:title="@string/navigation_bar_title"
         android:summary="@string/navigation_bar_title_summary"
         android:defaultValue="0" />
+
+    <ru.baikalos.gear.preference.SystemSettingSwitchPreference
+        android:key="use_bottom_gesture_navigation"
+        android:title="@string/use_bottom_gesture_title"
+        android:summary="@string/use_bottom_gesture_summary"
+        android:defaultValue="false" />
+
+    <PreferenceCategory
+        android:key="nav_footer_preference">
+        <com.android.settingslib.widget.FooterPreference
+            android:key="footer_preference"
+            android:title="@string/gesture_settings_info"
+            android:selectable="false" />
+    </PreferenceCategory>
 
 </PreferenceScreen>

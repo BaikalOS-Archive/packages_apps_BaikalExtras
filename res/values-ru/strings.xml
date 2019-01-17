@@ -16,7 +16,7 @@
  * limitations under the License.
  */
 --><resources>
-  <string name="app_name">BaikalOS Extras</string>
+  <string name="app_name">Расширения BaikalOS</string>
   <!-- Dashboard -->
   <string name="user_interface_category">Интерфейс</string>
   <string name="system_category">Система</string>
@@ -30,8 +30,38 @@
   <!-- StatusBar Battery Options -->
   <!-- Bluetooth status -->
   <!-- Statusbar net monitor -->
+    <string name="network_traffic_state_title">Сетевая активность в статусбаре</string>
+    <string name="network_traffic_autohide_threshold_title">Скрывать индикатор при активности меньше чем (KB/s)</string>
+    <!-- 4G icon -->
+    <string name="show_fourg_icon_title">Значок 4G</string>
+    <string name="show_fourg_icon_summary">ППоказывать значок 4G вместо LTE</string>
+    <!-- Roaming indicator icon -->
+    <string name="roaming_indicator_icon_title">Индикатор роуминга</string>
+    <string name="roaming_indicator_icon_summary">Показывать индикатор роуминга</string>
+    <!-- Show VoLTE icon on statusbar -->
+    <string name="volte_icon_title">Значок VoLTE</string>
+    <string name="volte_icon_summary">Показывать значок VoLTE</string>
   <!-- QS Header battery percentage -->
   <!-- Battery bar -->
+    <string name="battery_bar_title">Полоса батареи</string>
+    <string name="battery_bar_color_title">Светлые цвета</string>
+    <string name="battery_bar_color_summary">Диапазон цвета для темного сатусбара</string>
+    <string name="battery_bar_dark_color_title">Темные цвета</string>
+    <string name="battery_bar_dark_color_summary">Диапазон цвета для светлого статусбара</string>
+    <string name="battery_bar_charging_color_title">Светлый цвет при зарядке</string>
+    <string name="battery_bar_charging_color_summary">Цвет в темном статусбаре при зарядке</string>
+    <string name="battery_bar_charging_dark_color_title">Темный цвет при зарядке</string>
+    <string name="battery_bar_charging_dark_color_summary">Цвет в светлом статусбаре при зарядке</string>
+    <string name="battery_bar_style_title">Выравнивание</string>
+    <string name="battery_bar_thickness_title">Толщина</string>
+    <string name="battery_bar_animate_title">Анимация зарядки</string>
+    <string name="battery_bar_style_regular">Обычный</string>
+    <string name="battery_bar_style_center_mirrored">Зеркальные от центра</string>
+    <string name="battery_bar_style_reversed">Перевернутый</string>
+    <string name="battery_bar_use_charging_color_title">Цвет при зарядке</string>
+    <string name="battery_blend_start">Пустая</string>
+    <string name="battery_blend_end">Полная</string>
+    <string name="battery_blend_between">Средняя</string>
   <!-- StatusBar weather settings -->
   <!-- Smart pulldown-->
   <string name="smart_pulldown_dismissable">без удаляемых уведомлений</string>
@@ -48,11 +78,14 @@
   <string name="menu_save">Сохранить</string>
   <!-- Statusbar BaikalOS logo -->
   <!-- Statusbar categories -->
+  <string name="status_bar_icons_category_title">Значки</string>
   <!-- Show 4G instead of LTE -->
   <!-- Notifications -->
   <string name="notifications_title">Уведомления</string>
   <string name="notifications_summary">Управление расширенными уведомлениями</string>
   <!-- Heads up -->
+  <string name="notification_heads_up_title">Всплывающие</string>
+  <string name="notification_heads_up_summary">Разрешить всплывающие уведомления</string>
   <!-- Notification guts kill app button -->
   <!-- InCall notifications vibrate -->
   <!-- Brightness slider settings -->
@@ -93,6 +126,7 @@
   <!-- Lockscreen -->
   <string name="lockscreen_title">Экран блокировки</string>
   <string name="lockscreen_summary">Изменить внешний вид экрана блокировки</string>
+  <string name="lockscreen_security_category">Безопасность</string>
   <!-- Double tap to sleep on lockscreen -->
   <!-- Media art -->
   <!-- Lockscreen battery info indicator  -->
@@ -100,10 +134,18 @@
   <!-- Power menu on secure lockscreen -->
   <!-- Disable QS on secure Lockscreen -->
   <!-- Fingerprint authentication vibration -->
+  <string name="fprint_sucess_vib_title">Вибрация СОП</string>
+  <string name="fprint_sucess_vib_summary_on">Вибрация при успешной авторизации включена</string>
+  <string name="fprint_sucess_vib_summary_off">Вибрация при успешной авторизации выключена</string>
   <!-- Fingerprint unlock keystore -->
+  <string name="fp_unlock_keystore_title">Разблокировка СОП</string>
+  <string name="fp_unlock_keystore_summary">Разблокировать устройство по СОП после перезагрузки без запроса PIN/Пароль/Ключ</string>
   <!-- Ambient display bottom info -->
   <!-- Show Lockscreen clock, date, & alarm -->
   <!-- Hide statusbar on lockscreen -->
+  <!-- Smartlock Auto Unlock -->
+  <string name="smartlock_auto_unlock_title">Разблокировать по Smartlock</string>
+  <string name="smartlock_auto_unlock_summary">Автоматически разблокировать устройство если активен Smartlock</string>
   <!-- Other UI tweaks -->
   <string name="other_ui_title">Другие настройки интерфейса</string>
   <string name="other_ui_summary">Разное</string>
@@ -170,7 +212,7 @@
   <!-- Volume dialog opacity -->
   <!-- Power menu and dialogs opacity -->
   <!-- AE settings -->
-  <string name="ae_settings_title">Настройки BaikalOS Extras</string>
+  <string name="ae_settings_title">Настройки Расширений BaikalOS</string>
   <string name="ae_settings_summary">Настроить внешний вид и поведение BE</string>
   <string name="theme_title">Тема</string>
   <string name="theme_default">Тема по умолчанию</string>
@@ -218,11 +260,20 @@
   <string name="hidden_anim_activity_title">По писярику?</string>
   <string name="hidden_anim_more_nice">Збс!</string>
   <!-- Sensor block per-package -->
+  <string name="sensor_block_title">Блокировка сенсоров</string>
+  <string name="sensor_block_summary">Блокировка сенсора значительного движения для сохранения батареи при движении</string>
   <!-- Weather - OmniJaws Settings -->
   <string name="weather_title">Погода</string>
   <string name="weather_config_title">Настройки службы</string>
   <!-- Lockscreen Weather -->
   <!-- Statusbar ticker -->
+  <string name="status_bar_ticker_title">Бегущая строка</string>
+  <string name="status_bar_show_ticker_title">Бегущая строка</string>
+  <string name="status_bar_show_ticker_summary">Предпросмотр уведомлений в статусбаре вместо всплывающих</string>
+  <string name="ticker_animation_mode_title">Анимация бегущей строки</string>
+  <string name="ticker_animation_mode_alpha_fade">Fade</string>
+  <string name="ticker_animation_mode_scroll">Прокрутка</string>
+  <string name="ticker_tick_duration_title">Время бегущей строки</string>
   <!-- Navigation-->
   <string name="navigation_title">Навигация</string>
   <string name="navigation_summary">Стоковая/Smartbar/Fling/Жесты</string>
@@ -259,8 +310,28 @@
   <!-- AOKP custom system animations -->
   <!-- Lock screen visualizer -->
   <!-- Screen state service -->
+  <string name="screen_state_toggles_summary">@null</string>
+  <string name="screen_state_toggles_title">Действия при отключении экрана</string>
+  <string name="screen_state_toggles_enable_title">Включено</string>
+  <string name="screen_state_toggles_enable_summary">Действия будут выполнены при выключении экрана. При включении экрана будут восстановлены предыдущие значения.</string>
+  <string name="screen_state_toggles_mobile_title">Мобильная сеть</string>
+  <string name="screen_state_toggles_location_title">Местоположение</string>
+  <string name="screen_state_toggles_twog">Переключить в 2G</string>
+  <string name="screen_state_toggles_twog_summary">Режим сети будет переключен в 2G</string>
+  <string name="screen_state_toggles_gps">Отключить GPS</string>
+  <string name="screen_state_toggles_gps_summary">Модуль GPS будет отклюючен</string>
+  <string name="screen_state_toggles_mobile_data">Передача данных</string>
+  <string name="screen_state_toggles_mobile_data_summary">Передача данных по мобильной сети будет отключена</string>
+  <string name="screen_state_off_delay_title">Задержка дествий при отключении</string>
+  <string name="screen_state_off_delay_summary">Количество минут ожидания после отключения экрана</string>
+  <string name="screen_state_on_delay_title">Задержка действий при включении</string>
+  <string name="screen_state_on_delay_summary">Количество минут ожидания после включения экрана</string>
   <!-- Ambient Music Ticker -->
   <!-- Screen Off animation -->
+  <string name="screen_off_animation_title">Анимация выключения экрана</string>
+  <string name="screen_off_animation_default">По умолчанию</string>
+  <string name="screen_off_animation_crt">CRT</string>
+  <string name="screen_off_animation_scale">Scale</string>
   <!-- Suppress notification sound/vibration -->
   <!-- Accidental Touch -->
   <!-- Dynamic Navbar -->
@@ -293,4 +364,37 @@
   <string name="carbon_gesture_launch">Запуск</string>
   <!-- Disable FC notifications -->
   <!-- Circle app bar -->
+    <!-- Themes -->
+    <string name="theming_title">Темы</string>
+    <string name="theming_summary">Тема по умолчанию</string>
+    <string name="theming_base_title">Базовая тема</string>
+    <string name="theming_accent_title">Акцент</string>
+    <string name="theming_base_default">Светлая (по умолчанию)</string>
+    <string name="theming_base_dark">Темная, светлые уведомления</string>
+    <string name="theming_base_dark_notif">Темная</string>
+    <string name="theming_base_dark_transparent">Темная прозрачная</string>
+    <string name="theming_base_black">Черная, светлые уведомления</string>
+    <string name="theming_base_black_notif">Черная</string>
+    <string name="theming_base_black_transparent">Черная прозрачная</string>
+    <string name="theming_accent_default">По умолчанию</string>
+    <string name="theming_accent_amber">Янтарный</string>
+    <string name="theming_accent_bluelight">Синий</string>
+    <string name="theming_accent_cyan">Циан</string>
+    <string name="theming_accent_denim">Деним</string>
+    <string name="theming_accent_gold">Золотой</string>
+    <string name="theming_accent_greenlight">Зеленый</string>
+    <string name="theming_accent_lime">Лайм</string>
+    <string name="theming_accent_orange">Оранжевый</string>
+    <string name="theming_accent_oxygen">Воздушный</string>
+    <string name="theming_accent_pink">Розовый</string>
+    <string name="theming_accent_pixel">Пиксел</string>
+    <string name="theming_accent_purple">Пурпурный</string>
+    <string name="theming_accent_red">Красный</string>
+    <string name="theming_accent_teal">Teal</string>
+    <string name="theming_accent_turquoise">Бирюзовый</string>
+    <string name="theming_accent_yellow">Желтый</string>
+
+    <!-- Device hidden prefs -->
+    <string name="show_device_hidden_prefs_title">не скрывать настройки</string>
+    <string name="show_device_hidden_prefs_summary">По умолчанию, настройки, которые скорее всего не будут работать на вашем устройстве скрыты. Например если у вас нет root доступа.</string>
   </resources>
