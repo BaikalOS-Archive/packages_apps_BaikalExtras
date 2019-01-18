@@ -18,6 +18,8 @@
  */
 -->
 <resources>
-  <string name="switch_disable_warning_title">Peringatan</string>
-  <string name="switch_disable_warning_message">Menonaktifkan setelan ini tanpa mengaktifkan alternatif mungkin membuat perangkat Anda tidak dapat digunakan. Lanjutkan?</string>
+    <string name="switch_disable_warning_title">Warning</string>
+    <string name="switch_disable_warning_message">Disabling this setting without enabling an alternative might render your device unusuable. Continue?</string>
+    <string name="switch_disable_warning_continue">@android:string/ok</string>
+    <string name="switch_disable_warning_cancel">@android:string/cancel</string>
 </resources>

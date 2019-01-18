@@ -18,6 +18,8 @@
  */
 -->
 <resources>
-  <string name="switch_disable_warning_title">Figyelmeztetés</string>
-  <string name="switch_disable_warning_message">Ennek a funkciónak a letiltása, ha nem állít be más alternatívát helyette, a készülék használhatatlanságához vezethet. Mégis folytatja?</string>
+    <string name="switch_disable_warning_title">Figyelmeztetés</string>
+    <string name="switch_disable_warning_message">Ennek a funkciónak a letiltása, ha nem állít be más alternatívát helyette, a készülék használhatatlanságához vezethet. Mégis folytatja?</string>
+    <string name="switch_disable_warning_continue">@android:string/ok</string>
+    <string name="switch_disable_warning_cancel">@android:string/cancel</string>
 </resources>
