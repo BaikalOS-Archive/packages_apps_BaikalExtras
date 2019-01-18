@@ -5,15 +5,6 @@
     <string name="button_settings_title">Кнопки</string>
     <string name="button_settings_title_summary">Назначаемые действия</string>
     <string name="button_settings_description">Установть действия для кнопок управления на вашем устройстве.</string>
-    <!-- Navigation bar -->
-    <string name="navigation_bar_title">Панель навигации</string>
-    <string name="navigation_bar_title_summary">Включить наэкранную панель навигации</string>
-    <!-- OP like Navigation Gestures -->
-    <string name="gesture_settings_title">Навигационные жесты</string>
-    <string name="gesture_settings_info">Панель навигации должна быть отключена!&#10;&#10;Жесты выполняются от нижнего края экрана вверх.&#10;Доступные жесты:&#10;&#10;Назад&#10;- Свайп вверх слева и справа&#10;&#10;Домой&#10;- Свайп по центру&#10;&#10;Недавние&#10;- Свайп по центру до центра экрана и удержание&#10;&#10;Длинное нажатие Домой&#10;- Короткий свайп по центру и удержание</string>
-    <string name="use_bottom_gesture_title">Navigation gestures</string>
-    <string name="use_bottom_gesture_summary">Использовать жесты от нижнего края для навигации</string>
-
     <!-- Button brightness -->
     <string name="button_backlight_title">Подсветка аппаратных кнопок</string>
     <string name="hardware_brightness_keys_title">Подсветка</string>
