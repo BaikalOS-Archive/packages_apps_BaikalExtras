@@ -4,7 +4,7 @@
     <!-- Button Settings -->
     <string name="button_settings_title">Кнопки</string>
     <string name="button_settings_title_summary">Назначаемые действия</string>
-    <string name="button_settings_description">Установть действия для кнопок управления на вашем устройстве.</string>
+    <string name="button_settings_description">Установить действия для кнопок управления на вашем устройстве.</string>
     <!-- Button brightness -->
     <string name="button_backlight_title">Подсветка аппаратных кнопок</string>
     <string name="hardware_brightness_keys_title">Подсветка</string>
