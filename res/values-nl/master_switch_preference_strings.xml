@@ -18,6 +18,8 @@
  */
 -->
 <resources>
-  <string name="switch_disable_warning_title">Waarschuwing</string>
-  <string name="switch_disable_warning_message">Deze instelling uitschakelen zonder een alternatief in te schakelen kan uw apparaat onbruikbaar maken. Weet u zeker dat u door wil gaan?</string>
+    <string name="switch_disable_warning_title">Waarschuwing</string>
+    <string name="switch_disable_warning_message">Deze instelling uitschakelen zonder een alternatief in te schakelen kan uw apparaat onbruikbaar maken. Weet u zeker dat u door wil gaan?</string>
+    <string name="switch_disable_warning_continue">@android:string/ok</string>
+    <string name="switch_disable_warning_cancel">@android:string/cancel</string>
 </resources>
