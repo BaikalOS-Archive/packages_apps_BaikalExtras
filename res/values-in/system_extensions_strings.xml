@@ -19,24 +19,5 @@
 -->
 <resources>
     <!-- System extensions -->
-    <string name="system_extensions_title">System extensions</string>
-    <string name="system_extensions_summary">System addons</string>
     <!-- System app remover -->
-    <string name="system_app_remover_title">System App Remover</string>
-    <string name="system_app_remover_summary">Remove pre-installed apps</string>
-    <string name="system_app_remover_message_delete">Are you sure you want to delete this app?</string>
-    <string name="system_app_remover_message_noselect">Nothing selected</string>
-    <string name="proximity_category">Proximity</string>
-    <string name="baikal_wakeup_proximity_enabled_title">Wakeup</string>
-    <string name="baikal_wakeup_proximity_enabled_summary">Wakeup on double Hand wave</string>
-    <string name="baikal_sleep_proximity_enabled_title">Sleep</string>
-    <string name="baikal_sleep_proximity_enabled_summary">Sleep on double Hand wave</string>
-    <string name="baikal_hall_sensor_enabled_title">HALL Sensor</string>
-    <string name="baikal_hall_sensor_enabled_summary">Enable HALL Sensor</string>
-    <string name="baikal_lid_sensor_enabled_title">Enable Smart Cover</string>
-    <string name="baikal_lid_sensor_enabled_summary">Enable Smart Cover</string>
-    <string name="baikal_lid_sensor_reverse_title">Reverse Smart Cover</string>
-    <string name="baikal_lid_sensor_reverse_summary">Reverse Smart Cover Action</string>
-    <string name="use_google_sans_title">Google Sans default</string>
-    <string name="use_google_sans_summary">Use Google Sans as the default system font. Reboot required!</string>
 </resources>

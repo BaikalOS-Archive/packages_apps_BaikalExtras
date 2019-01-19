@@ -18,84 +18,32 @@
  */
 -->
 <resources>
-    <string name="app_name">BaikalOS Extras</string>
     <!-- Dashboard -->
-    <string name="user_interface_category">Interface do utilizador</string>
-    <string name="system_category">Sistema</string>
-    <string name="other_category">Outro</string>
     <!-- Device parts -->
-    <string name="device_part_title">Device features</string>
-    <string name="device_part_category">Device</string>
     <!-- Status bar -->
-    <string name="status_bar_title">Barra de estado</string>
-    <string name="status_bar_summary">Editar aparência de barra de estado</string>
     <!-- StatusBar Battery Options -->
     <!-- Bluetooth status -->
     <!-- Statusbar net monitor -->
-    <string name="network_traffic_state_title">Show net activity in statusbar</string>
-    <string name="network_traffic_autohide_threshold_title">Net activity autohide threshold (KB/s)</string>
     <!-- 4G icon -->
-    <string name="show_fourg_icon_title">4G icon</string>
-    <string name="show_fourg_icon_summary">Display 4G icon in signal icon instead LTE</string>
     <!-- Roaming indicator icon -->
-    <string name="roaming_indicator_icon_title">Roaming indicator</string>
-    <string name="roaming_indicator_icon_summary">Display roaming indicator in signal icon when in roaming mode</string>
     <!-- Show VoLTE icon on statusbar -->
-    <string name="volte_icon_title">VoLTE icon</string>
-    <string name="volte_icon_summary">Display VoLTE icon</string>
     <!-- QS Header battery percentage -->
     <!-- Battery bar -->
-    <string name="battery_bar_title">Battery bar</string>
-    <string name="battery_bar_color_title">Light colors</string>
-    <string name="battery_bar_color_summary">Color range used on dark status bar</string>
-    <string name="battery_bar_dark_color_title">Dark colors</string>
-    <string name="battery_bar_dark_color_summary">Color range used on light status bar</string>
-    <string name="battery_bar_charging_color_title">Light charging color</string>
-    <string name="battery_bar_charging_color_summary">Charging color used on dark status bar</string>
-    <string name="battery_bar_charging_dark_color_title">Dark charging color</string>
-    <string name="battery_bar_charging_dark_color_summary">Charging color used on light status bar</string>
-    <string name="battery_bar_style_title">Alignment</string>
-    <string name="battery_bar_thickness_title">Thickness</string>
-    <string name="battery_bar_animate_title">Charging animation</string>
-    <string name="battery_bar_style_regular">Regular</string>
-    <string name="battery_bar_style_center_mirrored">Center-mirrored</string>
-    <string name="battery_bar_style_reversed">Reversed</string>
-    <string name="battery_bar_use_charging_color_title">Custom charging color</string>
-    <string name="battery_blend_start">Empty</string>
-    <string name="battery_blend_end">Full</string>
-    <string name="battery_blend_between">Between</string>
     <!-- StatusBar weather settings -->
     <!-- Smart pulldown-->
-    <string name="smart_pulldown_dismissable">sem notificações dispensáveis</string>
-    <string name="smart_pulldown_ongoing">sem notificações pendentes</string>
-    <string name="smart_pulldown_summary">Abrir o painel de definições rápidas %1$s</string>
-    <string name="smart_pulldown_none_summary">Abrir o painel de definições rápidas quando não houver notificações</string>
-    <string name="smart_pulldown_off_summary">está desativada</string>
     <!-- Double tap to sleep on status bar -->
     <!-- Statusbar Clock options -->
-    <string name="status_bar_am_pm_info">O formato de 24 horas está ativado</string>
-    <string name="clock_date_string_edittext_title">Precisa estar em formato de data, por exemplo: MM/DD/AA</string>
-    <string name="clock_date_string_edittext_summary">Digite a seqüência de caracteres</string>
-    <string name="menu_cancel">Cancelar</string>
-    <string name="menu_save">Guardar</string>
     <!-- Statusbar BaikalOS logo -->
     <!-- Statusbar categories -->
-    <string name="status_bar_icons_category_title">Icons</string>
     <!-- Show 4G instead of LTE -->
     <!-- Notifications -->
-    <string name="notifications_title">Notificações</string>
-    <string name="notifications_summary">Personalizar cores das notificações</string>
     <!-- Heads up -->
-    <string name="notification_heads_up_title">Heads up</string>
-    <string name="notification_heads_up_summary">Allow pop up notifications</string>
     <!-- Notification guts kill app button -->
     <!-- InCall notifications vibrate -->
     <!-- Brightness slider settings -->
     <!-- Battery Styles -->
     <!-- Notification count -->
     <!-- Quick settings -->
-    <string name="quick_settings_title">Configurações rápidas</string>
-    <string name="quick_settings_summary">Editar aparência configurações rápidas</string>
     <!-- Disable music track title in QS tile -->
     <!-- Small quick settings scroller -->
     <!-- QS rows and columns -->
@@ -106,17 +54,8 @@
     <!-- QS tiles title visibility -->
     <!-- QS carrier text visibility -->
     <!-- QS Headers -->
-    <string name="custom_header_browse_title">Ver os cabeçalhos instalados</string>
-    <string name="custom_header_browse_summary_new">Ver todas as coleções de cabeçalhos disponíveis</string>
-    <string name="custom_header_pick_title">Selecione a imagem do cabeçalho</string>
-    <string name="custom_header_pick_summary">Selecione uma imagem para usar no modo estático</string>
-    <string name="header_provider_disabled">Desativado</string>
     <!-- Tiles animation style  -->
     <!-- Recents -->
-    <string name="recents_title">Recentes</string>
-    <string name="recents_summary">Editar aparência de tela de apps recentes</string>
-    <string name="stock_recents_category">Ações recentes</string>
-    <string name="alternative_recents_category">Recentes alternativas</string>
     <!-- Recents panel settings -->
     <!-- Recents Membar -->
     <!-- Stock recents icon pack -->
@@ -126,9 +65,6 @@
     <!-- Slim recents membar -->
     <!-- OmniSwitch -->
     <!-- Lockscreen -->
-    <string name="lockscreen_title">Ecrã de bloqueio</string>
-    <string name="lockscreen_summary">Editar aparência lockscreen</string>
-    <string name="lockscreen_security_category">Security</string>
     <!-- Double tap to sleep on lockscreen -->
     <!-- Media art -->
     <!-- Lockscreen battery info indicator  -->
@@ -136,21 +72,12 @@
     <!-- Power menu on secure lockscreen -->
     <!-- Disable QS on secure Lockscreen -->
     <!-- Fingerprint authentication vibration -->
-    <string name="fprint_sucess_vib_title">Fingerprint authentication vibration</string>
-    <string name="fprint_sucess_vib_summary_on">Vibrate on successful fingerprint authentication enabled</string>
-    <string name="fprint_sucess_vib_summary_off">Vibrate on successful fingerprint authentication disabled</string>
     <!-- Fingerprint unlock keystore -->
-    <string name="fp_unlock_keystore_title">FP unlock</string>
-    <string name="fp_unlock_keystore_summary">Unlock device with fingerprint after reboot without PIN/Password/Pattern</string>
     <!-- Ambient display bottom info -->
     <!-- Show Lockscreen clock, date, & alarm -->
     <!-- Hide statusbar on lockscreen -->
     <!-- Other UI tweaks -->
     <!-- Smartlock Auto Unlock -->
-    <string name="smartlock_auto_unlock_title">Smartlock Auto Unlock</string>
-    <string name="smartlock_auto_unlock_summary">Auto unlock if smartlock authenticated</string>
-    <string name="other_ui_title">Outros ajustes de interface do usuário</string>
-    <string name="other_ui_summary">Diversos misc</string>
     <!-- Volume dialog timeout -->
     <!-- Screenshot sound -->
     <!-- Swap volume keys based on device rotation -->
@@ -166,184 +93,38 @@
     <!-- Turn on display when power connected; turn off display when power disconnected -->
     <!-- Power Button - Long press for torch -->
     <!-- System animations -->
-    <string name="system_animations_title">Animações</string>
-    <string name="system_animations_summary">Animações do sistema</string>
-    <string name="custom_bootanimation_title">Animação de inicialização</string>
-    <string name="custom_bootanimation_summary">Selecione a nova animação de arranque. \nEm cada alteração, será feito uma copia de segurança da animação atual para a pasta de armazenamento/AOKP_backup com a data atual. Os antigos devem ser apagados manualmente se não precisar.</string>
-    <string name="bootanimation_preview">Visualização da animação do arranque</string>
-    <string name="bootanimation_set_custom">Definir personalizado...</string>
-    <string name="bootanimation_creating_preview">A criar visualização...</string>
-    <string name="bootanimation_error_reading_zip_file">Erro na leitura do ficheiro zip</string>
-    <string name="bootanimation_error_creating_preview">Erro ao criar visualização</string>
-    <string name="bootanimation_install_file_manager_error">Nenhuma aplicação encontrada para selecionar o ficheiro zip. Por favor instale um gestor de ficheiros.</string>
-    <string name="bootanimation_apply">Aplicar</string>
-    <string name="bootanimation_install_successful">Configuração aplicada com sucesso.</string>
     <!-- System behaviour -->
-    <string name="system_behaviour_title">Comportamento do sistema</string>
-    <string name="system_behaviour_summary">Ajustes do sistema</string>
-    <string name="selinux_category">SELinux</string>
-    <string name="selinux_explanation_summary">O SELinux é um conjunto de modificações do kernel e ferramentas do espaço do utilizador. Alterar os modos pode causar efeitos não desejados. Use por sua conta e risco.</string>
-    <string name="selinux_mode_title">Modo do SELinux</string>
-    <string name="selinux_permissive_summary">Permissivo</string>
-    <string name="selinux_enforcing_summary">Forçador</string>
-    <string name="selinux_persistence_title">Persistem entre reinicializações</string>
-    <string name="selinux_persistence_summary">Restaurar o acima sepolicy conjunto de modo a cada boot</string>
-    <string name="selinux_permissive_toast_title">SELinux definido como permissiva!</string>
-    <string name="selinux_enforcing_toast_title">SELinux conjunto para aplicar!</string>
     <!-- Log it -->
-    <string name="log_it_title">Registrar essa merda!</string>
-    <string name="log_it_summary">Logcat, kmesg, dmesg</string>
-    <string name="logcat_title">Logcat</string>
-    <string name="logcat_radio_title">Radio log</string>
-    <string name="kmesg_title">Kmesg</string>
-    <string name="dmesg_title">Dmesg</string>
-    <string name="log_it_now_title">Envolver-se</string>
-    <string name="log_it_dialog_title">Envolver-se</string>
-    <string name="logcat_warning">Compartilhá-lo, ou vá embora!</string>
-    <string name="share_title">A partilhar...</string>
-    <string name="log_it_share_subject">Logs de BaikalOS</string>
-    <string name="log_it_now_summary">Ser paciente para os logs a serem criados</string>
-    <string name="log_it_logs_in_progress">Os logs estão sendo criados…</string>
-    <string name="log_it_share_type_title">Método de compartilhamento</string>
-    <string name="log_it_share_type_zip">Arquivo ZIP</string>
-    <string name="log_it_share_type_haste">Upload para pressa BaikalOS</string>
-    <string name="log_it_share_via">Partilhar através de</string>
     <!-- Panel porn -->
-    <string name="panel_porn_title">Pornô de painel</string>
-    <string name="panel_porn_summary">Davor mundo!</string>
     <!-- Volume dialog opacity -->
     <!-- Power menu and dialogs opacity -->
     <!-- AE settings -->
-    <string name="ae_settings_title">Personalização de ROM</string>
-    <string name="ae_settings_summary">Personalizar a aparência e o comportamento da BaikalOS Extras</string>
-    <string name="theme_title">Tema</string>
-    <string name="theme_default">Tema de configurações padrão</string>
-    <string name="theme_default_force">Default settings theme</string>
-    <string name="theme_default_more_accent">Mais cores</string>
-    <string name="theme_light">Luz</string>
-    <string name="theme_light_more_accent">Luz com mais cor</string>
-    <string name="theme_dark">Escuro</string>
-    <string name="theme_dark_more_accent">Escuro, com mais cor</string>
-    <string name="ae_launcher_enabled_title">Mostrar ícone no launcher</string>
-    <string name="ae_launcher_enabled_summary">Mostrar BaikalOS Extras no lançador</string>
-    <string name="ae_launcher_enabled_update">Visibilidade de ícone lançador atualizada. Pode levar algum tempo para que a alteração tenha efeito</string>
     <!-- About -->
-    <string name="about_title">Acerca</string>
-    <string name="about_summary">Exibir informações sobre esta ROM</string>
-    <string name="weblinks_category">Ligações Web</string>
-    <string name="info_category">Informação</string>
-    <string name="baikalos_website_title">Website</string>
-    <string name="baikalos_website_summary">Visite o site da BaikalOS</string>
-    <string name="g_plus_title">G + Comunidade</string>
-    <string name="g_plus_summary">Visite nossa comunidade do Google +</string>
-    <string name="baikalos_gerrit_title">Gerrit</string>
-    <string name="baikalos_gerrit_summary">Visite nosso gerrit para saber o que estamos a trabalhar na</string>
-    <string name="baikalos_changelog_title">Registo de alterações</string>
-    <string name="baikalos_changelog_summary">Exibir alterações recentes feitas BaikalOS</string>
-    <string name="baikalos_downloads_title">Transferências</string>
-    <string name="baikalos_downloads_summary">Visite a página de transferências do BaikalOS para seu dispositivo</string>
-    <string name="baikalos_ota_title">Central de atualizações</string>
-    <string name="baikalos_ota_summary">Verificar se há atualizações BaikalOS</string>
-    <string name="stats_title">Estatísticas</string>
-    <string name="stats_summary">Optar em/fora por estatísticas anônimas</string>
-    <string name="device_maintainer_title">Responsável pela manutenção do dispositivo</string>
-    <string name="device_maintainer_dialog">Responsável pela manutenção do dispositivo</string>
-    <string name="device_maintainers_dialog">Responsável pela manutenção do dispositivo</string>
-    <string name="device_maintainer_default">Desconhecido</string>
-    <string name="no_root_title">Não enraizadas</string>
-    <string name="no_root_summary">For more functionality, root your device</string>
     <!-- Other / general purpose -->
-    <string name="ok">@android:string/ok</string>
-    <string name="cancel">@android:string/cancel</string>
-    <string name="on">Ligado</string>
-    <string name="off">Desligado</string>
-    <string name="yes">@android:string/yes</string>
-    <string name="no">@android:string/no</string>
-    <string name="reset">Repor</string>
-    <string name="systemui_restart_title">SystemUI reiniciar necessário</string>
-    <string name="systemui_restart_message">Para todas as alterações sejam efetivadas, SystemUI reinicialização é necessária. SystemUI reiniciar agora?</string>
-    <string name="cannot_get_su">Ação falhou devido a falta de acesso de super usuário</string>
-    <string name="launcher_shortcut_disabled_message">O atalho encontra-se desativado</string>
-    <string name="hidden_anim_activity_title">Tempo de ioga!!!</string>
-    <string name="hidden_anim_more_nice">BOM</string>
     <!-- Sensor block per-package -->
-    <string name="sensor_block_title">Sensor block per-package</string>
-    <string name="sensor_block_summary">Block access to certain sensors for some apps to save battery.</string>
     <!-- Weather - OmniJaws Settings -->
-    <string name="weather_title">Tempo</string>
-    <string name="weather_config_title">Definições de serviços</string>
     <!-- Lockscreen Weather -->
     <!-- Statusbar ticker -->
-    <string name="status_bar_ticker_title">Ticker</string>
-    <string name="status_bar_show_ticker_title">Ticker</string>
-    <string name="status_bar_show_ticker_summary">Notification preview in status bar instead of heads up</string>
-    <string name="ticker_animation_mode_title">Ticker animation</string>
-    <string name="ticker_animation_mode_alpha_fade">Fade</string>
-    <string name="ticker_animation_mode_scroll">Scroll</string>
-    <string name="ticker_tick_duration_title">Ticker duration</string>
     <!-- Navigation-->
-    <string name="navigation_title">Navigation</string>
-    <string name="navigation_summary">Estoque/Smartbar/aventura/gestos</string>
     <!-- Navigation bar -->
     <!-- DUI -->
-    <string name="icon_pack_picker_dialog_title">Pacotes de ícones</string>
-    <string name="picker_activities">Actividades</string>
-    <string name="select_custom_app_title">Selecione a aplicação personalizada</string>
-    <string name="select_custom_activity_title">Selecionar atividade personalizada</string>
-    <string name="profile_applist_title">Aplicações</string>
     <!-- Actions dialog and default task values set in ActionPreference xml-->
-    <string name="choose_action_title">Escolher ação</string>
     <!-- Fling -->
     <!-- Pulse navigation bar music visualizer -->
     <!-- Pulse config -->
     <!-- Navbar height -->
     <!-- SmartBar -->
-    <string name="smartbar_factory_reset_title">Redefinir para o padrão</string>
-    <string name="smartbar_factory_reset_confirm">Tem certeza de que deseja redefinir a barra inteligente para as configurações padrão?</string>
-    <string name="smartbar_backup_current_config_title">Guardar perfil</string>
-    <string name="smartbar_restore_config_title">Restaurar o perfil</string>
-    <string name="smartbar_config_name_edit_dialog_title">Nome do perfil da barra de navegação</string>
-    <string name="smartbar_config_name_edit_dialog_message">Introduza um nome ou deixe em branco</string>
-    <string name="smartbar_config_dialog_title">Nome do perfil da barra de navegação</string>
-    <string name="smartbar_config_backup_success_toast">Perfil da barra de navegação guardado com sucesso</string>
-    <string name="smartbar_config_restore_success_toast">Perfil da barra de navegação restaurado com sucesso</string>
-    <string name="smartbar_config_backup_error_toast">Error ao guardar o perfil da barra de navegação</string>
-    <string name="smartbar_config_restore_error_toast">Erro ao restaurar o perfil da barra de navegação</string>
     <!-- Carrier Label -->
-    <string name="custom_carrier_label_title">Nome de operadora personalizado</string>
-    <string name="custom_carrier_label_explain">Inserir um novo nome. Deixar em branco para reverter para o nome padrão.</string>
-    <string name="custom_carrier_label_notset">Nome personalizado não estabelecido</string>
     <!-- AOKP custom system animations -->
     <!-- Lock screen visualizer -->
     <!-- Screen state service -->
-    <string name="screen_state_toggles_summary">\@null</string>
-    <string name="screen_state_toggles_title">Suspend Actions</string>
-    <string name="screen_state_toggles_enable_title">Enable</string>
-    <string name="screen_state_toggles_enable_summary">Actions will be executed on screen off. On screen on the previous state will be restored.</string>
-    <string name="screen_state_toggles_mobile_title">Mobile networks</string>
-    <string name="screen_state_toggles_location_title">Location</string>
-    <string name="screen_state_toggles_twog">Switch to 2G</string>
-    <string name="screen_state_toggles_twog_summary">Network mode will be switched to 2G on screen off</string>
-    <string name="screen_state_toggles_gps">Disable GPS</string>
-    <string name="screen_state_toggles_gps_summary">GPS based location service will be disabled on screen off</string>
-    <string name="screen_state_toggles_mobile_data">Disable mobile data</string>
-    <string name="screen_state_toggles_mobile_data_summary">Mobile data will be disabled on screen off</string>
-    <string name="screen_state_off_delay_title">Screen Off actions delay</string>
-    <string name="screen_state_off_delay_summary">Number of minutes to wait before performing actions after screen off</string>
-    <string name="screen_state_on_delay_title">Screen On actions delay</string>
-    <string name="screen_state_on_delay_summary">Number of minutes to wait before performing actions after screen on</string>
     <!-- Ambient Music Ticker -->
     <!-- Screen Off animation -->
-    <string name="screen_off_animation_title">Screen off animation</string>
-    <string name="screen_off_animation_default">Default</string>
-    <string name="screen_off_animation_crt">CRT</string>
-    <string name="screen_off_animation_scale">Scale</string>
     <!-- Suppress notification sound/vibration -->
     <!-- Accidental Touch -->
     <!-- Dynamic Navbar -->
     <!-- Face unlock toggle -->
     <!-- Navigation -->
-    <string name="navigation_category">Navegação</string>
     <!-- HW keys -->
     <!-- Volume keys -->
     <!-- Hardware button navigation -->
@@ -351,9 +132,6 @@
     <!-- Volume rocker wake -->
     <!-- Button brightness -->
     <!-- Quick QS pull down -->
-    <string name="status_bar_quick_qs_pulldown_summary_left">O canto direito da barra de estado faz baixar o painel de definições rápidas</string>
-    <string name="status_bar_quick_qs_pulldown_summary_right">O canto direito da barra de estado faz baixar o painel de definições rápidas</string>
-    <string name="status_bar_quick_qs_pulldown_off">Desligado</string>
     <!-- Status bar system icons -->
     <!-- Toast Animation -->
     <!-- System default animation -->
@@ -367,40 +145,9 @@
     <!-- Hostname setting -->
     <!-- Gestures -->
     <!-- Carbon gestures -->
-    <string name="carbon_gesture_launch">Launch</string>
     <!-- Disable FC notifications -->
     <!-- Circle app bar -->
     <!--OmniGesture-->
     <!-- Themes -->
-    <string name="theming_title">Themes</string>
-    <string name="theming_summary">Device default design</string>
-    <string name="theming_base_title">Base theme</string>
-    <string name="theming_accent_title">Accent color</string>
-    <string name="theming_base_default">Light (default)</string>
-    <string name="theming_base_dark">Dark, light notifications</string>
-    <string name="theming_base_dark_notif">Dark</string>
-    <string name="theming_base_dark_transparent">Dark transparent</string>
-    <string name="theming_base_black">Black, light notifications</string>
-    <string name="theming_base_black_notif">Black</string>
-    <string name="theming_base_black_transparent">Black transparent</string>
-    <string name="theming_accent_default">Default</string>
-    <string name="theming_accent_amber">Amber</string>
-    <string name="theming_accent_bluelight">Blue</string>
-    <string name="theming_accent_cyan">Cyan</string>
-    <string name="theming_accent_denim">Denim</string>
-    <string name="theming_accent_gold">Gold</string>
-    <string name="theming_accent_greenlight">Green</string>
-    <string name="theming_accent_lime">Lime</string>
-    <string name="theming_accent_orange">Orange</string>
-    <string name="theming_accent_oxygen">Oxygen</string>
-    <string name="theming_accent_pink">Pink</string>
-    <string name="theming_accent_pixel">Pixel</string>
-    <string name="theming_accent_purple">Purple</string>
-    <string name="theming_accent_red">Red</string>
-    <string name="theming_accent_teal">Teal</string>
-    <string name="theming_accent_turquoise">Turquoise</string>
-    <string name="theming_accent_yellow">Yellow</string>
     <!-- Device hidden prefs -->
-    <string name="show_device_hidden_prefs_title">Do not hide preferences</string>
-    <string name="show_device_hidden_prefs_summary">By default, preferences that will probably not work well on your device (because of e.g. root status or display cutout) will not be shown</string>
 </resources>

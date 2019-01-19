@@ -19,30 +19,5 @@
 -->
 <resources>
     <!-- About device screen, list item title. Takes the user to the screen about opting in or out of anonymous statistics. -->
-    <string name="anonymous_statistics_title">Статистика BaikalOS</string>
-    <string name="anonymous_statistics_warning_title">Сведения</string>
-    <string name="anonymous_statistics_warning">Анонимные отчёты позволяют разработчикам BaikalOS отслеживать работу ОС на различных устройствах. Отправляемая информация включает название устройства, версию прошивки и уникальный идентификатор, что никоим образом не затрагивает вашу конфиденциальность. Информация отправляется каждые 7 дней.\n\nЧтобы просмотреть пример информации, нажмите «Просмотр данных».</string>
-    <string name="enable_reporting_title">Разрешить отправку отчётов</string>
-    <string name="disable_reporting_persistent">Запретить отправку отчётов</string>
-    <string name="preview_data_title">Просмотр данных</string>
-    <string name="view_stats_title">Посетить страницу статистики</string>
-    <string name="anonymous_learn_more">Узнать больше</string>
-    <string name="last_report_on">Последняя отправка отчёта</string>
-    <string name="reporting_interval">Интервал отправки отчётов</string>
-    <plurals name="reporting_interval_days">
-        <item quantity="one">1 day</item>
-        <item quantity="few">%d days</item>
-        <item quantity="many">%d days</item>
-        <item quantity="other">%d days</item>
-    </plurals>
-    <string name="next_report_on">Следующая отправка</string>
     <!-- Anonymous Statistics - Preview -->
-    <string name="preview_id_title">Уникальный идентификатор</string>
-    <string name="preview_device_title">Устройство</string>
-    <string name="preview_version_title">Версия</string>
-    <string name="preview_country_title">Страна</string>
-    <string name="preview_carrier_title">Сотовый оператор</string>
-    <string name="preview_romname_title">Название прошивки</string>
-    <string name="preview_romversion_title">Версия BaikalOS</string>
-    <string name="preview_buildtype_title">Тип сборки BaikalOS</string>
 </resources>

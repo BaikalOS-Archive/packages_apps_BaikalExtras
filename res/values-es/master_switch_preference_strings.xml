@@ -17,9 +17,4 @@
  * limitations under the License.
  */
 -->
-<resources>
-    <string name="switch_disable_warning_title">Atención</string>
-    <string name="switch_disable_warning_message">Desactivar esta opción sin habilitar una alternativa puede hacer su dispositivo inusable. ¿Desea continuar?</string>
-    <string name="switch_disable_warning_continue">@android:string/ok</string>
-    <string name="switch_disable_warning_cancel">@android:string/cancel</string>
-</resources>
+<resources></resources>

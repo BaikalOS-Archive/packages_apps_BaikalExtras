@@ -19,24 +19,5 @@
 -->
 <resources>
     <!-- System extensions -->
-    <string name="system_extensions_title">Системные расширения</string>
-    <string name="system_extensions_summary">Системные дополнения</string>
     <!-- System app remover -->
-    <string name="system_app_remover_title">Удаление системных приложений</string>
-    <string name="system_app_remover_summary">Удаление предустановленных приложений</string>
-    <string name="system_app_remover_message_delete">Вы уверены, что хотите удалить данное приложение?</string>
-    <string name="system_app_remover_message_noselect">Ничего не выбрано</string>
-    <string name="proximity_category">Датчик приближения</string>
-    <string name="baikal_wakeup_proximity_enabled_title">Пробуждать</string>
-    <string name="baikal_wakeup_proximity_enabled_summary">Пробуждать по двойному взмаху</string>
-    <string name="baikal_sleep_proximity_enabled_title">Усыплять</string>
-    <string name="baikal_sleep_proximity_enabled_summary">Усыплять по двойному взмаху</string>
-    <string name="baikal_hall_sensor_enabled_title">Датчик Холла</string>
-    <string name="baikal_hall_sensor_enabled_summary">Включить датчик Холла</string>
-    <string name="baikal_lid_sensor_enabled_title">Умный чехол</string>
-    <string name="baikal_lid_sensor_enabled_summary">Включить обработку умного чехла</string>
-    <string name="baikal_lid_sensor_reverse_title">Инвертировать Умный чехол</string>
-    <string name="baikal_lid_sensor_reverse_summary">Инвертировать поведение умного чехла</string>
-    <string name="use_google_sans_title">Google Sans по умолчанию</string>
-    <string name="use_google_sans_summary">Использовать Google Sans как шрифт по умолчанию. Требуется перезагрузка!</string>
 </resources>

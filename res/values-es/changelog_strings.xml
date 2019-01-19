@@ -17,8 +17,4 @@
  * limitations under the License.
  */
 -->
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="changelog_name">Lista de cambios</string>
-    <string name="commit_id">Lockscreen Commit ID</string>
-    <string name="commit_message">Mensaje del commit</string>
-</resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2"></resources>
