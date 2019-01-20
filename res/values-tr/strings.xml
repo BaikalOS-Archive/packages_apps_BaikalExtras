@@ -19,8 +19,13 @@
 -->
 <resources>
     <!-- Dashboard -->
+    <string name="user_interface_category">Arayüz</string>
+    <string name="system_category">Sistem</string>
+    <string name="other_category">Diğer</string>
     <!-- Device parts -->
     <!-- Status bar -->
+    <string name="status_bar_title">Durum çubuğu</string>
+    <string name="status_bar_summary">Durum çubuğu görünümünü düzenleme</string>
     <!-- StatusBar Battery Options -->
     <!-- Bluetooth status -->
     <!-- Statusbar net monitor -->
@@ -31,12 +36,24 @@
     <!-- Battery bar -->
     <!-- StatusBar weather settings -->
     <!-- Smart pulldown-->
+    <string name="smart_pulldown_dismissable">kapatılamayan bildirimler yoksa</string>
+    <string name="smart_pulldown_ongoing">devam eden bildirimler yoksa</string>
+    <string name="smart_pulldown_summary">Mevcut %1$s bildirimler olduğunda hızlı ayarları açar</string>
+    <string name="smart_pulldown_none_summary">Bildirim olmadığında hızlı ayarları açar</string>
+    <string name="smart_pulldown_off_summary">kapalı</string>
     <!-- Double tap to sleep on status bar -->
     <!-- Statusbar Clock options -->
+    <string name="status_bar_am_pm_info">24 saat görünümü etkin</string>
+    <string name="clock_date_string_edittext_title">Tarih biçimi örnekteki gibi olmalıdır. gg/AA/yy</string>
+    <string name="clock_date_string_edittext_summary">Yazı girin</string>
+    <string name="menu_cancel">İptal</string>
+    <string name="menu_save">Kaydet</string>
     <!-- Statusbar BaikalOS logo -->
     <!-- Statusbar categories -->
     <!-- Show 4G instead of LTE -->
     <!-- Notifications -->
+    <string name="notifications_title">Bildirimler</string>
+    <string name="notifications_summary">Genişletilmiş bildirimler kontrolü</string>
     <!-- Heads up -->
     <!-- Notification guts kill app button -->
     <!-- InCall notifications vibrate -->
@@ -44,6 +61,8 @@
     <!-- Battery Styles -->
     <!-- Notification count -->
     <!-- Quick settings -->
+    <string name="quick_settings_title">Hızlı ayarlar</string>
+    <string name="quick_settings_summary">Hızlı ayarlar görünümünü düzenleme</string>
     <!-- Disable music track title in QS tile -->
     <!-- Small quick settings scroller -->
     <!-- QS rows and columns -->
@@ -54,8 +73,17 @@
     <!-- QS tiles title visibility -->
     <!-- QS carrier text visibility -->
     <!-- QS Headers -->
+    <string name="custom_header_browse_title">Yüklü başlıklara gözat</string>
+    <string name="custom_header_browse_summary_new">Kullanılabilir tüm başlık koleksiyonlarına göz atın</string>
+    <string name="custom_header_pick_title">Başlık görüntüsü seç</string>
+    <string name="custom_header_pick_summary">Statik modda kullanmak için bir görüntü seçin</string>
+    <string name="header_provider_disabled">Devre dışı</string>
     <!-- Tiles animation style  -->
     <!-- Recents -->
+    <string name="recents_title">Son uygulamalar</string>
+    <string name="recents_summary">Son uygulamalar görünümünü düzenleme</string>
+    <string name="stock_recents_category">Varsayılan son uygulamalar</string>
+    <string name="alternative_recents_category">Alternatif son uygulamalar</string>
     <!-- Recents panel settings -->
     <!-- Recents Membar -->
     <!-- Stock recents icon pack -->
@@ -65,6 +93,8 @@
     <!-- Slim recents membar -->
     <!-- OmniSwitch -->
     <!-- Lockscreen -->
+    <string name="lockscreen_title">Kilit ekranı</string>
+    <string name="lockscreen_summary">Kilit ekranı görünümünü düzenleme</string>
     <!-- Double tap to sleep on lockscreen -->
     <!-- Media art -->
     <!-- Lockscreen battery info indicator  -->
@@ -78,6 +108,8 @@
     <!-- Hide statusbar on lockscreen -->
     <!-- Other UI tweaks -->
     <!-- Smartlock Auto Unlock -->
+    <string name="other_ui_title">Çeşitli</string>
+    <string name="other_ui_summary">Çeşitli diğer düzenlemeler</string>
     <!-- Volume dialog timeout -->
     <!-- Screenshot sound -->
     <!-- Swap volume keys based on device rotation -->
@@ -93,28 +125,133 @@
     <!-- Turn on display when power connected; turn off display when power disconnected -->
     <!-- Power Button - Long press for torch -->
     <!-- System animations -->
+    <string name="system_animations_title">Animasyonlar</string>
+    <string name="system_animations_summary">Çeşitli sistem animasyonları</string>
+    <string name="custom_bootanimation_title">Açılış animasyonu</string>
+    <string name="custom_bootanimation_summary">Özel ön yükleme seçin. Her değişiklikte, geçerli animasyon dahili depolama alanınızdaki BaikalOS_backup klasörüne yedeklenecektir. Eskiler, gerek duyulmadıkça manuel olarak silinmelidir.</string>
+    <string name="bootanimation_preview">Açılış animasyonu ön izleme</string>
+    <string name="bootanimation_set_custom">Özel ayarla</string>
+    <string name="bootanimation_creating_preview">Önizleme oluşturuluyor...</string>
+    <string name="bootanimation_error_reading_zip_file">Zip dosyası okunurken hata oluştu</string>
+    <string name="bootanimation_error_creating_preview">Önizleme oluşturulurken hata oluştu</string>
+    <string name="bootanimation_install_file_manager_error">Zip dosyasını seçmek için hiçbir uygulama bulunamadı. Lütfen bir dosya yöneticisi yükleyin.</string>
+    <string name="bootanimation_apply">Uygula</string>
+    <string name="bootanimation_install_successful">Yeni açılış animasyonu başarıyla uygulandı.</string>
     <!-- System behaviour -->
+    <string name="system_behaviour_title">Sistem davranışı</string>
+    <string name="system_behaviour_summary">Çeşitli sistem özelleştirmeleri</string>
+    <string name="selinux_explanation_summary">SELinux bir kernel modifikasyonları içerir. Modların değişimi istenmeyen etkilere neden olabilir. Kendi sorumluluğunuzda kullanın.</string>
+    <string name="selinux_mode_title">SELinux modu</string>
+    <string name="selinux_permissive_summary">Permissive (Serbest)</string>
+    <string name="selinux_enforcing_summary">Enforcing (Zorunlu)</string>
+    <string name="selinux_persistence_title">Geri yükle</string>
+    <string name="selinux_persistence_summary">Her önyüklemede yukarıda belirtilen sepolicy modunu geri yükleyin</string>
+    <string name="selinux_permissive_toast_title">Selinux permissive moda ayarlandı!</string>
+    <string name="selinux_enforcing_toast_title">Selinux enforcing moda ayarlandı!</string>
     <!-- Log it -->
+    <string name="log_it_title">Veri günlüğü oluştur!</string>
+    <string name="logcat_radio_title">Radio</string>
+    <string name="log_it_now_title">Oluştur</string>
+    <string name="log_it_dialog_title">Oluşturuldu</string>
+    <string name="logcat_warning">Paylaş veya GTFO!</string>
+    <string name="share_title">Paylaş</string>
+    <string name="log_it_share_subject">BaikalOS verileri</string>
+    <string name="log_it_now_summary">Veriler oluşturulurken lütfen bekleyin!</string>
+    <string name="log_it_logs_in_progress">Günlükler oluşturuluyor…</string>
+    <string name="log_it_share_type_title">Paylaşım yöntemi</string>
+    <string name="log_it_share_type_zip">Zip dosyasına yükle</string>
+    <string name="log_it_share_type_haste">BaikalOS hasteye yükle</string>
+    <string name="log_it_share_via">Şununla paylaş</string>
     <!-- Panel porn -->
+    <string name="panel_porn_title">Saydamlık</string>
+    <string name="panel_porn_summary">Saydamlık görünümünü düzenleme</string>
     <!-- Volume dialog opacity -->
     <!-- Power menu and dialogs opacity -->
     <!-- AE settings -->
+    <string name="ae_settings_title">AE özelleştirmeleri</string>
+    <string name="ae_settings_summary">BaikalOS Extras görünüşünü ve davranışını özelleştirme</string>
+    <string name="theme_title">Temalar</string>
+    <string name="theme_default">Varsayılan tema ayarları</string>
+    <string name="theme_default_more_accent">Daha fazla renk</string>
+    <string name="theme_light">Aydınlık</string>
+    <string name="theme_light_more_accent">Daha fazla aydınlık renk</string>
+    <string name="theme_dark">Karanlık</string>
+    <string name="theme_dark_more_accent">Daha fazla karanlık renk</string>
+    <string name="ae_launcher_enabled_title">Başlatıcı simgesini göster</string>
+    <string name="ae_launcher_enabled_summary">Başlatıcıda BaikalOS Ekstraları göster</string>
+    <string name="ae_launcher_enabled_update">Başlatıcı simgesi görünürlüğü güncellendi. Yapılan değişikliklerin görünmesi biraz zaman alabilir</string>
     <!-- About -->
+    <string name="about_title">Hakkında</string>
+    <string name="about_summary">BaikalOS hakkındaki bilgileri görüntüle</string>
+    <string name="weblinks_category">Web bağlantısı</string>
+    <string name="info_category">Bilgiler</string>
+    <string name="baikalos_website_title">İnternet sitesi</string>
+    <string name="baikalos_website_summary">BaikalOS İnternet sitesini ziyaret et</string>
+    <string name="g_plus_title">G+ toğluluğu</string>
+    <string name="g_plus_summary">Google+ topluluğumuzu ziyaret et</string>
+    <string name="baikalos_gerrit_summary">Neler üzerinde çalıştığımızı görmek için gerrit sayfamızı ziyaret et</string>
+    <string name="baikalos_changelog_title">Değişiklikler</string>
+    <string name="baikalos_changelog_summary">BaikalOS\'de yapılan son değişiklikleri görüntüle</string>
+    <string name="baikalos_downloads_title">İndirmeler</string>
+    <string name="baikalos_downloads_summary">BaikalOS indirme sayfasını ziyaret et</string>
+    <string name="baikalos_ota_title">Güncelleme merkezi</string>
+    <string name="baikalos_ota_summary">BaikalOS güncellemelerini denetle</string>
+    <string name="stats_title">İstatistikler</string>
+    <string name="stats_summary">Anonim istatistiklerin seçilmesi ve açılması</string>
+    <string name="device_maintainer_title">Cihaz sorumlusu</string>
+    <string name="device_maintainer_dialog">Sorumlu</string>
+    <string name="device_maintainers_dialog">Cihaz sorumluları</string>
+    <string name="device_maintainer_default">Bilinmiyor</string>
+    <string name="no_root_title">Root erişimi yok</string>
+    <string name="no_root_summary">Daha fazla işlevsellik için cihazınıza root erişimi sağlayın</string>
     <!-- Other / general purpose -->
+    <string name="on">Açık</string>
+    <string name="off">Kapalı</string>
+    <string name="reset">Sıfırla</string>
+    <string name="systemui_restart_title">Sistem arayüzünü yeniden başlatma gerekli</string>
+    <string name="systemui_restart_message">Tüm değişikliklerin etkili olması için Sistem arayüzünün yeniden başlatılması gerekiyor. Sistem arayüzünü şimdi yeniden başlatmak ister misiniz?</string>
+    <string name="cannot_get_su">Root erişimi eksikliği nedeniyle işlem başarısız oldu</string>
+    <string name="launcher_shortcut_disabled_message">Kısayol devre dışı</string>
+    <string name="hidden_anim_activity_title">Yoga zamanı!!!</string>
+    <string name="hidden_anim_more_nice">GÜZEL</string>
     <!-- Sensor block per-package -->
     <!-- Weather - OmniJaws Settings -->
+    <string name="weather_title">Hava durumu</string>
+    <string name="weather_config_title">Servis ayarları</string>
     <!-- Lockscreen Weather -->
     <!-- Statusbar ticker -->
     <!-- Navigation-->
+    <string name="navigation_title">Gezinme</string>
+    <string name="navigation_summary">Varsayılan/Akıllı çubuk/Fling/Hareketler</string>
     <!-- Navigation bar -->
     <!-- DUI -->
+    <string name="icon_pack_picker_dialog_title">Simge paketleri</string>
+    <string name="picker_activities">Etkinlikler</string>
+    <string name="select_custom_app_title">Özel uygulama seç</string>
+    <string name="select_custom_activity_title">Özel etkinlik seç</string>
+    <string name="profile_applist_title">Uygulamalar</string>
     <!-- Actions dialog and default task values set in ActionPreference xml-->
+    <string name="choose_action_title">Eylem seçin</string>
     <!-- Fling -->
     <!-- Pulse navigation bar music visualizer -->
     <!-- Pulse config -->
     <!-- Navbar height -->
     <!-- SmartBar -->
+    <string name="smartbar_factory_reset_title">Varsayılana sıfırla</string>
+    <string name="smartbar_factory_reset_confirm">Akıllı çubuk ayarlarını varsayılan ayarlara sıfırlamak istediğinizden emin misiniz?</string>
+    <string name="smartbar_backup_current_config_title">Profili kaydet</string>
+    <string name="smartbar_restore_config_title">Profili geri yükle</string>
+    <string name="smartbar_config_name_edit_dialog_title">Akıllı çubuk profil adı</string>
+    <string name="smartbar_config_name_edit_dialog_message">Ad girin veya boş bırakın</string>
+    <string name="smartbar_config_dialog_title">Akıllı çubuk profilleri</string>
+    <string name="smartbar_config_backup_success_toast">Akıllı çubuk profili başarıyla kaydedildi</string>
+    <string name="smartbar_config_restore_success_toast">Akıllı çubuk profili başarıyla geri yüklendi</string>
+    <string name="smartbar_config_backup_error_toast">Akıllı çubuk profili kaydedilirken hata oluştu</string>
+    <string name="smartbar_config_restore_error_toast">Akıllı çubuk profili geri yüklenirken hata oluştu</string>
     <!-- Carrier Label -->
+    <string name="custom_carrier_label_title">Özel operatör etiketi</string>
+    <string name="custom_carrier_label_explain">Yeni bir etiket girin. Varsayılan etikete dönmek için boş bırakın.</string>
+    <string name="custom_carrier_label_notset">Özel etiket ayarlanmadı</string>
     <!-- AOKP custom system animations -->
     <!-- Lock screen visualizer -->
     <!-- Screen state service -->
@@ -125,6 +262,7 @@
     <!-- Dynamic Navbar -->
     <!-- Face unlock toggle -->
     <!-- Navigation -->
+    <string name="navigation_category">Gezinme</string>
     <!-- HW keys -->
     <!-- Volume keys -->
     <!-- Hardware button navigation -->
@@ -132,6 +270,9 @@
     <!-- Volume rocker wake -->
     <!-- Button brightness -->
     <!-- Quick QS pull down -->
+    <string name="status_bar_quick_qs_pulldown_summary_left">Durum çubuğunun sol tarafından aşağı çekmek hızlı ayarları açar</string>
+    <string name="status_bar_quick_qs_pulldown_summary_right">Durum çubuğunun sağ tarafından aşağı çekmek hızlı ayarları açar</string>
+    <string name="status_bar_quick_qs_pulldown_off">Kapalı</string>
     <!-- Status bar system icons -->
     <!-- Toast Animation -->
     <!-- System default animation -->
@@ -145,6 +286,7 @@
     <!-- Hostname setting -->
     <!-- Gestures -->
     <!-- Carbon gestures -->
+    <string name="carbon_gesture_launch">Başlat</string>
     <!-- Disable FC notifications -->
     <!-- Circle app bar -->
     <!--OmniGesture-->

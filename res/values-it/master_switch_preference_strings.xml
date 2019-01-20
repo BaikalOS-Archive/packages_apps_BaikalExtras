@@ -17,4 +17,7 @@
  * limitations under the License.
  */
 -->
-<resources></resources>
+<resources>
+    <string name="switch_disable_warning_title">Attenzione</string>
+    <string name="switch_disable_warning_message">Disabilitare questa impostazione senza abilitare un\'alternativa potrebbe rendere il tuo dispositivo inutilizzabile. Continuare?</string>
+</resources>

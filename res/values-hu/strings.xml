@@ -18,9 +18,15 @@
  */
 -->
 <resources>
+    <string name="app_name">BaikalOS Extrák</string>
     <!-- Dashboard -->
+    <string name="user_interface_category">Felhasználói felület</string>
+    <string name="system_category">Rendszer</string>
+    <string name="other_category">Egyéb</string>
     <!-- Device parts -->
     <!-- Status bar -->
+    <string name="status_bar_title">Állapotsáv</string>
+    <string name="status_bar_summary">Állapotsor megjelenítésének szerkesztése</string>
     <!-- StatusBar Battery Options -->
     <!-- Bluetooth status -->
     <!-- Statusbar net monitor -->
@@ -31,12 +37,24 @@
     <!-- Battery bar -->
     <!-- StatusBar weather settings -->
     <!-- Smart pulldown-->
+    <string name="smart_pulldown_dismissable">nincsenek elvethető értesítések</string>
+    <string name="smart_pulldown_ongoing">nincs folyamatban lévő értesítés</string>
+    <string name="smart_pulldown_summary">Gyorsbeállítások megnyitása, ha %1$s</string>
+    <string name="smart_pulldown_none_summary">Gyorsbeállítások megnyitása, ha nincsen értesítés</string>
+    <string name="smart_pulldown_off_summary">ki van kapcsolva</string>
     <!-- Double tap to sleep on status bar -->
     <!-- Statusbar Clock options -->
+    <string name="status_bar_am_pm_info">24-órás időformátum használata</string>
+    <string name="clock_date_string_edittext_title">A dátumformátum pl. HH/nn/éé kell legyen</string>
+    <string name="clock_date_string_edittext_summary">Szövegbevitel</string>
+    <string name="menu_cancel">Törlés</string>
+    <string name="menu_save">Mentés</string>
     <!-- Statusbar BaikalOS logo -->
     <!-- Statusbar categories -->
     <!-- Show 4G instead of LTE -->
     <!-- Notifications -->
+    <string name="notifications_title">Értesítések</string>
+    <string name="notifications_summary">Kiterjesztett értesítések vezérlése</string>
     <!-- Heads up -->
     <!-- Notification guts kill app button -->
     <!-- InCall notifications vibrate -->
@@ -44,6 +62,8 @@
     <!-- Battery Styles -->
     <!-- Notification count -->
     <!-- Quick settings -->
+    <string name="quick_settings_title">Gyorsbeállítások</string>
+    <string name="quick_settings_summary">Gyorsbeállítások kinézetének szerkesztése</string>
     <!-- Disable music track title in QS tile -->
     <!-- Small quick settings scroller -->
     <!-- QS rows and columns -->
@@ -54,8 +74,17 @@
     <!-- QS tiles title visibility -->
     <!-- QS carrier text visibility -->
     <!-- QS Headers -->
+    <string name="custom_header_browse_title">Tallózás a telepített fejlécek között</string>
+    <string name="custom_header_browse_summary_new">Böngészés az összes elérhető fejléckép gyűjteményben</string>
+    <string name="custom_header_pick_title">Fejléckép kiválasztása</string>
+    <string name="custom_header_pick_summary">Válasszon ki egy képet a statikus üzemmód használatához</string>
+    <string name="header_provider_disabled">Tiltva</string>
     <!-- Tiles animation style  -->
     <!-- Recents -->
+    <string name="recents_title">Előzmények</string>
+    <string name="recents_summary">Alkalmazáselőzmények kinézetének szerkesztése</string>
+    <string name="stock_recents_category">Gyári előzményekpanel</string>
+    <string name="alternative_recents_category">Alternatív előzményekpanel</string>
     <!-- Recents panel settings -->
     <!-- Recents Membar -->
     <!-- Stock recents icon pack -->
@@ -65,6 +94,8 @@
     <!-- Slim recents membar -->
     <!-- OmniSwitch -->
     <!-- Lockscreen -->
+    <string name="lockscreen_title">Záórképernyő</string>
+    <string name="lockscreen_summary">Záróképernyő kinézetének szerkesztése</string>
     <!-- Double tap to sleep on lockscreen -->
     <!-- Media art -->
     <!-- Lockscreen battery info indicator  -->
@@ -78,6 +109,8 @@
     <!-- Hide statusbar on lockscreen -->
     <!-- Other UI tweaks -->
     <!-- Smartlock Auto Unlock -->
+    <string name="other_ui_title">Egyéb felhasználói felület módosítások</string>
+    <string name="other_ui_summary">Különböző vegyes</string>
     <!-- Volume dialog timeout -->
     <!-- Screenshot sound -->
     <!-- Swap volume keys based on device rotation -->
@@ -93,28 +126,133 @@
     <!-- Turn on display when power connected; turn off display when power disconnected -->
     <!-- Power Button - Long press for torch -->
     <!-- System animations -->
+    <string name="system_animations_title">Kijelző és animációk</string>
+    <string name="system_animations_summary">Rendszeranimációk</string>
+    <string name="custom_bootanimation_title">Bootanimáció</string>
+    <string name="custom_bootanimation_summary">Válassza ki a bootanimációt. Minden egyes változtatásakor biztonsági mentés készül a jelenlegi animációról a belső tároló BaikalOS_backup mappába. Amire nincs szükség törölje manuálisan.</string>
+    <string name="bootanimation_preview">Bootanimation előnézete</string>
+    <string name="bootanimation_set_custom">Egyedi beállítása...</string>
+    <string name="bootanimation_creating_preview">Előnézet létrehozása...</string>
+    <string name="bootanimation_error_reading_zip_file">Hiba történt a ZIP-fájl olvasása közben</string>
+    <string name="bootanimation_error_creating_preview">Hiba történt az előnézet létrehozása közben</string>
+    <string name="bootanimation_install_file_manager_error">Nem található megfelelő alkalmazás a ZIP-fájl kijelölésére. Kérjük, telepítsen egy fájlkezelőt.</string>
+    <string name="bootanimation_apply">Alkalmazás</string>
+    <string name="bootanimation_install_successful">Az új bootanimáció sikeresen alkalmazva.</string>
     <!-- System behaviour -->
+    <string name="system_behaviour_title">Rendszer viselkedés</string>
+    <string name="system_behaviour_summary">Rendszertrükkök</string>
+    <string name="selinux_explanation_summary">SELinux egy kernelmódosítások és felhasználótéri-eszközök kollekciója. A mód váltása nemkívánatos hatásokat okozhat. Csak saját felelősségre használja.</string>
+    <string name="selinux_mode_title">SELinux mód</string>
+    <string name="selinux_permissive_summary">Engedélyező</string>
+    <string name="selinux_enforcing_summary">Kényszerítő</string>
+    <string name="selinux_persistence_title">Újraindítások után is megmarad</string>
+    <string name="selinux_persistence_summary">Állítsa vissza a fent említett SE-eljárásmódot minden rendszerindításkor</string>
+    <string name="selinux_permissive_toast_title">Selinux engedélyezettre állítva!</string>
+    <string name="selinux_enforcing_toast_title">SELinux átállítása \"enforcing\"-ra!</string>
     <!-- Log it -->
+    <string name="log_it_title">Jelentések!</string>
+    <string name="logcat_radio_title">Rádiónapló</string>
+    <string name="log_it_now_title">Foglalás</string>
+    <string name="log_it_dialog_title">Foglalás</string>
+    <string name="logcat_warning">Osszd meg vagy GTFO!</string>
+    <string name="share_title">Megosztás...</string>
+    <string name="log_it_share_subject">BaikalOS naplók</string>
+    <string name="log_it_now_summary">Légy türelemmel míg a jelentés elkészül</string>
+    <string name="log_it_logs_in_progress">Naplók létrehozása folyamatban…</string>
+    <string name="log_it_share_type_title">Megosztási módszer</string>
+    <string name="log_it_share_type_zip">ZIP-fájl</string>
+    <string name="log_it_share_type_haste">Feltöltés BaikalOS Haste használatával</string>
+    <string name="log_it_share_via">Megosztás ezzel</string>
     <!-- Panel porn -->
+    <string name="panel_porn_title">Áttetszősségi beállítások</string>
+    <string name="panel_porn_summary">Ez itt Davor világa!</string>
     <!-- Volume dialog opacity -->
     <!-- Power menu and dialogs opacity -->
     <!-- AE settings -->
+    <string name="ae_settings_title">AE testreszabás</string>
+    <string name="ae_settings_summary">Az BaikalOS extrák viselkedésének és kinézetének módosítása</string>
+    <string name="theme_title">Téma</string>
+    <string name="theme_default">Alapértelmezett beállítások téma</string>
+    <string name="theme_default_more_accent">Több szín</string>
+    <string name="theme_light">Világos</string>
+    <string name="theme_light_more_accent">Világos több színnel</string>
+    <string name="theme_dark">Sötét</string>
+    <string name="theme_dark_more_accent">Sötét több színnel</string>
+    <string name="ae_launcher_enabled_title">Indító ikon megjelenítése</string>
+    <string name="ae_launcher_enabled_summary">BaikalOS extrák megjelenítése az indítón</string>
+    <string name="ae_launcher_enabled_update">Az indító ikon megjelenítése frissítve. A változás érvénybelépéséhez szükséges néhány perc</string>
     <!-- About -->
+    <string name="about_title">Rólunk</string>
+    <string name="about_summary">További információk a ROM-ról</string>
+    <string name="weblinks_category">Linkek</string>
+    <string name="info_category">Infó</string>
+    <string name="baikalos_website_title">Weboldal</string>
+    <string name="baikalos_website_summary">Látogasson el a BaikalOS honlapjára</string>
+    <string name="g_plus_title">G+ közösség</string>
+    <string name="g_plus_summary">Látogasson el a Google + közösségünkhöz</string>
+    <string name="baikalos_gerrit_summary">Látogassa meg a Gerrit-et, hogy tudja min dologzunk jelenleg</string>
+    <string name="baikalos_changelog_title">Változások</string>
+    <string name="baikalos_changelog_summary">Nézd meg a legutóbbi változásokat a ROM-ban</string>
+    <string name="baikalos_downloads_title">Letöltések</string>
+    <string name="baikalos_downloads_summary">Látogassa meg készüléke BaikalOS letöltőközpontját</string>
+    <string name="baikalos_ota_title">Rendszerfrissítés</string>
+    <string name="baikalos_ota_summary">BaikalOS frissítések keresése</string>
+    <string name="stats_title">Statisztika</string>
+    <string name="stats_summary">Belépés/kilépés a névtelen statisztika programba/ból</string>
+    <string name="device_maintainer_title">Készülékfelelősök</string>
+    <string name="device_maintainer_dialog">A készülék felelőse</string>
+    <string name="device_maintainers_dialog">Készülékfelelősök</string>
+    <string name="device_maintainer_default">Ismeretlen</string>
+    <string name="no_root_title">Nincs root jogosultság</string>
+    <string name="no_root_summary">További funkciók eléréséhez rootolja készülékét</string>
     <!-- Other / general purpose -->
+    <string name="on">Be</string>
+    <string name="off">Ki</string>
+    <string name="reset">Visszaállítás</string>
+    <string name="systemui_restart_title">Rendszerfelület újraindítás szükséges</string>
+    <string name="systemui_restart_message">Az összes módosítások érvénybe léptetéséhez szükséges a rendszerfelület újraindítása. Újraindítja most?</string>
+    <string name="cannot_get_su">Sikertelen művelet, hiányzó rendszergazdai hozzáférés miatt</string>
+    <string name="launcher_shortcut_disabled_message">Parancsikon letiltva</string>
+    <string name="hidden_anim_activity_title">Yoga idő!!!</string>
+    <string name="hidden_anim_more_nice">SZÉP</string>
     <!-- Sensor block per-package -->
     <!-- Weather - OmniJaws Settings -->
+    <string name="weather_title">Időjárás</string>
+    <string name="weather_config_title">Szolgáltatás beállítások</string>
     <!-- Lockscreen Weather -->
     <!-- Statusbar ticker -->
     <!-- Navigation-->
+    <string name="navigation_title">Navigáció</string>
+    <string name="navigation_summary">Gyári / Okossáv / Fling / Mozdulatvezérlés</string>
     <!-- Navigation bar -->
     <!-- DUI -->
+    <string name="icon_pack_picker_dialog_title">Ikoncsomagok</string>
+    <string name="picker_activities">Programok</string>
+    <string name="select_custom_app_title">Egyéni alkalmazás választása</string>
+    <string name="select_custom_activity_title">Egyéni tevékenység választása</string>
+    <string name="profile_applist_title">Alkalmazások</string>
     <!-- Actions dialog and default task values set in ActionPreference xml-->
+    <string name="choose_action_title">Művelet választása</string>
     <!-- Fling -->
     <!-- Pulse navigation bar music visualizer -->
     <!-- Pulse config -->
     <!-- Navbar height -->
     <!-- SmartBar -->
+    <string name="smartbar_factory_reset_title">Gyári beállítások visszaállítása</string>
+    <string name="smartbar_factory_reset_confirm">Biztos, hogy visszaállítja a SmartBar-t gyári állapotra?</string>
+    <string name="smartbar_backup_current_config_title">Profil mentése</string>
+    <string name="smartbar_restore_config_title">Profil visszaállítása</string>
+    <string name="smartbar_config_name_edit_dialog_title">SmartBar profilnév</string>
+    <string name="smartbar_config_name_edit_dialog_message">Adjon meg nevet, vagy hagyja üresen</string>
+    <string name="smartbar_config_dialog_title">SmartBar profilok</string>
+    <string name="smartbar_config_backup_success_toast">SmartBar profil mentése sikeres</string>
+    <string name="smartbar_config_restore_success_toast">SmartBar profil sikeresen visszaállítva</string>
+    <string name="smartbar_config_backup_error_toast">Hiba a SmartBar profil mentésekor</string>
+    <string name="smartbar_config_restore_error_toast">Hiba a SmartBar profil visszaállításakor</string>
     <!-- Carrier Label -->
+    <string name="custom_carrier_label_title">Egyéni szolgálatói felírat</string>
+    <string name="custom_carrier_label_explain">Add meg az új felíratot. Üresen hagyva visszaáll a gyári felíratra.</string>
+    <string name="custom_carrier_label_notset">Egyéni felírat jelenleg nincs beállítva</string>
     <!-- AOKP custom system animations -->
     <!-- Lock screen visualizer -->
     <!-- Screen state service -->
@@ -125,6 +263,7 @@
     <!-- Dynamic Navbar -->
     <!-- Face unlock toggle -->
     <!-- Navigation -->
+    <string name="navigation_category">Navigáció</string>
     <!-- HW keys -->
     <!-- Volume keys -->
     <!-- Hardware button navigation -->
@@ -132,6 +271,9 @@
     <!-- Volume rocker wake -->
     <!-- Button brightness -->
     <!-- Quick QS pull down -->
+    <string name="status_bar_quick_qs_pulldown_summary_left">Gyorsbeállítások megjelenítése az állapotsor bal szélén lefelé húzással</string>
+    <string name="status_bar_quick_qs_pulldown_summary_right">Gyorsbeállítások megjelenítése az állapotsor jobb szélén lefelé húzással</string>
+    <string name="status_bar_quick_qs_pulldown_off">Ki</string>
     <!-- Status bar system icons -->
     <!-- Toast Animation -->
     <!-- System default animation -->
@@ -145,6 +287,7 @@
     <!-- Hostname setting -->
     <!-- Gestures -->
     <!-- Carbon gestures -->
+    <string name="carbon_gesture_launch">Indítás</string>
     <!-- Disable FC notifications -->
     <!-- Circle app bar -->
     <!--OmniGesture-->

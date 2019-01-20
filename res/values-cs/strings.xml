@@ -19,8 +19,13 @@
 -->
 <resources>
     <!-- Dashboard -->
+    <string name="user_interface_category">Uživatelské rozhraní</string>
+    <string name="system_category">Systém</string>
+    <string name="other_category">Ostatní</string>
     <!-- Device parts -->
     <!-- Status bar -->
+    <string name="status_bar_title">Stavová lišta</string>
+    <string name="status_bar_summary">Upravit vzhled stavové lišty</string>
     <!-- StatusBar Battery Options -->
     <!-- Bluetooth status -->
     <!-- Statusbar net monitor -->
@@ -31,12 +36,24 @@
     <!-- Battery bar -->
     <!-- StatusBar weather settings -->
     <!-- Smart pulldown-->
+    <string name="smart_pulldown_dismissable">žádné zamítnuté oznámení</string>
+    <string name="smart_pulldown_ongoing">žádné probíhající oznámení</string>
+    <string name="smart_pulldown_summary">Otevře nabídku rychlého nastavení, kde je přítomno %1$s</string>
+    <string name="smart_pulldown_none_summary">Otevře Rychlé Nastavení pokud nejsou přítomny žádné oznámení</string>
+    <string name="smart_pulldown_off_summary">je vypnuto</string>
     <!-- Double tap to sleep on status bar -->
     <!-- Statusbar Clock options -->
+    <string name="status_bar_am_pm_info">24-hodinový formát povolen</string>
+    <string name="clock_date_string_edittext_title">Musí být ve formátu např. MM/dd/yy</string>
+    <string name="clock_date_string_edittext_summary">Zadejte řetězec</string>
+    <string name="menu_cancel">Zrušit</string>
+    <string name="menu_save">Uložit</string>
     <!-- Statusbar BaikalOS logo -->
     <!-- Statusbar categories -->
     <!-- Show 4G instead of LTE -->
     <!-- Notifications -->
+    <string name="notifications_title">Oznámení</string>
+    <string name="notifications_summary">Rozšířené ovládání oznámení</string>
     <!-- Heads up -->
     <!-- Notification guts kill app button -->
     <!-- InCall notifications vibrate -->
@@ -44,6 +61,8 @@
     <!-- Battery Styles -->
     <!-- Notification count -->
     <!-- Quick settings -->
+    <string name="quick_settings_title">Rychlá nastavení</string>
+    <string name="quick_settings_summary">Upravit vzhled rychlého nastavení</string>
     <!-- Disable music track title in QS tile -->
     <!-- Small quick settings scroller -->
     <!-- QS rows and columns -->
@@ -54,8 +73,17 @@
     <!-- QS tiles title visibility -->
     <!-- QS carrier text visibility -->
     <!-- QS Headers -->
+    <string name="custom_header_browse_title">Procházet nainstalované záhlaví</string>
+    <string name="custom_header_browse_summary_new">Procházet všechny dostupné sbírky záhlaví</string>
+    <string name="custom_header_pick_title">Vybrat obrázek záhlaví</string>
+    <string name="custom_header_pick_summary">Vyberte obrázek, který chcete použít pro statický režim</string>
+    <string name="header_provider_disabled">Zakázáno</string>
     <!-- Tiles animation style  -->
     <!-- Recents -->
+    <string name="recents_title">Nedávné</string>
+    <string name="recents_summary">Upravit vzhled obrazovky nedávných aplikací</string>
+    <string name="stock_recents_category">Původní nedávné</string>
+    <string name="alternative_recents_category">Alternativní nedávné</string>
     <!-- Recents panel settings -->
     <!-- Recents Membar -->
     <!-- Stock recents icon pack -->
@@ -65,6 +93,8 @@
     <!-- Slim recents membar -->
     <!-- OmniSwitch -->
     <!-- Lockscreen -->
+    <string name="lockscreen_title">Zamykací obrazovka</string>
+    <string name="lockscreen_summary">Upravit vzhled zamykací obrazovky</string>
     <!-- Double tap to sleep on lockscreen -->
     <!-- Media art -->
     <!-- Lockscreen battery info indicator  -->
@@ -78,6 +108,8 @@
     <!-- Hide statusbar on lockscreen -->
     <!-- Other UI tweaks -->
     <!-- Smartlock Auto Unlock -->
+    <string name="other_ui_title">Další vylepšení UI</string>
+    <string name="other_ui_summary">Různé</string>
     <!-- Volume dialog timeout -->
     <!-- Screenshot sound -->
     <!-- Swap volume keys based on device rotation -->
@@ -93,28 +125,131 @@
     <!-- Turn on display when power connected; turn off display when power disconnected -->
     <!-- Power Button - Long press for torch -->
     <!-- System animations -->
+    <string name="system_animations_title">Animace</string>
+    <string name="system_animations_summary">Systémové animace</string>
+    <string name="custom_bootanimation_title">Spouštěcí animace</string>
+    <string name="custom_bootanimation_summary">Vyberte vlastní spouštěcí animaci. Při každé změně bude aktuální animace zálohována do složky BaikalOS_backup ve vnitřní paměti. Stará, je-li to nutné, musí být odstraněna ručně.</string>
+    <string name="bootanimation_preview">Náhled spouštěcí animace</string>
+    <string name="bootanimation_set_custom">Nastavit vlastní...</string>
+    <string name="bootanimation_creating_preview">Vytváření náhledu...</string>
+    <string name="bootanimation_error_reading_zip_file">Chyba při čtení zip souboru</string>
+    <string name="bootanimation_error_creating_preview">Chyba při vytváření náhledu</string>
+    <string name="bootanimation_install_file_manager_error">Nebyla nalezena aplikace pro vybrání zip souboru. Je nutné nainstalovat nějaký správce souborů.</string>
+    <string name="bootanimation_apply">Použít</string>
+    <string name="bootanimation_install_successful">Nová spouštěcí animace byla úspěšně použita.</string>
     <!-- System behaviour -->
+    <string name="system_behaviour_title">Chování systému</string>
+    <string name="system_behaviour_summary">Vylepšení systému</string>
+    <string name="selinux_explanation_summary">SELinux je soubor změn na linuxovém jádře a způsob přidělování zdrojů pro danou aplikaci. Změna režimu může způsobit nežádoucí chování. Použití je na vlastní nebezpečí.</string>
+    <string name="selinux_mode_title">SELinux režim</string>
+    <string name="selinux_permissive_summary">Mírný</string>
+    <string name="selinux_enforcing_summary">Vynucený</string>
+    <string name="selinux_persistence_title">Udržet nastavení po restartu</string>
+    <string name="selinux_persistence_summary">Po každém restartování obnovit vybraný režim SEPolicy</string>
+    <string name="selinux_permissive_toast_title">Nastavit SELinux na mírný!</string>
+    <string name="selinux_enforcing_toast_title">SELinux nastaven na vynucený!</string>
     <!-- Log it -->
+    <string name="log_it_title">Zaznamenej ten odpad!</string>
+    <string name="log_it_now_title">Zapojit se</string>
+    <string name="log_it_dialog_title">Zapojit se</string>
+    <string name="logcat_warning">Sdílet nebo jít pryč!</string>
+    <string name="share_title">Sdílet...</string>
+    <string name="log_it_share_subject">Protokoly BaikalOS</string>
+    <string name="log_it_now_summary">Buďte trpěliví, protokoly se vytváří</string>
+    <string name="log_it_logs_in_progress">Protokoly jsou vytvořeny…</string>
+    <string name="log_it_share_type_title">Metoda sdílení</string>
+    <string name="log_it_share_type_zip">ZIP soubor</string>
+    <string name="log_it_share_type_haste">Nahrát na BaikalOS Hastebin</string>
+    <string name="log_it_share_via">Sdílet pomocí</string>
     <!-- Panel porn -->
+    <string name="panel_porn_title">Úpravy UI</string>
     <!-- Volume dialog opacity -->
     <!-- Power menu and dialogs opacity -->
     <!-- AE settings -->
+    <string name="ae_settings_title">Vlastní nastavení AE</string>
+    <string name="ae_settings_summary">Přizpůsobit vzhled a chování BaikalOS Extras</string>
+    <string name="theme_title">Motiv</string>
+    <string name="theme_default">Výchozí nastavení motivu</string>
+    <string name="theme_default_more_accent">Více barev</string>
+    <string name="theme_light">Světlý</string>
+    <string name="theme_light_more_accent">Světlý motiv s více barvami</string>
+    <string name="theme_dark">Tmavý</string>
+    <string name="theme_dark_more_accent">Tmavý motiv s více barvami</string>
+    <string name="ae_launcher_enabled_title">Zobrazit ikonu spouštěče</string>
+    <string name="ae_launcher_enabled_summary">Zobrazit BaikalOS Extras ve spouštěči</string>
+    <string name="ae_launcher_enabled_update">Ikona spouštěče byla aktualizována. Projevení změny může chvíli trvat</string>
     <!-- About -->
+    <string name="about_title">O BaikalOS</string>
+    <string name="about_summary">Zobrazit informace o této ROM</string>
+    <string name="weblinks_category">Odkazy</string>
+    <string name="info_category">Informace</string>
+    <string name="baikalos_website_title">Webová stránka</string>
+    <string name="baikalos_website_summary">Navštívit webovou stránku BaikalOS</string>
+    <string name="g_plus_title">Komunita G+</string>
+    <string name="g_plus_summary">Navštivte naši komunitu G+</string>
+    <string name="baikalos_gerrit_summary">Navštivte náš Gerrit, abyste věděli, na čem pracujeme</string>
+    <string name="baikalos_changelog_title">Seznam změn</string>
+    <string name="baikalos_changelog_summary">Zobrazit poslední změny provedené v BaikalOS</string>
+    <string name="baikalos_downloads_title">Stahování</string>
+    <string name="baikalos_downloads_summary">Navštivte stránku stahování BaikalOS pro vaše zařízení</string>
+    <string name="baikalos_ota_title">Centrum aktualizací</string>
+    <string name="baikalos_ota_summary">Zkontrolovat aktualizace BaikalOS</string>
+    <string name="stats_title">Statistiky</string>
+    <string name="stats_summary">Povolit/zakázat anonymní statistiky</string>
+    <string name="device_maintainer_title">Správce zařízení</string>
+    <string name="device_maintainer_dialog">Správce zařízení</string>
+    <string name="device_maintainers_dialog">Správci zařízení</string>
+    <string name="device_maintainer_default">Neznámé</string>
+    <string name="no_root_title">Bez rootu</string>
+    <string name="no_root_summary">Pro více funkcí proveďte root zařízení</string>
     <!-- Other / general purpose -->
+    <string name="on">Zapnuto</string>
+    <string name="off">Vypnuto</string>
+    <string name="reset">Obnovit</string>
+    <string name="systemui_restart_title">Je vyžadován restart SystemUI</string>
+    <string name="systemui_restart_message">Aby se projevily všechny změny, je třeba restartovat SystemUI. Restartovat nyní?</string>
+    <string name="cannot_get_su">Akce se nezdařila z důvodu chybějícího přístupu superuser</string>
+    <string name="launcher_shortcut_disabled_message">Zkratka je zakázána</string>
+    <string name="hidden_anim_activity_title">Čas na jógu!!!</string>
+    <string name="hidden_anim_more_nice">PĚKNÉ</string>
     <!-- Sensor block per-package -->
     <!-- Weather - OmniJaws Settings -->
+    <string name="weather_title">Počasí</string>
+    <string name="weather_config_title">Nastavení služby</string>
     <!-- Lockscreen Weather -->
     <!-- Statusbar ticker -->
     <!-- Navigation-->
+    <string name="navigation_title">Navigace</string>
+    <string name="navigation_summary">Stock/SmartBar/Fling/Gesta</string>
     <!-- Navigation bar -->
     <!-- DUI -->
+    <string name="icon_pack_picker_dialog_title">Balíčky ikon</string>
+    <string name="picker_activities">Aktivity</string>
+    <string name="select_custom_app_title">Vybrat vlastní aplikaci</string>
+    <string name="select_custom_activity_title">Vybrat vlastní aktivitu</string>
+    <string name="profile_applist_title">Aplikace</string>
     <!-- Actions dialog and default task values set in ActionPreference xml-->
+    <string name="choose_action_title">Vyberte akci</string>
     <!-- Fling -->
     <!-- Pulse navigation bar music visualizer -->
     <!-- Pulse config -->
     <!-- Navbar height -->
     <!-- SmartBar -->
+    <string name="smartbar_factory_reset_title">Obnovit výchozí</string>
+    <string name="smartbar_factory_reset_confirm">Opravdu chcete obnovit nastavení lišty SmartBar?</string>
+    <string name="smartbar_backup_current_config_title">Uložit profil</string>
+    <string name="smartbar_restore_config_title">Obnovit profil</string>
+    <string name="smartbar_config_name_edit_dialog_title">Název profilu lišty SmartBar</string>
+    <string name="smartbar_config_name_edit_dialog_message">Zadejte název nebo ponechte prázdné</string>
+    <string name="smartbar_config_dialog_title">Profily lišty SmartBar</string>
+    <string name="smartbar_config_backup_success_toast">Profil lišty SmartBar byl úspěšně uložen</string>
+    <string name="smartbar_config_restore_success_toast">Profil lišty SmartBar byl úspěšně obnoven</string>
+    <string name="smartbar_config_backup_error_toast">Chyba při ukládání profilu lišty SmartBar</string>
+    <string name="smartbar_config_restore_error_toast">Chyba při obnovení profilu lišty SmartBar</string>
     <!-- Carrier Label -->
+    <string name="custom_carrier_label_title">Vlastní název mobilní sítě</string>
+    <string name="custom_carrier_label_explain">Zadejte prosím nový název. Nechte prázdné pro navrácení k původnímu.</string>
+    <string name="custom_carrier_label_notset">Vlastní název není momentálně nastaven</string>
     <!-- AOKP custom system animations -->
     <!-- Lock screen visualizer -->
     <!-- Screen state service -->
@@ -125,6 +260,7 @@
     <!-- Dynamic Navbar -->
     <!-- Face unlock toggle -->
     <!-- Navigation -->
+    <string name="navigation_category">Navigace</string>
     <!-- HW keys -->
     <!-- Volume keys -->
     <!-- Hardware button navigation -->
@@ -132,6 +268,9 @@
     <!-- Volume rocker wake -->
     <!-- Button brightness -->
     <!-- Quick QS pull down -->
+    <string name="status_bar_quick_qs_pulldown_summary_left">Tažení dolů na levé straně stavové lišty vysune rychlé nastavení</string>
+    <string name="status_bar_quick_qs_pulldown_summary_right">Tažením dolů na pravé straně stavové lišty vysune rychlé nastavení</string>
+    <string name="status_bar_quick_qs_pulldown_off">Vypnuto</string>
     <!-- Status bar system icons -->
     <!-- Toast Animation -->
     <!-- System default animation -->
@@ -145,6 +284,7 @@
     <!-- Hostname setting -->
     <!-- Gestures -->
     <!-- Carbon gestures -->
+    <string name="carbon_gesture_launch">Spustit</string>
     <!-- Disable FC notifications -->
     <!-- Circle app bar -->
     <!--OmniGesture-->

@@ -19,5 +19,20 @@
 -->
 <resources>
     <!-- System extensions -->
+    <string name="system_extensions_title">Estensioni di sistema</string>
+    <string name="system_extensions_summary">Aggiunte di sistema</string>
     <!-- System app remover -->
+    <string name="system_app_remover_title">Rimozione app di sistema</string>
+    <string name="system_app_remover_summary">Rimuovi le app pre-installate</string>
+    <string name="system_app_remover_message_delete">Sei sicuro di voler eliminare questa applicazione?</string>
+    <string name="system_app_remover_message_noselect">Nessuna selezione</string>
+    <string name="proximity_category">Prossimità</string>
+    <string name="baikal_wakeup_proximity_enabled_title">Risveglio</string>
+    <string name="baikal_sleep_proximity_enabled_title">Sospensione</string>
+    <string name="baikal_lid_sensor_enabled_title">Abilita Smart Cover</string>
+    <string name="baikal_lid_sensor_enabled_summary">Abilita Smart Cover</string>
+    <string name="baikal_lid_sensor_reverse_title">Inverti Smart Cover</string>
+    <string name="baikal_lid_sensor_reverse_summary">Inverti azione della Smart Cover</string>
+    <string name="use_google_sans_title">Google Sans default</string>
+    <string name="use_google_sans_summary">Usa Google Sans come font di default del sistema. Riavvio richiesto!</string>
 </resources>

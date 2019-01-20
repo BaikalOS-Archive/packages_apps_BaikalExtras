@@ -18,9 +18,15 @@
  */
 -->
 <resources>
+    <string name="app_name">BaikalOS 附加设置</string>
     <!-- Dashboard -->
+    <string name="user_interface_category">界面</string>
+    <string name="system_category">系统</string>
+    <string name="other_category">其他</string>
     <!-- Device parts -->
     <!-- Status bar -->
+    <string name="status_bar_title">状态栏</string>
+    <string name="status_bar_summary">编辑状态栏外观</string>
     <!-- StatusBar Battery Options -->
     <!-- Bluetooth status -->
     <!-- Statusbar net monitor -->
@@ -31,12 +37,24 @@
     <!-- Battery bar -->
     <!-- StatusBar weather settings -->
     <!-- Smart pulldown-->
+    <string name="smart_pulldown_dismissable">无常驻通知</string>
+    <string name="smart_pulldown_ongoing">无持续通知</string>
+    <string name="smart_pulldown_summary">当有%1$s条通知时打开快速设置</string>
+    <string name="smart_pulldown_none_summary">没有通知时打开快速设置面板</string>
+    <string name="smart_pulldown_off_summary">已关闭</string>
     <!-- Double tap to sleep on status bar -->
     <!-- Statusbar Clock options -->
+    <string name="status_bar_am_pm_info">启用24小时时钟</string>
+    <string name="clock_date_string_edittext_title">日期格式必须如：MM/dd/yy</string>
+    <string name="clock_date_string_edittext_summary">输入字符串</string>
+    <string name="menu_cancel">取消</string>
+    <string name="menu_save">保存</string>
     <!-- Statusbar BaikalOS logo -->
     <!-- Statusbar categories -->
     <!-- Show 4G instead of LTE -->
     <!-- Notifications -->
+    <string name="notifications_title">通知</string>
+    <string name="notifications_summary">扩展通知控件</string>
     <!-- Heads up -->
     <!-- Notification guts kill app button -->
     <!-- InCall notifications vibrate -->
@@ -44,6 +62,8 @@
     <!-- Battery Styles -->
     <!-- Notification count -->
     <!-- Quick settings -->
+    <string name="quick_settings_title">快速设置</string>
+    <string name="quick_settings_summary">编辑快速设置外观</string>
     <!-- Disable music track title in QS tile -->
     <!-- Small quick settings scroller -->
     <!-- QS rows and columns -->
@@ -54,8 +74,17 @@
     <!-- QS tiles title visibility -->
     <!-- QS carrier text visibility -->
     <!-- QS Headers -->
+    <string name="custom_header_browse_title">浏览以选用</string>
+    <string name="custom_header_browse_summary_new">浏览所有可用的顶部图像集合</string>
+    <string name="custom_header_pick_title">选择顶部图像</string>
+    <string name="custom_header_pick_summary">选择静态模式使用的图片</string>
+    <string name="header_provider_disabled">禁用</string>
     <!-- Tiles animation style  -->
     <!-- Recents -->
+    <string name="recents_title">最近任务面板</string>
+    <string name="recents_summary">编辑“最近应用”屏幕外观</string>
+    <string name="stock_recents_category">默认最近任务</string>
+    <string name="alternative_recents_category">其他最近任务</string>
     <!-- Recents panel settings -->
     <!-- Recents Membar -->
     <!-- Stock recents icon pack -->
@@ -65,6 +94,8 @@
     <!-- Slim recents membar -->
     <!-- OmniSwitch -->
     <!-- Lockscreen -->
+    <string name="lockscreen_title">锁屏界面</string>
+    <string name="lockscreen_summary">编辑锁屏界面外观</string>
     <!-- Double tap to sleep on lockscreen -->
     <!-- Media art -->
     <!-- Lockscreen battery info indicator  -->
@@ -78,6 +109,8 @@
     <!-- Hide statusbar on lockscreen -->
     <!-- Other UI tweaks -->
     <!-- Smartlock Auto Unlock -->
+    <string name="other_ui_title">其它 UI 调整</string>
+    <string name="other_ui_summary">各种杂项</string>
     <!-- Volume dialog timeout -->
     <!-- Screenshot sound -->
     <!-- Swap volume keys based on device rotation -->
@@ -93,28 +126,135 @@
     <!-- Turn on display when power connected; turn off display when power disconnected -->
     <!-- Power Button - Long press for torch -->
     <!-- System animations -->
+    <string name="system_animations_title">显示和动画</string>
+    <string name="system_animations_summary">系统动画</string>
+    <string name="custom_bootanimation_title">启动动画</string>
+    <string name="custom_bootanimation_summary">选择自定义 bootanimation。在每次更改时, 当前动画将备份到内部存储中的 BaikalOS_backup 文件夹中。如果不需要, 必须手动删除旧的。</string>
+    <string name="bootanimation_preview">预览开机动画</string>
+    <string name="bootanimation_set_custom">自定义...</string>
+    <string name="bootanimation_creating_preview">正在创建预览...</string>
+    <string name="bootanimation_error_reading_zip_file">读取 Zip 文件错误</string>
+    <string name="bootanimation_error_creating_preview">创建预览错误</string>
+    <string name="bootanimation_install_file_manager_error">未找到可选择 Zip 文件的应用程序，请至少安装一款文件管理程序。</string>
+    <string name="bootanimation_apply">应用</string>
+    <string name="bootanimation_install_successful">新开机动画已成功应用。</string>
     <!-- System behaviour -->
+    <string name="system_behaviour_title">系统行为</string>
+    <string name="system_behaviour_summary">系统调整</string>
+    <string name="selinux_explanation_summary">SELinux是一个集修改内核和用户空间工具。改变模式可能会产生不必要的影响。请用户自行承担后果。</string>
+    <string name="selinux_mode_title">Selinux 模式</string>
+    <string name="selinux_permissive_summary">许可</string>
+    <string name="selinux_enforcing_summary">强制执行</string>
+    <string name="selinux_persistence_title">重启后取消更改</string>
+    <string name="selinux_persistence_summary">重启后恢复以上的设置</string>
+    <string name="selinux_permissive_toast_title">Selinux设置为许可模式!</string>
+    <string name="selinux_enforcing_toast_title">Selinux开始执行</string>
     <!-- Log it -->
+    <string name="log_it_title">记录那个狗屎！</string>
+    <string name="log_it_summary">Logcat，Kmesg，dmesg</string>
+    <string name="logcat_radio_title">无线电日志</string>
+    <string name="log_it_now_title">执行</string>
+    <string name="log_it_dialog_title">执行</string>
+    <string name="logcat_warning">分享或者离开</string>
+    <string name="share_title">分享...</string>
+    <string name="log_it_share_subject">BaikalOS 日志</string>
+    <string name="log_it_now_summary">请耐心等待日志创建</string>
+    <string name="log_it_logs_in_progress">日志已创建&amp;#8230</string>
+    <string name="log_it_share_type_title">分享方式</string>
+    <string name="log_it_share_type_zip">压缩文件</string>
+    <string name="log_it_share_type_haste">上传到 BaikalOS Haste</string>
+    <string name="log_it_share_via">通过分享</string>
     <!-- Panel porn -->
+    <string name="panel_porn_title">界面颜色设置</string>
+    <string name="panel_porn_summary">达沃世界!</string>
     <!-- Volume dialog opacity -->
     <!-- Power menu and dialogs opacity -->
     <!-- AE settings -->
+    <string name="ae_settings_title">AE 定制</string>
+    <string name="ae_settings_summary">自定义 BaikalOS 附加设置的外观和行为</string>
+    <string name="theme_title">主题</string>
+    <string name="theme_default">默认设置</string>
+    <string name="theme_default_more_accent">更多颜色</string>
+    <string name="theme_light">浅色</string>
+    <string name="theme_light_more_accent">更多颜色的光</string>
+    <string name="theme_dark">深色</string>
+    <string name="theme_dark_more_accent">暗色与更多颜色</string>
+    <string name="ae_launcher_enabled_title">显示启动器图标</string>
+    <string name="ae_launcher_enabled_summary">在启动器中显示 BaikalOS 附加设置</string>
+    <string name="ae_launcher_enabled_update">启动器图标可见性已更新。更改可能需要一些时间才能生效</string>
     <!-- About -->
+    <string name="about_title">关于</string>
+    <string name="about_summary">查看有关此 ROM 的信息</string>
+    <string name="weblinks_category">网页链接</string>
+    <string name="info_category">信息</string>
+    <string name="baikalos_website_title">网站</string>
+    <string name="baikalos_website_summary">访问 GIMP 网站</string>
+    <string name="g_plus_title">G+ 社区</string>
+    <string name="g_plus_summary">访问我们的 G+ 社区</string>
+    <string name="baikalos_gerrit_title">Gerrit 代码审查</string>
+    <string name="baikalos_gerrit_summary">访问我们的 Gerrit 来知道我们在为什么而工作</string>
+    <string name="baikalos_changelog_title">更新日志</string>
+    <string name="baikalos_changelog_summary">查看 ROM 的更新日志</string>
+    <string name="baikalos_downloads_title">下载地址</string>
+    <string name="baikalos_downloads_summary">访问您设备的 BaikalOS 下载页面</string>
+    <string name="baikalos_ota_title">Ota 中心</string>
+    <string name="baikalos_ota_summary">检查 BaikalOS 更新</string>
+    <string name="stats_title">统计</string>
+    <string name="stats_summary">提交匿名统计</string>
+    <string name="device_maintainer_title">设备维护人员</string>
+    <string name="device_maintainer_dialog">设备维护人员</string>
+    <string name="device_maintainers_dialog">设备维护人员</string>
+    <string name="device_maintainer_default">未知</string>
+    <string name="no_root_title">未 root</string>
+    <string name="no_root_summary">有关更多功能, 请 root 你的设备</string>
     <!-- Other / general purpose -->
+    <string name="on">开启</string>
+    <string name="off">关闭</string>
+    <string name="reset">重置</string>
+    <string name="systemui_restart_title">需要重启SystemUI</string>
+    <string name="systemui_restart_message">要使所有更改生效，需要重新启动SystemUI。现在重新启动SystemUI？</string>
+    <string name="cannot_get_su">操作失败，因为缺少超级用户访问权限</string>
+    <string name="launcher_shortcut_disabled_message">快捷方式已禁用</string>
+    <string name="hidden_anim_activity_title">休息时间!!!</string>
+    <string name="hidden_anim_more_nice">漂亮</string>
     <!-- Sensor block per-package -->
     <!-- Weather - OmniJaws Settings -->
+    <string name="weather_title">天气</string>
+    <string name="weather_config_title">服务设置</string>
     <!-- Lockscreen Weather -->
     <!-- Statusbar ticker -->
     <!-- Navigation-->
+    <string name="navigation_title">导航栏</string>
+    <string name="navigation_summary">原生 / 智能导航栏 / 扫动 / 手势</string>
     <!-- Navigation bar -->
     <!-- DUI -->
+    <string name="icon_pack_picker_dialog_title">图标包</string>
+    <string name="picker_activities">活动</string>
+    <string name="select_custom_app_title">选择应用程序</string>
+    <string name="select_custom_activity_title">选择活动</string>
+    <string name="profile_applist_title">应用程序</string>
     <!-- Actions dialog and default task values set in ActionPreference xml-->
+    <string name="choose_action_title">选择活动</string>
     <!-- Fling -->
     <!-- Pulse navigation bar music visualizer -->
     <!-- Pulse config -->
     <!-- Navbar height -->
     <!-- SmartBar -->
+    <string name="smartbar_factory_reset_title">重置为默认</string>
+    <string name="smartbar_factory_reset_confirm">你想要把Smartbar重置为默认设置吗？</string>
+    <string name="smartbar_backup_current_config_title">保存配置</string>
+    <string name="smartbar_restore_config_title">恢复配置</string>
+    <string name="smartbar_config_name_edit_dialog_title">智能栏配置文件名称</string>
+    <string name="smartbar_config_name_edit_dialog_message">输入名称或留空</string>
+    <string name="smartbar_config_dialog_title">智能导航栏配置文件</string>
+    <string name="smartbar_config_backup_success_toast">智能导航栏配置文件已成功保存</string>
+    <string name="smartbar_config_restore_success_toast">智能导航栏配置文件已成功恢复</string>
+    <string name="smartbar_config_backup_error_toast">保存智能导航栏配置文件时出错</string>
+    <string name="smartbar_config_restore_error_toast">恢复智能导航栏配置文件时出错</string>
     <!-- Carrier Label -->
+    <string name="custom_carrier_label_title">自定义运营商名称</string>
+    <string name="custom_carrier_label_explain">请输入一个新的名称，不输入将恢复为默认。</string>
+    <string name="custom_carrier_label_notset">自定义运营商标签当前未设置</string>
     <!-- AOKP custom system animations -->
     <!-- Lock screen visualizer -->
     <!-- Screen state service -->
@@ -125,6 +265,7 @@
     <!-- Dynamic Navbar -->
     <!-- Face unlock toggle -->
     <!-- Navigation -->
+    <string name="navigation_category">导航</string>
     <!-- HW keys -->
     <!-- Volume keys -->
     <!-- Hardware button navigation -->
@@ -132,6 +273,9 @@
     <!-- Volume rocker wake -->
     <!-- Button brightness -->
     <!-- Quick QS pull down -->
+    <string name="status_bar_quick_qs_pulldown_summary_left">状态栏左边缘下拉打开快速设置</string>
+    <string name="status_bar_quick_qs_pulldown_summary_right">状态栏右边缘下拉打开快速设置</string>
+    <string name="status_bar_quick_qs_pulldown_off">关闭</string>
     <!-- Status bar system icons -->
     <!-- Toast Animation -->
     <!-- System default animation -->
@@ -145,6 +289,7 @@
     <!-- Hostname setting -->
     <!-- Gestures -->
     <!-- Carbon gestures -->
+    <string name="carbon_gesture_launch">启动</string>
     <!-- Disable FC notifications -->
     <!-- Circle app bar -->
     <!--OmniGesture-->

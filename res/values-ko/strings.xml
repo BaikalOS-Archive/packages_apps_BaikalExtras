@@ -18,9 +18,14 @@
  */
 -->
 <resources>
+    <string name="app_name">BaikalOS 추가설정</string>
     <!-- Dashboard -->
+    <string name="system_category">시스템</string>
+    <string name="other_category">기타</string>
     <!-- Device parts -->
     <!-- Status bar -->
+    <string name="status_bar_title">상태 바</string>
+    <string name="status_bar_summary">상태 표시줄 모양 편집</string>
     <!-- StatusBar Battery Options -->
     <!-- Bluetooth status -->
     <!-- Statusbar net monitor -->
@@ -31,12 +36,20 @@
     <!-- Battery bar -->
     <!-- StatusBar weather settings -->
     <!-- Smart pulldown-->
+    <string name="smart_pulldown_dismissable">모든 알림 제거</string>
+    <string name="smart_pulldown_ongoing">진행중인 알림 없음</string>
     <!-- Double tap to sleep on status bar -->
     <!-- Statusbar Clock options -->
+    <string name="status_bar_am_pm_info">24시간 형식 활성화</string>
+    <string name="clock_date_string_edittext_title">날짜 형식 변경 예. MM/dd/yy</string>
+    <string name="clock_date_string_edittext_summary">문자열을 입력</string>
+    <string name="menu_cancel">취소</string>
+    <string name="menu_save">저장</string>
     <!-- Statusbar BaikalOS logo -->
     <!-- Statusbar categories -->
     <!-- Show 4G instead of LTE -->
     <!-- Notifications -->
+    <string name="notifications_summary">확장된 알림 설정</string>
     <!-- Heads up -->
     <!-- Notification guts kill app button -->
     <!-- InCall notifications vibrate -->
@@ -44,6 +57,8 @@
     <!-- Battery Styles -->
     <!-- Notification count -->
     <!-- Quick settings -->
+    <string name="quick_settings_title">빠른 설정</string>
+    <string name="quick_settings_summary">빠른 설정 모양 수정</string>
     <!-- Disable music track title in QS tile -->
     <!-- Small quick settings scroller -->
     <!-- QS rows and columns -->
@@ -54,8 +69,11 @@
     <!-- QS tiles title visibility -->
     <!-- QS carrier text visibility -->
     <!-- QS Headers -->
+    <string name="custom_header_browse_summary_new">모든 사용 가능한 헤더 컬렉션을 찾아보기</string>
+    <string name="header_provider_disabled">비활성화됨</string>
     <!-- Tiles animation style  -->
     <!-- Recents -->
+    <string name="recents_summary">최근 애플 리 케이 션 화면 모양 편집</string>
     <!-- Recents panel settings -->
     <!-- Recents Membar -->
     <!-- Stock recents icon pack -->
@@ -65,6 +83,8 @@
     <!-- Slim recents membar -->
     <!-- OmniSwitch -->
     <!-- Lockscreen -->
+    <string name="lockscreen_title">잠금화면</string>
+    <string name="lockscreen_summary">잠금화면 모양 편집</string>
     <!-- Double tap to sleep on lockscreen -->
     <!-- Media art -->
     <!-- Lockscreen battery info indicator  -->
@@ -78,6 +98,7 @@
     <!-- Hide statusbar on lockscreen -->
     <!-- Other UI tweaks -->
     <!-- Smartlock Auto Unlock -->
+    <string name="other_ui_summary">기타</string>
     <!-- Volume dialog timeout -->
     <!-- Screenshot sound -->
     <!-- Swap volume keys based on device rotation -->
@@ -93,14 +114,59 @@
     <!-- Turn on display when power connected; turn off display when power disconnected -->
     <!-- Power Button - Long press for torch -->
     <!-- System animations -->
+    <string name="system_animations_title">애니메이션</string>
+    <string name="system_animations_summary">시스템 애니메이션</string>
+    <string name="custom_bootanimation_summary">사용자 정의 부트 애니메이션을 선택하십시오. 모든 변경시 현재 애니메이션이 내부 저장 장치의 BaikalOS_backup 폴더에 백업됩니다. 오래된 것들은 필요하지 않은 경우 수동으로 삭제해야합니다.</string>
+    <string name="bootanimation_preview">Bootanimation 미리보기</string>
+    <string name="bootanimation_creating_preview">인쇄 미리보기...</string>
+    <string name="bootanimation_error_creating_preview">미리보기를 만드는 중 오류 발생</string>
     <!-- System behaviour -->
+    <string name="selinux_explanation_summary">SELinux는 커널 수정과 사용자 공간 도구의 모음입니다. 모드의 전환은 원치 않은 효과를 불러올 수 있으며, 책임은 사용자 자신에게 있습니다.</string>
+    <string name="selinux_mode_title">SELinux 모드</string>
+    <string name="selinux_enforcing_summary">강제중</string>
+    <string name="selinux_persistence_summary">각 부팅시 위에 설정된 sepolicy 모드를 복원하십시오</string>
     <!-- Log it -->
+    <string name="log_it_now_title">참여</string>
+    <string name="log_it_dialog_title">참여</string>
+    <string name="share_title">공유...</string>
+    <string name="log_it_share_subject">BaikalOS 로그</string>
+    <string name="log_it_now_summary">로그가 생성되는 동안 기다려주세요</string>
+    <string name="log_it_logs_in_progress">로그가 생성되었습니다…</string>
+    <string name="log_it_share_type_title">공유 방법</string>
+    <string name="log_it_share_type_zip">ZIP 파일</string>
+    <string name="log_it_share_type_haste">BaikalOS 메모장에 업로드</string>
     <!-- Panel porn -->
+    <string name="panel_porn_title">패널 설정</string>
     <!-- Volume dialog opacity -->
     <!-- Power menu and dialogs opacity -->
     <!-- AE settings -->
+    <string name="theme_default_more_accent">더 많은 색상</string>
+    <string name="theme_light">얇게</string>
+    <string name="theme_dark">검은색</string>
+    <string name="theme_dark_more_accent">더 많은 색상으로 어둡게</string>
+    <string name="ae_launcher_enabled_title">런쳐 아이콘 표시</string>
+    <string name="ae_launcher_enabled_summary">실행기에 BaikalOS Extras 표시</string>
+    <string name="ae_launcher_enabled_update">실행기 아이콘 가시성이 업데이트되었습니다. 변경 사항이 적용 되려면 약간의 시간이 걸릴 수 있습니다.</string>
     <!-- About -->
+    <string name="about_title">소개</string>
+    <string name="about_summary">이 ROM에 대한 정보보기</string>
+    <string name="g_plus_title">G+ 커뮤니티</string>
+    <string name="baikalos_gerrit_summary">우리가 일하고있는 것을 알기 위해 우리의 gerrit를 방문하십시오.</string>
+    <string name="baikalos_changelog_title">변경 사항</string>
+    <string name="baikalos_downloads_title">다운로드</string>
+    <string name="baikalos_ota_summary">새로운 BaikalOS 업데이트 확인</string>
+    <string name="stats_summary">익명 통계를 위한 송/수신 선택</string>
+    <string name="no_root_title">루팅되지 않음</string>
     <!-- Other / general purpose -->
+    <string name="on">켜기</string>
+    <string name="off">끄기</string>
+    <string name="reset">재설정</string>
+    <string name="systemui_restart_title">SystemUI 다시 시작 필요</string>
+    <string name="systemui_restart_message">모든 변경 사항을 적용하려면 SystemUI를 다시 시작해야합니다. 지금 SystemUI를 다시 시작 하시겠습니까?</string>
+    <string name="cannot_get_su">수퍼 유저 액세스가 없어서 작업을 수행하지 못했습니다.</string>
+    <string name="launcher_shortcut_disabled_message">바로가기 비활성화</string>
+    <string name="hidden_anim_activity_title">요가 타임!!!</string>
+    <string name="hidden_anim_more_nice">좋아</string>
     <!-- Sensor block per-package -->
     <!-- Weather - OmniJaws Settings -->
     <!-- Lockscreen Weather -->
@@ -108,13 +174,27 @@
     <!-- Navigation-->
     <!-- Navigation bar -->
     <!-- DUI -->
+    <string name="picker_activities">활동</string>
+    <string name="select_custom_app_title">사용자 정의 앱 선택</string>
+    <string name="select_custom_activity_title">사용자 지정 활동 선택</string>
+    <string name="profile_applist_title">애플리케이션</string>
     <!-- Actions dialog and default task values set in ActionPreference xml-->
     <!-- Fling -->
     <!-- Pulse navigation bar music visualizer -->
     <!-- Pulse config -->
     <!-- Navbar height -->
     <!-- SmartBar -->
+    <string name="smartbar_factory_reset_confirm">초기 설정으로 스마트바를 초기화 하겠습니까?</string>
+    <string name="smartbar_config_name_edit_dialog_title">스마트바 프로필 이름</string>
+    <string name="smartbar_config_dialog_title">스마트바 프로필</string>
+    <string name="smartbar_config_backup_success_toast">스마트바 프로필이 성공적으로 저장됨</string>
+    <string name="smartbar_config_restore_success_toast">스마트바 프로필이 성공적으로 복구됨</string>
+    <string name="smartbar_config_backup_error_toast">스마트바 프로필 저장 오류</string>
+    <string name="smartbar_config_restore_error_toast">스마트바 프로필 복구 오류</string>
     <!-- Carrier Label -->
+    <string name="custom_carrier_label_title">사용자 정의 통신사 문구</string>
+    <string name="custom_carrier_label_explain">새 문구를 입력해주세요. 아무것도 입력하지 않을 시 기본 문구로 돌아갑니다.</string>
+    <string name="custom_carrier_label_notset">사용자가 설정한 통신사 문구 없음</string>
     <!-- AOKP custom system animations -->
     <!-- Lock screen visualizer -->
     <!-- Screen state service -->
@@ -132,6 +212,9 @@
     <!-- Volume rocker wake -->
     <!-- Button brightness -->
     <!-- Quick QS pull down -->
+    <string name="status_bar_quick_qs_pulldown_summary_left">상태 표시줄의 왼쪽된 가장자리 빠른 설정 내리기</string>
+    <string name="status_bar_quick_qs_pulldown_summary_right">상태 표시줄의 오른쪽 모서리를 끌어 내려 빠른 설정 보기</string>
+    <string name="status_bar_quick_qs_pulldown_off">끄기</string>
     <!-- Status bar system icons -->
     <!-- Toast Animation -->
     <!-- System default animation -->

@@ -18,32 +18,84 @@
  */
 -->
 <resources>
+    <string name="app_name">Tambahan BaikalOS</string>
     <!-- Dashboard -->
+    <string name="user_interface_category">Antarmuka Pengguna</string>
+    <string name="system_category">Sistem</string>
+    <string name="other_category">Lainnya</string>
     <!-- Device parts -->
+    <string name="device_part_title">Fitur Perangkat</string>
+    <string name="device_part_category">Perangkat</string>
     <!-- Status bar -->
+    <string name="status_bar_title">Bilah Status</string>
+    <string name="status_bar_summary">Sunting tampilan bilah status</string>
     <!-- StatusBar Battery Options -->
     <!-- Bluetooth status -->
     <!-- Statusbar net monitor -->
+    <string name="network_traffic_state_title">Tampilkan aktivitas jaringan di bilah status</string>
+    <string name="network_traffic_autohide_threshold_title">Ambang batas oto-sembuyikan aktifitas internet (KB/s)</string>
     <!-- 4G icon -->
+    <string name="show_fourg_icon_title">Ikon 4G</string>
+    <string name="show_fourg_icon_summary">Menampilkan ikon 4G pada ikon sinyal sebagai pengganti LTE</string>
     <!-- Roaming indicator icon -->
+    <string name="roaming_indicator_icon_title">Indikator Roaming</string>
+    <string name="roaming_indicator_icon_summary">Tampilkan indikator Roaming di ikon sinyal saat dalam mode Roaming</string>
     <!-- Show VoLTE icon on statusbar -->
+    <string name="volte_icon_title">Ikon VoLTE</string>
+    <string name="volte_icon_summary">Tampilkan ikon VoLTE</string>
     <!-- QS Header battery percentage -->
     <!-- Battery bar -->
+    <string name="battery_bar_title">Bilah baterai</string>
+    <string name="battery_bar_color_title">Warna cahaya</string>
+    <string name="battery_bar_color_summary">Rentang warna yang digunakan pada bilah status gelap</string>
+    <string name="battery_bar_dark_color_title">Warna gelap</string>
+    <string name="battery_bar_dark_color_summary">Rentang warna yang digunakan pada bilah status terang</string>
+    <string name="battery_bar_charging_color_title">Warna lampu saat pengisian</string>
+    <string name="battery_bar_charging_color_summary">Warna saat pengisian yang digunakan pada bilah status gelap</string>
+    <string name="battery_bar_charging_dark_color_title">Warna gelap saat pengisian</string>
+    <string name="battery_bar_charging_dark_color_summary">Warna saat pengisian yang digunakan pada bilah status terang</string>
+    <string name="battery_bar_style_title">Perataan</string>
+    <string name="battery_bar_thickness_title">Ketebalan</string>
+    <string name="battery_bar_animate_title">Animasi pengisian</string>
+    <string name="battery_bar_style_regular">Reguler</string>
+    <string name="battery_bar_style_center_mirrored">Tengah-memantul</string>
+    <string name="battery_bar_style_reversed">Terbalik</string>
+    <string name="battery_bar_use_charging_color_title">Sesuaikan warna pengisian</string>
+    <string name="battery_blend_start">Kosong</string>
+    <string name="battery_blend_end">Penuh</string>
+    <string name="battery_blend_between">Antara</string>
     <!-- StatusBar weather settings -->
     <!-- Smart pulldown-->
+    <string name="smart_pulldown_dismissable">tidak ada notifikasi yang dihilangkan</string>
+    <string name="smart_pulldown_ongoing">tidak ada notifikasi berjalan</string>
+    <string name="smart_pulldown_summary">Buka pengaturan cepat ketika terdapat %1$s</string>
+    <string name="smart_pulldown_none_summary">Buka pengaturan cepat ketika tidak ada notifikasi</string>
+    <string name="smart_pulldown_off_summary">dimatikan</string>
     <!-- Double tap to sleep on status bar -->
     <!-- Statusbar Clock options -->
+    <string name="status_bar_am_pm_info">mode 24 jam diaktifkan</string>
+    <string name="clock_date_string_edittext_title">Harus dalam Format Tanggal, misalnya MM/dd/yy</string>
+    <string name="clock_date_string_edittext_summary">Masukan teks</string>
+    <string name="menu_cancel">Batalkan</string>
+    <string name="menu_save">Simpan</string>
     <!-- Statusbar BaikalOS logo -->
     <!-- Statusbar categories -->
+    <string name="status_bar_icons_category_title">Ikon</string>
     <!-- Show 4G instead of LTE -->
     <!-- Notifications -->
+    <string name="notifications_title">Notifikasi</string>
+    <string name="notifications_summary">Kontrol notifikasi tambahan</string>
     <!-- Heads up -->
+    <string name="notification_heads_up_title">Notifikasi melayang</string>
+    <string name="notification_heads_up_summary">Izinkan notifikasi pop up</string>
     <!-- Notification guts kill app button -->
     <!-- InCall notifications vibrate -->
     <!-- Brightness slider settings -->
     <!-- Battery Styles -->
     <!-- Notification count -->
     <!-- Quick settings -->
+    <string name="quick_settings_title">Pengaturan cepat</string>
+    <string name="quick_settings_summary">Rubah tampilan pengaturan cepat</string>
     <!-- Disable music track title in QS tile -->
     <!-- Small quick settings scroller -->
     <!-- QS rows and columns -->
@@ -54,8 +106,17 @@
     <!-- QS tiles title visibility -->
     <!-- QS carrier text visibility -->
     <!-- QS Headers -->
+    <string name="custom_header_browse_title">Telusuri header yang terpasang</string>
+    <string name="custom_header_browse_summary_new">Telusuri semua koleksi header yang tersedia</string>
+    <string name="custom_header_pick_title">Pilih gambar header</string>
+    <string name="custom_header_pick_summary">Pilih sebuah gambar untuk digunakan untuk mode statis</string>
+    <string name="header_provider_disabled">Dinonaktifkan</string>
     <!-- Tiles animation style  -->
     <!-- Recents -->
+    <string name="recents_title">Terbaru</string>
+    <string name="recents_summary">Rubah tampilan aplikasi terbaru</string>
+    <string name="stock_recents_category">Tampilan terbaru bawaan</string>
+    <string name="alternative_recents_category">Tampilan terbaru alternatif</string>
     <!-- Recents panel settings -->
     <!-- Recents Membar -->
     <!-- Stock recents icon pack -->
@@ -65,6 +126,9 @@
     <!-- Slim recents membar -->
     <!-- OmniSwitch -->
     <!-- Lockscreen -->
+    <string name="lockscreen_title">Layar kunci</string>
+    <string name="lockscreen_summary">Rubah tampilan layar kunci</string>
+    <string name="lockscreen_security_category">Keamanan</string>
     <!-- Double tap to sleep on lockscreen -->
     <!-- Media art -->
     <!-- Lockscreen battery info indicator  -->
@@ -72,12 +136,21 @@
     <!-- Power menu on secure lockscreen -->
     <!-- Disable QS on secure Lockscreen -->
     <!-- Fingerprint authentication vibration -->
+    <string name="fprint_sucess_vib_title">Getaran ketika sidik jari terdeteksi</string>
+    <string name="fprint_sucess_vib_summary_on">Getaran ketika identifikasi sidik jari berhasil diaktifkan</string>
+    <string name="fprint_sucess_vib_summary_off">Getaran ketika identifikasi sidik jari berhasil dimatikan</string>
     <!-- Fingerprint unlock keystore -->
+    <string name="fp_unlock_keystore_title">Buka menggunakan sidik jari</string>
+    <string name="fp_unlock_keystore_summary">Buka kunci menggunakan sidik jari setelah penyetelan ulang tanpa PIN / Sandi / Pola</string>
     <!-- Ambient display bottom info -->
     <!-- Show Lockscreen clock, date, & alarm -->
     <!-- Hide statusbar on lockscreen -->
     <!-- Other UI tweaks -->
     <!-- Smartlock Auto Unlock -->
+    <string name="smartlock_auto_unlock_title">Buka Otomatis Smartlock</string>
+    <string name="smartlock_auto_unlock_summary">Buka otomatis ketika smartlock berhasil</string>
+    <string name="other_ui_title">Pengaturan tampilan lainnya</string>
+    <string name="other_ui_summary">Pengaturan lainnya</string>
     <!-- Volume dialog timeout -->
     <!-- Screenshot sound -->
     <!-- Swap volume keys based on device rotation -->
@@ -93,6 +166,17 @@
     <!-- Turn on display when power connected; turn off display when power disconnected -->
     <!-- Power Button - Long press for torch -->
     <!-- System animations -->
+    <string name="system_animations_title">Animasi</string>
+    <string name="system_animations_summary">Animasi sistem</string>
+    <string name="custom_bootanimation_title">Animasi awal</string>
+    <string name="custom_bootanimation_summary">Pilih animasi awal pilihan. Pada setiap perubahan, animasi sekarang akan di back up ke folder baikalos_backuo di penyimpanan internal. Animasi yang lama harus dihapus kalau sudah tidak dibutuhkan.</string>
+    <string name="bootanimation_preview">Lihat animasi awal</string>
+    <string name="bootanimation_set_custom">Tentukan pilihan...</string>
+    <string name="bootanimation_creating_preview">Buat tampilan...</string>
+    <string name="bootanimation_error_reading_zip_file">Terjadi kesalahan dalam membaca file zip</string>
+    <string name="bootanimation_error_creating_preview">Terjadi kesalahan ketika membuat sebuah tampilan</string>
+    <string name="bootanimation_install_file_manager_error">Tidak ada aplikasi untuk mengambil file zip. Mohon agar menginstall aplikasi manajemen file tambahan.</string>
+    <string name="bootanimation_apply">Terapkan</string>
     <!-- System behaviour -->
     <!-- Log it -->
     <!-- Panel porn -->
@@ -100,6 +184,17 @@
     <!-- Power menu and dialogs opacity -->
     <!-- AE settings -->
     <!-- About -->
+    <string name="g_plus_title">Komunitas G+</string>
+    <string name="g_plus_summary">Kunjungi komunitas Google+ kami</string>
+    <string name="baikalos_gerrit_title">Gerrit</string>
+    <string name="baikalos_gerrit_summary">Kunjungi gerrit kami untuk mengetahui apa yang sedang kami kerjakan</string>
+    <string name="baikalos_changelog_title">Perubahan</string>
+    <string name="baikalos_changelog_summary">Lihat perubahan terbaru yang dilakukan pada BaikalOS</string>
+    <string name="baikalos_downloads_title">Unduhan</string>
+    <string name="baikalos_downloads_summary">Kunjungi halaman pengunduhan BaikalOS untuk perangkat Anda</string>
+    <string name="baikalos_ota_title">Pusat pembaruan</string>
+    <string name="baikalos_ota_summary">Periksa pembaruan BaikalOS terbaru</string>
+    <string name="stats_title">Statistik</string>
     <!-- Other / general purpose -->
     <!-- Sensor block per-package -->
     <!-- Weather - OmniJaws Settings -->

@@ -17,4 +17,7 @@
  * limitations under the License.
  */
 -->
-<resources></resources>
+<resources>
+    <string name="switch_disable_warning_title">Varování</string>
+    <string name="switch_disable_warning_message">Zakázání tohoto nastavení bez povolení alternativy může způsobit, že vaše zařízení bude nepoužitelné. Pokračovat?</string>
+</resources>

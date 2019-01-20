@@ -19,8 +19,13 @@
 -->
 <resources>
     <!-- Dashboard -->
+    <string name="user_interface_category">Interface do utilizador</string>
+    <string name="system_category">Sistema</string>
+    <string name="other_category">Outro</string>
     <!-- Device parts -->
     <!-- Status bar -->
+    <string name="status_bar_title">Barra de estado</string>
+    <string name="status_bar_summary">Editar aparência de barra de estado</string>
     <!-- StatusBar Battery Options -->
     <!-- Bluetooth status -->
     <!-- Statusbar net monitor -->
@@ -31,12 +36,24 @@
     <!-- Battery bar -->
     <!-- StatusBar weather settings -->
     <!-- Smart pulldown-->
+    <string name="smart_pulldown_dismissable">sem notificações dispensáveis</string>
+    <string name="smart_pulldown_ongoing">sem notificações pendentes</string>
+    <string name="smart_pulldown_summary">Abrir o painel de definições rápidas %1$s</string>
+    <string name="smart_pulldown_none_summary">Abrir o painel de definições rápidas quando não houver notificações</string>
+    <string name="smart_pulldown_off_summary">está desativada</string>
     <!-- Double tap to sleep on status bar -->
     <!-- Statusbar Clock options -->
+    <string name="status_bar_am_pm_info">O formato de 24 horas está ativado</string>
+    <string name="clock_date_string_edittext_title">Precisa estar em formato de data, por exemplo: MM/DD/AA</string>
+    <string name="clock_date_string_edittext_summary">Digite a seqüência de caracteres</string>
+    <string name="menu_cancel">Cancelar</string>
+    <string name="menu_save">Guardar</string>
     <!-- Statusbar BaikalOS logo -->
     <!-- Statusbar categories -->
     <!-- Show 4G instead of LTE -->
     <!-- Notifications -->
+    <string name="notifications_title">Notificações</string>
+    <string name="notifications_summary">Personalizar cores das notificações</string>
     <!-- Heads up -->
     <!-- Notification guts kill app button -->
     <!-- InCall notifications vibrate -->
@@ -44,6 +61,8 @@
     <!-- Battery Styles -->
     <!-- Notification count -->
     <!-- Quick settings -->
+    <string name="quick_settings_title">Configurações rápidas</string>
+    <string name="quick_settings_summary">Editar aparência configurações rápidas</string>
     <!-- Disable music track title in QS tile -->
     <!-- Small quick settings scroller -->
     <!-- QS rows and columns -->
@@ -54,8 +73,17 @@
     <!-- QS tiles title visibility -->
     <!-- QS carrier text visibility -->
     <!-- QS Headers -->
+    <string name="custom_header_browse_title">Ver os cabeçalhos instalados</string>
+    <string name="custom_header_browse_summary_new">Ver todas as coleções de cabeçalhos disponíveis</string>
+    <string name="custom_header_pick_title">Selecione a imagem do cabeçalho</string>
+    <string name="custom_header_pick_summary">Selecione uma imagem para usar no modo estático</string>
+    <string name="header_provider_disabled">Desativado</string>
     <!-- Tiles animation style  -->
     <!-- Recents -->
+    <string name="recents_title">Recentes</string>
+    <string name="recents_summary">Editar aparência de tela de apps recentes</string>
+    <string name="stock_recents_category">Ações recentes</string>
+    <string name="alternative_recents_category">Recentes alternativas</string>
     <!-- Recents panel settings -->
     <!-- Recents Membar -->
     <!-- Stock recents icon pack -->
@@ -65,6 +93,8 @@
     <!-- Slim recents membar -->
     <!-- OmniSwitch -->
     <!-- Lockscreen -->
+    <string name="lockscreen_title">Ecrã de bloqueio</string>
+    <string name="lockscreen_summary">Editar aparência lockscreen</string>
     <!-- Double tap to sleep on lockscreen -->
     <!-- Media art -->
     <!-- Lockscreen battery info indicator  -->
@@ -78,6 +108,8 @@
     <!-- Hide statusbar on lockscreen -->
     <!-- Other UI tweaks -->
     <!-- Smartlock Auto Unlock -->
+    <string name="other_ui_title">Outros ajustes de interface do usuário</string>
+    <string name="other_ui_summary">Diversos misc</string>
     <!-- Volume dialog timeout -->
     <!-- Screenshot sound -->
     <!-- Swap volume keys based on device rotation -->
@@ -93,28 +125,129 @@
     <!-- Turn on display when power connected; turn off display when power disconnected -->
     <!-- Power Button - Long press for torch -->
     <!-- System animations -->
+    <string name="system_animations_title">Animações</string>
+    <string name="system_animations_summary">Animações do sistema</string>
+    <string name="custom_bootanimation_title">Animação de inicialização</string>
+    <string name="custom_bootanimation_summary">Selecione a nova animação de arranque. \nEm cada alteração, será feito uma copia de segurança da animação atual para a pasta de armazenamento/AOKP_backup com a data atual. Os antigos devem ser apagados manualmente se não precisar.</string>
+    <string name="bootanimation_preview">Visualização da animação do arranque</string>
+    <string name="bootanimation_set_custom">Definir personalizado...</string>
+    <string name="bootanimation_creating_preview">A criar visualização...</string>
+    <string name="bootanimation_error_reading_zip_file">Erro na leitura do ficheiro zip</string>
+    <string name="bootanimation_error_creating_preview">Erro ao criar visualização</string>
+    <string name="bootanimation_install_file_manager_error">Nenhuma aplicação encontrada para selecionar o ficheiro zip. Por favor instale um gestor de ficheiros.</string>
+    <string name="bootanimation_apply">Aplicar</string>
+    <string name="bootanimation_install_successful">Configuração aplicada com sucesso.</string>
     <!-- System behaviour -->
+    <string name="system_behaviour_title">Comportamento do sistema</string>
+    <string name="system_behaviour_summary">Ajustes do sistema</string>
+    <string name="selinux_explanation_summary">O SELinux é um conjunto de modificações do kernel e ferramentas do espaço do utilizador. Alterar os modos pode causar efeitos não desejados. Use por sua conta e risco.</string>
+    <string name="selinux_mode_title">Modo do SELinux</string>
+    <string name="selinux_permissive_summary">Permissivo</string>
+    <string name="selinux_enforcing_summary">Forçador</string>
+    <string name="selinux_persistence_title">Persistem entre reinicializações</string>
+    <string name="selinux_persistence_summary">Restaurar o acima sepolicy conjunto de modo a cada boot</string>
+    <string name="selinux_permissive_toast_title">SELinux definido como permissiva!</string>
+    <string name="selinux_enforcing_toast_title">SELinux conjunto para aplicar!</string>
     <!-- Log it -->
+    <string name="log_it_title">Registrar essa merda!</string>
+    <string name="log_it_now_title">Envolver-se</string>
+    <string name="log_it_dialog_title">Envolver-se</string>
+    <string name="logcat_warning">Compartilhá-lo, ou vá embora!</string>
+    <string name="share_title">A partilhar...</string>
+    <string name="log_it_share_subject">Logs de BaikalOS</string>
+    <string name="log_it_now_summary">Ser paciente para os logs a serem criados</string>
+    <string name="log_it_logs_in_progress">Os logs estão sendo criados…</string>
+    <string name="log_it_share_type_title">Método de compartilhamento</string>
+    <string name="log_it_share_type_zip">Arquivo ZIP</string>
+    <string name="log_it_share_type_haste">Upload para pressa BaikalOS</string>
+    <string name="log_it_share_via">Partilhar através de</string>
     <!-- Panel porn -->
+    <string name="panel_porn_title">Pornô de painel</string>
+    <string name="panel_porn_summary">Davor mundo!</string>
     <!-- Volume dialog opacity -->
     <!-- Power menu and dialogs opacity -->
     <!-- AE settings -->
+    <string name="ae_settings_title">Personalização de ROM</string>
+    <string name="ae_settings_summary">Personalizar a aparência e o comportamento da BaikalOS Extras</string>
+    <string name="theme_title">Tema</string>
+    <string name="theme_default">Tema de configurações padrão</string>
+    <string name="theme_default_more_accent">Mais cores</string>
+    <string name="theme_light">Luz</string>
+    <string name="theme_light_more_accent">Luz com mais cor</string>
+    <string name="theme_dark">Escuro</string>
+    <string name="theme_dark_more_accent">Escuro, com mais cor</string>
+    <string name="ae_launcher_enabled_title">Mostrar ícone no launcher</string>
+    <string name="ae_launcher_enabled_summary">Mostrar BaikalOS Extras no lançador</string>
+    <string name="ae_launcher_enabled_update">Visibilidade de ícone lançador atualizada. Pode levar algum tempo para que a alteração tenha efeito</string>
     <!-- About -->
+    <string name="about_title">Acerca</string>
+    <string name="about_summary">Exibir informações sobre esta ROM</string>
+    <string name="weblinks_category">Ligações Web</string>
+    <string name="info_category">Informação</string>
+    <string name="baikalos_website_summary">Visite o site da BaikalOS</string>
+    <string name="g_plus_title">G + Comunidade</string>
+    <string name="g_plus_summary">Visite nossa comunidade do Google +</string>
+    <string name="baikalos_gerrit_summary">Visite nosso gerrit para saber o que estamos a trabalhar na</string>
+    <string name="baikalos_changelog_title">Registo de alterações</string>
+    <string name="baikalos_changelog_summary">Exibir alterações recentes feitas BaikalOS</string>
+    <string name="baikalos_downloads_title">Transferências</string>
+    <string name="baikalos_downloads_summary">Visite a página de transferências do BaikalOS para seu dispositivo</string>
+    <string name="baikalos_ota_title">Central de atualizações</string>
+    <string name="baikalos_ota_summary">Verificar se há atualizações BaikalOS</string>
+    <string name="stats_title">Estatísticas</string>
+    <string name="stats_summary">Optar em/fora por estatísticas anônimas</string>
+    <string name="device_maintainer_title">Responsável pela manutenção do dispositivo</string>
+    <string name="device_maintainer_dialog">Responsável pela manutenção do dispositivo</string>
+    <string name="device_maintainers_dialog">Responsável pela manutenção do dispositivo</string>
+    <string name="device_maintainer_default">Desconhecido</string>
+    <string name="no_root_title">Não enraizadas</string>
     <!-- Other / general purpose -->
+    <string name="on">Ligado</string>
+    <string name="off">Desligado</string>
+    <string name="reset">Repor</string>
+    <string name="systemui_restart_title">SystemUI reiniciar necessário</string>
+    <string name="systemui_restart_message">Para todas as alterações sejam efetivadas, SystemUI reinicialização é necessária. SystemUI reiniciar agora?</string>
+    <string name="cannot_get_su">Ação falhou devido a falta de acesso de super usuário</string>
+    <string name="launcher_shortcut_disabled_message">O atalho encontra-se desativado</string>
+    <string name="hidden_anim_activity_title">Tempo de ioga!!!</string>
+    <string name="hidden_anim_more_nice">BOM</string>
     <!-- Sensor block per-package -->
     <!-- Weather - OmniJaws Settings -->
+    <string name="weather_title">Tempo</string>
+    <string name="weather_config_title">Definições de serviços</string>
     <!-- Lockscreen Weather -->
     <!-- Statusbar ticker -->
     <!-- Navigation-->
+    <string name="navigation_summary">Estoque/Smartbar/aventura/gestos</string>
     <!-- Navigation bar -->
     <!-- DUI -->
+    <string name="icon_pack_picker_dialog_title">Pacotes de ícones</string>
+    <string name="picker_activities">Actividades</string>
+    <string name="select_custom_app_title">Selecione a aplicação personalizada</string>
+    <string name="select_custom_activity_title">Selecionar atividade personalizada</string>
+    <string name="profile_applist_title">Aplicações</string>
     <!-- Actions dialog and default task values set in ActionPreference xml-->
+    <string name="choose_action_title">Escolher ação</string>
     <!-- Fling -->
     <!-- Pulse navigation bar music visualizer -->
     <!-- Pulse config -->
     <!-- Navbar height -->
     <!-- SmartBar -->
+    <string name="smartbar_factory_reset_title">Redefinir para o padrão</string>
+    <string name="smartbar_factory_reset_confirm">Tem certeza de que deseja redefinir a barra inteligente para as configurações padrão?</string>
+    <string name="smartbar_backup_current_config_title">Guardar perfil</string>
+    <string name="smartbar_restore_config_title">Restaurar o perfil</string>
+    <string name="smartbar_config_name_edit_dialog_title">Nome do perfil da barra de navegação</string>
+    <string name="smartbar_config_name_edit_dialog_message">Introduza um nome ou deixe em branco</string>
+    <string name="smartbar_config_dialog_title">Nome do perfil da barra de navegação</string>
+    <string name="smartbar_config_backup_success_toast">Perfil da barra de navegação guardado com sucesso</string>
+    <string name="smartbar_config_restore_success_toast">Perfil da barra de navegação restaurado com sucesso</string>
+    <string name="smartbar_config_backup_error_toast">Error ao guardar o perfil da barra de navegação</string>
+    <string name="smartbar_config_restore_error_toast">Erro ao restaurar o perfil da barra de navegação</string>
     <!-- Carrier Label -->
+    <string name="custom_carrier_label_title">Nome de operadora personalizado</string>
+    <string name="custom_carrier_label_explain">Inserir um novo nome. Deixar em branco para reverter para o nome padrão.</string>
+    <string name="custom_carrier_label_notset">Nome personalizado não estabelecido</string>
     <!-- AOKP custom system animations -->
     <!-- Lock screen visualizer -->
     <!-- Screen state service -->
@@ -125,6 +258,7 @@
     <!-- Dynamic Navbar -->
     <!-- Face unlock toggle -->
     <!-- Navigation -->
+    <string name="navigation_category">Navegação</string>
     <!-- HW keys -->
     <!-- Volume keys -->
     <!-- Hardware button navigation -->
@@ -132,6 +266,9 @@
     <!-- Volume rocker wake -->
     <!-- Button brightness -->
     <!-- Quick QS pull down -->
+    <string name="status_bar_quick_qs_pulldown_summary_left">O canto direito da barra de estado faz baixar o painel de definições rápidas</string>
+    <string name="status_bar_quick_qs_pulldown_summary_right">O canto direito da barra de estado faz baixar o painel de definições rápidas</string>
+    <string name="status_bar_quick_qs_pulldown_off">Desligado</string>
     <!-- Status bar system icons -->
     <!-- Toast Animation -->
     <!-- System default animation -->

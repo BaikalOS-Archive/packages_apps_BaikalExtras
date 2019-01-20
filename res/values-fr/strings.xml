@@ -19,8 +19,12 @@
 -->
 <resources>
     <!-- Dashboard -->
+    <string name="user_interface_category">Interface utilisateur</string>
+    <string name="system_category">Système</string>
+    <string name="other_category">Autre</string>
     <!-- Device parts -->
     <!-- Status bar -->
+    <string name="status_bar_title">Barre d\'état</string>
     <!-- StatusBar Battery Options -->
     <!-- Bluetooth status -->
     <!-- Statusbar net monitor -->
@@ -33,6 +37,8 @@
     <!-- Smart pulldown-->
     <!-- Double tap to sleep on status bar -->
     <!-- Statusbar Clock options -->
+    <string name="status_bar_am_pm_info">L\'horloge au format 24 heures est activée</string>
+    <string name="menu_cancel">Annuler</string>
     <!-- Statusbar BaikalOS logo -->
     <!-- Statusbar categories -->
     <!-- Show 4G instead of LTE -->
@@ -44,6 +50,7 @@
     <!-- Battery Styles -->
     <!-- Notification count -->
     <!-- Quick settings -->
+    <string name="quick_settings_title">Paramètres rapides</string>
     <!-- Disable music track title in QS tile -->
     <!-- Small quick settings scroller -->
     <!-- QS rows and columns -->
@@ -54,6 +61,7 @@
     <!-- QS tiles title visibility -->
     <!-- QS carrier text visibility -->
     <!-- QS Headers -->
+    <string name="header_provider_disabled">Désactivé</string>
     <!-- Tiles animation style  -->
     <!-- Recents -->
     <!-- Recents panel settings -->
@@ -65,6 +73,7 @@
     <!-- Slim recents membar -->
     <!-- OmniSwitch -->
     <!-- Lockscreen -->
+    <string name="lockscreen_title">Écran de Verrouillage</string>
     <!-- Double tap to sleep on lockscreen -->
     <!-- Media art -->
     <!-- Lockscreen battery info indicator  -->
@@ -93,21 +102,68 @@
     <!-- Turn on display when power connected; turn off display when power disconnected -->
     <!-- Power Button - Long press for torch -->
     <!-- System animations -->
+    <string name="system_animations_title">Affichage et animations</string>
+    <string name="custom_bootanimation_title">Animation de démarrage</string>
+    <string name="custom_bootanimation_summary">Sélectionner une animation de démarrage. Pour chaque changement, l\'animation de démarrage sera sauvegardée dans le dossier BaikalOS_backup dans votre mémoire interne. Les anciennes animations doivent être supprimées manuellement si vous ne les utilisez plus.</string>
+    <string name="bootanimation_apply">Appliquer</string>
     <!-- System behaviour -->
+    <string name="selinux_mode_title">Mode de Selinux</string>
     <!-- Log it -->
+    <string name="logcat_warning">Partage la ou va te faire voir !</string>
+    <string name="share_title">Partage...</string>
+    <string name="log_it_share_subject">Journaux BaikalOS</string>
+    <string name="log_it_now_summary">Soyez patiens le temps que les logs soient crées</string>
+    <string name="log_it_logs_in_progress">Des journées ont été créés…</string>
+    <string name="log_it_share_type_title">Partager la méthode</string>
+    <string name="log_it_share_type_zip">Fichier ZIP</string>
+    <string name="log_it_share_via">Partager via</string>
     <!-- Panel porn -->
+    <string name="panel_porn_title">Transparence</string>
     <!-- Volume dialog opacity -->
     <!-- Power menu and dialogs opacity -->
     <!-- AE settings -->
+    <string name="theme_title">Thème</string>
+    <string name="ae_launcher_enabled_title">Afficher l\'icône du launcher</string>
     <!-- About -->
+    <string name="about_title">A propos</string>
+    <string name="about_summary">Afficher des informations au sujet de cette ROM</string>
+    <string name="info_category">Information</string>
+    <string name="baikalos_website_title">Site web</string>
+    <string name="baikalos_website_summary">Visiter le site WEB d\'BaikalOS</string>
+    <string name="g_plus_title">Communauté G+</string>
+    <string name="g_plus_summary">Visitez notre communauté Google +</string>
+    <string name="baikalos_changelog_title">Journal des modifications</string>
+    <string name="baikalos_changelog_summary">Voir les récentes modifications de la ROM</string>
+    <string name="baikalos_downloads_title">Téléchargements</string>
+    <string name="baikalos_downloads_summary">Visiter la page de téléchargement BaikalOS pour votre appareil</string>
+    <string name="baikalos_ota_title">Centre de mise à jour</string>
+    <string name="baikalos_ota_summary">Rechercher des mises à jour BaikalOS</string>
+    <string name="stats_title">Statistiques</string>
+    <string name="device_maintainer_title">Mainteneur de l\'appareil</string>
+    <string name="device_maintainer_dialog">Mainteneur de l\'appareil</string>
+    <string name="device_maintainers_dialog">Mainteneurs de l\'appareil</string>
+    <string name="device_maintainer_default">Inconnu</string>
     <!-- Other / general purpose -->
+    <string name="on">Activé</string>
+    <string name="off">Désactivé</string>
+    <string name="reset">Réinitialiser </string>
+    <string name="systemui_restart_title">Un redémarrage de SystemUI est nécessaire</string>
+    <string name="systemui_restart_message">Afin que toutes les modifications soient prises en compte, un redémarrage de SystemUI est nécessaire. Voulez vous redémarrer SystemUI maintenant ?</string>
+    <string name="cannot_get_su">Permission de superuser non accordée, l\'action a échoué</string>
+    <string name="launcher_shortcut_disabled_message">Raccourci désactivé</string>
+    <string name="hidden_anim_activity_title">L\'heure du yoga !!!</string>
+    <string name="hidden_anim_more_nice">BIEN</string>
     <!-- Sensor block per-package -->
     <!-- Weather - OmniJaws Settings -->
+    <string name="weather_title">Météo</string>
     <!-- Lockscreen Weather -->
     <!-- Statusbar ticker -->
     <!-- Navigation-->
     <!-- Navigation bar -->
     <!-- DUI -->
+    <string name="picker_activities">Activités</string>
+    <string name="select_custom_app_title">Sélectionner l\'application</string>
+    <string name="select_custom_activity_title">Sélectionner l\'activité</string>
     <!-- Actions dialog and default task values set in ActionPreference xml-->
     <!-- Fling -->
     <!-- Pulse navigation bar music visualizer -->
@@ -115,6 +171,9 @@
     <!-- Navbar height -->
     <!-- SmartBar -->
     <!-- Carrier Label -->
+    <string name="custom_carrier_label_title">Libellé</string>
+    <string name="custom_carrier_label_explain">Saisir un nouveau libellé. Laisser vide pour revenir au libellé d\'origine.</string>
+    <string name="custom_carrier_label_notset">Non défini</string>
     <!-- AOKP custom system animations -->
     <!-- Lock screen visualizer -->
     <!-- Screen state service -->
@@ -132,6 +191,7 @@
     <!-- Volume rocker wake -->
     <!-- Button brightness -->
     <!-- Quick QS pull down -->
+    <string name="status_bar_quick_qs_pulldown_off">Désactivé</string>
     <!-- Status bar system icons -->
     <!-- Toast Animation -->
     <!-- System default animation -->
