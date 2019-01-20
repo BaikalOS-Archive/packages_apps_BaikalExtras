@@ -18,22 +18,51 @@
  */
 -->
 <resources>
+    <string name="app_name">BaikalOS Extras</string>
     <!-- Dashboard -->
     <string name="user_interface_category">Interfaz de usuario</string>
     <string name="system_category">Sistema</string>
     <string name="other_category">Otros</string>
     <!-- Device parts -->
+    <string name="device_part_title">Caracteristicas del dispositivo</string>
+    <string name="device_part_category">Dispositivo</string>
     <!-- Status bar -->
     <string name="status_bar_title">Barra de estado</string>
     <string name="status_bar_summary">Editar aspecto de barra de estado</string>
     <!-- StatusBar Battery Options -->
     <!-- Bluetooth status -->
     <!-- Statusbar net monitor -->
+    <string name="network_traffic_state_title">Mostrar actividad de la red en la barra de estado</string>
     <!-- 4G icon -->
+    <string name="show_fourg_icon_title">Icono 4G</string>
+    <string name="show_fourg_icon_summary">Mostrar icono de 4G en lugar de LTE</string>
     <!-- Roaming indicator icon -->
+    <string name="roaming_indicator_icon_title">Indicador de roaming</string>
+    <string name="roaming_indicator_icon_summary">Mostrar indicador de roaming en el icono de señal cuando se esté en modo roaming</string>
     <!-- Show VoLTE icon on statusbar -->
+    <string name="volte_icon_title">Icono de VoLTE</string>
+    <string name="volte_icon_summary">Mostrar el icono VoLTE</string>
     <!-- QS Header battery percentage -->
     <!-- Battery bar -->
+    <string name="battery_bar_title">Barra de batería</string>
+    <string name="battery_bar_color_title">Color del Led</string>
+    <string name="battery_bar_color_summary">Gama de colores en la barra de estado oscura</string>
+    <string name="battery_bar_dark_color_title">Colores Oscuros</string>
+    <string name="battery_bar_dark_color_summary">Gama de colores en la barra de estado clara</string>
+    <string name="battery_bar_charging_color_title">Color de carga claro</string>
+    <string name="battery_bar_charging_color_summary">Color de carga usado en la barra de estado oscura</string>
+    <string name="battery_bar_charging_dark_color_title">Color de carga oscuro</string>
+    <string name="battery_bar_charging_dark_color_summary">Color de carga usado en la barra de estado clara</string>
+    <string name="battery_bar_style_title">Alineación</string>
+    <string name="battery_bar_thickness_title">Grosor</string>
+    <string name="battery_bar_animate_title">Animación de carga</string>
+    <string name="battery_bar_style_regular">Normal</string>
+    <string name="battery_bar_style_center_mirrored">Centrada-reflejada</string>
+    <string name="battery_bar_style_reversed">Invertida</string>
+    <string name="battery_bar_use_charging_color_title">Color personalizado durante la carga</string>
+    <string name="battery_blend_start">Vacío</string>
+    <string name="battery_blend_end">Completo</string>
+    <string name="battery_blend_between">Entre</string>
     <!-- StatusBar weather settings -->
     <!-- Smart pulldown-->
     <string name="smart_pulldown_dismissable">sin notificaciones descartables</string>
@@ -50,11 +79,14 @@
     <string name="menu_save">Guardar</string>
     <!-- Statusbar BaikalOS logo -->
     <!-- Statusbar categories -->
+    <string name="status_bar_icons_category_title">Iconos</string>
     <!-- Show 4G instead of LTE -->
     <!-- Notifications -->
     <string name="notifications_title">Notificaciones</string>
     <string name="notifications_summary">Control de notificaciones</string>
     <!-- Heads up -->
+    <string name="notification_heads_up_title">Notificación flotante</string>
+    <string name="notification_heads_up_summary">Permitir notificaciones emergentes</string>
     <!-- Notification guts kill app button -->
     <!-- InCall notifications vibrate -->
     <!-- Brightness slider settings -->
@@ -95,6 +127,7 @@
     <!-- Lockscreen -->
     <string name="lockscreen_title">Pantalla de bloqueo</string>
     <string name="lockscreen_summary">Editar aspecto de pantalla de bloqueo</string>
+    <string name="lockscreen_security_category">Seguridad</string>
     <!-- Double tap to sleep on lockscreen -->
     <!-- Media art -->
     <!-- Lockscreen battery info indicator  -->
@@ -102,12 +135,19 @@
     <!-- Power menu on secure lockscreen -->
     <!-- Disable QS on secure Lockscreen -->
     <!-- Fingerprint authentication vibration -->
+    <string name="fprint_sucess_vib_title">Vibración de autenticación de huella digital</string>
+    <string name="fprint_sucess_vib_summary_on">Vibrar cuando la autenticación con la huella es correcta</string>
+    <string name="fprint_sucess_vib_summary_off">No vibrar cuando la autenticación con la huella es correcta</string>
     <!-- Fingerprint unlock keystore -->
+    <string name="fp_unlock_keystore_title">Desbloqueo con huella digital</string>
+    <string name="fp_unlock_keystore_summary">Desbloqueo con huella digital después de reiniciar el dispositivo sin PIN/contraseña/Patrón\nNote: bajo su propio riesgo!</string>
     <!-- Ambient display bottom info -->
     <!-- Show Lockscreen clock, date, & alarm -->
     <!-- Hide statusbar on lockscreen -->
     <!-- Other UI tweaks -->
     <!-- Smartlock Auto Unlock -->
+    <string name="smartlock_auto_unlock_title">Desbloqueo automático con Smartlock</string>
+    <string name="smartlock_auto_unlock_summary">Desbloqueo automático si Smartlock está autenticado</string>
     <string name="other_ui_title">Otros ajustes de interfaz de usuario</string>
     <string name="other_ui_summary">Varios</string>
     <!-- Volume dialog timeout -->
@@ -127,6 +167,7 @@
     <!-- System animations -->
     <string name="system_animations_title">Pantalla y animaciones</string>
     <string name="system_animations_summary">Animaciones de sistema</string>
+    <string name="custom_bootanimation_title">Animación de arranque</string>
     <string name="custom_bootanimation_summary">Seleccione su nueva animación de arranque. \nOn cada cambio, animación actual hacer copias a la carpeta de almacenamiento de información/AOKP_ota con fecha actual. Los antiguos deben eliminar manualmente si no se necesita.</string>
     <string name="bootanimation_preview">Previsualización de la animación</string>
     <string name="bootanimation_set_custom">Establecer personalizada...</string>
@@ -139,6 +180,7 @@
     <!-- System behaviour -->
     <string name="system_behaviour_title">Comportamiento del sistema</string>
     <string name="system_behaviour_summary">Ajustes de sistema</string>
+    <string name="selinux_category">SELinux</string>
     <string name="selinux_explanation_summary">SELinux es un conjunto de modificaciones del kernel y utilidades a nivel de usuario. Cambiando el modo puede ocasionar efectos no deseados. Usar bajo su responsabilidad.</string>
     <string name="selinux_mode_title">Modo SELinux</string>
     <string name="selinux_permissive_summary">Permisivo</string>
@@ -149,7 +191,11 @@
     <string name="selinux_enforcing_toast_title">¡Establecido modo Selinux obligatorio!</string>
     <!-- Log it -->
     <string name="log_it_title">Log &amp; debug!</string>
+    <string name="log_it_summary">Logcat, kmesg, dmesg</string>
+    <string name="logcat_title">Logcat</string>
     <string name="logcat_radio_title">Registro de radio</string>
+    <string name="kmesg_title">Kmesg</string>
+    <string name="dmesg_title">Dmesg</string>
     <string name="log_it_now_title">Compartir</string>
     <string name="log_it_dialog_title">Compartir</string>
     <string name="logcat_warning">Compartir o desechar!</string>
@@ -163,6 +209,7 @@
     <string name="log_it_share_via">Compartir a través de</string>
     <!-- Panel porn -->
     <string name="panel_porn_title">Estilo de paneles</string>
+    <string name="panel_porn_summary">¡Mundo de Davor!</string>
     <!-- Volume dialog opacity -->
     <!-- Power menu and dialogs opacity -->
     <!-- AE settings -->
@@ -170,6 +217,7 @@
     <string name="ae_settings_summary">Personalizar el aspecto y comportamiento de los Extras BaikalOS</string>
     <string name="theme_title">Tema</string>
     <string name="theme_default">Configuración predeterminada</string>
+    <string name="theme_default_force">Configuración del tema predeterminada</string>
     <string name="theme_default_more_accent">Más color</string>
     <string name="theme_light">Claro</string>
     <string name="theme_light_more_accent">Claro con más color</string>
@@ -187,6 +235,7 @@
     <string name="baikalos_website_summary">Visite la página web de BaikalOS</string>
     <string name="g_plus_title">Conunidad G+</string>
     <string name="g_plus_summary">Visitar nuestra comunidad en Google+</string>
+    <string name="baikalos_gerrit_title">Gerrit</string>
     <string name="baikalos_gerrit_summary">Visitar nuestro Gerrit para saber en qué estamos trabajando</string>
     <string name="baikalos_changelog_title">Lista de cambios</string>
     <string name="baikalos_changelog_summary">Ver la lista de cambios recientes de BaikalOS</string>
@@ -203,8 +252,12 @@
     <string name="no_root_title">No rooteado</string>
     <string name="no_root_summary">Para obtener más funcionalidades, rootear el dispositivo</string>
     <!-- Other / general purpose -->
+    <string name="ok">@android:string/ok</string>
+    <string name="cancel">@android:string/cancel</string>
     <string name="on">Activado</string>
     <string name="off">Desactivado</string>
+    <string name="yes">@android:string/yes</string>
+    <string name="no">@android:string/no</string>
     <string name="reset">Restablecer</string>
     <string name="systemui_restart_title">SystemUI reinicio requerido</string>
     <string name="systemui_restart_message">Para que todos los cambios surtan efecto, SystemUI es necesario. ¿Reiniciar el SystemUI ahora?</string>
@@ -213,11 +266,14 @@
     <string name="hidden_anim_activity_title">Hora de Yoga!!!</string>
     <string name="hidden_anim_more_nice">AGRADABLE</string>
     <!-- Sensor block per-package -->
+    <string name="sensor_block_title">Bloqueo de sensor por paquete</string>
     <!-- Weather - OmniJaws Settings -->
     <string name="weather_title">Clima</string>
     <string name="weather_config_title">Ajustes del servicio</string>
     <!-- Lockscreen Weather -->
     <!-- Statusbar ticker -->
+    <string name="ticker_animation_mode_title">Animación del Ticker</string>
+    <string name="ticker_animation_mode_alpha_fade">Desvanecer</string>
     <!-- Navigation-->
     <string name="navigation_title">Navegación</string>
     <string name="navigation_summary">Predeterminado/Smartbar/Fling/Gestos</string>
@@ -253,8 +309,16 @@
     <!-- AOKP custom system animations -->
     <!-- Lock screen visualizer -->
     <!-- Screen state service -->
+    <string name="screen_state_toggles_enable_title">Activar</string>
+    <string name="screen_state_toggles_mobile_title">Redes móviles</string>
+    <string name="screen_state_toggles_location_title">Ubicación</string>
+    <string name="screen_state_toggles_twog">Cambiar a 2G</string>
+    <string name="screen_state_toggles_twog_summary">El modo de red cambiará a 2G al apagar la pantalla</string>
+    <string name="screen_state_toggles_gps">Desactivar GPS</string>
+    <string name="screen_state_toggles_mobile_data">Desactivar datos móviles</string>
     <!-- Ambient Music Ticker -->
     <!-- Screen Off animation -->
+    <string name="screen_off_animation_crt">CRT</string>
     <!-- Suppress notification sound/vibration -->
     <!-- Accidental Touch -->
     <!-- Dynamic Navbar -->
@@ -289,5 +353,12 @@
     <!-- Circle app bar -->
     <!--OmniGesture-->
     <!-- Themes -->
+    <string name="theming_title">Temas</string>
+    <string name="theming_summary">Diseño predeterminado del dispositivo</string>
+    <string name="theming_base_title">Tema Base</string>
+    <string name="theming_base_dark_notif">Oscuro</string>
+    <string name="theming_base_dark_transparent">Transparente oscuro</string>
+    <string name="theming_base_black_notif">Negro</string>
+    <string name="theming_accent_default">Predeterminado</string>
     <!-- Device hidden prefs -->
 </resources>
