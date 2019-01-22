@@ -86,7 +86,6 @@
     <string name="notifications_summary">Control de notificaciones</string>
     <!-- Heads up -->
     <string name="notification_heads_up_title">Notificación flotante</string>
-    <string name="notification_heads_up_summary">Permitir notificaciones emergentes</string>
     <!-- Notification guts kill app button -->
     <!-- InCall notifications vibrate -->
     <!-- Brightness slider settings -->
@@ -135,19 +134,13 @@
     <!-- Power menu on secure lockscreen -->
     <!-- Disable QS on secure Lockscreen -->
     <!-- Fingerprint authentication vibration -->
-    <string name="fprint_sucess_vib_title">Vibración de autenticación de huella digital</string>
-    <string name="fprint_sucess_vib_summary_on">Vibrar cuando la autenticación con la huella es correcta</string>
-    <string name="fprint_sucess_vib_summary_off">No vibrar cuando la autenticación con la huella es correcta</string>
     <!-- Fingerprint unlock keystore -->
     <string name="fp_unlock_keystore_title">Desbloqueo con huella digital</string>
-    <string name="fp_unlock_keystore_summary">Desbloqueo con huella digital después de reiniciar el dispositivo sin PIN/contraseña/Patrón\nNote: bajo su propio riesgo!</string>
     <!-- Ambient display bottom info -->
     <!-- Show Lockscreen clock, date, & alarm -->
     <!-- Hide statusbar on lockscreen -->
     <!-- Other UI tweaks -->
     <!-- Smartlock Auto Unlock -->
-    <string name="smartlock_auto_unlock_title">Desbloqueo automático con Smartlock</string>
-    <string name="smartlock_auto_unlock_summary">Desbloqueo automático si Smartlock está autenticado</string>
     <string name="other_ui_title">Otros ajustes de interfaz de usuario</string>
     <string name="other_ui_summary">Varios</string>
     <!-- Volume dialog timeout -->
@@ -217,7 +210,6 @@
     <string name="ae_settings_summary">Personalizar el aspecto y comportamiento de los Extras BaikalOS</string>
     <string name="theme_title">Tema</string>
     <string name="theme_default">Configuración predeterminada</string>
-    <string name="theme_default_force">Configuración del tema predeterminada</string>
     <string name="theme_default_more_accent">Más color</string>
     <string name="theme_light">Claro</string>
     <string name="theme_light_more_accent">Claro con más color</string>
@@ -272,8 +264,6 @@
     <string name="weather_config_title">Ajustes del servicio</string>
     <!-- Lockscreen Weather -->
     <!-- Statusbar ticker -->
-    <string name="ticker_animation_mode_title">Animación del Ticker</string>
-    <string name="ticker_animation_mode_alpha_fade">Desvanecer</string>
     <!-- Navigation-->
     <string name="navigation_title">Navegación</string>
     <string name="navigation_summary">Predeterminado/Smartbar/Fling/Gestos</string>
@@ -309,16 +299,8 @@
     <!-- AOKP custom system animations -->
     <!-- Lock screen visualizer -->
     <!-- Screen state service -->
-    <string name="screen_state_toggles_enable_title">Activar</string>
-    <string name="screen_state_toggles_mobile_title">Redes móviles</string>
-    <string name="screen_state_toggles_location_title">Ubicación</string>
-    <string name="screen_state_toggles_twog">Cambiar a 2G</string>
-    <string name="screen_state_toggles_twog_summary">El modo de red cambiará a 2G al apagar la pantalla</string>
-    <string name="screen_state_toggles_gps">Desactivar GPS</string>
-    <string name="screen_state_toggles_mobile_data">Desactivar datos móviles</string>
     <!-- Ambient Music Ticker -->
     <!-- Screen Off animation -->
-    <string name="screen_off_animation_crt">CRT</string>
     <!-- Suppress notification sound/vibration -->
     <!-- Accidental Touch -->
     <!-- Dynamic Navbar -->
@@ -353,12 +335,5 @@
     <!-- Circle app bar -->
     <!--OmniGesture-->
     <!-- Themes -->
-    <string name="theming_title">Temas</string>
-    <string name="theming_summary">Diseño predeterminado del dispositivo</string>
-    <string name="theming_base_title">Tema Base</string>
-    <string name="theming_base_dark_notif">Oscuro</string>
-    <string name="theming_base_dark_transparent">Transparente oscuro</string>
-    <string name="theming_base_black_notif">Negro</string>
-    <string name="theming_accent_default">Predeterminado</string>
     <!-- Device hidden prefs -->
 </resources>
