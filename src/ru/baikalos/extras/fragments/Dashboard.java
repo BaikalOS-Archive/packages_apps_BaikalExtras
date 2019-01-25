@@ -37,6 +37,8 @@ import ru.baikalos.extras.R;
 import ru.baikalos.gear.preference.LongClickablePreference;
 import ru.baikalos.extras.utils.Util;
 
+import android.os.SystemProperties;
+
 import com.plattysoft.leonids.ParticleSystem;
 
 import java.util.Random;
@@ -70,6 +72,19 @@ public class Dashboard extends BaseSettingsFragment {
         super.onCreate(savedInstanceState);
 
         PackageManager pm = getActivity().getPackageManager();
+
+        boolean perfProf  = SystemProperties.get("baikal.eng.perf", "0").equals("1");
+        boolean thermProf  = SystemProperties.get("baikal.eng.therm", "0").equals("1");
+
+        Preference profilesCategory = findPreference("app_setings_cat");
+
+        if( !perfProf && !thermProf ) {
+            if( profilesCategory != null ) {
+                getPreferenceScreen().removePreference(profilesCategory);
+            }
+            return;
+        }
+
 
         mBaikalOSLogo = (LongClickablePreference) findPreference(PREF_BAIKALOS_LOGO);
 

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/**
+ * Copyright (C) 2017 AICP
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+-->
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/app_profile_title">
+    	<!-- SwitchPreference
+    	    android:key="app_profile_restricted"
+    	    android:title="@string/app_profile_restricted_title"
+    	    android:summary="@string/app_profile_restricted_summary"
+    	    android:persistent="false" / -->
+        <ListPreference
+    	    android:key="app_profile_performance"
+    	    android:title="@string/app_profile_performance_title"
+    	    android:entries="@array/performance_listentries"
+    	    android:entryValues="@array/performance_listvalues" 
+            android:defaultValue="default"
+            android:summary="%s"/>
+
+        <ListPreference
+            android:key="app_profile_thermal"
+            android:title="@string/app_profile_thermal_title"
+            android:entries="@array/thermal_listentries"
+            android:entryValues="@array/thermal_listvalues"
+            android:defaultValue="default"
+            android:summary="%s" />
+</PreferenceScreen>

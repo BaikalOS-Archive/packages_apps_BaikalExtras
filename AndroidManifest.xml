@@ -69,6 +69,29 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name=".AppProfilesActivity"
+            android:label="@string/app_settings_title">
+            <intent-filter>
+                <action android:name="ru.baikalos.extras.AppProfilesActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+
+        <activity
+            android:name=".AppProfileActivity"
+            android:label="@string/app_settings_title">
+            <intent-filter>
+                <action android:name="ru.baikalos.extras.AppProfileActivity" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+
+
+
+
         <receiver
             android:name=".romstats.ReportingServiceManager"
             android:enabled="true"

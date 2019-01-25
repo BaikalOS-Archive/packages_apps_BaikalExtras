@@ -20,4 +20,6 @@
     <string name="prefs_app_options_title">App Options</string>
     <string name="prefs_app_options_summary">App Options</string>
 
+    <string name="default_profiles_title">Default profiles</string>
+
 </resources>

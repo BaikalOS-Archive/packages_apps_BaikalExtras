@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string-array name="performance_listentries">
+    	<item>@string/performance_default</item>
+    	<item>@string/performance_balance</item>
+    	<item>@string/performance_performance</item>
+    	<item>@string/performance_gaming</item>
+    	<item>@string/performance_battery</item>
+    	<item>@string/performance_reader</item>
+     </string-array>
+     <string-array name="performance_listvalues">
+    	<item>default</item>
+    	<item>balance</item>
+    	<item>performance</item>
+    	<item>gaming</item>
+    	<item>battery</item>
+    	<item>reader</item>
+    </string-array>
+
+    <string-array name="thermal_listentries">
+    	<item>@string/thermal_default</item>
+    	<item>@string/thermal_balance</item>
+    	<item>@string/thermal_gaming</item>
+    	<item>@string/thermal_gaming2</item>
+    	<item>@string/thermal_cool</item>
+    	<item>@string/thermal_camera</item>
+    	<item>@string/thermal_video</item>
+    	<item>@string/thermal_incall</item>
+    	<item>@string/thermal_vr</item>
+     </string-array>
+     <string-array name="thermal_listvalues">
+    	<item>default</item>
+    	<item>balance</item>
+    	<item>gaming</item>
+    	<item>gaming2</item>
+    	<item>cool</item>
+    	<item>camera</item>
+    	<item>video</item>
+    	<item>incall</item>
+    	<item>vr</item>
+    </string-array>
+</resources>

@@ -41,16 +41,32 @@
     </PreferenceCategory>
 
     <PreferenceCategory
+        android:key="app_setings_cat"
+        android:title="@string/app_settings_category">
+
+        <Preference
+            android:key="app_setings"
+            android:title="@string/app_settings_title"
+            android:summary="@string/app_settings_summary" >
+            <intent 
+                android:targetPackage="ru.baikalos.extras"
+                android:targetClass="ru.baikalos.extras.AppProfilesActivity"/>
+        </Preference>
+
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
         android:title="@string/navigation_category">
          <PreferenceScreen
             android:title="@string/button_settings_title"
             android:summary="@string/button_settings_title_summary"
             android:icon="@drawable/ic_settings_buttons"
             android:fragment="ru.baikalos.extras.fragments.ButtonsSettings" />
-     </PreferenceCategory>
+     <!-- /PreferenceCategory>
 
     <PreferenceCategory
-        android:title="@string/navigation_category">
+        android:title="@string/navigation_category" -->
 
         <PreferenceScreen
             android:title="@string/navigation_title"
