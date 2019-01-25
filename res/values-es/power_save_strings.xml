@@ -4,4 +4,5 @@
     <!-- Power Save -->
     <!-- Batery whitelist -->
     <!-- App ops -->
+    <string name="prefs_app_options_summary">Permisos de apps</string>
 </resources>
