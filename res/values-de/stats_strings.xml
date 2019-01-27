@@ -39,7 +39,10 @@
     <!-- Anonymous Statistics - Preview -->
     <string name="preview_id_title">Eindeutiger ID</string>
     <string name="preview_device_title">Gerät</string>
+    <string name="preview_version_title">Version</string>
     <string name="preview_country_title">Land</string>
     <string name="preview_carrier_title">Anbieter</string>
+    <string name="preview_romname_title">ROM Name</string>
+    <string name="preview_romversion_title">BaikalOS Version</string>
     <string name="preview_buildtype_title">BaikalOS Versionsart</string>
 </resources>

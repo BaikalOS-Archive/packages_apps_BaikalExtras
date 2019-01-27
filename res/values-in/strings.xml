@@ -177,13 +177,63 @@
     <string name="bootanimation_error_creating_preview">Terjadi kesalahan ketika membuat sebuah tampilan</string>
     <string name="bootanimation_install_file_manager_error">Tidak ada aplikasi untuk mengambil file zip. Mohon agar menginstall aplikasi manajemen file tambahan.</string>
     <string name="bootanimation_apply">Terapkan</string>
+    <string name="bootanimation_install_successful">Animasiboot yang baru telah diterapkan.</string>
     <!-- System behaviour -->
+    <string name="system_behaviour_title">Tindakan sistem</string>
+    <string name="system_behaviour_summary">Oprek system</string>
+    <string name="selinux_category">SELinux</string>
+    <string name="selinux_explanation_summary">SELinux adalah paket modifikasi kernel dan alat pengguna-ruang. Mengubah mode dapat menyebabkan efek yang tidak diinginkan. Gunakan dengan risiko Anda sendiri.</string>
+    <string name="selinux_mode_title">Modus SELinux</string>
+    <string name="selinux_permissive_summary">Permissive</string>
+    <string name="selinux_enforcing_summary">Enforcing</string>
+    <string name="selinux_persistence_title">Tidak berubah saat mulai ulang</string>
+    <string name="selinux_persistence_summary">Kembalikan mode sepolicy yang telah disetel setiap boot</string>
+    <string name="selinux_permissive_toast_title">Selinux diatur ke permissive!</string>
+    <string name="selinux_enforcing_toast_title">Selinux diatur ke entorcing!</string>
     <!-- Log it -->
+    <string name="log_it_title">Log yang sialan!</string>
+    <string name="log_it_summary">Logcat, kmesg, dmesg</string>
+    <string name="logcat_title">Logcat</string>
+    <string name="logcat_radio_title">Log radio</string>
+    <string name="kmesg_title">Kmesg</string>
+    <string name="dmesg_title">Dmesg</string>
+    <string name="log_it_now_title">Mengikutsertakan</string>
+    <string name="log_it_dialog_title">Mengikutsertakan</string>
+    <string name="logcat_warning">Bagikan atau GTFO!</string>
+    <string name="share_title">Bagikan...</string>
+    <string name="log_it_share_subject">Logs BaikalOS</string>
+    <string name="log_it_now_summary">Mohon tunggu, logs segera dibuat</string>
+    <string name="log_it_logs_in_progress">Logs sedang dibuat…</string>
+    <string name="log_it_share_type_title">Metode berbagi</string>
+    <string name="log_it_share_type_zip">Berkas-ZIP</string>
+    <string name="log_it_share_type_haste">Unggah ke BaikalOS segera</string>
+    <string name="log_it_share_via">Bagikan melalui</string>
     <!-- Panel porn -->
+    <string name="panel_porn_title">Panel porno</string>
+    <string name="panel_porn_summary">Nikmat dunia!</string>
     <!-- Volume dialog opacity -->
     <!-- Power menu and dialogs opacity -->
     <!-- AE settings -->
+    <string name="ae_settings_title">Kustomisasi BE</string>
+    <string name="ae_settings_summary">Sesuaikan tampilan dan tindakan tambahan BaikalOS</string>
+    <string name="theme_title">Tema</string>
+    <string name="theme_default">Otomatis</string>
+    <string name="theme_default_force">Setelan tema bawaan</string>
+    <string name="theme_default_more_accent">Warna lainnya</string>
+    <string name="theme_light">Terang</string>
+    <string name="theme_light_more_accent">Terang dengan warna lainnya</string>
+    <string name="theme_dark">Gelap</string>
+    <string name="theme_dark_more_accent">Gelap dengan warna lainnya</string>
+    <string name="ae_launcher_enabled_title">Tampilkan ikon peluncur</string>
+    <string name="ae_launcher_enabled_summary">Tampilkan tambahan BaikalOS pada peluncur</string>
+    <string name="ae_launcher_enabled_update">Visibilitas ikon peluncur diperbarui. Mungkin perlu beberapa saat agar perubahan terlihat</string>
     <!-- About -->
+    <string name="about_title">Tentang</string>
+    <string name="about_summary">Lihat informasi tentang ROM ini</string>
+    <string name="weblinks_category">Weblinks</string>
+    <string name="info_category">Info</string>
+    <string name="baikalos_website_title">Situs Web</string>
+    <string name="baikalos_website_summary">Kunjungi situs web BaikalOS</string>
     <string name="g_plus_title">Komunitas G+</string>
     <string name="g_plus_summary">Kunjungi komunitas Google+ kami</string>
     <string name="baikalos_gerrit_title">Gerrit</string>
@@ -195,24 +245,91 @@
     <string name="baikalos_ota_title">Pusat pembaruan</string>
     <string name="baikalos_ota_summary">Periksa pembaruan BaikalOS terbaru</string>
     <string name="stats_title">Statistik</string>
+    <string name="stats_summary">Keikutsertaan untuk statistik anonim</string>
+    <string name="device_maintainer_title">Pengelola perangkat</string>
+    <string name="device_maintainer_dialog">Pengelola perangkat</string>
+    <string name="device_maintainers_dialog">Pengelola perangkat</string>
+    <string name="device_maintainer_default">Tak diketahui</string>
+    <string name="no_root_title">Tidak diROOT</string>
+    <string name="no_root_summary">Untuk fungsi lainnya, Root perangkat Anda</string>
     <!-- Other / general purpose -->
+    <string name="ok">@android:string/ok</string>
+    <string name="cancel">@android:string/cancel</string>
+    <string name="on">Nyala</string>
+    <string name="off">Mati</string>
+    <string name="yes">@android:string/yes</string>
+    <string name="no">@android:string/no</string>
+    <string name="reset">Setel ulang</string>
+    <string name="systemui_restart_title">Mulai Ulang SystemUI Diperlukan</string>
+    <string name="systemui_restart_message">Untuk melihat semua perubahan, diperlukan memulai ulang SystemUI. Mulai ulang sekarang?</string>
+    <string name="cannot_get_su">Tindakan gagal dikarenakan tidak ada akses superuser</string>
+    <string name="launcher_shortcut_disabled_message">Pintasan dinonaktifkan</string>
+    <string name="hidden_anim_activity_title">Mari kita ngopi!</string>
+    <string name="hidden_anim_more_nice">YEAY</string>
     <!-- Sensor block per-package -->
+    <string name="sensor_block_title">Blokir sensor per-paket</string>
+    <string name="sensor_block_summary">Blokir akses ke sensor tertentu pada beberapa aplikasi untuk menghemat baterai.</string>
     <!-- Weather - OmniJaws Settings -->
+    <string name="weather_title">Cuaca</string>
+    <string name="weather_config_title">Pengaturan layanan</string>
     <!-- Lockscreen Weather -->
     <!-- Statusbar ticker -->
+    <string name="status_bar_ticker_title">Ticker</string>
+    <string name="status_bar_show_ticker_title">Ticker</string>
+    <string name="status_bar_show_ticker_summary">Pratinjau di bar status sebagai ganti \"heads up\"</string>
+    <string name="ticker_animation_mode_title">Animasi ticker</string>
+    <string name="ticker_animation_mode_alpha_fade">Pudar</string>
+    <string name="ticker_animation_mode_scroll">Gulir</string>
+    <string name="ticker_tick_duration_title">Durasi ticker</string>
     <!-- Navigation-->
+    <string name="navigation_title">Navigasi</string>
+    <string name="navigation_summary">Bawaan/Smartbar/Fling/Gerakan</string>
     <!-- Navigation bar -->
     <!-- DUI -->
+    <string name="icon_pack_picker_dialog_title">Paket ikon</string>
+    <string name="picker_activities">Kegiatan</string>
+    <string name="select_custom_app_title">Pilih aplikasi kustom</string>
+    <string name="select_custom_activity_title">Pilih aktifitas kastom</string>
+    <string name="profile_applist_title">Aplikasi</string>
     <!-- Actions dialog and default task values set in ActionPreference xml-->
+    <string name="choose_action_title">Pilih tindakan</string>
     <!-- Fling -->
     <!-- Pulse navigation bar music visualizer -->
     <!-- Pulse config -->
     <!-- Navbar height -->
     <!-- SmartBar -->
+    <string name="smartbar_factory_reset_title">Setel ulang ke bawaan</string>
+    <string name="smartbar_factory_reset_confirm">Apakah anda yakin ingin mengatur ulang Smartbar ke pengaturan bawaan?</string>
+    <string name="smartbar_backup_current_config_title">Simpan profil</string>
+    <string name="smartbar_restore_config_title">Pulihkan profil</string>
+    <string name="smartbar_config_name_edit_dialog_title">Nama profil Smartbar</string>
+    <string name="smartbar_config_name_edit_dialog_message">Masukkan nama atau kosongkan</string>
+    <string name="smartbar_config_dialog_title">Profil Smartbar</string>
+    <string name="smartbar_config_backup_success_toast">Profil SmartBar berhasil disimpan</string>
+    <string name="smartbar_config_restore_success_toast">Profil Smartbar berhasil dipulihkan</string>
+    <string name="smartbar_config_backup_error_toast">Gagal saat menyimpan profil smartbar</string>
+    <string name="smartbar_config_restore_error_toast">Gagal memulihkan profil Smartbar</string>
     <!-- Carrier Label -->
+    <string name="custom_carrier_label_title">Nama operator kastom</string>
+    <string name="custom_carrier_label_explain">Masukkan label baru. Biarkan kosong untuk menggunakan label bawaan.</string>
+    <string name="custom_carrier_label_notset">Saat ini kustom label belum ditentukan</string>
     <!-- AOKP custom system animations -->
     <!-- Lock screen visualizer -->
     <!-- Screen state service -->
+    <string name="screen_state_toggles_summary">\@null</string>
+    <string name="screen_state_toggles_title">Menangguhkan tindakan</string>
+    <string name="screen_state_toggles_enable_title">Aktifkan</string>
+    <string name="screen_state_toggles_enable_summary">Tindakan akan dilakukan saat layar mati. Saat layar hidup status sebelumnya akan dipulihkan.</string>
+    <string name="screen_state_toggles_mobile_title">Jaringan seluler</string>
+    <string name="screen_state_toggles_location_title">Lokasi</string>
+    <string name="screen_state_toggles_twog">Beralih ke 2G</string>
+    <string name="screen_state_toggles_twog_summary">Mode jaringan akan dialihkan ke 2G saat layar mati</string>
+    <string name="screen_state_toggles_gps">Nonaktifkan GPS</string>
+    <string name="screen_state_toggles_gps_summary">GPS berdasar layanan lokasi akan dinonaktifkan pada saat layar mati</string>
+    <string name="screen_state_toggles_mobile_data">Nonaktifkan data seluler</string>
+    <string name="screen_state_toggles_mobile_data_summary">Data selular akan dinonaktifkan saat ayar mati</string>
+    <string name="screen_state_off_delay_title">Tindakan penundaan layar mati</string>
+    <string name="screen_state_off_delay_summary">Jumlah menit untuk menunggu sebelum melakukan tindakan setelah layar mati</string>
     <!-- Ambient Music Ticker -->
     <!-- Screen Off animation -->
     <!-- Suppress notification sound/vibration -->
@@ -244,5 +361,28 @@
     <!-- Circle app bar -->
     <!--OmniGesture-->
     <!-- Themes -->
+    <string name="theming_base_black">Notifikasi gelap/terang</string>
+    <string name="theming_base_black_notif">Gelap</string>
+    <string name="theming_base_black_transparent">Hitam transparan</string>
+    <string name="theming_accent_default">Bawaan</string>
+    <string name="theming_accent_amber">Sawo matang</string>
+    <string name="theming_accent_bluelight">Biru</string>
+    <string name="theming_accent_cyan">Cyan</string>
+    <string name="theming_accent_denim">Biru tua</string>
+    <string name="theming_accent_gold">Emas</string>
+    <string name="theming_accent_greenlight">Hijau</string>
+    <string name="theming_accent_lime">Lime</string>
+    <string name="theming_accent_orange">Jingga</string>
+    <string name="theming_accent_oxygen">Oksigen</string>
+    <string name="theming_accent_pink">Merah Muda</string>
+    <string name="theming_accent_pixel">Pixel</string>
+    <string name="theming_accent_purple">Ungu</string>
+    <string name="theming_accent_red">Merah</string>
+    <string name="theming_accent_teal">Teal</string>
+    <string name="theming_accent_turquoise">Turquoise</string>
+    <string name="theming_accent_yellow">Kuning</string>
     <!-- Device hidden prefs -->
+    <string name="show_device_hidden_prefs_title">Jangan sembunyikan preferensi</string>
+    <string name="show_device_hidden_prefs_summary">Standarnya, preferensi mungkin tidak akan berfungsi dengan baik di perangkat Anda (misalnya status root atau pemotongan tampilan) tidak akan ditampilkan</string>
+    <!-- Application Settings -->
 </resources>

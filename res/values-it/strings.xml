@@ -46,9 +46,14 @@
     <!-- QS Header battery percentage -->
     <!-- Battery bar -->
     <string name="battery_bar_title">Barra della batteria</string>
+    <string name="battery_bar_color_title">Colore LED</string>
     <string name="battery_bar_color_summary">Gamma di colori utilizzata nella barra di stato scura</string>
     <string name="battery_bar_dark_color_title">Colori scuri</string>
     <string name="battery_bar_dark_color_summary">Gamma di colori utilizzata nella barra di stato chiara</string>
+    <string name="battery_bar_charging_color_title">Colore del led in ricarica</string>
+    <string name="battery_bar_charging_color_summary">Colore di ricarica utilizzato sulla barra di stato scura</string>
+    <string name="battery_bar_charging_dark_color_title">Colore scuro durante la ricarica</string>
+    <string name="battery_bar_charging_dark_color_summary">Colore di ricarica utilizzato sulla barra di stato chiara</string>
     <string name="battery_bar_style_title">Allineamento</string>
     <string name="battery_bar_thickness_title">Spessore</string>
     <string name="battery_bar_animate_title">Animazione di ricarica</string>
@@ -142,6 +147,8 @@
     <!-- Hide statusbar on lockscreen -->
     <!-- Other UI tweaks -->
     <!-- Smartlock Auto Unlock -->
+    <string name="smartlock_auto_unlock_title">Auto sblocco Smartlock</string>
+    <string name="smartlock_auto_unlock_summary">Sblocco automatico se smartlock è autenticato</string>
     <string name="other_ui_title">Altri tweaks per la UI</string>
     <string name="other_ui_summary">Varie</string>
     <!-- Volume dialog timeout -->
@@ -203,6 +210,7 @@
     <string name="log_it_share_via">Condividi con</string>
     <!-- Panel porn -->
     <string name="panel_porn_title">Trasparenze</string>
+    <string name="panel_porn_summary">Davor world!</string>
     <!-- Volume dialog opacity -->
     <!-- Power menu and dialogs opacity -->
     <!-- AE settings -->
@@ -210,6 +218,7 @@
     <string name="ae_settings_summary">Personalizza l\'aspetto e il comportamento di BaikalOS Extras</string>
     <string name="theme_title">Tema</string>
     <string name="theme_default">Tema default per le impostazioni</string>
+    <string name="theme_default_force">Tema default per le impostazioni</string>
     <string name="theme_default_more_accent">Più colore</string>
     <string name="theme_light">Chiaro</string>
     <string name="theme_light_more_accent">Chiaro con più colore</string>
@@ -227,18 +236,29 @@
     <string name="baikalos_website_summary">Visita il sito BaikalOS</string>
     <string name="g_plus_title">Comunità G+</string>
     <string name="g_plus_summary">Visita la nostra community di Google+</string>
+    <string name="baikalos_gerrit_title">Gerrit</string>
     <string name="baikalos_gerrit_summary">Visita il nostro gerrit per sapere a cosa stiamo lavorando</string>
     <string name="baikalos_changelog_title">Registro Modifiche</string>
     <string name="baikalos_changelog_summary">Visualizza le recenti modifiche fatte alla BaikalOS</string>
+    <string name="baikalos_downloads_title">Downloads</string>
     <string name="baikalos_downloads_summary">Visita la pagina download BaikalOS per il tuo dispositivo</string>
     <string name="baikalos_ota_title">Centro aggiornamenti</string>
     <string name="baikalos_ota_summary">Verifica la presenza di aggiornamenti sulla ROM corrente</string>
     <string name="stats_title">Statistiche</string>
     <string name="stats_summary">Opzione in/out per le statistiche anonime</string>
+    <string name="device_maintainer_title">Manutentore del dispositivo</string>
+    <string name="device_maintainer_dialog">Manutentore del dispositivo</string>
+    <string name="device_maintainers_dialog">Manutentori dei dispositivi</string>
     <string name="device_maintainer_default">Sconosciute</string>
     <string name="no_root_title">Nessun root</string>
     <string name="no_root_summary">Per ulteriori funzionalità, esegui il root del tuo dispositivo</string>
     <!-- Other / general purpose -->
+    <string name="ok">\@android: string/ok</string>
+    <string name="cancel">@android:string/cancel</string>
+    <string name="on">Acceso</string>
+    <string name="off">Spento</string>
+    <string name="yes">\@android: string/yes</string>
+    <string name="no">\@android: string/no</string>
     <string name="reset">Ripristino</string>
     <string name="systemui_restart_title">Riavvio della SystemUI richiesto</string>
     <string name="systemui_restart_message">Per rendere effettive tutte le modifiche, è necessario un riavvio della SystemUI. Riavviare la SystemUI ora?</string>
@@ -247,11 +267,20 @@
     <string name="hidden_anim_activity_title">Tempo per lo Yoga!!!</string>
     <string name="hidden_anim_more_nice">BENE</string>
     <!-- Sensor block per-package -->
+    <string name="sensor_block_title">Blocca sensori per-package</string>
+    <string name="sensor_block_summary">Impedisce alle applicazioni di accedere a determinati sensori per risparmiare energia.</string>
     <!-- Weather - OmniJaws Settings -->
     <string name="weather_title">Meteo</string>
     <string name="weather_config_title">Impostazioni servizio meteo</string>
     <!-- Lockscreen Weather -->
     <!-- Statusbar ticker -->
+    <string name="status_bar_ticker_title">Ticker</string>
+    <string name="status_bar_show_ticker_title">Ticker</string>
+    <string name="status_bar_show_ticker_summary">Anteprima di notifica nella barra di stato invece delle notifiche fluttuanti</string>
+    <string name="ticker_animation_mode_title">Animazione ticker</string>
+    <string name="ticker_animation_mode_alpha_fade">Dissolvenza</string>
+    <string name="ticker_animation_mode_scroll">Scorrimento</string>
+    <string name="ticker_tick_duration_title">Durata del ticker</string>
     <!-- Navigation-->
     <string name="navigation_title">Navigazione</string>
     <string name="navigation_summary">Stock/Smartbar/Fling/Gesti</string>
@@ -287,8 +316,28 @@
     <!-- AOKP custom system animations -->
     <!-- Lock screen visualizer -->
     <!-- Screen state service -->
+    <string name="screen_state_toggles_summary">\@null</string>
+    <string name="screen_state_toggles_title">Sospendi le azioni</string>
+    <string name="screen_state_toggles_enable_title">Abilita</string>
+    <string name="screen_state_toggles_enable_summary">Le azioni saranno eseguite a schermo spento. A schermo acceso verrà ripristinato allo stato precedente.</string>
+    <string name="screen_state_toggles_mobile_title">Rete mobile</string>
+    <string name="screen_state_toggles_location_title">Localizzazione</string>
+    <string name="screen_state_toggles_twog">Passa al 2G</string>
+    <string name="screen_state_toggles_twog_summary">La modalità di rete passerà a 2G a schermo spento</string>
+    <string name="screen_state_toggles_gps">Disabilita GPS</string>
+    <string name="screen_state_toggles_gps_summary">I servizi dipendenti dalla posizione saranno disattivati a schermo spento</string>
+    <string name="screen_state_toggles_mobile_data">Disattiva dati mobili</string>
+    <string name="screen_state_toggles_mobile_data_summary">I dati mobili saranno disattivati a schermo spento</string>
+    <string name="screen_state_off_delay_title">Ritardo azioni a schermo spento</string>
+    <string name="screen_state_off_delay_summary">Numero di minuti da aspettare prima di eseguire le azioni dopo aver spento lo schermo</string>
+    <string name="screen_state_on_delay_title">Ritardo azioni a schermo acceso</string>
+    <string name="screen_state_on_delay_summary">Numero di minuti da aspettare prima di eseguire le azioni dopo aver acceso lo schermo</string>
     <!-- Ambient Music Ticker -->
     <!-- Screen Off animation -->
+    <string name="screen_off_animation_title">Animazione spegnimento schermo</string>
+    <string name="screen_off_animation_default">Predefinito</string>
+    <string name="screen_off_animation_crt">CRT</string>
+    <string name="screen_off_animation_scale">Scala</string>
     <!-- Suppress notification sound/vibration -->
     <!-- Accidental Touch -->
     <!-- Dynamic Navbar -->
@@ -304,6 +353,7 @@
     <!-- Quick QS pull down -->
     <string name="status_bar_quick_qs_pulldown_summary_left">Il bordo sinistro della barra di stato tira giù le impostazioni rapide</string>
     <string name="status_bar_quick_qs_pulldown_summary_right">Il bordo destro della barra di stato tira giù le impostazioni rapide</string>
+    <string name="status_bar_quick_qs_pulldown_off">Spento</string>
     <!-- Status bar system icons -->
     <!-- Toast Animation -->
     <!-- System default animation -->
@@ -322,5 +372,36 @@
     <!-- Circle app bar -->
     <!--OmniGesture-->
     <!-- Themes -->
+    <string name="theming_title">Temi</string>
+    <string name="theming_summary">Design predefinito del dispositivo</string>
+    <string name="theming_base_title">Tema base</string>
+    <string name="theming_accent_title">Colore in rilievo</string>
+    <string name="theming_base_default">Chiaro (impostazione predefinita)</string>
+    <string name="theming_base_dark">Scuro e Notifiche chiare</string>
+    <string name="theming_base_dark_notif">Scuro</string>
+    <string name="theming_base_dark_transparent">Scuro trasparente</string>
+    <string name="theming_base_black">Nero e Notifiche chiare</string>
+    <string name="theming_base_black_notif">Nero</string>
+    <string name="theming_base_black_transparent">Nero e trasparente</string>
+    <string name="theming_accent_default">Predefinito</string>
+    <string name="theming_accent_amber">Ambra</string>
+    <string name="theming_accent_bluelight">Blu</string>
+    <string name="theming_accent_cyan">Ciano</string>
+    <string name="theming_accent_denim">Denim</string>
+    <string name="theming_accent_gold">Oro</string>
+    <string name="theming_accent_greenlight">Verde</string>
+    <string name="theming_accent_lime">Lime</string>
+    <string name="theming_accent_orange">Arancione</string>
+    <string name="theming_accent_oxygen">Oxygen</string>
+    <string name="theming_accent_pink">Rosa</string>
+    <string name="theming_accent_pixel">Pixel</string>
+    <string name="theming_accent_purple">Viola</string>
+    <string name="theming_accent_red">Rosso</string>
+    <string name="theming_accent_teal">Verde acqua</string>
+    <string name="theming_accent_turquoise">Turchese</string>
+    <string name="theming_accent_yellow">Giallo</string>
     <!-- Device hidden prefs -->
+    <string name="show_device_hidden_prefs_title">Non nascondere le preferenze</string>
+    <string name="show_device_hidden_prefs_summary">Di default, le impostazioni che non funzionano bene sul tuo dispositivo (ad esempio a causa del root o della dimensione del display) non saranno mostrate</string>
+    <!-- Application Settings -->
 </resources>

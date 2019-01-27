@@ -19,5 +19,24 @@
 -->
 <resources>
     <!-- System extensions -->
+    <string name="system_extensions_title">Systemerweiterungen</string>
+    <string name="system_extensions_summary">System Addons</string>
     <!-- System app remover -->
+    <string name="system_app_remover_title">System-App Entferner</string>
+    <string name="system_app_remover_summary">Vorinstallierte Apps entfernen</string>
+    <string name="system_app_remover_message_delete">Sind Sie sicher, dass Sie diese App entfernen möchten?</string>
+    <string name="system_app_remover_message_noselect">Nichts ausgewählt</string>
+    <string name="proximity_category">Annäherungssensor</string>
+    <string name="baikal_wakeup_proximity_enabled_title">Aufwachen</string>
+    <string name="baikal_wakeup_proximity_enabled_summary">Aufwachen nach zweifachen winken</string>
+    <string name="baikal_sleep_proximity_enabled_title">Ruhezustand</string>
+    <string name="baikal_sleep_proximity_enabled_summary">In den Sleep-Modus bei zweifachen winken</string>
+    <string name="baikal_hall_sensor_enabled_title">HALL Sensor</string>
+    <string name="baikal_hall_sensor_enabled_summary">HALL Sensor aktivieren</string>
+    <string name="baikal_lid_sensor_enabled_title">Smart Cover einschalten</string>
+    <string name="baikal_lid_sensor_enabled_summary">Smart Cover einschalten</string>
+    <string name="baikal_lid_sensor_reverse_title">Smart Cover Umkehr</string>
+    <string name="baikal_lid_sensor_reverse_summary">Smart Cover Umkehr Aktion</string>
+    <string name="use_google_sans_title">Google Sans Standard</string>
+    <string name="use_google_sans_summary">Benutze Google Sans als System-Standardschrift. Neustart notwendig!</string>
 </resources>

@@ -403,4 +403,5 @@
     <!-- Device hidden prefs -->
     <string name="show_device_hidden_prefs_title">не скрывать настройки</string>
     <string name="show_device_hidden_prefs_summary">По умолчанию, настройки, которые скорее всего не будут работать на вашем устройстве скрыты. Например если у вас нет root доступа.</string>
+    <!-- Application Settings -->
 </resources>

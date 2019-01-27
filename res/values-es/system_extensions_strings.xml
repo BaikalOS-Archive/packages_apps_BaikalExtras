@@ -20,4 +20,9 @@
 <resources>
     <!-- System extensions -->
     <!-- System app remover -->
+    <string name="proximity_category">Proximidad</string>
+    <string name="baikal_wakeup_proximity_enabled_title">Despertar</string>
+    <string name="baikal_sleep_proximity_enabled_title">Suspender</string>
+    <string name="use_google_sans_title">Google Sans predeterminado</string>
+    <string name="use_google_sans_summary">Usar Google Sans como fuente de letra del sistema. ¡Requiere reinicio!</string>
 </resources>

@@ -24,17 +24,46 @@
     <string name="system_category">系统</string>
     <string name="other_category">其他</string>
     <!-- Device parts -->
+    <string name="device_part_title">设备功能</string>
+    <string name="device_part_category">设备</string>
     <!-- Status bar -->
     <string name="status_bar_title">状态栏</string>
     <string name="status_bar_summary">编辑状态栏外观</string>
     <!-- StatusBar Battery Options -->
     <!-- Bluetooth status -->
     <!-- Statusbar net monitor -->
+    <string name="network_traffic_state_title">状态栏显示网速</string>
+    <string name="network_traffic_autohide_threshold_title">网络活动自动隐藏阈值 (KB/s)</string>
     <!-- 4G icon -->
+    <string name="show_fourg_icon_title">4G 图标</string>
+    <string name="show_fourg_icon_summary">在信号图标上显示 4G 代替LTE</string>
     <!-- Roaming indicator icon -->
+    <string name="roaming_indicator_icon_title">启用漫游指示符</string>
+    <string name="roaming_indicator_icon_summary">漫游时在信号图标处显示漫游标志</string>
     <!-- Show VoLTE icon on statusbar -->
+    <string name="volte_icon_title">VoLTE 图标</string>
+    <string name="volte_icon_summary">显示 VoLTE 图标</string>
     <!-- QS Header battery percentage -->
     <!-- Battery bar -->
+    <string name="battery_bar_title">电量条</string>
+    <string name="battery_bar_color_title">浅色</string>
+    <string name="battery_bar_color_summary">在深色状态栏上使用的颜色范围</string>
+    <string name="battery_bar_dark_color_title">深色</string>
+    <string name="battery_bar_dark_color_summary">在浅色状态栏上使用的颜色范围</string>
+    <string name="battery_bar_charging_color_title">充电时颜色</string>
+    <string name="battery_bar_charging_color_summary">在深色状态栏上使用充电颜色</string>
+    <string name="battery_bar_charging_dark_color_title">深色充电颜色</string>
+    <string name="battery_bar_charging_dark_color_summary">在浅色状态栏上使用充电颜色</string>
+    <string name="battery_bar_style_title">排列方式</string>
+    <string name="battery_bar_thickness_title">厚度</string>
+    <string name="battery_bar_animate_title">充电动画</string>
+    <string name="battery_bar_style_regular">正常</string>
+    <string name="battery_bar_style_center_mirrored">居中</string>
+    <string name="battery_bar_style_reversed">居右</string>
+    <string name="battery_bar_use_charging_color_title">自定义充电颜色</string>
+    <string name="battery_blend_start">空白</string>
+    <string name="battery_blend_end">填充</string>
+    <string name="battery_blend_between">在…之間</string>
     <!-- StatusBar weather settings -->
     <!-- Smart pulldown-->
     <string name="smart_pulldown_dismissable">无常驻通知</string>
@@ -51,11 +80,14 @@
     <string name="menu_save">保存</string>
     <!-- Statusbar BaikalOS logo -->
     <!-- Statusbar categories -->
+    <string name="status_bar_icons_category_title">图标</string>
     <!-- Show 4G instead of LTE -->
     <!-- Notifications -->
     <string name="notifications_title">通知</string>
     <string name="notifications_summary">扩展通知控件</string>
     <!-- Heads up -->
+    <string name="notification_heads_up_title">浮动通知</string>
+    <string name="notification_heads_up_summary">允许弹出通知</string>
     <!-- Notification guts kill app button -->
     <!-- InCall notifications vibrate -->
     <!-- Brightness slider settings -->
@@ -96,6 +128,7 @@
     <!-- Lockscreen -->
     <string name="lockscreen_title">锁屏界面</string>
     <string name="lockscreen_summary">编辑锁屏界面外观</string>
+    <string name="lockscreen_security_category">安全</string>
     <!-- Double tap to sleep on lockscreen -->
     <!-- Media art -->
     <!-- Lockscreen battery info indicator  -->
@@ -103,12 +136,19 @@
     <!-- Power menu on secure lockscreen -->
     <!-- Disable QS on secure Lockscreen -->
     <!-- Fingerprint authentication vibration -->
+    <string name="fprint_sucess_vib_title">验证指纹时震动</string>
+    <string name="fprint_sucess_vib_summary_on">指纹验证成功时启用振动</string>
+    <string name="fprint_sucess_vib_summary_off">指纹验证成功时禁用振动</string>
     <!-- Fingerprint unlock keystore -->
+    <string name="fp_unlock_keystore_title">指纹解锁</string>
+    <string name="fp_unlock_keystore_summary">在重启后无须输入密码直接使用指纹解锁设备</string>
     <!-- Ambient display bottom info -->
     <!-- Show Lockscreen clock, date, & alarm -->
     <!-- Hide statusbar on lockscreen -->
     <!-- Other UI tweaks -->
     <!-- Smartlock Auto Unlock -->
+    <string name="smartlock_auto_unlock_title">自动面部解锁</string>
+    <string name="smartlock_auto_unlock_summary">Smartlock验证成功后自动解锁</string>
     <string name="other_ui_title">其它 UI 调整</string>
     <string name="other_ui_summary">各种杂项</string>
     <!-- Volume dialog timeout -->
@@ -141,6 +181,7 @@
     <!-- System behaviour -->
     <string name="system_behaviour_title">系统行为</string>
     <string name="system_behaviour_summary">系统调整</string>
+    <string name="selinux_category">SELinux</string>
     <string name="selinux_explanation_summary">SELinux是一个集修改内核和用户空间工具。改变模式可能会产生不必要的影响。请用户自行承担后果。</string>
     <string name="selinux_mode_title">Selinux 模式</string>
     <string name="selinux_permissive_summary">许可</string>
@@ -152,7 +193,10 @@
     <!-- Log it -->
     <string name="log_it_title">记录那个狗屎！</string>
     <string name="log_it_summary">Logcat，Kmesg，dmesg</string>
+    <string name="logcat_title">日志获取</string>
     <string name="logcat_radio_title">无线电日志</string>
+    <string name="kmesg_title">Kmesg</string>
+    <string name="dmesg_title">Dmesg</string>
     <string name="log_it_now_title">执行</string>
     <string name="log_it_dialog_title">执行</string>
     <string name="logcat_warning">分享或者离开</string>
@@ -174,6 +218,7 @@
     <string name="ae_settings_summary">自定义 BaikalOS 附加设置的外观和行为</string>
     <string name="theme_title">主题</string>
     <string name="theme_default">默认设置</string>
+    <string name="theme_default_force">默认设置</string>
     <string name="theme_default_more_accent">更多颜色</string>
     <string name="theme_light">浅色</string>
     <string name="theme_light_more_accent">更多颜色的光</string>
@@ -208,8 +253,12 @@
     <string name="no_root_title">未 root</string>
     <string name="no_root_summary">有关更多功能, 请 root 你的设备</string>
     <!-- Other / general purpose -->
+    <string name="ok">@android:string/ok</string>
+    <string name="cancel">@android:string/取消</string>
     <string name="on">开启</string>
     <string name="off">关闭</string>
+    <string name="yes">@android:string/是的</string>
+    <string name="no">@android:string/不是</string>
     <string name="reset">重置</string>
     <string name="systemui_restart_title">需要重启SystemUI</string>
     <string name="systemui_restart_message">要使所有更改生效，需要重新启动SystemUI。现在重新启动SystemUI？</string>
@@ -218,11 +267,20 @@
     <string name="hidden_anim_activity_title">休息时间!!!</string>
     <string name="hidden_anim_more_nice">漂亮</string>
     <!-- Sensor block per-package -->
+    <string name="sensor_block_title">阻止个別应用使用传感器</string>
+    <string name="sensor_block_summary">阻止某些应用使用特定的传感器以节省电量。</string>
     <!-- Weather - OmniJaws Settings -->
     <string name="weather_title">天气</string>
     <string name="weather_config_title">服务设置</string>
     <!-- Lockscreen Weather -->
     <!-- Statusbar ticker -->
+    <string name="status_bar_ticker_title">状态栏通知</string>
+    <string name="status_bar_show_ticker_title">状态栏通知</string>
+    <string name="status_bar_show_ticker_summary">在通知栏预览消息代替浮动通知</string>
+    <string name="ticker_animation_mode_title">状态栏通知动画</string>
+    <string name="ticker_animation_mode_alpha_fade">淡入</string>
+    <string name="ticker_animation_mode_scroll">滚动</string>
+    <string name="ticker_tick_duration_title">状态栏通知时长</string>
     <!-- Navigation-->
     <string name="navigation_title">导航栏</string>
     <string name="navigation_summary">原生 / 智能导航栏 / 扫动 / 手势</string>
@@ -258,8 +316,28 @@
     <!-- AOKP custom system animations -->
     <!-- Lock screen visualizer -->
     <!-- Screen state service -->
+    <string name="screen_state_toggles_summary">\@null</string>
+    <string name="screen_state_toggles_title">暂停动作</string>
+    <string name="screen_state_toggles_enable_title">启用</string>
+    <string name="screen_state_toggles_enable_summary">操作将在屏幕关闭时执行。屏幕上的当前状态将会被还原。</string>
+    <string name="screen_state_toggles_mobile_title">移动网络</string>
+    <string name="screen_state_toggles_location_title">位置信息服务</string>
+    <string name="screen_state_toggles_twog">切换到 2G</string>
+    <string name="screen_state_toggles_twog_summary">网络将在屏幕关闭时切换至 2G</string>
+    <string name="screen_state_toggles_gps">禁用 GPS</string>
+    <string name="screen_state_toggles_gps_summary">GPS 定位服务将在屏幕关闭后禁用</string>
+    <string name="screen_state_toggles_mobile_data">禁用移动数据</string>
+    <string name="screen_state_toggles_mobile_data_summary">屏幕关闭后将禁用数据连接</string>
+    <string name="screen_state_off_delay_title">屏幕关闭动作延迟</string>
+    <string name="screen_state_off_delay_summary">在屏幕关闭后执行操作前等待的时长</string>
+    <string name="screen_state_on_delay_title">屏幕点亮操作延迟</string>
+    <string name="screen_state_on_delay_summary">在屏幕开启后执行操作前等待的时长</string>
     <!-- Ambient Music Ticker -->
     <!-- Screen Off animation -->
+    <string name="screen_off_animation_title">屏幕关闭动画</string>
+    <string name="screen_off_animation_default">默认</string>
+    <string name="screen_off_animation_crt">CRT</string>
+    <string name="screen_off_animation_scale">缩放</string>
     <!-- Suppress notification sound/vibration -->
     <!-- Accidental Touch -->
     <!-- Dynamic Navbar -->
@@ -294,5 +372,36 @@
     <!-- Circle app bar -->
     <!--OmniGesture-->
     <!-- Themes -->
+    <string name="theming_title">主题</string>
+    <string name="theming_summary">设备默认设计</string>
+    <string name="theming_base_title">基础主题</string>
+    <string name="theming_accent_title">强调颜色</string>
+    <string name="theming_base_default">浅色 (默认)</string>
+    <string name="theming_base_dark">深色、浅色通知</string>
+    <string name="theming_base_dark_notif">深色</string>
+    <string name="theming_base_dark_transparent">透明暗色调</string>
+    <string name="theming_base_black">深色、浅色通知</string>
+    <string name="theming_base_black_notif">黑色</string>
+    <string name="theming_base_black_transparent">透明暗色调</string>
+    <string name="theming_accent_default">默认</string>
+    <string name="theming_accent_amber">琥珀色</string>
+    <string name="theming_accent_bluelight">蓝色</string>
+    <string name="theming_accent_cyan">蓝绿色</string>
+    <string name="theming_accent_denim">牛仔色</string>
+    <string name="theming_accent_gold">金色</string>
+    <string name="theming_accent_greenlight">绿色</string>
+    <string name="theming_accent_lime">浅绿色</string>
+    <string name="theming_accent_orange">橙色</string>
+    <string name="theming_accent_oxygen">氧OS</string>
+    <string name="theming_accent_pink">粉色</string>
+    <string name="theming_accent_pixel">Pixel</string>
+    <string name="theming_accent_purple">紫色</string>
+    <string name="theming_accent_red">红色</string>
+    <string name="theming_accent_teal">蓝绿色</string>
+    <string name="theming_accent_turquoise">宝石绿</string>
+    <string name="theming_accent_yellow">黄色</string>
     <!-- Device hidden prefs -->
+    <string name="show_device_hidden_prefs_title">请勿隐藏首选项</string>
+    <string name="show_device_hidden_prefs_summary">默认情况下, 可能无法在设备上正常工作的首选项 (由于根状态或显示截图) 将不会显示</string>
+    <!-- Application Settings -->
 </resources>

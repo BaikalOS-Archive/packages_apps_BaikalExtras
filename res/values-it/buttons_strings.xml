@@ -3,6 +3,8 @@
 <resources>
     <!-- Button Settings -->
     <string name="button_settings_title">Pulsanti</string>
+    <string name="button_settings_title_summary">Configurare azioni personalizzate per i pulsanti</string>
+    <string name="button_settings_description">Personalizzare le azioni dei pulsanti hardware presenti sul tuo dispositivo.</string>
     <!-- Button brightness -->
     <string name="button_backlight_title">Retroilluminazione pulsanti hardware</string>
     <string name="hardware_brightness_keys_title">Retroilluminazione</string>
@@ -46,7 +48,9 @@
     <string name="action_splitscreen">Schermo diviso</string>
     <string name="volume_key_title">Pulsanti volume</string>
     <string name="volume_answer_call_title">Rispondi chiamata</string>
+    <string name="volume_answer_call_summary">Rispondi alla chiamata premendo il tasto volume SU se Rifiuta è on, o su qualunque tasto se off</string>
     <string name="volume_reject_call_title">Rifiuta la chiamata</string>
+    <string name="volume_reject_call_summary">Rifiuta la chiamata premendo il tasto volume GIU\' se Rispondi è on, o su qualunque tasto se off</string>
     <string name="volume_end_call_title">Termina chiamata</string>
     <string name="volume_end_call_summary">Fine chiamata attiva</string>
     <string name="volume_button_music_control_title">Controllo multimediale</string>

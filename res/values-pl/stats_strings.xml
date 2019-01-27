@@ -20,7 +20,7 @@
 <resources>
     <!-- About device screen, list item title. Takes the user to the screen about opting in or out of anonymous statistics. -->
     <string name="anonymous_statistics_title">Statystyki</string>
-    <string name="anonymous_statistics_warning_title">O</string>
+    <string name="anonymous_statistics_warning_title">O ...</string>
     <string name="anonymous_statistics_warning">Udział w statystykach zezwoli na przesyłanie anonimowych danych twórcom BaikalOS w celu badania liczby aktywnych urządzeń. Raport zawiera unikatowy ID, który nie zagraża Twojej prywatności ani danym osobowym. Dane są przesyłane co 7 dni.\n\nAby zobaczyć przykładowe wysyłane informacje, podejrzyj swoje dane.</string>
     <string name="enable_reporting_title">Włącz raportowanie</string>
     <string name="disable_reporting_persistent">Zrezygnuj</string>

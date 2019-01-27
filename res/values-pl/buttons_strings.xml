@@ -48,4 +48,11 @@
     <string name="action_splitscreen">Włącz podzielony ekran</string>
     <string name="volume_key_title">Przyciski głośności</string>
     <string name="volume_answer_call_title">Odbierz połączenie</string>
+    <string name="volume_answer_call_summary">Odbierz połączenie przyciskiem podgłaszania jeśli odrzucanie jest włączone, lub dowolnym jeśli jest wyłączone</string>
+    <string name="volume_reject_call_title">Odrzuć połączenie</string>
+    <string name="volume_reject_call_summary">Odrzuć połączenie przyciskiem ściszania jeśli odbieranie jest włączone, lub dowolnym jeśli jest wyłączone</string>
+    <string name="volume_end_call_title">Zakończ połączenie</string>
+    <string name="volume_end_call_summary">Kończy trwające połączenie</string>
+    <string name="volume_button_music_control_title">Kontrola multimediów</string>
+    <string name="volume_button_music_control_summary">Długie naciśnięcie kontroluje odtwarzanie multimediów przy wyłączonym ekranie</string>
 </resources>

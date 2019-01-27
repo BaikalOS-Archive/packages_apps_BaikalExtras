@@ -18,20 +18,52 @@
  */
 -->
 <resources>
+    <string name="app_name">BaikalOS Extras</string>
     <!-- Dashboard -->
+    <string name="user_interface_category">Benutzeroberfläche</string>
+    <string name="system_category">System</string>
     <string name="other_category">Sonstiges</string>
     <!-- Device parts -->
+    <string name="device_part_title">Gerätefunktionen</string>
+    <string name="device_part_category">Gerät</string>
     <!-- Status bar -->
     <string name="status_bar_title">Statusleiste</string>
     <string name="status_bar_summary">Erscheinungsbild der Statusleiste bearbeiten</string>
     <!-- StatusBar Battery Options -->
     <!-- Bluetooth status -->
     <!-- Statusbar net monitor -->
+    <string name="network_traffic_state_title">Netzwerkaktivität in Statusbar anzeigen</string>
+    <string name="network_traffic_autohide_threshold_title">Schwellenwert in (kB/s), ab dem die Netzwerk-Aktivitätsanzeige verborgen wird</string>
     <!-- 4G icon -->
+    <string name="show_fourg_icon_title">4G Symbol</string>
+    <string name="show_fourg_icon_summary">4G-Symbol anstelle LTE anzeigen</string>
     <!-- Roaming indicator icon -->
+    <string name="roaming_indicator_icon_title">Roaming-Anzeige</string>
+    <string name="roaming_indicator_icon_summary">Zeigt den Roaming-Indikator im Netz Symbol wenn man im Roamingmodus ist</string>
     <!-- Show VoLTE icon on statusbar -->
+    <string name="volte_icon_title">VoLTE Symbol</string>
+    <string name="volte_icon_summary">VoLTE-Symbol anzeigen</string>
     <!-- QS Header battery percentage -->
     <!-- Battery bar -->
+    <string name="battery_bar_title">Akkuleiste</string>
+    <string name="battery_bar_color_title">Helle Farben</string>
+    <string name="battery_bar_color_summary">Farbverlauf für dunkle Statusleiste</string>
+    <string name="battery_bar_dark_color_title">Dunkle Farben</string>
+    <string name="battery_bar_dark_color_summary">Farbverlauf für helle Statusleiste</string>
+    <string name="battery_bar_charging_color_title">Helle Farbe beim Ladevorgang</string>
+    <string name="battery_bar_charging_color_summary">Farbe beim Ladevorgang und dunkler Statusleiste</string>
+    <string name="battery_bar_charging_dark_color_title">Dunkle Farbe beim Ladevorgang</string>
+    <string name="battery_bar_charging_dark_color_summary">Farbe beim Ladevorgang und heller Statusleiste</string>
+    <string name="battery_bar_style_title">Ausrichtung</string>
+    <string name="battery_bar_thickness_title">Dicke</string>
+    <string name="battery_bar_animate_title">Ladeanimation</string>
+    <string name="battery_bar_style_regular">Standard</string>
+    <string name="battery_bar_style_center_mirrored">Mittig gespiegelt</string>
+    <string name="battery_bar_style_reversed">Umgekehrt</string>
+    <string name="battery_bar_use_charging_color_title">Benutzerdefinierte Farbe beim Laden</string>
+    <string name="battery_blend_start">Leer</string>
+    <string name="battery_blend_end">Voll</string>
+    <string name="battery_blend_between">Übergang</string>
     <!-- StatusBar weather settings -->
     <!-- Smart pulldown-->
     <string name="smart_pulldown_dismissable">Keine verwerfbaren Benachrichtigungen</string>
@@ -48,11 +80,14 @@
     <string name="menu_save">Speichern</string>
     <!-- Statusbar BaikalOS logo -->
     <!-- Statusbar categories -->
+    <string name="status_bar_icons_category_title">Symbole</string>
     <!-- Show 4G instead of LTE -->
     <!-- Notifications -->
     <string name="notifications_title">Benachrichtigungen</string>
     <string name="notifications_summary">Erweiterte Benachrichtigungseinstellungen</string>
     <!-- Heads up -->
+    <string name="notification_heads_up_title">Pop-Up-Benachrichtigungen</string>
+    <string name="notification_heads_up_summary">Pop-up-Benachrichtigungen zulassen</string>
     <!-- Notification guts kill app button -->
     <!-- InCall notifications vibrate -->
     <!-- Brightness slider settings -->
@@ -93,6 +128,7 @@
     <!-- Lockscreen -->
     <string name="lockscreen_title">Sperrbildschirm</string>
     <string name="lockscreen_summary">Einstellungen des Sperrbildschirms bearbeiten</string>
+    <string name="lockscreen_security_category">Sicherheit</string>
     <!-- Double tap to sleep on lockscreen -->
     <!-- Media art -->
     <!-- Lockscreen battery info indicator  -->
@@ -100,12 +136,19 @@
     <!-- Power menu on secure lockscreen -->
     <!-- Disable QS on secure Lockscreen -->
     <!-- Fingerprint authentication vibration -->
+    <string name="fprint_sucess_vib_title">Vibrieren bei Fingerabdruck-Authentifizierung</string>
+    <string name="fprint_sucess_vib_summary_on">Nach erfolgreicher Authentifizierung per Fingerabdruck vibrieren</string>
+    <string name="fprint_sucess_vib_summary_off">Nach erfolgreicher Authentifizierung per Fingerabdruck nicht vibrieren</string>
     <!-- Fingerprint unlock keystore -->
+    <string name="fp_unlock_keystore_title">Entsperrung mit Fingerabdruck</string>
+    <string name="fp_unlock_keystore_summary">Gerät mit Fingerabdruck nach Neustart ohne Passwort entsperren</string>
     <!-- Ambient display bottom info -->
     <!-- Show Lockscreen clock, date, & alarm -->
     <!-- Hide statusbar on lockscreen -->
     <!-- Other UI tweaks -->
     <!-- Smartlock Auto Unlock -->
+    <string name="smartlock_auto_unlock_title">Smartlock Auto Unlock</string>
+    <string name="smartlock_auto_unlock_summary">Auto unlock, wenn Smartlock authentifiziert ist</string>
     <string name="other_ui_title">Andere UI-Verbesserungen</string>
     <string name="other_ui_summary">Verschiedene Zusatzfunktionen anpassen</string>
     <!-- Volume dialog timeout -->
@@ -139,6 +182,7 @@ Ordner BaikalOS_backup gesichert.\nAlte Sicherungen müssen manuell gelöscht we
     <!-- System behaviour -->
     <string name="system_behaviour_title">Systemverhalten</string>
     <string name="system_behaviour_summary">Zusätzliche Energie- und Sicherheitseinstellungen</string>
+    <string name="selinux_category">SELinux</string>
     <string name="selinux_explanation_summary">SELinux sind verschiedene Kernel-Modifikationen und \"user-space\" Werkzeuge. Eine Änderung des Modus kann unerwartetes Telefonverhalten auslösen. Benutzung auf eigenes Risiko!</string>
     <string name="selinux_mode_title">SELinux-Modus</string>
     <string name="selinux_permissive_summary">Moderat</string>
@@ -158,6 +202,7 @@ Ordner BaikalOS_backup gesichert.\nAlte Sicherungen müssen manuell gelöscht we
     <string name="log_it_dialog_title">Loslegen</string>
     <string name="logcat_warning">Teile das oder GTFO!</string>
     <string name="share_title">Teilen...</string>
+    <string name="log_it_share_subject">BaikalOS Statistiken</string>
     <string name="log_it_now_summary">Bitte warten, während die Logdateien erzeugt werden</string>
     <string name="log_it_logs_in_progress">Logdateien werden erzeugt…</string>
     <string name="log_it_share_type_title">Methode zur Übermittlung</string>
@@ -174,6 +219,7 @@ Ordner BaikalOS_backup gesichert.\nAlte Sicherungen müssen manuell gelöscht we
     <string name="ae_settings_summary">Passe das Aussehen und Verhalten der BaikalOS Extras an</string>
     <string name="theme_title">Design</string>
     <string name="theme_default">Standard-Design der Einstellungen</string>
+    <string name="theme_default_force">Standard-Design der Einstellungen</string>
     <string name="theme_default_more_accent">Akzentfarbe nutzen</string>
     <string name="theme_light">Hell</string>
     <string name="theme_light_more_accent">Hell mit Akzentfarbe</string>
@@ -191,9 +237,11 @@ Ordner BaikalOS_backup gesichert.\nAlte Sicherungen müssen manuell gelöscht we
     <string name="baikalos_website_summary">Besuche die Website vom BaikalOS</string>
     <string name="g_plus_title">G+ Community</string>
     <string name="g_plus_summary">Besuche unsere Google+ Community</string>
+    <string name="baikalos_gerrit_title">Gerrit</string>
     <string name="baikalos_gerrit_summary">Besuche unser Review-System online, um zu erfahren, an was wir gerade arbeiten</string>
     <string name="baikalos_changelog_title">Änderungsprotokoll</string>
     <string name="baikalos_changelog_summary">Zeige letzte Änderungen im ROM</string>
+    <string name="baikalos_downloads_title">Downloads</string>
     <string name="baikalos_downloads_summary">Besuche die BaikalOS Webseite mit Downloads für dein Gerät</string>
     <string name="baikalos_ota_title">OTA Aktualisierung</string>
     <string name="baikalos_ota_summary">Aktualisierungsprüfung für die installierte ROM-Version</string>
@@ -206,8 +254,12 @@ Ordner BaikalOS_backup gesichert.\nAlte Sicherungen müssen manuell gelöscht we
     <string name="no_root_title">Nicht gerootet</string>
     <string name="no_root_summary">Für mehr Funktionalität bitte das Gerät rooten</string>
     <!-- Other / general purpose -->
+    <string name="ok">Ok</string>
+    <string name="cancel">Abbrechen</string>
     <string name="on">An</string>
     <string name="off">Aus</string>
+    <string name="yes">@android:string/yes</string>
+    <string name="no">@android:string/no</string>
     <string name="reset">Zurücksetzen</string>
     <string name="systemui_restart_title">SystemUI-Neustart erforderlich</string>
     <string name="systemui_restart_message">Um alle Änderungen wirksam werden zu lassen, ist ein Neustart des SystemUI erforderlich. SystemUI jetzt neu starten?</string>
@@ -216,12 +268,22 @@ Ordner BaikalOS_backup gesichert.\nAlte Sicherungen müssen manuell gelöscht we
     <string name="hidden_anim_activity_title">Zeit für \'Yoga\' !!!</string>
     <string name="hidden_anim_more_nice">SCHÖN</string>
     <!-- Sensor block per-package -->
+    <string name="sensor_block_title">Sensor blockieren pro Paket</string>
+    <string name="sensor_block_summary">Zugriff auf bestimmte Bewegungssensoren für Apps blockieren, um die Akkulaufzeit zu verlängern.</string>
     <!-- Weather - OmniJaws Settings -->
     <string name="weather_title">Wetter</string>
     <string name="weather_config_title">Diensteinstellungen</string>
     <!-- Lockscreen Weather -->
     <!-- Statusbar ticker -->
+    <string name="status_bar_ticker_title">Benachrichtigungsticker</string>
+    <string name="status_bar_show_ticker_title">Benachrichtigungsticker</string>
+    <string name="status_bar_show_ticker_summary">Benachrichtigungs-Vorschau in der Statusleiste anstelle von Pop-Up\'s</string>
+    <string name="ticker_animation_mode_title">Ticker-Animation</string>
+    <string name="ticker_animation_mode_alpha_fade">Verblassen</string>
+    <string name="ticker_animation_mode_scroll">Scrollen</string>
+    <string name="ticker_tick_duration_title">Ticker-Dauer</string>
     <!-- Navigation-->
+    <string name="navigation_title">Navigation</string>
     <string name="navigation_summary">AOSP/Smartbar/Fling/Gestensteuerung</string>
     <!-- Navigation bar -->
     <!-- DUI -->
@@ -255,13 +317,34 @@ Ordner BaikalOS_backup gesichert.\nAlte Sicherungen müssen manuell gelöscht we
     <!-- AOKP custom system animations -->
     <!-- Lock screen visualizer -->
     <!-- Screen state service -->
+    <string name="screen_state_toggles_summary">\@null</string>
+    <string name="screen_state_toggles_title">Abbruch Aktionen</string>
+    <string name="screen_state_toggles_enable_title">Aktivieren</string>
+    <string name="screen_state_toggles_enable_summary">Aktionen werden bei ausgeschaltetem Bildschirm ausgeführt. Bei eingeschaltetem Bildschirm werden vorherige Einstellungen wiederhergestellt.</string>
+    <string name="screen_state_toggles_mobile_title">Mobilfunknetze</string>
+    <string name="screen_state_toggles_location_title">Standort</string>
+    <string name="screen_state_toggles_twog">Umschalten zu GPRS/EDGE (2G)</string>
+    <string name="screen_state_toggles_twog_summary">Der Netzwerkmodus wird bei ausgeschaltetem Bildschirm auf 2G umgeschaltet</string>
+    <string name="screen_state_toggles_gps">GPS deaktivieren</string>
+    <string name="screen_state_toggles_gps_summary">Die GPS basierte Standortbestimmung wird bei ausgeschaltetem Bildschirm deaktiviert</string>
+    <string name="screen_state_toggles_mobile_data">Mobile Datenverbindung deaktivieren</string>
+    <string name="screen_state_toggles_mobile_data_summary">Die mobile Datenverbindung wird bei ausgeschaltetem Bildschirm deaktiviert</string>
+    <string name="screen_state_off_delay_title">Aktions Verzögerung nachdem der Bildschirm ausgeschaltet wurde</string>
+    <string name="screen_state_off_delay_summary">Anzahl der Minuten nach Displayabschaltung, bevor die ausgewählten Aktionen ausgeführt werden</string>
+    <string name="screen_state_on_delay_title">Aktions-Verzögerung bei eingeschaltetem Bildschirm</string>
+    <string name="screen_state_on_delay_summary">Anzahl der Minuten, nach Wiedereinschaltung des Displays, bevor die gewählten Optionen ausgeführt werden</string>
     <!-- Ambient Music Ticker -->
     <!-- Screen Off animation -->
+    <string name="screen_off_animation_title">Abschaltanimation</string>
+    <string name="screen_off_animation_default">Standard</string>
+    <string name="screen_off_animation_crt">CRT</string>
+    <string name="screen_off_animation_scale">Skalierung</string>
     <!-- Suppress notification sound/vibration -->
     <!-- Accidental Touch -->
     <!-- Dynamic Navbar -->
     <!-- Face unlock toggle -->
     <!-- Navigation -->
+    <string name="navigation_category">Navigation</string>
     <!-- HW keys -->
     <!-- Volume keys -->
     <!-- Hardware button navigation -->
@@ -290,5 +373,36 @@ Ordner BaikalOS_backup gesichert.\nAlte Sicherungen müssen manuell gelöscht we
     <!-- Circle app bar -->
     <!--OmniGesture-->
     <!-- Themes -->
+    <string name="theming_title">Themes</string>
+    <string name="theming_summary">Standard-Design</string>
+    <string name="theming_base_title">Basisthema</string>
+    <string name="theming_accent_title">Akzentfarbe</string>
+    <string name="theming_base_default">Hell (Standard)</string>
+    <string name="theming_base_dark">Dunkel mit hellen Benachrichtigungen</string>
+    <string name="theming_base_dark_notif">Dunkel</string>
+    <string name="theming_base_dark_transparent">Dunkel (transparent)</string>
+    <string name="theming_base_black">Dunkel mit hellen Benachrichtigungen</string>
+    <string name="theming_base_black_notif">Schwarz</string>
+    <string name="theming_base_black_transparent">Schwarz (transparent)</string>
+    <string name="theming_accent_default">Standard</string>
+    <string name="theming_accent_amber">Bernstein</string>
+    <string name="theming_accent_bluelight">Blau</string>
+    <string name="theming_accent_cyan">Cyan</string>
+    <string name="theming_accent_denim">Denim</string>
+    <string name="theming_accent_gold">Gold</string>
+    <string name="theming_accent_greenlight">Grün</string>
+    <string name="theming_accent_lime">Limette</string>
+    <string name="theming_accent_orange">Orange</string>
+    <string name="theming_accent_oxygen">Oxygen</string>
+    <string name="theming_accent_pink">Pink</string>
+    <string name="theming_accent_pixel">Pixel</string>
+    <string name="theming_accent_purple">Violett</string>
+    <string name="theming_accent_red">Rot</string>
+    <string name="theming_accent_teal">Teal</string>
+    <string name="theming_accent_turquoise">Türkis</string>
+    <string name="theming_accent_yellow">Gelb</string>
     <!-- Device hidden prefs -->
+    <string name="show_device_hidden_prefs_title">Einstellungen nicht ausblenden</string>
+    <string name="show_device_hidden_prefs_summary">Standardmäßig werden Einstellungen, die auf Ihrem Gerät nicht richtig funktionieren würden (z.B. wegen Root-Zugriff oder einem Displayausschnitt) ausgeblendet</string>
+    <!-- Application Settings -->
 </resources>

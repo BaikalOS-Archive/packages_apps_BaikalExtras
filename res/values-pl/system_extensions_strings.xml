@@ -19,5 +19,24 @@
 -->
 <resources>
     <!-- System extensions -->
+    <string name="system_extensions_title">Rozszerzenia systemu</string>
+    <string name="system_extensions_summary">Dodatki systemowe</string>
     <!-- System app remover -->
+    <string name="system_app_remover_title">Usuwanie aplikacji systemowych</string>
+    <string name="system_app_remover_summary">Usuń pre-instalowane aplikacje</string>
+    <string name="system_app_remover_message_delete">Czy na pewno chcesz usunąć tą aplikację?</string>
+    <string name="system_app_remover_message_noselect">Nic nie wybrano</string>
+    <string name="proximity_category">Czujnik zbliżeniowy</string>
+    <string name="baikal_wakeup_proximity_enabled_title">Wybudź</string>
+    <string name="baikal_wakeup_proximity_enabled_summary">Wybudź po dwukrotnym machnięciu ręką</string>
+    <string name="baikal_sleep_proximity_enabled_title">Uśpij</string>
+    <string name="baikal_sleep_proximity_enabled_summary">Uśpij po dwukrotnym machnięciu ręką</string>
+    <string name="baikal_hall_sensor_enabled_title">Czujnik Halla</string>
+    <string name="baikal_hall_sensor_enabled_summary">Włącz czujnik Halla</string>
+    <string name="baikal_lid_sensor_enabled_title">Włącz Smart Cover</string>
+    <string name="baikal_lid_sensor_enabled_summary">Włącz Smart Cover</string>
+    <string name="baikal_lid_sensor_reverse_title">Odwróć działanie Smart Cover</string>
+    <string name="baikal_lid_sensor_reverse_summary">Odwróć działanie Smart Cover</string>
+    <string name="use_google_sans_title">Czcionka Google Sans</string>
+    <string name="use_google_sans_summary">Używaj czcionki Google Sans jako domyślnej czcionki systemu. Wymagany restart!</string>
 </resources>

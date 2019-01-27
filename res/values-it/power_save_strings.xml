@@ -4,9 +4,11 @@
     <!-- Power Save -->
     <string name="powersave_title">Risparmio energetico</string>
     <string name="powersave_summary">Trucchi per il risparmio energetico</string>
+    <string name="device_idle_aggressive_title">Idle aggressivo</string>
     <string name="device_idle_aggressive_summary">Invia il dispositivo in modalità sospensione 1 minuto dopo lo schermo spento. Ignora il movimento.</string>
     <string name="powersave_wl_block_title">Wakelock Blocker</string>
     <string name="powersave_wl_block_summary">Blocca i wakelocks da tutte le applicazioni regolari ad eccezione di quelle di sistema e della whitelist.</string>
+    <string name="powersave_throttle_alarms_summary">Blocca i wakelocks da tutte le applicazioni regolari ad eccezione di quelle di sistema e della whitelist.</string>
     <string name="powersave_restrict_screen_on_enabled_title">Limita lo schermo acceso</string>
     <string name="powersave_restrict_screen_on_enabled_summary">Applica restrizioni alle app quando lo schermo è acceso</string>
     <!-- Batery whitelist -->
