@@ -482,8 +482,8 @@
 
     <!-- Application Settings -->
 
-    <string name="app_settings_category">Application Settings</string>
-    <string name="app_settings_title">Application Profile</string>
+    <string name="app_settings_category">Applications Settings</string>
+    <string name="app_settings_title">Applications Profiles</string>
     <string name="app_settings_summary">Choose per-app settings for Battery, Performance, Thermal, etc...</string>
 
 </resources>
