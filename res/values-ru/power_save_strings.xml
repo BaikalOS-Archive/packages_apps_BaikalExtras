@@ -18,4 +18,5 @@
     <!-- App ops -->
     <string name="prefs_app_options_title">Настройки приложений</string>
     <string name="prefs_app_options_summary">Настройки приложений</string>
+    <string name="default_profiles_title">Профили по умолчанию</string>
 </resources>

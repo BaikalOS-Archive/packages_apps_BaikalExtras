@@ -404,4 +404,7 @@
     <string name="show_device_hidden_prefs_title">не скрывать настройки</string>
     <string name="show_device_hidden_prefs_summary">По умолчанию, настройки, которые скорее всего не будут работать на вашем устройстве скрыты. Например если у вас нет root доступа.</string>
     <!-- Application Settings -->
+    <string name="app_settings_category">Настройки приложений</string>
+    <string name="app_settings_title">Профили приложений</string>
+    <string name="app_settings_summary">Установите профили производительности и температурного режима для каждого приложения</string>
 </resources>
