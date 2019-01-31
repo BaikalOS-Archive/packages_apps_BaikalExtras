@@ -82,9 +82,7 @@ public class Dashboard extends BaseSettingsFragment {
             if( profilesCategory != null ) {
                 getPreferenceScreen().removePreference(profilesCategory);
             }
-            return;
         }
-
 
         mBaikalOSLogo = (LongClickablePreference) findPreference(PREF_BAIKALOS_LOGO);
 
