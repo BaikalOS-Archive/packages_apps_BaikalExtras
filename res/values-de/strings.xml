@@ -254,12 +254,8 @@ Ordner BaikalOS_backup gesichert.\nAlte Sicherungen müssen manuell gelöscht we
     <string name="no_root_title">Nicht gerootet</string>
     <string name="no_root_summary">Für mehr Funktionalität bitte das Gerät rooten</string>
     <!-- Other / general purpose -->
-    <string name="ok">Ok</string>
-    <string name="cancel">Abbrechen</string>
     <string name="on">An</string>
     <string name="off">Aus</string>
-    <string name="yes">@android:string/yes</string>
-    <string name="no">@android:string/no</string>
     <string name="reset">Zurücksetzen</string>
     <string name="systemui_restart_title">SystemUI-Neustart erforderlich</string>
     <string name="systemui_restart_message">Um alle Änderungen wirksam werden zu lassen, ist ein Neustart des SystemUI erforderlich. SystemUI jetzt neu starten?</string>

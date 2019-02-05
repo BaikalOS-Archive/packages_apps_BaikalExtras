@@ -253,12 +253,8 @@
     <string name="no_root_title">Tidak diROOT</string>
     <string name="no_root_summary">Untuk fungsi lainnya, Root perangkat Anda</string>
     <!-- Other / general purpose -->
-    <string name="ok">@android:string/ok</string>
-    <string name="cancel">@android:string/cancel</string>
     <string name="on">Nyala</string>
     <string name="off">Mati</string>
-    <string name="yes">@android:string/yes</string>
-    <string name="no">@android:string/no</string>
     <string name="reset">Setel ulang</string>
     <string name="systemui_restart_title">Mulai Ulang SystemUI Diperlukan</string>
     <string name="systemui_restart_message">Untuk melihat semua perubahan, diperlukan memulai ulang SystemUI. Mulai ulang sekarang?</string>

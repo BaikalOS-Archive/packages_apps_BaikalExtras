@@ -253,12 +253,8 @@
     <string name="no_root_title">Nessun root</string>
     <string name="no_root_summary">Per ulteriori funzionalità, esegui il root del tuo dispositivo</string>
     <!-- Other / general purpose -->
-    <string name="ok">\@android: string/ok</string>
-    <string name="cancel">@android:string/cancel</string>
     <string name="on">Acceso</string>
     <string name="off">Spento</string>
-    <string name="yes">\@android: string/yes</string>
-    <string name="no">\@android: string/no</string>
     <string name="reset">Ripristino</string>
     <string name="systemui_restart_title">Riavvio della SystemUI richiesto</string>
     <string name="systemui_restart_message">Per rendere effettive tutte le modifiche, è necessario un riavvio della SystemUI. Riavviare la SystemUI ora?</string>

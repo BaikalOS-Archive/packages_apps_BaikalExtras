@@ -20,6 +20,4 @@
 <resources>
     <string name="switch_disable_warning_title">Attenzione</string>
     <string name="switch_disable_warning_message">Disabilitare questa impostazione senza abilitare un\'alternativa potrebbe rendere il tuo dispositivo inutilizzabile. Continuare?</string>
-    <string name="switch_disable_warning_continue">\@android: string/ok</string>
-    <string name="switch_disable_warning_cancel">@android:string/cancel</string>
 </resources>

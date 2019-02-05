@@ -253,12 +253,8 @@
     <string name="no_root_title">No rooteado</string>
     <string name="no_root_summary">Para obtener más funcionalidades, rootear el dispositivo</string>
     <!-- Other / general purpose -->
-    <string name="ok">@android:string/ok</string>
-    <string name="cancel">@android:string/cancel</string>
     <string name="on">Activado</string>
     <string name="off">Desactivado</string>
-    <string name="yes">@android:string/yes</string>
-    <string name="no">@android:string/no</string>
     <string name="reset">Restablecer</string>
     <string name="systemui_restart_title">SystemUI reinicio requerido</string>
     <string name="systemui_restart_message">Para que todos los cambios surtan efecto, SystemUI es necesario. ¿Reiniciar el SystemUI ahora?</string>
