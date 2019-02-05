@@ -21,7 +21,7 @@
 
     <string name="switch_disable_warning_title">Warning</string>
     <string name="switch_disable_warning_message">Disabling this setting without enabling an alternative might render your device unusuable. Continue?</string>
-    <string name="switch_disable_warning_continue">@android:string/ok</string>
-    <string name="switch_disable_warning_cancel">@android:string/cancel</string>
+    <string name="switch_disable_warning_continue" translatable="false">@android:string/ok</string>
+    <string name="switch_disable_warning_cancel" translatable="false">@android:string/cancel</string>
 
 </resources>

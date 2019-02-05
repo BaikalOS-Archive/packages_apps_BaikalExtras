@@ -372,12 +372,12 @@
 
     <!-- Other / general purpose -->
 
-    <string name="ok">@android:string/ok</string>
-    <string name="cancel">@android:string/cancel</string>
+    <string name="ok" translatable="false">@android:string/ok</string>
+    <string name="cancel" translatable="false">@android:string/cancel</string>
     <string name="on">On</string>
     <string name="off">Off</string>
-    <string name="yes">@android:string/yes</string>
-    <string name="no">@android:string/no</string>
+    <string name="yes" translatable="false">@android:string/yes</string>
+    <string name="no" translatable="false">@android:string/no</string>
     <string name="reset">Reset</string>
 
     <string name="systemui_restart_title">SystemUI restart required</string>
