@@ -23,4 +23,5 @@
     <string name="thermal_reader">Читалка</string>
     <string name="thermal_cool">Холодный</string>
     <string name="thermal_incall">В режиме разговора</string>
+    <string name="thermal_vr">VR</string>
 </resources>

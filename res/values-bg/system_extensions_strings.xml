@@ -19,5 +19,11 @@
 -->
 <resources>
     <!-- System extensions -->
+    <string name="system_extensions_title">Системни разширения</string>
+    <string name="system_extensions_summary">Системни добавки</string>
     <!-- System app remover -->
+    <string name="system_app_remover_message_delete">Сигурни ли сте, че искате да изтриете това приложение?</string>
+    <string name="system_app_remover_message_noselect">Нищо не е избрано</string>
+    <string name="baikal_wakeup_proximity_enabled_title">Събуждане</string>
+    <string name="baikal_sleep_proximity_enabled_title">Заспиване</string>
 </resources>

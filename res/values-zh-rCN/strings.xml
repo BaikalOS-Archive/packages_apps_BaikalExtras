@@ -254,11 +254,11 @@
     <string name="no_root_summary">有关更多功能, 请 root 你的设备</string>
     <!-- Other / general purpose -->
     <string name="ok">@android:string/ok</string>
-    <string name="cancel">@android:string/cancel</string>
+    <string name="cancel">@android:string/取消</string>
     <string name="on">开启</string>
     <string name="off">关闭</string>
-    <string name="yes">@android:string/yes</string>
-    <string name="no">@android:string/no</string>
+    <string name="yes">@android:string/是的</string>
+    <string name="no">@android:string/不是</string>
     <string name="reset">重置</string>
     <string name="systemui_restart_title">需要重启SystemUI</string>
     <string name="systemui_restart_message">要使所有更改生效，需要重新启动SystemUI。现在重新启动SystemUI？</string>
@@ -404,4 +404,7 @@
     <string name="show_device_hidden_prefs_title">请勿隐藏首选项</string>
     <string name="show_device_hidden_prefs_summary">默认情况下, 可能无法在设备上正常工作的首选项 (由于根状态或显示截图) 将不会显示</string>
     <!-- Application Settings -->
+    <string name="app_settings_category">应用程序设置</string>
+    <string name="app_settings_title">应用程序配置文件</string>
+    <string name="app_settings_summary">为每个应用配置电池，性能，散热等</string>
 </resources>

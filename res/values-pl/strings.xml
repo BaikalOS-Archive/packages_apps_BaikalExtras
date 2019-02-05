@@ -253,12 +253,12 @@
     <string name="no_root_title">Urządzenie niezrootowane</string>
     <string name="no_root_summary">Aby uzyskać więcej funkcji, zrootuj swoje urządzenie</string>
     <!-- Other / general purpose -->
-    <string name="ok">ok</string>
-    <string name="cancel">anuluj</string>
+    <string name="ok">@android:string/ok</string>
+    <string name="cancel">@android:string/anuluj</string>
     <string name="on">Wł</string>
     <string name="off">Wył</string>
-    <string name="yes">tak</string>
-    <string name="no">nie</string>
+    <string name="yes">@android:string/tak</string>
+    <string name="no">@android:string/nie</string>
     <string name="reset">Wyczyść</string>
     <string name="systemui_restart_title">Wymagany restart SystemUI</string>
     <string name="systemui_restart_message">Aby wszystkie zmiany zostały wprowadzone wymagany jest restart SystemUI. Zrestartować SystemUI teraz?</string>

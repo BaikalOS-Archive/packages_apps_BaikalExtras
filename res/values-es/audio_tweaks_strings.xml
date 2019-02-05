@@ -4,5 +4,10 @@
     <!-- Audio Tweaks -->
     <string name="audio_tweaks_title">Retoques de Audio</string>
     <string name="audio_tweaks_anc_title">Activar ANC</string>
+    <string name="audio_tweaks_fluence_title">Activar doble micrófono</string>
+    <string name="audio_tweaks_fluence_summary">Activar la configuración de doble micrófono para llamadas</string>
     <string name="audio_tweaks_whatsapp_title">Hack de WhatsApp</string>
+    <string name="audio_tweaks_whatsapp_summary">Usar el micrófono de grabación de voz para mensajes de voz de whatsapp</string>
+    <string name="audio_tweaks_hp_detect_title">Desactivar detección HP</string>
+    <string name="audio_tweaks_hp_detect_summary">Desactivar la detección de los auriculares. Para dispositivos con puerto USB-C roto.</string>
 </resources>

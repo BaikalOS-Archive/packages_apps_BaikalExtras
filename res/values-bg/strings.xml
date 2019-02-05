@@ -18,25 +18,41 @@
  */
 -->
 <resources>
+    <string name="app_name">Допълнения на BaikalOS</string>
     <!-- Dashboard -->
+    <string name="user_interface_category">Потреб. интерфейс</string>
+    <string name="system_category">Система</string>
+    <string name="other_category">Друго</string>
     <!-- Device parts -->
+    <string name="device_part_title">Възможности на устройството</string>
+    <string name="device_part_category">Устройство</string>
     <!-- Status bar -->
     <!-- StatusBar Battery Options -->
     <!-- Bluetooth status -->
     <!-- Statusbar net monitor -->
     <!-- 4G icon -->
+    <string name="show_fourg_icon_title">Икона 4G</string>
     <!-- Roaming indicator icon -->
     <!-- Show VoLTE icon on statusbar -->
     <!-- QS Header battery percentage -->
     <!-- Battery bar -->
+    <string name="battery_blend_start">Празно</string>
+    <string name="battery_blend_end">Пълна</string>
     <!-- StatusBar weather settings -->
     <!-- Smart pulldown-->
     <!-- Double tap to sleep on status bar -->
     <!-- Statusbar Clock options -->
+    <string name="status_bar_am_pm_info">Включен 24-часов формат за време</string>
+    <string name="clock_date_string_edittext_title">Трябва да е във формат за дата например. ММ/дд/гг</string>
+    <string name="clock_date_string_edittext_summary">Въведете низ</string>
+    <string name="menu_cancel">Отказ</string>
+    <string name="menu_save">Запис</string>
     <!-- Statusbar BaikalOS logo -->
     <!-- Statusbar categories -->
+    <string name="status_bar_icons_category_title">Икони</string>
     <!-- Show 4G instead of LTE -->
     <!-- Notifications -->
+    <string name="notifications_title">Известия</string>
     <!-- Heads up -->
     <!-- Notification guts kill app button -->
     <!-- InCall notifications vibrate -->

@@ -18,4 +18,5 @@
     <!-- App ops -->
     <string name="prefs_app_options_title">软件权限</string>
     <string name="prefs_app_options_summary">软件权限</string>
+    <string name="default_profiles_title">默认配置</string>
 </resources>

@@ -330,13 +330,20 @@
     <string name="screen_state_toggles_mobile_data_summary">Data selular akan dinonaktifkan saat ayar mati</string>
     <string name="screen_state_off_delay_title">Tindakan penundaan layar mati</string>
     <string name="screen_state_off_delay_summary">Jumlah menit untuk menunggu sebelum melakukan tindakan setelah layar mati</string>
+    <string name="screen_state_on_delay_title">Layar Pada tindakan penundaan</string>
+    <string name="screen_state_on_delay_summary">Jumlah menit untuk menunggu sebelum melakukan tindakan setelah layar menyala</string>
     <!-- Ambient Music Ticker -->
     <!-- Screen Off animation -->
+    <string name="screen_off_animation_title">Animasi Layar Mati</string>
+    <string name="screen_off_animation_default">Bawaan</string>
+    <string name="screen_off_animation_crt">CRT</string>
+    <string name="screen_off_animation_scale">Skala</string>
     <!-- Suppress notification sound/vibration -->
     <!-- Accidental Touch -->
     <!-- Dynamic Navbar -->
     <!-- Face unlock toggle -->
     <!-- Navigation -->
+    <string name="navigation_category">Navigasi</string>
     <!-- HW keys -->
     <!-- Volume keys -->
     <!-- Hardware button navigation -->
@@ -344,6 +351,9 @@
     <!-- Volume rocker wake -->
     <!-- Button brightness -->
     <!-- Quick QS pull down -->
+    <string name="status_bar_quick_qs_pulldown_summary_left">Tepi kiri dari bilah status dapat di tarik ke bawah untuk Setelan Cepat</string>
+    <string name="status_bar_quick_qs_pulldown_summary_right">Tepi kanan dari status bar dapat di tarik kebawah untuk penyetelan cepat</string>
+    <string name="status_bar_quick_qs_pulldown_off">Mati</string>
     <!-- Status bar system icons -->
     <!-- Toast Animation -->
     <!-- System default animation -->
@@ -357,10 +367,19 @@
     <!-- Hostname setting -->
     <!-- Gestures -->
     <!-- Carbon gestures -->
+    <string name="carbon_gesture_launch">Luncurkan</string>
     <!-- Disable FC notifications -->
     <!-- Circle app bar -->
     <!--OmniGesture-->
     <!-- Themes -->
+    <string name="theming_title">Tema</string>
+    <string name="theming_summary">Desain Perangkat Bawaan</string>
+    <string name="theming_base_title">Tema Dasar</string>
+    <string name="theming_accent_title">Warna Aksen</string>
+    <string name="theming_base_default">Cahaya (standar)</string>
+    <string name="theming_base_dark">Pemberiyahuan Gelap, Terang</string>
+    <string name="theming_base_dark_notif">Gelap</string>
+    <string name="theming_base_dark_transparent">Gelap Transparan</string>
     <string name="theming_base_black">Notifikasi gelap/terang</string>
     <string name="theming_base_black_notif">Gelap</string>
     <string name="theming_base_black_transparent">Hitam transparan</string>
@@ -385,4 +404,6 @@
     <string name="show_device_hidden_prefs_title">Jangan sembunyikan preferensi</string>
     <string name="show_device_hidden_prefs_summary">Standarnya, preferensi mungkin tidak akan berfungsi dengan baik di perangkat Anda (misalnya status root atau pemotongan tampilan) tidak akan ditampilkan</string>
     <!-- Application Settings -->
+    <string name="app_settings_category">Pengaturan Aplikasi</string>
+    <string name="app_settings_title">Profil Aplikasi</string>
 </resources>

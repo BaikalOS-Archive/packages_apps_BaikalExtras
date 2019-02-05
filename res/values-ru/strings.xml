@@ -117,13 +117,65 @@
     <string name="recents_summary">Изменить внешний вид недавних приложений</string>
     <string name="stock_recents_category">Стандартная панель недавних приложений</string>
     <string name="alternative_recents_category">Альтернативные панели недавних приложений</string>
+    <string name="alternative_recents_swipe_up_enabled_warning_summary">При использовании свайпа вверх по кнопке \"Домой\" для открытия недавних поддерживается только стоковое отображение недавних приложений</string>
     <!-- Recents panel settings -->
     <!-- Recents Membar -->
     <!-- Stock recents icon pack -->
     <!-- Slim recents -->
+    <string name="slim_recents_title">Недавние в стиле Slim</string>
+    <string name="recents_max_apps_title">Максимальное количество приложений</string>
+    <string name="recent_panel_scale_title">Размер</string>
+    <string name="recent_panel_expanded_mode_title">Расширенный режим</string>
+    <string name="recent_panel_expanded_mode_summary">Расширенный режим просмотра недавних приложений</string>
+    <string name="recent_panel_expanded_mode_auto">Автоматически (по умолчанию)</string>
+    <string name="recent_panel_expanded_mode_always">Всегда</string>
+    <string name="recent_panel_expanded_mode_never">Никогда</string>
+    <string name="recent_panel_expanded_mode_disabled">Выключен</string>
+    <string name="recent_panel_bg_color_title">Цвет фона панели</string>
+    <string name="recent_card_bg_color_title">Цвет фона карточки</string>
+    <string name="slim_recents_mem_display_long_click_clear_title">Долгое нажатие на панель памяти</string>
+    <string name="slim_recents_mem_display_long_click_clear_summary">Очищать недавние приложения при длительном нажатии на панель памяти</string>
+    <string name="slim_icon_pack_title">Наборы значков</string>
+    <string name="slim_icon_pack_summary">Применить свой набор значков для приложений в панели</string>
+    <string name="no_iconpacks_summary">Наборы значков не установлены</string>
+    <string name="dialog_pick_iconpack_title">Выбрать набор значков</string>
+    <string name="default_iconpack_title">Значки по умолчанию</string>
+    <string name="slim_recents_corner_radius_title">Радиус закругления карточки</string>
+    <string name="slim_recents_aicp_empty_drawable_title">Картинка AICP для пустой панели недавних приложений</string>
+    <string name="slim_recents_aicp_empty_drawable_summary">Изображение для отображения, когда недавних приложений нет</string>
     <!-- ATTENTION: RTL languages need to replace left with right -->
+    <string name="recent_panel_lefty_mode_title">Показывать у левого края</string>
+    <string name="recent_panel_lefty_mode_summary">Отображать панель недавних приложений с левой стороны экрана</string>
+    <string name="profile_choose_app">Выбор приложения</string>
+    <string name="dialog_delete_title">Удалить</string>
+    <string name="dialog_delete_message">Удалить выбранный элемент?</string>
+    <string name="slim_blacklist_apps_cat_title">Чёрный список</string>
+    <string name="slim_blacklist_apps_title">Чёрный список приложений</string>
+    <string name="slim_blacklist_apps_summary">Скрытые приложения</string>
+    <string name="slim_blacklist_add_apps_title">Добавить приложение</string>
+    <string name="slim_blacklist_add_apps_summary">Нажмите здесь, чтобы добавить новое приложение; нажмите на добавленное приложение, чтобы удалить его</string>
     <!-- Slim Recent App Sidebar  -->
+    <string name="recent_app_sidebar_title">Боковая панель недавних приложений</string>
+    <string name="recent_app_sidebar_summary">Отображать значки приложений с другого края</string>
+    <string name="use_recent_app_sidebar_title">Включить боковую панель приложений</string>
+    <string name="use_recent_app_sidebar_summary">Отображать значки приложений с другого края</string>
+    <string name="recent_app_sidebar_content_title">Содержимое боковой панели</string>
+    <string name="recent_app_sidebar_content_summary">Настроить содержимое боковой панели приложений</string>
+    <string name="recent_app_sidebar_style_title">Вид боковой панели</string>
+    <string name="recent_app_sidebar_style_summary">Изменить вид боковой панели</string>
+    <string name="recent_app_sidebar_hide_labels_title">Скрыть подписи значков</string>
+    <string name="recent_app_sidebar_label_color_title">Цвет названия приложения</string>
+    <string name="recent_app_sidebar_bg_color_title">Цвет фона</string>
+    <string name="recent_app_sidebar_scale_title">Размер</string>
+    <string name="recent_app_sidebar_open_simultaneously_title">Открывать одновременно с недавними</string>
+    <string name="recent_app_sidebar_open_simultaneously_summary">Уменьшить задержки при открытии панели недавних приложений, отключив это</string>
     <!-- Slim recents membar -->
+    <string name="slim_recents_mem_display_category_title">Шкала использования ОЗУ</string>
+    <string name="slim_recents_mem_display_title">Показывать шкалу использования ОЗУ</string>
+    <string name="slim_recents_mem_display_summaryOn">Включить отображение шкалы использования ОЗУ</string>
+    <string name="slim_recents_mem_display_summaryOff">Отключить отображение шкалы использования ОЗУ</string>
+    <string name="slim_recents_mem_display_color">Цвет шкалы использования ОЗУ</string>
+    <string name="slim_recents_mem_display_text_color">Цвет текста шкалы использования ОЗУ</string>
     <!-- OmniSwitch -->
     <!-- Lockscreen -->
     <string name="lockscreen_title">Экран блокировки</string>
