@@ -253,12 +253,8 @@
     <string name="no_root_title">未 root</string>
     <string name="no_root_summary">有关更多功能, 请 root 你的设备</string>
     <!-- Other / general purpose -->
-    <string name="ok">@android:string/ok</string>
-    <string name="cancel">@android:string/取消</string>
     <string name="on">开启</string>
     <string name="off">关闭</string>
-    <string name="yes">@android:string/是的</string>
-    <string name="no">@android:string/不是</string>
     <string name="reset">重置</string>
     <string name="systemui_restart_title">需要重启SystemUI</string>
     <string name="systemui_restart_message">要使所有更改生效，需要重新启动SystemUI。现在重新启动SystemUI？</string>
