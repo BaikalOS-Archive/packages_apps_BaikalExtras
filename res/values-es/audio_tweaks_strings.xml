@@ -3,6 +3,7 @@
 <resources>
     <!-- Audio Tweaks -->
     <string name="audio_tweaks_title">Retoques de Audio</string>
+    <string name="audio_tweaks_summary">Audio relacionado con retoques y hacks</string>
     <string name="audio_tweaks_anc_title">Activar ANC</string>
     <string name="audio_tweaks_fluence_title">Activar doble micrófono</string>
     <string name="audio_tweaks_fluence_summary">Activar la configuración de doble micrófono para llamadas</string>

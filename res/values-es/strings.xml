@@ -121,9 +121,45 @@
     <!-- Recents Membar -->
     <!-- Stock recents icon pack -->
     <!-- Slim recents -->
+    <string name="slim_recents_title">Recientes Slim</string>
+    <string name="recents_max_apps_title">Máximas aplicaciones permitidas</string>
+    <string name="recent_panel_scale_title">Tamaño</string>
+    <string name="recent_panel_expanded_mode_title">Modo expandido</string>
+    <string name="recent_panel_expanded_mode_auto">Automático (predeterminado)</string>
+    <string name="recent_panel_expanded_mode_always">Siempre</string>
+    <string name="recent_panel_expanded_mode_never">Nunca</string>
+    <string name="recent_panel_expanded_mode_disabled">Desactivado</string>
+    <string name="recent_panel_bg_color_title">Color de fondo del panel</string>
+    <string name="recent_card_bg_color_title">Color de fondo de las tarjetas</string>
+    <string name="slim_recents_mem_display_long_click_clear_title">Pulsación larga en la barra de memoria</string>
+    <string name="slim_icon_pack_title">Paquete de Iconos</string>
+    <string name="no_iconpacks_summary">No hay paquetes de iconos instalados</string>
+    <string name="dialog_pick_iconpack_title">Elegir paquete de iconos</string>
+    <string name="default_iconpack_title">Iconos por defecto</string>
+    <string name="slim_recents_corner_radius_title">Radio de esquina de las tarjetas</string>
+    <string name="slim_recents_aicp_empty_drawable_title">Recientes AICP vacío</string>
+    <string name="slim_recents_aicp_empty_drawable_summary">Imagen a mostrar cuando no hay apps recientes</string>
     <!-- ATTENTION: RTL languages need to replace left with right -->
+    <string name="recent_panel_lefty_mode_title">Mostrar en el borde izquierdo</string>
+    <string name="recent_panel_lefty_mode_summary">Mostrar panel de aplicaciones recientes en el borde izquierdo</string>
+    <string name="profile_choose_app">Elegir aplicación</string>
+    <string name="dialog_delete_title">Eliminar</string>
+    <string name="dialog_delete_message">¿Eliminar el elemento seleccionado?</string>
+    <string name="slim_blacklist_apps_cat_title">Lista negra</string>
+    <string name="slim_blacklist_apps_title">Lista negra de aplicaciones</string>
+    <string name="slim_blacklist_add_apps_title">Añadir aplicación</string>
     <!-- Slim Recent App Sidebar  -->
+    <string name="recent_app_sidebar_hide_labels_title">Ocultar etiquetas de los iconos</string>
+    <string name="recent_app_sidebar_label_color_title">Color de la etiqueta</string>
+    <string name="recent_app_sidebar_scale_title">Tamaño</string>
+    <string name="recent_app_sidebar_open_simultaneously_title">Abrir simultáneamente con recientes</string>
     <!-- Slim recents membar -->
+    <string name="slim_recents_mem_display_category_title">Barra de memoria</string>
+    <string name="slim_recents_mem_display_title">Mostrar barra de memoria</string>
+    <string name="slim_recents_mem_display_summaryOn">Barra de memoria activada</string>
+    <string name="slim_recents_mem_display_summaryOff">Barra de memoria desactivada</string>
+    <string name="slim_recents_mem_display_color">Color de la barra de memoria</string>
+    <string name="slim_recents_mem_display_text_color">Color del texto de la barra de memoria</string>
     <!-- OmniSwitch -->
     <!-- Lockscreen -->
     <string name="lockscreen_title">Pantalla de bloqueo</string>
@@ -149,7 +185,7 @@
     <!-- Smartlock Auto Unlock -->
     <string name="smartlock_auto_unlock_title">Desbloqueo automático con Smartlock</string>
     <string name="smartlock_auto_unlock_summary">Desbloqueo automático si Smartlock está autenticado</string>
-    <string name="other_ui_title">Otros ajustes de interfaz de usuario</string>
+    <string name="other_ui_title">Otros retoques de la interfaz de usuario</string>
     <string name="other_ui_summary">Varios</string>
     <!-- Volume dialog timeout -->
     <!-- Screenshot sound -->
@@ -180,7 +216,7 @@
     <string name="bootanimation_install_successful">Nueva animación de inicio aplicada satisfactoriamente.</string>
     <!-- System behaviour -->
     <string name="system_behaviour_title">Comportamiento del sistema</string>
-    <string name="system_behaviour_summary">Ajustes de sistema</string>
+    <string name="system_behaviour_summary">Retoques del sistema</string>
     <string name="selinux_category">SELinux</string>
     <string name="selinux_explanation_summary">SELinux es un conjunto de modificaciones del kernel y utilidades a nivel de usuario. Cambiando el modo puede ocasionar efectos no deseados. Usar bajo su responsabilidad.</string>
     <string name="selinux_mode_title">Modo SELinux</string>
@@ -272,6 +308,7 @@
     <!-- Statusbar ticker -->
     <string name="ticker_animation_mode_title">Animación del Ticker</string>
     <string name="ticker_animation_mode_alpha_fade">Desvanecer</string>
+    <string name="ticker_animation_mode_scroll">Desplazamiento</string>
     <string name="ticker_tick_duration_title">Duración de ticker</string>
     <!-- Navigation-->
     <string name="navigation_title">Navegación</string>
@@ -317,6 +354,7 @@
     <string name="screen_state_toggles_twog_summary">El modo de red cambiará a 2G al apagar la pantalla</string>
     <string name="screen_state_toggles_gps">Desactivar GPS</string>
     <string name="screen_state_toggles_mobile_data">Desactivar datos móviles</string>
+    <string name="screen_state_off_delay_title">Retraso de las acciones con la pantalla apagada</string>
     <!-- Ambient Music Ticker -->
     <!-- Screen Off animation -->
     <string name="screen_off_animation_title">Animación de apagado de pantalla</string>
