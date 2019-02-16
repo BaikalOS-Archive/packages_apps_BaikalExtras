@@ -4,8 +4,13 @@
     <!-- Power Save -->
     <string name="powersave_title">Ahorro de Energía</string>
     <string name="powersave_summary">Retoques de Ahorro de Energía</string>
+    <string name="device_idle_aggressive_title">Idle agresivo</string>
+    <string name="powersave_wl_block_title">Bloqueador de Wakelocks</string>
     <!-- Batery whitelist -->
+    <string name="prefs_battery_saver_title">Lista blanca</string>
+    <string name="prefs_battery_saver_summary">Lista blanca del dispositivo</string>
     <!-- App ops -->
     <string name="prefs_app_options_title">Permisos de apps</string>
     <string name="prefs_app_options_summary">Permisos de apps</string>
+    <string name="default_profiles_title">Perfiles predeterminados</string>
 </resources>
