@@ -58,6 +58,8 @@ public class LogIt extends BaseSettingsFragment implements Preference.OnPreferen
 
     private static final String LOGCAT_FILE = new File(Environment
         .getExternalStorageDirectory(), "baikalos_logcat.txt").getAbsolutePath();
+    private static final String LOGCAT_LAST_FILE = new File(Environment
+        .getExternalStorageDirectory(), "baikalos_logcat_last.txt").getAbsolutePath();
     private static final String LOGCAT_RADIO_FILE = new File(Environment
         .getExternalStorageDirectory(), "baikalos_radiolog.txt").getAbsolutePath();
     private static final String KMSG_FILE = new File(Environment
@@ -67,6 +69,8 @@ public class LogIt extends BaseSettingsFragment implements Preference.OnPreferen
 
     private static final String HASTE_LOGCAT_KEY = new File(Environment
             .getExternalStorageDirectory(), "baikalos_haste_logcat_key").getAbsolutePath();
+    private static final String HASTE_LOGCAT_LAST_KEY = new File(Environment
+            .getExternalStorageDirectory(), "baikalos_haste_logcat_last_key").getAbsolutePath();
     private static final String HASTE_LOGCAT_RADIO_KEY = new File(Environment
             .getExternalStorageDirectory(), "baikalos_haste_logcat_radio_key").getAbsolutePath();
     private static final String HASTE_KMSG_KEY = new File(Environment
@@ -78,6 +82,8 @@ public class LogIt extends BaseSettingsFragment implements Preference.OnPreferen
     private static final File sdCardDirectory = Environment.getExternalStorageDirectory();
     private static final File logcatFile = new File(sdCardDirectory, "baikalos_logcat.txt");
     private static final File logcatHasteKey = new File(sdCardDirectory, "baikalos_haste_logcat_key");
+    private static final File logcatLastFile = new File(sdCardDirectory, "baikalos_logcat_last.txt");
+    private static final File logcatLastHasteKey = new File(sdCardDirectory, "baikalos_haste_logcat_last_key");
     private static final File logcatRadioFile = new File(sdCardDirectory, "baikalos_radiolog.txt");
     private static final File logcatRadioHasteKey = new File(sdCardDirectory, "baikalos_haste_logcat_radio_key");
     private static final File dmesgFile = new File(sdCardDirectory, "baikalos_dmesg.txt");
@@ -240,6 +246,19 @@ public class LogIt extends BaseSettingsFragment implements Preference.OnPreferen
         SuShell.runWithSuCheck(command);
     }
 
+    public void makeLogcatLast() throws SuShell.SuDeniedException, IOException {
+        String command = "logcat -d -L";
+        if (shareHaste) {
+            command += " | tail -c " + HASTE_MAX_LOG_SIZE + " > " + LOGCAT_LAST_FILE
+                    + "&& curl -s -X POST -T " + LOGCAT_LAST_FILE + " " + BAIKALOS_HASTE
+                    + " | cut -d'\"' -f4 | echo \"http://haste.baikalos-rom.com/$(cat -)\" > "
+                            + HASTE_LOGCAT_LAST_KEY;
+        } else {
+            command += " > " + LOGCAT_LAST_FILE;
+        }
+        SuShell.runWithSuCheck(command);
+    }
+
     public void makeLogcatRadio() throws SuShell.SuDeniedException, IOException {
         String command = "logcat -d -b radio";
         if (shareHaste) {
@@ -288,6 +307,7 @@ public class LogIt extends BaseSettingsFragment implements Preference.OnPreferen
                     new FileOutputStream(shareZipFile.getAbsolutePath())));
             if (logcat) {
                 writeToZip(logcatFile, out);
+                writeToZip(logcatLastFile, out);
             }
             if (logcatRadio) {
                 writeToZip(logcatRadioFile, out);
@@ -345,6 +365,11 @@ public class LogIt extends BaseSettingsFragment implements Preference.OnPreferen
                     if (shareHaste) {
                         sharingIntentString += "\nLogcat: " +
                                 Util.readStringFromFile(logcatHasteKey);
+                    }
+                    makeLogcatLast();
+                    if (shareHaste) {
+                        sharingIntentString += "\nLogcatLast: " +
+                                Util.readStringFromFile(logcatLastHasteKey);
                     }
                 }
                 if (params[1]) {
