@@ -19,10 +19,17 @@
 -->
 <resources>
     <!-- System extensions -->
+    <string name="system_extensions_title">Extensiones del sistema</string>
+    <string name="system_extensions_summary">Complementos del sistema</string>
     <!-- System app remover -->
+    <string name="system_app_remover_title">Desinstalador de Aplicaciones del Sistema</string>
+    <string name="system_app_remover_summary">Eliminar aplicaciones preinstaladas</string>
+    <string name="system_app_remover_message_noselect">Nada seleccionado</string>
     <string name="proximity_category">Proximidad</string>
     <string name="baikal_wakeup_proximity_enabled_title">Despertar</string>
     <string name="baikal_sleep_proximity_enabled_title">Suspender</string>
+    <string name="baikal_lid_sensor_enabled_title">Activar Funda Inteligente</string>
+    <string name="baikal_lid_sensor_enabled_summary">Activar Funda Inteligente</string>
     <string name="use_google_sans_title">Google Sans predeterminado</string>
     <string name="use_google_sans_summary">Usar Google Sans como fuente de letra del sistema. ¡Requiere reinicio!</string>
 </resources>

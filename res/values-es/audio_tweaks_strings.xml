@@ -11,4 +11,13 @@
     <string name="audio_tweaks_whatsapp_summary">Usar el micrófono de grabación de voz para mensajes de voz de whatsapp</string>
     <string name="audio_tweaks_hp_detect_title">Desactivar detección HP</string>
     <string name="audio_tweaks_hp_detect_summary">Desactivar la detección de los auriculares. Para dispositivos con puerto USB-C roto.</string>
+    <string name="audio_tweaks_suspend_play_title">Suspender mientras juegas</string>
+    <string name="audio_tweaks_suspend_play_summary">Permitir la suspensión del sistema mientras el reproductor está activo. No todos los reproductores son compatibles.</string>
+    <string name="audio_tweaks_a2dp_sbc_hd_title">Tasa de bits de SBC alta</string>
+    <string name="audio_tweaks_a2dp_sbc_hd_summary">Usar una tasa de bits alta SBC para el perfil de Bluetooth A2DP</string>
+    <string name="audio_tweaks_a2dp_sbc_hdx_title">Máxima tasa de bits SBC</string>
+    <string name="audio_tweaks_a2dp_sbc_hde_title">Tasa de bits extrema SBC</string>
+    <string name="audio_tweaks_a2dp_sbc_hde_summary">Usar una tasa de bits extrema SBC para el perfil de Bluetooth A2DP</string>
+    <string name="audio_tweaks_a2dp_sbc_prefer_title">Preferir SBC</string>
+    <string name="audio_tweaks_a2dp_sbc_prefer_summary">Preferir SBC sobre AAC o AptX</string>
 </resources>

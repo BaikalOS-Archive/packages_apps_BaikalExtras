@@ -117,6 +117,7 @@
     <string name="recents_summary">Editar aspecto del panel de aps. recientes</string>
     <string name="stock_recents_category">Panel recientes predeterminado</string>
     <string name="alternative_recents_category">Panel recientes alternativo</string>
+    <string name="alternative_recents_swipe_up_enabled_warning_summary">Solo está soportado el menú predeterminado de recientes al deslizar hacia arriba el botón de inicio</string>
     <!-- Recents panel settings -->
     <!-- Recents Membar -->
     <!-- Stock recents icon pack -->
@@ -125,6 +126,7 @@
     <string name="recents_max_apps_title">Máximas aplicaciones permitidas</string>
     <string name="recent_panel_scale_title">Tamaño</string>
     <string name="recent_panel_expanded_mode_title">Modo expandido</string>
+    <string name="recent_panel_expanded_mode_summary">Previsualizar los procesos recientes en modo expandido</string>
     <string name="recent_panel_expanded_mode_auto">Automático (predeterminado)</string>
     <string name="recent_panel_expanded_mode_always">Siempre</string>
     <string name="recent_panel_expanded_mode_never">Nunca</string>
@@ -149,8 +151,11 @@
     <string name="slim_blacklist_apps_title">Lista negra de aplicaciones</string>
     <string name="slim_blacklist_add_apps_title">Añadir aplicación</string>
     <!-- Slim Recent App Sidebar  -->
+    <string name="recent_app_sidebar_content_title">Contenido de la barra lateral</string>
+    <string name="recent_app_sidebar_style_title">Estilo de la barra lateral</string>
     <string name="recent_app_sidebar_hide_labels_title">Ocultar etiquetas de los iconos</string>
     <string name="recent_app_sidebar_label_color_title">Color de la etiqueta</string>
+    <string name="recent_app_sidebar_bg_color_title">Color del fondo</string>
     <string name="recent_app_sidebar_scale_title">Tamaño</string>
     <string name="recent_app_sidebar_open_simultaneously_title">Abrir simultáneamente con recientes</string>
     <!-- Slim recents membar -->
