@@ -74,7 +74,8 @@ public class Dashboard extends BaseSettingsFragment {
 
         PackageManager pm = getActivity().getPackageManager();
 
-        boolean perfProf  = SystemProperties.get("baikal.eng.perf", "0").equals("1");
+        boolean perfProf  = SystemProperties.get("baikal.eng.perf", "0").equals("1") || 
+                            SystemProperties.get("spectrum.support", "0").equals("1");
         boolean thermProf  = SystemProperties.get("baikal.eng.therm", "0").equals("1");
 
         Preference profilesCategory = findPreference("app_setings_cat");
@@ -104,7 +105,7 @@ public class Dashboard extends BaseSettingsFragment {
         mBaikalOSLogo.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
             @Override
             public boolean onPreferenceClick(Preference preference) {
-                int firstRandom = mRandom.nextInt(91 - 0);
+                /*int firstRandom = mRandom.nextInt(91 - 0);
                 int secondRandom = mRandom.nextInt(181 - 90) + 90;
                 int thirdRandom = mRandom.nextInt(181 - 0);
 
@@ -125,7 +126,7 @@ public class Dashboard extends BaseSettingsFragment {
                 ps.setFadeOut(200, new AccelerateInterpolator());
                 ps.oneShot(getView(), 100);
 
-                mBaikalOSLogo.setLongClickBurst(2000/((++mLogoClickCount)%5+1));
+                mBaikalOSLogo.setLongClickBurst(2000/((++mLogoClickCount)%5+1));*/
                 return true;
             }
         });
@@ -133,7 +134,7 @@ public class Dashboard extends BaseSettingsFragment {
                 new Preference.OnPreferenceClickListener() {
                         @Override
                         public boolean onPreferenceClick(Preference preference) {
-                            int firstRandom = mRandom.nextInt(91 - 0);
+                            /*int firstRandom = mRandom.nextInt(91 - 0);
                             int secondRandom = mRandom.nextInt(181 - 90) + 90;
                             int thirdRandom = mRandom.nextInt(181 - 0);
 
@@ -146,7 +147,7 @@ public class Dashboard extends BaseSettingsFragment {
                             ps.setAcceleration(0.0001f, thirdRandom);
                             ps.setRotationSpeedRange(firstRandom, secondRandom);
                             ps.setFadeOut(1000, new AccelerateInterpolator());
-                            ps.oneShot(getView(), 100);
+                            ps.oneShot(getView(), 100);*/
                             return true;
                         }
                 });

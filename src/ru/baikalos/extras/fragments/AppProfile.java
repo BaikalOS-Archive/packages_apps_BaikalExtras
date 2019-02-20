@@ -79,7 +79,9 @@ public class AppProfile extends BaseSettingsFragment
         mContext = (Context) getActivity();
         final Resources res = getActivity().getResources();
 
-        boolean perfProf  = SystemProperties.get("baikal.eng.perf", "0").equals("1");
+        boolean perfProf  = SystemProperties.get("baikal.eng.perf", "0").equals("1") ||
+                            SystemProperties.get("spectrum.support", "0").equals("1");
+
         boolean thermProf  = SystemProperties.get("baikal.eng.therm", "0").equals("1");
 
         try {

@@ -69,7 +69,9 @@ public class PowerSave extends BaseSettingsFragment {
                 (PreferenceCategory) screen.findPreference("default_profiles");
 
 
-        boolean perfProf  = SystemProperties.get("baikal.eng.perf", "0").equals("1");
+        boolean perfProf  = SystemProperties.get("baikal.eng.perf", "0").equals("1") || 
+                            SystemProperties.get("spectrum.support", "0").equals("1");
+
         boolean thermProf  = SystemProperties.get("baikal.eng.therm", "0").equals("1");
 
         if( !perfProf && !thermProf ) {
