@@ -20,24 +20,49 @@
 <resources>
     <string name="app_name">BaikalOS 추가설정</string>
     <!-- Dashboard -->
+    <string name="user_interface_category">인터페이스</string>
     <string name="system_category">시스템</string>
     <string name="other_category">기타</string>
     <!-- Device parts -->
+    <string name="device_part_title">장치 기능</string>
+    <string name="device_part_category">장치</string>
     <!-- Status bar -->
     <string name="status_bar_title">상태 바</string>
     <string name="status_bar_summary">상태 표시줄 모양 편집</string>
     <!-- StatusBar Battery Options -->
     <!-- Bluetooth status -->
     <!-- Statusbar net monitor -->
+    <string name="network_traffic_state_title">상태 표시줄에 네트워크 사용량 표시</string>
+    <string name="network_traffic_autohide_threshold_title">네트워크 사용량 자동으로 숨기기 (KB/s)</string>
     <!-- 4G icon -->
+    <string name="show_fourg_icon_title">4G 아이콘</string>
+    <string name="show_fourg_icon_summary">LTE 아이콘 대신 4G 아이콘을 사용합니다</string>
     <!-- Roaming indicator icon -->
+    <string name="roaming_indicator_icon_title">로밍 표시기</string>
+    <string name="roaming_indicator_icon_summary">로밍 모드에서 신호 아이콘에 로밍 표시기를 나타냅니다</string>
     <!-- Show VoLTE icon on statusbar -->
+    <string name="volte_icon_title">VoLTE 아이콘</string>
+    <string name="volte_icon_summary">VoLTE 아이콘 표시</string>
     <!-- QS Header battery percentage -->
     <!-- Battery bar -->
+    <string name="battery_bar_title">배터리 바</string>
+    <string name="battery_bar_color_title">배터리 바 색상</string>
+    <string name="battery_bar_style_title">정렬</string>
+    <string name="battery_bar_thickness_title">두께</string>
+    <string name="battery_bar_animate_title">충전 애니메이션</string>
+    <string name="battery_bar_style_regular">보통</string>
+    <string name="battery_bar_style_center_mirrored">가운데 정렬</string>
+    <string name="battery_bar_style_reversed">반전</string>
+    <string name="battery_bar_use_charging_color_title">배터리 상태바 색상 변경</string>
+    <string name="battery_blend_start">방전</string>
+    <string name="battery_blend_end">완충됨</string>
+    <string name="battery_blend_between">중간</string>
     <!-- StatusBar weather settings -->
     <!-- Smart pulldown-->
     <string name="smart_pulldown_dismissable">모든 알림 제거</string>
     <string name="smart_pulldown_ongoing">진행중인 알림 없음</string>
+    <string name="smart_pulldown_summary">%1$s개 이상의 알림이 있으면 빠른 설정을 표시합니다</string>
+    <string name="smart_pulldown_none_summary">표시할 알림이 없으면 빠른 설정을 표시합니다</string>
     <!-- Double tap to sleep on status bar -->
     <!-- Statusbar Clock options -->
     <string name="status_bar_am_pm_info">24시간 형식 활성화</string>
@@ -73,18 +98,48 @@
     <string name="header_provider_disabled">비활성화됨</string>
     <!-- Tiles animation style  -->
     <!-- Recents -->
+    <string name="recents_title">최근 실행 목록</string>
     <string name="recents_summary">최근 애플 리 케이 션 화면 모양 편집</string>
+    <string name="stock_recents_category">기본 최근 실행 목록</string>
+    <string name="alternative_recents_category">대체 실행 목록 표시기</string>
     <!-- Recents panel settings -->
     <!-- Recents Membar -->
     <!-- Stock recents icon pack -->
     <!-- Slim recents -->
+    <string name="slim_recents_title">Slim 실행 목록 표시기</string>
+    <string name="recents_max_apps_title">최대로 허용된 앱 개수</string>
+    <string name="recent_panel_scale_title">크기</string>
+    <string name="recent_panel_expanded_mode_title">확장 모드</string>
+    <string name="recent_panel_expanded_mode_summary">최근 실행 목록이 확장된 미리보기 모드로 표시됩니다</string>
+    <string name="recent_panel_expanded_mode_auto">자동 (기본값)</string>
+    <string name="recent_panel_expanded_mode_always">항상</string>
+    <string name="recent_panel_expanded_mode_disabled">비활성화됨</string>
+    <string name="recent_panel_bg_color_title">패널 배경 색</string>
+    <string name="slim_recents_mem_display_long_click_clear_title">메모리 바 길게 누르기</string>
+    <string name="slim_recents_mem_display_long_click_clear_summary">메모리 바를 길게 눌러 최근 앱 목록을 지웁니다.</string>
+    <string name="slim_icon_pack_title">아이콘 팩</string>
+    <string name="slim_icon_pack_summary">패널의 앱에 사용자 지정 아이콘을 적용합니다</string>
+    <string name="no_iconpacks_summary">설치된 아이콘팩이 없습니다.</string>
+    <string name="dialog_pick_iconpack_title">아이콘 팩 선택</string>
+    <string name="default_iconpack_title">기본 아이콘</string>
+    <string name="slim_recents_corner_radius_title">모서리 반경</string>
     <!-- ATTENTION: RTL languages need to replace left with right -->
+    <string name="recent_panel_lefty_mode_title">왼쪽 가장자리에 표시</string>
+    <string name="dialog_delete_message">선택된 항목을 삭제하시겠습니까?</string>
     <!-- Slim Recent App Sidebar  -->
+    <string name="recent_app_sidebar_scale_title">크기</string>
     <!-- Slim recents membar -->
+    <string name="slim_recents_mem_display_category_title">메모리 바</string>
+    <string name="slim_recents_mem_display_title">메모리 사용량 표시</string>
+    <string name="slim_recents_mem_display_summaryOn">메모리 바 활성화</string>
+    <string name="slim_recents_mem_display_summaryOff">메모리 바 비활성화</string>
+    <string name="slim_recents_mem_display_color">메모리바 색상</string>
+    <string name="slim_recents_mem_display_text_color">메모리바 텍스트 색상</string>
     <!-- OmniSwitch -->
     <!-- Lockscreen -->
     <string name="lockscreen_title">잠금화면</string>
     <string name="lockscreen_summary">잠금화면 모양 편집</string>
+    <string name="lockscreen_security_category">보안</string>
     <!-- Double tap to sleep on lockscreen -->
     <!-- Media art -->
     <!-- Lockscreen battery info indicator  -->
@@ -93,6 +148,7 @@
     <!-- Disable QS on secure Lockscreen -->
     <!-- Fingerprint authentication vibration -->
     <!-- Fingerprint unlock keystore -->
+    <string name="fp_unlock_keystore_title">지문 잠금 해제</string>
     <!-- Ambient display bottom info -->
     <!-- Show Lockscreen clock, date, & alarm -->
     <!-- Hide statusbar on lockscreen -->
@@ -119,7 +175,9 @@
     <string name="custom_bootanimation_summary">사용자 정의 부트 애니메이션을 선택하십시오. 모든 변경시 현재 애니메이션이 내부 저장 장치의 BaikalOS_backup 폴더에 백업됩니다. 오래된 것들은 필요하지 않은 경우 수동으로 삭제해야합니다.</string>
     <string name="bootanimation_preview">Bootanimation 미리보기</string>
     <string name="bootanimation_creating_preview">인쇄 미리보기...</string>
+    <string name="bootanimation_error_reading_zip_file">Zip 파일을 읽는 중 오류가 발생했습니다.</string>
     <string name="bootanimation_error_creating_preview">미리보기를 만드는 중 오류 발생</string>
+    <string name="bootanimation_apply">적용</string>
     <!-- System behaviour -->
     <string name="selinux_explanation_summary">SELinux는 커널 수정과 사용자 공간 도구의 모음입니다. 모드의 전환은 원치 않은 효과를 불러올 수 있으며, 책임은 사용자 자신에게 있습니다.</string>
     <string name="selinux_mode_title">SELinux 모드</string>
@@ -140,6 +198,7 @@
     <!-- Volume dialog opacity -->
     <!-- Power menu and dialogs opacity -->
     <!-- AE settings -->
+    <string name="theme_default">자동</string>
     <string name="theme_default_more_accent">더 많은 색상</string>
     <string name="theme_light">얇게</string>
     <string name="theme_dark">검은색</string>
@@ -154,6 +213,8 @@
     <string name="baikalos_gerrit_summary">우리가 일하고있는 것을 알기 위해 우리의 gerrit를 방문하십시오.</string>
     <string name="baikalos_changelog_title">변경 사항</string>
     <string name="baikalos_downloads_title">다운로드</string>
+    <string name="baikalos_downloads_summary">기기의 BaikalOS 다운로드 페이지를 방문하세요</string>
+    <string name="baikalos_ota_title">업데이트 센터</string>
     <string name="baikalos_ota_summary">새로운 BaikalOS 업데이트 확인</string>
     <string name="stats_summary">익명 통계를 위한 송/수신 선택</string>
     <string name="no_root_title">루팅되지 않음</string>

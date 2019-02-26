@@ -46,5 +46,7 @@
     <string name="volume_answer_call_title">전화 수신</string>
     <string name="volume_reject_call_title">수신거부</string>
     <string name="volume_end_call_title">통화 종료</string>
+    <string name="volume_end_call_summary">통화 종료</string>
     <string name="volume_button_music_control_title">미디어 제어</string>
+    <string name="volume_button_music_control_summary">화면이 꺼져있는 동안 볼륨키로 미디어 재생 제어</string>
 </resources>
