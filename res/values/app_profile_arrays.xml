@@ -24,9 +24,10 @@
     	<item>@string/thermal_balance</item>
     	<item>@string/thermal_gaming</item>
     	<item>@string/thermal_gaming2</item>
+    	<item>@string/thermal_nolimits</item>
+    	<item>@string/thermal_high</item>
     	<item>@string/thermal_cool</item>
     	<item>@string/thermal_camera</item>
-    	<item>@string/thermal_video</item>
     	<item>@string/thermal_incall</item>
     	<item>@string/thermal_vr</item>
      </string-array>
@@ -35,9 +36,10 @@
     	<item>balance</item>
     	<item>gaming</item>
     	<item>gaming2</item>
+    	<item>nolimits</item>
+    	<item>high</item>
     	<item>cool</item>
     	<item>camera</item>
-    	<item>video</item>
     	<item>incall</item>
     	<item>vr</item>
     </string-array>

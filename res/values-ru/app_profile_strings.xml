@@ -13,11 +13,14 @@
     <string name="performance_gaming">Игровой</string>
     <string name="performance_camera">Камера</string>
     <string name="performance_reader">Читалка</string>
+
     <string name="thermal_default">По умолчанию</string>
     <string name="thermal_balance">Сбалансированный</string>
     <string name="thermal_performance">Производительность</string>
     <string name="thermal_gaming">Игровой</string>
-    <string name="thermal_gaming2">Игровой 2</string>
+    <string name="thermal_gaming2">Игровой 2 (PUBG HD)</string>
+    <string name="thermal_nolimits">No Limits</string>
+    <string name="thermal_high">Высокий</string>
     <string name="thermal_camera">Камера</string>
     <string name="thermal_video">Видео</string>
     <string name="thermal_reader">Читалка</string>
