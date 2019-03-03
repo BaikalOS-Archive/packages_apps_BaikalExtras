@@ -117,13 +117,65 @@
     <string name="recents_summary">编辑“最近应用”屏幕外观</string>
     <string name="stock_recents_category">默认最近任务</string>
     <string name="alternative_recents_category">其他最近任务</string>
+    <string name="alternative_recents_swipe_up_enabled_warning_summary">当使用向上滑动的主页导航打开最近应用时, 只支持原生最近任务样式</string>
     <!-- Recents panel settings -->
     <!-- Recents Membar -->
     <!-- Stock recents icon pack -->
     <!-- Slim recents -->
+    <string name="slim_recents_title">Slim 最近任务视图</string>
+    <string name="recents_max_apps_title">最大允许的应用数</string>
+    <string name="recent_panel_scale_title">尺寸</string>
+    <string name="recent_panel_expanded_mode_title">扩展模式</string>
+    <string name="recent_panel_expanded_mode_summary">在最近任务列表使用展开预览模式</string>
+    <string name="recent_panel_expanded_mode_auto">自动 (默认值)</string>
+    <string name="recent_panel_expanded_mode_always">始终</string>
+    <string name="recent_panel_expanded_mode_never">从不</string>
+    <string name="recent_panel_expanded_mode_disabled">禁用</string>
+    <string name="recent_panel_bg_color_title">面板背景色</string>
+    <string name="recent_card_bg_color_title">卡片背景色</string>
+    <string name="slim_recents_mem_display_long_click_clear_title">内存栏长按</string>
+    <string name="slim_recents_mem_display_long_click_clear_summary">通过长按内存栏来清空最近任务</string>
+    <string name="slim_icon_pack_title">图标包</string>
+    <string name="slim_icon_pack_summary">对最近任务面板中的应用程序应用自定义图标包</string>
+    <string name="no_iconpacks_summary">没有已安装的图标包</string>
+    <string name="dialog_pick_iconpack_title">选择图标包</string>
+    <string name="default_iconpack_title">默认图标</string>
+    <string name="slim_recents_corner_radius_title">卡片圆角半径</string>
+    <string name="slim_recents_aicp_empty_drawable_title">AICP 最近任务</string>
+    <string name="slim_recents_aicp_empty_drawable_summary">没有最近的应用程序时显示的图像</string>
     <!-- ATTENTION: RTL languages need to replace left with right -->
+    <string name="recent_panel_lefty_mode_title">显示在左边缘</string>
+    <string name="recent_panel_lefty_mode_summary">在屏幕左侧显示最近的应用程序面板</string>
+    <string name="profile_choose_app">选择应用程序</string>
+    <string name="dialog_delete_title">删除</string>
+    <string name="dialog_delete_message">移除选中的项目？</string>
+    <string name="slim_blacklist_apps_cat_title">黑名单</string>
+    <string name="slim_blacklist_apps_title">应用程序黑名单</string>
+    <string name="slim_blacklist_apps_summary">黑名单中的应用程序将不会显示在最近任务中</string>
+    <string name="slim_blacklist_add_apps_title">添加应用程序</string>
+    <string name="slim_blacklist_add_apps_summary">点击此处来添加, 点击已添加的应用程序来删除</string>
     <!-- Slim Recent App Sidebar  -->
+    <string name="recent_app_sidebar_title">最近应用侧栏</string>
+    <string name="recent_app_sidebar_summary">在另一侧边缘显示应用快捷方式</string>
+    <string name="use_recent_app_sidebar_title">启用应用侧栏</string>
+    <string name="use_recent_app_sidebar_summary">在另一侧边缘显示应用快捷方式</string>
+    <string name="recent_app_sidebar_content_title">侧边栏内容</string>
+    <string name="recent_app_sidebar_content_summary">配置应用侧栏的内容</string>
+    <string name="recent_app_sidebar_style_title">侧边栏样式</string>
+    <string name="recent_app_sidebar_style_summary">更改侧边栏样式</string>
+    <string name="recent_app_sidebar_hide_labels_title">隐藏图标标签</string>
+    <string name="recent_app_sidebar_label_color_title">标签颜色</string>
+    <string name="recent_app_sidebar_bg_color_title">背景颜色</string>
+    <string name="recent_app_sidebar_scale_title">大小</string>
+    <string name="recent_app_sidebar_open_simultaneously_title">与最近使用同时打开</string>
+    <string name="recent_app_sidebar_open_simultaneously_summary">减少打开最近使用任务的延迟</string>
     <!-- Slim recents membar -->
+    <string name="slim_recents_mem_display_category_title">内存栏</string>
+    <string name="slim_recents_mem_display_title">显示内存栏</string>
+    <string name="slim_recents_mem_display_summaryOn">启用内存栏</string>
+    <string name="slim_recents_mem_display_summaryOff">禁用内存栏</string>
+    <string name="slim_recents_mem_display_color">内存栏颜色</string>
+    <string name="slim_recents_mem_display_text_color">内存栏文本颜色</string>
     <!-- OmniSwitch -->
     <!-- Lockscreen -->
     <string name="lockscreen_title">锁屏界面</string>

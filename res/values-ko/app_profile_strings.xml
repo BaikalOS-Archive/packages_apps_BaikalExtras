@@ -16,9 +16,7 @@
     <string name="thermal_balance">균형</string>
     <string name="thermal_performance">성능</string>
     <string name="thermal_gaming">게이밍</string>
-    <string name="thermal_gaming2">게이밍 2</string>
     <string name="thermal_camera">카메라</string>
-    <string name="thermal_video">동영상</string>
     <string name="thermal_cool">시원하게</string>
     <string name="thermal_incall">통화 중</string>
     <string name="thermal_vr">VR</string>
