@@ -69,6 +69,14 @@
         android:defaultValue="false"
         android:disableDependentsState="true" />
 
+    <ru.baikalos.gear.preference.GlobalSettingSwitchPreference
+        android:key="baikal_lid_ignore_wake"
+        android:title="@string/baikal_lid_ignore_wake_title"
+        android:summary="@string/baikal_lid_ignore_wake_summary"
+        android:defaultValue="false"
+        android:disableDependentsState="true" />
+
+
     <Preference
         android:key="system_app_remover"
         android:title="@string/system_app_remover_title"

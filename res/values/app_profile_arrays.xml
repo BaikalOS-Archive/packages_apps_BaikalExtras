@@ -43,4 +43,33 @@
     	<item>incall</item>
     	<item>vr</item>
     </string-array>
+    <string-array name="brightness_listentries">
+    	<item>@string/brightness_default</item>
+    	<item>@string/brightness_reduced</item>
+    	<item>@string/brightness_full</item>
+    	<item>@string/brightness_10</item>
+    	<item>@string/brightness_20</item>
+    	<item>@string/brightness_30</item>
+    	<item>@string/brightness_40</item>
+    	<item>@string/brightness_50</item>
+    	<item>@string/brightness_60</item>
+    	<item>@string/brightness_70</item>
+    	<item>@string/brightness_80</item>
+    	<item>@string/brightness_90</item>
+     </string-array>
+     <string-array name="brightness_listvalues">
+    	<item>0</item>
+    	<item>10</item>
+    	<item>11</item>
+    	<item>1</item>
+    	<item>2</item>
+    	<item>3</item>
+    	<item>4</item>
+    	<item>5</item>
+    	<item>6</item>
+    	<item>7</item>
+    	<item>8</item>
+    	<item>9</item>
+    </string-array>
+
 </resources>

@@ -39,4 +39,13 @@
             android:entryValues="@array/thermal_listvalues"
             android:defaultValue="default"
             android:summary="%s" />
+
+        <ListPreference
+            android:key="app_profile_brightness"
+            android:title="@string/app_profile_brightness_title"
+            android:entries="@array/brightness_listentries"
+            android:entryValues="@array/brightness_listvalues"
+            android:defaultValue="default"
+            android:summary="%s" />
+
 </PreferenceScreen>

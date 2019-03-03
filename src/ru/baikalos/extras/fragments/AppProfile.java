@@ -53,6 +53,7 @@ public class AppProfile extends BaseSettingsFragment
     private static final String APP_PROFILE_RESTRICTED = "app_profile_restricted";
     private static final String APP_PROFILE_PERF = "app_profile_performance";
     private static final String APP_PROFILE_THERM = "app_profile_thermal";
+    private static final String APP_PROFILE_BRIGHTNESS = "app_profile_brightness";
 
     private String mPackageName;
     private Context mContext;
@@ -60,6 +61,7 @@ public class AppProfile extends BaseSettingsFragment
     private SwitchPreference mAppRestricted;
     private ListPreference mAppPerfProfile;
     private ListPreference mAppThermProfile;
+    private ListPreference mAppBrightnessProfile;
 
     IBaikalServiceController mBaikalService;
 
@@ -167,6 +169,27 @@ public class AppProfile extends BaseSettingsFragment
                 });
             }
         }
+
+            mAppBrightnessProfile = (ListPreference) findPreference(APP_PROFILE_BRIGHTNESS);
+            if( mAppBrightnessProfile != null ) {
+                //mAppRestricted.setChecked(SystemProperties.getBoolean(SYSTEM_PROPERTY_ENABLE_ANC, false));
+                int brightness = mBaikalService.getAppBrightness(mPackageName);
+                Log.e(TAG, "getAppBrightness: mPackageName=" + mPackageName + ",brightness=" + brightness);
+                mAppBrightnessProfile.setValue(Integer.toString(brightness));
+                mAppBrightnessProfile.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                  public boolean onPreferenceChange(Preference preference, Object newValue) {
+                    try {
+                        int val = Integer.parseInt(newValue.toString());
+                        mBaikalService.setAppBrightness(mPackageName, val );
+                        Log.e(TAG, "setAppBrightness: mPackageName=" + mPackageName + ",brightness=" + val);
+                    } catch(RemoteException re) {
+                        Log.e(TAG, "onCreate: setAppBrightness Fatal! exception", re );
+                    }
+                    return true;
+                  }
+                });
+            }
+
         
         } catch(RemoteException re) {
             Log.e(TAG, "onCreate: Fatal! exception", re );

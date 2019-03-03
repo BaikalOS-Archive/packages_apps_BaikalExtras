@@ -42,6 +42,9 @@
     <string name="baikal_lid_sensor_reverse_title">Reverse Smart Cover</string>
     <string name="baikal_lid_sensor_reverse_summary">Reverse Smart Cover Action</string>
 
+    <string name="baikal_lid_ignore_wake_title">Ignore Wake</string>
+    <string name="baikal_lid_ignore_wake_summary">Ignore accidential wake events while Smart Cover is closed</string>
+
     <string name="use_google_sans_title">Google Sans default</string>
     <string name="use_google_sans_summary">Use Google Sans as the default system font. Reboot required!</string>
 

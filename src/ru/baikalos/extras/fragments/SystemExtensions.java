@@ -76,8 +76,10 @@ public class SystemExtensions extends BaseSettingsFragment
         if( !mLidSensor ) {
             Preference mLidSensorPref = findPreference("baikal_lid_sensor_enabled");
             Preference mLidReversePref = findPreference("baikal_lid_sensor_reverse");
+            Preference mLidIgnorePref = findPreference("baikal_lid_ignore_wake");
             mLidSensorPref.setVisible(false);
             mLidReversePref.setVisible(false);
+            mLidIgnorePref.setVisible(false);
         }
 
         Preference systemAppRemover = findPreference(PREF_SYSTEM_APP_REMOVER);

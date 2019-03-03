@@ -8,6 +8,7 @@
     <string name="app_profile_restricted_summary">Restrict this app in background</string>
     <string name="app_profile_performance_title">Performance profile</string>
     <string name="app_profile_thermal_title">Thermal profile</string>
+    <string name="app_profile_brightness_title">Screen Brightness</string>
 
     <string name="performance_default">Default</string>
     <string name="performance_balance">Balanced</string>
@@ -29,4 +30,18 @@
     <string name="thermal_cool">Cool</string>
     <string name="thermal_incall">In Call</string>
     <string name="thermal_vr">VR</string>
+
+    <string name="brightness_default">Default</string>
+    <string name="brightness_reduced">Reduced Auto</string>
+    <string name="brightness_full">Full</string>
+    <string name="brightness_10">10\%</string>
+    <string name="brightness_20">20\%</string>
+    <string name="brightness_30">30\%</string>
+    <string name="brightness_40">40\%</string>
+    <string name="brightness_50">50\%</string>
+    <string name="brightness_60">60\%</string>
+    <string name="brightness_70">70\%</string>
+    <string name="brightness_80">80\%</string>
+    <string name="brightness_90">90\%</string>
+
 </resources>
