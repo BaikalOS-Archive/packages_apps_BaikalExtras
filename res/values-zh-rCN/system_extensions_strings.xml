@@ -37,6 +37,8 @@
     <string name="baikal_lid_sensor_enabled_summary">启用智能保护套</string>
     <string name="baikal_lid_sensor_reverse_title">保留智能保护套</string>
     <string name="baikal_lid_sensor_reverse_summary">保留智能保护套动作</string>
+    <string name="baikal_lid_ignore_wake_title">忽略唤醒</string>
+    <string name="baikal_lid_ignore_wake_summary">在智能保护套关闭时，忽略意外唤醒事件</string>
     <string name="use_google_sans_title">默认谷歌字体</string>
     <string name="use_google_sans_summary">使用谷歌默认的字体。需要重启</string>
 </resources>
