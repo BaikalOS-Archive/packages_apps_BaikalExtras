@@ -35,6 +35,7 @@ import android.view.View;
 import android.util.Log;
 
 import android.os.IBaikalServiceController;
+import android.os.BaikalServiceManager;
 import android.os.ServiceManager;
 import android.os.RemoteException;
 
@@ -54,6 +55,7 @@ public class AppProfile extends BaseSettingsFragment
     private static final String APP_PROFILE_PERF = "app_profile_performance";
     private static final String APP_PROFILE_THERM = "app_profile_thermal";
     private static final String APP_PROFILE_BRIGHTNESS = "app_profile_brightness";
+    private static final String APP_PROFILE_CAMERA_HAL1 = "app_profile_camera_hal1";
 
     private String mPackageName;
     private Context mContext;
@@ -62,6 +64,8 @@ public class AppProfile extends BaseSettingsFragment
     private ListPreference mAppPerfProfile;
     private ListPreference mAppThermProfile;
     private ListPreference mAppBrightnessProfile;
+
+    private SwitchPreference mAppCameraHal1;
 
     IBaikalServiceController mBaikalService;
 
@@ -120,6 +124,22 @@ public class AppProfile extends BaseSettingsFragment
         }
 
 
+        mAppCameraHal1 = (SwitchPreference) findPreference(APP_PROFILE_CAMERA_HAL1);
+        if( mAppCameraHal1 != null ) { 
+            mAppCameraHal1.setChecked(mBaikalService.getAppOption(mPackageName,BaikalServiceManager.OP_CAMERA_HAL1) == 1);
+            mAppCameraHal1.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+              public boolean onPreferenceChange(Preference preference, Object newValue) {
+                try {
+                    mBaikalService.setAppOption(mPackageName, BaikalServiceManager.OP_CAMERA_HAL1, ((Boolean)newValue) ? 1 : 0 );
+                    Log.e(TAG, "setAppOption: mPackageName=" + mPackageName + ",option=OP_CAMERA_HAL1, value=" + (Boolean)newValue);
+                } catch(RemoteException re) {
+                    Log.e(TAG, "onCreate: setAppOption Fatal! exception", re );
+                }
+                return true;
+              }
+            });
+        }
+
 
         mAppPerfProfile = (ListPreference) findPreference(APP_PROFILE_PERF);
         if( mAppPerfProfile != null ) { 
@@ -131,8 +151,6 @@ public class AppProfile extends BaseSettingsFragment
                 mAppPerfProfile.setValue(profile);
                 mAppPerfProfile.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
                   public boolean onPreferenceChange(Preference preference, Object newValue) {
-                    //int val = Integer.parseInt(newValue.toString());
-                    //DiracAudioEnhancerService.du.setHeadsetType(mContext, val);
                     try {
                         mBaikalService.setAppPerfProfile(mPackageName, newValue.toString() );
                         Log.e(TAG, "mAppPerfProfile: mPackageName=" + mPackageName + ",setProfile=" + newValue.toString());
@@ -150,14 +168,11 @@ public class AppProfile extends BaseSettingsFragment
             if(!thermProf) {
                 mAppThermProfile.setVisible(false);
             } else {
-                //mAppRestricted.setChecked(SystemProperties.getBoolean(SYSTEM_PROPERTY_ENABLE_ANC, false));
                 String profile = mBaikalService.getAppThermProfile(mPackageName);
                 Log.e(TAG, "getAppThermProfile: mPackageName=" + mPackageName + ",getProfile=" + profile);
                 mAppThermProfile.setValue(profile);
                 mAppThermProfile.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
                   public boolean onPreferenceChange(Preference preference, Object newValue) {
-                    //int val = Integer.parseInt(newValue.toString());
-                    //DiracAudioEnhancerService.du.setHeadsetType(mContext, val);
                     try {
                         mBaikalService.setAppThermProfile(mPackageName, newValue.toString() );
                         Log.e(TAG, "mAppThermProfile: mPackageName=" + mPackageName + ",setProfile=" + newValue.toString());
@@ -172,7 +187,6 @@ public class AppProfile extends BaseSettingsFragment
 
             mAppBrightnessProfile = (ListPreference) findPreference(APP_PROFILE_BRIGHTNESS);
             if( mAppBrightnessProfile != null ) {
-                //mAppRestricted.setChecked(SystemProperties.getBoolean(SYSTEM_PROPERTY_ENABLE_ANC, false));
                 int brightness = mBaikalService.getAppBrightness(mPackageName);
                 Log.e(TAG, "getAppBrightness: mPackageName=" + mPackageName + ",brightness=" + brightness);
                 mAppBrightnessProfile.setValue(Integer.toString(brightness));

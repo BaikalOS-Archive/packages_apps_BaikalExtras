@@ -46,6 +46,7 @@
     <string-array name="brightness_listentries">
     	<item>@string/brightness_default</item>
     	<item>@string/brightness_reduced</item>
+    	<item>@string/brightness_quarter</item>
     	<item>@string/brightness_full</item>
     	<item>@string/brightness_10</item>
     	<item>@string/brightness_20</item>
@@ -60,6 +61,7 @@
      <string-array name="brightness_listvalues">
     	<item>0</item>
     	<item>10</item>
+    	<item>12</item>
     	<item>11</item>
     	<item>1</item>
     	<item>2</item>

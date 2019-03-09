@@ -48,4 +48,10 @@
             android:defaultValue="default"
             android:summary="%s" />
 
+        <SwitchPreference
+            android:key="app_profile_camera_hal1"
+            android:title="@string/app_profile_camera_hal1_title"
+            android:summary="@string/app_profile_camera_hal1_summary"
+            android:defaultValue="false" />
+
 </PreferenceScreen>

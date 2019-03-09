@@ -10,6 +10,9 @@
     <string name="app_profile_thermal_title">Thermal profile</string>
     <string name="app_profile_brightness_title">Screen Brightness</string>
 
+    <string name="app_profile_camera_hal1_title">Camera API 1</string>
+    <string name="app_profile_camera_hal1_summary">Force using camera API V1 for this app</string>
+
     <string name="performance_default">Default</string>
     <string name="performance_balance">Balanced</string>
     <string name="performance_battery">Battery</string>
@@ -33,6 +36,7 @@
 
     <string name="brightness_default">Default</string>
     <string name="brightness_reduced">Reduced Auto</string>
+    <string name="brightness_quarter">Quarter Auto</string>
     <string name="brightness_full">Full</string>
     <string name="brightness_10">10\%</string>
     <string name="brightness_20">20\%</string>
