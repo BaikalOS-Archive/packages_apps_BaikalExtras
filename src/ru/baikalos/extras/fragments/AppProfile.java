@@ -133,20 +133,20 @@ public class AppProfile extends BaseSettingsFragment
         if( !supportCameraHAL1 ) {
             mAppCameraHal1.setVisible(false);
         } else {
-        if( mAppCameraHal1 != null ) { 
-            mAppCameraHal1.setChecked(mBaikalService.getAppOption(mPackageName,BaikalServiceManager.OP_CAMERA_HAL1) == 1);
-            mAppCameraHal1.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
-              public boolean onPreferenceChange(Preference preference, Object newValue) {
-                try {
-                    mBaikalService.setAppOption(mPackageName, BaikalServiceManager.OP_CAMERA_HAL1, ((Boolean)newValue) ? 1 : 0 );
-                    Log.e(TAG, "setAppOption: mPackageName=" + mPackageName + ",option=OP_CAMERA_HAL1, value=" + (Boolean)newValue);
-                } catch(RemoteException re) {
-                    Log.e(TAG, "onCreate: setAppOption Fatal! exception", re );
-                }
-                return true;
-              }
-            });
-        }
+            if( mAppCameraHal1 != null ) { 
+                mAppCameraHal1.setChecked(mBaikalService.getAppOption(mPackageName,BaikalServiceManager.OP_CAMERA_HAL1) == 1);
+                mAppCameraHal1.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                  public boolean onPreferenceChange(Preference preference, Object newValue) {
+                    try {
+                        mBaikalService.setAppOption(mPackageName, BaikalServiceManager.OP_CAMERA_HAL1, ((Boolean)newValue) ? 1 : 0 );
+                        Log.e(TAG, "setAppOption: mPackageName=" + mPackageName + ",option=OP_CAMERA_HAL1, value=" + (Boolean)newValue);
+                    } catch(RemoteException re) {
+                        Log.e(TAG, "onCreate: setAppOption Fatal! exception", re );
+                    }
+                    return true;
+                  }
+                });
+            }
         }
 
 
