@@ -4,7 +4,11 @@
     <!-- Button Settings -->
     <string name="button_settings_title">Botones</string>
     <!-- Button brightness -->
+    <string name="hardware_brightness_keys_title">Retroiluminación</string>
+    <string name="hardware_brightness_keys_title_summary">Activar la retroiluminación de los botones de navegación</string>
+    <string name="button_backlight_on_touch_only_title">Toque de botones</string>
     <!-- ANBI -->
+    <string name="anbi_title">Toque accidental</string>
     <!-- Buttons backlight timeout -->
     <string name="backlight_timeout_on">Activado siempre</string>
     <string name="backlight_timeout_3s">3 seg</string>
@@ -14,6 +18,11 @@
     <string name="backlight_timeout_20s">20 seg</string>
     <string name="backlight_timeout_30s">30 seg</string>
     <!-- Buttons: Categories -->
+    <string name="home_key_title">Botón de inicio</string>
+    <string name="back_key_title">Botón de retroceso</string>
+    <string name="menu_key_title">Botón de menú</string>
+    <string name="assist_key_title">Botón de asistente</string>
+    <string name="app_switch_key_title">Botón de recientes</string>
     <string name="camera_key_title">Botón de la cámara</string>
     <!-- Buttons: Actions -->
     <string name="short_press_title">Pulsación corta</string>
@@ -28,4 +37,10 @@
     <string name="action_launch_camera">Abrir cámara</string>
     <string name="action_last_app">Iniciar última aplicación</string>
     <string name="action_splitscreen">Pantalla dividida</string>
+    <string name="volume_key_title">Botones de volumen</string>
+    <string name="volume_answer_call_title">Responder la llamada</string>
+    <string name="volume_reject_call_title">Rechazar llamada</string>
+    <string name="volume_end_call_title">Finalizar llamada</string>
+    <string name="volume_end_call_summary">Finalizar llamada activa</string>
+    <string name="volume_button_music_control_title">Control multimedia</string>
 </resources>

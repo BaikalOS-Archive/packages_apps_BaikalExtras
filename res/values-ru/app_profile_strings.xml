@@ -7,6 +7,8 @@
     <string name="app_profile_performance_title">Профиль производительности</string>
     <string name="app_profile_thermal_title">Профиль температурного режима</string>
     <string name="app_profile_brightness_title">Яркость экрана</string>
+    <string name="app_profile_camera_hal1_title">Camera API 1</string>
+    <string name="app_profile_camera_hal1_summary">Использовать API V1 для камеры в этом приложении</string>
     <string name="performance_default">По умолчанию</string>
     <string name="performance_balance">Сбалансированный</string>
     <string name="performance_battery">Батарея</string>
@@ -28,6 +30,7 @@
     <string name="thermal_vr">VR</string>
     <string name="brightness_default">По умолчанию</string>
     <string name="brightness_reduced">Уменьшенная Авто</string>
+    <string name="brightness_quarter">25\% от Авто</string>
     <string name="brightness_full">Полная</string>
     <string name="brightness_10">10\%</string>
     <string name="brightness_20">20\%</string>

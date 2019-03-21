@@ -7,6 +7,8 @@
     <string name="app_profile_performance_title">性能配置文件</string>
     <string name="app_profile_thermal_title">Thermal 配置</string>
     <string name="app_profile_brightness_title">屏幕亮度</string>
+    <string name="app_profile_camera_hal1_title">相机 API 1</string>
+    <string name="app_profile_camera_hal1_summary">强制使用相机 API V1于 此应用</string>
     <string name="performance_default">默认</string>
     <string name="performance_balance">平衡</string>
     <string name="performance_battery">电池</string>
@@ -28,6 +30,7 @@
     <string name="thermal_vr">VR</string>
     <string name="brightness_default">默认</string>
     <string name="brightness_reduced">自动减少</string>
+    <string name="brightness_quarter">季度自动</string>
     <string name="brightness_full">Full</string>
     <string name="brightness_10">10%</string>
     <string name="brightness_20">20%</string>

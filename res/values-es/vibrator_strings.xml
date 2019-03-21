@@ -4,4 +4,7 @@
     <string name="vibrator_title">Vibrar</string>
     <!-- Incall vibrate options -->
     <string name="incall_vibration_category">Vibración en llamada</string>
+    <string name="incall_vibrate_connect_title">Vibrar al Conectar</string>
+    <string name="incall_vibrate_connect_summary">Vibrar al Conectar</string>
+    <string name="incall_vibrate_call_wait_title">Vibrar con Llamada en Espera</string>
 </resources>
