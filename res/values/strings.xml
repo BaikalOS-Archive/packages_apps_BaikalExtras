@@ -281,6 +281,13 @@
 
     <!-- Log it -->
 
+
+    <string name="troubleshooting_settings_title">Troubleshooting</string>
+    <string name="troubleshooting_reset_settings_title">Reset App Profiles</string>
+    <string name="troubleshooting_reset_settings_summary">Reset all Applications Profiles to their defaults</string>
+    <string name="troubleshooting_reset_restrictions_summary">Reset all Restrictions to Not Restricted</string>
+    <string name="troubleshooting_reset_restrictions_title">Reset  Restrictions</string>
+    <string name="troubleshooting_log_title">System Logs</string>
     <string name="log_it_title">Log that shit!</string>
     <string name="log_it_summary">Logcat, kmesg, dmesg</string>
 

@@ -12,6 +12,9 @@
     <string name="powersave_restrict_screen_on_enabled_title">Restrict Screen On</string>
     <string name="powersave_restrict_screen_on_enabled_summary">Apply app restrictions while Screen is On</string>
 
+    <string name="baikal_extreme_saver_enabled_enabled_title">Extreme Battery Saver</string>
+    <string name="baikal_extreme_saver_enabled_enabled_summary">Use extreme mode for Battery Saver</string>
+
     <!-- Batery whitelist -->
     <string name="prefs_battery_saver_title">Whitelist</string>
     <string name="prefs_battery_saver_summary">Device Whitelist</string>
