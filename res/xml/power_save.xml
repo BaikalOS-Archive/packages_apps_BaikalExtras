@@ -90,6 +90,20 @@
         android:defaultValue="false"
         android:disableDependentsState="true" />
 
+    <ru.baikalos.gear.preference.GlobalSettingSwitchPreference
+        android:key="powersave_block_gms1_enabled"
+        android:title="@string/powersave_hide_idle_title"
+        android:summary="@string/powersave_hide_idle_summary"
+        android:defaultValue="false"
+        android:disableDependentsState="true" />
+
+    <ru.baikalos.gear.preference.GlobalSettingSwitchPreference
+        android:key="powersave_block_gms2_enabled"
+        android:title="@string/powersave_unrestricted_network_title"
+        android:summary="@string/powersave_unrestricted_network_summary"
+        android:defaultValue="false"
+        android:disableDependentsState="true" />
+
     <Preference android:title="@string/prefs_battery_saver_title" 
 		    android:summary="@string/prefs_battery_saver_summary">
 	    <intent android:action="android.settings.IGNORE_BATTERY_OPTIMIZATION_SETTINGS"/>

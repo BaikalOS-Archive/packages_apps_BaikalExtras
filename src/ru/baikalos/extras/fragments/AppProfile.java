@@ -56,6 +56,8 @@ public class AppProfile extends BaseSettingsFragment
     private static final String APP_PROFILE_THERM = "app_profile_thermal";
     private static final String APP_PROFILE_BRIGHTNESS = "app_profile_brightness";
     private static final String APP_PROFILE_CAMERA_HAL1 = "app_profile_camera_hal1";
+    private static final String APP_PROFILE_PINNED = "app_profile_pinned";
+    private static final String APP_PROFILE_DISABLE_TWL = "app_profile_disable_twl";
 
     private String mPackageName;
     private Context mContext;
@@ -129,24 +131,14 @@ public class AppProfile extends BaseSettingsFragment
         }
 
 
+        initBaikalAppOp(APP_PROFILE_PINNED,BaikalServiceManager.OP_PINNED);
+        initBaikalAppOp(APP_PROFILE_DISABLE_TWL,BaikalServiceManager.OP_DISABLE_TWL);
+
         mAppCameraHal1 = (SwitchPreference) findPreference(APP_PROFILE_CAMERA_HAL1);
         if( !supportCameraHAL1 ) {
             mAppCameraHal1.setVisible(false);
         } else {
-            if( mAppCameraHal1 != null ) { 
-                mAppCameraHal1.setChecked(mBaikalService.getAppOption(mPackageName,BaikalServiceManager.OP_CAMERA_HAL1) == 1);
-                mAppCameraHal1.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
-                  public boolean onPreferenceChange(Preference preference, Object newValue) {
-                    try {
-                        mBaikalService.setAppOption(mPackageName, BaikalServiceManager.OP_CAMERA_HAL1, ((Boolean)newValue) ? 1 : 0 );
-                        Log.e(TAG, "setAppOption: mPackageName=" + mPackageName + ",option=OP_CAMERA_HAL1, value=" + (Boolean)newValue);
-                    } catch(RemoteException re) {
-                        Log.e(TAG, "onCreate: setAppOption Fatal! exception", re );
-                    }
-                    return true;
-                  }
-                });
-            }
+            initBaikalAppOp(APP_PROFILE_CAMERA_HAL1, BaikalServiceManager.OP_CAMERA_HAL1);
         }
 
 
@@ -220,6 +212,27 @@ public class AppProfile extends BaseSettingsFragment
 
     }
 
+
+    private void initBaikalAppOp(String XML_KEY, int baikalOption) {
+        try {
+            SwitchPreference pref = (SwitchPreference) findPreference(XML_KEY);
+            if( pref != null ) { 
+                pref.setChecked(mBaikalService.getAppOption(mPackageName,baikalOption) == 1);
+                pref.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                public boolean onPreferenceChange(Preference preference, Object newValue) {
+                    try {
+                        mBaikalService.setAppOption(mPackageName, baikalOption, ((Boolean)newValue) ? 1 : 0 );
+                        Log.e(TAG, "setAppOption: mPackageName=" + mPackageName + ",option="+ baikalOption + ", value=" + (Boolean)newValue);
+                    } catch(RemoteException re) {
+                        Log.e(TAG, "onCreate: setAppOption Fatal! exception", re );
+                    }
+                    return true;
+                }
+                });
+            }
+        } catch(RemoteException re) {
+        }
+    }
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {

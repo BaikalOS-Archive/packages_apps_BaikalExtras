@@ -25,4 +25,9 @@
 
     <string name="default_profiles_title">Default profiles</string>
 
+    <string name="powersave_hide_idle_title">Hide Idle from GMS</string>
+    <string name="powersave_hide_idle_summary">Hide Idle state from Google Play Services. Could fix notification problems. Increases battery drain! </string>
+    <string name="powersave_unrestricted_network_title">Unrestricted Network</string>
+    <string name="powersave_unrestricted_network_summary">Do not restrict network access in Idle state. Could fix notification problems. Increases battery drain!</string>
+    
 </resources>
