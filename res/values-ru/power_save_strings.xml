@@ -12,6 +12,8 @@
     <string name="powersave_throttle_alarms_summary">Уменьшить количество пробуждений.</string>
     <string name="powersave_restrict_screen_on_enabled_title">Ограничения при включенном экране</string>
     <string name="powersave_restrict_screen_on_enabled_summary">Применять ограничения приложений при включенном экране</string>
+    <string name="baikal_extreme_saver_enabled_enabled_title">Экстремальное энергосбережение</string>
+    <string name="baikal_extreme_saver_enabled_enabled_summary">Использовать экстремальные настройки в режиме сохранения энергии (Battery Saver)</string>
     <!-- Batery whitelist -->
     <string name="prefs_battery_saver_title">Белый список</string>
     <string name="prefs_battery_saver_summary">Белый список</string>
@@ -19,4 +21,8 @@
     <string name="prefs_app_options_title">Настройки приложений</string>
     <string name="prefs_app_options_summary">Настройки приложений</string>
     <string name="default_profiles_title">Профили по умолчанию</string>
+    <string name="powersave_hide_idle_title">Скрывать СОН от GMS</string>
+    <string name="powersave_hide_idle_summary">Скрывать режим глубокого сна от Google Play Services. Помогает от некоторых проблем с уведомлениями в сне. Увеличивает потребление батареи!</string>
+    <string name="powersave_unrestricted_network_title">Но ограничивать сеть</string>
+    <string name="powersave_unrestricted_network_summary">Не ограничивать доступ приложений к сети в режиме сна. Помогает решить проблемы с уведомлениями и повышенным потреблением энергии некоторыми приложениями.</string>
 </resources>
