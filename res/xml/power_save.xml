@@ -49,6 +49,12 @@
         android:title="@string/screen_state_toggles_title"
         android:fragment="ru.baikalos.extras.fragments.SuspendActions" />
 
+    <SwitchPreference
+        android:key="powersave_core_ctl_enable"
+        android:title="@string/powersave_core_ctl_enable_title"
+        android:summary="@string/powersave_core_ctl_enable_summary"
+        android:defaultValue="false" />
+
     <ru.baikalos.gear.preference.SystemSettingSwitchPreference
         android:key="sensor_block"
         android:title="@string/sensor_block_title"

@@ -29,5 +29,8 @@
     <string name="powersave_hide_idle_summary">Hide Idle state from Google Play Services. Could fix notification problems. Increases battery drain! </string>
     <string name="powersave_unrestricted_network_title">Unrestricted Network</string>
     <string name="powersave_unrestricted_network_summary">Do not restrict network access in Idle state. Could fix notification problems. Increases battery drain!</string>
-    
+
+    <string name="powersave_core_ctl_enable_title">Enable Core Control</string>
+    <string name="powersave_core_ctl_enable_summary">Enable selective CPU core offlining for better power saving</string>
+   
 </resources>
