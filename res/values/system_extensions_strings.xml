@@ -48,4 +48,7 @@
     <string name="use_google_sans_title">Google Sans default</string>
     <string name="use_google_sans_summary">Use Google Sans as the default system font. Reboot required!</string>
 
+    <string name="proximity_on_wake_title">Check on Wake</string>
+    <string name="proximity_on_wake_summary">Do not wake up if proximity sensor is covered</string>
+
 </resources>

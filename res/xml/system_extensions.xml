@@ -32,6 +32,14 @@
         android:key="proximity"
         android:title="@string/proximity_category">
 
+   	<ru.baikalos.gear.preference.SystemSettingSwitchPreference
+            android:key="proximity_on_wake"
+            android:title="@string/proximity_on_wake_title"
+            android:summary="@string/proximity_on_wake_summary"
+            android:defaultValue="false"
+            android:disableDependentsState="true" />
+
+
         <ru.baikalos.gear.preference.GlobalSettingSwitchPreference
             android:key="baikal_wakeup_proximity_enabled"
             android:title="@string/baikal_wakeup_proximity_enabled_title"

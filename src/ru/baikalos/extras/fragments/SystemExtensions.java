@@ -62,11 +62,20 @@ public class SystemExtensions extends BaseSettingsFragment
 
         final Resources res = getActivity().getResources();
 
+        boolean proximityWakeSupported = res.getBoolean(
+                 com.android.internal.R.bool.config_proximityCheckOnWake);
+
+
         boolean mHallSensor = res.getBoolean(
                 com.android.internal.R.bool.config_deviceHasHallSensor);
 
         boolean mLidSensor = res.getBoolean(
                 com.android.internal.R.bool.config_deviceHasLidSensor);
+
+	if( !proximityWakeSupported ) {
+            Preference mProximitySensorPref = findPreference("proximity_on_wake");
+            mProximitySensorPref.setVisible(false);
+	}
 
         if( !mHallSensor ) {
             Preference mHallSensorPref = findPreference("baikal_hall_sensor_enabled");
