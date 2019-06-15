@@ -56,34 +56,40 @@
 
     </PreferenceCategory>
 
-    <ru.baikalos.gear.preference.GlobalSettingSwitchPreference
-        android:key="baikal_hall_sensor_enabled"
-        android:title="@string/baikal_hall_sensor_enabled_title"
-        android:summary="@string/baikal_hall_sensor_enabled_summary"
-        android:defaultValue="false"
-        android:disableDependentsState="true" />
+    <PreferenceCategory
+        android:key="smart_cover"
+        android:title="@string/smart_cover_category">
 
-    <ru.baikalos.gear.preference.GlobalSettingSwitchPreference
-        android:key="baikal_lid_sensor_enabled"
-        android:title="@string/baikal_lid_sensor_enabled_title"
-        android:summary="@string/baikal_lid_sensor_enabled_summary"
-        android:defaultValue="false"
-        android:disableDependentsState="true" />
+        <ru.baikalos.gear.preference.GlobalSettingSwitchPreference
+            android:key="baikal_hall_sensor_enabled"
+            android:title="@string/baikal_hall_sensor_enabled_title"
+            android:summary="@string/baikal_hall_sensor_enabled_summary"
+            android:defaultValue="false"
+            android:disableDependentsState="true" />
 
-    <ru.baikalos.gear.preference.GlobalSettingSwitchPreference
-        android:key="baikal_lid_sensor_reverse"
-        android:title="@string/baikal_lid_sensor_reverse_title"
-        android:summary="@string/baikal_lid_sensor_reverse_summary"
-        android:defaultValue="false"
-        android:disableDependentsState="true" />
+        <ru.baikalos.gear.preference.GlobalSettingSwitchPreference
+            android:key="baikal_lid_sensor_enabled"
+            android:title="@string/baikal_lid_sensor_enabled_title"
+            android:summary="@string/baikal_lid_sensor_enabled_summary"
+            android:defaultValue="false"
+            android:disableDependentsState="true" />
 
-    <ru.baikalos.gear.preference.GlobalSettingSwitchPreference
-        android:key="baikal_lid_ignore_wake"
-        android:title="@string/baikal_lid_ignore_wake_title"
-        android:summary="@string/baikal_lid_ignore_wake_summary"
-        android:defaultValue="false"
-        android:disableDependentsState="true" />
+        <ru.baikalos.gear.preference.GlobalSettingSwitchPreference
+            android:key="baikal_lid_sensor_reverse"
+            android:title="@string/baikal_lid_sensor_reverse_title"
+            android:summary="@string/baikal_lid_sensor_reverse_summary"
+            android:defaultValue="false"
+            android:disableDependentsState="true" />
 
+        <ru.baikalos.gear.preference.GlobalSettingSwitchPreference
+            android:key="baikal_lid_ignore_wake"
+            android:title="@string/baikal_lid_ignore_wake_title"
+            android:summary="@string/baikal_lid_ignore_wake_summary"
+            android:defaultValue="false"
+            android:disableDependentsState="true" />
+
+
+    </PreferenceCategory>
 
     <Preference
         android:key="system_app_remover"
@@ -91,5 +97,6 @@
         android:summary="@string/system_app_remover_summary">
         <intent android:action="ru.baikalos.extras.ViewSystemAppRemover" />
     </Preference>
+
 
 </PreferenceScreen>
