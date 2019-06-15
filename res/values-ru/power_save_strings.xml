@@ -25,4 +25,6 @@
     <string name="powersave_hide_idle_summary">Скрывать режим глубокого сна от Google Play Services. Помогает от некоторых проблем с уведомлениями в сне. Увеличивает потребление батареи!</string>
     <string name="powersave_unrestricted_network_title">Но ограничивать сеть</string>
     <string name="powersave_unrestricted_network_summary">Не ограничивать доступ приложений к сети в режиме сна. Помогает решить проблемы с уведомлениями и повышенным потреблением энергии некоторыми приложениями.</string>
+    <string name="powersave_core_ctl_enable_title">Управление ядрами ЦПУ</string>
+    <string name="powersave_core_ctl_enable_summary">Включить автоматическое управление отключением ядер ЦПУ для оптимизации энергопотребления</string>
 </resources>

@@ -201,6 +201,8 @@
     <!-- Smartlock Auto Unlock -->
     <string name="smartlock_auto_unlock_title">Разблокировать по Smartlock</string>
     <string name="smartlock_auto_unlock_summary">Автоматически разблокировать устройство если активен Smartlock</string>
+    <string name="smartlock_lid_unlock_title">Авторазблокировка умным чехлом</string>
+    <string name="smartlock_lid_unlock_summary">Разблокировать телефон при открытии умного чехла если телефон разблокирован через smartlock</string>
     <string name="other_ui_title">Другие настройки интерфейса</string>
     <string name="other_ui_summary">Разное</string>
     <!-- Volume dialog timeout -->
@@ -243,6 +245,9 @@
     <string name="selinux_permissive_toast_title">Режим SELinux - только предупреждение!</string>
     <string name="selinux_enforcing_toast_title">SELinux выставлен в принудительный режим!</string>
     <!-- Log it -->
+    <string name="troubleshooting_settings_title">Устранение неисправностей</string>
+    <string name="troubleshooting_reset_settings_title">Сбросить профили приложений</string>
+    <string name="troubleshooting_reset_settings_summary">Сбросить профили приложений к значениям по умолчанию</string>
     <string name="log_it_title">Снять лог!</string>
     <string name="log_it_summary">Logcat, kmesg, dmesg</string>
     <string name="logcat_title">Logcat</string>

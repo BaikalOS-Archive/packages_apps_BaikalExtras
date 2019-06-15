@@ -41,4 +41,7 @@
     <string name="baikal_lid_ignore_wake_summary">Игнорировать случайные пробуждения когда Умный Чехол закрыт</string>
     <string name="use_google_sans_title">Google Sans по умолчанию</string>
     <string name="use_google_sans_summary">Использовать Google Sans как шрифт по умолчанию. Требуется перезагрузка!</string>
+    <string name="proximity_on_wake_title">Проверять перед пробуждением</string>
+    <string name="proximity_on_wake_summary">Блокировать пробуждение если датчик приближения закрыт</string>
+    <string name="smart_cover_category">Умный чехол</string>
 </resources>
