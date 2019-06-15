@@ -19,8 +19,11 @@ package ru.baikalos.extras.fragments;
 
 import android.content.ContentResolver;
 import android.content.Context;
+import android.content.res.Resources;
+
 import android.hardware.fingerprint.FingerprintManager;
 import android.os.Bundle;
+
 import android.support.v7.preference.Preference;
 import android.support.v7.preference.PreferenceScreen;
 import android.support.v14.preference.SwitchPreference;
@@ -45,6 +48,16 @@ public class Lockscreen extends BaseSettingsFragment {
         super.onCreate(savedInstanceState);
         PreferenceScreen prefSet = getPreferenceScreen();
         ContentResolver resolver = getActivity().getContentResolver();
+
+        final Resources res = getActivity().getResources();
+
+        boolean mLidSensor = res.getBoolean(
+                com.android.internal.R.bool.config_deviceHasLidSensor);
+
+	if( mLidSensor ) {
+            Preference mLidSensorPref = findPreference("smartlock_lid_unlock");
+            mLidSensorPref.setVisible(false);
+	}
 
         try {
             mFingerprintManager = (FingerprintManager) getActivity().getSystemService(Context.FINGERPRINT_SERVICE);
