@@ -54,7 +54,7 @@ public class Lockscreen extends BaseSettingsFragment {
         boolean mLidSensor = res.getBoolean(
                 com.android.internal.R.bool.config_deviceHasLidSensor);
 
-	if( mLidSensor ) {
+	if( !mLidSensor ) {
             Preference mLidSensorPref = findPreference("smartlock_lid_unlock");
             mLidSensorPref.setVisible(false);
 	}
