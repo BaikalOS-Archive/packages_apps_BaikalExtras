@@ -20,9 +20,9 @@ package ru.baikalos.extras;
 import android.content.ContentResolver;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
-import android.support.v7.preference.Preference;
-import android.support.v7.preference.PreferenceScreen;
-import android.support.v14.preference.PreferenceFragment;
+import androidx.preference.Preference;
+import androidx.preference.PreferenceScreen;
+import androidx.preference.PreferenceFragment;
 
 import ru.baikalos.extras.utils.Util;
 

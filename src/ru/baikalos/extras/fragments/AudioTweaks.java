@@ -24,12 +24,12 @@ import android.os.Bundle;
 import android.os.UserHandle;
 import android.os.UserManager;
 import android.os.SystemProperties;
-import android.support.v7.preference.ListPreference;
-import android.support.v7.preference.Preference;
-import android.support.v7.preference.PreferenceCategory;
-import android.support.v7.preference.PreferenceScreen;
-import android.support.v7.preference.Preference.OnPreferenceChangeListener;
-import android.support.v14.preference.SwitchPreference;
+import androidx.preference.ListPreference;
+import androidx.preference.Preference;
+import androidx.preference.PreferenceCategory;
+import androidx.preference.PreferenceScreen;
+import androidx.preference.Preference.OnPreferenceChangeListener;
+import androidx.preference.SwitchPreference;
 import android.provider.Settings;
 import android.view.View;
 import android.util.Log;
@@ -38,51 +38,28 @@ import android.content.res.Resources;
 
 import ru.baikalos.extras.BaseSettingsFragment;
 import ru.baikalos.extras.R;
-import ru.baikalos.gear.preference.SeekBarPreferenceCham;
+import com.aicp.gear.preference.SeekBarPreferenceCham;
 
 public class AudioTweaks extends BaseSettingsFragment
             implements Preference.OnPreferenceChangeListener {
 
     private static final String TAG = "AudioTweaks";
 
-    private static final String AUDIO_TWEAKS_ANC = "audio_tweaks_anc";
-    private static final String AUDIO_TWEAKS_FLUENCE = "audio_tweaks_fluence";
-    private static final String AUDIO_TWEAKS_WHATSAPP = "audio_tweaks_whatsapp";
-    private static final String AUDIO_TWEAKS_HP_DETECT = "audio_tweaks_hp_detect";
     private static final String AUDIO_TWEAKS_SUSPEND_PLAY = "audio_tweaks_suspend_play";
     private static final String AUDIO_TWEAKS_A2DP_SBC_HD = "audio_tweaks_a2dp_sbc_hd";
     private static final String AUDIO_TWEAKS_A2DP_SBC_HDX = "audio_tweaks_a2dp_sbc_hdx";
-    private static final String AUDIO_TWEAKS_A2DP_SBC_HDE = "audio_tweaks_a2dp_sbc_hde";
-    private static final String AUDIO_TWEAKS_A2DP_SBC_PREFER = "audio_tweaks_a2dp_sbc_prefer";
-
-    private static final String SYSTEM_PROPERTY_HP_DETECT = "persist.fx.hp_detect";
-    private static final String SYSTEM_PROPERTY_WHATSAPP_HACK = "persist.vendor.audio.whatsapp";
-    private static final String SYSTEM_PROPERTY_ENABLE_ANC = "persist.ps.anc.enable";
-    private static final String SYSTEM_PROPERTY_ENABLE_FLUENCE = "persist.ps.audio.use_fluence";
 
     private static final String SYSTEM_PROPERTY_SUSPEND_PLAY = "persist.audio.offload.suspend";
-
     private static final String SYSTEM_PROPERTY_A2DP_SBC_HD = "persist.bluetooth.sbc_hd";
     private static final String SYSTEM_PROPERTY_A2DP_SBC_HDX = "persist.bluetooth.sbc_hdx";
-    private static final String SYSTEM_PROPERTY_A2DP_SBC_HDE = "persist.bluetooth.sbc_hde";
-    private static final String SYSTEM_PROPERTY_A2DP_SBC_PREFER = "persist.bluetooth.sbc_prefer";
 
 
 
     private Context mContext;
 
-    private SwitchPreference mEnableANC;
-    private SwitchPreference mEnableFluence;
-    private SwitchPreference mEnableWhatsAppHack;
-    private SwitchPreference mEnableHeadphonesDetection;
     private SwitchPreference mEnableSuspendPlay;
     private SwitchPreference mEnableA2DPHD;
     private SwitchPreference mEnableA2DPHDX;
-    private SwitchPreference mEnableA2DPHDE;
-    private SwitchPreference mEnableA2DPSbcPrefer;
-
-    private boolean mBaikal8996AudioHal;
-    private boolean mBaikalLeecoDevice;
 
     @Override
     protected int getPreferenceResource() {
@@ -96,50 +73,6 @@ public class AudioTweaks extends BaseSettingsFragment
         mContext = (Context) getActivity();
         final Resources res = getActivity().getResources();
 
-
-        mBaikal8996AudioHal = res.getBoolean(
-                com.android.internal.R.bool.config_useBaikal8996AudioHal);
-
-        mBaikalLeecoDevice = res.getBoolean(
-                com.android.internal.R.bool.config_useBaikalLeecoDevice);
-
-        mEnableANC = (SwitchPreference) findPreference(AUDIO_TWEAKS_ANC);
-        if( mEnableANC != null ) { 
-                if( !mBaikal8996AudioHal ) {
-                    mEnableANC.setVisible(false);
-                } else {
-                    mEnableANC.setChecked(SystemProperties.getBoolean(SYSTEM_PROPERTY_ENABLE_ANC, false));
-                    mEnableANC.setOnPreferenceChangeListener(this);
-                }
-        }
-
-        mEnableFluence = (SwitchPreference) findPreference(AUDIO_TWEAKS_FLUENCE);
-        if( mEnableFluence != null ) { 
-                if( !mBaikal8996AudioHal ) {
-                    mEnableFluence.setVisible(false);
-                } else {
-                    mEnableFluence.setChecked(SystemProperties.getBoolean(SYSTEM_PROPERTY_ENABLE_FLUENCE, false));
-                    mEnableFluence.setOnPreferenceChangeListener(this);
-                }
-        }
-        mEnableWhatsAppHack = (SwitchPreference) findPreference(AUDIO_TWEAKS_WHATSAPP);
-        if( mEnableWhatsAppHack != null ) { 
-                if( !mBaikal8996AudioHal ) {
-                    mEnableWhatsAppHack.setVisible(false);
-                } else {
-                    mEnableWhatsAppHack.setChecked(SystemProperties.getBoolean(SYSTEM_PROPERTY_WHATSAPP_HACK, false));
-                    mEnableWhatsAppHack.setOnPreferenceChangeListener(this);
-                }
-        }
-        mEnableHeadphonesDetection = (SwitchPreference) findPreference(AUDIO_TWEAKS_HP_DETECT);
-        if( mEnableHeadphonesDetection != null ) { 
-                if( !mBaikalLeecoDevice ) {
-                    mEnableHeadphonesDetection.setVisible(false);
-                } else {
-                    mEnableHeadphonesDetection.setChecked(SystemProperties.getBoolean(SYSTEM_PROPERTY_HP_DETECT, false));
-                    mEnableHeadphonesDetection.setOnPreferenceChangeListener(this);
-                }
-        }
 
         mEnableSuspendPlay = (SwitchPreference) findPreference(AUDIO_TWEAKS_SUSPEND_PLAY);
         if( mEnableSuspendPlay != null ) { 
@@ -167,30 +100,6 @@ public class AudioTweaks extends BaseSettingsFragment
                 mEnableA2DPHDX.setOnPreferenceChangeListener(this);
         }
 
-        mEnableA2DPHDE = (SwitchPreference) findPreference(AUDIO_TWEAKS_A2DP_SBC_HDE);
-        if( mEnableA2DPHDE != null ) { 
-                if( !enableSbcHd ) {
-                    setSystemPropertyBoolean(SYSTEM_PROPERTY_A2DP_SBC_HDE, false);
-                    mEnableA2DPHDE.setEnabled(false);
-                    mEnableA2DPHDE.setChecked(false);
-                } else {
-                    mEnableA2DPHDE.setChecked(SystemProperties.getBoolean(SYSTEM_PROPERTY_A2DP_SBC_HDE, false));
-                }
-                mEnableA2DPHDE.setOnPreferenceChangeListener(this);
-        }
-
-        mEnableA2DPSbcPrefer = (SwitchPreference) findPreference(AUDIO_TWEAKS_A2DP_SBC_PREFER);
-        if( mEnableA2DPSbcPrefer != null ) { 
-            mEnableA2DPSbcPrefer.setVisible(false);
-            if( !enableSbcHd ) {
-                setSystemPropertyBoolean(SYSTEM_PROPERTY_A2DP_SBC_PREFER, false);
-                mEnableA2DPSbcPrefer.setEnabled(false);
-                mEnableA2DPSbcPrefer.setChecked(false);
-            } else {
-                mEnableA2DPSbcPrefer.setChecked(SystemProperties.getBoolean(SYSTEM_PROPERTY_A2DP_SBC_PREFER, false));
-            }
-            mEnableA2DPSbcPrefer.setOnPreferenceChangeListener(this);
-        }
     }
 
     public boolean onPreferenceChange(Preference preference, Object newValue) {
@@ -198,19 +107,7 @@ public class AudioTweaks extends BaseSettingsFragment
 
         
 
-        if (preference == mEnableANC) {
-            ((SwitchPreference)preference).setChecked((Boolean) newValue);
-            setSystemPropertyBoolean(SYSTEM_PROPERTY_ENABLE_ANC, (Boolean) newValue);
-        } else if (preference == mEnableFluence) {
-            ((SwitchPreference)preference).setChecked((Boolean) newValue);
-            setSystemPropertyBoolean(SYSTEM_PROPERTY_ENABLE_FLUENCE, (Boolean) newValue);
-        } else if (preference == mEnableWhatsAppHack) {
-            ((SwitchPreference)preference).setChecked((Boolean) newValue);
-            setSystemPropertyBoolean(SYSTEM_PROPERTY_WHATSAPP_HACK, (Boolean) newValue);
-        } else if (preference == mEnableHeadphonesDetection) {
-            ((SwitchPreference)preference).setChecked((Boolean) newValue);
-            setSystemPropertyBoolean(SYSTEM_PROPERTY_HP_DETECT, (Boolean) newValue);
-        } else if (preference == mEnableSuspendPlay) {
+        if (preference == mEnableSuspendPlay) {
             ((SwitchPreference)preference).setChecked((Boolean) newValue);
             setSystemPropertyBoolean(SYSTEM_PROPERTY_SUSPEND_PLAY, (Boolean) newValue);
         } else if (preference == mEnableA2DPHD) {
@@ -222,29 +119,14 @@ public class AudioTweaks extends BaseSettingsFragment
             if( !(Boolean)newValue ) {
                 mEnableA2DPHDX.setChecked(false);
                 mEnableA2DPHDX.setEnabled(false);
-                mEnableA2DPHDE.setChecked(false);
-                mEnableA2DPHDE.setEnabled(false);
-                mEnableA2DPSbcPrefer.setChecked(false);
-                mEnableA2DPSbcPrefer.setEnabled(false);
                 setSystemPropertyBoolean(SYSTEM_PROPERTY_A2DP_SBC_HDX, false);
-                setSystemPropertyBoolean(SYSTEM_PROPERTY_A2DP_SBC_HDE, false);
-                setSystemPropertyBoolean(SYSTEM_PROPERTY_A2DP_SBC_PREFER, false);
             } else {
                 mEnableA2DPHDX.setEnabled(true);
-                mEnableA2DPHDE.setEnabled(true);
-                mEnableA2DPSbcPrefer.setEnabled(true);
             }
         } else if (preference == mEnableA2DPHDX) {
             Log.e(TAG, "onPreferenceChange: mEnableA2DPHDX key=" + SYSTEM_PROPERTY_A2DP_SBC_HDX + ", value=" + (Boolean)newValue);
             ((SwitchPreference)preference).setChecked((Boolean) newValue);
             setSystemPropertyBoolean(SYSTEM_PROPERTY_A2DP_SBC_HDX, (Boolean) newValue);
-        } else if (preference == mEnableA2DPHDE) {
-            Log.e(TAG, "onPreferenceChange: mEnableA2DPHDE key=" + SYSTEM_PROPERTY_A2DP_SBC_HDE + ", value=" + (Boolean)newValue);
-            ((SwitchPreference)preference).setChecked((Boolean) newValue);
-            setSystemPropertyBoolean(SYSTEM_PROPERTY_A2DP_SBC_HDE, (Boolean) newValue);
-        } else if (preference == mEnableA2DPSbcPrefer) {
-            ((SwitchPreference)preference).setChecked((Boolean) newValue);
-            setSystemPropertyBoolean(SYSTEM_PROPERTY_A2DP_SBC_PREFER, (Boolean) newValue);
         }
         return true;
     }

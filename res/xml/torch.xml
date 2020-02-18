@@ -21,19 +21,19 @@
     xmlns:baikalosextras="http://schemas.android.com/apk/res-auto"
     android:title="@string/torch_title">
 
-    <ru.baikalos.gear.preference.SystemSettingSwitchPreference
+    <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="torch_long_press_power_gesture"
         android:title="@string/torch_long_press_power_gesture_title"
         android:summary="@string/torch_long_press_power_gesture_summary"
         android:defaultValue="false" />
 
-    <ru.baikalos.gear.preference.SystemSettingSwitchPreference
+    <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="torch_on_incoming_call"
         android:title="@string/torch_on_incoming_call_title"
         android:summary="@string/torch_on_incoming_call_summary"
         android:defaultValue="false" />
 
-    <!-- ru.baikalos.gear.preference.SystemSettingSwitchPreference
+    <!-- com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="torch_on_notification"
         android:title="@string/torch_on_notification_title"
         android:summary="@string/torch_on_notification_summary"

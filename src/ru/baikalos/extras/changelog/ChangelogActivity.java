@@ -1,9 +1,11 @@
 package ru.baikalos.extras.changelog;
 
 import android.os.Bundle;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+
 
 //import com.crashlytics.android.Crashlytics;
 
@@ -19,7 +21,7 @@ import java.util.Objects;
 
 import ru.baikalos.extras.R;
 
-public class ChangelogActivity extends BaseChangelogActivity {
+public class ChangelogActivity extends AppCompatActivity {
 
     private static final String CHANGELOG_PATH = "/system/etc/Changelog.txt";
 

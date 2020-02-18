@@ -22,7 +22,7 @@ import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-import android.support.v7.preference.Preference;
+import androidx.preference.Preference;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -34,12 +34,10 @@ import ru.baikalos.extras.BaseSettingsFragment;
 import ru.baikalos.extras.Constants;
 import ru.baikalos.extras.PreferenceMultiClickHandler;
 import ru.baikalos.extras.R;
-import ru.baikalos.gear.preference.LongClickablePreference;
+import com.aicp.gear.preference.LongClickablePreference;
 import ru.baikalos.extras.utils.Util;
 
 import android.os.SystemProperties;
-
-import com.plattysoft.leonids.ParticleSystem;
 
 import java.util.Random;
 
@@ -105,28 +103,6 @@ public class Dashboard extends BaseSettingsFragment {
         mBaikalOSLogo.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
             @Override
             public boolean onPreferenceClick(Preference preference) {
-                /*int firstRandom = mRandom.nextInt(91 - 0);
-                int secondRandom = mRandom.nextInt(181 - 90) + 90;
-                int thirdRandom = mRandom.nextInt(181 - 0);
-
-                // Let's color the star randomly
-                Drawable star = getResources().getDrawable(R.drawable.star_white_border, null);
-                int randomColor;
-                randomColor = Color.rgb(
-                        Color.red(mRandom.nextInt(0xFFFFFF)),
-                        Color.green(mRandom.nextInt(0xFFFFFF)),
-                        Color.blue(mRandom.nextInt(0xFFFFFF)));
-                star.setTint(randomColor);
-
-                ParticleSystem ps = new ParticleSystem(getActivity(), 100, star, 3000);
-                ps.setScaleRange(0.7f, 1.3f);
-                ps.setSpeedRange(0.1f, 0.25f);
-                ps.setAcceleration(0.0001f, thirdRandom);
-                ps.setRotationSpeedRange(firstRandom, secondRandom);
-                ps.setFadeOut(200, new AccelerateInterpolator());
-                ps.oneShot(getView(), 100);
-
-                mBaikalOSLogo.setLongClickBurst(2000/((++mLogoClickCount)%5+1));*/
                 return true;
             }
         });
@@ -134,20 +110,6 @@ public class Dashboard extends BaseSettingsFragment {
                 new Preference.OnPreferenceClickListener() {
                         @Override
                         public boolean onPreferenceClick(Preference preference) {
-                            /*int firstRandom = mRandom.nextInt(91 - 0);
-                            int secondRandom = mRandom.nextInt(181 - 90) + 90;
-                            int thirdRandom = mRandom.nextInt(181 - 0);
-
-                            Drawable star =
-                                    getResources().getDrawable(R.drawable.star_alternative, null);
-
-                            ParticleSystem ps = new ParticleSystem(getActivity(), 100, star, 3000);
-                            ps.setScaleRange(0.7f, 1.3f);
-                            ps.setSpeedRange(0.1f, 0.25f);
-                            ps.setAcceleration(0.0001f, thirdRandom);
-                            ps.setRotationSpeedRange(firstRandom, secondRandom);
-                            ps.setFadeOut(1000, new AccelerateInterpolator());
-                            ps.oneShot(getView(), 100);*/
                             return true;
                         }
                 });

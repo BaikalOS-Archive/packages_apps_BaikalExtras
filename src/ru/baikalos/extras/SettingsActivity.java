@@ -27,7 +27,6 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 
-import ru.baikalos.extras.dslv.ActionListViewSettings;
 import ru.baikalos.extras.fragments.Dashboard;
 import ru.baikalos.extras.preference.MasterSwitchPreference;
 import ru.baikalos.extras.preference.MasterSwitchPreferenceDependencyHandler;
@@ -37,6 +36,7 @@ import ru.baikalos.extras.preference.SystemSettingMasterSwitchPreference;
 import ru.baikalos.extras.preference.SystemSettingSwitchBarController;
 import ru.baikalos.extras.utils.Util;
 import ru.baikalos.extras.widget.SwitchBar;
+
 
 public class SettingsActivity extends BaseActivity {
 
@@ -144,9 +144,9 @@ public class SettingsActivity extends BaseActivity {
                 if (preferenceScreen != null) {
                     actionBar.setTitle(preferenceScreen.getTitle());
                 }
-            } else if (mFragment instanceof android.support.v14.preference.PreferenceFragment) {
-                android.support.v7.preference.PreferenceScreen preferenceScreen =
-                        ((android.support.v14.preference.PreferenceFragment) mFragment)
+            } else if (mFragment instanceof androidx.preference.PreferenceFragment) {
+                androidx.preference.PreferenceScreen preferenceScreen =
+                        ((androidx.preference.PreferenceFragment) mFragment)
                                 .getPreferenceScreen();
                 if (preferenceScreen != null) {
                     actionBar.setTitle(preferenceScreen.getTitle());
@@ -163,14 +163,14 @@ public class SettingsActivity extends BaseActivity {
     }
 
     private void handleMasterSwitchPreferences(
-                android.support.v7.preference.PreferenceGroup preferenceGroup) {
+                androidx.preference.PreferenceGroup preferenceGroup) {
         for (int i = 0; i < preferenceGroup.getPreferenceCount(); i++) {
-            android.support.v7.preference.Preference pref = preferenceGroup.getPreference(i);
+            androidx.preference.Preference pref = preferenceGroup.getPreference(i);
             if (pref instanceof MasterSwitchPreference) {
                 mMasterSwitchDependencyHandler.addPreferences((MasterSwitchPreference) pref);
-            } else if (pref instanceof android.support.v7.preference.PreferenceGroup) {
+            } else if (pref instanceof androidx.preference.PreferenceGroup) {
                 // Recurse
-                handleMasterSwitchPreferences((android.support.v7.preference.PreferenceGroup) pref);
+                handleMasterSwitchPreferences((androidx.preference.PreferenceGroup) pref);
             }
         }
     }
@@ -187,8 +187,8 @@ public class SettingsActivity extends BaseActivity {
         return false;
     }
 
-    public boolean onPreferenceClick(android.support.v7.preference.Preference preference) {
-        if (preference instanceof android.support.v7.preference.PreferenceScreen
+    public boolean onPreferenceClick(androidx.preference.Preference preference) {
+        if (preference instanceof androidx.preference.PreferenceScreen
                 || preference instanceof MasterSwitchPreference) {
             String fragmentClass = preference.getFragment();
             if (fragmentClass != null) {
@@ -196,11 +196,7 @@ public class SettingsActivity extends BaseActivity {
                 intent.putExtra(EXTRA_FRAGMENT_CLASS, fragmentClass);
 
                 if (preference instanceof MasterSwitchPreference) {
-                    if (fragmentClass.equals(ActionListViewSettings.class.getName())) {
-                        // New activity requires setting to be enabled
-                        ((MasterSwitchPreference) preference)
-                                .setCheckedPersisting(true);
-                    } else {
+                    {
                         if (preference instanceof SystemSettingMasterSwitchPreference) {
                             intent.putExtra(EXTRA_SWITCH_SYSTEM_SETTINGS_KEY, preference.getKey());
                             intent.putExtra(EXTRA_SWITCH_SYSTEM_SETTINGS_DEFAULT_VALUE,

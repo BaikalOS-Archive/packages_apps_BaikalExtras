@@ -25,37 +25,32 @@ LOCAL_ASSET_DIR := $(LOCAL_PATH)/assets
 
 
 LOCAL_STATIC_ANDROID_LIBRARIES := \
-    android-support-v4 \
-    android-support-v7-appcompat \
-    android-support-v7-cardview \
-    android-support-v7-preference \
-    android-support-v7-recyclerview \
-    android-support-v14-preference \
-    android-support-design \
-    BaikalOSGear-preference \
-    BaikalOSGear-util
-
-LOCAL_STATIC_JAVA_LIBRARIES := \
-    particles
+    androidx.core_core \
+    androidx.preference_preference \
+    androidx.appcompat_appcompat \
+    androidx.cardview_cardview \
+    androidx.recyclerview_recyclerview \
+    com.google.android.material_material \
+    AicpGear-preference \
+    AicpGear-util
 
 # Apache http for stats
 LOCAL_JAVA_LIBRARIES := org.apache.http.legacy
 
 LOCAL_USE_AAPT2 := true
 
-LOCAL_PACKAGE_NAME := BaikalOSExtras
+LOCAL_PACKAGE_NAME := BaikalExtras
 
 LOCAL_PRIVATE_PLATFORM_APIS := true
 LOCAL_CERTIFICATE := platform
 LOCAL_PRIVILEGED_MODULE := true
+LOCAL_PRODUCT_MODULE := true
 
 include frameworks/base/packages/SettingsLib/common.mk
 
 include $(BUILD_PACKAGE)
 
 include $(CLEAR_VARS)
-
-LOCAL_PREBUILT_STATIC_JAVA_LIBRARIES := particles:lib/LeonidsLib-1.3.2.jar
 
 include $(BUILD_MULTI_PREBUILT)
 

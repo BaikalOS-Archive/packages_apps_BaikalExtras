@@ -27,10 +27,9 @@ import android.os.Bundle;
 import android.os.SystemClock;
 import android.os.SystemProperties;
 import android.net.Uri;
-import android.support.v7.preference.Preference;
+import androidx.preference.Preference;
 
 import ru.baikalos.extras.BaseSettingsFragment;
-import ru.baikalos.extras.HiddenAnimActivity;
 import ru.baikalos.extras.PreferenceMultiClickHandler;
 import ru.baikalos.extras.R;
 import ru.baikalos.extras.utils.Util;
@@ -68,7 +67,6 @@ public class About extends BaseSettingsFragment {
         baikalosLogo.setOnPreferenceClickListener(new PreferenceMultiClickHandler(new Runnable() {
             @Override
             public void run() {
-                startActivity(new Intent(getActivity(), HiddenAnimActivity.class));
             }
         }, 5));
     }

@@ -19,7 +19,7 @@ package ru.baikalos.extras.preference;
 import android.content.Context;
 import android.util.AttributeSet;
 
-import ru.baikalos.gear.preference.SecureSettingsStore;
+import com.aicp.gear.preference.SecureSettingsStore;
 
 public class SecureSettingMasterSwitchPreference extends MasterSwitchPreference {
 

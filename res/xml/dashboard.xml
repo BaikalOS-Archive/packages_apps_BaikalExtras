@@ -20,15 +20,15 @@
     android:title="@string/app_name">
 
     <!-- BaikalOS logo -->
-    <ru.baikalos.gear.preference.LongClickablePreference
+    <com.aicp.gear.preference.LongClickablePreference
         android:key="baikalos_logo"
         android:layout="@layout/dashboard_logo" />
 
-    <PreferenceCategory
-        android:title="@string/device_part_category">
+    <!-- PreferenceCategory
+        android:title="@string/device_part_category" -->
 
         <!-- Device Part -->
-        <Preference
+        <!-- Preference
             android:key="device_part"
             android:persistent="false"
             android:title="@string/device_part_title"
@@ -36,9 +36,9 @@
             <intent android:action="android.intent.action.MAIN"
                  android:targetPackage="org.omnirom.device"
                  android:targetClass="org.omnirom.device.DeviceSettings"/>
-        </Preference>
+        </Preference -->
 
-    </PreferenceCategory>
+    <!-- /PreferenceCategory -->
 
     <PreferenceCategory
         android:key="app_setings_cat"
@@ -56,83 +56,9 @@
 
     </PreferenceCategory>
 
-    <PreferenceCategory
-        android:title="@string/navigation_category">
-         <PreferenceScreen
-            android:title="@string/button_settings_title"
-            android:summary="@string/button_settings_title_summary"
-            android:icon="@drawable/ic_settings_buttons"
-            android:fragment="ru.baikalos.extras.fragments.ButtonsSettings" />
-
-        <PreferenceScreen
-            android:title="@string/navigation_title"
-            android:summary="@string/navigation_summary"
-            android:icon="@drawable/ic_settings_navbar"
-            android:fragment="ru.baikalos.extras.fragments.Navigation" />
-
-        <PreferenceScreen
-            android:title="@string/recents_title"
-            android:summary="@string/recents_summary"
-            android:icon="@drawable/ic_settings_recents"
-            android:fragment="ru.baikalos.extras.fragments.Recents" />
-
-    </PreferenceCategory>
-
-    <PreferenceCategory
-        android:title="@string/user_interface_category">
-
-        <PreferenceScreen
-            android:title="@string/status_bar_title"
-            android:summary="@string/status_bar_summary"
-            android:icon="@drawable/ic_settings_status_bar"
-            android:fragment="ru.baikalos.extras.fragments.StatusBar" />
-
-        <PreferenceScreen
-            android:title="@string/notifications_title"
-            android:summary="@string/notifications_summary"
-            android:icon="@drawable/ic_settings_notifications"
-            android:fragment="ru.baikalos.extras.fragments.Notifications" />
-
-        <!-- PreferenceScreen
-            android:title="@string/quick_settings_title"
-            android:summary="@string/quick_settings_summary"
-            android:icon="@drawable/ic_settings_quick_settings"
-            android:fragment="ru.baikalos.extras.fragments.QuickSettings" /-->
-
-        <PreferenceScreen
-            android:title="@string/lockscreen_title"
-            android:summary="@string/lockscreen_summary"
-            android:icon="@drawable/ic_settings_lockscreen"
-            android:fragment="ru.baikalos.extras.fragments.Lockscreen" />
-
-        <!-- PreferenceScreen
-            android:title="@string/panel_porn_title"
-            android:summary="@string/panel_porn_summary"
-            android:icon="@drawable/ic_settings_panel_porn"
-            android:fragment="ru.baikalos.extras.fragments.PanelPorn" / -->
-
-        <PreferenceScreen
-            android:title="@string/theming_title"
-            android:summary="@string/theming_summary"
-            android:icon="@drawable/ic_settings_theming"
-            android:fragment="ru.baikalos.extras.fragments.Theming" />
-
-        <!-- PreferenceScreen
-            android:title="@string/other_ui_title"
-            android:summary="@string/other_ui_summary"
-            android:icon="@drawable/ic_settings_other_ui"
-            android:fragment="ru.baikalos.extras.fragments.OtherUi" / -->
-
-    </PreferenceCategory>
 
     <PreferenceCategory
         android:title="@string/system_category">
-
-        <PreferenceScreen
-            android:title="@string/system_animations_title"
-            android:summary="@string/system_animations_summary"
-            android:icon="@drawable/ic_settings_system_animations"
-            android:fragment="ru.baikalos.extras.fragments.SystemAnimations" />
 
         <!--PreferenceScreen
             android:title="@string/system_behaviour_title"
@@ -164,12 +90,6 @@
             android:summary="@string/torch_summary"
             android:icon="@drawable/ic_settings_torch"
             android:fragment="ru.baikalos.extras.fragments.Torch" />
-
-        <PreferenceScreen
-            android:title="@string/vibrator_title"
-            android:summary="@string/vibrator_summary"
-            android:icon="@drawable/ic_settings_vibrator"
-            android:fragment="ru.baikalos.extras.fragments.Vibrator" />
 
     </PreferenceCategory>
 

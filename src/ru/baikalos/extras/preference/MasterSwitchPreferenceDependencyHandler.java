@@ -19,13 +19,13 @@ package ru.baikalos.extras.preference;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.support.v7.preference.PreferenceDataStore;
+import androidx.preference.PreferenceDataStore;
 import android.util.Log;
 
 import ru.baikalos.extras.R;
 
-import ru.baikalos.gear.preference.SystemSettingsStore;
-import ru.baikalos.gear.preference.SecureSettingsStore;
+import com.aicp.gear.preference.SystemSettingsStore;
+import com.aicp.gear.preference.SecureSettingsStore;
 
 import java.util.ArrayList;
 import java.util.HashMap;

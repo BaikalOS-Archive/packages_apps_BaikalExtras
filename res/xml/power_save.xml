@@ -55,55 +55,55 @@
         android:summary="@string/powersave_core_ctl_enable_summary"
         android:defaultValue="false" />
 
-    <ru.baikalos.gear.preference.SystemSettingSwitchPreference
+    <com.aicp.gear.preference.SystemSettingSwitchPreference
         android:key="sensor_block"
         android:title="@string/sensor_block_title"
         android:summary="@string/sensor_block_summary"
         android:defaultValue="false" />
 
-    <ru.baikalos.gear.preference.GlobalSettingSwitchPreference
+    <com.aicp.gear.preference.GlobalSettingSwitchPreference
         android:key="device_idle_aggressive_enabled"
         android:title="@string/device_idle_aggressive_title"
         android:summary="@string/device_idle_aggressive_summary"
         android:defaultValue="false"
         android:disableDependentsState="true" />
 
-    <ru.baikalos.gear.preference.GlobalSettingSwitchPreference
+    <com.aicp.gear.preference.GlobalSettingSwitchPreference
         android:key="powersave_wl_block_enabled"
         android:title="@string/powersave_wl_block_title"
         android:summary="@string/powersave_wl_block_summary"
         android:defaultValue="false"
         android:disableDependentsState="true" />
 
-    <ru.baikalos.gear.preference.GlobalSettingSwitchPreference
+    <com.aicp.gear.preference.GlobalSettingSwitchPreference
         android:key="powersave_throttle_alarms_enabled"
         android:title="@string/powersave_throttle_alarms_title"
         android:summary="@string/powersave_throttle_alarms_summary"
         android:defaultValue="false"
         android:disableDependentsState="true" />
 
-    <ru.baikalos.gear.preference.GlobalSettingSwitchPreference
+    <com.aicp.gear.preference.GlobalSettingSwitchPreference
         android:key="powersave_restrict_screen_on_enabled"
         android:title="@string/powersave_restrict_screen_on_enabled_title"
         android:summary="@string/powersave_restrict_screen_on_enabled_summary"
         android:defaultValue="false"
         android:disableDependentsState="true" />
 
-    <ru.baikalos.gear.preference.GlobalSettingSwitchPreference
+    <com.aicp.gear.preference.GlobalSettingSwitchPreference
         android:key="baikal_extreme_saver_enabled"
         android:title="@string/baikal_extreme_saver_enabled_enabled_title"
         android:summary="@string/baikal_extreme_saver_enabled_enabled_summary"
         android:defaultValue="false"
         android:disableDependentsState="true" />
 
-    <ru.baikalos.gear.preference.GlobalSettingSwitchPreference
+    <com.aicp.gear.preference.GlobalSettingSwitchPreference
         android:key="powersave_block_gms1_enabled"
         android:title="@string/powersave_hide_idle_title"
         android:summary="@string/powersave_hide_idle_summary"
         android:defaultValue="false"
         android:disableDependentsState="true" />
 
-    <ru.baikalos.gear.preference.GlobalSettingSwitchPreference
+    <com.aicp.gear.preference.GlobalSettingSwitchPreference
         android:key="powersave_block_gms2_enabled"
         android:title="@string/powersave_unrestricted_network_title"
         android:summary="@string/powersave_unrestricted_network_summary"

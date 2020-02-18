@@ -19,7 +19,7 @@ package ru.baikalos.extras.preference;
 import android.content.Context;
 import android.util.AttributeSet;
 
-import ru.baikalos.gear.preference.SystemSettingsStore;
+import com.aicp.gear.preference.SystemSettingsStore;
 
 public class SystemSettingMasterSwitchPreference extends MasterSwitchPreference {
 

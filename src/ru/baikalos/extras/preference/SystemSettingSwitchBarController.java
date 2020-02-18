@@ -21,7 +21,7 @@ import android.content.ContentResolver;
 import ru.baikalos.extras.BaseSettingsFragment;
 import ru.baikalos.extras.widget.SwitchBar;
 
-import ru.baikalos.gear.preference.SystemSettingsStore;
+import com.aicp.gear.preference.SystemSettingsStore;
 
 public class SystemSettingSwitchBarController extends PreferenceDataStoreSwitchBarController {
 
