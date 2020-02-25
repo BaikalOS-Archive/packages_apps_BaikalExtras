@@ -21,18 +21,6 @@
     android:title="@string/audio_tweaks_title">
 
     <SwitchPreference
-        android:key="audio_tweaks_anc"
-        android:title="@string/audio_tweaks_anc_title"
-        android:summary="@string/audio_tweaks_anc_summary"
-        android:persistent="false" />
-
-    <SwitchPreference
-        android:key="audio_tweaks_fluence"
-        android:title="@string/audio_tweaks_fluence_title"
-        android:summary="@string/audio_tweaks_fluence_summary"
-        android:defaultValue="false" />
-
-    <SwitchPreference
         android:key="audio_tweaks_a2dp_sbc_hd"
         android:title="@string/audio_tweaks_a2dp_sbc_hd_title"
         android:summary="@string/audio_tweaks_a2dp_sbc_hd_summary"
@@ -45,33 +33,9 @@
         android:defaultValue="false" />
 
     <SwitchPreference
-        android:key="audio_tweaks_a2dp_sbc_hde"
-        android:title="@string/audio_tweaks_a2dp_sbc_hde_title"
-        android:summary="@string/audio_tweaks_a2dp_sbc_hde_summary"
-        android:defaultValue="false" />
-
-    <SwitchPreference
-        android:key="audio_tweaks_a2dp_sbc_prefer"
-        android:title="@string/audio_tweaks_a2dp_sbc_prefer_title"
-        android:summary="@string/audio_tweaks_a2dp_sbc_prefer_summary"
-        android:defaultValue="false" />
-
-    <SwitchPreference
         android:key="audio_tweaks_suspend_play"
         android:title="@string/audio_tweaks_suspend_play_title"
         android:summary="@string/audio_tweaks_suspend_play_summary"
-        android:defaultValue="false" />
-
-    <SwitchPreference
-        android:key="audio_tweaks_whatsapp"
-        android:title="@string/audio_tweaks_whatsapp_title"
-        android:summary="@string/audio_tweaks_whatsapp_summary"
-        android:defaultValue="false" />
-
-    <SwitchPreference
-        android:key="audio_tweaks_hp_detect"
-        android:title="@string/audio_tweaks_hp_detect_title"
-        android:summary="@string/audio_tweaks_hp_detect_summary"
         android:defaultValue="false" />
 
 </PreferenceScreen>

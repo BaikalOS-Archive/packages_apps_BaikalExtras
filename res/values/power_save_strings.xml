@@ -5,23 +5,9 @@
     <string name="powersave_summary">Power Saving Tweaks</string>
     <string name="device_idle_aggressive_title">Aggressive Idle</string>
     <string name="device_idle_aggressive_summary">Send device into Idle Mode 1 min after screen off. Ignore movement.</string>
-    <string name="powersave_wl_block_title">Wakelock Blocker</string>
-    <string name="powersave_wl_block_summary">Block wakelocks from all regular apps except system and whitelist.</string>
-    <string name="powersave_throttle_alarms_title">Throttle Alarms</string>
-    <string name="powersave_throttle_alarms_summary">Throttle wakeup alarms for regular apps except system and whitelist.</string>
-    <string name="powersave_restrict_screen_on_enabled_title">Restrict Screen On</string>
-    <string name="powersave_restrict_screen_on_enabled_summary">Apply app restrictions while Screen is On</string>
 
-    <string name="baikal_extreme_saver_enabled_enabled_title">Extreme Battery Saver</string>
-    <string name="baikal_extreme_saver_enabled_enabled_summary">Use extreme mode for Battery Saver</string>
-
-    <!-- Batery whitelist -->
-    <string name="prefs_battery_saver_title">Whitelist</string>
-    <string name="prefs_battery_saver_summary">Device Whitelist</string>
-
-    <!-- App ops -->
-    <string name="prefs_app_options_title">App Options</string>
-    <string name="prefs_app_options_summary">App Options</string>
+    <string name="baikal_extreme_saver_enabled_enabled_title">Extreme Mode</string>
+    <string name="baikal_extreme_saver_enabled_enabled_summary">Treat device as Small Battery Device</string>
 
     <string name="default_profiles_title">Default profiles</string>
 
@@ -30,7 +16,8 @@
     <string name="powersave_unrestricted_network_title">Unrestricted Network</string>
     <string name="powersave_unrestricted_network_summary">Do not restrict network access in Idle state. Could fix notification problems. Increases battery drain!</string>
 
-    <string name="powersave_core_ctl_enable_title">Enable Core Control</string>
-    <string name="powersave_core_ctl_enable_summary">Enable selective CPU core offlining for better power saving</string>
-   
+    <!-- Batery whitelist -->
+    <string name="prefs_battery_saver_title">Whitelist</string>
+    <string name="prefs_battery_saver_summary">Device Whitelist</string>
+  
 </resources>

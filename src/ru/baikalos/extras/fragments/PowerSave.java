@@ -100,14 +100,14 @@ public class PowerSave extends BaseSettingsFragment {
                 if( !perfProf ) {
                     mDefaultPerfProfile.setVisible(false);
                 } else {
-                    //String profile = mBaikalService.getDefaultPerfProfile();
-                    //Log.e(TAG, "mDefaultPerfProfile: getProfile=" + profile);
-                    //mDefaultPerfProfile.setValue(profile);
+                    String profile = getSystemPropertyString("persist.baikal.perf.default","balance");
+                    Log.e(TAG, "mDefaultPerfProfile: getProfile=" + profile);
+                    mDefaultPerfProfile.setValue(profile);
                     mDefaultPerfProfile.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
                       public boolean onPreferenceChange(Preference preference, Object newValue) {
                         try {
                             Log.e(TAG, "mDefaultPerfProfile: setProfile=" + newValue.toString());
-                            //mBaikalService.setDefaultPerfProfile(newValue.toString());
+			    setSystemPropertyString("persist.baikal.perf.default",newValue.toString());
                         } catch(Exception re) {
                             Log.e(TAG, "onCreate: mDefaultPerfProfile Fatal! exception", re );
                         }
@@ -122,14 +122,14 @@ public class PowerSave extends BaseSettingsFragment {
                 if( !thermProf ) {
                     mDefaultThermProfile.setVisible(false);
                 } else {
-                    //String profile = mBaikalService.getDefaultThermProfile();
-                    //Log.e(TAG, "mDefaultThermProfile: getProfile=" + profile);
-                    //mDefaultThermProfile.setValue(profile);
+                    String profile = getSystemPropertyString("persist.baikal.therm.default","balance");
+                    Log.e(TAG, "mDefaultThermProfile: getProfile=" + profile);
+                    mDefaultThermProfile.setValue(profile);
                     mDefaultThermProfile.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
                       public boolean onPreferenceChange(Preference preference, Object newValue) {
                         try {
                             Log.e(TAG, "mDefaultThermProfile: setProfile=" + newValue.toString());
-                            //mBaikalService.setDefaultThermProfile(newValue.toString());
+			    setSystemPropertyString("persist.baikal.therm.default",newValue.toString());
                         } catch(Exception re) {
                             Log.e(TAG, "onCreate: mDefaultPerfProfile Fatal! exception", re );
                         }
@@ -171,6 +171,20 @@ public class PowerSave extends BaseSettingsFragment {
         String text = value?"1":"0";
         Log.e(TAG, "setSystemPropertyBoolean: key=" + key + ", value=" + value);
         SystemProperties.set(key, text);
+    }
+
+    private void setSystemPropertyString(String key, String value) {
+        Log.e(TAG, "setSystemPropertyBoolean: key=" + key + ", value=" + value);
+        SystemProperties.set(key, value);
+    }
+
+    private String getSystemPropertyString(String key, String def) {
+        return SystemProperties.get(key,def);
+    }
+
+    private boolean getSystemPropertyBoolean(String key) {
+        if( SystemProperties.get(key,"0").equals("1") || SystemProperties.get(key,"0").equals("true") ) return true;
+	return false;
     }
 
 }

@@ -28,19 +28,19 @@
         android:title="@string/device_part_category" -->
 
         <!-- Device Part -->
-        <!-- Preference
+        <Preference
             android:key="device_part"
             android:persistent="false"
             android:title="@string/device_part_title"
             android:icon="@drawable/ic_settings_device">
             <intent android:action="android.intent.action.MAIN"
-                 android:targetPackage="org.omnirom.device"
-                 android:targetClass="org.omnirom.device.DeviceSettings"/>
-        </Preference -->
+                 android:targetPackage="org.lineageos.settings.device"
+                 android:targetClass="org.lineageos.settings.device.DeviceSettings"/>
+        </Preference>
 
     <!-- /PreferenceCategory -->
 
-    <PreferenceCategory
+    <!-- PreferenceCategory
         android:key="app_setings_cat"
         android:title="@string/app_settings_category">
 
@@ -54,7 +54,7 @@
         </Preference>
 
 
-    </PreferenceCategory>
+    </PreferenceCategory -->
 
 
     <PreferenceCategory
@@ -66,11 +66,11 @@
             android:icon="@drawable/ic_settings_system_behaviour"
             android:fragment="ru.baikalos.extras.fragments.SystemBehaviour" / -->
 
-        <PreferenceScreen
+        <!-- PreferenceScreen
             android:title="@string/system_extensions_title"
             android:summary="@string/system_extensions_summary"
             android:icon="@drawable/ic_settings_system_extensions"
-            android:fragment="ru.baikalos.extras.fragments.SystemExtensions" />
+            android:fragment="ru.baikalos.extras.fragments.SystemExtensions" / -->
 
 
         <PreferenceScreen
@@ -85,11 +85,11 @@
             android:icon="@drawable/ic_settings_system_powersave"
             android:fragment="ru.baikalos.extras.fragments.PowerSave" />
 
-        <PreferenceScreen
+        <!-- PreferenceScreen
             android:title="@string/torch_title"
             android:summary="@string/torch_summary"
             android:icon="@drawable/ic_settings_torch"
-            android:fragment="ru.baikalos.extras.fragments.Torch" />
+            android:fragment="ru.baikalos.extras.fragments.Torch" / -->
 
     </PreferenceCategory>
 
@@ -115,11 +115,11 @@
             android:icon="@drawable/ic_settings_log_it"
             android:fragment="ru.baikalos.extras.fragments.LogIt" />
 
-        <PreferenceScreen
+        <!-- PreferenceScreen
             android:title="@string/ae_settings_title"
             android:summary="@string/ae_settings_summary"
             android:icon="@drawable/ic_settings_ae_customization"
-            android:fragment="ru.baikalos.extras.fragments.AeSettings" />
+            android:fragment="ru.baikalos.extras.fragments.AeSettings" / -->
 
     </PreferenceCategory>
 </PreferenceScreen>

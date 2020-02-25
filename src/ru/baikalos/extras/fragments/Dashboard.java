@@ -48,7 +48,7 @@ public class Dashboard extends BaseSettingsFragment {
     private static final String PREF_LOG_IT = "log_it";
 
     private static final String PREF_BAIKALOS_PARTS = "device_part";
-    private static final String PREF_BAIKALOS_PARTS_PACKAGE_NAME = "org.omnirom.device";
+    private static final String PREF_BAIKALOS_PARTS_PACKAGE_NAME = "org.lineageos.settings.device";
 
 
     private static final Intent INTENT_OTA = new Intent().setComponent(new ComponentName(
@@ -87,13 +87,13 @@ public class Dashboard extends BaseSettingsFragment {
         mBaikalOSLogo = (LongClickablePreference) findPreference(PREF_BAIKALOS_LOGO);
 
         mBaikalOSOTA = findPreference(PREF_BAIKALOS_OTA);
-        if (!Util.isPackageEnabled(Constants.BAIKALOS_OTA_PACKAGE, pm)) {
+        if (mBaikalOSOTA != null && !Util.isPackageEnabled(Constants.BAIKALOS_OTA_PACKAGE, pm)) {
             mBaikalOSOTA.getParent().removePreference(mBaikalOSOTA);
         }
 
         // DeviceParts
         mBaikalOSParts = findPreference(PREF_BAIKALOS_PARTS);
-        if (!Util.isPackageEnabled(PREF_BAIKALOS_PARTS_PACKAGE_NAME, pm)) {
+        if (mBaikalOSParts != null && !Util.isPackageEnabled(PREF_BAIKALOS_PARTS_PACKAGE_NAME, pm)) {
             mBaikalOSParts.getParent().removePreference(mBaikalOSParts);
         }
 
