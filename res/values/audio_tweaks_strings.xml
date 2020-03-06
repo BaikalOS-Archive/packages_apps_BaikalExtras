@@ -31,4 +31,10 @@
     <string name="audio_tweaks_a2dp_sbc_prefer_title">Prefer SBC</string>
     <string name="audio_tweaks_a2dp_sbc_prefer_summary">Prefer SBC over AAC or AptX</string>
 
+    <string name="audio_settings_title">Common</string>
+    <string name="audio_bluetooth_title">Bluetooth</string>
+
+    <string name="audio_tweaks_hq_policy_title">Use HQ engine by default</string>
+    <string name="audio_tweaks_hq_policy_summary">Use HQ settings for music playback by default. Reboot required!</string>
+
 </resources>

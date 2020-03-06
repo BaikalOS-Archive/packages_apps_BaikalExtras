@@ -46,9 +46,12 @@ public class AudioTweaks extends BaseSettingsFragment
     private static final String TAG = "AudioTweaks";
 
     private static final String AUDIO_TWEAKS_SUSPEND_PLAY = "audio_tweaks_suspend_play";
+    private static final String AUDIO_TWEAKS_AUDIO_HQ = "audio_tweaks_hq_policy";
+
     private static final String AUDIO_TWEAKS_A2DP_SBC_HD = "audio_tweaks_a2dp_sbc_hd";
     private static final String AUDIO_TWEAKS_A2DP_SBC_HDX = "audio_tweaks_a2dp_sbc_hdx";
 
+    private static final String SYSTEM_PROPERTY_AUDIO_HQ = "persist.baikal_audio_hq";
     private static final String SYSTEM_PROPERTY_SUSPEND_PLAY = "persist.audio.offload.suspend";
     private static final String SYSTEM_PROPERTY_A2DP_SBC_HD = "persist.bluetooth.sbc_hd";
     private static final String SYSTEM_PROPERTY_A2DP_SBC_HDX = "persist.bluetooth.sbc_hdx";
@@ -57,7 +60,9 @@ public class AudioTweaks extends BaseSettingsFragment
 
     private Context mContext;
 
+    private SwitchPreference mEnableAudioHq;
     private SwitchPreference mEnableSuspendPlay;
+
     private SwitchPreference mEnableA2DPHD;
     private SwitchPreference mEnableA2DPHDX;
 
@@ -73,6 +78,12 @@ public class AudioTweaks extends BaseSettingsFragment
         mContext = (Context) getActivity();
         final Resources res = getActivity().getResources();
 
+
+        mEnableAudioHq = (SwitchPreference) findPreference(AUDIO_TWEAKS_AUDIO_HQ);
+        if( mEnableAudioHq != null ) { 
+                mEnableAudioHq.setChecked(SystemProperties.getBoolean(SYSTEM_PROPERTY_AUDIO_HQ, false));
+                mEnableAudioHq.setOnPreferenceChangeListener(this);
+        }
 
         mEnableSuspendPlay = (SwitchPreference) findPreference(AUDIO_TWEAKS_SUSPEND_PLAY);
         if( mEnableSuspendPlay != null ) { 
@@ -107,7 +118,10 @@ public class AudioTweaks extends BaseSettingsFragment
 
         
 
-        if (preference == mEnableSuspendPlay) {
+        if (preference == mEnableAudioHq) {
+            ((SwitchPreference)preference).setChecked((Boolean) newValue);
+            setSystemPropertyBoolean(SYSTEM_PROPERTY_AUDIO_HQ, (Boolean) newValue);
+        } else if (preference == mEnableSuspendPlay) {
             ((SwitchPreference)preference).setChecked((Boolean) newValue);
             setSystemPropertyBoolean(SYSTEM_PROPERTY_SUSPEND_PLAY, (Boolean) newValue);
         } else if (preference == mEnableA2DPHD) {

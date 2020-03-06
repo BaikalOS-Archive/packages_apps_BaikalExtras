@@ -20,22 +20,46 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     android:title="@string/audio_tweaks_title">
 
-    <SwitchPreference
-        android:key="audio_tweaks_a2dp_sbc_hd"
-        android:title="@string/audio_tweaks_a2dp_sbc_hd_title"
-        android:summary="@string/audio_tweaks_a2dp_sbc_hd_summary"
-        android:defaultValue="false" />
 
-    <SwitchPreference
-        android:key="audio_tweaks_a2dp_sbc_hdx"
-        android:title="@string/audio_tweaks_a2dp_sbc_hdx_title"
-        android:summary="@string/audio_tweaks_a2dp_sbc_hdx_summary"
-        android:defaultValue="false" />
+    <PreferenceCategory
+        android:key="audio_settings"
+        android:title="@string/audio_settings_title">
 
-    <SwitchPreference
-        android:key="audio_tweaks_suspend_play"
-        android:title="@string/audio_tweaks_suspend_play_title"
-        android:summary="@string/audio_tweaks_suspend_play_summary"
-        android:defaultValue="false" />
+        <SwitchPreference
+            android:key="audio_tweaks_hq_policy"
+            android:title="@string/audio_tweaks_hq_policy_title"
+            android:summary="@string/audio_tweaks_hq_policy_summary"
+            android:defaultValue="false" />
+
+        <SwitchPreference
+            android:key="audio_tweaks_suspend_play"
+            android:title="@string/audio_tweaks_suspend_play_title"
+            android:summary="@string/audio_tweaks_suspend_play_summary"
+            android:defaultValue="false" />
+
+
+    </PreferenceCategory>
+
+
+    <PreferenceCategory
+        android:key="audio_bluetooth"
+        android:title="@string/audio_bluetooth_title">
+
+        <SwitchPreference
+            android:key="audio_tweaks_a2dp_sbc_hd"
+            android:title="@string/audio_tweaks_a2dp_sbc_hd_title"
+            android:summary="@string/audio_tweaks_a2dp_sbc_hd_summary"
+            android:defaultValue="false" />
+
+        <SwitchPreference
+            android:key="audio_tweaks_a2dp_sbc_hdx"
+            android:title="@string/audio_tweaks_a2dp_sbc_hdx_title"
+            android:summary="@string/audio_tweaks_a2dp_sbc_hdx_summary"
+            android:defaultValue="false" />
+
+    </PreferenceCategory>
+
+
+
 
 </PreferenceScreen>
