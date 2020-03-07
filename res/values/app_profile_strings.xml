@@ -54,4 +54,7 @@
     <string name="app_profile_disable_twl_title">Disable temp whitelisting</string>
     <string name="app_profile_disable_twl_summary">Disable temp whitelisting on incoming notifications</string>
 
+    <string name="app_profile_reader_title">Reader Mode</string>
+    <string name="app_profile_reader_summary">Allow CPU to sleep while this app is running</string>
+
 </resources>

@@ -29,7 +29,7 @@ import androidx.preference.PreferenceManager;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import ru.baikalos.extras.fragments.AppProfile;
+import ru.baikalos.extras.fragments.AppProfileFragment;
 import android.util.Log;
 
 
@@ -37,7 +37,7 @@ public class AppProfileActivity extends BaseActivity {
 
     private static final String TAG = "ApplicationProfile";
 
-    private AppProfile mAppProfileFragment;
+    private AppProfileFragment mAppProfileFragment;
     private String mPackageName, mAppName;
     private int mAppUid;
 
@@ -60,13 +60,13 @@ public class AppProfileActivity extends BaseActivity {
         Fragment fragment = getFragmentManager().findFragmentById(android.R.id.content);
         if (fragment == null) {
             Log.e(TAG, "AppProfileActivity: new fragment mPackageName=" + mPackageName + ", mAppName=" + mAppName + ", mAppUid=" + mAppUid);
-            mAppProfileFragment = new AppProfile(mPackageName);
+            mAppProfileFragment = new AppProfileFragment(mPackageName);
             getFragmentManager().beginTransaction()
                 .add(android.R.id.content, mAppProfileFragment)
                 .commit();
         } else {
         Log.e(TAG, "AppProfileActivity: reusing fragment mPackageName=" + mPackageName + ", mAppName=" + mAppName + ", mAppUid=" + mAppUid);
-            mAppProfileFragment = (AppProfile) fragment;
+            mAppProfileFragment = (AppProfileFragment) fragment;
         }
     }
 

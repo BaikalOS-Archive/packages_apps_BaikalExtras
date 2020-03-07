@@ -19,16 +19,11 @@
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     android:title="@string/app_profile_title">
-    	<!-- SwitchPreference
-    	    android:key="app_profile_restricted"
-    	    android:title="@string/app_profile_restricted_title"
-    	    android:summary="@string/app_profile_restricted_summary"
-    	    android:persistent="false" / -->
         <ListPreference
-    	    android:key="app_profile_performance"
-    	    android:title="@string/app_profile_performance_title"
-    	    android:entries="@array/performance_listentries"
-    	    android:entryValues="@array/performance_listvalues" 
+            android:key="app_profile_performance"
+            android:title="@string/app_profile_performance_title"
+            android:entries="@array/performance_listentries"
+            android:entryValues="@array/performance_listvalues" 
             android:defaultValue="default"
             android:summary="%s"/>
 
@@ -40,30 +35,36 @@
             android:defaultValue="default"
             android:summary="%s" />
 
-        <ListPreference
+        <SwitchPreference
+            android:key="app_profile_reader"
+            android:title="@string/app_profile_reader_title"
+            android:summary="@string/app_profile_reader_summary"
+            android:persistent="false" />
+
+        <!-- ListPreference
             android:key="app_profile_brightness"
             android:title="@string/app_profile_brightness_title"
             android:entries="@array/brightness_listentries"
             android:entryValues="@array/brightness_listvalues"
             android:defaultValue="default"
-            android:summary="%s" />
+            android:summary="%s" / -->
 
-        <SwitchPreference
+        <!-- SwitchPreference
             android:key="app_profile_pinned"
             android:title="@string/app_profile_pinned_title"
             android:summary="@string/app_profile_pinned_summary"
-            android:defaultValue="false" />
+            android:defaultValue="false" / -->
 
-        <SwitchPreference
+        <!-- SwitchPreference
             android:key="app_profile_disable_twl"
             android:title="@string/app_profile_disable_twl_title"
             android:summary="@string/app_profile_disable_twl_summary"
-            android:defaultValue="false" />
+            android:defaultValue="false" / -->
 
-        <SwitchPreference
+        <!-- SwitchPreference
             android:key="app_profile_camera_hal1"
             android:title="@string/app_profile_camera_hal1_title"
             android:summary="@string/app_profile_camera_hal1_summary"
-            android:defaultValue="false" />
+            android:defaultValue="false" / -->
 
 </PreferenceScreen>

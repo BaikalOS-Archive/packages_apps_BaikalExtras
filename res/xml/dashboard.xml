@@ -40,7 +40,7 @@
 
     <!-- /PreferenceCategory -->
 
-    <!-- PreferenceCategory
+    <PreferenceCategory
         android:key="app_setings_cat"
         android:title="@string/app_settings_category">
 
@@ -54,7 +54,7 @@
         </Preference>
 
 
-    </PreferenceCategory -->
+    </PreferenceCategory>
 
 
     <PreferenceCategory
