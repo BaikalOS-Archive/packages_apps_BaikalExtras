@@ -188,7 +188,7 @@ public class AppProfileFragment extends BaseSettingsFragment
                 }
             }
 
-        /*
+        
             mAppBrightnessProfile = (ListPreference) findPreference(APP_PROFILE_BRIGHTNESS);
             if( mAppBrightnessProfile != null ) {
                 int brightness = mProfile.mBrightness;
@@ -211,7 +211,7 @@ public class AppProfileFragment extends BaseSettingsFragment
                   }
                 });
             }
-        */
+        
         
         } catch(Exception re) {
             Log.e(TAG, "onCreate: Fatal! exception", re );

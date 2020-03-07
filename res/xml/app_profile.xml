@@ -35,19 +35,19 @@
             android:defaultValue="default"
             android:summary="%s" />
 
-        <SwitchPreference
-            android:key="app_profile_reader"
-            android:title="@string/app_profile_reader_title"
-            android:summary="@string/app_profile_reader_summary"
-            android:persistent="false" />
-
-        <!-- ListPreference
+        <ListPreference
             android:key="app_profile_brightness"
             android:title="@string/app_profile_brightness_title"
             android:entries="@array/brightness_listentries"
             android:entryValues="@array/brightness_listvalues"
             android:defaultValue="default"
-            android:summary="%s" / -->
+            android:summary="%s" />
+
+        <SwitchPreference
+            android:key="app_profile_reader"
+            android:title="@string/app_profile_reader_title"
+            android:summary="@string/app_profile_reader_summary"
+            android:persistent="false" />
 
         <!-- SwitchPreference
             android:key="app_profile_pinned"
