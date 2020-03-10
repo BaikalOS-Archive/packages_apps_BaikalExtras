@@ -19,7 +19,6 @@
     <string name="performance_performance">Performance</string>
     <string name="performance_gaming">Gaming</string>
     <string name="performance_camera">Camera</string>
-    <string name="performance_reader">Reader</string>
 
     <string name="thermal_default">Default</string>
     <string name="thermal_balance">Balanced</string>

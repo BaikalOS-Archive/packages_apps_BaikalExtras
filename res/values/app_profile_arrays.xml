@@ -8,7 +8,6 @@
     	<item>@string/performance_performance</item>
     	<item>@string/performance_gaming</item>
     	<item>@string/performance_battery</item>
-    	<item>@string/performance_reader</item>
      </string-array>
      <string-array name="performance_listvalues">
     	<item>default</item>
@@ -16,7 +15,6 @@
     	<item>performance</item>
     	<item>gaming</item>
     	<item>battery</item>
-    	<item>reader</item>
     </string-array>
 
     <string-array name="thermal_listentries">
