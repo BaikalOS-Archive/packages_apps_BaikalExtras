@@ -43,17 +43,25 @@
             android:defaultValue="default"
             android:summary="%s" />
 
+        <!-- ListPreference
+            android:key="app_profile_fps"
+            android:title="@string/app_profile_fps_title"
+            android:entries="@array/fps_listentries"
+            android:entryValues="@array/fps_listvalues"
+            android:defaultValue="default"
+            android:summary="%s" / -->
+
         <SwitchPreference
             android:key="app_profile_reader"
             android:title="@string/app_profile_reader_title"
             android:summary="@string/app_profile_reader_summary"
             android:persistent="false" />
 
-        <!-- SwitchPreference
+        <SwitchPreference
             android:key="app_profile_pinned"
             android:title="@string/app_profile_pinned_title"
             android:summary="@string/app_profile_pinned_summary"
-            android:defaultValue="false" / -->
+            android:defaultValue="false" />
 
         <!-- SwitchPreference
             android:key="app_profile_disable_twl"
