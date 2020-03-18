@@ -37,4 +37,7 @@
     <string name="audio_tweaks_hq_policy_title">Use HQ engine by default</string>
     <string name="audio_tweaks_hq_policy_summary">Use HQ settings for music playback by default. Reboot required!</string>
 
+    <string name="baikalos_disable_hp_detect_title">Disable Headphones detect</string>
+    <string name="baikalos_disable_hp_detect_summary">Disable detection of wired headphones</string>
+
 </resources>

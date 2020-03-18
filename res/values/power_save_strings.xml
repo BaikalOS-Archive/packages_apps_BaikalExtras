@@ -19,5 +19,5 @@
     <!-- Batery whitelist -->
     <string name="prefs_battery_saver_title">Whitelist</string>
     <string name="prefs_battery_saver_summary">Device Whitelist</string>
-  
+ 
 </resources>

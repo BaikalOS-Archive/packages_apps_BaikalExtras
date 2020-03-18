@@ -37,6 +37,13 @@
             android:summary="@string/audio_tweaks_suspend_play_summary"
             android:defaultValue="false" />
 
+        <com.aicp.gear.preference.GlobalSettingSwitchPreference
+            android:key="baikalos_disable_hp_detect"
+            android:title="@string/baikalos_disable_hp_detect_title"
+            android:summary="@string/baikalos_disable_hp_detect_summary"
+            android:defaultValue="false"
+            android:disableDependentsState="true" />
+
 
     </PreferenceCategory>
 
