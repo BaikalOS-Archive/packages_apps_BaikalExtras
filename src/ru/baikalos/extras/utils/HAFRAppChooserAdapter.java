@@ -5,6 +5,7 @@ import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.graphics.drawable.Drawable;
 import android.os.Handler;
+import android.os.Process;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -20,6 +21,7 @@ import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Locale;
+
 
 import ru.baikalos.extras.R;
 
@@ -56,6 +58,7 @@ public abstract class HAFRAppChooserAdapter extends BaseAdapter implements Filte
                 isUpdating = true;
                 final List<AppItem> temp = new LinkedList<AppItem>();
                 for (PackageInfo info : mTemporarylist) {
+                    if( info.applicationInfo.uid < Process.FIRST_APPLICATION_UID ) continue;
                     final AppItem item = new AppItem();
                     item.title = info.applicationInfo.loadLabel(mPackageManager);
                     item.icon = info.applicationInfo.loadIcon(mPackageManager);
