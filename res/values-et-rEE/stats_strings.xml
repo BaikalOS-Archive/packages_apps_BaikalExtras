@@ -18,5 +18,31 @@
 -->
 <resources>
     <!-- About device screen, list item title. Takes the user to the screen about opting in or out of anonymous statistics. -->
+    <string name="anonymous_statistics_title">BaikalOS statistika</string>
+    <string name="anonymous_statistics_warning_title">Teave</string>
+    <string name="anonymous_statistics_warning">Lülitades sisse BaikalOS\'i statistika, lubad sa isikustamata teabe saatmist
+        meie serveritesse, et nad saaksid jälgida seadmepõhiselt unikaalseid paigaldusi. Saadetud teabe hulgas on unikaalne identifikaator,
+        mis ei ohusta sinu privaatsust ega isiklikke andmeid. Teave saadetakse 7 päeva tagant.\n\nEt näha saadetavate andmete näidet, koputa valikul
+andmete eelvaade.</string>
+    <string name="enable_reporting_title">Luba raporteerimine</string>
+    <string name="disable_reporting_persistent">Püsiv loobumine</string>
+    <string name="preview_data_title">Andmete eelvaade</string>
+    <string name="view_stats_title">Kuva statistika leht</string>
+    <string name="anonymous_learn_more">Loe rohkem</string>
+    <string name="last_report_on">Viimati teatatud</string>
+    <string name="reporting_interval">Aruande intervall</string>
+    <plurals name="reporting_interval_days">
+        <item quantity="one">1 päev</item>
+        <item quantity="other">%d päeva</item>
+    </plurals>
+    <string name="next_report_on">Järgmine raport</string>
     <!-- Anonymous Statistics - Preview -->
+    <string name="preview_id_title">Kordumatu ID</string>
+    <string name="preview_device_title">Seade</string>
+    <string name="preview_version_title">Versioon</string>
+    <string name="preview_country_title">Riik</string>
+    <string name="preview_carrier_title">Teenusepakkuja</string>
+    <string name="preview_romname_title">Püsivara nimi</string>
+    <string name="preview_romversion_title">BaikalOS versioon</string>
+    <string name="preview_buildtype_title">BaikalOS koostetüüp</string>
 </resources>

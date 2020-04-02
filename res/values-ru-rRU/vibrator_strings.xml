@@ -1,4 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="vibrator_title">Вибрация</string>
+    <string name="vibrator_summary">Параметры вибрации</string>
     <!-- Incall vibrate options -->
+    <string name="incall_vibration_category">Вибрация при вызове</string>
+    <string name="incall_vibrate_connect_title">Вибрировать при соединении</string>
+    <string name="incall_vibrate_connect_summary">Вибрировать при соединении</string>
+    <string name="incall_vibrate_call_wait_title">Вибрация при ожидании вызова</string>
+    <string name="incall_vibrate_call_wait_summary">Вибрация при ожидании вызова</string>
+    <string name="incall_vibrate_disconnect_title">Вибрировать при разъединении</string>
+    <string name="incall_vibrate_disconnect_summary">Вибрировать при разъединении</string>
 </resources>

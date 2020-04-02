@@ -16,4 +16,7 @@
  * limitations under the License.
  */
 -->
-<resources></resources>
+<resources>
+    <string name="switch_disable_warning_title">Упозорење</string>
+    <string name="switch_disable_warning_message">Онемогућити ово подешавање без омогућавања алтернативе може да ваш уређај чини неупотребљивим. Наставити?</string>
+</resources>

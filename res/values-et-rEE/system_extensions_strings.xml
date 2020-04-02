@@ -18,5 +18,29 @@
 -->
 <resources>
     <!-- System extensions -->
+    <string name="system_extensions_title">Süsteemi laiendused</string>
+    <string name="system_extensions_summary">Süsteemi täiendused</string>
     <!-- System app remover -->
+    <string name="system_app_remover_title">Süsteemi rakenduste eemaldamine</string>
+    <string name="system_app_remover_summary">Eelinstalleeritud rakenduste eemaldamine</string>
+    <string name="system_app_remover_message_delete">Kas soovite kindlasti selle rakenduse kustutada?</string>
+    <string name="system_app_remover_message_noselect">Pole midagi valitud</string>
+    <string name="proximity_category">Lähedus</string>
+    <string name="baikal_wakeup_proximity_enabled_title">Ülesäratamine</string>
+    <string name="baikal_wakeup_proximity_enabled_summary">Ärkamine topeltpühkimisega</string>
+    <string name="baikal_sleep_proximity_enabled_title">Unerežiim</string>
+    <string name="baikal_sleep_proximity_enabled_summary">Uinumine topeltpühkimisega</string>
+    <string name="baikal_hall_sensor_enabled_title">HALL andur</string>
+    <string name="baikal_hall_sensor_enabled_summary">Luba HALL-andur</string>
+    <string name="baikal_lid_sensor_enabled_title">Lülita nutikas ümbris sisse</string>
+    <string name="baikal_lid_sensor_enabled_summary">Lülita nutikas ümbris sisse</string>
+    <string name="baikal_lid_sensor_reverse_title">Pööra nutikas ümbris ümber</string>
+    <string name="baikal_lid_sensor_reverse_summary">Pöörake nutika ümbrise käitumine ümber</string>
+    <string name="baikal_lid_ignore_wake_title">Äratuste ignoreerimine</string>
+    <string name="baikal_lid_ignore_wake_summary">Kui nutikas kate on suletud, ignoreerige juhuslikke äratussündmusi</string>
+    <string name="use_google_sans_title">Vaikimisi Google Sans</string>
+    <string name="use_google_sans_summary">Kasutage süsteemi vaikesuhtlejana Google Sansi. Taaskäivitamine on vajalik!</string>
+    <string name="proximity_on_wake_title">Kontrollige enne ärkamist</string>
+    <string name="proximity_on_wake_summary">Blokeeri ärkamine, kui lähedussensor on suletud</string>
+    <string name="smart_cover_category">Tark kate</string>
 </resources>

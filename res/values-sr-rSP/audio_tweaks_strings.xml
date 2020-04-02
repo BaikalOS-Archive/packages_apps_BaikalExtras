@@ -1,4 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Audio Tweaks -->
+    <string name="audio_tweaks_title">Прилагођења Звука</string>
+    <string name="audio_tweaks_summary">Прилагођења и хакови повезани са звуком</string>
+    <string name="audio_tweaks_anc_title">Омогући ANC</string>
+    <string name="audio_tweaks_anc_summary">Омогући аналогно брисање буке за вокалне позиве. То се преклапа с дуплим микрофоном.</string>
+    <string name="audio_tweaks_fluence_title">Омогући Дупли микрофон</string>
+    <string name="audio_tweaks_fluence_summary">Омогући дупли микрофон за вокалне позиве</string>
+    <string name="audio_tweaks_whatsapp_title">WhatsApp хак</string>
+    <string name="audio_tweaks_whatsapp_summary">Користи микрофон за снимање гласа за whatsapp вокалне поруке</string>
+    <string name="audio_tweaks_hp_detect_title">Онемогући откривање слушалица</string>
+    <string name="audio_tweaks_hp_detect_summary">Онемогући откривање слушалица. За уређаје у којима не функционише USB-C порт.</string>
+    <string name="audio_tweaks_suspend_play_title">Суспендуј током игре</string>
+    <string name="audio_tweaks_suspend_play_summary">Дозволи суспензију система кад је плејер активан. Нису сви медија плејери компатибилни.</string>
+    <string name="audio_tweaks_a2dp_sbc_hd_title">Висока SBC брзина протока</string>
+    <string name="audio_tweaks_a2dp_sbc_hd_summary">Користи Високу SBC брзину протока за A2DP Bluetooth профил</string>
+    <string name="audio_tweaks_a2dp_sbc_hdx_title">Највећа SBC брзина протока</string>
+    <string name="audio_tweaks_a2dp_sbc_hdx_summary">Користи Највећу SBC брзину протока за A2DP Bluetooth профил</string>
+    <string name="audio_tweaks_a2dp_sbc_hde_title">Екстремна SBC брзина протока</string>
+    <string name="audio_tweaks_a2dp_sbc_hde_summary">Користи Екстремну SBC брзину протока за A2DP Bluetooth профил</string>
+    <string name="audio_tweaks_a2dp_sbc_prefer_title">Префериши SBC</string>
+    <string name="audio_tweaks_a2dp_sbc_prefer_summary">Префериши SBC уместо AAC-а или AptX-а</string>
+    <string name="audio_settings_title">Уобичајено</string>
+    <string name="audio_bluetooth_title">Bluetooth</string>
+    <string name="audio_tweaks_hq_policy_title">Користи мотор високог квалитета као подразумевани</string>
+    <string name="audio_tweaks_hq_policy_summary">Користи репродукција музике високог квалитета као подразумевана. Потребно је поновно покретање!</string>
+    <string name="baikalos_disable_hp_detect_title">Онемогући откривање слушалица</string>
+    <string name="baikalos_disable_hp_detect_summary">Онемогући откривање жичних слушалица</string>
 </resources>

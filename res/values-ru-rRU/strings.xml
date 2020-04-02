@@ -17,6 +17,7 @@
  */
 -->
 <resources>
+    <string name="app_name">BaikalOS Extras</string>
     <!-- Dashboard -->
     <!-- Device parts -->
     <!-- Status bar -->

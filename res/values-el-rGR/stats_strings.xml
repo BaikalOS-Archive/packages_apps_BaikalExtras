@@ -18,5 +18,29 @@
 -->
 <resources>
     <!-- About device screen, list item title. Takes the user to the screen about opting in or out of anonymous statistics. -->
+    <string name="anonymous_statistics_title">Στατιστικά BaikalOS</string>
+    <string name="anonymous_statistics_warning_title">Σχετικά</string>
+    <string name="anonymous_statistics_warning">Με την ενεργοποίηση θα μπορούμε να βλέπουμε τα στατιστικά στο διακομιστή. Δεν στέλνονται προσωπικά δεδομένα.
+         Τα στατιστικά \"δημοσιεύονται\" κάθε εβδομάδα.\n\nΓια να δείτε ένα δείγμα στο τι δημοσιεύεται. Κάντε κλικ \"προεπισκόπηση\".</string>
+    <string name="enable_reporting_title">Ενεργοποίηση αναφοράς</string>
+    <string name="disable_reporting_persistent">Διαρκής εξαίρεση</string>
+    <string name="preview_data_title">Προεπισκόπηση δεδομένων</string>
+    <string name="view_stats_title">Προβολή Σελίδας Στατιστικών</string>
+    <string name="anonymous_learn_more">Μάθετε περισσότερα</string>
+    <string name="last_report_on">Τελευταία αναφορά</string>
+    <string name="reporting_interval">Διάρκεια αναφοράς</string>
+    <plurals name="reporting_interval_days">
+        <item quantity="one">1 ημέρα</item>
+        <item quantity="other">%d ημέρες</item>
+    </plurals>
+    <string name="next_report_on">Επόμενη αναφορά</string>
     <!-- Anonymous Statistics - Preview -->
+    <string name="preview_id_title">Μοναδικό Αναγνωριστικό</string>
+    <string name="preview_device_title">Συσκευή</string>
+    <string name="preview_version_title">Έκδοση</string>
+    <string name="preview_country_title">Χώρα</string>
+    <string name="preview_carrier_title">Πάροχος δικτύου</string>
+    <string name="preview_romname_title">Όνομα λογισμικού</string>
+    <string name="preview_romversion_title">Έκδοση BaikalOS</string>
+    <string name="preview_buildtype_title">Τύπος κατασκευής BaikalOS</string>
 </resources>

@@ -1,4 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Audio Tweaks -->
+    <string name="audio_tweaks_title">Ρυθμίσεις ήχων</string>
+    <string name="audio_tweaks_summary">Ρυθμίσεις, κόλπα και αλλαγές ήχων</string>
+    <string name="audio_tweaks_anc_title">Ενεργοποίηση ANC</string>
+    <string name="audio_tweaks_anc_summary">Ενεργοποίηση αναλογικής ακύρωσης θορύβου για κλήσεις. Υπερκαλύπτει το Dual-mic.</string>
+    <string name="audio_tweaks_fluence_title">Ενεργοποίηση Dual-mic</string>
+    <string name="audio_tweaks_fluence_summary">Ενεργοποίηση διαμόρφωσης dual-mic για κλήσεις</string>
+    <string name="audio_tweaks_whatsapp_title">Ρύθμιση WhatsApp</string>
+    <string name="audio_tweaks_whatsapp_summary">Χρήση μικροφώνου εγγραφής φωνής, για ήχους μηνυμάτων whatsapp</string>
+    <string name="audio_tweaks_hp_detect_title">Απενεργοποίηση ανίχνευσης ΗΡ</string>
+    <string name="audio_tweaks_hp_detect_summary">Απενεργοποίηση ανίχνευσης των ακουστικών. Για συσκευές με χαλασμένη θύρα USB-C.</string>
+    <string name="audio_tweaks_suspend_play_title">Απομόνωση καθώς παίζει</string>
+    <string name="audio_tweaks_suspend_play_summary">Επιτρέπεται στο σύστημα να το απομονώνει καθώς η αναπαραγωγή είναι ενεργή. Δεν είμαι συμβατοί όλοι οι αναπαραγωγείς.</string>
+    <string name="audio_tweaks_a2dp_sbc_hd_title">Υψηλό SBC bitrate</string>
+    <string name="audio_tweaks_a2dp_sbc_hd_summary">Χρήση υψηλού SBC bitrate για προφίλ Bluetooth A2DP</string>
+    <string name="audio_tweaks_a2dp_sbc_hdx_title">Ύψιστο SBC bitrate</string>
+    <string name="audio_tweaks_a2dp_sbc_hdx_summary">Χρήση υψηλού SBC bitrate για προφίλ Bluetooth A2DP</string>
+    <string name="audio_tweaks_a2dp_sbc_hde_title">Απεριόριστο SBC bitrate</string>
+    <string name="audio_tweaks_a2dp_sbc_hde_summary">Χρήση υψηλού SBC bitrate για προφίλ Bluetooth A2DP</string>
+    <string name="audio_tweaks_a2dp_sbc_prefer_title">Προτίμηση SBC</string>
+    <string name="audio_tweaks_a2dp_sbc_prefer_summary">Προτίμηση SBC αντί AAC ή του Aptx</string>
+    <string name="audio_settings_title">Τυπικό</string>
+    <string name="audio_bluetooth_title">Bluetooth</string>
+    <string name="audio_tweaks_hq_policy_title">Χρήση μηχανής HQ από προεπιλογή</string>
+    <string name="audio_tweaks_hq_policy_summary">Χρήση ρυθμίσεων υψηλής ποιότητας για αναπαραγωγή μουσικής από προεπιλογή. Επιβάλλεται επανεκκίνηση!</string>
+    <string name="baikalos_disable_hp_detect_title">Απενεργοποίηση ανίχνευσης ακουστικών</string>
+    <string name="baikalos_disable_hp_detect_summary">Απενεργοποίηση ανίχνευσης ακουστικών με καλώδιο</string>
 </resources>

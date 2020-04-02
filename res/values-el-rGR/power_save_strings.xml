@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Power Save -->
+    <string name="powersave_title">Εξοικονόμηση ενέργειας</string>
+    <string name="powersave_summary">Βελτιώσεις Μενού Ισχύος</string>
+    <string name="device_idle_aggressive_title">Επιθετική αναμονή</string>
+    <string name="device_idle_aggressive_summary">Να μπαίνει η συσκευή σε ύπνο, μετά από ένα λεπτό με σβηστή οθόνη. Αγνόηση κινήσεων.</string>
+    <string name="baikal_extreme_saver_enabled_enabled_title">Ειδική ρύθμιση</string>
+    <string name="baikal_extreme_saver_enabled_enabled_summary">Ανάγνωση συσκευής ως συσκευή με μικρή μπαταρία</string>
+    <string name="default_profiles_title">Προεπιλεγμένα προφίλ</string>
+    <string name="powersave_hide_idle_title">Απόκρυψη βαθύ ύπνου συσκευής, από το GMS</string>
+    <string name="powersave_hide_idle_summary">Απόκρυψη κατάστασης ύπνου συσκευής, από της υπηρεσίες Google play. Μπορεί να διορθώσει προβλήματα ειδοποιήσεων. Αυξάνει όμως, την κατανάλωση μπαταρίας! </string>
+    <string name="powersave_unrestricted_network_title">Απεριόριστα δεδομένα</string>
+    <string name="powersave_unrestricted_network_summary">Να μην γίνεται περιορισμός της κίνησης δεδομένων σε κατάσταση ύπνου της συσκευής. Μπορεί να διορθώσει προβλήματα ειδοποιήσεων. Αυξάνει την κατανάλωση μπαταρίας!</string>
     <!-- Batery whitelist -->
+    <string name="prefs_battery_saver_title">Λίστα επιτρεπόμενων εφαρμογών</string>
+    <string name="prefs_battery_saver_summary">Λευκή λίστα συσκευής</string>
 </resources>

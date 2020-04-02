@@ -1,4 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="vibrator_title">Вибрирај</string>
+    <string name="vibrator_summary">Подешавања везане за вибрацију</string>
     <!-- Incall vibrate options -->
+    <string name="incall_vibration_category">Вибрација током позива</string>
+    <string name="incall_vibrate_connect_title">Вибрација при Повезивању</string>
+    <string name="incall_vibrate_connect_summary">Вибрација при Повезивању</string>
+    <string name="incall_vibrate_call_wait_title">Вибрација при Позиву на чекању</string>
+    <string name="incall_vibrate_call_wait_summary">Вибрација при Позиву на чекању</string>
+    <string name="incall_vibrate_disconnect_title">Вибрација при Прекиду везе</string>
+    <string name="incall_vibrate_disconnect_summary">Вибрација при Прекиду везе</string>
 </resources>

@@ -16,4 +16,8 @@
  * limitations under the License.
  */
 -->
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2"></resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="changelog_name">Muudatuste logi</string>
+    <string name="commit_id">ID muudatused</string>
+    <string name="commit_message">Muudatuse sõnum</string>
+</resources>

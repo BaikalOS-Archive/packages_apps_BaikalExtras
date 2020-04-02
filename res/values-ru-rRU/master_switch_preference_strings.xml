@@ -16,4 +16,7 @@
  * limitations under the License.
  */
 -->
-<resources></resources>
+<resources>
+    <string name="switch_disable_warning_title">Предупреждение</string>
+    <string name="switch_disable_warning_message">Отключение этого параметра без включения альтернативного может привести к неработоспособности устройства. Продолжить?</string>
+</resources>

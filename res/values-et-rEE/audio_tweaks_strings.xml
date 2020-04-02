@@ -1,4 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Audio Tweaks -->
+    <string name="audio_tweaks_title">Audio Tweaks</string>
+    <string name="audio_tweaks_summary">Heliga seotud näpunäited ja häkked</string>
+    <string name="audio_tweaks_anc_title">Luba ANC</string>
+    <string name="audio_tweaks_anc_summary">Luba analoogmüra vähendamine häälkõnede ajal. Kattub kahe mikrofoniga.</string>
+    <string name="audio_tweaks_fluence_title">Luba Dual-mic</string>
+    <string name="audio_tweaks_fluence_summary">Luba kahe mikrofoni konfiguratsioon häälkõnede jaoks</string>
+    <string name="audio_tweaks_whatsapp_title">WhatsApp hack</string>
+    <string name="audio_tweaks_whatsapp_summary">WhatsAppis sõnumite salvestamiseks kasutage käed-vabad mikrofoni</string>
+    <string name="audio_tweaks_hp_detect_title">Vaigista kõrvaklapid</string>
+    <string name="audio_tweaks_hp_detect_summary">Keela juhtmega kõrvaklappide või peakomplektide tuvastamine. Kahjustatud USB-pordiga seadmetele.</string>
+    <string name="audio_tweaks_suspend_play_title">Peatage mängu ajal</string>
+    <string name="audio_tweaks_suspend_play_summary">Laske süsteemil uinuda muusika mängimisel. Ei ühildu kõigi mängijatega.</string>
+    <string name="audio_tweaks_a2dp_sbc_hd_title">Suur SBC bitikiirus</string>
+    <string name="audio_tweaks_a2dp_sbc_hd_summary">Kasutage A2DP Bluetooth-profiili jaoks suurimat SBC bitikiirust</string>
+    <string name="audio_tweaks_a2dp_sbc_hdx_title">Suurim SBC bitikiirus</string>
+    <string name="audio_tweaks_a2dp_sbc_hdx_summary">Kasutage A2DP Bluetooth-profiili jaoks suurimat SBC bitikiirust</string>
+    <string name="audio_tweaks_a2dp_sbc_hde_title">Äärmine SBC bitikiirus</string>
+    <string name="audio_tweaks_a2dp_sbc_hde_summary">Kasutage A2DP Bluetooth-profiili jaoks äärmuslikku SBC bitikiirust</string>
+    <string name="audio_tweaks_a2dp_sbc_prefer_title">Eelista SBC</string>
+    <string name="audio_tweaks_a2dp_sbc_prefer_summary">Eelistage SBC-d AAC-i või AptX-i asemel</string>
+    <string name="audio_settings_title">Üldine</string>
+    <string name="audio_bluetooth_title">Bluetooth</string>
+    <string name="audio_tweaks_hq_policy_title">Kasutage HQ mootorit vaikimisi</string>
+    <string name="audio_tweaks_hq_policy_summary">Kasutage vaikimisi muusika esituse HQ-sätteid. Vajalik taaskäivitus!</string>
+    <string name="baikalos_disable_hp_detect_title">Keela kõrvaklappide tuvastamine</string>
+    <string name="baikalos_disable_hp_detect_summary">Keela juhtmega kõrvaklappide tuvastamine</string>
 </resources>
