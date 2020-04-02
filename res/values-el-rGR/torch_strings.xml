@@ -1,2 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="torch_title">Φακός</string>
+    <string name="torch_summary">Ρυθμίσεις φακού</string>
+    <string name="torch_long_press_power_gesture_title">Φακός σε μενού ενέργειας</string>
+    <string name="torch_long_press_power_gesture_summary">Εκκίνηση φακού σε παρατεταμένο πάτημα του πλήκτρου ενέργειας, όταν η οθόνη είναι κλειστή</string>
+    <string name="torch_on_incoming_call_title">Παλμός φλας σε εισερχόμενες κλήσεις</string>
+    <string name="torch_on_incoming_call_summary">Παλμός φλας σε εισερχόμενες κλήσεις</string>
+</resources>

@@ -18,5 +18,30 @@
 -->
 <resources>
     <!-- System extensions -->
+    <string name="system_extensions_title">Επεκτάσεις συστήματος</string>
+    <string name="system_extensions_summary">Πρόσθετα συστήματος</string>
     <!-- System app remover -->
+    <string name="system_app_remover_title">Απεκταταστάτης εφαρμογών</string>
+    <string name="system_app_remover_summary">Καταργήστε προ-εγκατεστημένες εφαρμογές</string>
+    <string name="system_app_remover_message_delete">Είστε βέβαιοι ότι θέλετε να διαγράψετε αυτή την εφαρμογή;</string>
+    <string name="system_app_remover_message_noselect">Κενή επιλογή</string>
+    <string name="proximity_category">Εγγύτητα</string>
+    <string name="baikal_wakeup_proximity_enabled_title">Αφύπνιση</string>
+    <string name="baikal_wakeup_proximity_enabled_summary">Ξύπνημα σε διπλή κίνηση</string>
+    <string name="baikal_sleep_proximity_enabled_title">Χρόνος αδράνειας</string>
+    <string name="baikal_sleep_proximity_enabled_summary">Ξύπνημα σε διπλή κίνηση</string>
+    <string name="baikal_hall_sensor_enabled_title">Αισθητήρας εγγύτητας</string>
+    <string name="baikal_hall_sensor_enabled_summary">Ενεργοποίηση αισθητήρα εγγύτητας</string>
+    <string name="baikal_lid_sensor_enabled_title">Ενεργοποίηση έξυπνου κλειδώματος</string>
+    <string name="baikal_lid_sensor_enabled_summary">Ενεργοποίηση έξυπνου καλύμματος</string>
+    <string name="baikal_lid_sensor_reverse_title">Επαναφορά έξυπνου καλύμματος</string>
+    <string name="baikal_lid_sensor_reverse_summary">Επαναφορά έξυπνου καλύμματος</string>
+    <string name="baikal_lid_ignore_wake_title">Αγνόηση αφύπνισης</string>
+    <string name="baikal_lid_ignore_wake_summary">Αγνόηση άτυχων αφυπνίσεων συσκευής, όταν το έξυπνο κάλυμμα είναι κλειστό</string>
+    <string name="use_google_sans_title">Προεπιλογή Google Sans</string>
+    <string name="use_google_sans_summary">Χρήση του φόντου Google Sans ως προεπιλογή.
+Απαιτείται επανεκκίνηση!</string>
+    <string name="proximity_on_wake_title">Έλεγχος κατά την αφύπνιση</string>
+    <string name="proximity_on_wake_summary">Να μην γίνεται αφύπνιση της συσκευής εάν ο αισθητήρας εγγύτητας είναι καλυμμένος</string>
+    <string name="smart_cover_category">Έξυπνο κάλυμμα</string>
 </resources>

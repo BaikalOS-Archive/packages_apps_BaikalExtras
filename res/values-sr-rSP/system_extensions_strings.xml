@@ -18,5 +18,29 @@
 -->
 <resources>
     <!-- System extensions -->
+    <string name="system_extensions_title">Системски додаци</string>
+    <string name="system_extensions_summary">Системска проширења</string>
     <!-- System app remover -->
+    <string name="system_app_remover_title">Системски Деинсталатор Апликација</string>
+    <string name="system_app_remover_summary">Уклони преинсталиране апликације</string>
+    <string name="system_app_remover_message_delete">Да ли сте сигурни да желите обрисати ову апликацију?</string>
+    <string name="system_app_remover_message_noselect">Ништа није изабрано</string>
+    <string name="proximity_category">Близина</string>
+    <string name="baikal_wakeup_proximity_enabled_title">Буђење</string>
+    <string name="baikal_wakeup_proximity_enabled_summary">Буђење на дупло махање руком</string>
+    <string name="baikal_sleep_proximity_enabled_title">Спавање</string>
+    <string name="baikal_sleep_proximity_enabled_summary">Спавање на дупло махање руком</string>
+    <string name="baikal_hall_sensor_enabled_title">HALL Сензор</string>
+    <string name="baikal_hall_sensor_enabled_summary">Омогући HALL Сензор</string>
+    <string name="baikal_lid_sensor_enabled_title">Омогући Паметну Маску</string>
+    <string name="baikal_lid_sensor_enabled_summary">Омогући Паметну Маску</string>
+    <string name="baikal_lid_sensor_reverse_title">Обрни Паметну Маску</string>
+    <string name="baikal_lid_sensor_reverse_summary">Обрни радњу Паметне Маске</string>
+    <string name="baikal_lid_ignore_wake_title">Игнориши Буђење</string>
+    <string name="baikal_lid_ignore_wake_summary">Игнориши нежељене случаје буђења док је Паметна Маска затворена</string>
+    <string name="use_google_sans_title">Google Sans подразумеван</string>
+    <string name="use_google_sans_summary">Користи Google Sans као подразумевани системски фонт. Потребно је поновно покретање!</string>
+    <string name="proximity_on_wake_title">Провера код Буђења</string>
+    <string name="proximity_on_wake_summary">Немој пробудити ако је сензор близине покривен</string>
+    <string name="smart_cover_category">Паметна Маска</string>
 </resources>

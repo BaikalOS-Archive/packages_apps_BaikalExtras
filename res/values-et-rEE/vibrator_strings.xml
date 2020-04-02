@@ -1,4 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="vibrator_title">Vibreeri</string>
+    <string name="vibrator_summary">Vibratsiooniga seotud seaded</string>
     <!-- Incall vibrate options -->
+    <string name="incall_vibration_category">Vibratsioon kõne ajal</string>
+    <string name="incall_vibrate_connect_title">Vibratsioon kõne ajal</string>
+    <string name="incall_vibrate_connect_summary">Vibreeri ühendamisel</string>
+    <string name="incall_vibrate_call_wait_title">Vibreeri kõne koputusel</string>
+    <string name="incall_vibrate_call_wait_summary">Vibreeri kõne koputusel</string>
+    <string name="incall_vibrate_disconnect_title">Vibreeri katkemisel</string>
+    <string name="incall_vibrate_disconnect_summary">Vibreeri katkemisel</string>
 </resources>

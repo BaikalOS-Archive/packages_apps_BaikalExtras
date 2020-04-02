@@ -16,4 +16,8 @@
  * limitations under the License.
  */
 -->
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2"></resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="changelog_name">Πρόσφατες Αλλαγές</string>
+    <string name="commit_id">Αναγνωριστικό Lockscreen Commit</string>
+    <string name="commit_message">Μήνυμα σημείωσης</string>
+</resources>

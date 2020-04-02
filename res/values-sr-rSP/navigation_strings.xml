@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- DT2S -->
+    <string name="double_tap_sleep_gesture_title">DT2S на статусној траци</string>
+    <string name="double_tap_sleep_gesture_summary">Дупли додир на статусној траци да уређај бисте слали у стање спавања</string>
     <!-- Navigation bar -->
+    <string name="navigation_bar_title">Навигацијска трака</string>
+    <string name="navigation_bar_title_summary">Омогући навигацијске тастере на екрану</string>
     <!-- OP like Navigation Gestures -->
+    <string name="gesture_settings_title">Навигацијски Гестови</string>
+    <string name="gesture_settings_info">Навигацијска трака мора бити онемогућена!\n\nДоступни гестови:\n\nНазад\n- Превуците прстом према горе с леве или десне стране\n\nПочетак\n-Превуците прстом према центру\n\nНедавне апликације\n-Превуците прстом према центру и држите\n\nДуго притисните почетни\n-Кратко превуците прстом према горе и држите у средини</string>
+    <string name="use_bottom_gesture_title">Навигацијски гестови</string>
+    <string name="use_bottom_gesture_summary">Користи гест превлачења прстом одоздо нагоре за навигацију</string>
 </resources>

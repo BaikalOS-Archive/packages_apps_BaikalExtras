@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- DT2S -->
+    <string name="double_tap_sleep_gesture_title">DT2S olekuribal</string>
+    <string name="double_tap_sleep_gesture_summary">Seadme unerežiimi panemiseks topeltpuudutage olekuriba</string>
     <!-- Navigation bar -->
+    <string name="navigation_bar_title">Navigeerimisriba</string>
+    <string name="navigation_bar_title_summary">Luba ekraanil olevad navigeerimisnupud</string>
     <!-- OP like Navigation Gestures -->
+    <string name="gesture_settings_title">Navigeerimise žestid</string>
+    <string name="gesture_settings_info">Navigeerimisriba peab olema keelatud!\n\nSaadaolevad žestid:\n\nTagasi\n- Pühkige üles vasakul või paremal pool\n\nAvaleht\n- Pühkige keskel üles\n\nViimased rakendused\n- Pühkige keskel üles ja hoidge peal\n\nAvaleht pikk vajutus\n- Keskel lühike pühkimine üles ja hoidke peal</string>
+    <string name="use_bottom_gesture_title">Navigeerimise žestid</string>
+    <string name="use_bottom_gesture_summary">Kasutage navigeerimiseks alt üles liikuvaid žeste</string>
 </resources>

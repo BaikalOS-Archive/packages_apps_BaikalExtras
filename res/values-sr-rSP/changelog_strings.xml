@@ -16,4 +16,8 @@
  * limitations under the License.
  */
 -->
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2"></resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="changelog_name">Евиденција измена</string>
+    <string name="commit_id">Закљ. екран Ревизни ID</string>
+    <string name="commit_message">Ревизна порука</string>
+</resources>

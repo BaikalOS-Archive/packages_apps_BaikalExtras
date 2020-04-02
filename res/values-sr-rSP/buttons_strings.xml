@@ -1,9 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Button Settings -->
+    <string name="button_settings_title">Тастери</string>
+    <string name="button_settings_title_summary">Постави прилагођене радње за тастере</string>
+    <string name="button_settings_description">Постави прилагођене радње за физичке тастере присутне на вашем уређају.</string>
     <!-- Button brightness -->
+    <string name="button_backlight_title">Позадинско осветљење физичких тастера</string>
+    <string name="hardware_brightness_keys_title">Позадинско осветљење</string>
+    <string name="hardware_brightness_keys_title_summary">Омогући позадинско осветљење навигационих тастера</string>
+    <string name="button_brightness_title">Ниво позадинског осветљења</string>
+    <string name="hardware_button_backlight_timeout">Време позадинског осветљења навигационих тастера</string>
+    <string name="hardware_button_backlight_timeout_summary">Време позадинског осветљења навигационих тастера (онемогући ако је 0)</string>
+    <string name="button_backlight_on_touch_only_title">Додир тастера</string>
+    <string name="button_backlight_on_touch_only_summary">Омогући позадинско осветљење само додиром тастера</string>
     <!-- ANBI -->
+    <string name="anbi_title">Случајан додир</string>
+    <string name="anbi_summary">Спречи интеракције с навигационим тастерима док је екран додирнут</string>
     <!-- Buttons backlight timeout -->
+    <string name="backlight_timeout_title">Време позадинског осветљења тастера</string>
+    <string name="backlight_timeout_on">Увек омогућено</string>
+    <string name="backlight_timeout_3s">3 сек</string>
+    <string name="backlight_timeout_default">5 сек (подразумевано)</string>
+    <string name="backlight_timeout_10s">10 сек</string>
+    <string name="backlight_timeout_15s">15 сек</string>
+    <string name="backlight_timeout_20s">20 сек</string>
+    <string name="backlight_timeout_30s">30 сек</string>
     <!-- Buttons: Categories -->
+    <string name="home_key_title">Тастер „Почетна“</string>
+    <string name="back_key_title">Тастер „Назад“</string>
+    <string name="menu_key_title">Тастер „Мени“</string>
+    <string name="assist_key_title">Тастер „Помоћник“</string>
+    <string name="app_switch_key_title">Тастер „Надавно“</string>
+    <string name="camera_key_title">Тастер „Камера“</string>
     <!-- Buttons: Actions -->
+    <string name="short_press_title">Радња кратког притиска</string>
+    <string name="long_press_title">Радња дугог притиска</string>
+    <string name="double_tap_title">Радња двоструког додира</string>
+    <string name="action_nothing">Без радње</string>
+    <string name="action_menu">Отвори/затвори мени</string>
+    <string name="action_app_switch">Недавно</string>
+    <string name="action_search">Помоћник за претрагу</string>
+    <string name="action_voice_search">Гласовна претрага</string>
+    <string name="action_in_app_search">Претрага унутар апликације</string>
+    <string name="action_launch_camera">Отвори камеру</string>
+    <string name="action_last_app">Покрени последњу апликацију</string>
+    <string name="action_splitscreen">Подељени екран</string>
+    <string name="volume_key_title">Тастери за јачину звука</string>
+    <string name="volume_answer_call_title">Одговори на позив</string>
+    <string name="volume_answer_call_summary">Одговори на позив притиском тастера + ако Одбијање је укључено, или било ког другог тастера ако је искључено</string>
+    <string name="volume_reject_call_title">Одбиј позив</string>
+    <string name="volume_reject_call_summary">Одговори на позив притиском тастера - ако Јављање је укључено, или било ког другог тастера ако је искључено</string>
+    <string name="volume_end_call_title">Заврши позив</string>
+    <string name="volume_end_call_summary">Заврши тренутни позив</string>
+    <string name="volume_button_music_control_title">Контрола за медије</string>
+    <string name="volume_button_music_control_summary">Дуги притисак управља мултимедијску репродукцију док је екран искључен</string>
 </resources>

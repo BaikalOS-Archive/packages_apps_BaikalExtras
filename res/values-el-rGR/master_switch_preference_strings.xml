@@ -16,4 +16,7 @@
  * limitations under the License.
  */
 -->
-<resources></resources>
+<resources>
+    <string name="switch_disable_warning_title">Προειδοποίηση</string>
+    <string name="switch_disable_warning_message">Η απενεργοποίηση αυτής της ρύθμισης χωρίς ενεργοποίηση μιας άλλης, μπορεί να καταστήσει την συσκευή εκτός λειτουργίας. Να συνεχίσω;</string>
+</resources>

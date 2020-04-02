@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Power Save -->
+    <string name="powersave_title">Уштеда енергије</string>
+    <string name="powersave_summary">Дотеривања за Уштеду Енергије</string>
+    <string name="device_idle_aggressive_title">Агресивно Стање Мировања</string>
+    <string name="device_idle_aggressive_summary">Пошаљи уређај у Режим Стања Мировања 1 минут након искључивања екрана. Игнориши покрете.</string>
+    <string name="baikal_extreme_saver_enabled_enabled_title">Екстремни режим</string>
+    <string name="baikal_extreme_saver_enabled_enabled_summary">Третирај уређај као уређај слабе батерије</string>
+    <string name="default_profiles_title">Подразумевани профили</string>
+    <string name="powersave_hide_idle_title">Скривај Стање Мировања од GMS</string>
+    <string name="powersave_hide_idle_summary">Скривај Стање Мировања од Google Play Услуга. Може поправити проблеме с обавештењима. Повећава и трошак енергије! </string>
+    <string name="powersave_unrestricted_network_title">Неограничена Мрежа</string>
+    <string name="powersave_unrestricted_network_summary">Не ограничи приступ мрежи у Стању Мировања. Може поправити проблеме с обавештењима. Повећава и трошак енергије!</string>
     <!-- Batery whitelist -->
+    <string name="prefs_battery_saver_title">Бели списак</string>
+    <string name="prefs_battery_saver_summary">Бели списак уређаја</string>
 </resources>

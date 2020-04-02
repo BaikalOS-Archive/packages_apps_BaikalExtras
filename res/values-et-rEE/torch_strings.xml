@@ -1,2 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="torch_title">Taskulamp</string>
+    <string name="torch_summary">Taskulambiga seotud seaded</string>
+    <string name="torch_long_press_power_gesture_title">Taskulamp toitenupust</string>
+    <string name="torch_long_press_power_gesture_summary">Taskulamp lülitub sisse ja välja toitenuppu pikalt vajutades</string>
+    <string name="torch_on_incoming_call_title">Välk sissetuleva kõne korral</string>
+    <string name="torch_on_incoming_call_summary">Välk sissetuleva kõne korral</string>
+</resources>

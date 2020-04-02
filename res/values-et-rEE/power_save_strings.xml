@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- Power Save -->
+    <string name="powersave_title">Energiasääst</string>
+    <string name="powersave_summary">Energiasääst</string>
+    <string name="device_idle_aggressive_title">Agressiivne ooterežiim</string>
+    <string name="device_idle_aggressive_summary">Saatke seade ooterežiimi 1 minut pärast ekraani väljalülitamist. Ignoreeri liikumist.</string>
+    <string name="baikal_extreme_saver_enabled_enabled_title">Ekstreem-režiim</string>
+    <string name="baikal_extreme_saver_enabled_enabled_summary">Käsitlege seadet kui väikest akuseadet</string>
+    <string name="default_profiles_title">Vaikimisi profiil</string>
+    <string name="powersave_hide_idle_title">Peida tühikäik GMS-i eest</string>
+    <string name="powersave_hide_idle_summary">Peida jõudeolek Google Play teenustest. Saab teavitusprobleeme parandada. Suurendab aku tühjenemist! </string>
+    <string name="powersave_unrestricted_network_title">Piiramatu võrk</string>
+    <string name="powersave_unrestricted_network_summary">Ärge piirake võrgu juurdepääsu ooterežiimis. Saab teavitusprobleeme parandada. Suurendab aku tühjenemist!</string>
     <!-- Batery whitelist -->
+    <string name="prefs_battery_saver_title">Valge loend</string>
+    <string name="prefs_battery_saver_summary">Seadme valge nimekiri</string>
 </resources>

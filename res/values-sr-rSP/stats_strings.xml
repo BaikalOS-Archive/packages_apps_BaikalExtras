@@ -18,5 +18,31 @@
 -->
 <resources>
     <!-- About device screen, list item title. Takes the user to the screen about opting in or out of anonymous statistics. -->
+    <string name="anonymous_statistics_title">BaikalOS Статистике</string>
+    <string name="anonymous_statistics_warning_title">О статистикама</string>
+    <string name="anonymous_statistics_warning">Омогућавањем слања BaikalOS статистикe дозволиће се да се нелични подаци доставе
+         нашим серверима. Информације које се шаљу садрже јединствену идентификацију која не угрожава вашу приватност или личне податке.
+         Подаци се шаљу једном недељно.\n\nЗа пример података који се шаљу, додирните Преглед Података.</string>
+    <string name="enable_reporting_title">Омогући извештавање</string>
+    <string name="disable_reporting_persistent">Истрајно одрицање</string>
+    <string name="preview_data_title">Преглед података</string>
+    <string name="view_stats_title">Прикажи Страницу Статистика</string>
+    <string name="anonymous_learn_more">Сазнајте више</string>
+    <string name="last_report_on">Последњи извештај</string>
+    <string name="reporting_interval">Интервал извештавања</string>
+    <plurals name="reporting_interval_days">
+        <item quantity="one">1 дан</item>
+        <item quantity="few">%d дана</item>
+        <item quantity="other">%d дана</item>
+    </plurals>
+    <string name="next_report_on">Следећи извештај</string>
     <!-- Anonymous Statistics - Preview -->
+    <string name="preview_id_title">Јединствени ID</string>
+    <string name="preview_device_title">Уређај</string>
+    <string name="preview_version_title">Верзија</string>
+    <string name="preview_country_title">Држава</string>
+    <string name="preview_carrier_title">Оператер</string>
+    <string name="preview_romname_title">Назив ROM-а</string>
+    <string name="preview_romversion_title">BaikalOS Верзија</string>
+    <string name="preview_buildtype_title">BaikalOS Врста Издања</string>
 </resources>

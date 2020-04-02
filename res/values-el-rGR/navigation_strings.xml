@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- DT2S -->
+    <string name="double_tap_sleep_gesture_title">Διπλό πάτημα στην στατική μπάρα για απενεργοποίηση</string>
+    <string name="double_tap_sleep_gesture_summary">Πατήστε δύο φορές στην στατική μπάρα, για να βάλετε το τηλέφωνο σε αναστολή</string>
     <!-- Navigation bar -->
+    <string name="navigation_bar_title">Μπάρα πλοήγησης</string>
+    <string name="navigation_bar_title_summary">Ενεργοποίηση της εικονικής μπάρας πλοήγησης, στην οθόνη</string>
     <!-- OP like Navigation Gestures -->
+    <string name="gesture_settings_title">Χειρονομίες πλοήγησης</string>
+    <string name="gesture_settings_info">Πρέπει να απενεργοποιηθεί η γραμμή πλοήγησης! \n\nΔιαθέσιμες χειρονομίες:\n\n\Πίσω\n-σαρώστε προς τα επάνω στη αριστερή ή τη δεξιά πλευρά\n\nΑρχική\n- Σαρώστε προς τα επάνω στο κεντρο\n\nΠροσφατες εφαρμογές\n-σαρώστε προς τα επάνω στο κέντρο και κρατήστε\n\nLast app\n-Σύντομη σάρωση και κρατήστε τις στο κέντρο</string>
+    <string name="use_bottom_gesture_title">Χειρονομίες πλοήγησης</string>
+    <string name="use_bottom_gesture_summary">Χρησιμοποιήστε τη χειρονομια σάρωση από κάτω προς τα πάνω για την πλοήγηση</string>
 </resources>

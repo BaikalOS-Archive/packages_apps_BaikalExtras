@@ -1,2 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="torch_title">Бакља</string>
+    <string name="torch_summary">Подешавања везане за бакљу</string>
+    <string name="torch_long_press_power_gesture_title">Паљење бакљу тастером Напајања</string>
+    <string name="torch_long_press_power_gesture_summary">Паљење бакљу дугим притиском тастера Напајања док је екран искључен</string>
+    <string name="torch_on_incoming_call_title">Блиц при Долазном Позиву</string>
+    <string name="torch_on_incoming_call_summary">Блиц при долазном позиву</string>
+</resources>

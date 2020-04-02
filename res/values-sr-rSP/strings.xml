@@ -17,32 +17,84 @@
  */
 -->
 <resources>
+    <string name="app_name">BaikalOS Додатно</string>
     <!-- Dashboard -->
+    <string name="user_interface_category">Кориснички интерфејс</string>
+    <string name="system_category">Систем</string>
+    <string name="other_category">Остало</string>
     <!-- Device parts -->
+    <string name="device_part_title">Функције уређаја</string>
+    <string name="device_part_category">Уређај</string>
     <!-- Status bar -->
+    <string name="status_bar_title">Статусна трака</string>
+    <string name="status_bar_summary">Уреди изглед статуснe тракe</string>
     <!-- StatusBar Battery Options -->
     <!-- Bluetooth status -->
     <!-- Statusbar net monitor -->
+    <string name="network_traffic_state_title">Прикажи активност мреже на статусној траци</string>
+    <string name="network_traffic_autohide_threshold_title">Граница аутоматског скривања активности мреже (KB/s)</string>
     <!-- 4G icon -->
+    <string name="show_fourg_icon_title">4G икона</string>
+    <string name="show_fourg_icon_summary">Прикажи 4G икону у икони сигнала уместо LTE-а</string>
     <!-- Roaming indicator icon -->
+    <string name="roaming_indicator_icon_title">Индикатор роминга</string>
+    <string name="roaming_indicator_icon_summary">Прикажи индикатор роминга у икони сигнала у роминг режиму</string>
     <!-- Show VoLTE icon on statusbar -->
+    <string name="volte_icon_title">VoLTE икона</string>
+    <string name="volte_icon_summary">Прикажи VoLTE икону</string>
     <!-- QS Header battery percentage -->
     <!-- Battery bar -->
+    <string name="battery_bar_title">Трака батерије</string>
+    <string name="battery_bar_color_title">Светле боје</string>
+    <string name="battery_bar_color_summary">Опсег боја коришћен у тамној статусној траци</string>
+    <string name="battery_bar_dark_color_title">Тамне боје</string>
+    <string name="battery_bar_dark_color_summary">Опсег боја коришћен у светлој статусној траци</string>
+    <string name="battery_bar_charging_color_title">Светла боја пуњења</string>
+    <string name="battery_bar_charging_color_summary">Боја пуњења у тамној статусној траци</string>
+    <string name="battery_bar_charging_dark_color_title">Тамна боја пуњења</string>
+    <string name="battery_bar_charging_dark_color_summary">Боја пуњења у светлој статусној траци</string>
+    <string name="battery_bar_style_title">Поравнавање</string>
+    <string name="battery_bar_thickness_title">Дебљина</string>
+    <string name="battery_bar_animate_title">Анимација пуњења</string>
+    <string name="battery_bar_style_regular">Редовни</string>
+    <string name="battery_bar_style_center_mirrored">Одражавање у центру</string>
+    <string name="battery_bar_style_reversed">Обрнут</string>
+    <string name="battery_bar_use_charging_color_title">Прилагођена боја пуњења</string>
+    <string name="battery_blend_start">Празно</string>
+    <string name="battery_blend_end">Пуно</string>
+    <string name="battery_blend_between">Средњe</string>
     <!-- StatusBar weather settings -->
     <!-- Smart pulldown-->
+    <string name="smart_pulldown_dismissable">без одбачених обавештења</string>
+    <string name="smart_pulldown_ongoing">вез долазећих обавештења</string>
+    <string name="smart_pulldown_summary">Отвори брза подешавања када имате %1$s обавештење/а</string>
+    <string name="smart_pulldown_none_summary">Отвори брза подешавања када нема обавештења</string>
+    <string name="smart_pulldown_off_summary">је искључено</string>
     <!-- Double tap to sleep on status bar -->
     <!-- Statusbar Clock options -->
+    <string name="status_bar_am_pm_info">24-часовни сат је омогућен</string>
+    <string name="clock_date_string_edittext_title">Мора бити у формату датума нпр. MM/dd/yy</string>
+    <string name="clock_date_string_edittext_summary">Унеси стринг</string>
+    <string name="menu_cancel">Откажи</string>
+    <string name="menu_save">Сачувај</string>
     <!-- Statusbar BaikalOS logo -->
     <!-- Statusbar categories -->
+    <string name="status_bar_icons_category_title">Иконе</string>
     <!-- Show 4G instead of LTE -->
     <!-- Notifications -->
+    <string name="notifications_title">Обавештења</string>
+    <string name="notifications_summary">Напредно управљање обавештењима</string>
     <!-- Heads up -->
+    <string name="notification_heads_up_title">Искачуће поруке</string>
+    <string name="notification_heads_up_summary">Дозволи искачућа обавештења</string>
     <!-- Notification guts kill app button -->
     <!-- InCall notifications vibrate -->
     <!-- Brightness slider settings -->
     <!-- Battery Styles -->
     <!-- Notification count -->
     <!-- Quick settings -->
+    <string name="quick_settings_title">Брза подешавања</string>
+    <string name="quick_settings_summary">Уреди изглед брзих подешавања</string>
     <!-- Disable music track title in QS tile -->
     <!-- Small quick settings scroller -->
     <!-- QS rows and columns -->
@@ -53,17 +105,81 @@
     <!-- QS tiles title visibility -->
     <!-- QS carrier text visibility -->
     <!-- QS Headers -->
+    <string name="custom_header_browse_title">Прегледај инсталирана заглавља</string>
+    <string name="custom_header_browse_summary_new">Прегледај све колекције доступних заглавља</string>
+    <string name="custom_header_pick_title">Одабери слику заглавља</string>
+    <string name="custom_header_pick_summary">Одабери слику за статични режим</string>
+    <string name="header_provider_disabled">Онемогућено</string>
     <!-- Tiles animation style  -->
     <!-- Recents -->
+    <string name="recents_title">Недавно</string>
+    <string name="recents_summary">Уреди изглед недавних апликација</string>
+    <string name="stock_recents_category">Недавне сток ставке</string>
+    <string name="alternative_recents_category">Недавне алтернативне ставке</string>
+    <string name="alternative_recents_swipe_up_enabled_warning_summary">Када повучите горе да бисте отворили недавне ставке, само ће оне подразумеване бити приказане</string>
     <!-- Recents panel settings -->
     <!-- Recents Membar -->
     <!-- Stock recents icon pack -->
     <!-- Slim recents -->
+    <string name="slim_recents_title">Недавне Slim ставке</string>
+    <string name="recents_max_apps_title">Највише апликација дозвољено</string>
+    <string name="recent_panel_scale_title">Величина</string>
+    <string name="recent_panel_expanded_mode_title">Проширени режим</string>
+    <string name="recent_panel_expanded_mode_summary">Проширени преглед режим за недавне задатке</string>
+    <string name="recent_panel_expanded_mode_auto">Ауто (подразумевано)</string>
+    <string name="recent_panel_expanded_mode_always">Увек</string>
+    <string name="recent_panel_expanded_mode_never">Никад</string>
+    <string name="recent_panel_expanded_mode_disabled">Онемогућен</string>
+    <string name="recent_panel_bg_color_title">Боја позадине панела</string>
+    <string name="recent_card_bg_color_title">Боја позадине картице</string>
+    <string name="slim_recents_mem_display_long_click_clear_title">Дуги притисак меморијске траке</string>
+    <string name="slim_recents_mem_display_long_click_clear_summary">Обриши недавне активности помоћу дугог притиска на меморијској траци</string>
+    <string name="slim_icon_pack_title">Пакет икона</string>
+    <string name="slim_icon_pack_summary">Примени прилагођен пакет икона за апликације у панелу</string>
+    <string name="no_iconpacks_summary">Нема инсталираних пакета икона</string>
+    <string name="dialog_pick_iconpack_title">Одабери пакет икона</string>
+    <string name="default_iconpack_title">Подразумеване иконе</string>
+    <string name="slim_recents_corner_radius_title">Картица полупречника угла</string>
+    <string name="slim_recents_aicp_empty_drawable_title">Недавни AICP празни</string>
+    <string name="slim_recents_aicp_empty_drawable_summary">Приказана слика када нема недавних апликација</string>
     <!-- ATTENTION: RTL languages need to replace left with right -->
+    <string name="recent_panel_lefty_mode_title">Прикажи на левој ивици</string>
+    <string name="recent_panel_lefty_mode_summary">Прикажи панел недавних апликација на левој ивици</string>
+    <string name="profile_choose_app">Изабери апликацију</string>
+    <string name="dialog_delete_title">Обриши</string>
+    <string name="dialog_delete_message">Уклонити изабрану ставку?</string>
+    <string name="slim_blacklist_apps_cat_title">Црна листа</string>
+    <string name="slim_blacklist_apps_title">Црна листа апликација</string>
+    <string name="slim_blacklist_apps_summary">Неприказане апликације у панелу</string>
+    <string name="slim_blacklist_add_apps_title">Додај апликацију</string>
+    <string name="slim_blacklist_add_apps_summary">Додирните овде за додавање, додирните додану апликацију да бисте је уклонили</string>
     <!-- Slim Recent App Sidebar  -->
+    <string name="recent_app_sidebar_title">Бочна трака за недавне апликације</string>
+    <string name="recent_app_sidebar_summary">Прикажи пречице апликација на супротној ивици</string>
+    <string name="use_recent_app_sidebar_title">Омогући бочну траку апликација</string>
+    <string name="use_recent_app_sidebar_summary">Прикажи пречице апликација на супротној ивици</string>
+    <string name="recent_app_sidebar_content_title">Садржај бочне траке</string>
+    <string name="recent_app_sidebar_content_summary">Постави садржај бочне траке апликација</string>
+    <string name="recent_app_sidebar_style_title">Стил бочне траке</string>
+    <string name="recent_app_sidebar_style_summary">Промени изглед бочне траке</string>
+    <string name="recent_app_sidebar_hide_labels_title">Сакриј етикете икона</string>
+    <string name="recent_app_sidebar_label_color_title">Боја етикете</string>
+    <string name="recent_app_sidebar_bg_color_title">Боја позадине</string>
+    <string name="recent_app_sidebar_scale_title">Величина</string>
+    <string name="recent_app_sidebar_open_simultaneously_title">Отвори истовремено са недавнима</string>
+    <string name="recent_app_sidebar_open_simultaneously_summary">Онемогући ово за смањење успоравање код отварања недавних</string>
     <!-- Slim recents membar -->
+    <string name="slim_recents_mem_display_category_title">Меморијска трака</string>
+    <string name="slim_recents_mem_display_title">Прикажи меморијску траку</string>
+    <string name="slim_recents_mem_display_summaryOn">Меморијска трака омогућена</string>
+    <string name="slim_recents_mem_display_summaryOff">Меморијска трака онемогућена</string>
+    <string name="slim_recents_mem_display_color">Боја меморијске траке</string>
+    <string name="slim_recents_mem_display_text_color">Боја текста меморијске траке</string>
     <!-- OmniSwitch -->
     <!-- Lockscreen -->
+    <string name="lockscreen_title">Закључани екран</string>
+    <string name="lockscreen_summary">Уреди изглед закљученог екрана</string>
+    <string name="lockscreen_security_category">Безбедност</string>
     <!-- Double tap to sleep on lockscreen -->
     <!-- Media art -->
     <!-- Lockscreen battery info indicator  -->
@@ -71,12 +187,23 @@
     <!-- Power menu on secure lockscreen -->
     <!-- Disable QS on secure Lockscreen -->
     <!-- Fingerprint authentication vibration -->
+    <string name="fprint_sucess_vib_title">Вибрација при аутентикацији отиска прста</string>
+    <string name="fprint_sucess_vib_summary_on">Вибрација при успешној аутентикацији отиска омогућен</string>
+    <string name="fprint_sucess_vib_summary_off">Вибрација при успешној аутентикацији отиска онемогућен</string>
     <!-- Fingerprint unlock keystore -->
+    <string name="fp_unlock_keystore_title">Откључавање отиском</string>
+    <string name="fp_unlock_keystore_summary">Откључај уређај отиском након поновног покретања без PIN-а, лозинке или шаблона</string>
     <!-- Ambient display bottom info -->
     <!-- Show Lockscreen clock, date, & alarm -->
     <!-- Hide statusbar on lockscreen -->
     <!-- Other UI tweaks -->
     <!-- Smartlock Auto Unlock -->
+    <string name="smartlock_auto_unlock_title">Smartlock Аутоматско Откључавање</string>
+    <string name="smartlock_auto_unlock_summary">Аутоматско откључавање ако је smartlock аутентикован</string>
+    <string name="smartlock_lid_unlock_title">Smartcover Аутоматско Откључавање</string>
+    <string name="smartlock_lid_unlock_summary">Аутоматско откључавање код smartcover-а ако је smartlock аутентикован</string>
+    <string name="other_ui_title">Остала фина подешавања интерфејса</string>
+    <string name="other_ui_summary">Разно</string>
     <!-- Volume dialog timeout -->
     <!-- Screenshot sound -->
     <!-- Swap volume keys based on device rotation -->
@@ -92,38 +219,186 @@
     <!-- Turn on display when power connected; turn off display when power disconnected -->
     <!-- Power Button - Long press for torch -->
     <!-- System animations -->
+    <string name="system_animations_title">Анимације</string>
+    <string name="system_animations_summary">Системске анимације</string>
+    <string name="custom_bootanimation_title">Анимација код покретања</string>
+    <string name="custom_bootanimation_summary">Изаберите прилагођену анимацију код покретања. На сваку промену тренутна анимација биће бекапована у baikalos_backup фасциклу у интерној меморији. Оне старе треба да ручно буду избрисане.</string>
+    <string name="bootanimation_preview">Преглед анимације код покретања</string>
+    <string name="bootanimation_set_custom">Постави прилагођену...</string>
+    <string name="bootanimation_creating_preview">Израда прегледа...</string>
+    <string name="bootanimation_error_reading_zip_file">Грешка при читању zip датотеке</string>
+    <string name="bootanimation_error_creating_preview">Грешка при креирању прегледа</string>
+    <string name="bootanimation_install_file_manager_error">Није пронађена апликација за одабир zip датотеку. Молимо инсталирајте неки фајлменаџер.</string>
+    <string name="bootanimation_apply">Примени</string>
+    <string name="bootanimation_install_successful">Нова анимација код покретања успешно примењена.</string>
     <!-- System behaviour -->
+    <string name="system_behaviour_title">Понашање система</string>
+    <string name="system_behaviour_summary">Фина подешавања система</string>
+    <string name="selinux_category">SELinux</string>
+    <string name="selinux_explanation_summary">SELinux је скуп измена и корисничких алата за језгро система (кернел). Промена начина може проузроковати нежељене ефекте. Користите ову опцију на властиту одговорност.</string>
+    <string name="selinux_mode_title">SELinux режим</string>
+    <string name="selinux_permissive_summary">Допустив</string>
+    <string name="selinux_enforcing_summary">Наметнут</string>
+    <string name="selinux_persistence_title">Устрајати између поновних покретања</string>
+    <string name="selinux_persistence_summary">Врати горе подешен SEPolicy режим при сваком покретању</string>
+    <string name="selinux_permissive_toast_title">Режим SELinux подешен као допустив!</string>
+    <string name="selinux_enforcing_toast_title">Режим SELinux подешен као наметнут!</string>
     <!-- Log it -->
+    <string name="troubleshooting_settings_title">Решавање проблема</string>
+    <string name="troubleshooting_reset_settings_title">Ресетуј Профиле Апликација</string>
+    <string name="troubleshooting_reset_settings_summary">Ресетуј све Профиле Апликација на њихово подразумевано</string>
+    <string name="troubleshooting_reset_restrictions_summary">Ресетуј све рестрикције на Без Ограничења</string>
+    <string name="troubleshooting_reset_restrictions_title">Ресетуј рестрикције</string>
+    <string name="troubleshooting_log_title">Системске Евиденције</string>
+    <string name="log_it_title">Забележи то срање!</string>
+    <string name="log_it_summary">Logcat, kmesg, dmesg</string>
+    <string name="logcat_title">Logcat</string>
+    <string name="logcat_radio_title">Радио евиденција</string>
+    <string name="kmesg_title">Kmesg</string>
+    <string name="dmesg_title">Dmesg</string>
+    <string name="log_it_now_title">Ангажуј</string>
+    <string name="log_it_dialog_title">Ангажуј</string>
+    <string name="logcat_warning">Подели то или мрш!</string>
+    <string name="share_title">Дељење...</string>
+    <string name="log_it_share_subject">BaikalOS евиденције</string>
+    <string name="log_it_now_summary">Стрпљиво сачекајте за израду евиденција</string>
+    <string name="log_it_logs_in_progress">Израда евиденција…</string>
+    <string name="log_it_share_type_title">Метод дељења</string>
+    <string name="log_it_share_type_zip">ZIP датотека</string>
+    <string name="log_it_share_type_haste">Отпреми у BaikalOS Haste</string>
+    <string name="log_it_share_via">Подели преко</string>
     <!-- Panel porn -->
+    <string name="panel_porn_title">Порно панел</string>
+    <string name="panel_porn_summary">Свет Давора!</string>
     <!-- Volume dialog opacity -->
     <!-- Power menu and dialogs opacity -->
     <!-- AE settings -->
+    <string name="ae_settings_title">BaikalOS Додатно прилгођавање</string>
+    <string name="ae_settings_summary">Прилагодите изглед и понашање BaikalOS Додатног</string>
+    <string name="theme_title">Тема</string>
+    <string name="theme_default">Аутоматска</string>
+    <string name="theme_default_force">Подразумевана подешавања за теме</string>
+    <string name="theme_default_more_accent">Више боје</string>
+    <string name="theme_light">Светла</string>
+    <string name="theme_light_more_accent">Светла с више боје</string>
+    <string name="theme_dark">Тамна</string>
+    <string name="theme_dark_more_accent">Тамна с више боје</string>
+    <string name="ae_launcher_enabled_title">Прикажи икону покретача</string>
+    <string name="ae_launcher_enabled_summary">Прикажи BaikalOS Додатно у покретачу</string>
+    <string name="ae_launcher_enabled_update">Видљивост иконе покретача је ажурирана. То може потрајати неко време да би промена буде примењена</string>
     <!-- About -->
+    <string name="about_title">О апликацији</string>
+    <string name="about_summary">Прикажи информације о овом ROM-у</string>
+    <string name="weblinks_category">Линкови</string>
+    <string name="info_category">Инфо</string>
+    <string name="baikalos_website_title">Веб страница</string>
+    <string name="baikalos_website_summary">Посетите BaikalOS веб страницу</string>
+    <string name="g_plus_title">G+ заједница</string>
+    <string name="g_plus_summary">Посетите нашу Google+ заједницу</string>
+    <string name="baikalos_gerrit_title">Gerrit</string>
+    <string name="baikalos_gerrit_summary">Посетите наш gerrit да бисте сазнали на чему радимо</string>
+    <string name="baikalos_changelog_title">Евиденција измена</string>
+    <string name="baikalos_changelog_summary">Прикажи недавне измене у BaikalOS-у</string>
+    <string name="baikalos_downloads_title">Преузимања</string>
+    <string name="baikalos_downloads_summary">Посетите BaikalOS страницу преузимања за ваш уређај</string>
+    <string name="baikalos_ota_title">Центар ажурирања</string>
+    <string name="baikalos_ota_summary">Провери ажурирања за BaikalOS</string>
+    <string name="stats_title">Статистике</string>
+    <string name="stats_summary">Опција унутра/напољу за безимене статистике</string>
+    <string name="device_maintainer_title">Одржавач уређаја</string>
+    <string name="device_maintainer_dialog">Одржавач уређаја</string>
+    <string name="device_maintainers_dialog">Одржавачи уређаја</string>
+    <string name="device_maintainer_default">Непознат</string>
+    <string name="no_root_title">Без права root-а</string>
+    <string name="no_root_summary">За више функционалности, осигурајте права root-а на вашем уређају</string>
     <!-- Other / general purpose -->
+    <string name="on">Укљ.</string>
+    <string name="off">Искљ.</string>
+    <string name="reset">Ресет</string>
+    <string name="systemui_restart_title">Потребно је поновно покретање интерфејса</string>
+    <string name="systemui_restart_message">Да би промене буду примењене, потребно је поновно покретање интерфејса. Урадити то сада?</string>
+    <string name="cannot_get_su">Неуспешна радња због недостатка приступа као суперкорисник</string>
+    <string name="launcher_shortcut_disabled_message">Пречица онемогућена</string>
+    <string name="hidden_anim_activity_title">Ајмо на ракију!</string>
+    <string name="hidden_anim_more_nice">ДОБРО</string>
     <!-- Sensor block per-package -->
+    <string name="sensor_block_title">Блокада сензора по пакету</string>
+    <string name="sensor_block_summary">Спречи апликације приступ извесним сензорима ради уштеде енергије.</string>
     <!-- Weather - OmniJaws Settings -->
+    <string name="weather_title">Време</string>
+    <string name="weather_config_title">Подешавања услуге</string>
     <!-- Lockscreen Weather -->
     <!-- Statusbar ticker -->
+    <string name="status_bar_ticker_title">Тикер</string>
+    <string name="status_bar_show_ticker_title">Тикер</string>
+    <string name="status_bar_show_ticker_summary">Преглед обавештења у статусној траци уместо искачућих порука</string>
+    <string name="ticker_animation_mode_title">Анимација тикера</string>
+    <string name="ticker_animation_mode_alpha_fade">Изблеђивање</string>
+    <string name="ticker_animation_mode_scroll">Скрол</string>
+    <string name="ticker_tick_duration_title">Трајања тикера</string>
     <!-- Navigation-->
+    <string name="navigation_title">Навигација</string>
+    <string name="navigation_summary">Сток/Smartbar/Fling/Гестови</string>
     <!-- Navigation bar -->
     <!-- DUI -->
+    <string name="icon_pack_picker_dialog_title">Пакети икона</string>
+    <string name="picker_activities">Активности</string>
+    <string name="select_custom_app_title">Избор прилагођене апликације</string>
+    <string name="select_custom_activity_title">Избор прилагођене активности</string>
+    <string name="profile_applist_title">Апликације</string>
     <!-- Actions dialog and default task values set in ActionPreference xml-->
+    <string name="choose_action_title">Одаберите радњу</string>
     <!-- Fling -->
     <!-- Pulse navigation bar music visualizer -->
     <!-- Pulse config -->
     <!-- Navbar height -->
     <!-- SmartBar -->
+    <string name="smartbar_factory_reset_title">Ресетуј на сток</string>
+    <string name="smartbar_factory_reset_confirm">Да ли сте сигурни да желите ресетовати Smartbar на сток подешавање?</string>
+    <string name="smartbar_backup_current_config_title">Сачувај прпфил</string>
+    <string name="smartbar_restore_config_title">Врати профил</string>
+    <string name="smartbar_config_name_edit_dialog_title">Име Smartbar профила</string>
+    <string name="smartbar_config_name_edit_dialog_message">Унесите име или оставите празно</string>
+    <string name="smartbar_config_dialog_title">Smartbar профили</string>
+    <string name="smartbar_config_backup_success_toast">Smartbar профил успешно сачуван</string>
+    <string name="smartbar_config_restore_success_toast">Smartbar профил успешно враћен</string>
+    <string name="smartbar_config_backup_error_toast">Грешка приликом чувања Smartbar профила</string>
+    <string name="smartbar_config_restore_error_toast">Грешка приликом враћања Smartbar профила</string>
     <!-- Carrier Label -->
+    <string name="custom_carrier_label_title">Прилагођена ознака оператера</string>
+    <string name="custom_carrier_label_explain">Молимо унесите нову ознаку. Оставите празно поље уколико желите вратити на подразумевану ознаку.</string>
+    <string name="custom_carrier_label_notset">Прилагођена ознака тренутно није подешена</string>
     <!-- AOKP custom system animations -->
     <!-- Lock screen visualizer -->
     <!-- Screen state service -->
+    <string name="screen_state_toggles_summary">\@null</string>
+    <string name="screen_state_toggles_title">Обустави Радње</string>
+    <string name="screen_state_toggles_enable_title">Омогући</string>
+    <string name="screen_state_toggles_enable_summary">Радње ће бити извршене док је екран искључен. Кад се екран укључи ће бити враћен претходно стање.</string>
+    <string name="screen_state_toggles_mobile_title">Мобилне мреже</string>
+    <string name="screen_state_toggles_location_title">Локација</string>
+    <string name="screen_state_toggles_twog">Пређи на 2G</string>
+    <string name="screen_state_toggles_twog_summary">Режим мреже ће се пребацити на 2G код искљученог екрана</string>
+    <string name="screen_state_toggles_gps">Онемогући GPS</string>
+    <string name="screen_state_toggles_gps_summary">Сервис GPS лоцирања ће бити онемогућен када је екран искључен</string>
+    <string name="screen_state_toggles_mobile_data">Онемогући мобилне податке</string>
+    <string name="screen_state_toggles_mobile_data_summary">Мобилни подаци ће бити онемогућени када је екран искључен</string>
+    <string name="screen_state_off_delay_title">Одлагање радњи код искљученог екрана</string>
+    <string name="screen_state_off_delay_summary">Минути који треба сачекати пре извршења радњи након искључења екрана</string>
+    <string name="screen_state_on_delay_title">Одлагање радњи код укљученог екрана</string>
+    <string name="screen_state_on_delay_summary">Минути који треба сачекати пре извршења радњи након укључења екрана</string>
     <!-- Ambient Music Ticker -->
     <!-- Screen Off animation -->
+    <string name="screen_off_animation_title">Анимација искључивања екрана</string>
+    <string name="screen_off_animation_default">Подразумевано</string>
+    <string name="screen_off_animation_crt">CRT</string>
+    <string name="screen_off_animation_scale">Размера</string>
     <!-- Suppress notification sound/vibration -->
     <!-- Accidental Touch -->
     <!-- Dynamic Navbar -->
     <!-- Face unlock toggle -->
     <!-- Navigation -->
+    <string name="navigation_category">Навигација</string>
     <!-- HW keys -->
     <!-- Volume keys -->
     <!-- Hardware button navigation -->
@@ -131,6 +406,9 @@
     <!-- Volume rocker wake -->
     <!-- Button brightness -->
     <!-- Quick QS pull down -->
+    <string name="status_bar_quick_qs_pulldown_summary_left">Лева ивица статусне траке повлачи Брза Подешавања</string>
+    <string name="status_bar_quick_qs_pulldown_summary_right">Десна ивица статусне траке повлачи Брза Подешавања</string>
+    <string name="status_bar_quick_qs_pulldown_off">Искљ.</string>
     <!-- Status bar system icons -->
     <!-- Toast Animation -->
     <!-- System default animation -->
@@ -144,10 +422,44 @@
     <!-- Hostname setting -->
     <!-- Gestures -->
     <!-- Carbon gestures -->
+    <string name="carbon_gesture_launch">Покрени</string>
     <!-- Disable FC notifications -->
     <!-- Circle app bar -->
     <!--OmniGesture-->
     <!-- Themes -->
+    <string name="theming_title">Теме</string>
+    <string name="theming_summary">Подразумевани дизајн уређаја</string>
+    <string name="theming_base_title">Основна тема</string>
+    <string name="theming_accent_title">Наглашена боја</string>
+    <string name="theming_base_default">Светла (подразумевана)</string>
+    <string name="theming_base_dark">Тамна, светла обавештења</string>
+    <string name="theming_base_dark_notif">Тамна</string>
+    <string name="theming_base_dark_transparent">Тамна провидна</string>
+    <string name="theming_base_black">Црна, светла обавештења</string>
+    <string name="theming_base_black_notif">Црна</string>
+    <string name="theming_base_black_transparent">Црна провидна</string>
+    <string name="theming_accent_default">Подразумевана</string>
+    <string name="theming_accent_amber">Ћилибарна</string>
+    <string name="theming_accent_bluelight">Плава</string>
+    <string name="theming_accent_cyan">Цијан</string>
+    <string name="theming_accent_denim">Деним</string>
+    <string name="theming_accent_gold">Златна</string>
+    <string name="theming_accent_greenlight">Зелена</string>
+    <string name="theming_accent_lime">Лимета</string>
+    <string name="theming_accent_orange">Наранџаста</string>
+    <string name="theming_accent_oxygen">Кисеоник</string>
+    <string name="theming_accent_pink">Розе</string>
+    <string name="theming_accent_pixel">Пиксел</string>
+    <string name="theming_accent_purple">Љубичаста</string>
+    <string name="theming_accent_red">Црвена</string>
+    <string name="theming_accent_teal">Плавозелена</string>
+    <string name="theming_accent_turquoise">Тиркиз</string>
+    <string name="theming_accent_yellow">Жута</string>
     <!-- Device hidden prefs -->
+    <string name="show_device_hidden_prefs_title">Немој сакрити преференције</string>
+    <string name="show_device_hidden_prefs_summary">По подразумеваном, преференције које вероватно неће добро радити на вашем уређају (због нпр. стања root-а или величине екрана) неће се приказати</string>
     <!-- Application Settings -->
+    <string name="app_settings_category">Подешавања Апликација</string>
+    <string name="app_settings_title">Профили Апликација</string>
+    <string name="app_settings_summary">Одаберите подешавања апликација за Батерију, Перформанси, Термал, итд...</string>
 </resources>

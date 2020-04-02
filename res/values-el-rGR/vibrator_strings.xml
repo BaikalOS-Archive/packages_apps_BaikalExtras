@@ -1,4 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="vibrator_title">Δόνηση</string>
+    <string name="vibrator_summary">Ρυθμίσεις σχετικά με την δόνηση</string>
     <!-- Incall vibrate options -->
+    <string name="incall_vibration_category">Δόνηση κατά την κλήση</string>
+    <string name="incall_vibrate_connect_title">Δόνηση κατά τη σύνδεση</string>
+    <string name="incall_vibrate_connect_summary">Δόνηση κατά τη σύνδεση</string>
+    <string name="incall_vibrate_call_wait_title">Δόνηση κατά την αναμονή κλήσεων</string>
+    <string name="incall_vibrate_call_wait_summary">Δόνηση κατά την αναμονή κλήσεων</string>
+    <string name="incall_vibrate_disconnect_title">Δόνηση κατά την αποσύνδεση</string>
+    <string name="incall_vibrate_disconnect_summary">Δόνηση κατά την αποσύνδεση</string>
 </resources>
