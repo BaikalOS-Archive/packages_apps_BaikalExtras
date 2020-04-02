@@ -98,7 +98,7 @@ public class Dashboard extends BaseSettingsFragment {
         }
 
         Preference logIt = findPreference(PREF_LOG_IT);
-        Util.requireRoot(getActivity(), logIt);
+        //Util.requireRoot(getActivity(), logIt);
 
         mBaikalOSLogo.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
             @Override
