@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_profile_title">Профиль приложения</string>
+    <string name="app_profile_restricted_title">Ограниченное</string>
     <string name="app_profile_restricted_summary">Ограничить приложение в фоновом режиме</string>
     <string name="app_profile_performance_title">Профиль производительности</string>
     <string name="app_profile_thermal_title">Профиль температурного режима</string>
@@ -21,6 +22,8 @@
     <string name="thermal_nolimits">Без ограничений</string>
     <string name="thermal_high">Высокий</string>
     <string name="thermal_camera">Камера</string>
+    <string name="thermal_reader">Читалка</string>
+    <string name="thermal_cool">Холодный</string>
     <string name="thermal_incall">В режиме разговора</string>
     <string name="thermal_vr">VR</string>
     <string name="brightness_default">По умолчанию</string>
@@ -37,7 +40,9 @@
     <string name="brightness_80">80\%</string>
     <string name="brightness_90">80\%</string>
     <string name="app_profile_pinned_title">Прикреплено</string>
+    <string name="app_profile_pinned_summary">Менеджер памяти не будет закрывать приложение по неактивности</string>
     <string name="app_profile_disable_twl_title">Отключить температурный белый список</string>
+    <string name="app_profile_disable_twl_summary">Не помещать приложение в белый список по получению уведомлений для экономии энергии</string>
     <string name="app_profile_reader_title">Режим чтения</string>
     <string name="app_profile_reader_summary">Разрешить отключать ЦП во время работы этого приложения</string>
     <string name="app_profile_fps_title">Показывать частоту кадров</string>
