@@ -31,8 +31,10 @@
     <string name="audio_tweaks_a2dp_sbc_disable_title">Отключить SBC</string>
     <string name="audio_tweaks_a2dp_aac_disable_title">Отключить AAC</string>
     <string name="audio_tweaks_a2dp_aptx_disable_title">Отключить APTX</string>
-    <string name="audio_tweaks_a2dp_aptx_hd_disable_title">Отключить HD APTX</string>
+    <string name="audio_tweaks_a2dp_aptx_hd_disable_title">Отключить APTX HD</string>
     <string name="audio_tweaks_a2dp_ldac_disable_title">Отключить LDAC</string>
     <string name="audio_tweaks_a2dp_sbc_priority_title">Приоритет SBC</string>
     <string name="audio_tweaks_a2dp_sbc_priority_summary">Приоритет SBC над AAC/APTX/APTX HD</string>
+    <string name="audio_tweaks_a2dp_last_codec_title">Последний использованный кодек</string>
+    <string name="audio_tweaks_a2dp_last_bitrate_title">Последний использованный битрейт</string>
 </resources>
