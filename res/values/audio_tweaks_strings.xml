@@ -32,12 +32,33 @@
     <string name="audio_tweaks_a2dp_sbc_prefer_summary">Prefer SBC over AAC or AptX</string>
 
     <string name="audio_settings_title">Common</string>
+
     <string name="audio_bluetooth_title">Bluetooth</string>
+    <string name="audio_bluetooth_summary">Bluetooth restart required for changes to take active!</string>
 
     <string name="audio_tweaks_hq_policy_title">Use HQ engine by default</string>
     <string name="audio_tweaks_hq_policy_summary">Use HQ settings for music playback by default. Reboot required!</string>
 
     <string name="baikalos_disable_hp_detect_title">Disable Headphones detect</string>
     <string name="baikalos_disable_hp_detect_summary">Disable detection of wired headphones</string>
+
+
+    <string name="audio_tweaks_a2dp_sbc_disable_title">Disable SBC</string>
+    <string name="audio_tweaks_a2dp_sbc_disable_summary"></string>
+
+    <string name="audio_tweaks_a2dp_aac_disable_title">Disable AAC</string>
+    <string name="audio_tweaks_a2dp_aac_disable_summary"></string>
+
+    <string name="audio_tweaks_a2dp_aptx_disable_title">Disable APTX</string>
+    <string name="audio_tweaks_a2dp_aptx_disable_summary"></string>
+
+    <string name="audio_tweaks_a2dp_aptx_hd_disable_title">Disable APTX HD</string>
+    <string name="audio_tweaks_a2dp_aptx_hd_disable_summary"></string>
+
+    <string name="audio_tweaks_a2dp_ldac_disable_title">Disable LDAC</string>
+    <string name="audio_tweaks_a2dp_ldac_disable_summary"></string>
+
+    <string name="audio_tweaks_a2dp_sbc_priority_title">Prioritize SBC</string>
+    <string name="audio_tweaks_a2dp_sbc_priority_summary">Prioritize SBC codec over AAC/APTX/APTX HD</string>
 
 </resources>

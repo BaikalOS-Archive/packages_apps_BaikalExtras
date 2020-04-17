@@ -50,7 +50,45 @@
 
     <PreferenceCategory
         android:key="audio_bluetooth"
-        android:title="@string/audio_bluetooth_title">
+        android:title="@string/audio_bluetooth_title"
+        android:summary="@string/audio_bluetooth_summary">
+
+
+        <com.aicp.gear.preference.GlobalSettingSwitchPreference
+            android:key="baikalos_bt_sbc_disabled"
+            android:title="@string/audio_tweaks_a2dp_sbc_disable_title"
+            android:summary="@string/audio_tweaks_a2dp_sbc_disable_summary"
+            android:defaultValue="false" />
+
+        <com.aicp.gear.preference.GlobalSettingSwitchPreference
+            android:key="baikalos_bt_aac_disabled"
+            android:title="@string/audio_tweaks_a2dp_aac_disable_title"
+            android:summary="@string/audio_tweaks_a2dp_aac_disable_summary"
+            android:defaultValue="false" />
+
+        <com.aicp.gear.preference.GlobalSettingSwitchPreference
+            android:key="baikalos_bt_aptx_disabled"
+            android:title="@string/audio_tweaks_a2dp_aptx_disable_title"
+            android:summary="@string/audio_tweaks_a2dp_aptx_disable_summary"
+            android:defaultValue="false" />
+
+        <com.aicp.gear.preference.GlobalSettingSwitchPreference
+            android:key="baikalos_bt_aptx_hd_disabled"
+            android:title="@string/audio_tweaks_a2dp_aptx_hd_disable_title"
+            android:summary="@string/audio_tweaks_a2dp_aptx_hd_disable_summary"
+            android:defaultValue="false" />
+
+        <com.aicp.gear.preference.GlobalSettingSwitchPreference
+            android:key="baikalos_bt_ldac_disabled"
+            android:title="@string/audio_tweaks_a2dp_ldac_disable_title"
+            android:summary="@string/audio_tweaks_a2dp_ldac_disable_summary"
+            android:defaultValue="false" />
+
+        <com.aicp.gear.preference.GlobalSettingSwitchPreference
+            android:key="baikalos_bt_sbc_priority"
+            android:title="@string/audio_tweaks_a2dp_sbc_priority_title"
+            android:summary="@string/audio_tweaks_a2dp_sbc_priority_summary"
+            android:defaultValue="false" />
 
         <SwitchPreference
             android:key="audio_tweaks_a2dp_sbc_hd"
