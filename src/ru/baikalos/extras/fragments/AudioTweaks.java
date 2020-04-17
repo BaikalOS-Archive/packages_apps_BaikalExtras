@@ -51,12 +51,16 @@ public class AudioTweaks extends BaseSettingsFragment
     private static final String AUDIO_TWEAKS_A2DP_SBC_HD = "audio_tweaks_a2dp_sbc_hd";
     private static final String AUDIO_TWEAKS_A2DP_SBC_HDX = "audio_tweaks_a2dp_sbc_hdx";
 
+    private static final String AUDIO_TWEAKS_A2DP_LAST_CODEC = "audio_tweaks_a2dp_last_codec";
+    private static final String AUDIO_TWEAKS_A2DP_LAST_BITRATE = "audio_tweaks_a2dp_last_bitrate";
+
     private static final String SYSTEM_PROPERTY_AUDIO_HQ = "persist.baikal_audio_hq";
     private static final String SYSTEM_PROPERTY_SUSPEND_PLAY = "persist.audio.offload.suspend";
     private static final String SYSTEM_PROPERTY_A2DP_SBC_HD = "persist.bluetooth.sbc_hd";
     private static final String SYSTEM_PROPERTY_A2DP_SBC_HDX = "persist.bluetooth.sbc_hdx";
 
-
+    private static final String SYSTEM_PROPERTY_A2DP_LAST_CODEC = "baikal.last.a2dp_codec";
+    private static final String SYSTEM_PROPERTY_A2DP_LAST_BITRATE = "baikal.last.a2dp_bitrate";
 
     private Context mContext;
 
@@ -77,6 +81,37 @@ public class AudioTweaks extends BaseSettingsFragment
 
         mContext = (Context) getActivity();
         final Resources res = getActivity().getResources();
+
+
+        Preference  codec = (Preference) findPreference(AUDIO_TWEAKS_A2DP_LAST_CODEC);
+        Preference  bitrate = (Preference) findPreference(AUDIO_TWEAKS_A2DP_LAST_BITRATE);
+
+        String sCodec = SystemProperties.get(SYSTEM_PROPERTY_A2DP_LAST_CODEC,"");
+        String sBitrate = SystemProperties.get(SYSTEM_PROPERTY_A2DP_LAST_BITRATE,"");
+
+        switch(sCodec) {
+            case "":
+                    codec.setVisible(false);
+                    codec.setSummary("");
+                    bitrate.setVisible(false);
+                    bitrate.setSummary("");
+                break;
+
+            case "SBC HD":
+            case "SBC HDX":
+                    codec.setVisible(true);
+                    codec.setSummary(sCodec);
+                    bitrate.setVisible(true);
+                    bitrate.setSummary(sBitrate + " kBit/s");
+                break;
+
+            default:
+                    codec.setVisible(true);
+                    codec.setSummary(sCodec);
+                    bitrate.setVisible(false);
+                    bitrate.setSummary("");
+                break;
+        }
 
 
         mEnableAudioHq = (SwitchPreference) findPreference(AUDIO_TWEAKS_AUDIO_HQ);

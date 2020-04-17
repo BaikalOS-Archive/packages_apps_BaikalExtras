@@ -61,4 +61,7 @@
     <string name="audio_tweaks_a2dp_sbc_priority_title">Prioritize SBC</string>
     <string name="audio_tweaks_a2dp_sbc_priority_summary">Prioritize SBC codec over AAC/APTX/APTX HD</string>
 
+    <string name="audio_tweaks_a2dp_last_codec_title">Last used codec</string>
+    <string name="audio_tweaks_a2dp_last_bitrate_title">Last used bitrate</string>
+
 </resources>
