@@ -102,6 +102,12 @@
             android:summary="@string/audio_tweaks_a2dp_sbc_hdx_summary"
             android:defaultValue="false" />
 
+        <SwitchPreference
+            android:key="audio_tweaks_a2dp_sbc_hdu"
+            android:title="@string/audio_tweaks_a2dp_sbc_hdu_title"
+            android:summary="@string/audio_tweaks_a2dp_sbc_hdu_summary"
+            android:defaultValue="false" />
+
         <Preference
             style="?android:preferenceInformationStyle"
             android:key="audio_tweaks_a2dp_last_codec"

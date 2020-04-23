@@ -18,8 +18,8 @@
     <string name="audio_tweaks_a2dp_sbc_hd_summary">Использовать высокий SBC битрейт для A2DP профиля Bluetooth</string>
     <string name="audio_tweaks_a2dp_sbc_hdx_title">Высочайший битрейт SBC</string>
     <string name="audio_tweaks_a2dp_sbc_hdx_summary">Использовать высочайший SBC битрейт для A2DP профиля Bluetooth</string>
-    <string name="audio_tweaks_a2dp_sbc_hde_title">Экстремальный битрейт SBC</string>
-    <string name="audio_tweaks_a2dp_sbc_hde_summary">Использовать экстремальный SBC битрейт для A2DP профиля Bluetooth</string>
+    <string name="audio_tweaks_a2dp_sbc_hdu_title">Не ограничивать битрейт SBC</string>
+    <string name="audio_tweaks_a2dp_sbc_hdu_summary">Использовать неограниченный SBC битрейт для A2DP профиля Bluetooth</string>
     <string name="audio_tweaks_a2dp_sbc_prefer_title">Предпочтительно SBC</string>
     <string name="audio_tweaks_a2dp_sbc_prefer_summary">Предпочтительно SBC через AAC или AptX</string>
 </resources>
