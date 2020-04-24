@@ -17,8 +17,6 @@
     <string name="audio_tweaks_a2dp_sbc_hd_summary">Χρήση υψηλού SBC bitrate για προφίλ Bluetooth A2DP</string>
     <string name="audio_tweaks_a2dp_sbc_hdx_title">Ύψιστο SBC bitrate</string>
     <string name="audio_tweaks_a2dp_sbc_hdx_summary">Χρήση υψηλού SBC bitrate για προφίλ Bluetooth A2DP</string>
-    <string name="audio_tweaks_a2dp_sbc_hde_title">Απεριόριστο SBC bitrate</string>
-    <string name="audio_tweaks_a2dp_sbc_hde_summary">Χρήση υψηλού SBC bitrate για προφίλ Bluetooth A2DP</string>
     <string name="audio_tweaks_a2dp_sbc_prefer_title">Προτίμηση SBC</string>
     <string name="audio_tweaks_a2dp_sbc_prefer_summary">Προτίμηση SBC αντί AAC ή του Aptx</string>
     <string name="audio_settings_title">Τυπικό</string>
