@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+    <!-- Power Save -->
+    <string name="system_tweaks_title">System</string>
+    <string name="system_tweaks_summary">System Tweaks</string>
+
+    <string name="default_profiles_title">Default profiles</string>
+
+    <string name="system_tweaks_sec_hwc_title">Disable Secondary HWC</string>
+    <string name="system_tweaks_sec_hwc_summary">Disable HW Overlay on secondary display. Fix flickering on Android Auto and WFD.\nREBOOT REQUIRED!</string>
+
+</resources>

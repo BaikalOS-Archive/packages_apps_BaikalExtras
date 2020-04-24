@@ -74,6 +74,12 @@
 
 
         <PreferenceScreen
+            android:title="@string/system_tweaks_title"
+            android:summary="@string/system_tweaks_summary"
+            android:icon="@drawable/ic_settings_system_behaviour"
+            android:fragment="ru.baikalos.extras.fragments.SystemTweaks" />
+
+        <PreferenceScreen
             android:title="@string/audio_tweaks_title"
             android:summary="@string/audio_tweaks_summary"
             android:icon="@drawable/ic_settings_system_audio"

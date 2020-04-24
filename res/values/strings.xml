@@ -24,7 +24,7 @@
     <!-- Dashboard -->
 
     <string name="user_interface_category">UI</string>
-    <string name="system_category">System</string>
+    <string name="system_category">BaikalOS Settings</string>
     <string name="other_category">Other</string>
 
     <!-- Device parts -->

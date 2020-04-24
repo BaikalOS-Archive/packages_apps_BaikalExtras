@@ -55,11 +55,6 @@ public class PowerSave extends BaseSettingsFragment {
 
     private SwitchPreference mEnableCoreCtl;
     
-    private ListPreference mDefaultPerfProfile;
-    private ListPreference mDefaultThermProfile;
-
-    //IBaikalServiceController mBaikalService;
-
     @Override
     protected int getPreferenceResource() {
         return R.xml.power_save;
@@ -70,74 +65,14 @@ public class PowerSave extends BaseSettingsFragment {
         super.onCreate(savedInstanceState);
         final PreferenceScreen screen = getPreferenceScreen();
 
-        final PreferenceCategory profilesCategory =
-                (PreferenceCategory) screen.findPreference("default_profiles");
-
-
-        boolean perfProf  = SystemProperties.get("baikal.eng.perf", "0").equals("1");
-        boolean thermProf  = SystemProperties.get("baikal.eng.therm", "0").equals("1");
-
-        boolean core_ctl  = SystemProperties.get("baikal.eng.core_ctl", "0").equals("1");
-
-        if( !perfProf && !thermProf ) {
-            if( profilesCategory != null ) {
-                screen.removePreference(profilesCategory);
-            }
-            return;
-        }
-
-    
 
         mContext = (Context) getActivity();
         final Resources res = getActivity().getResources();
 
         try {
+            boolean core_ctl  = SystemProperties.get("baikal.eng.core_ctl", "0").equals("1");
 
-            mDefaultPerfProfile = (ListPreference) findPreference("default_perf_profile");
-            if( mDefaultPerfProfile != null ) { 
-                if( !perfProf ) {
-                    mDefaultPerfProfile.setVisible(false);
-                } else {
-                    String profile = getSystemPropertyString("persist.baikal.perf.default","balance");
-                    Log.e(TAG, "mDefaultPerfProfile: getProfile=" + profile);
-                    mDefaultPerfProfile.setValue(profile);
-                    mDefaultPerfProfile.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
-                      public boolean onPreferenceChange(Preference preference, Object newValue) {
-                        try {
-                            Log.e(TAG, "mDefaultPerfProfile: setProfile=" + newValue.toString());
-			    setSystemPropertyString("persist.baikal.perf.default",newValue.toString());
-                        } catch(Exception re) {
-                            Log.e(TAG, "onCreate: mDefaultPerfProfile Fatal! exception", re );
-                        }
-                        return true;
-                      }
-                    });
-                }
-            }
-
-            mDefaultThermProfile = (ListPreference) findPreference("default_therm_profile");
-            if( mDefaultThermProfile != null ) { 
-                if( !thermProf ) {
-                    mDefaultThermProfile.setVisible(false);
-                } else {
-                    String profile = getSystemPropertyString("persist.baikal.therm.default","balance");
-                    Log.e(TAG, "mDefaultThermProfile: getProfile=" + profile);
-                    mDefaultThermProfile.setValue(profile);
-                    mDefaultThermProfile.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
-                      public boolean onPreferenceChange(Preference preference, Object newValue) {
-                        try {
-                            Log.e(TAG, "mDefaultThermProfile: setProfile=" + newValue.toString());
-			    setSystemPropertyString("persist.baikal.therm.default",newValue.toString());
-                        } catch(Exception re) {
-                            Log.e(TAG, "onCreate: mDefaultPerfProfile Fatal! exception", re );
-                        }
-                        return true;
-                      }
-                    });
-                }
-            }
-
-	    mEnableCoreCtl = (SwitchPreference) findPreference(POWER_SAVE_CORECTL);
+	        mEnableCoreCtl = (SwitchPreference) findPreference(POWER_SAVE_CORECTL);
       	    if( mEnableCoreCtl != null ) { 
                 if( !core_ctl ) {
                     mEnableCoreCtl.setVisible(false);
@@ -182,7 +117,7 @@ public class PowerSave extends BaseSettingsFragment {
 
     private boolean getSystemPropertyBoolean(String key) {
         if( SystemProperties.get(key,"0").equals("1") || SystemProperties.get(key,"0").equals("true") ) return true;
-	return false;
+	    return false;
     }
 
 }

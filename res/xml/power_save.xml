@@ -21,29 +21,6 @@
     xmlns:baikalosextras="http://schemas.android.com/apk/res-auto"
     android:title="@string/powersave_title">
 
-
-     <PreferenceCategory
-        android:key="default_profiles"
-        android:title="@string/default_profiles_title">
-
-        <ListPreference
-    	    android:key="default_perf_profile"
-    	    android:title="@string/app_profile_performance_title"
-    	    android:entries="@array/default_performance_listentries"
-    	    android:entryValues="@array/default_performance_listvalues" 
-            android:defaultValue="balance"
-            android:summary="%s"/>
-
-        <ListPreference
-            android:key="default_therm_profile"
-            android:title="@string/app_profile_thermal_title"
-            android:entries="@array/default_thermal_listentries"
-            android:entryValues="@array/default_thermal_listvalues"
-            android:defaultValue="balance"
-            android:summary="%s" />
-
-    </PreferenceCategory>
-
     <!-- PreferenceScreen
         android:key="suspend_actions"
         android:title="@string/screen_state_toggles_title"
