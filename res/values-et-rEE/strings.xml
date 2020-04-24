@@ -20,7 +20,6 @@
     <string name="app_name">BaikalOS Extras</string>
     <!-- Dashboard -->
     <string name="user_interface_category">Kasutajaliides</string>
-    <string name="system_category">Süsteem</string>
     <string name="other_category">Muu</string>
     <!-- Device parts -->
     <string name="device_part_title">Seadme omadused</string>

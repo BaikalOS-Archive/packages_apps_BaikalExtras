@@ -20,7 +20,6 @@
     <string name="app_name">BaikalOS Додатно</string>
     <!-- Dashboard -->
     <string name="user_interface_category">Кориснички интерфејс</string>
-    <string name="system_category">Систем</string>
     <string name="other_category">Остало</string>
     <!-- Device parts -->
     <string name="device_part_title">Функције уређаја</string>

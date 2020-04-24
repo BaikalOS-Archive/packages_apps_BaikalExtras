@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Power Save -->
+    <string name="system_tweaks_title">Система</string>
+    <string name="system_tweaks_summary">Настройки системы</string>
+    <string name="default_profiles_title">Профили по умолчанию</string>
+    <string name="system_tweaks_sec_hwc_title">Отключить вторичный HWC</string>
+    <string name="system_tweaks_sec_hwc_summary">Отключите HW Overlay на дополнительном дисплее. Исправление мерцания на Android Auto и WFD.\nТРЕБУЕТСЯ ПЕРЕЗАГРУЗКА!</string>
+</resources>
