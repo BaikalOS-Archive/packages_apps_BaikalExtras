@@ -5,5 +5,5 @@
     <string name="system_tweaks_summary">Настройки системы</string>
     <string name="default_profiles_title">Профили по умолчанию</string>
     <string name="system_tweaks_sec_hwc_title">Отключить вторичный HWC</string>
-    <string name="system_tweaks_sec_hwc_summary">Отключите HW Overlay на дополнительном дисплее. Исправление мерцания на Android Auto и WFD.\nТРЕБУЕТСЯ ПЕРЕЗАГРУЗКА!</string>
+    <string name="system_tweaks_sec_hwc_summary">Отключить HW Overlay на дополнительном дисплее. Исправление мерцания на Android Auto и WFD.\nТРЕБУЕТСЯ ПЕРЕЗАГРУЗКА!</string>
 </resources>
