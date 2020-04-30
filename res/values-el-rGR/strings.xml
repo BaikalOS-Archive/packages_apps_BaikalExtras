@@ -17,7 +17,6 @@
  */
 -->
 <resources>
-    <string name="app_name">Ρυθμίσεις BaikalOS</string>
     <!-- Dashboard -->
     <string name="user_interface_category">Περιβάλλον Χρήστη (UI)</string>
     <string name="other_category">Άλλα</string>
