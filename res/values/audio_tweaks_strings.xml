@@ -28,6 +28,9 @@
     <string name="audio_tweaks_a2dp_sbc_hdu_title">Unlimited SBC bitrate</string>
     <string name="audio_tweaks_a2dp_sbc_hdu_summary">Use Unlimited SBC bitrate for A2DP Bluetooth Profile</string>
 
+    <string name="audio_tweaks_a2dp_sbc_48_title">Prefer 48 KHz</string>
+    <string name="audio_tweaks_a2dp_sbc_48_summary">Prefer 48 KHz sampling rate for SBC encoder</string>
+
     <string name="audio_tweaks_a2dp_sbc_prefer_title">Prefer SBC</string>
     <string name="audio_tweaks_a2dp_sbc_prefer_summary">Prefer SBC over AAC or AptX</string>
 
