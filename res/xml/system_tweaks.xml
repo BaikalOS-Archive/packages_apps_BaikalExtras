@@ -47,6 +47,22 @@
             android:defaultValue="balance"
             android:summary="%s" />
 
+        <ListPreference
+    	    android:key="scr_off_perf_profile"
+    	    android:title="@string/scr_off_profile_title"
+    	    android:entries="@array/default_performance_listentries"
+    	    android:entryValues="@array/default_performance_listvalues" 
+            android:defaultValue="balance"
+            android:summary="%s"/>
+
+        <ListPreference
+    	    android:key="idle_perf_profile"
+    	    android:title="@string/idle_profile_title"
+    	    android:entries="@array/default_performance_listentries"
+    	    android:entryValues="@array/default_performance_listvalues" 
+            android:defaultValue="balance"
+            android:summary="%s"/>
+
     </PreferenceCategory>
 
 

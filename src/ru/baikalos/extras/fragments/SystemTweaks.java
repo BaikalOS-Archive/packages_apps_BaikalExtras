@@ -55,6 +55,9 @@ public class SystemTweaks extends BaseSettingsFragment {
     private ListPreference mDefaultPerfProfile;
     private ListPreference mDefaultThermProfile;
 
+    private ListPreference mScrOffPerfProfile;
+    private ListPreference mIdlePerfProfile;
+
 
     @Override
     protected int getPreferenceResource() {
@@ -82,7 +85,6 @@ public class SystemTweaks extends BaseSettingsFragment {
                 screen.removePreference(profilesCategory);
             }
         }
-
 
         try {
 
@@ -129,6 +131,53 @@ public class SystemTweaks extends BaseSettingsFragment {
                     });
                 }
             }
+
+
+            mScrOffPerfProfile = (ListPreference) findPreference("scr_off_perf_profile");
+            if( mScrOffPerfProfile != null ) { 
+                if( !perfProf ) {
+                    mScrOffPerfProfile.setVisible(false);
+                } else {
+                    String profile = getSystemPropertyString("persist.baikal.perf.scr_off","battery");
+                    Log.e(TAG, "mScrOffPerfProfile: getProfile=" + profile);
+                    mScrOffPerfProfile.setValue(profile);
+                    mScrOffPerfProfile.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                      public boolean onPreferenceChange(Preference preference, Object newValue) {
+                        try {
+                            Log.e(TAG, "mScrOffPerfProfile: setProfile=" + newValue.toString());
+			                setSystemPropertyString("persist.baikal.perf.scr_off",newValue.toString());
+                        } catch(Exception re) {
+                            Log.e(TAG, "onCreate: mScrOffPerfProfile Fatal! exception", re );
+                        }
+                        return true;
+                      }
+                    });
+                }
+            }
+
+
+            mIdlePerfProfile = (ListPreference) findPreference("idle_perf_profile");
+            if( mIdlePerfProfile != null ) { 
+                if( !perfProf ) {
+                    mIdlePerfProfile.setVisible(false);
+                } else {
+                    String profile = getSystemPropertyString("persist.baikal.perf.idle","battery");
+                    Log.e(TAG, "mScrOffPerfProfile: getProfile=" + profile);
+                    mIdlePerfProfile.setValue(profile);
+                    mIdlePerfProfile.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                      public boolean onPreferenceChange(Preference preference, Object newValue) {
+                        try {
+                            Log.e(TAG, "mIdlePerfProfile: setProfile=" + newValue.toString());
+			                setSystemPropertyString("persist.baikal.perf.idle",newValue.toString());
+                        } catch(Exception re) {
+                            Log.e(TAG, "onCreate: mIdlePerfProfile Fatal! exception", re );
+                        }
+                        return true;
+                      }
+                    });
+                }
+            }
+
 
             mDisableSecHwc = (SwitchPreference) findPreference(SYSTEM_TWEAKS_SEC_HWC);
             if( mDisableSecHwc != null ) { 

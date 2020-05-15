@@ -9,4 +9,7 @@
     <string name="system_tweaks_sec_hwc_title">Disable Secondary HWC</string>
     <string name="system_tweaks_sec_hwc_summary">Disable HW Overlay on secondary display. Fix flickering on Android Auto and WFD.\nREBOOT REQUIRED!</string>
 
+    <string name="scr_off_profile_title">Screen off profile</string>
+    <string name="idle_profile_title">Idle profile</string>
+
 </resources>
