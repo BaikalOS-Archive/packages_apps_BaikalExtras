@@ -67,4 +67,7 @@
     <string name="audio_tweaks_a2dp_last_codec_title">Last used codec</string>
     <string name="audio_tweaks_a2dp_last_bitrate_title">Last used bitrate</string>
 
+    <string name="prefs_media_scan_title">Rescan Media</string>
+    <string name="prefs_media_scan_summary">Force internal storage rescan for new media files</string>
+
 </resources>

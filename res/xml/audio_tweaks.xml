@@ -130,4 +130,11 @@
 
     </PreferenceCategory>
 
+    <Preference 
+            android:key="audio_tweaks_scan_media"
+            android:title="@string/prefs_media_scan_title" 
+		    android:summary="@string/prefs_media_scan_summary">
+    </Preference>
+
+
 </PreferenceScreen>

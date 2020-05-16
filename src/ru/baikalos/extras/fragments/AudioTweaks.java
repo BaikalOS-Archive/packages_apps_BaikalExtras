@@ -16,6 +16,13 @@
 
 package ru.baikalos.extras.fragments;
 
+import android.content.ComponentName;
+import android.content.IntentFilter;
+import android.content.BroadcastReceiver;
+
+import android.os.Environment;
+import android.net.Uri;
+
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
@@ -41,12 +48,14 @@ import ru.baikalos.extras.R;
 import com.aicp.gear.preference.SeekBarPreferenceCham;
 
 public class AudioTweaks extends BaseSettingsFragment
-            implements Preference.OnPreferenceChangeListener {
+            implements Preference.OnPreferenceChangeListener, Preference.OnPreferenceClickListener {
 
     private static final String TAG = "AudioTweaks";
 
     private static final String AUDIO_TWEAKS_SUSPEND_PLAY = "audio_tweaks_suspend_play";
     private static final String AUDIO_TWEAKS_AUDIO_HQ = "audio_tweaks_hq_policy";
+
+    private static final String AUDIO_TWEAKS_SCAN_MEDIA = "audio_tweaks_scan_media";
 
     private static final String AUDIO_TWEAKS_A2DP_SBC_HD = "audio_tweaks_a2dp_sbc_hd";
     private static final String AUDIO_TWEAKS_A2DP_SBC_HDX = "audio_tweaks_a2dp_sbc_hdx";
@@ -75,6 +84,8 @@ public class AudioTweaks extends BaseSettingsFragment
     private SwitchPreference mEnableA2DPHDX;
     private SwitchPreference mEnableA2DPHDU;
     private SwitchPreference mEnableA2DP48;
+
+    private Preference mScanMedia;
 
     @Override
     protected int getPreferenceResource() {
@@ -119,6 +130,11 @@ public class AudioTweaks extends BaseSettingsFragment
                 break;
         }
 
+
+        mScanMedia = (Preference) findPreference(AUDIO_TWEAKS_SCAN_MEDIA);
+        if( mScanMedia != null ) { 
+                mScanMedia.setOnPreferenceClickListener(this);
+        }
 
         mEnableAudioHq = (SwitchPreference) findPreference(AUDIO_TWEAKS_AUDIO_HQ);
         if( mEnableAudioHq != null ) { 
@@ -179,6 +195,24 @@ public class AudioTweaks extends BaseSettingsFragment
 
     }
 
+    @Override
+    public boolean onPreferenceClick(Preference preference) {
+        ContentResolver resolver = getActivity().getContentResolver();
+        if (preference == mScanMedia) {
+            final Intent intent = new Intent("android.intent.action.MEDIA_MOUNTED",Uri.parse("file://" + Environment.getExternalStorageDirectory()));
+            final ComponentName serviceComponent = ComponentName.unflattenFromString(
+                    "com.android.providers.media/.MediaService");
+            intent.setComponent(serviceComponent);
+            Log.e(TAG, "sendBroadcastAsUser: intent=" + intent);
+            //mContext.sendBroadcastAsUser(intent, UserHandle.CURRENT);
+            mContext.startService(intent);
+            return true;
+        }
+        return false;
+    }
+
+
+    @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         ContentResolver resolver = getActivity().getContentResolver();
 
