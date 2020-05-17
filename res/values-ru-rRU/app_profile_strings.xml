@@ -10,7 +10,7 @@
     <string name="app_profile_camera_hal1_summary">Принудительно использовать Camera API V1 для этого приложения</string>
     <string name="performance_default">По умолчанию</string>
     <string name="performance_balance">Сбалансированный</string>
-    <string name="performance_battery">Энергосбережение</string>
+    <string name="performance_battery">Батарея</string>
     <string name="performance_performance">Производительность</string>
     <string name="performance_gaming">Игровой</string>
     <string name="performance_camera">Камера</string>
@@ -39,11 +39,11 @@
     <string name="brightness_70">70\%</string>
     <string name="brightness_80">80\%</string>
     <string name="brightness_90">80\%</string>
-    <string name="app_profile_pinned_title">Прикреплено</string>
+    <string name="app_profile_pinned_title">Закрепить</string>
     <string name="app_profile_pinned_summary">Менеджер памяти не будет закрывать приложение по неактивности</string>
-    <string name="app_profile_disable_twl_title">Отключить температурный белый список</string>
+    <string name="app_profile_disable_twl_title">Отключить временный белый список</string>
     <string name="app_profile_disable_twl_summary">Не помещать приложение в белый список по получению уведомлений для экономии энергии</string>
     <string name="app_profile_reader_title">Режим чтения</string>
-    <string name="app_profile_reader_summary">Разрешить отключать ЦП во время работы этого приложения</string>
+    <string name="app_profile_reader_summary">Разрешить ЦП переходить в режим глубокого сна во время работы этого приложения</string>
     <string name="app_profile_fps_title">Показывать частоту кадров</string>
 </resources>

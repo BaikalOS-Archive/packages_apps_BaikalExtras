@@ -249,15 +249,11 @@
     <string name="troubleshooting_reset_restrictions_summary">Ресетуј све рестрикције на Без Ограничења</string>
     <string name="troubleshooting_reset_restrictions_title">Ресетуј рестрикције</string>
     <string name="troubleshooting_log_title">Системске Евиденције</string>
-    <string name="log_it_title">Забележи то срање!</string>
     <string name="log_it_summary">Logcat, kmesg, dmesg</string>
     <string name="logcat_title">Logcat</string>
     <string name="logcat_radio_title">Радио евиденција</string>
     <string name="kmesg_title">Kmesg</string>
     <string name="dmesg_title">Dmesg</string>
-    <string name="log_it_now_title">Ангажуј</string>
-    <string name="log_it_dialog_title">Ангажуј</string>
-    <string name="logcat_warning">Подели то или мрш!</string>
     <string name="share_title">Дељење...</string>
     <string name="log_it_share_subject">BaikalOS евиденције</string>
     <string name="log_it_now_summary">Стрпљиво сачекајте за израду евиденција</string>

@@ -249,15 +249,11 @@
     <string name="troubleshooting_reset_restrictions_summary">Lähtestage kõik piirangud olekule Piiramata</string>
     <string name="troubleshooting_reset_restrictions_title">Lähtestage piirangud</string>
     <string name="troubleshooting_log_title">Süsteemi logid</string>
-    <string name="log_it_title">Eemaldada logi!</string>
     <string name="log_it_summary">Logcat, kmesg, dmesg</string>
     <string name="logcat_title">Logcat</string>
     <string name="logcat_radio_title">Raadio logi</string>
     <string name="kmesg_title">Kmesg</string>
     <string name="dmesg_title">Dmesg</string>
-    <string name="log_it_now_title">Andmete kogumine</string>
-    <string name="log_it_dialog_title">Andmete kogumine</string>
-    <string name="logcat_warning">Jagage neid või lahkuge!</string>
     <string name="share_title">Jaga...</string>
     <string name="log_it_share_subject">BaikalOS logi</string>
     <string name="log_it_now_summary">Oodake logide loomist</string>

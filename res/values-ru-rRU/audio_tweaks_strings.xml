@@ -39,4 +39,6 @@
     <string name="audio_tweaks_a2dp_sbc_priority_summary">Приоритет SBC над AAC/APTX/APTX HD</string>
     <string name="audio_tweaks_a2dp_last_codec_title">Последний использованный кодек</string>
     <string name="audio_tweaks_a2dp_last_bitrate_title">Последний использованный битрейт</string>
+    <string name="prefs_media_scan_title">Пересканировать</string>
+    <string name="prefs_media_scan_summary">Принудительное сканирование памяти для поиска новых медиа-файлов</string>
 </resources>

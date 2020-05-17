@@ -248,15 +248,11 @@
     <string name="troubleshooting_reset_restrictions_summary">Επαναφορά όλων των περιορισμών σε χωρίς περιορισμούς</string>
     <string name="troubleshooting_reset_restrictions_title">Κατάργηση περιορισμών</string>
     <string name="troubleshooting_log_title">Καταγραφή Συστήματος</string>
-    <string name="log_it_title">Καταγραφή σε αρχείο!</string>
     <string name="log_it_summary">Καταγραφή αναφορών, Logcat, kmesg, dmesg</string>
     <string name="logcat_title">Αναφορές</string>
     <string name="logcat_radio_title">Αναφορά radio</string>
     <string name="kmesg_title">Kmesg</string>
     <string name="dmesg_title">Dmesg</string>
-    <string name="log_it_now_title">Έναρξη καταγραφής</string>
-    <string name="log_it_dialog_title">Έναρξη καταγραφής</string>
-    <string name="logcat_warning">Μοίρασε το αλλιώς δεν θα φτιαχτεί!</string>
     <string name="share_title">Κοινοποίηση...</string>
     <string name="log_it_share_subject">Στατιστικά BaikalOS</string>
     <string name="log_it_now_summary">Έχετε υπομονή όταν ξεκινά η καταγραφή</string>
