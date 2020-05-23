@@ -92,7 +92,7 @@ public class LogIt extends BaseSettingsFragment implements Preference.OnPreferen
     private static final File kmsgHasteKey = new File(sdCardDirectory, "baikalos_haste_kmsg_key");
     private static final File shareZipFile = new File(sdCardDirectory, "baikalos_logs.zip");
 
-    private static final int HASTE_MAX_LOG_SIZE = 400000;
+    private static final int HASTE_MAX_LOG_SIZE = 40000000;
 
     private CheckBoxPreference mLogcat;
     private CheckBoxPreference mLogcatRadio;
