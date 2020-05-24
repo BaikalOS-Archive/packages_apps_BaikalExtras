@@ -234,7 +234,7 @@ public class LogIt extends BaseSettingsFragment implements Preference.OnPreferen
     }
 
     public void makeLogcat() throws SuShell.SuDeniedException, IOException {
-        String command = "logcat -d";
+        String command = "logcat -d -b all";
         if (shareHaste) {
             command += " | tail -c " + HASTE_MAX_LOG_SIZE + " > " + LOGCAT_FILE
                     + "&& curl -s -X POST -T " + LOGCAT_FILE + " " + BAIKALOS_HASTE
@@ -247,7 +247,7 @@ public class LogIt extends BaseSettingsFragment implements Preference.OnPreferen
     }
 
     public void makeLogcatLast() throws SuShell.SuDeniedException, IOException {
-        String command = "logcat -d -L";
+        String command = "logcat -d -b all -L";
         if (shareHaste) {
             command += " | tail -c " + HASTE_MAX_LOG_SIZE + " > " + LOGCAT_LAST_FILE
                     + "&& curl -s -X POST -T " + LOGCAT_LAST_FILE + " " + BAIKALOS_HASTE
