@@ -68,10 +68,19 @@
 
     <com.aicp.gear.preference.GlobalSettingSwitchPreference
         android:key="baikalos_extreme_idle"
-        android:title="@string/baikal_extreme_saver_enabled_enabled_title"
-        android:summary="@string/baikal_extreme_saver_enabled_enabled_summary"
+        android:title="@string/baikal_extreme_saver_enabled_title"
+        android:summary="@string/baikal_extreme_saver_enabled_summary"
         android:defaultValue="false"
         android:disableDependentsState="true" />
+
+    <com.aicp.gear.preference.GlobalSettingSwitchPreference
+        android:key="baikalos_stamina_oi_enabled"
+        android:title="@string/baikal_stamina_oi_enabled_title"
+        android:summary="@string/baikal_stamina_oi_enabled_summary"
+        android:defaultValue="false"
+        android:disableDependentsState="true" />
+
+BAIKALOS_STAMINA_OI_ENABLED
 
     <com.aicp.gear.preference.GlobalSettingSwitchPreference
         android:key="baikalos_hide_gms"

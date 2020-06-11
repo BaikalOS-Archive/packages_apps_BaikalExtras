@@ -5,8 +5,12 @@
     <string name="powersave_summary">Энергосбережение</string>
     <string name="device_idle_aggressive_title">Агрессивный сон</string>
     <string name="device_idle_aggressive_summary">Переходить в режим сна через 1 минуту после отключения экрана. Игнорировать движение.</string>
-    <string name="baikal_extreme_saver_enabled_enabled_title">Экстремальный режим</string>
-    <string name="baikal_extreme_saver_enabled_enabled_summary">Применяет настройки для носимых устройств с малой батарей. </string>
+    <string name="baikal_extreme_saver_enabled_title">Экстремальный режим</string>
+    <string name="baikal_extreme_saver_enabled_summary">Применяет настройки для носимых устройств с малой батарей</string>
+
+    <string name="baikal_stamina_oi_enabled_title">Стамина в режиме сна</string>
+    <string name="baikal_stamina_oi_enabled_summary">Автоматически использовать режим Стамина во время глубокого сна</string>
+
     <string name="default_profiles_title">Профили по умолчанию</string>
     <string name="powersave_hide_idle_title">Скрывать СОН от GMS</string>
     <string name="powersave_hide_idle_summary">Скрывать режим глубокого сна от Google Play Services. Помогает от некоторых проблем с уведомлениями в сне. Увеличивает потребление батареи!</string>

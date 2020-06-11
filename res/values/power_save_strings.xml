@@ -6,8 +6,11 @@
     <string name="device_idle_aggressive_title">Aggressive Idle</string>
     <string name="device_idle_aggressive_summary">Send device into Idle Mode 1 min after screen off. Ignore movement.</string>
 
-    <string name="baikal_extreme_saver_enabled_enabled_title">Extreme Mode</string>
-    <string name="baikal_extreme_saver_enabled_enabled_summary">Treat device as Small Battery Device</string>
+    <string name="baikal_extreme_saver_enabled_title">Extreme Mode</string>
+    <string name="baikal_extreme_saver_enabled_summary">Treat device as Small Battery Device</string>
+
+    <string name="baikal_stamina_oi_enabled_title">Stamina on Idle</string>
+    <string name="baikal_stamina_oi_enabled_summary">Enter stamina mode while idle</string>
 
     <string name="default_profiles_title">Default profiles</string>
 
