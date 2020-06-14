@@ -80,8 +80,6 @@
         android:defaultValue="false"
         android:disableDependentsState="true" />
 
-BAIKALOS_STAMINA_OI_ENABLED
-
     <com.aicp.gear.preference.GlobalSettingSwitchPreference
         android:key="baikalos_hide_gms"
         android:title="@string/powersave_hide_idle_title"
