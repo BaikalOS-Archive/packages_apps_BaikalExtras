@@ -73,4 +73,11 @@
             android:defaultValue="false" />
 
 
+    <com.aicp.gear.preference.GlobalSettingSwitchPreference
+        android:key="baikalos_dlsb_enabled"
+        android:title="@string/baikalos_dlsb_enabled_title"
+        android:summary="@string/baikalos_dlsb_enabled_summary"
+        android:defaultValue="false"
+        android:disableDependentsState="true" />
+
 </PreferenceScreen>
