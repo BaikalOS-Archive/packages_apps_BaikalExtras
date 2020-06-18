@@ -48,6 +48,8 @@ public class SystemTweaks extends BaseSettingsFragment {
 
     private static final String SYSTEM_PROPERTY_SEC_HWC = "persist.sys.sf.disable_sec_hwc";
 
+    private static final String SYSTEM_TWEAKS_DLSB = "baikalos_dlsb_enabled";
+
     private Context mContext;
 
     private SwitchPreference mDisableSecHwc;
@@ -77,6 +79,8 @@ public class SystemTweaks extends BaseSettingsFragment {
                 (PreferenceCategory) screen.findPreference("default_profiles");
 
 
+        boolean hasCutout = mContext.getResources().getBoolean(com.android.internal.R.bool.config_physicalDisplayCutout);
+
         boolean perfProf  = SystemProperties.get("baikal.eng.perf", "0").equals("1");
         boolean thermProf  = SystemProperties.get("baikal.eng.therm", "0").equals("1");
 
@@ -87,6 +91,13 @@ public class SystemTweaks extends BaseSettingsFragment {
         }
 
         try {
+
+            if( !hasCutout ) {
+                SwitchPreference pref = (SwitchPreference) findPreference(SYSTEM_TWEAKS_DLSB);
+                if( pref!=null ) {
+                    pref.setVisible(false);
+                }
+            }
 
             mDefaultPerfProfile = (ListPreference) findPreference("default_perf_profile");
             if( mDefaultPerfProfile != null ) { 
