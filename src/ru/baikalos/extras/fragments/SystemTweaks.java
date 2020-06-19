@@ -59,6 +59,7 @@ public class SystemTweaks extends BaseSettingsFragment {
 
     private ListPreference mScrOffPerfProfile;
     private ListPreference mIdlePerfProfile;
+    private ListPreference mIdleThermProfile;
 
 
     @Override
@@ -173,7 +174,7 @@ public class SystemTweaks extends BaseSettingsFragment {
                     mIdlePerfProfile.setVisible(false);
                 } else {
                     String profile = getSystemPropertyString("persist.baikal.perf.idle","battery");
-                    Log.e(TAG, "mScrOffPerfProfile: getProfile=" + profile);
+                    Log.e(TAG, "mIdlePerfProfile: getProfile=" + profile);
                     mIdlePerfProfile.setValue(profile);
                     mIdlePerfProfile.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
                       public boolean onPreferenceChange(Preference preference, Object newValue) {
@@ -182,6 +183,28 @@ public class SystemTweaks extends BaseSettingsFragment {
 			                setSystemPropertyString("persist.baikal.perf.idle",newValue.toString());
                         } catch(Exception re) {
                             Log.e(TAG, "onCreate: mIdlePerfProfile Fatal! exception", re );
+                        }
+                        return true;
+                      }
+                    });
+                }
+            }
+
+            mIdleThermProfile = (ListPreference) findPreference("idle_therm_profile");
+            if( mIdleThermProfile != null ) { 
+                if( !perfProf ) {
+                    mIdleThermProfile.setVisible(false);
+                } else {
+                    String profile = getSystemPropertyString("persist.baikal.therm.idle","cool");
+                    Log.e(TAG, "mIdleThermProfile: getProfile=" + profile);
+                    mIdleThermProfile.setValue(profile);
+                    mIdleThermProfile.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                      public boolean onPreferenceChange(Preference preference, Object newValue) {
+                        try {
+                            Log.e(TAG, "mIdleThermProfile: setProfile=" + newValue.toString());
+			                setSystemPropertyString("persist.baikal.therm.idle",newValue.toString());
+                        } catch(Exception re) {
+                            Log.e(TAG, "onCreate: mIdleThermProfile Fatal! exception", re );
                         }
                         return true;
                       }

@@ -63,6 +63,14 @@
             android:defaultValue="balance"
             android:summary="%s"/>
 
+        <ListPreference
+    	    android:key="idle_therm_profile"
+    	    android:title="@string/idle_therm_profile_title"
+    	    android:entries="@array/default_thermal_listentries"
+    	    android:entryValues="@array/default_thermal_listvalues" 
+            android:defaultValue="balance"
+            android:summary="%s"/>
+
     </PreferenceCategory>
 
 

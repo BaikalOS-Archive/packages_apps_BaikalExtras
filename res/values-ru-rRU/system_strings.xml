@@ -5,6 +5,8 @@
     <string name="system_tweaks_summary">Настройки системы</string>
     <string name="default_profiles_title">Профили по умолчанию</string>
     <string name="system_tweaks_sec_hwc_title">Отключить вторичный HWC</string>
+    <string name="system_tweaks_sec_hwc_summary">Отключить HW Overlay для вторичного экрана. Решает проблему мерцания на Android Auto и WFD.\nТребуется перезагрузка!</string>
     <string name="scr_off_profile_title">Профиль при выключенном экране</string>
     <string name="idle_profile_title">Профиль в режиме ожидания</string>
+    <string name="idle_therm_profile_title">Температурный Профиль в ожидании</string>
 </resources>

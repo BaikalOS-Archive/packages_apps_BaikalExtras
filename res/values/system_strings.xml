@@ -11,6 +11,9 @@
 
     <string name="scr_off_profile_title">Screen off profile</string>
     <string name="idle_profile_title">Idle profile</string>
+    <string name="idle_therm_profile_title">Idle thermal profile</string>
+
+
 
     <string name="baikalos_dlsb_enabled_title">Dual-line Statusbar</string>
     <string name="baikalos_dlsb_enabled_summary">Enable dual-line statusbar. Reboot required!</string>
