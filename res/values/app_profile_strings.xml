@@ -30,6 +30,7 @@
     <string name="thermal_camera">Camera</string>
     <string name="thermal_reader">Reader</string>
     <string name="thermal_cool">Cool</string>
+    <string name="thermal_cold">Cold</string>
     <string name="thermal_incall">In Call</string>
     <string name="thermal_vr">VR</string>
 
