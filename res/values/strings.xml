@@ -552,4 +552,11 @@
     <string name="app_settings_title">Applications Profiles</string>
     <string name="app_settings_summary">Choose per-app settings for Battery, Performance, Thermal, etc...</string>
 
+    <!-- Rounded corners -->
+    <string name="corners_category">Corners</string>
+    <string name="corner_radius">Rounded corner radius</string>
+    <string name="content_padding">Corner content padding</string>
+    <string name="corner_fwvals">Use framework values</string>
+    <string name="corner_fwvals_summary">Useful if the device actually has rounded corners</string>
+
 </resources>

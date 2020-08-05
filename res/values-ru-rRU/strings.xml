@@ -458,4 +458,12 @@
     <string name="app_settings_category">Настройки приложений</string>
     <string name="app_settings_title">Профили приложений</string>
     <string name="app_settings_summary">Установите профили производительности и температурного режима для каждого приложения</string>
+
+    <!-- Rounded corners -->
+    <string name="corners_category">Углы</string>
+    <string name="corner_radius">Радиус скругления углов</string>
+    <string name="content_padding">Отступ</string>
+    <string name="corner_fwvals">По умолчанию</string>
+    <string name="corner_fwvals_summary">Полезно, если у устройства скругленные углы</string>
+
 </resources>
