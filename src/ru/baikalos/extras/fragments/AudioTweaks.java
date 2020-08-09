@@ -61,6 +61,7 @@ public class AudioTweaks extends BaseSettingsFragment
     private static final String AUDIO_TWEAKS_A2DP_SBC_HDX = "audio_tweaks_a2dp_sbc_hdx";
     private static final String AUDIO_TWEAKS_A2DP_SBC_HDU = "audio_tweaks_a2dp_sbc_hdu";
     private static final String AUDIO_TWEAKS_A2DP_SBC_48 = "audio_tweaks_a2dp_sbc_48";
+    private static final String AUDIO_TWEAKS_NEW_AVRCP = "audio_tweaks_new_avrcp";
 
     private static final String AUDIO_TWEAKS_A2DP_LAST_CODEC = "audio_tweaks_a2dp_last_codec";
     private static final String AUDIO_TWEAKS_A2DP_LAST_BITRATE = "audio_tweaks_a2dp_last_bitrate";
@@ -71,6 +72,8 @@ public class AudioTweaks extends BaseSettingsFragment
     private static final String SYSTEM_PROPERTY_A2DP_SBC_HDX = "persist.bluetooth.sbc_hdx";
     private static final String SYSTEM_PROPERTY_A2DP_SBC_HDU = "persist.bluetooth.sbc_hdu";
     private static final String SYSTEM_PROPERTY_A2DP_SBC_48 = "persist.bluetooth.sbc_48";
+
+    private static final String SYSTEM_PROPERTY_NEW_AVRCP = "persist.bluetooth.enablenewavrcp";
 
     private static final String SYSTEM_PROPERTY_A2DP_LAST_CODEC = "baikal.last.a2dp_codec";
     private static final String SYSTEM_PROPERTY_A2DP_LAST_BITRATE = "baikal.last.a2dp_bitrate";
@@ -84,6 +87,7 @@ public class AudioTweaks extends BaseSettingsFragment
     private SwitchPreference mEnableA2DPHDX;
     private SwitchPreference mEnableA2DPHDU;
     private SwitchPreference mEnableA2DP48;
+    private SwitchPreference mEnableNewAvrcp;
 
     private Preference mScanMedia;
 
@@ -192,6 +196,11 @@ public class AudioTweaks extends BaseSettingsFragment
                 mEnableA2DP48.setOnPreferenceChangeListener(this);
         }
 
+        mEnableNewAvrcp = (SwitchPreference) findPreference(AUDIO_TWEAKS_NEW_AVRCP);
+        if( mEnableNewAvrcp != null ) { 
+                mEnableNewAvrcp.setChecked(SystemProperties.getBoolean(SYSTEM_PROPERTY_NEW_AVRCP, false));
+                mEnableNewAvrcp.setOnPreferenceChangeListener(this);
+        }
 
     }
 
@@ -216,14 +225,15 @@ public class AudioTweaks extends BaseSettingsFragment
     public boolean onPreferenceChange(Preference preference, Object newValue) {
         ContentResolver resolver = getActivity().getContentResolver();
 
-        
-
         if (preference == mEnableAudioHq) {
             ((SwitchPreference)preference).setChecked((Boolean) newValue);
             setSystemPropertyBoolean(SYSTEM_PROPERTY_AUDIO_HQ, (Boolean) newValue);
         } else if (preference == mEnableSuspendPlay) {
             ((SwitchPreference)preference).setChecked((Boolean) newValue);
             setSystemPropertyBoolean(SYSTEM_PROPERTY_SUSPEND_PLAY, (Boolean) newValue);
+        } else if (preference == mEnableNewAvrcp) {
+            ((SwitchPreference)preference).setChecked((Boolean) newValue);
+            setSystemPropertyBoolean(SYSTEM_PROPERTY_NEW_AVRCP, (Boolean) newValue);
         } else if (preference == mEnableA2DPHD) {
             ((SwitchPreference)preference).setChecked((Boolean) newValue);
             setSystemPropertyBoolean(SYSTEM_PROPERTY_A2DP_SBC_HD, (Boolean) newValue);

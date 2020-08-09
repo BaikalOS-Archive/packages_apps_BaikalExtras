@@ -114,6 +114,12 @@
             android:summary="@string/audio_tweaks_a2dp_sbc_48_summary"
             android:defaultValue="false" />
 
+        <SwitchPreference
+            android:key="audio_tweaks_new_avrcp"
+            android:title="@string/audio_tweaks_new_avrcp_title"
+            android:summary="@string/audio_tweaks_new_avrcp_summary"
+            android:defaultValue="false" />
+
         <Preference
             style="?android:preferenceInformationStyle"
             android:key="audio_tweaks_a2dp_last_codec"

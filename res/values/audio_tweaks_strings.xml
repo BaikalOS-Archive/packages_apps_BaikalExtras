@@ -70,4 +70,7 @@
     <string name="prefs_media_scan_title">Rescan Media</string>
     <string name="prefs_media_scan_summary">Force internal storage rescan for new media files</string>
 
+    <string name="audio_tweaks_new_avrcp_title">New AVRCP</string>
+    <string name="audio_tweaks_new_avrcp_summary">Enable new version of AVRCP</string>
+
 </resources>
