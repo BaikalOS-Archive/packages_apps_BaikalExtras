@@ -47,6 +47,30 @@
 
     </PreferenceCategory>
 
+    <PreferenceCategory
+        android:key="audio_effects"
+        android:title="@string/audio_effects_title"
+        android:summary="@string/audio_effects_summary">
+
+        <SwitchPreference
+            android:key="audio_effects_system"
+            android:title="@string/audio_effects_system_title"
+            android:summary="@string/audio_effects_system_summary"
+            android:defaultValue="false" />
+
+        <SwitchPreference
+            android:key="audio_effects_qc"
+            android:title="@string/audio_effects_qc_title"
+            android:summary="@string/audio_effects_qc_summary"
+            android:defaultValue="false" />
+
+        <SwitchPreference
+            android:key="audio_effects_dolby"
+            android:title="@string/audio_effects_dolby_title"
+            android:summary="@string/audio_effects_dolby_summary"
+            android:defaultValue="false" />
+
+    </PreferenceCategory>
 
     <PreferenceCategory
         android:key="audio_bluetooth"

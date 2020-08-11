@@ -41,6 +41,9 @@ import android.provider.Settings;
 import android.view.View;
 import android.util.Log;
 
+import static android.content.pm.PackageManager.COMPONENT_ENABLED_STATE_ENABLED;
+import static android.content.pm.PackageManager.COMPONENT_ENABLED_STATE_DISABLED;
+
 import android.content.res.Resources;
 
 import ru.baikalos.extras.BaseSettingsFragment;
@@ -66,6 +69,17 @@ public class AudioTweaks extends BaseSettingsFragment
     private static final String AUDIO_TWEAKS_A2DP_LAST_CODEC = "audio_tweaks_a2dp_last_codec";
     private static final String AUDIO_TWEAKS_A2DP_LAST_BITRATE = "audio_tweaks_a2dp_last_bitrate";
 
+
+    private static final String AUDIO_EFFECTS_SYSTEM = "audio_effects_system";
+    private static final String AUDIO_EFFECTS_QC = "audio_effects_qc";
+    private static final String AUDIO_EFFECTS_DOLBY = "audio_effects_dolby";
+    private static final String SYSTEM_PROPERTY_EFFECTS_SYSTEM = "persist.baikal.ae.disable";
+    private static final String SYSTEM_PROPERTY_EFFECTS_QC = "persist.baikal.qcae.disable";
+    private static final String SYSTEM_PROPERTY_EFFECTS_DOLBY = "persist.baikal.dolby.enable";
+    private static final String SYSTEM_PROPERTY_DOLBY_AVAILABLE = "sys.baikal.dolby.avail";
+    private static final String SYSTEM_PROPERTY_QCAE_AVAILABLE = "sys.baikal.qcae.avail";
+
+
     private static final String SYSTEM_PROPERTY_AUDIO_HQ = "persist.baikal_audio_hq";
     private static final String SYSTEM_PROPERTY_SUSPEND_PLAY = "persist.audio.offload.suspend";
     private static final String SYSTEM_PROPERTY_A2DP_SBC_HD = "persist.bluetooth.sbc_hd";
@@ -89,6 +103,11 @@ public class AudioTweaks extends BaseSettingsFragment
     private SwitchPreference mEnableA2DP48;
     private SwitchPreference mEnableNewAvrcp;
 
+    private SwitchPreference mEffectsSystem;
+    private SwitchPreference mEffectsDolby;
+    private SwitchPreference mEffectsQc;
+
+
     private Preference mScanMedia;
 
     @Override
@@ -102,6 +121,40 @@ public class AudioTweaks extends BaseSettingsFragment
 
         mContext = (Context) getActivity();
         final Resources res = getActivity().getResources();
+
+        Boolean isDolbyAvail = SystemProperties.getBoolean(SYSTEM_PROPERTY_DOLBY_AVAILABLE,false);
+
+        mEffectsDolby = (SwitchPreference) findPreference(AUDIO_EFFECTS_DOLBY);
+
+        if( mEffectsDolby != null ) { 
+            if( !isDolbyAvail ) {
+                mEffectsDolby.setVisible(false);
+            } else {
+                mEffectsDolby.setChecked(SystemProperties.getBoolean(SYSTEM_PROPERTY_EFFECTS_DOLBY, false));
+                mEffectsDolby.setOnPreferenceChangeListener(this);
+            }
+        }
+
+        Boolean isQcaeAvail = SystemProperties.getBoolean(SYSTEM_PROPERTY_QCAE_AVAILABLE,false);
+
+        mEffectsQc = (SwitchPreference) findPreference(AUDIO_EFFECTS_QC);
+
+        if( mEffectsQc != null ) { 
+            if( !isQcaeAvail ) {
+                mEffectsQc.setVisible(false);
+            } else {
+                mEffectsQc.setChecked(SystemProperties.getBoolean(SYSTEM_PROPERTY_EFFECTS_QC, false));
+                mEffectsQc.setOnPreferenceChangeListener(this);
+            }
+        }
+
+        mEffectsSystem = (SwitchPreference) findPreference(AUDIO_EFFECTS_SYSTEM);
+
+        if( mEffectsSystem != null ) { 
+            mEffectsSystem.setChecked(SystemProperties.getBoolean(SYSTEM_PROPERTY_EFFECTS_SYSTEM, false));
+            mEffectsSystem.setOnPreferenceChangeListener(this);
+        }
+
 
 
         Preference  codec = (Preference) findPreference(AUDIO_TWEAKS_A2DP_LAST_CODEC);
@@ -270,6 +323,19 @@ public class AudioTweaks extends BaseSettingsFragment
             Log.e(TAG, "onPreferenceChange: mEnableA2DP48 key=" + SYSTEM_PROPERTY_A2DP_SBC_48 + ", value=" + (Boolean)newValue);
             ((SwitchPreference)preference).setChecked((Boolean) newValue);
             setSystemPropertyBoolean(SYSTEM_PROPERTY_A2DP_SBC_48, (Boolean) newValue);
+        } else if (preference == mEffectsSystem) {
+            Log.e(TAG, "onPreferenceChange: mEffectsSystem key=" + SYSTEM_PROPERTY_EFFECTS_SYSTEM + ", value=" + (Boolean)newValue);
+            ((SwitchPreference)preference).setChecked((Boolean) newValue);
+            setSystemPropertyBoolean(SYSTEM_PROPERTY_EFFECTS_SYSTEM, (Boolean) newValue);
+        } else if (preference == mEffectsQc) {
+            Log.e(TAG, "onPreferenceChange: mEffectsQc key=" + SYSTEM_PROPERTY_EFFECTS_QC + ", value=" + (Boolean)newValue);
+            ((SwitchPreference)preference).setChecked((Boolean) newValue);
+            setSystemPropertyBoolean(SYSTEM_PROPERTY_EFFECTS_QC, (Boolean) newValue);
+        } else if (preference == mEffectsDolby) {
+            Log.e(TAG, "onPreferenceChange: mEffectsDolby key=" + SYSTEM_PROPERTY_EFFECTS_DOLBY + ", value=" + (Boolean)newValue);
+            ((SwitchPreference)preference).setChecked((Boolean) newValue);
+            setSystemPropertyBoolean(SYSTEM_PROPERTY_EFFECTS_DOLBY, (Boolean) newValue);
+            updateDolbyConfiguration((Boolean)newValue);
         }
         return true;
     }
@@ -283,5 +349,24 @@ public class AudioTweaks extends BaseSettingsFragment
         String text = value?"1":"0";
         Log.e(TAG, "setSystemPropertyBoolean: key=" + key + ", value=" + value);
         SystemProperties.set(key, text);
+    }
+
+    private void updateDolbyConfiguration(boolean enabled) {
+        if( !enabled ) {
+            setPackageEnabled("com.motorola.dolby.dolbyui",false);
+            setPackageEnabled("com.dolby.daxservice",false);
+        } else {
+            setPackageEnabled("com.motorola.dolby.dolbyui",true);
+            setPackageEnabled("com.dolby.daxservice",true);
+        }
+    }
+
+    private void setPackageEnabled(String packageName, boolean enabled) {
+        int state = enabled ? COMPONENT_ENABLED_STATE_ENABLED : COMPONENT_ENABLED_STATE_DISABLED;
+        try {
+            getActivity().getPackageManager().setApplicationEnabledSetting(packageName,state,0);
+        } catch(Exception e1) {
+            Log.e(TAG, "setPackageEnabled: exception=", e1);
+        }
     }
 }
