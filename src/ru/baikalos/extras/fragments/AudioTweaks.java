@@ -356,8 +356,8 @@ public class AudioTweaks extends BaseSettingsFragment
             setPackageEnabled("com.motorola.dolby.dolbyui",false);
             setPackageEnabled("com.dolby.daxservice",false);
         } else {
-            setPackageEnabled("com.motorola.dolby.dolbyui",true);
-            setPackageEnabled("com.dolby.daxservice",true);
+            //setPackageEnabled("com.motorola.dolby.dolbyui",true);
+            //setPackageEnabled("com.dolby.daxservice",true);
         }
     }
 
