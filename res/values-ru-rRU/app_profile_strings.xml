@@ -10,6 +10,7 @@
     <string name="app_profile_camera_hal1_summary">Принудительно использовать Camera API V1 для этого приложения</string>
     <string name="performance_default">По умолчанию</string>
     <string name="performance_balance">Сбалансированный</string>
+    <string name="performance_limited">Сбалансированный Ограниченный</string>
     <string name="performance_battery">Батарея</string>
     <string name="performance_performance">Производительность</string>
     <string name="performance_gaming">Игровой</string>

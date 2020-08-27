@@ -81,18 +81,53 @@
         android:disableDependentsState="true" />
 
     <com.aicp.gear.preference.GlobalSettingSwitchPreference
-        android:key="baikalos_hide_gms"
-        android:title="@string/powersave_hide_idle_title"
-        android:summary="@string/powersave_hide_idle_summary"
-        android:defaultValue="false"
-        android:disableDependentsState="true" />
-
-    <com.aicp.gear.preference.GlobalSettingSwitchPreference
         android:key="baikalos_unrestricted_net"
         android:title="@string/powersave_unrestricted_network_title"
         android:summary="@string/powersave_unrestricted_network_summary"
         android:defaultValue="false"
         android:disableDependentsState="true" />
+
+    <PreferenceCategory
+        android:key="powersave_gms"
+        android:title="@string/powersave_gms_title"
+        android:summary="@string/powersave_gms_summary">
+
+        <com.aicp.gear.preference.GlobalSettingSwitchPreference
+            android:key="baikalos_hide_gms"
+            android:title="@string/powersave_hide_idle_title"
+            android:summary="@string/powersave_hide_idle_summary"
+            android:defaultValue="false"
+            android:disableDependentsState="true" />
+
+        <com.aicp.gear.preference.GlobalSettingSwitchPreference
+            android:key="baikalos_gms_restricted"
+            android:title="@string/powersave_gms_restricted_title"
+            android:summary="@string/powersave_gms_restricted_summary"
+            android:defaultValue="false"
+            android:disableDependentsState="true" />
+
+        <com.aicp.gear.preference.GlobalSettingSwitchPreference
+            android:key="baikalos_gms_idle_restricted"
+            android:title="@string/powersave_gms_idle_restricted_title"
+            android:summary="@string/powersave_gms_idle_restricted_summary"
+            android:defaultValue="false"
+            android:disableDependentsState="true" />
+
+        <com.aicp.gear.preference.GlobalSettingSwitchPreference
+            android:key="baikalos_gms_stamina_restricted"
+            android:title="@string/powersave_gms_stamina_restricted_title"
+            android:summary="@string/powersave_gms_stamina_restricted_summary"
+            android:defaultValue="false"
+            android:disableDependentsState="true" />
+
+        <com.aicp.gear.preference.GlobalSettingSwitchPreference
+            android:key="baikalos_gps_restricted"
+            android:title="@string/powersave_gps_restricted_title"
+            android:summary="@string/powersave_gps_restricted_summary"
+            android:defaultValue="false"
+            android:disableDependentsState="true" />
+
+    </PreferenceCategory>
 
     <Preference android:title="@string/prefs_battery_saver_title" 
 		    android:summary="@string/prefs_battery_saver_summary">

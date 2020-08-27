@@ -15,6 +15,7 @@
 
     <string name="performance_default">Default</string>
     <string name="performance_balance">Balanced</string>
+    <string name="performance_limited">Balanced (Limited)</string>
     <string name="performance_battery">Battery</string>
     <string name="performance_performance">Performance</string>
     <string name="performance_gaming">Gaming</string>

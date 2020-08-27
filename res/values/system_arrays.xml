@@ -3,12 +3,14 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string-array name="default_performance_listentries">
     	<item>@string/performance_balance</item>
+    	<item>@string/performance_limited</item>
     	<item>@string/performance_performance</item>
     	<item>@string/performance_gaming</item>
     	<item>@string/performance_battery</item>
      </string-array>
      <string-array name="default_performance_listvalues">
     	<item>balance</item>
+    	<item>limited</item>
     	<item>performance</item>
     	<item>gaming</item>
     	<item>battery</item>
