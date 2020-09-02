@@ -22,60 +22,6 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/system_tweaks_title">
 
-    <!-- PreferenceCategory
-        android:key="system_settings"
-        android:title="@string/audio_settings_title">
-
-
-    </PreferenceCategory -->
-
-     <PreferenceCategory
-        android:key="default_profiles"
-        android:title="@string/default_profiles_title">
-
-        <ListPreference
-    	    android:key="default_perf_profile"
-    	    android:title="@string/app_profile_performance_title"
-    	    android:entries="@array/default_performance_listentries"
-    	    android:entryValues="@array/default_performance_listvalues" 
-            android:defaultValue="balance"
-            android:summary="%s"/>
-
-        <ListPreference
-            android:key="default_therm_profile"
-            android:title="@string/app_profile_thermal_title"
-            android:entries="@array/default_thermal_listentries"
-            android:entryValues="@array/default_thermal_listvalues"
-            android:defaultValue="balance"
-            android:summary="%s" />
-
-        <ListPreference
-    	    android:key="scr_off_perf_profile"
-    	    android:title="@string/scr_off_profile_title"
-    	    android:entries="@array/default_performance_listentries"
-    	    android:entryValues="@array/default_performance_listvalues" 
-            android:defaultValue="balance"
-            android:summary="%s"/>
-
-        <ListPreference
-    	    android:key="idle_perf_profile"
-    	    android:title="@string/idle_profile_title"
-    	    android:entries="@array/default_performance_listentries"
-    	    android:entryValues="@array/default_performance_listvalues" 
-            android:defaultValue="balance"
-            android:summary="%s"/>
-
-        <ListPreference
-    	    android:key="idle_therm_profile"
-    	    android:title="@string/idle_therm_profile_title"
-    	    android:entries="@array/default_thermal_listentries"
-    	    android:entryValues="@array/default_thermal_listvalues" 
-            android:defaultValue="balance"
-            android:summary="%s"/>
-
-    </PreferenceCategory>
-
-
     <SwitchPreference
             android:key="system_tweaks_sec_hwc"
             android:title="@string/system_tweaks_sec_hwc_title"

@@ -60,4 +60,16 @@
 
     <string name="app_profile_fps_title">Display frame rate</string>
 
+    <string name="edit_profile_title">Edit profile</string>
+
+    <string name="edit_profile_silver_title">CPU - Silver</string>
+    <string name="edit_profile_gold_title">CPU - Gold</string>
+    <string name="edit_profile_gpu_title">GPU</string>
+
+    <string name="edit_profile_max_title">MAX</string>
+    <string name="edit_profile_min_title">MIN</string>
+
+    <string name="edit_profile_corecontrol_title">Core control</string>
+    <string name="edit_profile_corecontrol_summary">Enable idle core offline/isolation</string>
+
 </resources>

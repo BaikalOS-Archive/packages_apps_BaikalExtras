@@ -91,4 +91,16 @@
     	<item>90</item>
     </string-array>
 
+    <string-array name="cpu_silver_freqs">
+        <item>0</item>
+    </string-array>
+
+    <string-array name="cpu_gold_freqs">
+        <item>0</item>
+    </string-array>
+
+    <string-array name="gpu_freqs">
+        <item>0</item>
+    </string-array>
+
 </resources>

@@ -4,16 +4,8 @@
     <string name="system_tweaks_title">System</string>
     <string name="system_tweaks_summary">System Tweaks</string>
 
-    <string name="default_profiles_title">Default profiles</string>
-
     <string name="system_tweaks_sec_hwc_title">Disable Secondary HWC</string>
     <string name="system_tweaks_sec_hwc_summary">Disable HW Overlay on secondary display. Fix flickering on Android Auto and WFD.\nREBOOT REQUIRED!</string>
-
-    <string name="scr_off_profile_title">Screen off profile</string>
-    <string name="idle_profile_title">Idle profile</string>
-    <string name="idle_therm_profile_title">Idle thermal profile</string>
-
-
 
     <string name="baikalos_dlsb_enabled_title">Dual-line Statusbar</string>
     <string name="baikalos_dlsb_enabled_summary">Enable dual-line statusbar. Reboot required!</string>

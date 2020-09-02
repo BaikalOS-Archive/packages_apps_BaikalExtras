@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/**
+ * Copyright (C) 2017 AICP
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+-->
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/edit_profile_title">
+
+     <PreferenceCategory
+        android:key="edit_profile_silver"
+        android:title="@string/edit_profile_silver_title">
+
+        <ListPreference
+    	    android:key="edit_profile_silver_min"
+    	    android:title="@string/edit_profile_min_title"
+    	    android:entries="@array/cpu_silver_freqs"
+    	    android:entryValues="@array/cpu_silver_freqs" 
+            android:defaultValue="0"
+            android:summary="%s"/>
+
+        <ListPreference
+    	    android:key="edit_profile_silver_max"
+    	    android:title="@string/edit_profile_max_title"
+    	    android:entries="@array/cpu_silver_freqs"
+    	    android:entryValues="@array/cpu_silver_freqs" 
+            android:defaultValue="0"
+            android:summary="%s"/>
+
+     </PreferenceCategory>
+
+     <PreferenceCategory
+        android:key="edit_profile_gold"
+        android:title="@string/edit_profile_gold_title">
+
+        <ListPreference
+    	    android:key="edit_profile_gold_min"
+    	    android:title="@string/edit_profile_min_title"
+    	    android:entries="@array/cpu_gold_freqs"
+    	    android:entryValues="@array/cpu_gold_freqs" 
+            android:defaultValue="0"
+            android:summary="%s"/>
+
+        <ListPreference
+    	    android:key="edit_profile_gold_max"
+    	    android:title="@string/edit_profile_max_title"
+    	    android:entries="@array/cpu_gold_freqs"
+    	    android:entryValues="@array/cpu_gold_freqs" 
+            android:defaultValue="0"
+            android:summary="%s"/>
+
+     </PreferenceCategory>
+
+     <PreferenceCategory
+        android:key="edit_profile_gpu"
+        android:title="@string/edit_profile_gpu_title">
+
+        <ListPreference
+    	    android:key="edit_profile_gpu_min"
+    	    android:title="@string/edit_profile_min_title"
+    	    android:entries="@array/gpu_freqs"
+    	    android:entryValues="@array/gpu_freqs" 
+            android:defaultValue="0"
+            android:summary="%s"/>
+
+        <ListPreference
+    	    android:key="edit_profile_gpu_max"
+    	    android:title="@string/edit_profile_max_title"
+    	    android:entries="@array/gpu_freqs"
+    	    android:entryValues="@array/gpu_freqs" 
+            android:defaultValue="0"
+            android:summary="%s"/>
+
+     </PreferenceCategory>
+
+     <SwitchPreference
+         android:key="edit_profile_corecontrol"
+         android:title="@string/edit_profile_corecontrol_title"
+         android:summary="@string/edit_profile_corecontrol_summary"
+         android:defaultValue="false" />
+
+
+</PreferenceScreen>

@@ -41,23 +41,6 @@
     <!-- /PreferenceCategory -->
 
     <PreferenceCategory
-        android:key="app_setings_cat"
-        android:title="@string/app_settings_category">
-
-        <Preference
-            android:key="app_setings"
-            android:title="@string/app_settings_title"
-            android:summary="@string/app_settings_summary" >
-            <intent 
-                android:targetPackage="ru.baikalos.extras"
-                android:targetClass="ru.baikalos.extras.AppProfilesActivity"/>
-        </Preference>
-
-
-    </PreferenceCategory>
-
-
-    <PreferenceCategory
         android:title="@string/system_category">
 
         <!--PreferenceScreen
@@ -71,6 +54,13 @@
             android:summary="@string/system_extensions_summary"
             android:icon="@drawable/ic_settings_system_extensions"
             android:fragment="ru.baikalos.extras.fragments.SystemExtensions" / -->
+
+
+        <PreferenceScreen
+            android:title="@string/performance_title"
+            android:summary="@string/performance_summary"
+            android:icon="@drawable/ic_settings_system_animations"
+            android:fragment="ru.baikalos.extras.fragments.Performance" />
 
 
         <PreferenceScreen

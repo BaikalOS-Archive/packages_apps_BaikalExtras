@@ -48,4 +48,16 @@
     <string name="app_profile_reader_title">Режим чтения</string>
     <string name="app_profile_reader_summary">Разрешить ЦП переходить в режим глубокого сна во время работы этого приложения</string>
     <string name="app_profile_fps_title">Показывать частоту кадров</string>
+    <string name="edit_profile_title">Редактировать профиль</string>
+
+    <string name="edit_profile_silver_title">CPU - Silver</string>
+    <string name="edit_profile_gold_title">CPU - Gold</string>
+    <string name="edit_profile_gpu_title">GPU</string>
+
+    <string name="edit_profile_max_title">MAX</string>
+    <string name="edit_profile_min_title">MIN</string>
+
+    <string name="edit_profile_corecontrol_title">Управление ядрами</string>
+    <string name="edit_profile_corecontrol_summary">Разрешить отключение/изоляцию неиспользуемых ядер</string>
+
 </resources>

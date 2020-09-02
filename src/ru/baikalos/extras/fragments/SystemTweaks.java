@@ -37,7 +37,9 @@ import android.util.Log;
 import android.content.res.Resources;
 
 import ru.baikalos.extras.BaseSettingsFragment;
+import ru.baikalos.extras.PerfProfileDetailsActivity;
 import ru.baikalos.extras.R;
+
 import com.aicp.gear.preference.SeekBarPreferenceCham;
 import com.aicp.gear.preference.SecureSettingSeekBarPreference;
 
@@ -51,17 +53,11 @@ public class SystemTweaks extends BaseSettingsFragment {
 
     private static final String SYSTEM_TWEAKS_DLSB = "baikalos_dlsb_enabled";
 
+    private static final String EDIT_PROFILE_PREF = "edit_perf_profile";
+
     private Context mContext;
 
     private SwitchPreference mDisableSecHwc;
-
-    private ListPreference mDefaultPerfProfile;
-    private ListPreference mDefaultThermProfile;
-
-    private ListPreference mScrOffPerfProfile;
-    private ListPreference mIdlePerfProfile;
-    private ListPreference mIdleThermProfile;
-
 
     // Rounded Corners
     private static final String SYSUI_ROUNDED_SIZE = "sysui_rounded_size";
@@ -86,20 +82,8 @@ public class SystemTweaks extends BaseSettingsFragment {
 
         final PreferenceScreen screen = getPreferenceScreen();
 
-        final PreferenceCategory profilesCategory =
-                (PreferenceCategory) screen.findPreference("default_profiles");
-
-
         boolean hasCutout = mContext.getResources().getBoolean(com.android.internal.R.bool.config_physicalDisplayCutout);
 
-        boolean perfProf  = SystemProperties.get("baikal.eng.perf", "0").equals("1");
-        boolean thermProf  = SystemProperties.get("baikal.eng.therm", "0").equals("1");
-
-        if( !perfProf && !thermProf ) {
-            if( profilesCategory != null ) {
-                screen.removePreference(profilesCategory);
-            }
-        }
 
         try {
 
@@ -109,119 +93,6 @@ public class SystemTweaks extends BaseSettingsFragment {
                     pref.setVisible(false);
                 }
             }
-
-            mDefaultPerfProfile = (ListPreference) findPreference("default_perf_profile");
-            if( mDefaultPerfProfile != null ) { 
-                if( !perfProf ) {
-                    mDefaultPerfProfile.setVisible(false);
-                } else {
-                    String profile = getSystemPropertyString("persist.baikal.perf.default","balance");
-                    Log.e(TAG, "mDefaultPerfProfile: getProfile=" + profile);
-                    mDefaultPerfProfile.setValue(profile);
-                    mDefaultPerfProfile.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
-                      public boolean onPreferenceChange(Preference preference, Object newValue) {
-                        try {
-                            Log.e(TAG, "mDefaultPerfProfile: setProfile=" + newValue.toString());
-			                setSystemPropertyString("persist.baikal.perf.default",newValue.toString());
-                        } catch(Exception re) {
-                            Log.e(TAG, "onCreate: mDefaultPerfProfile Fatal! exception", re );
-                        }
-                        return true;
-                      }
-                    });
-                }
-            }
-
-            mDefaultThermProfile = (ListPreference) findPreference("default_therm_profile");
-            if( mDefaultThermProfile != null ) { 
-                if( !thermProf ) {
-                    mDefaultThermProfile.setVisible(false);
-                } else {
-                    String profile = getSystemPropertyString("persist.baikal.therm.default","balance");
-                    Log.e(TAG, "mDefaultThermProfile: getProfile=" + profile);
-                    mDefaultThermProfile.setValue(profile);
-                    mDefaultThermProfile.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
-                      public boolean onPreferenceChange(Preference preference, Object newValue) {
-                        try {
-                            Log.e(TAG, "mDefaultThermProfile: setProfile=" + newValue.toString());
-			                setSystemPropertyString("persist.baikal.therm.default",newValue.toString());
-                        } catch(Exception re) {
-                            Log.e(TAG, "onCreate: mDefaultPerfProfile Fatal! exception", re );
-                        }
-                        return true;
-                      }
-                    });
-                }
-            }
-
-
-            mScrOffPerfProfile = (ListPreference) findPreference("scr_off_perf_profile");
-            if( mScrOffPerfProfile != null ) { 
-                if( !perfProf ) {
-                    mScrOffPerfProfile.setVisible(false);
-                } else {
-                    String profile = getSystemPropertyString("persist.baikal.perf.scr_off","battery");
-                    Log.e(TAG, "mScrOffPerfProfile: getProfile=" + profile);
-                    mScrOffPerfProfile.setValue(profile);
-                    mScrOffPerfProfile.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
-                      public boolean onPreferenceChange(Preference preference, Object newValue) {
-                        try {
-                            Log.e(TAG, "mScrOffPerfProfile: setProfile=" + newValue.toString());
-			                setSystemPropertyString("persist.baikal.perf.scr_off",newValue.toString());
-                        } catch(Exception re) {
-                            Log.e(TAG, "onCreate: mScrOffPerfProfile Fatal! exception", re );
-                        }
-                        return true;
-                      }
-                    });
-                }
-            }
-
-
-            mIdlePerfProfile = (ListPreference) findPreference("idle_perf_profile");
-            if( mIdlePerfProfile != null ) { 
-                if( !perfProf ) {
-                    mIdlePerfProfile.setVisible(false);
-                } else {
-                    String profile = getSystemPropertyString("persist.baikal.perf.idle","battery");
-                    Log.e(TAG, "mIdlePerfProfile: getProfile=" + profile);
-                    mIdlePerfProfile.setValue(profile);
-                    mIdlePerfProfile.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
-                      public boolean onPreferenceChange(Preference preference, Object newValue) {
-                        try {
-                            Log.e(TAG, "mIdlePerfProfile: setProfile=" + newValue.toString());
-			                setSystemPropertyString("persist.baikal.perf.idle",newValue.toString());
-                        } catch(Exception re) {
-                            Log.e(TAG, "onCreate: mIdlePerfProfile Fatal! exception", re );
-                        }
-                        return true;
-                      }
-                    });
-                }
-            }
-
-            mIdleThermProfile = (ListPreference) findPreference("idle_therm_profile");
-            if( mIdleThermProfile != null ) { 
-                if( !perfProf ) {
-                    mIdleThermProfile.setVisible(false);
-                } else {
-                    String profile = getSystemPropertyString("persist.baikal.therm.idle","cool");
-                    Log.e(TAG, "mIdleThermProfile: getProfile=" + profile);
-                    mIdleThermProfile.setValue(profile);
-                    mIdleThermProfile.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
-                      public boolean onPreferenceChange(Preference preference, Object newValue) {
-                        try {
-                            Log.e(TAG, "mIdleThermProfile: setProfile=" + newValue.toString());
-			                setSystemPropertyString("persist.baikal.therm.idle",newValue.toString());
-                        } catch(Exception re) {
-                            Log.e(TAG, "onCreate: mIdleThermProfile Fatal! exception", re );
-                        }
-                        return true;
-                      }
-                    });
-                }
-            }
-
 
             mDisableSecHwc = (SwitchPreference) findPreference(SYSTEM_TWEAKS_SEC_HWC);
             if( mDisableSecHwc != null ) { 
