@@ -4,6 +4,24 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="48dp" >
+
+        <CheckBox android:id="@+id/app_checkbox_filter_changed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_checkbox_filter_changed_title"
+            />
+
+        <CheckBox android:id="@+id/app_checkbox_filter_system"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_checkbox_filter_system_title"
+            />
+
+    </LinearLayout>
+
     <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="48dp" >

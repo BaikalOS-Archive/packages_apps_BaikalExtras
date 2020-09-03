@@ -33,10 +33,14 @@ import androidx.preference.SwitchPreference;
 import android.provider.Settings;
 import android.view.View;
 import android.util.Log;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 
 import android.content.res.Resources;
 
 import com.android.internal.baikalos.Actions;
+
+import com.android.internal.baikalos.AppProfileSettings;
 
 import ru.baikalos.extras.BaseSettingsFragment;
 import ru.baikalos.extras.PerfProfileDetailsActivity;
@@ -58,6 +62,10 @@ public class Performance extends BaseSettingsFragment {
     private ListPreference mIdlePerfProfile;
     private ListPreference mIdleThermProfile;
     private ListPreference mEditPerfProfile;
+
+    private Preference mBackup;
+    private Preference mRestore;
+    private Preference mReset;
 
     @Override
     protected int getPreferenceResource() {
@@ -226,6 +234,10 @@ public class Performance extends BaseSettingsFragment {
                 }
             }
 
+            mBackup = (Preference) findPreference("app_setings_backup");
+            mRestore = (Preference) findPreference("app_setings_restore");
+            mReset = (Preference) findPreference("app_setings_reset");
+
         } catch(Exception re) {
             Log.e(TAG, "onCreate: Fatal! exception", re );
         }
@@ -233,9 +245,73 @@ public class Performance extends BaseSettingsFragment {
     }
 
     @Override
+    public boolean onPreferenceTreeClick(Preference preference) {
+        if (preference == mBackup) {
+            backItUp();
+            return true;
+        } else if (preference == mRestore) {
+            restore();
+            return true;
+        } else if (preference == mReset) {
+            reset();
+            return true;
+        } else {
+            return super.onPreferenceTreeClick(preference);
+        }
+    }
+
+
+    @Override
     public void onResume() {
         super.onResume();
     }
+
+
+    public void backItUp() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+        builder.setTitle(R.string.app_setings_backup_title);
+        builder.setMessage(R.string.app_setings_backup_summary);
+        builder.setPositiveButton(R.string.app_setings_backup_ok, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface arg0, int arg1) {
+                AppProfileSettings.saveBackup(Performance.this.getActivity().getContentResolver());
+            }
+        });
+
+        AlertDialog alertDialog = builder.create();
+        alertDialog.show();
+    }
+
+    public void restore() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+        builder.setTitle(R.string.app_setings_restore_title);
+        builder.setMessage(R.string.app_setings_restore_summary);
+        builder.setPositiveButton(R.string.app_setings_restore_ok, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface arg0, int arg1) {
+                AppProfileSettings.restoreBackup(Performance.this.getActivity().getContentResolver());
+            }
+        });
+
+        AlertDialog alertDialog = builder.create();
+        alertDialog.show();
+    }
+
+    public void reset() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+        builder.setTitle(R.string.app_setings_reset_title);
+        builder.setMessage(R.string.app_setings_reset_summary);
+        builder.setPositiveButton(R.string.app_setings_reset_ok, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface arg0, int arg1) {
+                AppProfileSettings.resetAll(Performance.this.getActivity().getContentResolver());
+            }
+        });
+
+        AlertDialog alertDialog = builder.create();
+        alertDialog.show();
+    }
+
 
     private void setSystemPropertyString(String key, String value) {
         Log.e(TAG, "setSystemPropertyBoolean: key=" + key + ", value=" + value);

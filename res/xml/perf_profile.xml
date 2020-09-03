@@ -92,5 +92,10 @@
          android:summary="@string/edit_profile_corecontrol_summary"
          android:defaultValue="false" />
 
+     <Preference
+         android:key="edit_profile_reset"
+         android:title="@string/edit_profile_reset_title"
+         android:summary="@string/edit_profile_reset_summary" />
+
 
 </PreferenceScreen>

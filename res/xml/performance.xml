@@ -41,6 +41,23 @@
                 android:targetPackage="ru.baikalos.extras"
                 android:targetClass="ru.baikalos.extras.AppProfilesActivity"/>
         </Preference>
+
+        <Preference
+            android:key="app_setings_backup"
+            android:title="@string/app_setings_backup_title"
+            android:summary="@string/app_setings_backup_summary" />
+
+        <Preference
+            android:key="app_setings_restore"
+            android:title="@string/app_setings_restore_title"
+            android:summary="@string/app_setings_restore_summary" />
+
+        <Preference
+            android:key="app_setings_reset"
+            android:title="@string/app_setings_reset_title"
+            android:summary="@string/app_setings_reset_summary" />
+
+
     </PreferenceCategory>
 
 

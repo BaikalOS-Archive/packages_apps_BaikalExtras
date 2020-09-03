@@ -72,4 +72,23 @@
     <string name="edit_profile_corecontrol_title">Core control</string>
     <string name="edit_profile_corecontrol_summary">Enable idle core offline/isolation</string>
 
+    <string name="app_checkbox_filter_changed_title">With profiles</string>
+    <string name="app_checkbox_filter_system_title">System</string>
+
+    <string name="app_setings_backup_title">Backup</string>
+    <string name="app_setings_backup_summary">Save current app profiles. This will overwrite previously backed up profiles!</string>
+    <string name="app_setings_backup_ok">Backup</string>
+
+    <string name="app_setings_restore_title">Restore</string>
+    <string name="app_setings_restore_summary">Restore backed up profiles. Warning! This will overwrite current app profiles!</string>
+    <string name="app_setings_restore_ok">Restore</string>
+
+    <string name="app_setings_reset_title">Reset</string>
+    <string name="app_setings_reset_summary">Reset all app profiles to their default values</string>
+    <string name="app_setings_reset_ok">Reset</string>
+
+    <string name="edit_profile_reset_title">Reset</string>
+    <string name="edit_profile_reset_summary">Reset to defaults.</string>
+    <string name="edit_profile_reset_ok">Reset</string>
+
 </resources>

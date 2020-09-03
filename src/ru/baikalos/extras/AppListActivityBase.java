@@ -15,6 +15,8 @@ import android.view.KeyEvent;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -27,6 +29,8 @@ public abstract class AppListActivityBase extends BaseActivity {
     ProgressBar dProgressBar  = null;
     ListView dListView  = null;
     EditText dSearch = null;
+    CheckBox dCheckBoxOnlyChanged = null;
+    CheckBox dCheckBoxIncludeSystem = null;
     ImageButton dButton = null;
 
     private int mId;
@@ -48,6 +52,8 @@ public abstract class AppListActivityBase extends BaseActivity {
         dSearch = (EditText) findViewById(R.id.app_search_text);
         dButton = (ImageButton) findViewById(R.id.app_search_button);
         dProgressBar = (ProgressBar) findViewById(R.id.app_list_progress_bar);
+        dCheckBoxOnlyChanged = (CheckBox) findViewById(R.id.app_checkbox_filter_changed);
+        dCheckBoxIncludeSystem = (CheckBox) findViewById(R.id.app_checkbox_filter_system);
 
         dAdapter = new AppChooserAdapter(this) {
             @Override
@@ -82,6 +88,22 @@ public abstract class AppListActivityBase extends BaseActivity {
                 });
             }
         });
+
+        dCheckBoxOnlyChanged.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView,boolean isChecked) {
+                dAdapter.filterOnlyChanged(isChecked);
+                dAdapter.update();
+            }
+        });     
+
+        dCheckBoxIncludeSystem.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView,boolean isChecked) {
+                dAdapter.filterIncludeSystem(isChecked);
+                dAdapter.update();
+            }
+        });     
 
         dSearch.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override

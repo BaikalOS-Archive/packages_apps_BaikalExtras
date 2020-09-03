@@ -23,6 +23,11 @@ import java.util.Locale;
 
 import ru.baikalos.extras.R;
 
+import com.android.internal.baikalos.AppProfileSettings;
+import com.android.internal.baikalos.AppProfile;
+
+import android.content.pm.ApplicationInfo;
+
 public abstract class AppChooserAdapter extends BaseAdapter implements Filterable {
 
     final Context mContext;
@@ -30,16 +35,22 @@ public abstract class AppChooserAdapter extends BaseAdapter implements Filterabl
     final PackageManager mPackageManager;
     final LayoutInflater mLayoutInflater;
 
+    final AppProfileSettings mAppSettings;
+
     protected List<PackageInfo> mInstalledAppInfo;
     protected List<AppItem> mInstalledApps = new LinkedList<AppItem>();
     protected List<PackageInfo> mTemporarylist;
 
     boolean isUpdating;
     boolean hasLauncherFilter = false;
+    boolean onlyChanged = false;
+    boolean includeSystem = false;
 
     public AppChooserAdapter(Context context) {
         mContext = context;
         mHandler = new Handler();
+        mAppSettings = new  AppProfileSettings(mHandler,mContext, mContext.getContentResolver(),null);
+
         mPackageManager = mContext.getPackageManager();
         mLayoutInflater = (LayoutInflater) mContext
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -64,6 +75,16 @@ public abstract class AppChooserAdapter extends BaseAdapter implements Filterabl
                     final int index = Collections.binarySearch(temp, item);
                     final boolean isLauncherApp =
                             mPackageManager.getLaunchIntentForPackage(info.packageName) != null;
+
+
+                    if( !includeSystem &&
+                        (info.applicationInfo.flags & (ApplicationInfo.FLAG_SYSTEM | ApplicationInfo.FLAG_UPDATED_SYSTEM_APP)) != 0 ) continue;
+
+                    if( onlyChanged ) {
+                        AppProfile mProfile = mAppSettings.getProfile(info.packageName);
+                        if( mProfile == null ) continue;
+                    }
+
                     if (!hasLauncherFilter || isLauncherApp) {
                         if (index < 0) {
                             temp.add((-index - 1), item);
@@ -190,4 +211,13 @@ public abstract class AppChooserAdapter extends BaseAdapter implements Filterabl
     protected void setLauncherFilter(boolean enabled) {
         hasLauncherFilter = enabled;
     }
+
+    protected void filterOnlyChanged(boolean isChecked) {
+        onlyChanged = isChecked;
+    }                  
+
+    protected void filterIncludeSystem(boolean isChecked) {
+        includeSystem = isChecked;
+    }                  
+
 }

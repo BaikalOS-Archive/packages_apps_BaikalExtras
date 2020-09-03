@@ -59,5 +59,24 @@
 
     <string name="edit_profile_corecontrol_title">Управление ядрами</string>
     <string name="edit_profile_corecontrol_summary">Разрешить отключение/изоляцию неиспользуемых ядер</string>
+    <string name="app_checkbox_filter_changed_title">Только с профилем</string>
+    <string name="app_checkbox_filter_system_title">Системные</string>
+
+    <string name="app_setings_backup_title">Сохранить</string>
+    <string name="app_setings_backup_summary">Резервная копия настроек профилей приложений. ВНИМАНИЕ! Предыдущая сохраненная копия будет перезаписана!</string>
+    <string name="app_setings_backup_ok">Сохранить</string>
+
+    <string name="app_setings_restore_title">Восстановить</string>
+    <string name="app_setings_restore_summary">Восстановление резервной копии настроек профилей приложений. ВНИМАНИЕ! Текущие настройки будут перезаписаны!</string>
+    <string name="app_setings_restore_ok">Восстановить</string>
+
+    <string name="app_setings_reset_title">Сбросить</string>
+    <string name="app_setings_reset_summary">Сброс настроек профилей приложений по умолчанию. ВНИМАНИЕ! Текущие настройки будут удалены!</string>
+    <string name="app_setings_reset_ok">Сбросить</string>
+
+    <string name="edit_profile_reset_title">Сбросить</string>
+    <string name="edit_profile_reset_summary">Сбросить на значения по умолчанию</string>
+    <string name="edit_profile_reset_ok">Сбросить</string>
+
 
 </resources>

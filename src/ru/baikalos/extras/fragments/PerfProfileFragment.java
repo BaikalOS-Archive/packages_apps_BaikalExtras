@@ -35,6 +35,9 @@ import android.provider.Settings;
 import android.view.View;
 import android.util.Log;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+
 import android.os.ServiceManager;
 import android.os.RemoteException;
 
@@ -64,6 +67,7 @@ public class PerfProfileFragment extends BaseSettingsFragment
     private ListPreference mGpuMin;
     private ListPreference mGpuMax;
     private SwitchPreference mCoreControl;
+    private Preference mReset;
 
 
 
@@ -90,20 +94,23 @@ public class PerfProfileFragment extends BaseSettingsFragment
         if( mProfileName == null || mProfileName.equals("") ) return;
 
         try {
-            mCpuSilverMin = InitListPreference("edit_profile_silver_min","persist.bkp." + mProfileName + "." + "csmin", "baikal.def." + mProfileName + "." + "csmin" );
-            mCpuSilverMax = InitListPreference("edit_profile_silver_max","persist.bkp." + mProfileName + "." + "csmax", "baikal.def." + mProfileName + "." + "csmax");
-            mCpuGoldMin = InitListPreference("edit_profile_gold_min","persist.bkp." + mProfileName + "." + "cgmin", "baikal.def." + mProfileName + "." + "cgmin");
-            mCpuGoldMax = InitListPreference("edit_profile_gold_max","persist.bkp." + mProfileName + "." + "cgmax", "baikal.def." + mProfileName + "." + "cgmax");
-            mGpuMin = InitListPreference("edit_profile_gpu_min","persist.bkp." + mProfileName + "." + "gmin", "baikal.def." + mProfileName + "." + "gmin");
-            mGpuMax = InitListPreference("edit_profile_gpu_max","persist.bkp." + mProfileName + "." + "gmax", "baikal.def." + mProfileName + "." + "gmax");
-            mCoreControl = InitSwitchPreference("edit_profile_corecontrol","persist.bkp." + mProfileName + "." + "cc", "baikal.def." + mProfileName + "." + "cc","baikal.def.cc_on","baikal.def.cc_off");
+            mCpuSilverMin = initListPreference("edit_profile_silver_min","persist.bkp." + mProfileName + "." + "csmin", "baikal.def." + mProfileName + "." + "csmin" );
+            mCpuSilverMax = initListPreference("edit_profile_silver_max","persist.bkp." + mProfileName + "." + "csmax", "baikal.def." + mProfileName + "." + "csmax");
+            mCpuGoldMin = initListPreference("edit_profile_gold_min","persist.bkp." + mProfileName + "." + "cgmin", "baikal.def." + mProfileName + "." + "cgmin");
+            mCpuGoldMax = initListPreference("edit_profile_gold_max","persist.bkp." + mProfileName + "." + "cgmax", "baikal.def." + mProfileName + "." + "cgmax");
+            mGpuMin = initListPreference("edit_profile_gpu_min","persist.bkp." + mProfileName + "." + "gmin", "baikal.def." + mProfileName + "." + "gmin");
+            mGpuMax = initListPreference("edit_profile_gpu_max","persist.bkp." + mProfileName + "." + "gmax", "baikal.def." + mProfileName + "." + "gmax");
+            mCoreControl = initSwitchPreference("edit_profile_corecontrol","persist.bkp." + mProfileName + "." + "cc", "baikal.def." + mProfileName + "." + "cc","baikal.def.cc_on","baikal.def.cc_off");
+
+            mReset = (Preference) findPreference("edit_profile_reset");
+
         } catch( Exception e ) {
             Log.e(TAG, "onCreate: " + mProfileName + " Fatal! exception", e );
         }
 
     }
 
-    private ListPreference InitListPreference(String prefName, String systemProperty, String defProperty)
+    private ListPreference initListPreference(String prefName, String systemProperty, String defProperty)
     {
 
             ListPreference pref = (ListPreference) findPreference(prefName);
@@ -129,7 +136,7 @@ public class PerfProfileFragment extends BaseSettingsFragment
        
     }
 
-    private SwitchPreference InitSwitchPreference(String prefName, String systemProperty, String defProperty, String propertyOn, String propertyOff)
+    private SwitchPreference initSwitchPreference(String prefName, String systemProperty, String defProperty, String propertyOn, String propertyOff)
     {
 
             SwitchPreference pref = (SwitchPreference) findPreference(prefName);
@@ -172,14 +179,72 @@ public class PerfProfileFragment extends BaseSettingsFragment
     }
 
     @Override
+    public boolean onPreferenceTreeClick(Preference preference) {
+        if (preference == mReset) {
+            reset();
+            return true;
+        } else {
+            return super.onPreferenceTreeClick(preference);
+        }
+    }
+
+    @Override
     public void onResume() {
         super.onResume();
     }
 
+    public void reset() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+        builder.setTitle(R.string.edit_profile_reset_title);
+        builder.setMessage(R.string.edit_profile_reset_summary);
+        builder.setPositiveButton(R.string.edit_profile_reset_ok, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface arg0, int arg1) {
+                resetDefaults();
+            }
+        });
+
+        AlertDialog alertDialog = builder.create();
+        alertDialog.show();
+    }
+
+
+    private void resetDefaults() {
+
+        resetListValue(mCpuSilverMin,"persist.bkp." + mProfileName + "." + "csmin", "baikal.def." + mProfileName + "." + "csmin" );
+        resetListValue(mCpuSilverMax,"persist.bkp." + mProfileName + "." + "csmax", "baikal.def." + mProfileName + "." + "csmax");
+        resetListValue(mCpuGoldMin,"persist.bkp." + mProfileName + "." + "cgmin", "baikal.def." + mProfileName + "." + "cgmin");
+        resetListValue(mCpuGoldMax,"persist.bkp." + mProfileName + "." + "cgmax", "baikal.def." + mProfileName + "." + "cgmax");
+        resetListValue(mGpuMin,"persist.bkp." + mProfileName + "." + "gmin", "baikal.def." + mProfileName + "." + "gmin");
+        resetListValue(mGpuMax,"persist.bkp." + mProfileName + "." + "gmax", "baikal.def." + mProfileName + "." + "gmax");
+        resetSwitchValue(mCoreControl,"persist.bkp." + mProfileName + "." + "cc", "baikal.def." + mProfileName + "." + "cc","baikal.def.cc_on","baikal.def.cc_off");
+
+    }
+
+    private void resetListValue(ListPreference pref, String systemProperty, String defProperty)
+    {
+        String prop = getSystemPropertyString(defProperty,"-1");
+        if( prop.equals("-1") ) return;
+        setSystemPropertyString(systemProperty,prop);
+        pref.setValue(prop);
+    }
+
+    private void resetSwitchValue(SwitchPreference pref, String systemProperty, String defProperty, String propertyOn, String propertyOff)
+    {
+        String valueOff =  getSystemPropertyString(propertyOff,"-1");
+        String valueOn =  getSystemPropertyString(propertyOn,"-1");
+        String prop = getSystemPropertyString(defProperty,"-1");
+        if( prop.equals("-1") ) return;
+        setSystemPropertyString(systemProperty,prop);
+        boolean enabled = prop.equals(valueOn);
+        pref.setChecked(enabled);
+    }
+
+    
 
     private String getPerfPropertyString(String key, String def) {
-        String prop = getSystemPropertyString(key,"0");
-        if( prop.equals("0") ) {
+        String prop = getSystemPropertyString(key,"-1");
+        if( prop.equals("-1") ) {
             prop = getSystemPropertyString(def,"0");
         }
         return prop;
