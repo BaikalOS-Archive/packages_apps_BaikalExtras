@@ -218,7 +218,7 @@ public class PerfProfileFragment extends BaseSettingsFragment
         resetListValue(mGpuMin,"persist.bkp." + mProfileName + "." + "gmin", "baikal.def." + mProfileName + "." + "gmin");
         resetListValue(mGpuMax,"persist.bkp." + mProfileName + "." + "gmax", "baikal.def." + mProfileName + "." + "gmax");
         resetSwitchValue(mCoreControl,"persist.bkp." + mProfileName + "." + "cc", "baikal.def." + mProfileName + "." + "cc","baikal.def.cc_on","baikal.def.cc_off");
-
+        sendUpdateProfile();
     }
 
     private void resetListValue(ListPreference pref, String systemProperty, String defProperty)
