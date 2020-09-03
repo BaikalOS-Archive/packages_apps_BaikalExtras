@@ -19,6 +19,7 @@
     <string name="performance_battery">Battery</string>
     <string name="performance_performance">Performance</string>
     <string name="performance_gaming">Gaming</string>
+    <string name="performance_gaming2">Gaming 2</string>
     <string name="performance_camera">Camera</string>
 
     <string name="thermal_default">Default</string>

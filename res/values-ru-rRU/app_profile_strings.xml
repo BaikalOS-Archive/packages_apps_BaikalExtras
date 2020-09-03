@@ -14,6 +14,7 @@
     <string name="performance_battery">Батарея</string>
     <string name="performance_performance">Производительность</string>
     <string name="performance_gaming">Игровой</string>
+    <string name="performance_gaming2">Игровой 2</string>
     <string name="performance_camera">Камера</string>
     <string name="thermal_default">По умолчанию</string>
     <string name="thermal_balance">Сбалансированный</string>
