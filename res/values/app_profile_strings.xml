@@ -4,8 +4,6 @@
 
 
     <string name="app_profile_title">Application profile</string>
-    <string name="app_profile_restricted_title">Restricted</string>
-    <string name="app_profile_restricted_summary">Restrict this app in background</string>
     <string name="app_profile_performance_title">Performance profile</string>
     <string name="app_profile_thermal_title">Thermal profile</string>
     <string name="app_profile_brightness_title">Screen Brightness</string>
@@ -91,5 +89,11 @@
     <string name="edit_profile_reset_title">Reset</string>
     <string name="edit_profile_reset_summary">Reset to defaults.</string>
     <string name="edit_profile_reset_ok">Reset</string>
+
+    <string name="app_profile_stamina_title">Allow in Stamina</string>
+    <string name="app_profile_stamina_summary">Allow this app to start in background in stamina mode</string>
+
+    <string name="app_profile_restricted_title">Block in background</string>
+    <string name="app_profile_restricted_summary">Block background start</string>
 
 </resources>

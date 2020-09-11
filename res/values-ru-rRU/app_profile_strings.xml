@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_profile_title">Профиль приложения</string>
-    <string name="app_profile_restricted_title">Ограниченное</string>
-    <string name="app_profile_restricted_summary">Ограничить приложение в фоновом режиме</string>
     <string name="app_profile_performance_title">Профиль производительности</string>
     <string name="app_profile_thermal_title">Профиль температурного режима</string>
     <string name="app_profile_brightness_title">Яркость экрана</string>
@@ -79,5 +77,11 @@
     <string name="edit_profile_reset_summary">Сбросить на значения по умолчанию</string>
     <string name="edit_profile_reset_ok">Сбросить</string>
 
+
+    <string name="app_profile_stamina_title">Стамина</string>
+    <string name="app_profile_stamina_summary">Разрешить фоновый запуск приложения в режиме Стамина</string>
+
+    <string name="app_profile_restricted_title">Ограничить</string>
+    <string name="app_profile_restricted_summary">Заблокировать работу приложения в фоновом режиме</string>
 
 </resources>

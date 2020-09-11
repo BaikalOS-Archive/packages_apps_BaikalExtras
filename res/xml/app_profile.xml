@@ -63,6 +63,18 @@
             android:summary="@string/app_profile_pinned_summary"
             android:defaultValue="false" />
 
+        <SwitchPreference
+            android:key="app_profile_stamina"
+            android:title="@string/app_profile_stamina_title"
+            android:summary="@string/app_profile_stamina_summary"
+            android:defaultValue="false" />
+
+        <SwitchPreference
+            android:key="app_profile_restricted"
+            android:title="@string/app_profile_restricted_title"
+            android:summary="@string/app_profile_restricted_summary"
+            android:defaultValue="false" />
+
         <!-- SwitchPreference
             android:key="app_profile_disable_twl"
             android:title="@string/app_profile_disable_twl_title"

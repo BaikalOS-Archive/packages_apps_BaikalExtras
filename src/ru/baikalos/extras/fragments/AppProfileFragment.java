@@ -60,6 +60,8 @@ public class AppProfileFragment extends BaseSettingsFragment
     private static final String APP_PROFILE_FPS = "app_profile_fps";
 //    private static final String APP_PROFILE_CAMERA_HAL1 = "app_profile_camera_hal1";
     private static final String APP_PROFILE_PINNED = "app_profile_pinned";
+    private static final String APP_PROFILE_STAMINA = "app_profile_stamina";
+    private static final String APP_PROFILE_RESTRICTED = "app_profile_restricted";
 //    private static final String APP_PROFILE_DISABLE_TWL = "app_profile_disable_twl";
 
     private String mPackageName;
@@ -67,6 +69,9 @@ public class AppProfileFragment extends BaseSettingsFragment
 
     private SwitchPreference mAppReader;
     private SwitchPreference mAppPinned;
+    private SwitchPreference mAppStamina;
+    private SwitchPreference mAppRestricted;
+
     private ListPreference mAppPerfProfile;
     private ListPreference mAppThermProfile;
     private ListPreference mAppBrightnessProfile;
@@ -249,9 +254,53 @@ public class AppProfileFragment extends BaseSettingsFragment
                             mAppSettings.updateProfile(mProfile);
                             mAppSettings.save();
                             //mBaikalService.setAppPriority(mPackageName, ((Boolean)newValue) ? -1 : 0 );
-                            Log.e(TAG, "mAppPinned: mPackageName=" + mPackageName + ",setReader=" + (Boolean)newValue);
+                            Log.e(TAG, "mAppPinned: mPackageName=" + mPackageName + ",mPinned=" + (Boolean)newValue);
                         } catch(Exception re) {
                             Log.e(TAG, "onCreate: mAppPinned Fatal! exception", re );
+                        }
+                        return true;
+                    }
+                });
+            }
+
+            mAppStamina = (SwitchPreference) findPreference(APP_PROFILE_STAMINA);
+            if( mAppStamina != null ) {
+                mAppStamina.setChecked(mProfile.mStamina);
+                //mAppRestricted.setChecked(mBaikalService.isAppRestrictedProfile(mPackageName));
+                mAppStamina.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                    public boolean onPreferenceChange(Preference preference, Object newValue) {
+                        //int val = Integer.parseInt(newValue.toString());
+                        //DiracAudioEnhancerService.du.setHeadsetType(mContext, val);
+                        try {
+                            mProfile.mStamina = ((Boolean)newValue);
+                            mAppSettings.updateProfile(mProfile);
+                            mAppSettings.save();
+                            //mBaikalService.setAppPriority(mPackageName, ((Boolean)newValue) ? -1 : 0 );
+                            Log.e(TAG, "mAppStamina: mPackageName=" + mPackageName + ",mStamina=" + (Boolean)newValue);
+                        } catch(Exception re) {
+                            Log.e(TAG, "onCreate: mAppStamina Fatal! exception", re );
+                        }
+                        return true;
+                    }
+                });
+            }
+
+            mAppRestricted = (SwitchPreference) findPreference(APP_PROFILE_RESTRICTED);
+            if( mAppRestricted != null ) {
+                mAppRestricted.setChecked(mProfile.mRestricted);
+                //mAppRestricted.setChecked(mBaikalService.isAppRestrictedProfile(mPackageName));
+                mAppRestricted.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                    public boolean onPreferenceChange(Preference preference, Object newValue) {
+                        //int val = Integer.parseInt(newValue.toString());
+                        //DiracAudioEnhancerService.du.setHeadsetType(mContext, val);
+                        try {
+                            mProfile.mRestricted = ((Boolean)newValue);
+                            mAppSettings.updateProfile(mProfile);
+                            mAppSettings.save();
+                            //mBaikalService.setAppPriority(mPackageName, ((Boolean)newValue) ? -1 : 0 );
+                            Log.e(TAG, "mAppRestricted: mPackageName=" + mPackageName + ",mRestricted=" + (Boolean)newValue);
+                        } catch(Exception re) {
+                            Log.e(TAG, "onCreate: mAppRestricted Fatal! exception", re );
                         }
                         return true;
                     }

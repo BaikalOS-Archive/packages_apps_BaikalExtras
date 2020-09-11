@@ -16,6 +16,19 @@
     <string name="powersave_hide_idle_summary">Скрывать режим глубокого сна от Google Play Services. Помогает от некоторых проблем с уведомлениями в сне. Увеличивает потребление батареи!</string>
     <string name="powersave_unrestricted_network_title">Не ограничивать сеть</string>
     <string name="powersave_unrestricted_network_summary">Не ограничивать доступ приложений к сети в режиме сна. Помогает решить проблемы с уведомлениями и повышенным потреблением энергии некоторыми приложениями.</string>
+
+    <string name="powersave_gms_title">Google Services</string>
+    <string name="powersave_gms_summary">Опции для Google Play Services</string>
+
+    <string name="powersave_gms_restricted_title">Ограничивать всегда</string>
+    <string name="powersave_gms_restricted_summary">Ограничить активность Google Play Services. Некоторые приложения могут не работать!</string>
+    <string name="powersave_gms_idle_restricted_title">Ограничивать в режиме ожидания</string>
+    <string name="powersave_gms_idle_restricted_summary"></string>
+    <string name="powersave_gms_stamina_restricted_title">Ограничивать в ржима Стамина</string>
+    <string name="powersave_gms_stamina_restricted_summary"></string>
+    <string name="powersave_gps_restricted_title">Ограничить Play Market</string>
+    <string name="powersave_gps_restricted_summary">Ограничить активность Play Market в фоне</string>
+
     <!-- Batery whitelist -->
     <string name="prefs_battery_saver_title">Белый список</string>
     <string name="prefs_battery_saver_summary">Белый список</string>

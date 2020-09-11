@@ -22,11 +22,11 @@
     <string name="powersave_hide_idle_title">Hide Idle from GMS</string>
     <string name="powersave_hide_idle_summary">Hide Idle state from Google Play Services. Could fix notification problems. Increases battery drain! </string>
     <string name="powersave_gms_restricted_title">Restrict Always</string>
-    <string name="powersave_gms_restricted_summary">Always Restrict Google Play Services in background</string>
+    <string name="powersave_gms_restricted_summary">Always Restrict Google Play Services in background. Some apps may not work!</string>
     <string name="powersave_gms_idle_restricted_title">Restrict in Idle</string>
-    <string name="powersave_gms_idle_restricted_summary">Always Restrict Google Play Services in background while in Idle Mode</string>
+    <string name="powersave_gms_idle_restricted_summary">Always Restrict Google Play Services in Idle Mode</string>
     <string name="powersave_gms_stamina_restricted_title">Restrict in Stamina</string>
-    <string name="powersave_gms_stamina_restricted_summary">Always Restrict Google Play Services in background while in Stamina Mode</string>
+    <string name="powersave_gms_stamina_restricted_summary">Always Restrict Google Play Services in Stamina Mode</string>
     <string name="powersave_gps_restricted_title">Restrict Play Market</string>
     <string name="powersave_gps_restricted_summary">Restrict Play Market activity in background</string>
 
