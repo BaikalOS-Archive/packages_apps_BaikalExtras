@@ -84,4 +84,7 @@
     <string name="app_profile_restricted_title">Ограничить</string>
     <string name="app_profile_restricted_summary">Заблокировать работу приложения в фоновом режиме</string>
 
+    <string name="app_profile_restricted_idle_title">Ограничить во сне</string>
+    <string name="app_profile_restricted_idle_summary">Заблокировать работу приложения в режиме сна</string>
+
 </resources>

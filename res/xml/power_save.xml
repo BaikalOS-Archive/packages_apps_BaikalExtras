@@ -120,13 +120,6 @@
             android:defaultValue="false"
             android:disableDependentsState="true" />
 
-        <com.aicp.gear.preference.GlobalSettingSwitchPreference
-            android:key="baikalos_gps_restricted"
-            android:title="@string/powersave_gps_restricted_title"
-            android:summary="@string/powersave_gps_restricted_summary"
-            android:defaultValue="false"
-            android:disableDependentsState="true" />
-
     </PreferenceCategory>
 
     <Preference android:title="@string/prefs_battery_saver_title" 

@@ -94,6 +94,10 @@
     <string name="app_profile_stamina_summary">Allow this app to start in background in stamina mode</string>
 
     <string name="app_profile_restricted_title">Block in background</string>
-    <string name="app_profile_restricted_summary">Block background start</string>
+    <string name="app_profile_restricted_summary">Block background start. Could break some apps.</string>
+
+
+    <string name="app_profile_restricted_idle_title">Block while idle</string>
+    <string name="app_profile_restricted_idle_summary">Block this app in Idle mode</string>
 
 </resources>

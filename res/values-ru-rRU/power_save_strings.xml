@@ -21,10 +21,10 @@
     <string name="powersave_gms_summary">Опции для Google Play Services</string>
 
     <string name="powersave_gms_restricted_title">Ограничивать всегда</string>
-    <string name="powersave_gms_restricted_summary">Ограничить активность Google Play Services. Некоторые приложения могут не работать!</string>
+    <string name="powersave_gms_restricted_summary">Ограничить активность Google Play Services. Некоторые приложения могут не работать! Возможны проблемы с уведомлениями!</string>
     <string name="powersave_gms_idle_restricted_title">Ограничивать в режиме ожидания</string>
-    <string name="powersave_gms_idle_restricted_summary"></string>
-    <string name="powersave_gms_stamina_restricted_title">Ограничивать в ржима Стамина</string>
+    <string name="powersave_gms_idle_restricted_summary">Возможны проблемы с уведомлениями!</string>
+    <string name="powersave_gms_stamina_restricted_title">Ограничивать в режиме Стамина</string>
     <string name="powersave_gms_stamina_restricted_summary"></string>
     <string name="powersave_gps_restricted_title">Ограничить Play Market</string>
     <string name="powersave_gps_restricted_summary">Ограничить активность Play Market в фоне</string>

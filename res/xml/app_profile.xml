@@ -75,6 +75,12 @@
             android:summary="@string/app_profile_restricted_summary"
             android:defaultValue="false" />
 
+        <SwitchPreference
+            android:key="app_profile_restricted_idle"
+            android:title="@string/app_profile_restricted_idle_title"
+            android:summary="@string/app_profile_restricted_idle_summary"
+            android:defaultValue="false" />
+
         <!-- SwitchPreference
             android:key="app_profile_disable_twl"
             android:title="@string/app_profile_disable_twl_title"
