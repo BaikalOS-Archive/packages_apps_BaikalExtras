@@ -31,11 +31,11 @@
             android:summary="@string/audio_tweaks_hq_policy_summary"
             android:defaultValue="false" />
 
-        <SwitchPreference
+        <!-- SwitchPreference
             android:key="audio_tweaks_suspend_play"
             android:title="@string/audio_tweaks_suspend_play_title"
             android:summary="@string/audio_tweaks_suspend_play_summary"
-            android:defaultValue="false" />
+            android:defaultValue="false" / -->
 
         <com.aicp.gear.preference.GlobalSettingSwitchPreference
             android:key="baikalos_disable_hp_detect"
