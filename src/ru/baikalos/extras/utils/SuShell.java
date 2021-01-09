@@ -48,6 +48,10 @@ public class SuShell {
         }
     }
 
+    public static ArrayList<String> runWithShellCheck(String... command) {
+        return run("/system/bin/sh", command);
+    }
+
     public static ArrayList<String> runWithShell(String... command) {
         return run("/system/bin/sh", command);
     }
