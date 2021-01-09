@@ -243,7 +243,7 @@ public class LogIt extends BaseSettingsFragment implements Preference.OnPreferen
         } else {
             command += " > " + LOGCAT_FILE;
         }
-        SuShell.runWithSuCheck(command);
+        SuShell.runWithShellCheck(command);
     }
 
     public void makeLogcatLast() throws SuShell.SuDeniedException, IOException {
@@ -256,7 +256,7 @@ public class LogIt extends BaseSettingsFragment implements Preference.OnPreferen
         } else {
             command += " > " + LOGCAT_LAST_FILE;
         }
-        SuShell.runWithSuCheck(command);
+        SuShell.runWithShellCheck(command);
     }
 
     public void makeLogcatRadio() throws SuShell.SuDeniedException, IOException {
@@ -269,7 +269,7 @@ public class LogIt extends BaseSettingsFragment implements Preference.OnPreferen
         } else {
             command += " > " + LOGCAT_RADIO_FILE;
         }
-        SuShell.runWithSuCheck(command);
+        SuShell.runWithShellCheck(command);
     }
 
     public void makeKmsg() throws SuShell.SuDeniedException, IOException {
@@ -282,11 +282,11 @@ public class LogIt extends BaseSettingsFragment implements Preference.OnPreferen
         } else {
             command += " > " + KMSG_FILE;
         }
-        SuShell.runWithSuCheck(command);
+        SuShell.runWithShellCheck(command);
     }
 
     public void makeDmesg() throws SuShell.SuDeniedException, IOException {
-        String command = "dmesg";
+        String command = "dmesg -T";
         if (shareHaste) {
             command += " | tail -c " + HASTE_MAX_LOG_SIZE + " > " + DMESG_FILE
                     + "&& curl -s -X POST -T " + DMESG_FILE + " " + BAIKALOS_HASTE
@@ -295,7 +295,7 @@ public class LogIt extends BaseSettingsFragment implements Preference.OnPreferen
         } else {
             command += " > " + DMESG_FILE;
         }
-        SuShell.runWithSuCheck(command);
+        SuShell.runWithShellCheck(command);
     }
 
     private void createShareZip(boolean logcat, boolean logcatRadio, boolean kmsg, boolean dmesg)
