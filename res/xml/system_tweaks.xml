@@ -22,11 +22,11 @@
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
     android:title="@string/system_tweaks_title">
 
-    <SwitchPreference
+    <!-- SwitchPreference
             android:key="system_tweaks_sec_hwc"
             android:title="@string/system_tweaks_sec_hwc_title"
             android:summary="@string/system_tweaks_sec_hwc_summary"
-            android:defaultValue="false" />
+            android:defaultValue="false" / -->
 
 
     <com.aicp.gear.preference.GlobalSettingSwitchPreference
@@ -43,7 +43,7 @@
             android:defaultValue="false" />      
 
 
-    <PreferenceCategory
+    <!-- PreferenceCategory
         android:key="corners_category"
         android:title="@string/corners_category" >
 
@@ -69,6 +69,6 @@
             android:min="0"
             android:persistent="false"
             android:dependency="sysui_rounded_fwvals" />
-    </PreferenceCategory>
+    </PreferenceCategory -->
 
 </PreferenceScreen>
