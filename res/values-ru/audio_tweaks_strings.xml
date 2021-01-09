@@ -37,4 +37,13 @@
     <string name="audio_tweaks_a2dp_sbc_priority_summary">Приоритет SBC над AAC/APTX/APTX HD</string>
     <string name="audio_tweaks_a2dp_last_codec_title">Последний использованный кодек</string>
     <string name="audio_tweaks_a2dp_last_bitrate_title">Последний использованный битрейт</string>
+    <string name="audio_effects_title">Эффекты</string>
+    <string name="audio_effects_summary">ТРЕБУЕТСЯ ПЕРЕЗАГРУЗКА!</string>
+    <string name="audio_effects_system_title">Отключить системные эффекты</string>
+    <string name="audio_effects_system_summary">Отключить встроенные AOSP звуковые фильтры</string>
+    <string name="audio_effects_qc_title">Отключить эффекты Qualcomm</string>
+    <string name="audio_effects_qc_summary">Отключить расширенные звуковые фильтры Qualcomm</string>
+    <string name="audio_effects_dolby_title">Включить Dolby</string>
+    <string name="audio_effects_dolby_summary">Включить аудио-фильтры Dolby</string>
+
 </resources>
