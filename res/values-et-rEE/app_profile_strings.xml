@@ -45,5 +45,4 @@
     <string name="app_profile_disable_twl_summary">Energia säästmiseks keela sissetulevate teadete lubamine valgetes nimekirjades</string>
     <string name="app_profile_reader_title">Lugemisrežiim</string>
     <string name="app_profile_reader_summary">Laske CPU-l magada selle rakenduse töötamise ajal</string>
-    <string name="app_profile_fps_title">Kuva kaadrisagedus</string>
 </resources>

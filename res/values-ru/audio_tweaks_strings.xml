@@ -37,6 +37,17 @@
     <string name="audio_tweaks_a2dp_sbc_priority_summary">Приоритет SBC над AAC/APTX/APTX HD</string>
     <string name="audio_tweaks_a2dp_last_codec_title">Последний использованный кодек</string>
     <string name="audio_tweaks_a2dp_last_bitrate_title">Последний использованный битрейт</string>
+
+    <string name="audio_tweaks_sonif_a2dp_title">Дублирование уведомлений</string>
+    <string name="audio_tweaks_sonif_a2dp_summary">Воспроизводить звук уведомлений из динамика при подключенном BT устройстве</string>
+    <string name="audio_tweaks_assist_a2dp_title">Дублирование ассистента</string>
+    <string name="audio_tweaks_assist_a2dp_summary">Воспроизводить звук ассистента из динамика при подключенном BT устройстве</string>
+
+    <string name="audio_tweaks_media_a2dp_title">Дублирование медиа</string>
+    <string name="audio_tweaks_media_a2dp_summary">Воспроизводить звук медиа из динамика при подключенном BT устройстве</string>
+    <string name="audio_tweaks_none_a2dp_title">Дублирование неклассифицированного</string>
+    <string name="audio_tweaks_none_a2dp_summary">Воспроизводить неклассифицированный звук на динамик при подключенном BT устройстве</string>
+
     <string name="audio_effects_title">Эффекты</string>
     <string name="audio_effects_summary">ТРЕБУЕТСЯ ПЕРЕЗАГРУЗКА!</string>
     <string name="audio_effects_system_title">Отключить системные эффекты</string>

@@ -234,6 +234,10 @@ public class LogIt extends BaseSettingsFragment implements Preference.OnPreferen
     }
 
     public void makeLogcat() throws SuShell.SuDeniedException, IOException {
+
+        String rmCommand = "rm " + LOGCAT_FILE;
+        SuShell.runWithShellCheck(rmCommand);
+
         String command = "logcat -d -b all";
         if (shareHaste) {
             command += " | tail -c " + HASTE_MAX_LOG_SIZE + " > " + LOGCAT_FILE
@@ -247,6 +251,10 @@ public class LogIt extends BaseSettingsFragment implements Preference.OnPreferen
     }
 
     public void makeLogcatLast() throws SuShell.SuDeniedException, IOException {
+
+        String rmCommand = "rm " + LOGCAT_LAST_FILE;
+        SuShell.runWithShellCheck(rmCommand);
+
         String command = "logcat -d -b all -L";
         if (shareHaste) {
             command += " | tail -c " + HASTE_MAX_LOG_SIZE + " > " + LOGCAT_LAST_FILE
@@ -260,6 +268,10 @@ public class LogIt extends BaseSettingsFragment implements Preference.OnPreferen
     }
 
     public void makeLogcatRadio() throws SuShell.SuDeniedException, IOException {
+
+        String rmCommand = "rm " + LOGCAT_RADIO_FILE;
+        SuShell.runWithShellCheck(rmCommand);
+
         String command = "logcat -d -b radio";
         if (shareHaste) {
             command += " | tail -c " + HASTE_MAX_LOG_SIZE + " > " + LOGCAT_RADIO_FILE
@@ -273,6 +285,10 @@ public class LogIt extends BaseSettingsFragment implements Preference.OnPreferen
     }
 
     public void makeKmsg() throws SuShell.SuDeniedException, IOException {
+
+        String rmCommand = "rm " + KMSG_FILE;
+        SuShell.runWithShellCheck(rmCommand);
+
         String command = "test -e /proc/last_kmsg && cat /proc/last_kmsg  || cat /sys/fs/pstore/console-ramoops*";
         if (shareHaste) {
             command += " | tail -c " + HASTE_MAX_LOG_SIZE + " > " + KMSG_FILE
@@ -286,6 +302,10 @@ public class LogIt extends BaseSettingsFragment implements Preference.OnPreferen
     }
 
     public void makeDmesg() throws SuShell.SuDeniedException, IOException {
+
+        String rmCommand = "rm " + DMESG_FILE;
+        SuShell.runWithShellCheck(rmCommand);
+
         String command = "dmesg -T";
         if (shareHaste) {
             command += " | tail -c " + HASTE_MAX_LOG_SIZE + " > " + DMESG_FILE

@@ -73,6 +73,16 @@
     <string name="audio_tweaks_new_avrcp_title">New AVRCP</string>
     <string name="audio_tweaks_new_avrcp_summary">Enable new version of AVRCP</string>
 
+    <string name="audio_tweaks_sonif_a2dp_title">Duplicate notifications</string>
+    <string name="audio_tweaks_sonif_a2dp_summary">Duplicate notifications to speaker</string>
+    <string name="audio_tweaks_assist_a2dp_title">Duplicate assistant</string>
+    <string name="audio_tweaks_assist_a2dp_summary">Duplicate assistant sounds to speaker</string>
+
+    <string name="audio_tweaks_media_a2dp_title">Duplicate media</string>
+    <string name="audio_tweaks_media_a2dp_summary">Duplicate media to speaker</string>
+    <string name="audio_tweaks_none_a2dp_title">Duplicate unclassified</string>
+    <string name="audio_tweaks_none_a2dp_summary">Duplicate unclassified to speaker</string>
+
     <string name="audio_effects_title">Effects</string>
     <string name="audio_effects_summary">REBOOT REQUIRED!</string>
     <string name="audio_effects_system_title">Disable System Effects</string>

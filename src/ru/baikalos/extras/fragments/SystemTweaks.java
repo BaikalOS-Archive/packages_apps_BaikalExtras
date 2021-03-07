@@ -82,7 +82,7 @@ public class SystemTweaks extends BaseSettingsFragment {
 
         final PreferenceScreen screen = getPreferenceScreen();
 
-        boolean hasCutout = mContext.getResources().getBoolean(com.android.internal.R.bool.config_physicalDisplayCutout);
+        boolean hasCutout = true; //mContext.getResources().getBoolean(com.android.internal.R.bool.config_physicalDisplayCutout);
 
 
         try {

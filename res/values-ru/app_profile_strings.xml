@@ -45,5 +45,5 @@
     <string name="app_profile_disable_twl_summary">Не помещать приложение в белый список по получению уведомлений для экономии энергии</string>
     <string name="app_profile_reader_title">Режим чтения</string>
     <string name="app_profile_reader_summary">Разрешить отключать ЦП во время работы этого приложения</string>
-    <string name="app_profile_fps_title">Показывать частоту кадров</string>
+    <string name="app_profile_fps_title">Частота обновления экрана</string>
 </resources>

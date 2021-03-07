@@ -25,13 +25,13 @@
         android:key="audio_settings"
         android:title="@string/audio_settings_title">
 
-        <SwitchPreference
+        <!-- SwitchPreference
             android:key="audio_tweaks_hq_policy"
             android:title="@string/audio_tweaks_hq_policy_title"
             android:summary="@string/audio_tweaks_hq_policy_summary"
             android:defaultValue="false" />
 
-        <!-- SwitchPreference
+        <SwitchPreference
             android:key="audio_tweaks_suspend_play"
             android:title="@string/audio_tweaks_suspend_play_title"
             android:summary="@string/audio_tweaks_suspend_play_summary"
@@ -114,6 +114,10 @@
             android:summary="@string/audio_tweaks_a2dp_sbc_priority_summary"
             android:defaultValue="false" />
 
+        <ru.baikalos.extras.preference.BluetoothDevicePreference 
+            android:key="bluetooth_mac"
+            android:title="Bluetooth Devices" />
+
         <SwitchPreference
             android:key="audio_tweaks_a2dp_sbc_hd"
             android:title="@string/audio_tweaks_a2dp_sbc_hd_title"
@@ -142,6 +146,30 @@
             android:key="audio_tweaks_new_avrcp"
             android:title="@string/audio_tweaks_new_avrcp_title"
             android:summary="@string/audio_tweaks_new_avrcp_summary"
+            android:defaultValue="false" />
+
+        <SwitchPreference
+            android:key="audio_tweaks_sonif_a2dp"
+            android:title="@string/audio_tweaks_sonif_a2dp_title"
+            android:summary="@string/audio_tweaks_sonif_a2dp_summary"
+            android:defaultValue="false" />
+
+        <SwitchPreference
+            android:key="audio_tweaks_assist_a2dp"
+            android:title="@string/audio_tweaks_assist_a2dp_title"
+            android:summary="@string/audio_tweaks_assist_a2dp_summary"
+            android:defaultValue="false" />
+
+        <SwitchPreference
+            android:key="audio_tweaks_media_a2dp"
+            android:title="@string/audio_tweaks_media_a2dp_title"
+            android:summary="@string/audio_tweaks_media_a2dp_summary"
+            android:defaultValue="false" />
+
+        <SwitchPreference
+            android:key="audio_tweaks_none_a2dp"
+            android:title="@string/audio_tweaks_none_a2dp_title"
+            android:summary="@string/audio_tweaks_none_a2dp_summary"
             android:defaultValue="false" />
 
         <Preference

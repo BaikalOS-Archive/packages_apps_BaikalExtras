@@ -45,5 +45,4 @@
     <string name="app_profile_disable_twl_summary">Онемогући временски бели списак на долазећим обавештењима</string>
     <string name="app_profile_reader_title">Режим Читања</string>
     <string name="app_profile_reader_summary">Дозволи CPU спавање током функционисања ове апликације</string>
-    <string name="app_profile_fps_title">Прикажи брзину смењивања слика</string>
 </resources>

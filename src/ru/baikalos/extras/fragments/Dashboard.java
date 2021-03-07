@@ -47,9 +47,10 @@ public class Dashboard extends BaseSettingsFragment {
     private static final String PREF_BAIKALOS_OTA = "baikalos_ota";
     private static final String PREF_LOG_IT = "log_it";
 
-    private static final String PREF_BAIKALOS_PARTS = "device_part";
+    private static final String PREF_BAIKALOS_PARTS = "device_parts";
+    private static final String PREF_LINEAGE_PARTS = "lineage_parts";
     private static final String PREF_BAIKALOS_PARTS_PACKAGE_NAME = "org.lineageos.settings.device";
-
+    private static final String PREF_LINEAGE_PARTS_PACKAGE_NAME = "org.lineageos.settings";
 
     private static final Intent INTENT_OTA = new Intent().setComponent(new ComponentName(
             Constants.BAIKALOS_OTA_PACKAGE, Constants.BAIKALOS_OTA_ACTIVITY));
@@ -57,6 +58,7 @@ public class Dashboard extends BaseSettingsFragment {
     private LongClickablePreference mBaikalOSLogo;
     private Preference mBaikalOSOTA;
     private Preference mBaikalOSParts;
+    private Preference mLineAgeParts;
 
     private Random mRandom = new Random();
     private int mLogoClickCount = 0;
@@ -95,6 +97,12 @@ public class Dashboard extends BaseSettingsFragment {
         mBaikalOSParts = findPreference(PREF_BAIKALOS_PARTS);
         if (mBaikalOSParts != null && !Util.isPackageEnabled(PREF_BAIKALOS_PARTS_PACKAGE_NAME, pm)) {
             mBaikalOSParts.getParent().removePreference(mBaikalOSParts);
+        }
+
+        // LineAge DeviceParts
+        mLineAgeParts = findPreference(PREF_LINEAGE_PARTS);
+        if (mLineAgeParts != null && !Util.isPackageEnabled(PREF_LINEAGE_PARTS_PACKAGE_NAME, pm)) {
+            mLineAgeParts.getParent().removePreference(mLineAgeParts);
         }
 
         Preference logIt = findPreference(PREF_LOG_IT);

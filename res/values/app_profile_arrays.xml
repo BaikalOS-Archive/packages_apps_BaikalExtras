@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    
+    <string-array name="background_restrictions_entries">
+    	<item>@string/background_restrictions_unlimited</item>
+    	<item>@string/background_restrictions_default</item>
+    	<item>@string/background_restrictions_limited</item>
+    	<item>@string/background_restrictions_restricted</item>
+    	<item>@string/background_restrictions_disabled</item>
+    </string-array>
+
+    <string-array name="background_restrictions_values">
+    	<item>-1</item>
+    	<item>0</item>
+    	<item>1</item>
+    	<item>2</item>
+    	<item>3</item>
+    </string-array>
 
     <string-array name="performance_listentries">
     	<item>@string/performance_default</item>
@@ -11,6 +27,7 @@
     	<item>@string/performance_gaming2</item>
     	<item>@string/performance_battery</item>
      </string-array>
+
      <string-array name="performance_listvalues">
     	<item>default</item>
     	<item>balance</item>
@@ -77,20 +94,18 @@
     </string-array>
 
     <string-array name="fps_listentries">
-    	<item>Default(60)</item>
-    	<item>10</item>
+    	<item>Default</item>
     	<item>30</item>
     	<item>60</item>
-    	<item>80</item>
     	<item>90</item>
+    	<item>120</item>
      </string-array>
      <string-array name="fps_listvalues">
     	<item>0</item>
-    	<item>10</item>
-    	<item>30</item>
-    	<item>60</item>
-    	<item>80</item>
-    	<item>90</item>
+    	<item>1</item>
+    	<item>3</item>
+    	<item>4</item>
+    	<item>5</item>
     </string-array>
 
     <string-array name="cpu_silver_freqs">

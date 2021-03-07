@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <resources>
     <!-- Power Save -->
-    <string name="performance_title">Performance</string>
-    <string name="performance_summary">Device performance related settings</string>
+    <string name="performance_title">Apps and Performance</string>
+    <string name="performance_summary">Applications and performance related settings</string>
 
     <string name="default_profiles_title">Default profiles</string>
 

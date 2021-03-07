@@ -38,7 +38,6 @@ import android.util.Log;
 import android.os.ServiceManager;
 import android.os.RemoteException;
 
-
 import android.content.res.Resources;
 
 import com.android.internal.baikalos.AppProfileSettings;
@@ -61,7 +60,9 @@ public class AppProfileFragment extends BaseSettingsFragment
 //    private static final String APP_PROFILE_CAMERA_HAL1 = "app_profile_camera_hal1";
     private static final String APP_PROFILE_PINNED = "app_profile_pinned";
     private static final String APP_PROFILE_STAMINA = "app_profile_stamina";
-    private static final String APP_PROFILE_RESTRICTED = "app_profile_restricted";
+    private static final String APP_PROFILE_REQUIRE_GMS = "app_profile_require_gms";
+//    private static final String APP_PROFILE_RESTRICTED = "app_profile_restricted";
+    private static final String APP_PROFILE_BACKGROUND = "app_profile_background";
 //    private static final String APP_PROFILE_DISABLE_TWL = "app_profile_disable_twl";
 
     private String mPackageName;
@@ -70,12 +71,14 @@ public class AppProfileFragment extends BaseSettingsFragment
     private SwitchPreference mAppReader;
     private SwitchPreference mAppPinned;
     private SwitchPreference mAppStamina;
-    private SwitchPreference mAppRestricted;
+    private SwitchPreference mAppRequireGms;
+    //private SwitchPreference mAppRestricted;
 
     private ListPreference mAppPerfProfile;
     private ListPreference mAppThermProfile;
     private ListPreference mAppBrightnessProfile;
     private ListPreference mAppFpsProfile;
+    private ListPreference mAppBackgroundProfile;
 
     private AppProfileSettings mAppSettings;
     private com.android.internal.baikalos.AppProfile mProfile;
@@ -103,8 +106,10 @@ public class AppProfileFragment extends BaseSettingsFragment
         boolean perfProf  = SystemProperties.get("baikal.eng.perf", "0").equals("1");
         boolean thermProf  = SystemProperties.get("baikal.eng.therm", "0").equals("1");
 
+        boolean readerMode  = SystemProperties.get("sys.baikal.reader", "1").equals("1");
+        boolean variableFps  = SystemProperties.get("sys.baikal.var_fps", "1").equals("1");
 
-        mAppSettings = new  AppProfileSettings(new Handler(),mContext, mContext.getContentResolver(),null);
+        mAppSettings = AppProfileSettings.getInstance(new Handler(),mContext, mContext.getContentResolver(),null);
         mProfile = mAppSettings.getProfile(mPackageName);
         if( mProfile == null ) { 
             mProfile = new com.android.internal.baikalos.AppProfile();
@@ -116,24 +121,28 @@ public class AppProfileFragment extends BaseSettingsFragment
 
             mAppReader = (SwitchPreference) findPreference(APP_PROFILE_READER);
             if( mAppReader != null ) {
-                mAppReader.setChecked(mProfile.mReader);
-                //mAppRestricted.setChecked(mBaikalService.isAppRestrictedProfile(mPackageName));
-                mAppReader.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
-                    public boolean onPreferenceChange(Preference preference, Object newValue) {
-                        //int val = Integer.parseInt(newValue.toString());
-                        //DiracAudioEnhancerService.du.setHeadsetType(mContext, val);
-                        try {
-                            mProfile.mReader = ((Boolean)newValue);
-                            mAppSettings.updateProfile(mProfile);
-                            mAppSettings.save();
-                            //mBaikalService.setAppPriority(mPackageName, ((Boolean)newValue) ? -1 : 0 );
-                            Log.e(TAG, "mAppReader: mPackageName=" + mPackageName + ",setReader=" + (Boolean)newValue);
-                        } catch(Exception re) {
-                            Log.e(TAG, "onCreate: mAppReader Fatal! exception", re );
+                if( !readerMode ) {
+                    mAppReader.setVisible(false);
+                } else {
+                    mAppReader.setChecked(mProfile.mReader);
+                    //mAppRestricted.setChecked(mBaikalService.isAppRestrictedProfile(mPackageName));
+                    mAppReader.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                        public boolean onPreferenceChange(Preference preference, Object newValue) {
+                            //int val = Integer.parseInt(newValue.toString());
+                            //DiracAudioEnhancerService.du.setHeadsetType(mContext, val);
+                            try {
+                                mProfile.mReader = ((Boolean)newValue);
+                                mAppSettings.updateProfile(mProfile);
+                                mAppSettings.save();
+                                //mBaikalService.setAppPriority(mPackageName, ((Boolean)newValue) ? -1 : 0 );
+                                Log.e(TAG, "mAppReader: mPackageName=" + mPackageName + ",setReader=" + (Boolean)newValue);
+                            } catch(Exception re) {
+                                Log.e(TAG, "onCreate: mAppReader Fatal! exception", re );
+                            }
+                            return true;
                         }
-                        return true;
-                    }
-                });
+                    });
+                }
             }
 
 
@@ -220,25 +229,29 @@ public class AppProfileFragment extends BaseSettingsFragment
 
             mAppFpsProfile = (ListPreference) findPreference(APP_PROFILE_FPS);
             if( mAppFpsProfile != null ) {
-                int fps = mProfile.mFrameRate;
-                Log.e(TAG, "setAppFps: mPackageName=" + mPackageName + ",fps=" + fps);
-                mAppFpsProfile.setValue(Integer.toString(fps));
-                mAppFpsProfile.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
-                  public boolean onPreferenceChange(Preference preference, Object newValue) {
-                    try {
-                        int val = Integer.parseInt(newValue.toString());
-                        mProfile.mFrameRate = val;
-                        mAppSettings.updateProfile(mProfile);
-                        mAppSettings.save();
+                if(!variableFps) {
+                    mAppFpsProfile.setVisible(false);
+                } else {
+                    int fps = mProfile.mFrameRate;
+                    Log.e(TAG, "setAppFps: mPackageName=" + mPackageName + ",fps=" + fps);
+                    mAppFpsProfile.setValue(Integer.toString(fps));
+                    mAppFpsProfile.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                      public boolean onPreferenceChange(Preference preference, Object newValue) {
+                        try {
+                            int val = Integer.parseInt(newValue.toString());
+                            mProfile.mFrameRate = val;
+                            mAppSettings.updateProfile(mProfile);
+                            mAppSettings.save();
 
-                        //mBaikalService.setAppBrightness(mPackageName, val );
-                        Log.e(TAG, "setAppFps: mPackageName=" + mPackageName + ",fps=" + val);
-                    } catch(Exception re) {
-                        Log.e(TAG, "onCreate: setAppFps Fatal! exception", re );
-                    }
-                    return true;
-                  }
-                });
+                            //mBaikalService.setAppBrightness(mPackageName, val );
+                            Log.e(TAG, "setAppFps: mPackageName=" + mPackageName + ",fps=" + val);
+                        } catch(Exception re) {
+                            Log.e(TAG, "onCreate: setAppFps Fatal! exception", re );
+                        }
+                        return true;
+                      }
+                    });
+                }
             }
 
             mAppPinned = (SwitchPreference) findPreference(APP_PROFILE_PINNED);
@@ -285,7 +298,7 @@ public class AppProfileFragment extends BaseSettingsFragment
                 });
             }
 
-            mAppRestricted = (SwitchPreference) findPreference(APP_PROFILE_RESTRICTED);
+            /*mAppRestricted = (SwitchPreference) findPreference(APP_PROFILE_RESTRICTED);
             if( mAppRestricted != null ) {
                 mAppRestricted.setChecked(mProfile.mRestricted);
                 //mAppRestricted.setChecked(mBaikalService.isAppRestrictedProfile(mPackageName));
@@ -305,8 +318,54 @@ public class AppProfileFragment extends BaseSettingsFragment
                         return true;
                     }
                 });
-            }
+            }*/
         
+
+            mAppBackgroundProfile = (ListPreference) findPreference(APP_PROFILE_BACKGROUND);
+            if( mAppBackgroundProfile != null ) {
+                int background = mProfile.mBackground;
+                Log.e(TAG, "getAppBackground: mPackageName=" + mPackageName + ",background=" + background);
+                mAppBackgroundProfile.setValue(Integer.toString(background));
+                mAppBackgroundProfile.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                  public boolean onPreferenceChange(Preference preference, Object newValue) {
+                    try {
+                        int val = Integer.parseInt(newValue.toString());
+                        mProfile.mBackground = val;
+                        mAppSettings.updateProfile(mProfile);
+                        mAppSettings.save();
+
+                        //mBaikalService.setAppBrightness(mPackageName, val );
+                        Log.e(TAG, "setAppBackground: mPackageName=" + mPackageName + ",background=" + val);
+                    } catch(Exception re) {
+                        Log.e(TAG, "onCreate: setAppBackground Fatal! exception", re );
+                    }
+                    return true;
+                  }
+                });
+            }
+
+
+            mAppRequireGms = (SwitchPreference) findPreference(APP_PROFILE_REQUIRE_GMS);
+            if( mAppRequireGms != null ) {
+                boolean requireGms = mProfile.mRequireGms;
+                Log.e(TAG, "mAppRequireGms: mPackageName=" + mPackageName + ",requireGms=" + requireGms);
+                mAppRequireGms.setChecked(mProfile.mRequireGms);
+                mAppRequireGms.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                  public boolean onPreferenceChange(Preference preference, Object newValue) {
+                    try {
+                        mProfile.mRequireGms = ((Boolean)newValue);
+                        mAppSettings.updateProfile(mProfile);
+                        mAppSettings.save();
+
+                        //mBaikalService.setAppBrightness(mPackageName, val );
+                        Log.e(TAG, "mAppRequireGms: mPackageName=" + mPackageName + ",requireGms=" + mProfile.mRequireGms);
+                    } catch(Exception re) {
+                        Log.e(TAG, "onCreate: mAppRequireGms Fatal! exception", re );
+                    }
+                    return true;
+                  }
+                });
+            }
         
         } catch(Exception re) {
             Log.e(TAG, "onCreate: Fatal! exception", re );

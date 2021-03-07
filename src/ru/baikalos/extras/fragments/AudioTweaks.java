@@ -69,6 +69,11 @@ public class AudioTweaks extends BaseSettingsFragment
     private static final String AUDIO_TWEAKS_A2DP_LAST_CODEC = "audio_tweaks_a2dp_last_codec";
     private static final String AUDIO_TWEAKS_A2DP_LAST_BITRATE = "audio_tweaks_a2dp_last_bitrate";
 
+    private static final String AUDIO_TWEAKS_SONIF_A2DP = "audio_tweaks_sonif_a2dp";
+    private static final String AUDIO_TWEAKS_ASSIST_A2DP = "audio_tweaks_assist_a2dp";
+
+    private static final String AUDIO_TWEAKS_MEDIA_A2DP = "audio_tweaks_media_a2dp";
+    private static final String AUDIO_TWEAKS_NONE_A2DP = "audio_tweaks_none_a2dp";
 
     private static final String AUDIO_EFFECTS_SYSTEM = "audio_effects_system";
     private static final String AUDIO_EFFECTS_QC = "audio_effects_qc";
@@ -92,6 +97,12 @@ public class AudioTweaks extends BaseSettingsFragment
     private static final String SYSTEM_PROPERTY_A2DP_LAST_CODEC = "baikal.last.a2dp_codec";
     private static final String SYSTEM_PROPERTY_A2DP_LAST_BITRATE = "baikal.last.a2dp_bitrate";
 
+    private static final String SYSTEM_PROPERTY_SONIF_A2DP = "persist.baikal.sonif_a2dp";
+    private static final String SYSTEM_PROPERTY_ASSIST_A2DP = "persist.baikal.assist_a2dp";
+    private static final String SYSTEM_PROPERTY_MEDIA_A2DP = "persist.baikal.media_a2dp";
+    private static final String SYSTEM_PROPERTY_NONE_A2DP = "persist.baikal.none_a2dp";
+
+
     private Context mContext;
 
     private SwitchPreference mEnableAudioHq;
@@ -103,9 +114,17 @@ public class AudioTweaks extends BaseSettingsFragment
     private SwitchPreference mEnableA2DP48;
     private SwitchPreference mEnableNewAvrcp;
 
+    private SwitchPreference mEnableSonifA2DP;
+    private SwitchPreference mEnableAssistA2DP;
+
+    private SwitchPreference mEnableMediaA2DP;
+    private SwitchPreference mEnableNoneA2DP;
+
     private SwitchPreference mEffectsSystem;
     private SwitchPreference mEffectsDolby;
     private SwitchPreference mEffectsQc;
+
+
 
 
     private Preference mScanMedia;
@@ -163,30 +182,24 @@ public class AudioTweaks extends BaseSettingsFragment
         String sCodec = SystemProperties.get(SYSTEM_PROPERTY_A2DP_LAST_CODEC,"");
         String sBitrate = SystemProperties.get(SYSTEM_PROPERTY_A2DP_LAST_BITRATE,"");
 
-        switch(sCodec) {
-            case "":
-                    codec.setVisible(false);
-                    codec.setSummary("");
-                    bitrate.setVisible(false);
-                    bitrate.setSummary("");
-                break;
 
-            case "SBC HD":
-            case "SBC HDX":
-                    codec.setVisible(true);
-                    codec.setSummary(sCodec);
-                    bitrate.setVisible(true);
-                    bitrate.setSummary(sBitrate + " kBit/s");
-                break;
-
-            default:
-                    codec.setVisible(true);
-                    codec.setSummary(sCodec);
-                    bitrate.setVisible(false);
-                    bitrate.setSummary("");
-                break;
+        if( sCodec != null && sCodec.startsWith("SBC HD") ) {
+            codec.setVisible(true);
+            codec.setSummary(sCodec);
+            bitrate.setVisible(true);
+            bitrate.setSummary(sBitrate + " kBit/s");
+        } 
+        else if( sCodec == null || sCodec.equals("") || sCodec.equals("NONE") ) {
+            codec.setVisible(false);
+            codec.setSummary("");
+            bitrate.setVisible(false);
+            bitrate.setSummary("");
+        } else {
+            codec.setVisible(true);
+            codec.setSummary(sCodec);
+            bitrate.setVisible(false);
+            bitrate.setSummary("");
         }
-
 
         mScanMedia = (Preference) findPreference(AUDIO_TWEAKS_SCAN_MEDIA);
         if( mScanMedia != null ) { 
@@ -253,6 +266,30 @@ public class AudioTweaks extends BaseSettingsFragment
         if( mEnableNewAvrcp != null ) { 
                 mEnableNewAvrcp.setChecked(SystemProperties.getBoolean(SYSTEM_PROPERTY_NEW_AVRCP, false));
                 mEnableNewAvrcp.setOnPreferenceChangeListener(this);
+        }
+
+        mEnableSonifA2DP = (SwitchPreference) findPreference(AUDIO_TWEAKS_SONIF_A2DP);
+        if( mEnableSonifA2DP != null ) { 
+                mEnableSonifA2DP.setChecked(SystemProperties.getBoolean(SYSTEM_PROPERTY_SONIF_A2DP, false));
+                mEnableSonifA2DP.setOnPreferenceChangeListener(this);
+        }
+
+        mEnableAssistA2DP = (SwitchPreference) findPreference(AUDIO_TWEAKS_ASSIST_A2DP);
+        if( mEnableAssistA2DP != null ) { 
+                mEnableAssistA2DP.setChecked(SystemProperties.getBoolean(SYSTEM_PROPERTY_ASSIST_A2DP, false));
+                mEnableAssistA2DP.setOnPreferenceChangeListener(this);
+        }
+
+        mEnableMediaA2DP = (SwitchPreference) findPreference(AUDIO_TWEAKS_MEDIA_A2DP);
+        if( mEnableMediaA2DP != null ) { 
+                mEnableMediaA2DP.setChecked(SystemProperties.getBoolean(SYSTEM_PROPERTY_MEDIA_A2DP, false));
+                mEnableMediaA2DP.setOnPreferenceChangeListener(this);
+        }
+
+        mEnableNoneA2DP = (SwitchPreference) findPreference(AUDIO_TWEAKS_NONE_A2DP);
+        if( mEnableNoneA2DP != null ) { 
+                mEnableNoneA2DP.setChecked(SystemProperties.getBoolean(SYSTEM_PROPERTY_NONE_A2DP, false));
+                mEnableNoneA2DP.setOnPreferenceChangeListener(this);
         }
 
     }
@@ -323,6 +360,22 @@ public class AudioTweaks extends BaseSettingsFragment
             Log.e(TAG, "onPreferenceChange: mEnableA2DP48 key=" + SYSTEM_PROPERTY_A2DP_SBC_48 + ", value=" + (Boolean)newValue);
             ((SwitchPreference)preference).setChecked((Boolean) newValue);
             setSystemPropertyBoolean(SYSTEM_PROPERTY_A2DP_SBC_48, (Boolean) newValue);
+        } else if (preference == mEnableSonifA2DP) {
+            Log.e(TAG, "onPreferenceChange: mEnableSonifA2DP key=" + SYSTEM_PROPERTY_SONIF_A2DP + ", value=" + (Boolean)newValue);
+            ((SwitchPreference)preference).setChecked((Boolean) newValue);
+            setSystemPropertyBoolean(SYSTEM_PROPERTY_SONIF_A2DP, (Boolean) newValue);
+        } else if (preference == mEnableAssistA2DP) {
+            Log.e(TAG, "onPreferenceChange: mEnableAssistA2DP key=" + SYSTEM_PROPERTY_ASSIST_A2DP + ", value=" + (Boolean)newValue);
+            ((SwitchPreference)preference).setChecked((Boolean) newValue);
+            setSystemPropertyBoolean(SYSTEM_PROPERTY_ASSIST_A2DP, (Boolean) newValue);
+        } else if (preference == mEnableMediaA2DP) {
+            Log.e(TAG, "onPreferenceChange: mEnableMediaA2DP key=" + SYSTEM_PROPERTY_MEDIA_A2DP + ", value=" + (Boolean)newValue);
+            ((SwitchPreference)preference).setChecked((Boolean) newValue);
+            setSystemPropertyBoolean(SYSTEM_PROPERTY_MEDIA_A2DP, (Boolean) newValue);
+        } else if (preference == mEnableNoneA2DP) {
+            Log.e(TAG, "onPreferenceChange: mEnableNoneA2DP key=" + SYSTEM_PROPERTY_NONE_A2DP + ", value=" + (Boolean)newValue);
+            ((SwitchPreference)preference).setChecked((Boolean) newValue);
+            setSystemPropertyBoolean(SYSTEM_PROPERTY_NONE_A2DP, (Boolean) newValue);
         } else if (preference == mEffectsSystem) {
             Log.e(TAG, "onPreferenceChange: mEffectsSystem key=" + SYSTEM_PROPERTY_EFFECTS_SYSTEM + ", value=" + (Boolean)newValue);
             ((SwitchPreference)preference).setChecked((Boolean) newValue);

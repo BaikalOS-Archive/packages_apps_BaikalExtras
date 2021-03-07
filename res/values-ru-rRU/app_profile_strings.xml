@@ -40,13 +40,17 @@
     <string name="brightness_70">70\%</string>
     <string name="brightness_80">80\%</string>
     <string name="brightness_90">80\%</string>
+    <string name="background_restrictions_unlimited">Неограниченный</string>
+    <string name="background_restrictions_default">По умолчанию</string>
+    <string name="background_restrictions_limited">Ограниченный</string>
+    <string name="background_restrictions_restricted">Заблокированный</string>
+    <string name="background_restrictions_disabled">Отключено</string>
     <string name="app_profile_pinned_title">Закрепить</string>
     <string name="app_profile_pinned_summary">Менеджер памяти не будет закрывать приложение по неактивности</string>
     <string name="app_profile_disable_twl_title">Отключить временный белый список</string>
     <string name="app_profile_disable_twl_summary">Не помещать приложение в белый список по получению уведомлений для экономии энергии</string>
     <string name="app_profile_reader_title">Режим чтения</string>
     <string name="app_profile_reader_summary">Разрешить ЦП переходить в режим глубокого сна во время работы этого приложения</string>
-    <string name="app_profile_fps_title">Показывать частоту кадров</string>
     <string name="edit_profile_title">Редактировать профиль</string>
 
     <string name="edit_profile_silver_title">CPU - Silver</string>
@@ -86,5 +90,10 @@
 
     <string name="app_profile_restricted_idle_title">Ограничить во сне</string>
     <string name="app_profile_restricted_idle_summary">Заблокировать работу приложения в режиме сна</string>
+
+    <string name="app_profile_background_title">Запуск в фоне</string>
+
+    <string name="app_profile_require_gms_title">Требует GMS</string>
+    <string name="app_profile_require_gms_summary">Отключить ограничения GMS когда запущено это приложение</string>
 
 </resources>

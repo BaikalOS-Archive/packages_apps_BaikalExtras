@@ -48,6 +48,12 @@
     <string name="brightness_80">80\%</string>
     <string name="brightness_90">90\%</string>
 
+    <string name="background_restrictions_unlimited">Unlimited</string>
+    <string name="background_restrictions_default">Default</string>
+    <string name="background_restrictions_limited">Limited</string>
+    <string name="background_restrictions_restricted">Restricted</string>
+    <string name="background_restrictions_disabled">Disabled</string>
+
     <string name="app_profile_pinned_title">Pinned</string>
     <string name="app_profile_pinned_summary">Do not close on memory management</string>
 
@@ -57,7 +63,7 @@
     <string name="app_profile_reader_title">Reader Mode</string>
     <string name="app_profile_reader_summary">Allow CPU to sleep while this app is running</string>
 
-    <string name="app_profile_fps_title">Display frame rate</string>
+    <string name="app_profile_fps_title">Refresh Rate</string>
 
     <string name="edit_profile_title">Edit profile</string>
 
@@ -96,8 +102,12 @@
     <string name="app_profile_restricted_title">Block in background</string>
     <string name="app_profile_restricted_summary">Block background start. Could break some apps.</string>
 
-
     <string name="app_profile_restricted_idle_title">Block while idle</string>
     <string name="app_profile_restricted_idle_summary">Block this app in Idle mode</string>
+
+    <string name="app_profile_background_title">Run in background</string>
+
+    <string name="app_profile_require_gms_title">Require GMS</string>
+    <string name="app_profile_require_gms_summary">Disable GMS restrictions while this app is running</string>
 
 </resources>

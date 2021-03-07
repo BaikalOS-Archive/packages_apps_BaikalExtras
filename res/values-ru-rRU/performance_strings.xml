@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <resources>
     <!-- Power Save -->
-    <string name="performance_title">Производительность</string>
-    <string name="performance_summary">Настройки производительности</string>
+    <string name="performance_title">Приложения</string>
+    <string name="performance_summary">Настройки приложений и производительности</string>
 
     <string name="default_profiles_title">Профили по умолчанию</string>
     <string name="scr_off_profile_title">Профиль при выключенном экране</string>

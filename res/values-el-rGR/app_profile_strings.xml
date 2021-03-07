@@ -45,5 +45,4 @@
     <string name="app_profile_disable_twl_summary">Απενρ/ση της προσωρινής λίστας, σε εισερχόμενες ειδοποιήσεις</string>
     <string name="app_profile_reader_title">Λειτουργία ανάγνωσης</string>
     <string name="app_profile_reader_summary">Να επιτρέπεται ο ύπνος του επεξεργαστή όταν αυτή η εφαρμογή τρέχει</string>
-    <string name="app_profile_fps_title">Εμφάνιση κλίμακας frame</string>
 </resources>

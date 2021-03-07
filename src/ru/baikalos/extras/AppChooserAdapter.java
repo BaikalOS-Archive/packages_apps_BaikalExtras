@@ -49,12 +49,12 @@ public abstract class AppChooserAdapter extends BaseAdapter implements Filterabl
     public AppChooserAdapter(Context context) {
         mContext = context;
         mHandler = new Handler();
-        mAppSettings = new  AppProfileSettings(mHandler,mContext, mContext.getContentResolver(),null);
+        mAppSettings = AppProfileSettings.getInstance(mHandler,mContext, mContext.getContentResolver(),null);
 
         mPackageManager = mContext.getPackageManager();
         mLayoutInflater = (LayoutInflater) mContext
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        mInstalledAppInfo = mPackageManager.getInstalledPackages(PackageManager.GET_PERMISSIONS);
+        mInstalledAppInfo = mPackageManager.getInstalledPackages(/*PackageManager.GET_PERMISSIONS*/0);
         mTemporarylist = mInstalledAppInfo;
     }
 

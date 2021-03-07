@@ -100,6 +100,13 @@
             android:disableDependentsState="true" />
 
         <com.aicp.gear.preference.GlobalSettingSwitchPreference
+            android:key="baikalos_gms_blocked"
+            android:title="@string/powersave_gms_blocked_title"
+            android:summary="@string/powersave_gms_blocked_summary"
+            android:defaultValue="false"
+            android:disableDependentsState="true" />
+
+        <!-- com.aicp.gear.preference.GlobalSettingSwitchPreference
             android:key="baikalos_gms_restricted"
             android:title="@string/powersave_gms_restricted_title"
             android:summary="@string/powersave_gms_restricted_summary"
@@ -111,7 +118,7 @@
             android:title="@string/powersave_gms_idle_restricted_title"
             android:summary="@string/powersave_gms_idle_restricted_summary"
             android:defaultValue="false"
-            android:disableDependentsState="true" />
+            android:disableDependentsState="true" /-->
 
         <com.aicp.gear.preference.GlobalSettingSwitchPreference
             android:key="baikalos_gms_stamina_restricted"
@@ -122,10 +129,10 @@
 
     </PreferenceCategory>
 
-    <Preference android:title="@string/prefs_battery_saver_title" 
+    <!-- Preference android:title="@string/prefs_battery_saver_title" 
 		    android:summary="@string/prefs_battery_saver_summary">
 	    <intent android:action="android.settings.IGNORE_BATTERY_OPTIMIZATION_SETTINGS"/>
-    </Preference>
+    </Preference -->
 
     <!--Preference
             android:title="@string/prefs_app_options_title"
