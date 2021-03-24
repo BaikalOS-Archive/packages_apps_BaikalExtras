@@ -1,17 +1,16 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <resources>
     <!-- Power Save -->
-    <string name="system_tweaks_title">System</string>
-    <string name="system_tweaks_summary">System Tweaks</string>
+    <string name="system_title">System</string>
+    <string name="system_summary">General BaikalOS settings and defaults</string>
 
-    <string name="system_tweaks_sec_hwc_title">Disable Secondary HWC</string>
-    <string name="system_tweaks_sec_hwc_summary">Disable HW Overlay on secondary display. Fix flickering on Android Auto and WFD.\nREBOOT REQUIRED!</string>
+    <string name="default_profiles_title">Default profiles</string>
 
-    <string name="baikalos_dlsb_enabled_title">Dual-line Statusbar</string>
-    <string name="baikalos_dlsb_enabled_summary">Enable dual-line statusbar. Reboot required!</string>
+    <string name="scr_off_profile_title">Screen off profile</string>
+    <string name="idle_profile_title">Idle profile</string>
+    <string name="idle_therm_profile_title">Idle thermal profile</string>
 
-    <!-- Old mobile type icons -->
-    <string name="use_old_mobiletype_title">Small mobile type icon</string>
-    <string name="use_old_mobiletype_summary">Show mobile type icon on top of the signal indicator</string>
+    <string name="edit_perf_profile_title">Edit profile</string>
+    <string name="reset_perf_profile_title">Reset profile</string>
 
 </resources>

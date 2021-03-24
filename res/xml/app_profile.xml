@@ -26,6 +26,12 @@
             android:summary="@string/app_profile_pinned_summary"
             android:defaultValue="false" />
 
+        <SwitchPreference
+            android:key="app_profile_disable_boot"
+            android:title="@string/app_profile_disable_title"
+            android:summary="@string/app_profile_disable_summary"
+            android:defaultValue="false" />
+
         <ListPreference
             android:key="app_profile_background"
             android:title="@string/app_profile_background_title"

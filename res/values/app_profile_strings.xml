@@ -57,6 +57,9 @@
     <string name="app_profile_pinned_title">Pinned</string>
     <string name="app_profile_pinned_summary">Do not close on memory management</string>
 
+    <string name="app_profile_disable_title">Disable Autostart</string>
+    <string name="app_profile_disable_summary">Disable app autostart on device boot</string>
+
     <string name="app_profile_disable_twl_title">Disable temp whitelisting</string>
     <string name="app_profile_disable_twl_summary">Disable temp whitelisting on incoming notifications</string>
 

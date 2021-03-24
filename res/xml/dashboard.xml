@@ -67,29 +67,34 @@
 
 
         <PreferenceScreen
+            android:title="@string/system_title"
+            android:summary="@string/system_summary"
+            android:icon="@drawable/ic_settings_system_behaviour"
+            android:fragment="ru.baikalos.extras.fragments.System" />
+
+        <PreferenceScreen
             android:title="@string/performance_title"
             android:summary="@string/performance_summary"
-            android:icon="@drawable/ic_settings_system_animations"
+            android:icon="@drawable/ic_settings_applications"
             android:fragment="ru.baikalos.extras.fragments.Performance" />
-
-
-        <PreferenceScreen
-            android:title="@string/system_tweaks_title"
-            android:summary="@string/system_tweaks_summary"
-            android:icon="@drawable/ic_settings_system_behaviour"
-            android:fragment="ru.baikalos.extras.fragments.SystemTweaks" />
-
-        <PreferenceScreen
-            android:title="@string/audio_tweaks_title"
-            android:summary="@string/audio_tweaks_summary"
-            android:icon="@drawable/ic_settings_system_audio"
-            android:fragment="ru.baikalos.extras.fragments.AudioTweaks" />
 
         <PreferenceScreen
             android:title="@string/powersave_title"
             android:summary="@string/powersave_summary"
-            android:icon="@drawable/ic_settings_system_powersave"
+            android:icon="@drawable/ic_settings_battery"
             android:fragment="ru.baikalos.extras.fragments.PowerSave" />
+
+        <PreferenceScreen
+            android:title="@string/audio_tweaks_title"
+            android:summary="@string/audio_tweaks_summary"
+            android:icon="@drawable/ic_settings_sound"
+            android:fragment="ru.baikalos.extras.fragments.AudioTweaks" />
+
+        <PreferenceScreen
+            android:title="@string/interface_title"
+            android:summary="@string/interface_summary"
+            android:icon="@drawable/ic_settings_ui"
+            android:fragment="ru.baikalos.extras.fragments.InterfaceTweaks" />
 
         <!-- PreferenceScreen
             android:title="@string/torch_title"

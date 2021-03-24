@@ -53,6 +53,7 @@ public class AppProfileFragment extends BaseSettingsFragment
     private static final String TAG = "ApplicationProfile";
 
     private static final String APP_PROFILE_READER = "app_profile_reader";
+    private static final String APP_PROFILE_DISABLE_BOOT = "app_profile_disable_boot";
     private static final String APP_PROFILE_PERF = "app_profile_performance";
     private static final String APP_PROFILE_THERM = "app_profile_thermal";
     private static final String APP_PROFILE_BRIGHTNESS = "app_profile_brightness";
@@ -72,6 +73,8 @@ public class AppProfileFragment extends BaseSettingsFragment
     private SwitchPreference mAppPinned;
     private SwitchPreference mAppStamina;
     private SwitchPreference mAppRequireGms;
+    private SwitchPreference mAppDisableBoot;
+
     //private SwitchPreference mAppRestricted;
 
     private ListPreference mAppPerfProfile;
@@ -118,6 +121,28 @@ public class AppProfileFragment extends BaseSettingsFragment
     
 
         try {
+
+            mAppDisableBoot = (SwitchPreference) findPreference(APP_PROFILE_DISABLE_BOOT);
+            if( mAppDisableBoot != null ) {
+                mAppDisableBoot.setChecked(mProfile.mBootDisabled);
+                //mAppRestricted.setChecked(mBaikalService.isAppRestrictedProfile(mPackageName));
+                mAppDisableBoot.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                    public boolean onPreferenceChange(Preference preference, Object newValue) {
+                        //int val = Integer.parseInt(newValue.toString());
+                        //DiracAudioEnhancerService.du.setHeadsetType(mContext, val);
+                        try {
+                            mProfile.mBootDisabled = ((Boolean)newValue);
+                            mAppSettings.updateProfile(mProfile);
+                            mAppSettings.save();
+                            //mBaikalService.setAppPriority(mPackageName, ((Boolean)newValue) ? -1 : 0 );
+                            Log.e(TAG, "mAppDisableBoot: mPackageName=" + mPackageName + ",disableBoot=" + (Boolean)newValue);
+                        } catch(Exception re) {
+                            Log.e(TAG, "onCreate: mAppDisableBoot Fatal! exception", re );
+                        }
+                        return true;
+                    }
+                });
+            }
 
             mAppReader = (SwitchPreference) findPreference(APP_PROFILE_READER);
             if( mAppReader != null ) {

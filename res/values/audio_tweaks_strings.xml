@@ -19,11 +19,11 @@
     <string name="audio_tweaks_suspend_play_title">Suspend while play</string>
     <string name="audio_tweaks_suspend_play_summary">Allow system suspend while player active. Not all media players compatible.</string>
 
-    <string name="audio_tweaks_a2dp_sbc_hd_title">High SBC bitrate</string>
-    <string name="audio_tweaks_a2dp_sbc_hd_summary">Use High SBC bitrate for A2DP Bluetooth Profile</string>
+    <string name="audio_tweaks_a2dp_sbc_hd_title">SBC Dual Channel</string>
+    <string name="audio_tweaks_a2dp_sbc_hd_summary">Use SBC Dual Channel mode for doubled bitrate for A2DP Bluetooth Profile</string>
 
-    <string name="audio_tweaks_a2dp_sbc_hdx_title">Highest SBC bitrate</string>
-    <string name="audio_tweaks_a2dp_sbc_hdx_summary">Use Highest SBC bitrate for A2DP Bluetooth Profile</string>
+    <string name="audio_tweaks_a2dp_sbc_hdx_title">High SBC bitrate</string>
+    <string name="audio_tweaks_a2dp_sbc_hdx_summary">Use High SBC bitrate for A2DP Bluetooth Profile</string>
 
     <string name="audio_tweaks_a2dp_sbc_hdu_title">Unlimited SBC bitrate</string>
     <string name="audio_tweaks_a2dp_sbc_hdu_summary">Use Unlimited SBC bitrate for A2DP Bluetooth Profile</string>

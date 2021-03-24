@@ -142,6 +142,20 @@
             android:summary="@string/audio_tweaks_a2dp_sbc_48_summary"
             android:defaultValue="false" />
 
+        <Preference
+            style="?android:preferenceInformationStyle"
+            android:key="audio_tweaks_a2dp_last_codec"
+            android:summary="%s"
+            android:title="@string/audio_tweaks_a2dp_last_codec_title"
+            android:selectable="false" />
+
+        <Preference
+            style="?android:preferenceInformationStyle"
+            android:key="audio_tweaks_a2dp_last_bitrate"
+            android:summary="%s"
+            android:title="@string/audio_tweaks_a2dp_last_bitrate_title"
+            android:selectable="false" />
+
         <SwitchPreference
             android:key="audio_tweaks_new_avrcp"
             android:title="@string/audio_tweaks_new_avrcp_title"
@@ -172,19 +186,6 @@
             android:summary="@string/audio_tweaks_none_a2dp_summary"
             android:defaultValue="false" />
 
-        <Preference
-            style="?android:preferenceInformationStyle"
-            android:key="audio_tweaks_a2dp_last_codec"
-            android:summary="%s"
-            android:title="@string/audio_tweaks_a2dp_last_codec_title"
-            android:selectable="false" />
-
-        <Preference
-            style="?android:preferenceInformationStyle"
-            android:key="audio_tweaks_a2dp_last_bitrate"
-            android:summary="%s"
-            android:title="@string/audio_tweaks_a2dp_last_bitrate_title"
-            android:selectable="false" />
 
     </PreferenceCategory>
 

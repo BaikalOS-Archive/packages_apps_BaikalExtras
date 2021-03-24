@@ -47,6 +47,8 @@
     <string name="background_restrictions_disabled">Отключено</string>
     <string name="app_profile_pinned_title">Закрепить</string>
     <string name="app_profile_pinned_summary">Менеджер памяти не будет закрывать приложение по неактивности</string>
+    <string name="app_profile_disable_title">Запретить Автозагрузку</string>
+    <string name="app_profile_disable_summary">Запретить автозагрузку приложения во время загрузки устройства</string>
     <string name="app_profile_disable_twl_title">Отключить временный белый список</string>
     <string name="app_profile_disable_twl_summary">Не помещать приложение в белый список по получению уведомлений для экономии энергии</string>
     <string name="app_profile_reader_title">Режим чтения</string>

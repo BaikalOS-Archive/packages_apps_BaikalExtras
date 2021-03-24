@@ -42,18 +42,19 @@ import ru.baikalos.extras.R;
 
 import com.aicp.gear.preference.SeekBarPreferenceCham;
 import com.aicp.gear.preference.SecureSettingSeekBarPreference;
+import com.aicp.gear.preference.SystemSettingColorPickerPreference;
 
-public class SystemTweaks extends BaseSettingsFragment {
+public class InterfaceTweaks extends BaseSettingsFragment {
 
-    private static final String TAG = "SystemTweaks";
+    private static final String TAG = "InterfaceTweaks";
 
     private static final String SYSTEM_TWEAKS_SEC_HWC= "system_tweaks_sec_hwc";
-
     private static final String SYSTEM_PROPERTY_SEC_HWC = "persist.sys.sf.disable_sec_hwc";
-
     private static final String SYSTEM_TWEAKS_DLSB = "baikalos_dlsb_enabled";
 
-    private static final String EDIT_PROFILE_PREF = "edit_perf_profile";
+    private static final String PULSE_AMBIENT_LIGHT_COLOR_MODE = "pulse_ambient_light_color_mode";
+    private static final String PULSE_AMBIENT_LIGHT_COLOR = "pulse_ambient_light_color";
+    private static final String PULSE_AMBIENT_LIGHT = "pulse_ambient_light";
 
     private Context mContext;
 
@@ -68,9 +69,14 @@ public class SystemTweaks extends BaseSettingsFragment {
     private SecureSettingSeekBarPreference mContentPadding;
     private SwitchPreference mRoundedFwvals;
 
+
+    private SwitchPreference mEdgeLightEnabledPref;
+    private SystemSettingColorPickerPreference mEdgeLightColorPref;
+    private ListPreference mEdgeLightColorModePref;
+
     @Override
     protected int getPreferenceResource() {
-        return R.xml.system_tweaks;
+        return R.xml.interface_tweaks;
     }
 
     @Override
@@ -83,6 +89,36 @@ public class SystemTweaks extends BaseSettingsFragment {
         final PreferenceScreen screen = getPreferenceScreen();
 
         boolean hasCutout = true; //mContext.getResources().getBoolean(com.android.internal.R.bool.config_physicalDisplayCutout);
+
+        mEdgeLightEnabledPref = (SwitchPreference) findPreference(PULSE_AMBIENT_LIGHT);
+        mEdgeLightColorPref = (SystemSettingColorPickerPreference) findPreference(PULSE_AMBIENT_LIGHT_COLOR);
+        mEdgeLightColorModePref = (ListPreference) findPreference(PULSE_AMBIENT_LIGHT_COLOR_MODE);
+
+        mEdgeLightColorModePref.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+            public boolean onPreferenceChange(Preference preference, Object newValue) {
+                boolean edgeEnabled = Settings.System.getIntForUser(getActivity().getContentResolver(),
+                    Settings.System.PULSE_AMBIENT_LIGHT, 0, UserHandle.USER_CURRENT) == 1;
+
+                int edgeLightColorMode = (int) newValue;
+
+                mEdgeLightColorPref.setEnabled(edgeLightColorMode==2&&edgeEnabled);
+                return true;
+            }
+        });
+
+        mEdgeLightEnabledPref.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+            public boolean onPreferenceChange(Preference preference, Object newValue) {
+
+                boolean edgeEnabled = (Boolean) newValue;
+
+                int edgeLightColorMode = Settings.System.getIntForUser(getActivity().getContentResolver(),
+                    Settings.System.PULSE_AMBIENT_LIGHT_COLOR_MODE, 1, UserHandle.USER_CURRENT);
+
+                mEdgeLightColorPref.setEnabled(edgeLightColorMode==2&&edgeEnabled);
+                return true;
+            }
+        });
+
 
 
         try {
