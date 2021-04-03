@@ -18,6 +18,7 @@
 -->
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aicpextras="http://schemas.android.com/apk/res-auto"
     android:title="@string/app_profile_title">
 
         <SwitchPreference
@@ -90,6 +91,27 @@
             android:summary="@string/app_profile_require_gms_summary"
             android:defaultValue="false" />
 
+        <com.aicp.gear.preference.SeekBarPreferenceCham
+            android:key="app_profile_volume_scale"
+            android:title="@string/app_profile_volume_scale_title"
+            android:max="200"
+            android:min="-1"
+            aicpextras:unitsLeft=""
+            aicpextras:unitsRight=""
+            android:defaultValue="-1"/>
+
+
+        <SwitchPreference
+            android:key="app_profile_block_focus_recv"
+            android:title="@string/app_profile_block_focus_recv_title"
+            android:summary="@string/app_profile_block_focus_recv_summary"
+            android:defaultValue="false" />
+
+        <SwitchPreference
+            android:key="app_profile_block_focus_send"
+            android:title="@string/app_profile_block_focus_send_title"
+            android:summary="@string/app_profile_block_focus_send_summary"
+            android:defaultValue="false" />
 
 
         <!-- SwitchPreference

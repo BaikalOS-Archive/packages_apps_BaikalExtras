@@ -42,6 +42,7 @@ import android.content.res.Resources;
 
 import com.android.internal.baikalos.AppProfileSettings;
 import com.android.internal.baikalos.AppProfile;
+import com.android.internal.baikalos.BaikalSettings;
 
 import ru.baikalos.extras.BaseSettingsFragment;
 import ru.baikalos.extras.R;
@@ -65,8 +66,14 @@ public class AppProfileFragment extends BaseSettingsFragment
 //    private static final String APP_PROFILE_RESTRICTED = "app_profile_restricted";
     private static final String APP_PROFILE_BACKGROUND = "app_profile_background";
 //    private static final String APP_PROFILE_DISABLE_TWL = "app_profile_disable_twl";
+    private static final String VOLUME_SCALE = "app_profile_volume_scale";
+
+    private static final String APP_PROFILE_BLOCK_FOCUS_RECV = "app_profile_block_focus_recv";
+    private static final String APP_PROFILE_BLOCK_FOCUS_SEND = "app_profile_block_focus_send";
+
 
     private String mPackageName;
+    private int mUid;
     private Context mContext;
 
     private SwitchPreference mAppReader;
@@ -74,6 +81,8 @@ public class AppProfileFragment extends BaseSettingsFragment
     private SwitchPreference mAppStamina;
     private SwitchPreference mAppRequireGms;
     private SwitchPreference mAppDisableBoot;
+    private SwitchPreference mBlockFocusRecv;
+    private SwitchPreference mBlockFocusSend;
 
     //private SwitchPreference mAppRestricted;
 
@@ -83,14 +92,18 @@ public class AppProfileFragment extends BaseSettingsFragment
     private ListPreference mAppFpsProfile;
     private ListPreference mAppBackgroundProfile;
 
+    private SeekBarPreferenceCham mVolumeScale;
+
     private AppProfileSettings mAppSettings;
     private com.android.internal.baikalos.AppProfile mProfile;
 
 
+
     //IBaikalServiceController mBaikalService;
 
-    public AppProfileFragment(String packageName) {
+    public AppProfileFragment(String packageName, int uid) {
         mPackageName = packageName; 
+        mUid = uid;
     }
 
     @Override
@@ -391,11 +404,65 @@ public class AppProfileFragment extends BaseSettingsFragment
                   }
                 });
             }
-        
-        } catch(Exception re) {
-            Log.e(TAG, "onCreate: Fatal! exception", re );
-        }
 
+            mVolumeScale = (SeekBarPreferenceCham) findPreference(VOLUME_SCALE);
+            if( mVolumeScale != null ) {
+                mVolumeScale.setValue(BaikalSettings.getVolumeScaleInt(mUid));
+                Log.e(TAG, "mVolumeScale: mPackageName=" + mPackageName + ", mVolumeScale=" + BaikalSettings.getVolumeScale(mUid));
+                mVolumeScale.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                    public boolean onPreferenceChange(Preference preference, Object newValue) {
+                        try {
+                            BaikalSettings.setVolumeScaleInt(mUid,Integer.parseInt(newValue.toString()));
+                            Log.e(TAG, "mVolumeScale: mPackageName=" + mPackageName + ", mVolumeScale=" + BaikalSettings.getVolumeScale(mUid));
+                        } catch(Exception re) {
+                            Log.e(TAG, "onCreate: mVolumeScale Fatal! exception", re );
+                        }
+                        return true;
+                    }
+                });
+            }
+
+
+            mBlockFocusRecv = (SwitchPreference) findPreference(APP_PROFILE_BLOCK_FOCUS_RECV);
+            if( mBlockFocusRecv != null ) {
+                boolean ignoreAudioFocus = BaikalSettings.getBlockFocusRecv(mUid);
+                Log.e(TAG, "mBlockFocusRecv: mPackageName=" + mPackageName + ", mFocus=" + ignoreAudioFocus);
+                mBlockFocusRecv.setChecked(ignoreAudioFocus);
+                mBlockFocusRecv.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                  public boolean onPreferenceChange(Preference preference, Object newValue) {
+                    try {
+                        BaikalSettings.setBlockFocusRecv(mUid,(Boolean)newValue);
+                        Log.e(TAG, "mBlockFocusRecv: mPackageName=" + mPackageName + ", mFocus=" + BaikalSettings.getBlockFocusRecv(mUid));
+                    } catch(Exception re) {
+                        Log.e(TAG, "onCreate: mBlockFocusRecv Fatal! exception", re );
+                    }
+                    return true;
+                  }
+                });
+            }
+
+            mBlockFocusSend = (SwitchPreference) findPreference(APP_PROFILE_BLOCK_FOCUS_SEND);
+            if( mBlockFocusSend != null ) {
+                boolean ignoreAudioFocus = BaikalSettings.getBlockFocusSend(mUid);
+                Log.e(TAG, "mBlockFocusRecv: mPackageName=" + mPackageName + ", mFocus=" + ignoreAudioFocus);
+                mBlockFocusSend.setChecked(ignoreAudioFocus);
+                mBlockFocusSend.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                  public boolean onPreferenceChange(Preference preference, Object newValue) {
+                    try {
+                        BaikalSettings.setBlockFocusSend(mUid,(Boolean)newValue);
+                        Log.e(TAG, "mBlockFocusRecv: mPackageName=" + mPackageName + ", mFocus=" + BaikalSettings.getBlockFocusSend(mUid));
+                    } catch(Exception re) {
+                        Log.e(TAG, "onCreate: mBlockFocusRecv Fatal! exception", re );
+                    }
+                    return true;
+                  }
+                });
+            }
+
+       } catch(Exception re) {
+           Log.e(TAG, "onCreate: Fatal! exception", re );
+       }
+       
     }
 
 

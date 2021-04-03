@@ -99,7 +99,7 @@ public class InterfaceTweaks extends BaseSettingsFragment {
                 boolean edgeEnabled = Settings.System.getIntForUser(getActivity().getContentResolver(),
                     Settings.System.PULSE_AMBIENT_LIGHT, 0, UserHandle.USER_CURRENT) == 1;
 
-                int edgeLightColorMode = (int) newValue;
+                int edgeLightColorMode = Integer.parseInt(newValue.toString());
 
                 mEdgeLightColorPref.setEnabled(edgeLightColorMode==2&&edgeEnabled);
                 return true;
@@ -175,7 +175,7 @@ public class InterfaceTweaks extends BaseSettingsFragment {
             mCornerRadius.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
                 public boolean onPreferenceChange(Preference preference, Object newValue) {
                     Settings.Secure.putIntForUser(getContext().getContentResolver(), Settings.Secure.SYSUI_ROUNDED_SIZE,
-                        (int) newValue, UserHandle.USER_CURRENT);
+                        Integer.parseInt(newValue.toString()), UserHandle.USER_CURRENT);
                     return true;
                 }
             });
@@ -191,7 +191,7 @@ public class InterfaceTweaks extends BaseSettingsFragment {
             mContentPadding.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
                 public boolean onPreferenceChange(Preference preference, Object newValue) {
                     Settings.Secure.putIntForUser(getContext().getContentResolver(), Settings.Secure.SYSUI_ROUNDED_CONTENT_PADDING,
-                        (int) newValue, UserHandle.USER_CURRENT);
+                        Integer.parseInt(newValue.toString()), UserHandle.USER_CURRENT);
                     return true;
                 }
             });

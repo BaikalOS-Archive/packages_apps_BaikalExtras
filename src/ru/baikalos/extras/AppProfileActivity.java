@@ -60,7 +60,7 @@ public class AppProfileActivity extends BaseActivity {
         Fragment fragment = getFragmentManager().findFragmentById(android.R.id.content);
         if (fragment == null) {
             Log.e(TAG, "AppProfileActivity: new fragment mPackageName=" + mPackageName + ", mAppName=" + mAppName + ", mAppUid=" + mAppUid);
-            mAppProfileFragment = new AppProfileFragment(mPackageName);
+            mAppProfileFragment = new AppProfileFragment(mPackageName,mAppUid);
             getFragmentManager().beginTransaction()
                 .add(android.R.id.content, mAppProfileFragment)
                 .commit();

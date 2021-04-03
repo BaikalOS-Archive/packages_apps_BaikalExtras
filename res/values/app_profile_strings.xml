@@ -113,4 +113,15 @@
     <string name="app_profile_require_gms_title">Require GMS</string>
     <string name="app_profile_require_gms_summary">Disable GMS restrictions while this app is running</string>
 
+    <string name="app_profile_volume_scale_title">Volume Scale</string>
+
+    <string name="app_profile_ignore_audio_focus_title">Ignore Audio Focus</string>
+    <string name="app_profile_ignore_audio_focus_summary">Ignore Audio Focus change request and keep playing audio</string>
+
+    <string name="app_profile_block_focus_recv_title">Ignore Audio Focus</string>
+    <string name="app_profile_block_focus_recv_summary">Ignore Audio Focus requests received by this app</string>
+
+    <string name="app_profile_block_focus_send_title">Block Audio Focus</string>
+    <string name="app_profile_block_focus_send_summary">Block Audio Focus requests sent by this app</string>
+
 </resources>

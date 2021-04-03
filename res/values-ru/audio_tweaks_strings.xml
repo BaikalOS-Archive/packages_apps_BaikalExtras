@@ -13,12 +13,14 @@
     <string name="audio_tweaks_hp_detect_summary">Отключить определение проводных наушников или гарнитуры. Для аппаратов с поврежденным портом USB.</string>
     <string name="audio_tweaks_suspend_play_title">Усыплять при проигрывании</string>
     <string name="audio_tweaks_suspend_play_summary">Разрешить сон системы при проигрывании музыки. Совместимо не со всеми проигрывателями.</string>
-    <string name="audio_tweaks_a2dp_sbc_hd_title">Высокий битрейт SBC</string>
-    <string name="audio_tweaks_a2dp_sbc_hd_summary">Использовать высокий SBC битрейт для A2DP профиля Bluetooth</string>
-    <string name="audio_tweaks_a2dp_sbc_hdx_title">Высочайший битрейт SBC</string>
-    <string name="audio_tweaks_a2dp_sbc_hdx_summary">Использовать высочайший SBC битрейт для A2DP профиля Bluetooth</string>
-    <string name="audio_tweaks_a2dp_sbc_hde_title">Экстремальный битрейт SBC</string>
-    <string name="audio_tweaks_a2dp_sbc_hde_summary">Использовать экстремальный SBC битрейт для A2DP профиля Bluetooth</string>
+    <string name="audio_tweaks_a2dp_sbc_hd_title">SBC Dual Channel</string>
+    <string name="audio_tweaks_a2dp_sbc_hd_summary">Использовать SBC Dual Channel режим для удвоения битрейта для A2DP профиля Bluetooth</string>
+    <string name="audio_tweaks_a2dp_sbc_hdx_title">Высокий битрейт SBC</string>
+    <string name="audio_tweaks_a2dp_sbc_hdx_summary">Использовать высокий SBC битрейт для A2DP профиля Bluetooth</string>
+    <string name="audio_tweaks_a2dp_sbc_hdu_title">Не ограничивать битрейт SBC</string>
+    <string name="audio_tweaks_a2dp_sbc_hdu_summary">Использовать неограниченный SBC битрейт для A2DP профиля Bluetooth</string>
+    <string name="audio_tweaks_a2dp_sbc_48_title">Предпочесть 48 КГц</string>
+    <string name="audio_tweaks_a2dp_sbc_48_summary">Предпочесть частоту квантования 48 КГц для SBC</string>
     <string name="audio_tweaks_a2dp_sbc_prefer_title">Предпочтительно SBC</string>
     <string name="audio_tweaks_a2dp_sbc_prefer_summary">Предпочтительно SBC через AAC или AptX</string>
     <string name="audio_settings_title">Общий</string>
@@ -37,6 +39,8 @@
     <string name="audio_tweaks_a2dp_sbc_priority_summary">Приоритет SBC над AAC/APTX/APTX HD</string>
     <string name="audio_tweaks_a2dp_last_codec_title">Последний использованный кодек</string>
     <string name="audio_tweaks_a2dp_last_bitrate_title">Последний использованный битрейт</string>
+    <string name="prefs_media_scan_title">Пересканировать</string>
+    <string name="prefs_media_scan_summary">Принудительное сканирование памяти для поиска новых медиа-файлов</string>
 
     <string name="audio_tweaks_sonif_a2dp_title">Дублирование уведомлений</string>
     <string name="audio_tweaks_sonif_a2dp_summary">Воспроизводить звук уведомлений из динамика при подключенном BT устройстве</string>
@@ -56,5 +60,17 @@
     <string name="audio_effects_qc_summary">Отключить расширенные звуковые фильтры Qualcomm</string>
     <string name="audio_effects_dolby_title">Включить Dolby</string>
     <string name="audio_effects_dolby_summary">Включить аудио-фильтры Dolby</string>
+
+    <string name="app_profile_volume_scale_title">Масштабировать Громкость</string>
+
+    <string name="app_profile_ignore_audio_focus_title">Игнорировать Аудио Фокус</string>
+    <string name="app_profile_ignore_audio_focus_summary">Игнорировать запросы Аудио Фокус и продолжать проигрывание звука</string>
+
+    <string name="app_profile_block_focus_recv_title">Игнорировать Аудио Фокус</string>
+    <string name="app_profile_block_focus_recv_summary">Игнорировать запросы Аудио Фокус и продолжать проигрывание звука этим приложением</string>
+
+    <string name="app_profile_block_focus_send_title">Блокировать Аудио Фокус</string>
+    <string name="app_profile_block_focus_send_summary">Блокировать Аудио Фокус запросы от этого приложения. Фоновые приложения будут продолжать проигрывать звук.</string>
+
 
 </resources>

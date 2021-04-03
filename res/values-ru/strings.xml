@@ -20,7 +20,7 @@
     <string name="app_name">BaikalOS Extras</string>
     <!-- Dashboard -->
     <string name="user_interface_category">Интерфейс</string>
-    <string name="system_category">Система</string>
+    <string name="system_category">Настройки BaikalOS</string>
     <string name="other_category">Другое</string>
     <!-- Device parts -->
     <string name="device_part_title">Возможности устройства</string>
@@ -256,9 +256,6 @@
     <string name="logcat_radio_title">Радио лог</string>
     <string name="kmesg_title">Kmesg</string>
     <string name="dmesg_title">Dmesg</string>
-    <string name="log_it_now_title">Вовлечение</string>
-    <string name="log_it_dialog_title">Логи собраны</string>
-    <string name="logcat_warning">Поделитесь им или GTFO!</string>
     <string name="share_title">Поделиться...</string>
     <string name="log_it_share_subject">Логи BaikalOS</string>
     <string name="log_it_now_summary">Ожидайте создания логов</string>
@@ -462,4 +459,12 @@
     <string name="app_settings_category">Настройки приложений</string>
     <string name="app_settings_title">Профили приложений</string>
     <string name="app_settings_summary">Установите профили производительности и температурного режима для каждого приложения</string>
+
+    <!-- Rounded corners -->
+    <string name="corners_category">Углы</string>
+    <string name="corner_radius">Радиус скругления углов</string>
+    <string name="content_padding">Отступ</string>
+    <string name="corner_fwvals">По умолчанию</string>
+    <string name="corner_fwvals_summary">Полезно, если у устройства скругленные углы</string>
+
 </resources>

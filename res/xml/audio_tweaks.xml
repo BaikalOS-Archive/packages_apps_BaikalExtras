@@ -114,7 +114,8 @@
             android:summary="@string/audio_tweaks_a2dp_sbc_priority_summary"
             android:defaultValue="false" />
 
-        <ru.baikalos.extras.preference.BluetoothDevicePreference 
+        
+        <!-- ru.baikalos.extras.preference.BluetoothDevicePreference 
             android:key="bluetooth_mac"
             android:title="Bluetooth Devices" />
 
@@ -140,7 +141,7 @@
             android:key="audio_tweaks_a2dp_sbc_48"
             android:title="@string/audio_tweaks_a2dp_sbc_48_title"
             android:summary="@string/audio_tweaks_a2dp_sbc_48_summary"
-            android:defaultValue="false" />
+            android:defaultValue="false" /-->
 
         <Preference
             style="?android:preferenceInformationStyle"
