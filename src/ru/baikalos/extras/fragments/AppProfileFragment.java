@@ -407,7 +407,9 @@ public class AppProfileFragment extends BaseSettingsFragment
 
             mVolumeScale = (SeekBarPreferenceCham) findPreference(VOLUME_SCALE);
             if( mVolumeScale != null ) {
-                mVolumeScale.setValue(BaikalSettings.getVolumeScaleInt(mUid));
+                int scale = BaikalSettings.getVolumeScaleInt(mUid);
+                if( scale > 100 ) scale = 100;
+                mVolumeScale.setValue(scale);
                 Log.e(TAG, "mVolumeScale: mPackageName=" + mPackageName + ", mVolumeScale=" + BaikalSettings.getVolumeScale(mUid));
                 mVolumeScale.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
                     public boolean onPreferenceChange(Preference preference, Object newValue) {

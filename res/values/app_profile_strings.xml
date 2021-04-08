@@ -80,6 +80,9 @@
     <string name="edit_profile_corecontrol_title">Core control</string>
     <string name="edit_profile_corecontrol_summary">Enable idle core offline/isolation</string>
 
+    <string name="edit_profile_sched_boost_title">Sched boost</string>
+    <string name="edit_profile_gpu_boost_title">GPU boost</string>
+
     <string name="app_checkbox_filter_changed_title">With profiles</string>
     <string name="app_checkbox_filter_system_title">System</string>
 

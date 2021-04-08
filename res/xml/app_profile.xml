@@ -94,7 +94,7 @@
         <com.aicp.gear.preference.SeekBarPreferenceCham
             android:key="app_profile_volume_scale"
             android:title="@string/app_profile_volume_scale_title"
-            android:max="200"
+            android:max="100"
             android:min="-1"
             aicpextras:unitsLeft=""
             aicpextras:unitsRight=""
