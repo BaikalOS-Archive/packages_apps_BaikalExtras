@@ -68,6 +68,8 @@ public class PerfProfileFragment extends BaseSettingsFragment
     private ListPreference mGpuMax;
     private SwitchPreference mCoreControl;
     private Preference mReset;
+    private SeekBarPreferenceCham mEditProfileSchedBoost;
+    private SeekBarPreferenceCham mEditProfileGpuBoost;
 
 
 
@@ -101,6 +103,8 @@ public class PerfProfileFragment extends BaseSettingsFragment
             mGpuMin = initListPreference("edit_profile_gpu_min","persist.bkp." + mProfileName + "." + "gmin", "baikal.def." + mProfileName + "." + "gmin");
             mGpuMax = initListPreference("edit_profile_gpu_max","persist.bkp." + mProfileName + "." + "gmax", "baikal.def." + mProfileName + "." + "gmax");
             mCoreControl = initSwitchPreference("edit_profile_corecontrol","persist.bkp." + mProfileName + "." + "cc", "baikal.def." + mProfileName + "." + "cc","baikal.def.cc_on","baikal.def.cc_off");
+            mEditProfileSchedBoost = initSeekBarPreference("edit_profile_sched_boost","persist.bkp." + mProfileName + "." + "schboost", "baikal.def." + mProfileName + "." + "schboost");
+            mEditProfileGpuBoost = initSeekBarPreference("edit_profile_gpu_boost","persist.bkp." + mProfileName + "." + "gpuboost", "baikal.def." + mProfileName + "." + "gpuboost");
 
             mReset = (Preference) findPreference("edit_profile_reset");
 
@@ -160,6 +164,40 @@ public class PerfProfileFragment extends BaseSettingsFragment
                             } else {
                                 setSystemPropertyString(systemProperty,valueOff);
                             }
+                            sendUpdateProfile();
+                        } catch(Exception re) {
+                            Log.e(TAG, "onCreate: " + prefName + " Fatal! exception", re );
+                        }
+                        return true;
+                    }
+                });
+            }
+            return pref;
+       
+    }
+
+    private SeekBarPreferenceCham initSeekBarPreference(String prefName, String systemProperty, String defProperty)
+    {
+
+            SeekBarPreferenceCham pref = (SeekBarPreferenceCham) findPreference(prefName);
+            if( pref != null ) { 
+                String defValue =  getSystemPropertyString(defProperty,"-1");
+
+                if( defValue == null || defValue.equals("-1") ) {
+                    pref.setVisible(false);
+                    return null;
+                }
+
+
+                String propValue = getPerfPropertyString(systemProperty,defProperty);
+                int val = Integer.parseInt(propValue);
+                Log.e(TAG, prefName + ": value=" + val);
+                pref.setValue(val);
+                pref.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                    public boolean onPreferenceChange(Preference preference, Object newValue) {
+                        try {
+                            Log.e(TAG, prefName + ": set value=" + Integer.parseInt(newValue.toString()));
+                            setSystemPropertyString(systemProperty,newValue.toString());
                             sendUpdateProfile();
                         } catch(Exception re) {
                             Log.e(TAG, "onCreate: " + prefName + " Fatal! exception", re );
