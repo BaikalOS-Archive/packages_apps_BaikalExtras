@@ -4,6 +4,7 @@
     <string name="app_profile_performance_title">Профиль производительности</string>
     <string name="app_profile_thermal_title">Профиль температурного режима</string>
     <string name="app_profile_brightness_title">Яркость экрана</string>
+    <string name="app_profile_rotation_title">Поворот экрана</string>
     <string name="app_profile_camera_hal1_title">Camera API 1</string>
     <string name="app_profile_camera_hal1_summary">Принудительно использовать Camera API V1 для этого приложения</string>
     <string name="performance_default">По умолчанию</string>
@@ -28,6 +29,8 @@
     <string name="thermal_incall">В режиме разговора</string>
     <string name="thermal_vr">VR</string>
     <string name="brightness_default">По умолчанию</string>
+    <string name="brightness_enable_ab">Включить Автояркость</string>
+    <string name="brightness_disable_ab">Отключить Автояркость</string>
     <string name="brightness_reduced">Автоматическая (уменьшенная)</string>
     <string name="brightness_quarter">Автоматическая (четверть)</string>
     <string name="brightness_full">Полная</string>
@@ -40,6 +43,8 @@
     <string name="brightness_70">70\%</string>
     <string name="brightness_80">80\%</string>
     <string name="brightness_90">80\%</string>
+    <string name="rotation_default">По умолчанию</string>
+    <string name="rotation_auto">Автоматически</string>
     <string name="background_restrictions_unlimited">Неограниченный</string>
     <string name="background_restrictions_default">По умолчанию</string>
     <string name="background_restrictions_limited">Ограниченный</string>

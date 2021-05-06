@@ -13,4 +13,11 @@
     <string name="edit_perf_profile_title">Edit profile</string>
     <string name="reset_perf_profile_title">Reset profile</string>
 
+    <string name="assisted_gps_title">Use assisted GPS</string>
+    <string name="assisted_gps_summary">Use server to assist GPS</string>
+
+    <string name="default_rotation_title">Auto Rotation</string>
+    <string name="default_rotation_summary">Enable screen auto rotation by default</string>
+
+
 </resources>

@@ -19,6 +19,7 @@ package ru.baikalos.extras.fragments;
 
 import android.os.Bundle;
 import android.provider.Settings;
+import android.content.ContentResolver;
 
 import ru.baikalos.extras.BaseSettingsFragment;
 import ru.baikalos.extras.R;
@@ -49,11 +50,15 @@ public class PowerSave extends BaseSettingsFragment {
 
     private static final String SYSTEM_PROPERTY_POWERSAVE_COREC_CTL = "persist.baikal.core_ctl";
     private static final String POWER_SAVE_CORECTL = "powersave_core_ctl_enable";
+    private static final String POWER_SAVE_AGGRESSIVE = "baikalos_aggressive_idle";
+    private static final String POWER_SAVE_EXTREME = "baikalos_extreme_idle";
 
 
     private Context mContext;
 
     private SwitchPreference mEnableCoreCtl;
+    private SwitchPreference mAggressive;
+    private SwitchPreference mExtreme;
     
     @Override
     protected int getPreferenceResource() {
@@ -70,6 +75,34 @@ public class PowerSave extends BaseSettingsFragment {
         final Resources res = getActivity().getResources();
 
         try {
+
+	        mAggressive = (SwitchPreference) findPreference(POWER_SAVE_AGGRESSIVE);
+            mExtreme = (SwitchPreference) findPreference(POWER_SAVE_EXTREME);
+            boolean aggressive = Settings.Global.getInt(getActivity().getContentResolver(),
+                Settings.Global.BAIKALOS_AGGRESSIVE_IDLE, 0) == 1;
+            boolean extreme = Settings.Global.getInt(getActivity().getContentResolver(),
+                Settings.Global.BAIKALOS_EXTREME_IDLE, 0) == 1;
+
+            mAggressive.setEnabled(!extreme);
+            mExtreme.setEnabled(aggressive);
+
+
+
+            mAggressive.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                public boolean onPreferenceChange(Preference preference, Object newValue) {
+                    mExtreme.setEnabled((Boolean)newValue); 
+                    return true;
+                }
+            });
+
+            mExtreme.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                public boolean onPreferenceChange(Preference preference, Object newValue) {
+                    mAggressive.setEnabled(! (Boolean)newValue); 
+                    return true;
+                }
+            });
+
+
             boolean core_ctl  = SystemProperties.get("baikal.eng.core_ctl", "0").equals("1");
 
 	        mEnableCoreCtl = (SwitchPreference) findPreference(POWER_SAVE_CORECTL);

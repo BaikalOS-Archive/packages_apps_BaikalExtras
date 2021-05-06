@@ -28,6 +28,11 @@
             android:summary="@string/system_tweaks_sec_hwc_summary"
             android:defaultValue="false" / -->
 
+    <com.aicp.gear.preference.SystemSettingSwitchPreference
+        android:key="fp_wake_unlock"
+        android:title="@string/fp_wake_unlock_title"
+        android:summary="@string/fp_wake_unlock_summary"
+        android:defaultValue="true" />      
 
     <com.aicp.gear.preference.GlobalSettingSwitchPreference
         android:key="baikalos_dlsb_enabled"
@@ -35,6 +40,21 @@
         android:summary="@string/baikalos_dlsb_enabled_summary"
         android:defaultValue="false"
         android:disableDependentsState="true" />
+
+    <com.aicp.gear.preference.GlobalSettingSwitchPreference
+        android:key="baikalos_headsup_incall"
+        android:title="@string/baikalos_headsup_incall_title"
+        android:summary="@string/baikalos_headsup_incall_summary"
+        android:defaultValue="false"
+        android:disableDependentsState="true" />
+
+    <com.aicp.gear.preference.GlobalSettingSwitchPreference
+        android:key="baikalos_headsup_force_sms"
+        android:title="@string/baikalos_headsup_force_sms_title"
+        android:summary="@string/baikalos_headsup_force_sms_summary"
+        android:defaultValue="false"
+        android:disableDependentsState="true" />
+
 
     <!-- com.aicp.gear.preference.SystemSettingSwitchPreference
             android:key="use_old_mobiletype"

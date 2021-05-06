@@ -17,4 +17,12 @@
     <string name="doze_title">Включать экран при получении уведомлений</string>
     <string name="doze_summary">Экран включается при появлении новых уведомлений</string>
 
+    <string name="baikalos_headsup_incall_title">Вид Входящего Вызова</string>
+    <string name="baikalos_headsup_incall_summary">Не использовать всплывающее уведомление при входящем вызове</string>
+    <string name="baikalos_headsup_force_sms_title">Форсировать СМС</string>
+    <string name="baikalos_headsup_force_sms_summary">Форсировать всплывающее уведомление для приложения СМС по умолчанию</string>
+
+    <string name="fp_wake_unlock_title">Пробуждать отпечатком</string>
+    <string name="fp_wake_unlock_summary">Пробуждать устройство по сканеру отпечатка пальца</string>
+
 </resources>

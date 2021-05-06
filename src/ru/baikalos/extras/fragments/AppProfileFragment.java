@@ -58,6 +58,7 @@ public class AppProfileFragment extends BaseSettingsFragment
     private static final String APP_PROFILE_PERF = "app_profile_performance";
     private static final String APP_PROFILE_THERM = "app_profile_thermal";
     private static final String APP_PROFILE_BRIGHTNESS = "app_profile_brightness";
+    private static final String APP_PROFILE_ROTATION = "app_profile_rotation";
     private static final String APP_PROFILE_FPS = "app_profile_fps";
 //    private static final String APP_PROFILE_CAMERA_HAL1 = "app_profile_camera_hal1";
     private static final String APP_PROFILE_PINNED = "app_profile_pinned";
@@ -70,6 +71,7 @@ public class AppProfileFragment extends BaseSettingsFragment
 
     private static final String APP_PROFILE_BLOCK_FOCUS_RECV = "app_profile_block_focus_recv";
     private static final String APP_PROFILE_BLOCK_FOCUS_SEND = "app_profile_block_focus_send";
+    private static final String APP_PROFILE_FORCE_SONIFICATION = "app_profile_force_sonification";
 
 
     private String mPackageName;
@@ -83,12 +85,14 @@ public class AppProfileFragment extends BaseSettingsFragment
     private SwitchPreference mAppDisableBoot;
     private SwitchPreference mBlockFocusRecv;
     private SwitchPreference mBlockFocusSend;
+    private SwitchPreference mForceSonification;
 
     //private SwitchPreference mAppRestricted;
 
     private ListPreference mAppPerfProfile;
     private ListPreference mAppThermProfile;
     private ListPreference mAppBrightnessProfile;
+    private ListPreference mAppRotationProfile;
     private ListPreference mAppFpsProfile;
     private ListPreference mAppBackgroundProfile;
 
@@ -245,7 +249,7 @@ public class AppProfileFragment extends BaseSettingsFragment
             mAppBrightnessProfile = (ListPreference) findPreference(APP_PROFILE_BRIGHTNESS);
             if( mAppBrightnessProfile != null ) {
                 int brightness = mProfile.mBrightness;
-                Log.e(TAG, "getAppBrightness: mPackageName=" + mPackageName + ",brightness=" + brightness);
+                Log.e(TAG, "getAppBrightness: mPackageName=" + mPackageName + ", brightness=" + brightness);
                 mAppBrightnessProfile.setValue(Integer.toString(brightness));
                 mAppBrightnessProfile.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
                   public boolean onPreferenceChange(Preference preference, Object newValue) {
@@ -256,9 +260,32 @@ public class AppProfileFragment extends BaseSettingsFragment
                         mAppSettings.save();
 
                         //mBaikalService.setAppBrightness(mPackageName, val );
-                        Log.e(TAG, "setAppBrightness: mPackageName=" + mPackageName + ",brightness=" + val);
+                        Log.e(TAG, "setAppBrightness: mPackageName=" + mPackageName + ", brightness=" + val);
                     } catch(Exception re) {
                         Log.e(TAG, "onCreate: setAppBrightness Fatal! exception", re );
+                    }
+                    return true;
+                  }
+                });
+            }
+
+            mAppRotationProfile = (ListPreference) findPreference(APP_PROFILE_ROTATION);
+            if( mAppRotationProfile != null ) {
+                int rotation = mProfile.mRotation;
+                Log.e(TAG, "getAppRotation: mPackageName=" + mPackageName + ", rotation=" + rotation);
+                mAppRotationProfile.setValue(Integer.toString(rotation));
+                mAppRotationProfile.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                  public boolean onPreferenceChange(Preference preference, Object newValue) {
+                    try {
+                        int val = Integer.parseInt(newValue.toString());
+                        mProfile.mRotation = val;
+                        mAppSettings.updateProfile(mProfile);
+                        mAppSettings.save();
+
+                        //mBaikalService.setAppBrightness(mPackageName, val );
+                        Log.e(TAG, "setAppRotation: mPackageName=" + mPackageName + ", rotation=" + val);
+                    } catch(Exception re) {
+                        Log.e(TAG, "onCreate: setAppRotation Fatal! exception", re );
                     }
                     return true;
                   }
@@ -455,6 +482,24 @@ public class AppProfileFragment extends BaseSettingsFragment
                         Log.e(TAG, "mBlockFocusRecv: mPackageName=" + mPackageName + ", mFocus=" + BaikalSettings.getBlockFocusSend(mUid));
                     } catch(Exception re) {
                         Log.e(TAG, "onCreate: mBlockFocusRecv Fatal! exception", re );
+                    }
+                    return true;
+                  }
+                });
+            }
+
+            mForceSonification = (SwitchPreference) findPreference(APP_PROFILE_FORCE_SONIFICATION);
+            if( mForceSonification != null ) {
+                boolean forceSonification = BaikalSettings.getForceSonification(mUid);
+                Log.e(TAG, "mForceSonification: mPackageName=" + mPackageName + ", mForce=" + forceSonification);
+                mForceSonification.setChecked(forceSonification);
+                mForceSonification.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                  public boolean onPreferenceChange(Preference preference, Object newValue) {
+                    try {
+                        BaikalSettings.setForceSonification(mUid,(Boolean)newValue);
+                        Log.e(TAG, "mForceSonification: mPackageName=" + mPackageName + ", mForce=" + BaikalSettings.getForceSonification(mUid));
+                    } catch(Exception re) {
+                        Log.e(TAG, "onCreate: mForceSonification Fatal! exception", re );
                     }
                     return true;
                   }

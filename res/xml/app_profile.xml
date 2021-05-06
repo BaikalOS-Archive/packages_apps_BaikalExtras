@@ -66,6 +66,14 @@
             android:summary="%s" />
 
         <ListPreference
+            android:key="app_profile_rotation"
+            android:title="@string/app_profile_rotation_title"
+            android:entries="@array/rotation_listentries"
+            android:entryValues="@array/rotation_listvalues"
+            android:defaultValue="default"
+            android:summary="%s" />
+
+        <ListPreference
             android:key="app_profile_fps"
             android:title="@string/app_profile_fps_title"
             android:entries="@array/fps_listentries"
@@ -111,6 +119,12 @@
             android:key="app_profile_block_focus_send"
             android:title="@string/app_profile_block_focus_send_title"
             android:summary="@string/app_profile_block_focus_send_summary"
+            android:defaultValue="false" />
+
+        <SwitchPreference
+            android:key="app_profile_force_sonification"
+            android:title="@string/app_profile_force_sonification_title"
+            android:summary="@string/app_profile_force_sonification_summary"
             android:defaultValue="false" />
 
 

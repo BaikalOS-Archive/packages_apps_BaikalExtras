@@ -7,6 +7,7 @@
     <string name="app_profile_performance_title">Performance profile</string>
     <string name="app_profile_thermal_title">Thermal profile</string>
     <string name="app_profile_brightness_title">Screen Brightness</string>
+    <string name="app_profile_rotation_title">Screen Rotation</string>
 
     <string name="app_profile_camera_hal1_title">Camera API 1</string>
     <string name="app_profile_camera_hal1_summary">Force using camera API V1 for this app</string>
@@ -35,6 +36,8 @@
     <string name="thermal_vr">VR</string>
 
     <string name="brightness_default">Default</string>
+    <string name="brightness_enable_ab">Enable Auto Brightness</string>
+    <string name="brightness_disable_ab">Disable Auto Brightness</string>
     <string name="brightness_reduced">Reduced Auto</string>
     <string name="brightness_quarter">Quarter Auto</string>
     <string name="brightness_full">Full</string>
@@ -47,6 +50,13 @@
     <string name="brightness_70">70\%</string>
     <string name="brightness_80">80\%</string>
     <string name="brightness_90">90\%</string>
+
+    <string name="rotation_default">Default</string>
+    <string name="rotation_auto">Auto</string>
+    <string name="rotation_0">0</string>
+    <string name="rotation_90">90</string>
+    <string name="rotation_180">180</string>
+    <string name="rotation_270">270</string>
 
     <string name="background_restrictions_unlimited">Unlimited</string>
     <string name="background_restrictions_default">Default</string>
@@ -126,5 +136,8 @@
 
     <string name="app_profile_block_focus_send_title">Block Audio Focus</string>
     <string name="app_profile_block_focus_send_summary">Block Audio Focus requests sent by this app</string>
+
+    <string name="app_profile_force_sonification_title">Treat as Notification</string>
+    <string name="app_profile_force_sonification_summary">Treat app sounds as Notifications. Notification sound settings will be applied, like volume, speake duplication, etc...</string>
 
 </resources>

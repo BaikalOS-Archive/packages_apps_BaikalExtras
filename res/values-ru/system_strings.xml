@@ -12,4 +12,10 @@
     <string name="edit_perf_profile_title">Редактирование профиля</string>
     <string name="reset_perf_profile_title">Сбросить по умолчанию</string>
 
+    <string name="assisted_gps_title">"Использовать A-GPS"</string>
+    <string name="assisted_gps_summary">"Использовать сервер для A-GPS"</string>
+
+    <string name="default_rotation_title">Авто поворот</string>
+    <string name="default_rotation_summary">Режим авто поворота экрана по умолчанию</string>
+
 </resources>

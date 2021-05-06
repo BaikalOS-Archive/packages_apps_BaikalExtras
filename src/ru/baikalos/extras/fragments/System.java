@@ -171,7 +171,7 @@ public class System extends BaseSettingsFragment {
                 if( !perfProf ) {
                     mScrOffPerfProfile.setVisible(false);
                 } else {
-                    String profile = getSystemPropertyString("persist.baikal.perf.scr_off","battery");
+                    String profile = getSystemPropertyString("persist.baikal.perf.scr_off","limited");
                     Log.e(TAG, "mScrOffPerfProfile: getProfile=" + profile);
                     mScrOffPerfProfile.setValue(profile);
                     mScrOffPerfProfile.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
@@ -194,7 +194,7 @@ public class System extends BaseSettingsFragment {
                 if( !perfProf ) {
                     mIdlePerfProfile.setVisible(false);
                 } else {
-                    String profile = getSystemPropertyString("persist.baikal.perf.idle","battery");
+                    String profile = getSystemPropertyString("persist.baikal.perf.idle","limited");
                     Log.e(TAG, "mIdlePerfProfile: getProfile=" + profile);
                     mIdlePerfProfile.setValue(profile);
                     mIdlePerfProfile.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {

@@ -41,6 +41,8 @@ import android.provider.Settings;
 import android.view.View;
 import android.util.Log;
 
+import java.io.File;
+
 import static android.content.pm.PackageManager.COMPONENT_ENABLED_STATE_ENABLED;
 import static android.content.pm.PackageManager.COMPONENT_ENABLED_STATE_DISABLED;
 
@@ -101,6 +103,8 @@ public class AudioTweaks extends BaseSettingsFragment
     private static final String SYSTEM_PROPERTY_ASSIST_A2DP = "persist.baikal.assist_a2dp";
     private static final String SYSTEM_PROPERTY_MEDIA_A2DP = "persist.baikal.media_a2dp";
     private static final String SYSTEM_PROPERTY_NONE_A2DP = "persist.baikal.none_a2dp";
+
+    private static final String HQ_AUDIO_SYSTEM_PATH = "/vendor/etc/audio_policy_configuration_hq.xml";
 
 
     private Context mContext;
@@ -208,8 +212,19 @@ public class AudioTweaks extends BaseSettingsFragment
 
         mEnableAudioHq = (SwitchPreference) findPreference(AUDIO_TWEAKS_AUDIO_HQ);
         if( mEnableAudioHq != null ) { 
-                mEnableAudioHq.setChecked(SystemProperties.getBoolean(SYSTEM_PROPERTY_AUDIO_HQ, false));
-                mEnableAudioHq.setOnPreferenceChangeListener(this);
+                if( isHqModeAvaialable() ) {
+                    mEnableAudioHq.setChecked(SystemProperties.getBoolean(SYSTEM_PROPERTY_AUDIO_HQ, false));
+                    mEnableAudioHq.setOnPreferenceChangeListener(this);
+                } else {
+                    if( SystemProperties.getBoolean(SYSTEM_PROPERTY_AUDIO_HQ, false) ) {
+                        setSystemPropertyBoolean(SYSTEM_PROPERTY_AUDIO_HQ, false);
+                    }
+                    mEnableAudioHq.setVisible(false);
+                }
+        } else {
+            if( SystemProperties.getBoolean(SYSTEM_PROPERTY_AUDIO_HQ, false) ) {
+                setSystemPropertyBoolean(SYSTEM_PROPERTY_AUDIO_HQ, false);
+            }
         }
 
         mEnableSuspendPlay = (SwitchPreference) findPreference(AUDIO_TWEAKS_SUSPEND_PLAY);
@@ -422,4 +437,9 @@ public class AudioTweaks extends BaseSettingsFragment
             Log.e(TAG, "setPackageEnabled: exception=", e1);
         }
     }
+
+    private boolean isHqModeAvaialable() {
+        return (new File(HQ_AUDIO_SYSTEM_PATH).exists());
+    }
+
 }

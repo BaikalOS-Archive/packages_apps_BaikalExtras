@@ -72,5 +72,8 @@
     <string name="app_profile_block_focus_send_title">Блокировать Аудио Фокус</string>
     <string name="app_profile_block_focus_send_summary">Блокировать Аудио Фокус запросы от этого приложения. Фоновые приложения будут продолжать проигрывать звук.</string>
 
+    <string name="app_profile_force_sonification_title">Как Уведомление</string>
+    <string name="app_profile_force_sonification_summary">Считать звук приложения уведомлением. Использовать настройки звука уведомлений такие как громкость, дублирование на динамик и т.д.</string>
+
 
 </resources>

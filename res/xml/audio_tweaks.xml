@@ -25,13 +25,13 @@
         android:key="audio_settings"
         android:title="@string/audio_settings_title">
 
-        <!-- SwitchPreference
+        <SwitchPreference
             android:key="audio_tweaks_hq_policy"
             android:title="@string/audio_tweaks_hq_policy_title"
             android:summary="@string/audio_tweaks_hq_policy_summary"
             android:defaultValue="false" />
 
-        <SwitchPreference
+        <!-- SwitchPreference
             android:key="audio_tweaks_suspend_play"
             android:title="@string/audio_tweaks_suspend_play_title"
             android:summary="@string/audio_tweaks_suspend_play_summary"
@@ -58,11 +58,11 @@
             android:summary="@string/audio_effects_system_summary"
             android:defaultValue="false" />
 
-        <SwitchPreference
+        <!-- SwitchPreference
             android:key="audio_effects_qc"
             android:title="@string/audio_effects_qc_title"
             android:summary="@string/audio_effects_qc_summary"
-            android:defaultValue="false" />
+            android:defaultValue="false" / -->
 
         <SwitchPreference
             android:key="audio_effects_dolby"

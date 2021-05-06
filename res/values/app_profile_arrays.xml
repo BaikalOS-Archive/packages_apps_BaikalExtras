@@ -64,6 +64,8 @@
     </string-array>
     <string-array name="brightness_listentries">
     	<item>@string/brightness_default</item>
+    	<item>@string/brightness_enable_ab</item>
+    	<item>@string/brightness_disable_ab</item>
     	<item>@string/brightness_reduced</item>
     	<item>@string/brightness_quarter</item>
     	<item>@string/brightness_full</item>
@@ -79,6 +81,8 @@
      </string-array>
      <string-array name="brightness_listvalues">
     	<item>0</item>
+    	<item>13</item>
+    	<item>14</item>
     	<item>10</item>
     	<item>12</item>
     	<item>11</item>
@@ -118,6 +122,24 @@
 
     <string-array name="gpu_freqs">
         <item>0</item>
+    </string-array>
+
+
+    <string-array name="rotation_listentries">
+    	<item>@string/rotation_default</item>
+    	<item>@string/rotation_auto</item>
+    	<item>@string/rotation_0</item>
+    	<item>@string/rotation_90</item>
+    	<item>@string/rotation_180</item>
+    	<item>@string/rotation_270</item>
+     </string-array>
+     <string-array name="rotation_listvalues">
+    	<item>0</item>
+    	<item>1</item>
+    	<item>2</item>
+    	<item>3</item>
+    	<item>4</item>
+    	<item>5</item>
     </string-array>
 
 </resources>

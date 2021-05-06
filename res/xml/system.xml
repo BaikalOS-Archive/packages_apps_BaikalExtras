@@ -27,6 +27,21 @@
        android:key="default_profiles"
        android:title="@string/default_profiles_title">
 
+        <!-- ListPreference
+            android:key="default_rotation"
+            android:title="@string/app_profile_rotation_title"
+            android:entries="@array/rotation_listentries"
+            android:entryValues="@array/rotation_listvalues"
+            android:defaultValue="default"
+            android:summary="%s" / -->
+
+        <!-- com.aicp.gear.preference.GlobalSettingSwitchPreference
+            android:key="baikalos_default_rotation"
+            android:title="@string/default_rotation_title"
+            android:summary="@string/default_rotation_summary"
+            android:defaultValue="false"
+            android:disableDependentsState="true" / -->
+
         <ListPreference
             android:key="default_fps"
             android:title="@string/app_profile_fps_title"
@@ -82,6 +97,19 @@
     	    android:entryValues="@array/default_performance_listvalues" 
             android:defaultValue="balance"
             android:summary=""/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+       android:key="system_other"
+       android:title="@string/other_category">
+
+        <com.aicp.gear.preference.GlobalSettingSwitchPreference
+            android:key="assisted_gps_enabled"
+            android:title="@string/assisted_gps_title"
+            android:summary="@string/assisted_gps_summary"
+            android:defaultValue="false"
+            android:disableDependentsState="true" />
 
     </PreferenceCategory>
 
