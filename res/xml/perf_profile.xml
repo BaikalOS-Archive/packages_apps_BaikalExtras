@@ -106,7 +106,7 @@
          android:key="edit_profile_gpu_boost"
          android:title="@string/edit_profile_gpu_boost_title"
          android:max="10"
-         android:min="0"
+         android:min="-5"
          aicpextras:unitsLeft=""
          aicpextras:unitsRight=""
          android:defaultValue="0"/>

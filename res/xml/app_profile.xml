@@ -81,6 +81,14 @@
             android:defaultValue="default"
             android:summary="%s" />
 
+        <ListPreference
+            android:key="app_profile_spoof"
+            android:title="@string/app_profile_spoof_title"
+            android:entries="@array/spoof_listentries"
+            android:entryValues="@array/spoof_listvalues"
+            android:defaultValue="default"
+            android:summary="%s" />
+
         <SwitchPreference
             android:key="app_profile_reader"
             android:title="@string/app_profile_reader_title"
@@ -157,5 +165,15 @@
             android:title="@string/app_profile_camera_hal1_title"
             android:summary="@string/app_profile_camera_hal1_summary"
             android:defaultValue="false" / -->
+
+        <Preference
+    	    android:key="app_backup_restore_backup"
+    	    android:title="@string/app_backup_restore_backup_title"
+            android:summary="@string/app_backup_restore_backup_summary"/>
+
+        <Preference
+    	    android:key="app_backup_restore_restore"
+    	    android:title="@string/app_backup_restore_restore_title"
+            android:summary="@string/app_backup_restore_restore_summary"/>
 
 </PreferenceScreen>

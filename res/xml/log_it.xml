@@ -20,6 +20,13 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     android:title="@string/log_it_title">
 
+    <com.aicp.gear.preference.GlobalSettingSwitchPreference
+            android:key="baikalos_debug"
+            android:title="@string/baikalos_debug_title"
+            android:summary="@string/baikalos_debug_summary"
+            android:defaultValue="false"
+            android:disableDependentsState="true" />
+
     <ListPreference
         android:key="baikalos_log_share_type"
         android:title="@string/log_it_share_type_title"

@@ -25,4 +25,7 @@
     <string name="fp_wake_unlock_title">Enable FP Wakeup</string>
     <string name="fp_wake_unlock_summary">Wakeup device on fingerprint scanner touch</string>
 
+    <string name="baikalos_statusbar_color_icons_title">Color Icons</string>
+    <string name="baikalos_statusbar_color_icons_summary">Use old style color icons for statusbar notification area</string>
+
 </resources>

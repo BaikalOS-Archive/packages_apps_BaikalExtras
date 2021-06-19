@@ -140,4 +140,12 @@
     <string name="app_profile_force_sonification_title">Treat as Notification</string>
     <string name="app_profile_force_sonification_summary">Treat app sounds as Notifications. Notification sound settings will be applied, like volume, speake duplication, etc...</string>
 
+    <string name="app_backup_restore_backup_title">Backup</string>
+    <string name="app_backup_restore_restore_title">Restore</string>
+
+    <string name="app_backup_restore_backup_summary">Backup this app data to External Storage</string>
+    <string name="app_backup_restore_restore_summary">Restore this app data from a backup</string>
+
+    <string name="app_profile_spoof_title">Spoof Device Model</string>
+
 </resources>

@@ -105,11 +105,51 @@
        android:title="@string/other_category">
 
         <com.aicp.gear.preference.GlobalSettingSwitchPreference
+            android:key="baikalos_smart_nfc"
+            android:title="@string/smart_nfc_title"
+            android:summary="@string/smart_nfc_summary"
+            android:defaultValue="false"
+            android:disableDependentsState="true" />
+
+        <com.aicp.gear.preference.GlobalSettingSwitchPreference
             android:key="assisted_gps_enabled"
             android:title="@string/assisted_gps_title"
             android:summary="@string/assisted_gps_summary"
             android:defaultValue="false"
             android:disableDependentsState="true" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+       android:key="system_backup_restore"
+       android:title="@string/backup_restore_category">
+
+        <!-- SwitchPreference
+            android:key="backup_restore_force_all"
+            android:title="@string/backup_restore_force_all_title"
+            android:summary="@string/backup_restore_force_all_summary"
+            android:defaultValue="false" / -->
+
+        <ListPreference
+    	    android:key="backup_restore_backup"
+    	    android:title="@string/backup_restore_backup_title"
+    	    android:entries="@array/backup_restore_listentries"
+    	    android:entryValues="@array/backup_restore_listvalues" 
+            android:defaultValue="apps"
+            android:summary="@string/backup_restore_backup_summary"/>
+
+        <ListPreference
+    	    android:key="backup_restore_restore"
+    	    android:title="@string/backup_restore_restore_title"
+    	    android:entries="@array/backup_restore_listentries"
+    	    android:entryValues="@array/backup_restore_listvalues" 
+            android:defaultValue="apps"
+            android:summary="@string/backup_restore_restore_summary"/>
+
+        <!-- ListPreference
+    	    android:key="backup_restore_restore_app"
+    	    android:title="@string/backup_restore_restore_app_title"
+            android:summary="@string/backup_restore_restore_app_summary"/ -->
 
     </PreferenceCategory>
 

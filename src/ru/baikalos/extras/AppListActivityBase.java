@@ -20,10 +20,14 @@ import android.widget.CompoundButton;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.util.Log;
+
 
 import ru.baikalos.extras.R;
 
 public abstract class AppListActivityBase extends BaseActivity {
+
+    private static final String TAG = "AppListActivityBase";
 
     AppChooserAdapter dAdapter = null;
     ProgressBar dProgressBar  = null;
@@ -108,20 +112,43 @@ public abstract class AppListActivityBase extends BaseActivity {
         dSearch.setOnEditorActionListener(new TextView.OnEditorActionListener() {
             @Override
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
-                if (actionId == EditorInfo.IME_ACTION_SEARCH) {
+                if ( actionId == EditorInfo.IME_ACTION_DONE || actionId == EditorInfo.IME_ACTION_SEARCH) {
                     dAdapter.getFilter().filter(dSearch.getText().toString(), new Filter.FilterListener() {
                         public void onFilterComplete(int count) {
                             dAdapter.update();
                         }
                     });
                     return true;
+                } else /*if (isEnter(event))*/ {
+
+                    Log.e(TAG, "event: " + event);
+                    if (event.getAction() == KeyEvent.ACTION_UP) {
+                        dAdapter.getFilter().filter(dSearch.getText().toString(), new Filter.FilterListener() {
+                            public void onFilterComplete(int count) {
+                                dAdapter.update();
+                            }
+                        });
+                    }
+                    return true;
                 }
-                return false;
+                //return false;
             }
         });
 
         dAdapter.update();
     }
+
+    private boolean isEnter(KeyEvent event) {
+        boolean result = false;
+        if (event != null) {
+            int keyCode = event.getKeyCode();
+            result = keyCode == KeyEvent.KEYCODE_ENTER
+                    || keyCode == KeyEvent.KEYCODE_NUMPAD_ENTER
+                    || keyCode == KeyEvent.KEYCODE_SEARCH;
+        }
+        return result;
+    }
+
 
     public void setLauncherFilter(boolean enabled) {
         dAdapter.setLauncherFilter(enabled);

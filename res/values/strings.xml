@@ -310,7 +310,8 @@
     <string name="log_it_share_type_haste">Upload to BaikalOS Haste</string>
     <string name="log_it_share_via">Share via</string>
 
-
+    <string name="baikalos_debug_title">Verbose log</string>
+    <string name="baikalos_debug_summary">Enable verbose logging. Do not enable without a reason</string>
 
     <!-- Panel porn -->
 

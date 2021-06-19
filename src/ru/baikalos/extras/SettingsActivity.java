@@ -248,7 +248,7 @@ public class SettingsActivity extends BaseActivity {
     }
 
     private void firstStartNoRootDialog() {
-        if (Util.hasSu()) {
+        if (/*Util.hasSu()*/ true) {
             // We are rooted, full functionality available
             return;
         }

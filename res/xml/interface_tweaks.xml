@@ -34,6 +34,15 @@
         android:summary="@string/fp_wake_unlock_summary"
         android:defaultValue="true" />      
 
+
+
+    <!-- com.aicp.gear.preference.GlobalSettingSwitchPreference
+        android:key="baikalos_statusbar_color_icons"
+        android:title="@string/baikalos_statusbar_color_icons_title"
+        android:summary="@string/baikalos_statusbar_color_icons_summary"
+        android:defaultValue="false"
+        android:disableDependentsState="true" / -->
+
     <com.aicp.gear.preference.GlobalSettingSwitchPreference
         android:key="baikalos_dlsb_enabled"
         android:title="@string/baikalos_dlsb_enabled_title"

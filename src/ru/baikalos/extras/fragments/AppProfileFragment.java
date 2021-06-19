@@ -48,6 +48,8 @@ import ru.baikalos.extras.BaseSettingsFragment;
 import ru.baikalos.extras.R;
 import com.aicp.gear.preference.SeekBarPreferenceCham;
 
+import java.io.File;
+
 public class AppProfileFragment extends BaseSettingsFragment
             implements Preference.OnPreferenceChangeListener {
 
@@ -73,6 +75,7 @@ public class AppProfileFragment extends BaseSettingsFragment
     private static final String APP_PROFILE_BLOCK_FOCUS_SEND = "app_profile_block_focus_send";
     private static final String APP_PROFILE_FORCE_SONIFICATION = "app_profile_force_sonification";
 
+    private static final String APP_PROFILE_SPOOF = "app_profile_spoof";
 
     private String mPackageName;
     private int mUid;
@@ -95,11 +98,16 @@ public class AppProfileFragment extends BaseSettingsFragment
     private ListPreference mAppRotationProfile;
     private ListPreference mAppFpsProfile;
     private ListPreference mAppBackgroundProfile;
+    private ListPreference mAppSpoofProfile;
+
+    private Preference mAppRestore;
 
     private SeekBarPreferenceCham mVolumeScale;
 
     private AppProfileSettings mAppSettings;
     private com.android.internal.baikalos.AppProfile mProfile;
+
+    private BackupUtil mBackupUtil;
 
 
 
@@ -128,6 +136,46 @@ public class AppProfileFragment extends BaseSettingsFragment
 
         boolean readerMode  = SystemProperties.get("sys.baikal.reader", "1").equals("1");
         boolean variableFps  = SystemProperties.get("sys.baikal.var_fps", "1").equals("1");
+
+        mBackupUtil = new BackupUtil();
+
+
+        mAppRestore = findPreference("app_backup_restore_restore");
+
+        if( mPackageName == null || !isBackupAvaialable(mPackageName) ) {
+            mAppRestore.setEnabled(false);
+        } else {
+            mAppRestore.setEnabled(true);
+        }
+
+        mAppRestore.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+            @Override
+            public boolean onPreferenceClick(Preference preference) {
+                mBackupUtil.appRestore(mPackageName);
+                return true;
+            }
+        });
+
+
+        Preference appBackup = findPreference("app_backup_restore_backup");
+
+        if( mPackageName == null ) {
+            appBackup.setEnabled(false);
+        }
+
+        appBackup.setOnPreferenceClickListener(new Preference.OnPreferenceClickListener() {
+            @Override
+            public boolean onPreferenceClick(Preference preference) {
+                mBackupUtil.appBackup(mPackageName);
+                if( !isBackupAvaialable(mPackageName) ) {
+                    mAppRestore.setEnabled(false);
+                } else {
+                    mAppRestore.setEnabled(true);
+                }
+                return true;
+            }
+        });
+
 
         mAppSettings = AppProfileSettings.getInstance(new Handler(),mContext, mContext.getContentResolver(),null);
         mProfile = mAppSettings.getProfile(mPackageName);
@@ -506,6 +554,30 @@ public class AppProfileFragment extends BaseSettingsFragment
                 });
             }
 
+            mAppSpoofProfile = (ListPreference) findPreference(APP_PROFILE_SPOOF);
+            if( mAppSpoofProfile != null ) {
+                    int spoof = mProfile.mSpoofDevice;
+                    Log.e(TAG, "setAppSpoof: mPackageName=" + mPackageName + ",spoof=" + spoof);
+                    mAppSpoofProfile.setValue(Integer.toString(spoof));
+                    mAppSpoofProfile.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                      public boolean onPreferenceChange(Preference preference, Object newValue) {
+                        try {
+                            int val = Integer.parseInt(newValue.toString());
+                            mProfile.mSpoofDevice = val;
+                            mAppSettings.updateProfile(mProfile);
+                            mAppSettings.save();
+
+                            //mBaikalService.setAppBrightness(mPackageName, val );
+                            Log.e(TAG, "setAppSpoof: mPackageName=" + mPackageName + ",spoof=" + val);
+                        } catch(Exception re) {
+                            Log.e(TAG, "onCreate: setAppSpoof Fatal! exception", re );
+                        }
+                        return true;
+                      }
+                    });
+            }
+
+
        } catch(Exception re) {
            Log.e(TAG, "onCreate: Fatal! exception", re );
        }
@@ -543,5 +615,20 @@ public class AppProfileFragment extends BaseSettingsFragment
     @Override
     public void onResume() {
         super.onResume();
+
+        if( mAppRestore != null ) {
+            if( mPackageName == null || !isBackupAvaialable(mPackageName) ) {
+                mAppRestore.setEnabled(false);
+            } else {
+                mAppRestore.setEnabled(true);
+            }
+        }
+
     }
+
+    private boolean isBackupAvaialable(String packageName) {
+        String path = "/sdcard/baikalos/backup/" + packageName + ".bba";
+        return (new File(path).exists());
+    }
+
 }

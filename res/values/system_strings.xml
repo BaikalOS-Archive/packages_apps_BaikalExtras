@@ -19,5 +19,28 @@
     <string name="default_rotation_title">Auto Rotation</string>
     <string name="default_rotation_summary">Enable screen auto rotation by default</string>
 
+    <string name="smart_nfc_title">Smart NFC</string>
+    <string name="smart_nfc_summary">Enable NFC on PowerMenu Dialog and disable on dismiss</string>
+
+
+    <string name="backup_restore_category">Backup/Restore</string>
+
+    <string name="backup_restore_force_all_title">Force Backup</string>
+    <string name="backup_restore_force_all_summary">Force backup not eligible apps. THIS WILL BACKUP DATA OF APPS WICH CAN CONTAIN PERSONAL OR SENSITIVE INFO!</string>
+    <string name="backup_restore_backup_title">Backup</string>
+    <string name="backup_restore_restore_title">Restore</string>
+
+    <string name="backup_restore_backup_summary">Backup applications and their data to External Storage. NOT ALL APPS COULD BE BACKED UP!!! STRONG AUTH INFORMATION WILL NOT BE SAVED!!!</string>
+    <string name="backup_restore_restore_summary">Restore previously backed up applications</string>
+
+    <string name="backup_restore_restore_app_title">App Restore</string>
+    <string name="backup_restore_restore_app_summary">Restore single app backed up from application profile</string>
+
+
+    <string name="backup_restore_apps">Applications only</string>
+    <string name="backup_restore_apps_obb">Applications and OBB</string>
+    <string name="backup_restore_sys">System Settings</string>
+    <string name="backup_restore_sys_apps">System and Applications</string>
+    <string name="backup_restore_sys_apps_obb">System, Applications, OBB</string>
 
 </resources>

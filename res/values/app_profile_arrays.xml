@@ -103,6 +103,7 @@
     	<item>60</item>
     	<item>90</item>
     	<item>120</item>
+    	<item>Dynamic</item>
      </string-array>
      <string-array name="fps_listvalues">
     	<item>0</item>
@@ -110,6 +111,7 @@
     	<item>3</item>
     	<item>4</item>
     	<item>5</item>
+    	<item>6</item>
     </string-array>
 
     <string-array name="cpu_silver_freqs">
@@ -140,6 +142,38 @@
     	<item>3</item>
     	<item>4</item>
     	<item>5</item>
+    </string-array>
+
+    <string-array name="spoof_listentries">
+    	<item>Default</item>
+    	<item>Poco X3 India</item>
+    	<item>Poco X3 NFC Global</item>
+    	<item>Pixel 3</item>
+    	<item>Pixel 3 XL</item>
+    	<item>Pixel 4</item>
+    	<item>Pixel 4 XL</item>
+    	<item>Pixel 4a</item>
+    	<item>Pixel 5</item>
+    	<item>Nvidia Shield TV 2019 Pro</item>
+    	<item>OnePlus 8T</item>
+    	<item>OnePlus 8 Pro</item>
+    	<item>ASUS ROG2</item>
+     </string-array>
+
+     <string-array name="spoof_listvalues">
+    	<item>0</item>
+    	<item>1</item>
+    	<item>2</item>
+    	<item>3</item>
+    	<item>4</item>
+    	<item>5</item>
+    	<item>6</item>
+    	<item>7</item>
+    	<item>8</item>
+    	<item>9</item>
+    	<item>10</item>
+    	<item>11</item>
+    	<item>12</item>
     </string-array>
 
 </resources>

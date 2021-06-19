@@ -25,4 +25,8 @@
     <string name="fp_wake_unlock_title">Пробуждать отпечатком</string>
     <string name="fp_wake_unlock_summary">Пробуждать устройство по сканеру отпечатка пальца</string>
 
+    <string name="baikalos_statusbar_color_icons_title">Цветные Значки</string>
+    <string name="baikalos_statusbar_color_icons_summary">Использовать цветные значки уведомлений в статусбаре</string>
+
+
 </resources>
