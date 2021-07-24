@@ -43,6 +43,7 @@ import android.content.res.Resources;
 import com.android.internal.baikalos.AppProfileSettings;
 import com.android.internal.baikalos.AppProfile;
 import com.android.internal.baikalos.BaikalSettings;
+import com.android.internal.baikalos.PowerWhitelistBackend;
 
 import ru.baikalos.extras.BaseSettingsFragment;
 import ru.baikalos.extras.R;
@@ -62,6 +63,7 @@ public class AppProfileFragment extends BaseSettingsFragment
     private static final String APP_PROFILE_BRIGHTNESS = "app_profile_brightness";
     private static final String APP_PROFILE_ROTATION = "app_profile_rotation";
     private static final String APP_PROFILE_FPS = "app_profile_fps";
+    private static final String APP_PROFILE_KEEP_ON = "app_profile_keep_on";
 //    private static final String APP_PROFILE_CAMERA_HAL1 = "app_profile_camera_hal1";
     private static final String APP_PROFILE_PINNED = "app_profile_pinned";
     private static final String APP_PROFILE_STAMINA = "app_profile_stamina";
@@ -89,6 +91,7 @@ public class AppProfileFragment extends BaseSettingsFragment
     private SwitchPreference mBlockFocusRecv;
     private SwitchPreference mBlockFocusSend;
     private SwitchPreference mForceSonification;
+    private SwitchPreference mAppKeepOn;
 
     //private SwitchPreference mAppRestricted;
 
@@ -100,14 +103,14 @@ public class AppProfileFragment extends BaseSettingsFragment
     private ListPreference mAppBackgroundProfile;
     private ListPreference mAppSpoofProfile;
 
-    private Preference mAppRestore;
+    //private Preference mAppRestore;
 
     private SeekBarPreferenceCham mVolumeScale;
 
     private AppProfileSettings mAppSettings;
     private com.android.internal.baikalos.AppProfile mProfile;
 
-    private BackupUtil mBackupUtil;
+    //private BackupUtil mBackupUtil;
 
 
 
@@ -137,12 +140,12 @@ public class AppProfileFragment extends BaseSettingsFragment
         boolean readerMode  = SystemProperties.get("sys.baikal.reader", "1").equals("1");
         boolean variableFps  = SystemProperties.get("sys.baikal.var_fps", "1").equals("1");
 
-        mBackupUtil = new BackupUtil();
+        //mBackupUtil = new BackupUtil();
 
 
-        mAppRestore = findPreference("app_backup_restore_restore");
+        //mAppRestore = findPreference("app_backup_restore_restore");
 
-        if( mPackageName == null || !isBackupAvaialable(mPackageName) ) {
+        /*if( mPackageName == null || !isBackupAvaialable(mPackageName) ) {
             mAppRestore.setEnabled(false);
         } else {
             mAppRestore.setEnabled(true);
@@ -155,9 +158,9 @@ public class AppProfileFragment extends BaseSettingsFragment
                 return true;
             }
         });
+        */
 
-
-        Preference appBackup = findPreference("app_backup_restore_backup");
+        /*Preference appBackup = findPreference("app_backup_restore_backup");
 
         if( mPackageName == null ) {
             appBackup.setEnabled(false);
@@ -174,7 +177,7 @@ public class AppProfileFragment extends BaseSettingsFragment
                 }
                 return true;
             }
-        });
+        });*/
 
 
         mAppSettings = AppProfileSettings.getInstance(new Handler(),mContext, mContext.getContentResolver(),null);
@@ -367,6 +370,30 @@ public class AppProfileFragment extends BaseSettingsFragment
                 }
             }
 
+
+            mAppKeepOn = (SwitchPreference) findPreference(APP_PROFILE_KEEP_ON);
+            if( mAppKeepOn != null ) {
+                mAppKeepOn.setChecked(mProfile.mKeepOn);
+                //mAppRestricted.setChecked(mBaikalService.isAppRestrictedProfile(mPackageName));
+                mAppKeepOn.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                    public boolean onPreferenceChange(Preference preference, Object newValue) {
+                        //int val = Integer.parseInt(newValue.toString());
+                        //DiracAudioEnhancerService.du.setHeadsetType(mContext, val);
+                        try {
+                            mProfile.mKeepOn = ((Boolean)newValue);
+                            mAppSettings.updateProfile(mProfile);
+                            mAppSettings.save();
+                            //mBaikalService.setAppPriority(mPackageName, ((Boolean)newValue) ? -1 : 0 );
+                            Log.e(TAG, "mAppKeepOn: mPackageName=" + mPackageName + ",mKeepOn=" + (Boolean)newValue);
+                        } catch(Exception re) {
+                            Log.e(TAG, "onCreate: mAppKeepOn Fatal! exception", re );
+                        }
+                        return true;
+                    }
+                });
+            }
+
+
             mAppPinned = (SwitchPreference) findPreference(APP_PROFILE_PINNED);
             if( mAppPinned != null ) {
                 mAppPinned.setChecked(mProfile.mPinned);
@@ -433,28 +460,43 @@ public class AppProfileFragment extends BaseSettingsFragment
                 });
             }*/
         
+            PowerWhitelistBackend mBackend = PowerWhitelistBackend.getInstance(getContext());
+
+
+
 
             mAppBackgroundProfile = (ListPreference) findPreference(APP_PROFILE_BACKGROUND);
             if( mAppBackgroundProfile != null ) {
-                int background = mProfile.mBackground;
-                Log.e(TAG, "getAppBackground: mPackageName=" + mPackageName + ",background=" + background);
-                mAppBackgroundProfile.setValue(Integer.toString(background));
-                mAppBackgroundProfile.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
-                  public boolean onPreferenceChange(Preference preference, Object newValue) {
-                    try {
-                        int val = Integer.parseInt(newValue.toString());
-                        mProfile.mBackground = val;
+
+                if( mBackend.isSysWhitelisted(mPackageName) ) {
+                    mAppBackgroundProfile.setValue("-1");
+                    mAppBackgroundProfile.setEnabled(false);
+                    if( mProfile.mBackground != -1 ) {
+                        mProfile.mBackground = -1;
                         mAppSettings.updateProfile(mProfile);
                         mAppSettings.save();
-
-                        //mBaikalService.setAppBrightness(mPackageName, val );
-                        Log.e(TAG, "setAppBackground: mPackageName=" + mPackageName + ",background=" + val);
-                    } catch(Exception re) {
-                        Log.e(TAG, "onCreate: setAppBackground Fatal! exception", re );
                     }
-                    return true;
-                  }
-                });
+                } else {
+                    int background = mProfile.mBackground;
+                    Log.e(TAG, "getAppBackground: mPackageName=" + mPackageName + ",background=" + background);
+                    mAppBackgroundProfile.setValue(Integer.toString(background));
+                    mAppBackgroundProfile.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                      public boolean onPreferenceChange(Preference preference, Object newValue) {
+                        try {
+                            int val = Integer.parseInt(newValue.toString());
+                            mProfile.mBackground = val;
+                            mAppSettings.updateProfile(mProfile);
+                            mAppSettings.save();
+
+                            //mBaikalService.setAppBrightness(mPackageName, val );
+                            Log.e(TAG, "setAppBackground: mPackageName=" + mPackageName + ",background=" + val);
+                        } catch(Exception re) {
+                            Log.e(TAG, "onCreate: setAppBackground Fatal! exception", re );
+                        }
+                        return true;
+                      }
+                    });
+                }    
             }
 
 
@@ -616,19 +658,19 @@ public class AppProfileFragment extends BaseSettingsFragment
     public void onResume() {
         super.onResume();
 
-        if( mAppRestore != null ) {
+        /*if( mAppRestore != null ) {
             if( mPackageName == null || !isBackupAvaialable(mPackageName) ) {
                 mAppRestore.setEnabled(false);
             } else {
                 mAppRestore.setEnabled(true);
             }
-        }
+        }*/
 
     }
 
-    private boolean isBackupAvaialable(String packageName) {
+    /*private boolean isBackupAvaialable(String packageName) {
         String path = "/sdcard/baikalos/backup/" + packageName + ".bba";
         return (new File(path).exists());
-    }
+    }*/
 
 }

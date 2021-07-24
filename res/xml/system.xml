@@ -120,15 +120,15 @@
 
     </PreferenceCategory>
 
-    <PreferenceCategory
+    <!-- PreferenceCategory
        android:key="system_backup_restore"
        android:title="@string/backup_restore_category">
 
-        <!-- SwitchPreference
+        <SwitchPreference
             android:key="backup_restore_force_all"
             android:title="@string/backup_restore_force_all_title"
             android:summary="@string/backup_restore_force_all_summary"
-            android:defaultValue="false" / -->
+            android:defaultValue="false" />
 
         <ListPreference
     	    android:key="backup_restore_backup"
@@ -146,11 +146,11 @@
             android:defaultValue="apps"
             android:summary="@string/backup_restore_restore_summary"/>
 
-        <!-- ListPreference
+        <ListPreference
     	    android:key="backup_restore_restore_app"
     	    android:title="@string/backup_restore_restore_app_title"
-            android:summary="@string/backup_restore_restore_app_summary"/ -->
+            android:summary="@string/backup_restore_restore_app_summary"/>
 
-    </PreferenceCategory>
+    </PreferenceCategory -->
 
 </PreferenceScreen>

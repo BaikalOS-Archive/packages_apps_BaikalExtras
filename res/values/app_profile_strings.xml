@@ -148,4 +148,10 @@
 
     <string name="app_profile_spoof_title">Spoof Device Model</string>
 
+    <string name="app_profile_keep_on_title">Keep Awake</string>
+    <string name="app_profile_keep_on_summary">Keep device awake while this app is active</string>
+
+    <string name="app_profile_phka_title">Force SW Attestation</string>
+    <string name="app_profile_phka_summary">Prevent hardware key attestation for this app. Could help to fix SafetyNet or other ROOT and unblocked bootloader detection.</string>
+
 </resources>

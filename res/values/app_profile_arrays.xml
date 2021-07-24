@@ -158,6 +158,10 @@
     	<item>OnePlus 8T</item>
     	<item>OnePlus 8 Pro</item>
     	<item>ASUS ROG2</item>
+    	<item>Sony Xperia 2 5G (Europe)"</item>
+    	<item>Sony Xperia 2 5G (Asia)"</item>
+    	<item>Samsung S20 Ultra 5G"</item>
+    	<item>Xiaomi Mi 10 Pro"</item>
      </string-array>
 
      <string-array name="spoof_listvalues">
@@ -174,6 +178,10 @@
     	<item>10</item>
     	<item>11</item>
     	<item>12</item>
+    	<item>13</item>
+    	<item>14</item>
+    	<item>15</item>
+    	<item>16</item>
     </string-array>
 
 </resources>

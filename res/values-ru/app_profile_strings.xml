@@ -88,7 +88,6 @@
     <string name="edit_profile_reset_summary">Сбросить на значения по умолчанию</string>
     <string name="edit_profile_reset_ok">Сбросить</string>
 
-
     <string name="app_profile_stamina_title">Стамина</string>
     <string name="app_profile_stamina_summary">Разрешить фоновый запуск приложения в режиме Стамина</string>
 
@@ -102,5 +101,27 @@
 
     <string name="app_profile_require_gms_title">Требует GMS</string>
     <string name="app_profile_require_gms_summary">Отключить ограничения GMS когда запущено это приложение</string>
+
+    <string name="app_profile_volume_scale_title">Масштаб звука</string>
+
+    <string name="app_profile_ignore_audio_focus_title">Игнорировать аудио фокус</string>
+    <string name="app_profile_ignore_audio_focus_summary">Игнорировать запросы от других приложений на отключение звука</string>
+
+    <string name="app_profile_block_focus_recv_title">Игнорировать аудио фокус</string>
+    <string name="app_profile_block_focus_recv_summary">Игнорировать запросы от других приложений на отключение звука</string>
+
+    <string name="app_profile_block_focus_send_title">Блокировать аудио фокус</string>
+    <string name="app_profile_block_focus_send_summary">Блокировать запросы отключения звука от этого приложения</string>
+
+    <string name="app_profile_force_sonification_title">Как Уведомления</string>
+    <string name="app_profile_force_sonification_summary">Считать звуки проигрываемые данным приложением уведомлениями. Используются настройки канала уведомлений для громкости, дублирования вывода и т.д.</string>
+
+    <string name="app_profile_spoof_title">Подстановка Модели Устройства</string>
+
+    <string name="app_profile_keep_on_title">Удерживать включенным</string>
+    <string name="app_profile_keep_on_summary">Удерживать телефон включенным при активности этого приложения</string>
+
+    <string name="app_profile_phka_title">Программная Аттестация</string>
+    <string name="app_profile_phka_summary">Заблокировать аппаратную аттестацию устройства. Помогает решить проблемы SafetyNet и других схем детектирования разблокированного загрузчика.</string>
 
 </resources>
