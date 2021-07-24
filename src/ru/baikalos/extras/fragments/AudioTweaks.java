@@ -80,10 +80,16 @@ public class AudioTweaks extends BaseSettingsFragment
     private static final String AUDIO_EFFECTS_SYSTEM = "audio_effects_system";
     private static final String AUDIO_EFFECTS_QC = "audio_effects_qc";
     private static final String AUDIO_EFFECTS_DOLBY = "audio_effects_dolby";
+    private static final String AUDIO_EFFECTS_VIPER = "audio_effects_viper";
+    private static final String AUDIO_EFFECTS_VIPER_FORCE = "audio_effects_viper_force";
+
     private static final String SYSTEM_PROPERTY_EFFECTS_SYSTEM = "persist.baikal.ae.disable";
     private static final String SYSTEM_PROPERTY_EFFECTS_QC = "persist.baikal.qcae.disable";
     private static final String SYSTEM_PROPERTY_EFFECTS_DOLBY = "persist.baikal.dolby.enable";
+    private static final String SYSTEM_PROPERTY_EFFECTS_VIPER = "persist.baikal.viper.enable";
+    private static final String SYSTEM_PROPERTY_EFFECTS_VIPER_FORCE = "persist.baikal.viper.force";
     private static final String SYSTEM_PROPERTY_DOLBY_AVAILABLE = "sys.baikal.dolby.avail";
+    private static final String SYSTEM_PROPERTY_VIPER_AVAILABLE = "sys.baikal.viper.avail";
     private static final String SYSTEM_PROPERTY_QCAE_AVAILABLE = "sys.baikal.qcae.avail";
 
 
@@ -126,7 +132,12 @@ public class AudioTweaks extends BaseSettingsFragment
 
     private SwitchPreference mEffectsSystem;
     private SwitchPreference mEffectsDolby;
+    private SwitchPreference mEffectsViper;
+    private SwitchPreference mEffectsViperForce;
     private SwitchPreference mEffectsQc;
+
+    private Boolean mIsDolbyAvail;
+    private Boolean mIsViperAvail;
 
 
 
@@ -145,16 +156,42 @@ public class AudioTweaks extends BaseSettingsFragment
         mContext = (Context) getActivity();
         final Resources res = getActivity().getResources();
 
-        Boolean isDolbyAvail = SystemProperties.getBoolean(SYSTEM_PROPERTY_DOLBY_AVAILABLE,false);
+        mIsDolbyAvail = SystemProperties.getBoolean(SYSTEM_PROPERTY_DOLBY_AVAILABLE,false);
+        mIsViperAvail = SystemProperties.getBoolean(SYSTEM_PROPERTY_VIPER_AVAILABLE,false);
 
         mEffectsDolby = (SwitchPreference) findPreference(AUDIO_EFFECTS_DOLBY);
 
         if( mEffectsDolby != null ) { 
-            if( !isDolbyAvail ) {
+            if( !mIsDolbyAvail ) {
                 mEffectsDolby.setVisible(false);
             } else {
                 mEffectsDolby.setChecked(SystemProperties.getBoolean(SYSTEM_PROPERTY_EFFECTS_DOLBY, false));
                 mEffectsDolby.setOnPreferenceChangeListener(this);
+            }
+        }
+
+        mEffectsViper = (SwitchPreference) findPreference(AUDIO_EFFECTS_VIPER);
+        if( mEffectsViper != null ) { 
+            if( !mIsViperAvail ) {
+                mEffectsViper.setVisible(false);
+                
+            } else {
+                mEffectsViper.setChecked(SystemProperties.getBoolean(SYSTEM_PROPERTY_EFFECTS_VIPER, false));
+                mEffectsViper.setOnPreferenceChangeListener(this);
+            }
+        }
+
+        mEffectsViperForce = (SwitchPreference) findPreference(AUDIO_EFFECTS_VIPER_FORCE);
+        if( mEffectsViperForce != null ) { 
+            if( !mIsViperAvail ) {
+                mEffectsViperForce.setVisible(false);
+            } else {
+                if( !mEffectsViper.isChecked() ) {
+                    mEffectsViperForce.setChecked(false);
+                } else {
+                    mEffectsViperForce.setChecked(SystemProperties.getBoolean(SYSTEM_PROPERTY_EFFECTS_VIPER_FORCE, false));
+                }
+                mEffectsViperForce.setOnPreferenceChangeListener(this);
             }
         }
 
@@ -307,6 +344,7 @@ public class AudioTweaks extends BaseSettingsFragment
                 mEnableNoneA2DP.setOnPreferenceChangeListener(this);
         }
 
+        updateEffectsConfiguration(mEffectsSystem.isChecked());
     }
 
     @Override
@@ -395,6 +433,7 @@ public class AudioTweaks extends BaseSettingsFragment
             Log.e(TAG, "onPreferenceChange: mEffectsSystem key=" + SYSTEM_PROPERTY_EFFECTS_SYSTEM + ", value=" + (Boolean)newValue);
             ((SwitchPreference)preference).setChecked((Boolean) newValue);
             setSystemPropertyBoolean(SYSTEM_PROPERTY_EFFECTS_SYSTEM, (Boolean) newValue);
+            updateEffectsConfiguration((Boolean)newValue);
         } else if (preference == mEffectsQc) {
             Log.e(TAG, "onPreferenceChange: mEffectsQc key=" + SYSTEM_PROPERTY_EFFECTS_QC + ", value=" + (Boolean)newValue);
             ((SwitchPreference)preference).setChecked((Boolean) newValue);
@@ -404,6 +443,21 @@ public class AudioTweaks extends BaseSettingsFragment
             ((SwitchPreference)preference).setChecked((Boolean) newValue);
             setSystemPropertyBoolean(SYSTEM_PROPERTY_EFFECTS_DOLBY, (Boolean) newValue);
             updateDolbyConfiguration((Boolean)newValue);
+        } else if (preference == mEffectsViper) {
+            Log.e(TAG, "onPreferenceChange: mEffectsViper key=" + SYSTEM_PROPERTY_EFFECTS_VIPER + ", value=" + (Boolean)newValue);
+            ((SwitchPreference)preference).setChecked((Boolean) newValue);
+            setSystemPropertyBoolean(SYSTEM_PROPERTY_EFFECTS_VIPER, (Boolean) newValue);
+            updateViperConfiguration((Boolean)newValue);
+            if( mEffectsViperForce != null ) {
+                if( !(Boolean)newValue ) {
+                    setSystemPropertyBoolean(SYSTEM_PROPERTY_EFFECTS_VIPER_FORCE, false);
+                    mEffectsViperForce.setChecked(false);
+                }
+            }
+        } else if (preference == mEffectsViperForce) {
+            Log.e(TAG, "onPreferenceChange: mEffectsViperForce key=" + SYSTEM_PROPERTY_EFFECTS_VIPER_FORCE + ", value=" + (Boolean)newValue);
+            ((SwitchPreference)preference).setChecked((Boolean) newValue);
+            setSystemPropertyBoolean(SYSTEM_PROPERTY_EFFECTS_VIPER_FORCE, (Boolean) newValue);
         }
         return true;
     }
@@ -412,6 +466,34 @@ public class AudioTweaks extends BaseSettingsFragment
     public void onResume() {
         super.onResume();
     }
+
+    private void updateEffectsConfiguration(boolean disabled) {
+        /*if( disabled ) {
+            if( mEffectsQc != null ) { 
+                mEffectsQc.setChecked(false);
+                mEffectsQc.setEnabled(false);
+            }
+            if( mEffectsDolby != null ) { 
+                mEffectsDolby.setChecked(false);
+                mEffectsDolby.setEnabled(false);
+            }
+            if( mEffectsViper != null ) { 
+                mEffectsViper.setChecked(false);
+                mEffectsViper.setEnabled(false);
+            }
+        } else {
+            if( mEffectsQc != null ) { 
+                mEffectsQc.setEnabled(true);
+            }
+            if( mEffectsDolby != null && mIsDolbyAvail ) { 
+                mEffectsDolby.setEnabled(true);
+            }
+            if( mEffectsViper != null && mIsViperAvail) { 
+                mEffectsViper.setEnabled(true);
+            }
+        }*/
+    }
+
 
     private void setSystemPropertyBoolean(String key, boolean value) {
         String text = value?"1":"0";
@@ -424,8 +506,18 @@ public class AudioTweaks extends BaseSettingsFragment
             setPackageEnabled("com.motorola.dolby.dolbyui",false);
             setPackageEnabled("com.dolby.daxservice",false);
         } else {
-            //setPackageEnabled("com.motorola.dolby.dolbyui",true);
-            //setPackageEnabled("com.dolby.daxservice",true);
+            setPackageEnabled("com.motorola.dolby.dolbyui",true);
+            setPackageEnabled("com.dolby.daxservice",true);
+        }
+    }
+
+    private void updateViperConfiguration(boolean enabled) {
+        if( !enabled ) {
+            setPackageEnabled("com.pittvandewitt.viperfx",false);
+            setPackageEnabled("com.android.musicfx",true);
+        } else {
+            setPackageEnabled("com.pittvandewitt.viperfx",true);
+            setPackageEnabled("com.android.musicfx",false);
         }
     }
 

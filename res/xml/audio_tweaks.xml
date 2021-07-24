@@ -70,6 +70,18 @@
             android:summary="@string/audio_effects_dolby_summary"
             android:defaultValue="false" />
 
+        <SwitchPreference
+            android:key="audio_effects_viper"
+            android:title="@string/audio_effects_viper_title"
+            android:summary="@string/audio_effects_viper_summary"
+            android:defaultValue="false" />
+
+        <SwitchPreference
+            android:key="audio_effects_viper_force"
+            android:title="@string/audio_effects_viper_force_title"
+            android:summary="@string/audio_effects_viper_force_summary"
+            android:defaultValue="false" />
+
     </PreferenceCategory>
 
     <PreferenceCategory

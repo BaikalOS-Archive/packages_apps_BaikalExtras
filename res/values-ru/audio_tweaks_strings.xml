@@ -61,6 +61,9 @@
     <string name="audio_effects_dolby_title">Включить Dolby</string>
     <string name="audio_effects_dolby_summary">Включить аудио-фильтры Dolby</string>
 
+    <string name="audio_effects_viper_title">Включить ViperFX</string>
+    <string name="audio_effects_viper_summary">Включить аудио-фильтры ViperFX</string>
+
     <string name="app_profile_volume_scale_title">Масштабировать Громкость</string>
 
     <string name="app_profile_ignore_audio_focus_title">Игнорировать Аудио Фокус</string>
@@ -75,5 +78,7 @@
     <string name="app_profile_force_sonification_title">Как Уведомление</string>
     <string name="app_profile_force_sonification_summary">Считать звук приложения уведомлением. Использовать настройки звука уведомлений такие как громкость, дублирование на динамик и т.д.</string>
 
+    <string name="audio_effects_viper_force_title">Форсировать ViperFX</string>
+    <string name="audio_effects_viper_force_summary">Принудительно использовать ViperFX для всех потоков</string>
 
 </resources>
