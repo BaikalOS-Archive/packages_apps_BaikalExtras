@@ -84,11 +84,11 @@ public class System extends BaseSettingsFragment {
     private SwitchPreference mSmartNFC;
 
     //private SwitchPreference mBrForceAll;
-    private ListPreference mBrBackup;
-    private ListPreference mBrRestore;
-    private ListPreference mBrRestoreApp;
+    //private ListPreference mBrBackup;
+    //private ListPreference mBrRestore;
+    //private ListPreference mBrRestoreApp;
 
-    private BackupUtil mBackupUtil;
+    //private BackupUtil mBackupUtil;
 
     @Override
     protected int getPreferenceResource() {
@@ -108,7 +108,7 @@ public class System extends BaseSettingsFragment {
                 (PreferenceCategory) screen.findPreference("default_profiles");
 
 
-        mBackupUtil = new BackupUtil();
+        //mBackupUtil = new BackupUtil();
 
         boolean perfProf  = SystemProperties.get("baikal.eng.perf", "0").equals("1");
         boolean thermProf  = SystemProperties.get("baikal.eng.therm", "0").equals("1");
@@ -298,7 +298,7 @@ public class System extends BaseSettingsFragment {
             //mBrForceAll = (SwitchPreference)  findPreference("backup_restore_force_all");
             //mBrForceAll.setChecked(false);
 
-            mBrRestore = (ListPreference) findPreference("backup_restore_restore");
+            /*mBrRestore = (ListPreference) findPreference("backup_restore_restore");
             if( mBrRestore != null ) { 
 
                     if( SystemProperties.get("sys.baikal.restore_inp", "0").equals("1") ) {
@@ -321,12 +321,12 @@ public class System extends BaseSettingsFragment {
                         return true;
                       }
                     });
-            }
+            }*/
 
 
 
 
-            mBrBackup = (ListPreference) findPreference("backup_restore_backup");
+            /*mBrBackup = (ListPreference) findPreference("backup_restore_backup");
             if( mBrBackup != null ) { 
 
                     if( SystemProperties.get("sys.baikal.backup_inp", "0").equals("1") ) {
@@ -349,10 +349,10 @@ public class System extends BaseSettingsFragment {
                         return true;
                       }
                     });
-            }
+            }*/
 
 
-
+            /*
             mBrRestoreApp = (ListPreference) findPreference("backup_restore_restore_app");
             if( mBrRestoreApp != null ) { 
 
@@ -376,7 +376,7 @@ public class System extends BaseSettingsFragment {
                         return true;
                       }
                     });
-            }
+            }*/
 
 
         } catch(Exception re) {
@@ -389,7 +389,7 @@ public class System extends BaseSettingsFragment {
     public void onResume() {
         super.onResume();
 
-        if( mBrRestoreApp != null ) { 
+        /*if( mBrRestoreApp != null ) { 
             if( SystemProperties.get("sys.baikal.restore_inp", "0").equals("1") ) {
                 mBrRestoreApp.setEnabled(false);
             } else {
@@ -411,11 +411,12 @@ public class System extends BaseSettingsFragment {
             } else {
                 mBrBackup.setEnabled(true);
             }
-        }
+        }*/
 
     }
 
 
+    /*
     private void updateRestoreValues() {
         if( mBrRestore == null ) return;
         
@@ -430,23 +431,6 @@ public class System extends BaseSettingsFragment {
             values.add("apps_obb");
             entries.add("Applications with OBB");
         }
-
-
-        /*
-    	if( isBackupPackageAvaialable("sys",".bbp") ) { 
-            values.add("sys");
-            entries.add("System Settings");
-        }
-
-    	if( isBackupPackageAvaialable("sys_apps",".bbp") ) { 
-            values.add("sys_apps");
-            entries.add("System and Applications");
-        }
-    	if( isBackupPackageAvaialable("sys_apps_obb",".bbp") ) { 
-            values.add("sys_apps_obb");
-            entries.add("System, Applications, OBB");
-        }
-        */
 
         String[] entriesArray = new String[entries.size()];
         String[] valuesArray = new String[values.size()];
@@ -509,7 +493,7 @@ public class System extends BaseSettingsFragment {
     }
 
     private void systemBackup(String backup) {
-        mBackupUtil.systemBackup(backup, true /*mBrForceAll.isChecked()*/);
+        mBackupUtil.systemBackup(backup, true );
     }
 
     private void systemRestore(String restore) {
@@ -519,6 +503,7 @@ public class System extends BaseSettingsFragment {
     private void appRestore(String restore) {
         mBackupUtil.appRestore(restore);        
     }
+    */
 
     private void setSystemPropertyString(String key, String value) {
         Log.i(TAG, "setSystemPropertyString: key=" + key + ", value=" + value);
