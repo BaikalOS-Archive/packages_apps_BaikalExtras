@@ -80,6 +80,7 @@ public class AudioTweaks extends BaseSettingsFragment
     private static final String AUDIO_EFFECTS_SYSTEM = "audio_effects_system";
     private static final String AUDIO_EFFECTS_QC = "audio_effects_qc";
     private static final String AUDIO_EFFECTS_DOLBY = "audio_effects_dolby";
+    private static final String AUDIO_EFFECTS_MISOUND = "audio_effects_misound";
     private static final String AUDIO_EFFECTS_VIPER = "audio_effects_viper";
     private static final String AUDIO_EFFECTS_VIPER_FORCE = "audio_effects_viper_force";
 
@@ -88,9 +89,11 @@ public class AudioTweaks extends BaseSettingsFragment
     private static final String SYSTEM_PROPERTY_EFFECTS_DOLBY = "persist.baikal.dolby.enable";
     private static final String SYSTEM_PROPERTY_EFFECTS_VIPER = "persist.baikal.viper.enable";
     private static final String SYSTEM_PROPERTY_EFFECTS_VIPER_FORCE = "persist.baikal.viper.force";
+    private static final String SYSTEM_PROPERTY_EFFECTS_MISOUND = "persist.baikal.misound.enable";
     private static final String SYSTEM_PROPERTY_DOLBY_AVAILABLE = "sys.baikal.dolby.avail";
     private static final String SYSTEM_PROPERTY_VIPER_AVAILABLE = "sys.baikal.viper.avail";
     private static final String SYSTEM_PROPERTY_QCAE_AVAILABLE = "sys.baikal.qcae.avail";
+    private static final String SYSTEM_PROPERTY_MISOUND_AVAILABLE = "sys.baikal.misound.avail";
 
 
     private static final String SYSTEM_PROPERTY_AUDIO_HQ = "persist.baikal_audio_hq";
@@ -132,12 +135,14 @@ public class AudioTweaks extends BaseSettingsFragment
 
     private SwitchPreference mEffectsSystem;
     private SwitchPreference mEffectsDolby;
+    private SwitchPreference mEffectsMiSound;
     private SwitchPreference mEffectsViper;
     private SwitchPreference mEffectsViperForce;
     private SwitchPreference mEffectsQc;
 
     private Boolean mIsDolbyAvail;
     private Boolean mIsViperAvail;
+    private Boolean mIsMiSoundAvail;
 
 
 
@@ -158,6 +163,26 @@ public class AudioTweaks extends BaseSettingsFragment
 
         mIsDolbyAvail = SystemProperties.getBoolean(SYSTEM_PROPERTY_DOLBY_AVAILABLE,false);
         mIsViperAvail = SystemProperties.getBoolean(SYSTEM_PROPERTY_VIPER_AVAILABLE,false);
+        mIsMiSoundAvail = SystemProperties.getBoolean(SYSTEM_PROPERTY_MISOUND_AVAILABLE,false);
+
+        mEnableAudioHq = (SwitchPreference) findPreference(AUDIO_TWEAKS_AUDIO_HQ);
+
+        if( mEnableAudioHq != null ) { 
+                if( isHqModeAvaialable() ) {
+                    mEnableAudioHq.setChecked(SystemProperties.getBoolean(SYSTEM_PROPERTY_AUDIO_HQ, false));
+                    mEnableAudioHq.setOnPreferenceChangeListener(this);
+                } else {
+                    if( SystemProperties.getBoolean(SYSTEM_PROPERTY_AUDIO_HQ, false) ) {
+                        setSystemPropertyBoolean(SYSTEM_PROPERTY_AUDIO_HQ, false);
+                    }
+                    mEnableAudioHq.setVisible(false);
+                }
+        } else {
+            if( SystemProperties.getBoolean(SYSTEM_PROPERTY_AUDIO_HQ, false) ) {
+                setSystemPropertyBoolean(SYSTEM_PROPERTY_AUDIO_HQ, false);
+            }
+        }
+
 
         mEffectsDolby = (SwitchPreference) findPreference(AUDIO_EFFECTS_DOLBY);
 
@@ -170,14 +195,33 @@ public class AudioTweaks extends BaseSettingsFragment
             }
         }
 
+        mEffectsMiSound = (SwitchPreference) findPreference(AUDIO_EFFECTS_MISOUND);
+
+        if( mEffectsMiSound != null ) { 
+            if( !mIsMiSoundAvail ) {
+                mEffectsMiSound.setVisible(false);
+            } else {
+                mEffectsMiSound.setChecked(SystemProperties.getBoolean(SYSTEM_PROPERTY_EFFECTS_MISOUND, false));
+                mEffectsMiSound.setOnPreferenceChangeListener(this);
+            }
+        }
+
         mEffectsViper = (SwitchPreference) findPreference(AUDIO_EFFECTS_VIPER);
         if( mEffectsViper != null ) { 
             if( !mIsViperAvail ) {
                 mEffectsViper.setVisible(false);
-                
             } else {
                 mEffectsViper.setChecked(SystemProperties.getBoolean(SYSTEM_PROPERTY_EFFECTS_VIPER, false));
                 mEffectsViper.setOnPreferenceChangeListener(this);
+
+                if( isHqModeAvaialable() && mEnableAudioHq != null ) {
+                    if( SystemProperties.getBoolean(SYSTEM_PROPERTY_EFFECTS_VIPER, false) ) {
+                        mEnableAudioHq.setChecked(false);
+                        mEnableAudioHq.setEnabled(false);
+                    } else {
+                        mEnableAudioHq.setEnabled(true);
+                    }
+                }
             }
         }
 
@@ -247,22 +291,6 @@ public class AudioTweaks extends BaseSettingsFragment
                 mScanMedia.setOnPreferenceClickListener(this);
         }
 
-        mEnableAudioHq = (SwitchPreference) findPreference(AUDIO_TWEAKS_AUDIO_HQ);
-        if( mEnableAudioHq != null ) { 
-                if( isHqModeAvaialable() ) {
-                    mEnableAudioHq.setChecked(SystemProperties.getBoolean(SYSTEM_PROPERTY_AUDIO_HQ, false));
-                    mEnableAudioHq.setOnPreferenceChangeListener(this);
-                } else {
-                    if( SystemProperties.getBoolean(SYSTEM_PROPERTY_AUDIO_HQ, false) ) {
-                        setSystemPropertyBoolean(SYSTEM_PROPERTY_AUDIO_HQ, false);
-                    }
-                    mEnableAudioHq.setVisible(false);
-                }
-        } else {
-            if( SystemProperties.getBoolean(SYSTEM_PROPERTY_AUDIO_HQ, false) ) {
-                setSystemPropertyBoolean(SYSTEM_PROPERTY_AUDIO_HQ, false);
-            }
-        }
 
         mEnableSuspendPlay = (SwitchPreference) findPreference(AUDIO_TWEAKS_SUSPEND_PLAY);
         if( mEnableSuspendPlay != null ) { 
@@ -371,12 +399,15 @@ public class AudioTweaks extends BaseSettingsFragment
         if (preference == mEnableAudioHq) {
             ((SwitchPreference)preference).setChecked((Boolean) newValue);
             setSystemPropertyBoolean(SYSTEM_PROPERTY_AUDIO_HQ, (Boolean) newValue);
+            Log.e(TAG, "onPreferenceChange: mEnableAudioHq key=" + SYSTEM_PROPERTY_AUDIO_HQ + ", value=" + (Boolean)newValue);
         } else if (preference == mEnableSuspendPlay) {
             ((SwitchPreference)preference).setChecked((Boolean) newValue);
             setSystemPropertyBoolean(SYSTEM_PROPERTY_SUSPEND_PLAY, (Boolean) newValue);
+            Log.e(TAG, "onPreferenceChange: mEnableSuspendPlay key=" + SYSTEM_PROPERTY_SUSPEND_PLAY + ", value=" + (Boolean)newValue);
         } else if (preference == mEnableNewAvrcp) {
             ((SwitchPreference)preference).setChecked((Boolean) newValue);
             setSystemPropertyBoolean(SYSTEM_PROPERTY_NEW_AVRCP, (Boolean) newValue);
+            Log.e(TAG, "onPreferenceChange: mEnableNewAvrcp key=" + SYSTEM_PROPERTY_NEW_AVRCP + ", value=" + (Boolean)newValue);
         } else if (preference == mEnableA2DPHD) {
             ((SwitchPreference)preference).setChecked((Boolean) newValue);
             setSystemPropertyBoolean(SYSTEM_PROPERTY_A2DP_SBC_HD, (Boolean) newValue);
@@ -452,12 +483,28 @@ public class AudioTweaks extends BaseSettingsFragment
                 if( !(Boolean)newValue ) {
                     setSystemPropertyBoolean(SYSTEM_PROPERTY_EFFECTS_VIPER_FORCE, false);
                     mEffectsViperForce.setChecked(false);
+                    mEffectsViperForce.setEnabled(false);
+                } else {
+                    mEffectsViperForce.setEnabled(true);
+                }
+            }
+            
+            if( isHqModeAvaialable() && mEnableAudioHq != null ) {
+                if( (Boolean)newValue ) {
+                    mEnableAudioHq.setChecked(false);
+                    mEnableAudioHq.setEnabled(false);
+                } else {
+                    mEnableAudioHq.setEnabled(true);
                 }
             }
         } else if (preference == mEffectsViperForce) {
             Log.e(TAG, "onPreferenceChange: mEffectsViperForce key=" + SYSTEM_PROPERTY_EFFECTS_VIPER_FORCE + ", value=" + (Boolean)newValue);
             ((SwitchPreference)preference).setChecked((Boolean) newValue);
             setSystemPropertyBoolean(SYSTEM_PROPERTY_EFFECTS_VIPER_FORCE, (Boolean) newValue);
+        } else if (preference == mEffectsMiSound) {
+            Log.e(TAG, "onPreferenceChange: mEffectsMiSound key=" + SYSTEM_PROPERTY_EFFECTS_MISOUND + ", value=" + (Boolean)newValue);
+            ((SwitchPreference)preference).setChecked((Boolean) newValue);
+            setSystemPropertyBoolean(SYSTEM_PROPERTY_EFFECTS_MISOUND, (Boolean) newValue);
         }
         return true;
     }

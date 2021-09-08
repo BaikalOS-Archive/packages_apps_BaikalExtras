@@ -98,6 +98,24 @@
             android:defaultValue="balance"
             android:summary=""/>
 
+        <com.aicp.gear.preference.SeekBarPreferenceCham
+            android:key="baikalos_boost_enable"
+            android:title="@string/boost_title"
+            android:summary="@string/boost_summary"
+            android:max="10"
+            android:min="0"
+            aicpextras:unitsLeft=""
+            aicpextras:unitsRight=""
+            android:defaultValue="0"/>
+
+        <SwitchPreference
+            android:key="baikalos_boost_override"
+            android:title="@string/boost_override_title"
+            android:summary="@string/boost_override_summary"
+            android:defaultValue="false"
+            android:disableDependentsState="true" />
+
+
     </PreferenceCategory>
 
     <PreferenceCategory
@@ -117,6 +135,13 @@
             android:summary="@string/assisted_gps_summary"
             android:defaultValue="false"
             android:disableDependentsState="true" />
+
+        <!-- com.aicp.gear.preference.SecureSettingSwitchPreference
+            android:key="baikalos_location_gps_mode"
+            android:title="@string/hardware_gps_title"
+            android:summary="@string/hardware_gps_summary"
+            android:defaultValue="true"
+            android:disableDependentsState="true" / -->
 
     </PreferenceCategory>
 

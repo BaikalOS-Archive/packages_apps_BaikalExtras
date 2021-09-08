@@ -93,6 +93,8 @@
     <string name="audio_effects_dolby_summary">Enable systemwide Dolby effect</string>
     <string name="audio_effects_viper_title">Enable ViperFX</string>
     <string name="audio_effects_viper_summary">Enable systemwide ViperFX effect</string>
+    <string name="audio_effects_misound_title">Enable MiSound</string>
+    <string name="audio_effects_misound_summary">Enable MiSound enhancer</string>
 
     <string name="audio_effects_viper_force_title">Force ViperFX</string>
     <string name="audio_effects_viper_force_summary">Force ViperFX effect on all streams</string>

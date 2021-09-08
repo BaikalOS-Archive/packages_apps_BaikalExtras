@@ -69,6 +69,8 @@ public class System extends BaseSettingsFragment {
     private static final String TAG = "System";
 
     private static final String SMART_NFC = "baikalos_smart_nfc";
+    private static final String BOOST_OVERRIDE = "baikalos_boost_override";
+    private static final String BOOST_ENABLE = "baikalos_boost_enable";
 
 
     private Context mContext;
@@ -82,6 +84,8 @@ public class System extends BaseSettingsFragment {
     private ListPreference mEditPerfProfile;
     private ListPreference mAppFpsProfile;
     private SwitchPreference mSmartNFC;
+    private SwitchPreference mBoostOverride;
+    private SeekBarPreferenceCham mBoostEnable;
 
     //private SwitchPreference mBrForceAll;
     //private ListPreference mBrBackup;
@@ -120,6 +124,7 @@ public class System extends BaseSettingsFragment {
             }
         }
 
+
     
         mSmartNFC = (SwitchPreference) findPreference(SMART_NFC);
         if( mSmartNFC != null ) { 
@@ -127,6 +132,8 @@ public class System extends BaseSettingsFragment {
                 mSmartNFC.setVisible(false);
             }
         }
+
+
 
         try {
 
@@ -145,7 +152,6 @@ public class System extends BaseSettingsFragment {
                         try {
                             int val = Integer.parseInt(newValue.toString());
                             setSystemPropertyInt("persist.baikal.fps.default",val);
-                            //mBaikalService.setAppBrightness(mPackageName, val );
                             Log.e(TAG, "setDefaultFps: fps=" + val);
                         } catch(Exception re) {
                             Log.e(TAG, "onCreate: setDefaultFps Fatal! exception", re );
@@ -156,6 +162,71 @@ public class System extends BaseSettingsFragment {
                 }
             }
 
+
+            mBoostOverride = (SwitchPreference) findPreference(BOOST_OVERRIDE);
+            if( mBoostOverride != null ) {
+                if(!perfProf) {
+                    mBoostOverride.setVisible(false);
+                } else {
+                    boolean boost_ovr = getSystemPropertyBoolean("persist.baikal.boost_ovr","0");
+                    Log.i(TAG, "getBoostOverride: override=" + boost_ovr);
+                    mBoostOverride.setChecked(boost_ovr);
+                    mBoostOverride.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                      public boolean onPreferenceChange(Preference preference, Object newValue) {
+                        try {
+                            boolean val = (Boolean)newValue;
+                            setSystemPropertyBoolean("persist.baikal.boost_ovr",val);
+                            Log.e(TAG, "setBoostOverride: override=" + val);
+                        } catch(Exception re) {
+                            Log.e(TAG, "onCreate: setBoostOverride Fatal! exception", re );
+                        }
+                        return true;
+                      }
+                    });
+                }
+            }
+
+
+            mBoostEnable = (SeekBarPreferenceCham) findPreference(BOOST_ENABLE);
+            if( mBoostEnable != null ) {
+                if(!perfProf) {
+                    mBoostEnable.setVisible(false);
+                } else {
+                    int boost_en = getSystemPropertyInt("persist.baikal.boost_en",0);
+                    Log.i(TAG, "getBoostEnable: override=" + boost_en);
+                    mBoostEnable.setValue(boost_en);
+
+
+                    if( mBoostOverride != null ) {
+                        if (boost_en == 0) {
+                            mBoostOverride.setEnabled(false);
+                        } else {
+                            mBoostOverride.setEnabled(true);
+                        }
+                    }
+                    mBoostEnable.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                      public boolean onPreferenceChange(Preference preference, Object newValue) {
+                        try {
+                            int val = Integer.parseInt(newValue.toString());
+                            setSystemPropertyInt("persist.baikal.boost_en",val);
+                            Log.e(TAG, "setBoostEnable: en=" + val);
+
+                            if( mBoostOverride != null ) {
+                                if (val == 0) {
+                                    mBoostOverride.setEnabled(false);
+                                } else {
+                                    mBoostOverride.setEnabled(true);
+                                }
+                            }
+
+                        } catch(Exception re) {
+                            Log.e(TAG, "onCreate: setBoostEnable Fatal! exception", re );
+                        }
+                        return true;
+                      }
+                    });
+                }
+            }
 
             mDefaultPerfProfile = (ListPreference) findPreference("default_perf_profile");
             if( mDefaultPerfProfile != null ) { 
@@ -533,8 +604,8 @@ public class System extends BaseSettingsFragment {
         } catch (Exception e) { };
     }
 
-    private boolean getSystemPropertyBoolean(String key) {
-        if( SystemProperties.get(key,"0").equals("1") || SystemProperties.get(key,"0").equals("true") ) return true;
+    private boolean getSystemPropertyBoolean(String key, String def) {
+        if( SystemProperties.get(key,def).equals("1") || SystemProperties.get(key,def).equals("true") ) return true;
 	    return false;
     }
 

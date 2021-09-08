@@ -30,6 +30,7 @@
     <string name="brightness_default">По умолчанию</string>
     <string name="brightness_reduced">Автоматическая (уменьшенная)</string>
     <string name="brightness_quarter">Автоматическая (четверть)</string>
+    <string name="brightness_increased">Автоматическая (увеличенная)</string>
     <string name="brightness_full">Полная</string>
     <string name="brightness_10">10\%</string>
     <string name="brightness_20">20\%</string>
@@ -39,7 +40,7 @@
     <string name="brightness_60">60\%</string>
     <string name="brightness_70">70\%</string>
     <string name="brightness_80">80\%</string>
-    <string name="brightness_90">80\%</string>
+    <string name="brightness_90">90\%</string>
     <string name="background_restrictions_unlimited">Неограниченный</string>
     <string name="background_restrictions_default">По умолчанию</string>
     <string name="background_restrictions_limited">Ограниченный</string>

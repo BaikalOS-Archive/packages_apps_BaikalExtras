@@ -33,6 +33,7 @@
     <string name="brightness_disable_ab">Отключить Автояркость</string>
     <string name="brightness_reduced">Автоматическая (уменьшенная)</string>
     <string name="brightness_quarter">Автоматическая (четверть)</string>
+    <string name="brightness_increased">Автоматическая (увеличенная)</string>
     <string name="brightness_full">Полная</string>
     <string name="brightness_10">10\%</string>
     <string name="brightness_20">20\%</string>

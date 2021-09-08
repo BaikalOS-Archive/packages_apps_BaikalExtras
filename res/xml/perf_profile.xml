@@ -96,7 +96,7 @@
      <com.aicp.gear.preference.SeekBarPreferenceCham
          android:key="edit_profile_sched_boost"
          android:title="@string/edit_profile_sched_boost_title"
-         android:max="10"
+         android:max="100"
          android:min="0"
          aicpextras:unitsLeft=""
          aicpextras:unitsRight=""

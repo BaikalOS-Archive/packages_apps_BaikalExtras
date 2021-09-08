@@ -65,6 +65,12 @@
             android:defaultValue="false" / -->
 
         <SwitchPreference
+            android:key="audio_effects_misound"
+            android:title="@string/audio_effects_misound_title"
+            android:summary="@string/audio_effects_misound_summary"
+            android:defaultValue="false" />
+
+        <SwitchPreference
             android:key="audio_effects_dolby"
             android:title="@string/audio_effects_dolby_title"
             android:summary="@string/audio_effects_dolby_summary"

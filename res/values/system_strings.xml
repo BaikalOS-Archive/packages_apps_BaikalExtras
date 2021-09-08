@@ -16,6 +16,9 @@
     <string name="assisted_gps_title">Use assisted GPS</string>
     <string name="assisted_gps_summary">Use server to assist GPS</string>
 
+    <string name="hardware_gps_title">Use hardware GPS</string>
+    <string name="hardware_gps_summary">Use hardware GPS module. Disable to save battery</string>
+
     <string name="default_rotation_title">Auto Rotation</string>
     <string name="default_rotation_summary">Enable screen auto rotation by default</string>
 
@@ -42,5 +45,13 @@
     <string name="backup_restore_sys">System Settings</string>
     <string name="backup_restore_sys_apps">System and Applications</string>
     <string name="backup_restore_sys_apps_obb">System, Applications, OBB</string>
+
+    <string name="boost_override_title">Boost Override</string>
+    <string name="boost_override_summary">Override performance profile limitations while boost</string>
+
+    <string name="boost_title">Performance Boost Level</string>
+    <string name="boost_summary">Performance Boost Level. 0 - Disable</string>
+
+
 
 </resources>

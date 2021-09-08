@@ -88,12 +88,27 @@
             android:defaultValue="false" />
 
         <ListPreference
+            android:key="app_profile_location"
+            android:title="@string/app_profile_location_title"
+            android:entries="@array/location_listentries"
+            android:entryValues="@array/location_listvalues"
+            android:defaultValue="0"
+            android:summary="%s" />
+
+
+        <ListPreference
             android:key="app_profile_spoof"
             android:title="@string/app_profile_spoof_title"
             android:entries="@array/spoof_listentries"
             android:entryValues="@array/spoof_listvalues"
             android:defaultValue="default"
             android:summary="%s" />
+
+        <!-- SwitchPreference
+            android:key="app_profile_lowres"
+            android:title="@string/app_profile_lowres_title"
+            android:summary="@string/app_profile_lowres_summary"
+            android:persistent="false" / -->
 
         <SwitchPreference
             android:key="app_profile_phka"

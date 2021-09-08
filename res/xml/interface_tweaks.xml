@@ -36,12 +36,12 @@
 
 
 
-    <!-- com.aicp.gear.preference.GlobalSettingSwitchPreference
+    <com.aicp.gear.preference.GlobalSettingSwitchPreference
         android:key="baikalos_statusbar_color_icons"
         android:title="@string/baikalos_statusbar_color_icons_title"
         android:summary="@string/baikalos_statusbar_color_icons_summary"
         android:defaultValue="false"
-        android:disableDependentsState="true" / -->
+        android:disableDependentsState="true" />
 
     <com.aicp.gear.preference.GlobalSettingSwitchPreference
         android:key="baikalos_dlsb_enabled"
