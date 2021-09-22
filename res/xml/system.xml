@@ -47,8 +47,17 @@
             android:title="@string/app_profile_fps_title"
             android:entries="@array/default_fps_listentries"
             android:entryValues="@array/default_fps_listvalues"
-            android:defaultValue="default"
+            android:defaultValue="0"
             android:summary="%s" />
+
+        <ListPreference
+            android:key="default_location_mode"
+            android:title="@string/app_profile_location_title"
+            android:entries="@array/location_listentries"
+            android:entryValues="@array/location_listvalues"
+            android:defaultValue="0"
+            android:summary="%s" />
+
 
         <ListPreference
     	    android:key="default_perf_profile"

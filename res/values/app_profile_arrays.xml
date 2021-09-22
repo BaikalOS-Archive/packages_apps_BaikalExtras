@@ -188,9 +188,9 @@
 
     <string-array name="location_listentries">
     	<item>Default</item>
-    	<item>Full + Geofence</item>
     	<item>Full</item>
-    	<item>Network</item>
+    	<item>Network Fine</item>
+    	<item>Network Coarse</item>
     	<item>Passive</item>
     	<item>None</item>
     </string-array>

@@ -150,6 +150,7 @@
     <string name="app_profile_spoof_title">Spoof Device Model</string>
 
     <string name="app_profile_location_title">Location Mode</string>
+    <string name="app_profile_location_summary">Location Mode</string>
 
     <string name="app_profile_keep_on_title">Keep Awake</string>
     <string name="app_profile_keep_on_summary">Keep device awake while this app is active</string>

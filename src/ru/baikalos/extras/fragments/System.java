@@ -78,6 +78,8 @@ public class System extends BaseSettingsFragment {
     private ListPreference mDefaultPerfProfile;
     private ListPreference mDefaultThermProfile;
 
+    private ListPreference mDefaultLocationMode;
+
     private ListPreference mScrOffPerfProfile;
     private ListPreference mIdlePerfProfile;
     private ListPreference mIdleThermProfile;
@@ -226,6 +228,24 @@ public class System extends BaseSettingsFragment {
                       }
                     });
                 }
+            }
+
+            mDefaultLocationMode = (ListPreference) findPreference("default_location_mode");
+            if( mDefaultLocationMode != null ) { 
+                    int mode = Settings.Global.getInt(getActivity().getContentResolver(),Settings.Global.BAIKALOS_DEFAULT_LOCATION_MODE, 0);
+                    Log.e(TAG, "mDefaultLocationMode: mode=" + mode);
+                    mDefaultLocationMode.setValue("" + mode);
+                    mDefaultLocationMode.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                      public boolean onPreferenceChange(Preference preference, Object newValue) {
+                        try {
+                            Log.e(TAG, "mDefaultLocationMode: mode=" + newValue.toString());
+                            Settings.Global.putInt(getActivity().getContentResolver(),Settings.Global.BAIKALOS_DEFAULT_LOCATION_MODE, Integer.parseInt(newValue.toString()));
+                        } catch(Exception re) {
+                            Log.e(TAG, "onCreate: mDefaultLocationMode Fatal! exception", re );
+                        }
+                        return true;
+                      }
+                    });
             }
 
             mDefaultPerfProfile = (ListPreference) findPreference("default_perf_profile");
