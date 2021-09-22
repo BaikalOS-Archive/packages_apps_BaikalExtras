@@ -289,7 +289,9 @@ public class LogIt extends BaseSettingsFragment implements Preference.OnPreferen
         String rmCommand = "rm " + KMSG_FILE;
         SuShell.runWithShellCheck(rmCommand);
 
-        String command = "test -e /proc/last_kmsg && cat /proc/last_kmsg  || cat /sys/fs/pstore/console-ramoops*";
+        //String command = "test -e /proc/last_kmsg && cat /proc/last_kmsg  || cat /sys/fs/pstore/console-ramoops*";
+
+        String command = "cat /sys/fs/pstore/console-ramoops*";
         if (shareHaste) {
             command += " | tail -c " + HASTE_MAX_LOG_SIZE + " > " + KMSG_FILE
                     + " && curl -s -X POST -T " + KMSG_FILE + " " + BAIKALOS_HASTE
@@ -327,16 +329,18 @@ public class LogIt extends BaseSettingsFragment implements Preference.OnPreferen
                     new FileOutputStream(shareZipFile.getAbsolutePath())));
             if (logcat) {
                 writeToZip(logcatFile, out);
-                writeToZip(logcatLastFile, out);
             }
             if (logcatRadio) {
                 writeToZip(logcatRadioFile, out);
             }
-            if (kmsg) {
-                writeToZip(kmsgFile, out);
-            }
             if (dmesg) {
                 writeToZip(dmesgFile, out);
+            }
+            if (logcat) {
+                writeToZip(logcatLastFile, out);
+            }
+            if (kmsg) {
+                writeToZip(kmsgFile, out);
             }
         } finally {
             if (out != null) out.close();
