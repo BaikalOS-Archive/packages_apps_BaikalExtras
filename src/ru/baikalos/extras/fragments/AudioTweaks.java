@@ -381,11 +381,11 @@ public class AudioTweaks extends BaseSettingsFragment
         if (preference == mScanMedia) {
             final Intent intent = new Intent("android.intent.action.MEDIA_MOUNTED",Uri.parse("file://" + Environment.getExternalStorageDirectory()));
             final ComponentName serviceComponent = ComponentName.unflattenFromString(
-                    "com.android.providers.media.module/com.android.providers.media.MediaService");
+                    "com.android.providers.media.module/com.android.providers.media.MediaReceiver");
             intent.setComponent(serviceComponent);
             Log.e(TAG, "sendBroadcastAsUser: intent=" + intent);
-            //mContext.sendBroadcastAsUser(intent, UserHandle.CURRENT);
-            mContext.startService(intent);
+            mContext.sendBroadcastAsUser(intent, UserHandle.CURRENT);
+            //mContext.startServiceAsUser(intent, UserHandle.CURRENT);
             return true;
         }
         return false;

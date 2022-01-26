@@ -71,6 +71,9 @@
     <string name="app_profile_disable_title">Disable Autostart</string>
     <string name="app_profile_disable_summary">Disable app autostart on device boot</string>
 
+    <string name="app_profile_disable_wakeup_title">Disable Wakeup</string>
+    <string name="app_profile_disable_wakeup_summary">Disable app to set wakeup alarms</string>
+
     <string name="app_profile_disable_twl_title">Disable temp whitelisting</string>
     <string name="app_profile_disable_twl_summary">Disable temp whitelisting on incoming notifications</string>
 
@@ -91,11 +94,13 @@
     <string name="edit_profile_corecontrol_title">Core control</string>
     <string name="edit_profile_corecontrol_summary">Enable idle core offline/isolation</string>
 
-    <string name="edit_profile_sched_boost_title">Sched boost</string>
+    <string name="edit_profile_sched_boost_title">Top app boost</string>
+    <string name="edit_profile_back_boost_title">Background tasks boost</string>
     <string name="edit_profile_gpu_boost_title">GPU boost</string>
 
     <string name="app_checkbox_filter_changed_title">With profiles</string>
     <string name="app_checkbox_filter_system_title">System</string>
+    <string name="app_checkbox_filter_wl_title">Whitelisted</string>
 
     <string name="app_setings_backup_title">Backup</string>
     <string name="app_setings_backup_summary">Save current app profiles. This will overwrite previously backed up profiles!</string>
@@ -158,7 +163,46 @@
     <string name="app_profile_phka_title">Force SW Attestation</string>
     <string name="app_profile_phka_summary">Prevent hardware key attestation for this app. Could help to fix SafetyNet or other ROOT and unblocked bootloader detection.</string>
 
+    <string name="app_profile_devmode_title">Hide Developer Mode</string>
+    <string name="app_profile_devmode_summary">Hide Developer Mode from this app</string>
+
     <string name="app_profile_lowres_title">Low Resolution</string>
     <string name="app_profile_lowres_summary">Reduce virtual screen resoultion for better gaming performance</string>
+
+    <string name="app_profile_camera_title">Camera Mode</string>
+    <string name="app_profile_microphone_title">Microphone Mode</string>
+
+    <string name="location_default">Default</string>
+    <string name="location_full">Full</string>
+    <string name="location_network_fine">Network Fine</string>
+    <string name="location_network_coarse">Network Coarse</string>
+    <string name="location_passive">Passive</string>
+    <string name="location_none">None</string>
+ 
+    <string name="camera_default">Default</string>
+    <string name="camera_back_only">Back</string>
+    <string name="camera_front_only">Front</string>
+    <string name="camera_both">Both</string>
+    <string name="camera_disabled">Disabled</string>
+
+    <string name="microphone_default">Default</string>
+    <string name="microphone_enabled">Enabled</string>
+    <string name="microphone_fg_only">Foreground only</string>
+    <string name="microphone_disabled">Disabled</string>
+
+    <string name="app_profile_performance_limit_title">Limit CPU usage</string>
+
+    <string name="cpu_resources_default">Default</string>
+    <string name="cpu_resources_full">Full power</string>
+    <string name="cpu_resources_light">Light</string>
+    <string name="cpu_resources_moderate">Moderate</string>
+    <string name="cpu_resources_hard">Hard</string>
+
+    <string name="app_profile_freezer_title">Disable freezer</string>
+    <string name="app_profile_freezer_summary">Do not allow this app to be freezed by background freezer</string>
+
+    <string name="app_profile_idle_network_title">Network on Idle</string>
+    <string name="app_profile_idle_network_summary">Allow network access in Idle Mode</string>
+
 
 </resources>

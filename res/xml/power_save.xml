@@ -87,6 +87,33 @@
         android:defaultValue="false"
         android:disableDependentsState="true" />
 
+    <com.aicp.gear.preference.GlobalSettingSwitchPreference
+        android:key="baikalos_app_freezer_enabled"
+        android:title="@string/cached_apps_freezer_title"
+        android:summary="@string/cached_apps_freezer_summary"
+        android:defaultValue="false" />
+
+    <com.aicp.gear.preference.GlobalSettingSwitchPreference
+        android:key="baikalos_extreme_freezer_enabled"
+        android:title="@string/extreme_freezer_title"
+        android:summary="@string/extreme_freezer_summary"
+        android:defaultValue="false"
+        android:dependency="baikalos_app_freezer_enabled"/>
+
+    <com.aicp.gear.preference.GlobalSettingSwitchPreference
+        android:key="baikalos_pinned_freezer_enabled"
+        android:title="@string/pinned_freezer_title"
+        android:summary="@string/pinned_freezer_summary"
+        android:defaultValue="false"
+        android:dependency="baikalos_app_freezer_enabled"/>
+
+    <com.aicp.gear.preference.GlobalSettingSwitchPreference
+        android:key="baikalos_gms_freezer_enabled"
+        android:title="@string/gms_freezer_title"
+        android:summary="@string/gms_freezer_summary"
+        android:defaultValue="false"
+        android:dependency="baikalos_app_freezer_enabled"/>
+
     <PreferenceCategory
         android:key="powersave_gms"
         android:title="@string/powersave_gms_title"
@@ -105,6 +132,15 @@
             android:summary="@string/powersave_gms_blocked_summary"
             android:defaultValue="false"
             android:disableDependentsState="true" />
+
+        <com.aicp.gear.preference.GlobalSettingSwitchPreference
+            android:key="baikalos_gms_defer_jobs"
+            android:title="@string/powersave_gms_defer_jobs_title"
+            android:summary="@string/powersave_gms_defer_jobs_summary"
+            android:defaultValue="false"
+            android:disableDependentsState="true" />
+
+
 
         <!-- com.aicp.gear.preference.GlobalSettingSwitchPreference
             android:key="baikalos_gms_restricted"

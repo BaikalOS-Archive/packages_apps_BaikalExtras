@@ -28,5 +28,8 @@
     <string name="baikalos_statusbar_color_icons_title">Цветные Значки</string>
     <string name="baikalos_statusbar_color_icons_summary">Использовать цветные значки уведомлений в статусбаре</string>
 
+    <string name="baikalos_keep_pinned_in_recents_title">Закрепленные в недавних</string>
+    <string name="baikalos_keep_pinned_in_recents_summary">Не удалять закрепленные приложения из списка недавних</string>
+
 
 </resources>

@@ -97,7 +97,16 @@
          android:key="edit_profile_sched_boost"
          android:title="@string/edit_profile_sched_boost_title"
          android:max="100"
-         android:min="0"
+         android:min="-100"
+         aicpextras:unitsLeft=""
+         aicpextras:unitsRight=""
+         android:defaultValue="0"/>
+
+     <com.aicp.gear.preference.SeekBarPreferenceCham
+         android:key="edit_profile_back_boost"
+         android:title="@string/edit_profile_back_boost_title"
+         android:max="100"
+         android:min="-100"
          aicpextras:unitsLeft=""
          aicpextras:unitsRight=""
          android:defaultValue="0"/>
@@ -106,7 +115,7 @@
          android:key="edit_profile_gpu_boost"
          android:title="@string/edit_profile_gpu_boost_title"
          android:max="10"
-         android:min="-5"
+         android:min="-10"
          aicpextras:unitsLeft=""
          aicpextras:unitsRight=""
          android:defaultValue="0"/>

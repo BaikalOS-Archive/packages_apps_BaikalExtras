@@ -10,7 +10,7 @@
     <string name="baikal_extreme_saver_enabled_summary">Treat device as Small Battery Device</string>
 
     <string name="baikal_stamina_oi_enabled_title">Stamina on Idle</string>
-    <string name="baikal_stamina_oi_enabled_summary">Enter stamina mode while idle</string>
+    <string name="baikal_stamina_oi_enabled_summary">Enter stamina mode while idle. An Emergency mode to reach the power plug.</string>
 
     <string name="default_profiles_title">Default profiles</string>
 
@@ -31,9 +31,25 @@
     <string name="powersave_gms_stamina_restricted_summary">Always block Google Play Services in Stamina Mode</string>
     <string name="powersave_gps_restricted_title">Restrict Play Market</string>
     <string name="powersave_gps_restricted_summary">Restrict Play Market activity in background</string>
+    <string name="powersave_gms_defer_jobs_title">Defer Jobs</string>
+    <string name="powersave_gms_defer_jobs_summary">Defer GMS backgroudn jobs until on charger</string>
+
 
     <!-- Batery whitelist -->
     <string name="prefs_battery_saver_title">Whitelist</string>
     <string name="prefs_battery_saver_summary">Device Whitelist</string>
- 
+
+    <string name="cached_apps_freezer_title">Cached Apps Freezer</string>
+    <string name="cached_apps_freezer_summary">Enable Cached Apps Freezer</string>
+
+    <string name="extreme_freezer_title">Extreme Apps Freezer</string>
+    <string name="extreme_freezer_summary">Freeze apps with unimportant services</string>
+
+    <string name="pinned_freezer_title">Pinned Apps Freezer</string>
+    <string name="pinned_freezer_summary">Freeze pinned apps</string>
+
+    <string name="gms_freezer_title">Google Services Freezer</string>
+    <string name="gms_freezer_summary">Freeze unimportant Google Play Services</string>
+
+
 </resources>

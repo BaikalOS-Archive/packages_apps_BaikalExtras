@@ -21,4 +21,20 @@
     <string name="smart_nfc_title">Умный NFC</string>
     <string name="smart_nfc_summary">Включить NFC при вызове расширенного меню кнопки питания и отключить при выходе</string>
 
+    <string name="boost_override_title">Перекрывать ограничения</string>
+    <string name="boost_override_summary">Не учитывать ограничения профиля производительности при увеличении по событию</string>
+
+    <string name="boost_title">Увеличение производительности</string>
+    <string name="boost_summary">Уровень увеличения производительности по событиям. 0 - Отключено</string>
+
+    <string name="front_camera_mode_title">Отключить Фронтальную камеру</string>
+    <string name="front_camera_mode_summary">Отключить доступ приложений к фронтальной камере. Отменяется настройкой в профиле приложения</string>
+
+    <string name="back_camera_mode_title">Отключить Основную камеру</string>
+    <string name="back_camera_mode_summary">Отключить доступ приложений к основной камере. Отменяется настройкой в профиле приложения</string>
+
+    <string name="microphone_mode_title">Отключить доступ к микрофону</string>
+    <string name="microphone_mode_summary">Отключить доступ приложений к микрофону. Отменяется настройкой в профиле приложения</string>
+
+
 </resources>

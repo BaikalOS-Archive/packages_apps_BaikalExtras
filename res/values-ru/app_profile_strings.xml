@@ -51,14 +51,23 @@
     <string name="background_restrictions_limited">Ограниченный</string>
     <string name="background_restrictions_restricted">Заблокированный</string>
     <string name="background_restrictions_disabled">Отключено</string>
+
     <string name="app_profile_pinned_title">Закрепить</string>
     <string name="app_profile_pinned_summary">Менеджер памяти не будет закрывать приложение по неактивности</string>
+
     <string name="app_profile_disable_title">Запретить Автозагрузку</string>
     <string name="app_profile_disable_summary">Запретить автозагрузку приложения во время загрузки устройства</string>
+
+    <string name="app_profile_disable_wakeup_title">Запретить пробуждения</string>
+    <string name="app_profile_disable_wakeup_summary">Запретить приложению устанавливать пробуждающие таймеры</string>
+
     <string name="app_profile_disable_twl_title">Отключить временный белый список</string>
     <string name="app_profile_disable_twl_summary">Не помещать приложение в белый список по получению уведомлений для экономии энергии</string>
     <string name="app_profile_reader_title">Режим чтения</string>
     <string name="app_profile_reader_summary">Разрешить ЦП переходить в режим глубокого сна во время работы этого приложения</string>
+
+    <string name="app_profile_fps_title">Частота обновления экрана</string>
+
     <string name="edit_profile_title">Редактировать профиль</string>
 
     <string name="edit_profile_silver_title">CPU - Silver</string>
@@ -72,6 +81,7 @@
     <string name="edit_profile_corecontrol_summary">Разрешить отключение/изоляцию неиспользуемых ядер</string>
     <string name="app_checkbox_filter_changed_title">Только с профилем</string>
     <string name="app_checkbox_filter_system_title">Системные</string>
+    <string name="app_checkbox_filter_wl_title">Неограниченные</string>
 
     <string name="app_setings_backup_title">Сохранить</string>
     <string name="app_setings_backup_summary">Резервная копия настроек профилей приложений. ВНИМАНИЕ! Предыдущая сохраненная копия будет перезаписана!</string>
@@ -124,5 +134,44 @@
 
     <string name="app_profile_phka_title">Программная Аттестация</string>
     <string name="app_profile_phka_summary">Заблокировать аппаратную аттестацию устройства. Помогает решить проблемы SafetyNet и других схем детектирования разблокированного загрузчика.</string>
+
+    <string name="app_profile_devmode_title">Скрыть режим разработчика</string>
+    <string name="app_profile_devmode_summary">Скрыть включенный режим разработчика от этого приложения</string>
+
+    <string name="app_profile_location_title">Режим Местоположения</string>
+    <string name="app_profile_camera_title">Доступ к Камере</string>
+    <string name="app_profile_microphone_title">Доступ к Микрофону</string>
+
+    <string name="location_default">По умолчанию</string>
+    <string name="location_full">Полный</string>
+    <string name="location_network_fine">Сеть точно</string>
+    <string name="location_network_coarse">Сеть примерно</string>
+    <string name="location_passive">Пассивно</string>
+    <string name="location_none">Отсутствует</string>
+ 
+    <string name="camera_default">По умолчанию</string>
+    <string name="camera_back_only">Основная</string>
+    <string name="camera_front_only">Передняя</string>
+    <string name="camera_both">Все</string>
+    <string name="camera_disabled">Отключено</string>
+
+    <string name="microphone_default">По умолчанию</string>
+    <string name="microphone_enabled">Разрешен</string>
+    <string name="microphone_fg_only">При использовании приложения</string>
+    <string name="microphone_disabled">Запрещен</string>
+
+    <string name="app_profile_performance_limit_title">Ограничение ЦПУ</string>
+
+    <string name="cpu_resources_default">По умолчанию</string>
+    <string name="cpu_resources_full">Полная мощность</string>
+    <string name="cpu_resources_light">Слегка</string>
+    <string name="cpu_resources_moderate">Умеренно</string>
+    <string name="cpu_resources_hard">Жёстко</string>
+
+    <string name="app_profile_freezer_title">Запретить фризер</string>
+    <string name="app_profile_freezer_summary">Запретить системе замораживать это приложение при бездействии</string>
+
+    <string name="app_profile_idle_network_title">Сеть во сне</string>
+    <string name="app_profile_idle_network_summary">Разрешить доступ к сети в режиме глубокого сна</string>
 
 </resources>

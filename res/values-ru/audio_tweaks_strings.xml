@@ -42,6 +42,9 @@
     <string name="prefs_media_scan_title">Пересканировать</string>
     <string name="prefs_media_scan_summary">Принудительное сканирование памяти для поиска новых медиа-файлов</string>
 
+    <string name="audio_tweaks_new_avrcp_title">Новый AVRCP</string>
+    <string name="audio_tweaks_new_avrcp_summary">Использовать новый сервис AVRCP</string>
+
     <string name="audio_tweaks_sonif_a2dp_title">Дублирование уведомлений</string>
     <string name="audio_tweaks_sonif_a2dp_summary">Воспроизводить звук уведомлений из динамика при подключенном BT устройстве</string>
     <string name="audio_tweaks_assist_a2dp_title">Дублирование ассистента</string>
@@ -63,6 +66,8 @@
 
     <string name="audio_effects_viper_title">Включить ViperFX</string>
     <string name="audio_effects_viper_summary">Включить аудио-фильтры ViperFX</string>
+    <string name="audio_effects_misound_title">Включить MiSound</string>
+    <string name="audio_effects_misound_summary">Включить эффекты MiSound</string>
 
     <string name="app_profile_volume_scale_title">Масштабировать Громкость</string>
 

@@ -1,7 +1,0 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<resources>
-    <!-- Power Save -->
-    <string name="performance_title">Профили Приложений</string>
-    <string name="performance_summary">Настройки приложений и профилей производительности</string>
-
-</resources>

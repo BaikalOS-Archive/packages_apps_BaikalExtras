@@ -65,6 +65,15 @@
         android:disableDependentsState="true" />
 
 
+    <com.aicp.gear.preference.GlobalSettingSwitchPreference
+        android:key="baikalos_keep_pinned_in_recents"
+        android:title="@string/baikalos_keep_pinned_in_recents_title"
+        android:summary="@string/baikalos_keep_pinned_in_recents_summary"
+        android:defaultValue="false"
+        android:disableDependentsState="true" />
+
+
+
     <!-- com.aicp.gear.preference.SystemSettingSwitchPreference
             android:key="use_old_mobiletype"
             android:title="@string/use_old_mobiletype_title"

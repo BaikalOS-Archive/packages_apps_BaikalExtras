@@ -28,4 +28,7 @@
     <string name="baikalos_statusbar_color_icons_title">Color Icons</string>
     <string name="baikalos_statusbar_color_icons_summary">Use old style color icons for statusbar notification area</string>
 
+    <string name="baikalos_keep_pinned_in_recents_title">Keep pinned in recents</string>
+    <string name="baikalos_keep_pinned_in_recents_summary">Keep pinned apps in recents list</string>
+
 </resources>

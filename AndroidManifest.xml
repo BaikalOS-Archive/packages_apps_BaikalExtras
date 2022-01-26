@@ -28,15 +28,23 @@
 
         <activity
             android:name=".SettingsActivity"
-            android:label="@string/app_name" />
+            android:label="@string/app_name"
+            android:exported="true" />
 
         <activity
             android:name=".SubSettingsActivity"
-            android:label="@string/app_name" />
+            android:label="@string/app_name"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
 
         <activity
             android:name=".LauncherActivity"
-            android:label="@string/app_name">
+            android:label="@string/app_name"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -60,7 +68,8 @@
 
         <activity
             android:name=".AppProfilesActivity"
-            android:label="@string/app_settings_title">
+            android:label="@string/app_settings_title"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="ru.baikalos.extras.AppProfilesActivity" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -70,7 +79,8 @@
 
         <activity
             android:name=".AppProfileActivity"
-            android:label="@string/app_settings_title">
+            android:label="@string/app_settings_title"
+            android:exported="true" >
             <intent-filter>
                 <action android:name="ru.baikalos.extras.AppProfileActivity" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -79,7 +89,8 @@
 
         <activity
             android:name=".PerfProfileDetailsActivity"
-            android:label="@string/edit_perf_profile_title">
+            android:label="@string/edit_perf_profile_title" 
+            android:exported="true" >
             <intent-filter>
                 <action android:name="ru.baikalos.extras.PerfProfileDetailsActivity" />
                 <category android:name="android.intent.category.DEFAULT" />

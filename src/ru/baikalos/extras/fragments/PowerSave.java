@@ -41,7 +41,7 @@ import android.os.ServiceManager;
                         
 import android.content.res.Resources;
 
-
+import java.io.File;
 
 public class PowerSave extends BaseSettingsFragment {
 
@@ -75,6 +75,17 @@ public class PowerSave extends BaseSettingsFragment {
         final Resources res = getActivity().getResources();
 
         try {
+
+            if( !((new File("/sys/fs/cgroup/freezer/cgroup.freeze")).exists()) ) {
+                SwitchPreference pref = (SwitchPreference) findPreference("baikalos_app_freezer_enabled");
+                if( pref != null ) pref.setVisible(false);
+                pref = (SwitchPreference) findPreference("baikalos_extreme_freezer_enabled");
+                if( pref != null ) pref.setVisible(false);
+                pref = (SwitchPreference) findPreference("baikalos_pinned_freezer_enabled");
+                if( pref != null ) pref.setVisible(false);
+                pref = (SwitchPreference) findPreference("baikalos_gms_freezer_enabled");
+                if( pref != null ) pref.setVisible(false);
+            }
 
 	        mAggressive = (SwitchPreference) findPreference(POWER_SAVE_AGGRESSIVE);
             mExtreme = (SwitchPreference) findPreference(POWER_SAVE_EXTREME);

@@ -915,7 +915,7 @@
     <string name="pulse_ambient_light_color_mode_wall">На основі шпалер</string>
     <string name="pulse_ambient_light_color_title">Колір підсвічування країв</string>
     <string name="pulse_ambient_light_duration_title">Тривалість світіння</string>
-    <string name="pulse_ambient_light_enable_title">Ambient підсвічування країв</string>
+    <string name="pulse_ambient_light_enable_title">Підсвічування країв</string>
     <string name="pulse_ambient_light_repeat_count_summary">Встановити максимальну кількість повторень. 0 для нескінченного</string>
     <string name="pulse_ambient_light_repeat_count_title">Кількість повторень</string>
     <string name="pulse_ambient_light_repeat_direction_summary">Включити для зворотного повтору напрямки, відключити для перезапуску</string>

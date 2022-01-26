@@ -264,6 +264,10 @@
     <string name="log_it_share_type_zip">ZIP-Файл</string>
     <string name="log_it_share_type_haste">Загрузить на BaikalOS Haste</string>
     <string name="log_it_share_via">Поделиться через</string>
+
+    <string name="baikalos_debug_title">Подробный лог</string>
+    <string name="baikalos_debug_summary">Включить подробный лог. Не включайте без причины. Расходует реусрсы, увеличивает потребление.</string>
+
     <!-- Panel porn -->
     <string name="panel_porn_title">Настройки панелей</string>
     <string name="panel_porn_summary">Мир Давора!</string>

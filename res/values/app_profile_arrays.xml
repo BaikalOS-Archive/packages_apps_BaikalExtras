@@ -159,11 +159,13 @@
     	<item>Nvidia Shield TV 2019 Pro</item>
     	<item>OnePlus 8T</item>
     	<item>OnePlus 8 Pro</item>
-    	<item>ASUS ROG2</item>
-    	<item>Sony Xperia 2 5G (Europe)"</item>
-    	<item>Sony Xperia 2 5G (Asia)"</item>
-    	<item>Samsung S20 Ultra 5G"</item>
-    	<item>Xiaomi Mi 10 Pro"</item>
+    	<item>ASUS ROG Phone 5</item>
+    	<item>Sony Xperia 10 II Dual"</item>
+    	<item>Sony Xperia 2 5G"</item>
+    	<item>Samsung S21"</item>
+    	<item>Xiaomi MI 10 Pro"</item>
+    	<item>Pixel 6 Pro"</item>
+    	<item>Xiaomi MI 8"</item>
      </string-array>
 
      <string-array name="spoof_listvalues">
@@ -184,15 +186,17 @@
     	<item>14</item>
     	<item>15</item>
     	<item>16</item>
+    	<item>17</item>
+    	<item>18</item>
     </string-array>
 
     <string-array name="location_listentries">
-    	<item>Default</item>
-    	<item>Full</item>
-    	<item>Network Fine</item>
-    	<item>Network Coarse</item>
-    	<item>Passive</item>
-    	<item>None</item>
+    	<item>@string/location_default</item>
+    	<item>@string/location_full</item>
+    	<item>@string/location_network_fine</item>
+    	<item>@string/location_network_coarse</item>
+    	<item>@string/location_passive</item>
+    	<item>@string/location_none</item>
     </string-array>
 
     <string-array name="location_listvalues">
@@ -202,6 +206,52 @@
     	<item>3</item>
     	<item>4</item>
     	<item>5</item>
+    </string-array>
+
+    <string-array name="camera_listentries">
+    	<item>@string/camera_default</item>
+    	<item>@string/camera_back_only</item>
+    	<item>@string/camera_front_only</item>
+    	<item>@string/camera_both</item>
+    	<item>@string/camera_disabled</item>
+    </string-array>
+
+    <string-array name="camera_listvalues">
+    	<item>0</item>
+    	<item>1</item>
+    	<item>2</item>
+    	<item>3</item>
+    	<item>4</item>
+    </string-array>
+
+    <string-array name="microphone_listentries">
+    	<item>@string/microphone_default</item>
+    	<item>@string/microphone_enabled</item>
+    	<item>@string/microphone_fg_only</item>
+    	<item>@string/microphone_disabled</item>
+    </string-array>
+
+    <string-array name="microphone_listvalues">
+    	<item>0</item>
+    	<item>1</item>
+    	<item>2</item>
+    	<item>3</item>
+    </string-array>
+
+    <string-array name="cpu_resources_listentries">
+    	<item>@string/cpu_resources_default</item>
+    	<item>@string/cpu_resources_full</item>
+    	<item>@string/cpu_resources_light</item>
+    	<item>@string/cpu_resources_moderate</item>
+    	<item>@string/cpu_resources_hard</item>
+    </string-array>
+
+    <string-array name="cpu_resources_listvalues">
+    	<item>0</item>
+    	<item>1</item>
+    	<item>2</item>
+    	<item>3</item>
+    	<item>4</item>
     </string-array>
 
 

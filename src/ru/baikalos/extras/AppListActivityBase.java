@@ -35,6 +35,7 @@ public abstract class AppListActivityBase extends BaseActivity {
     EditText dSearch = null;
     CheckBox dCheckBoxOnlyChanged = null;
     CheckBox dCheckBoxIncludeSystem = null;
+    CheckBox dCheckBoxIncludeWL = null;
     ImageButton dButton = null;
 
     private int mId;
@@ -58,6 +59,7 @@ public abstract class AppListActivityBase extends BaseActivity {
         dProgressBar = (ProgressBar) findViewById(R.id.app_list_progress_bar);
         dCheckBoxOnlyChanged = (CheckBox) findViewById(R.id.app_checkbox_filter_changed);
         dCheckBoxIncludeSystem = (CheckBox) findViewById(R.id.app_checkbox_filter_system);
+        dCheckBoxIncludeWL = (CheckBox) findViewById(R.id.app_checkbox_filter_wl);
 
         dAdapter = new AppChooserAdapter(this) {
             @Override
@@ -105,6 +107,14 @@ public abstract class AppListActivityBase extends BaseActivity {
             @Override
             public void onCheckedChanged(CompoundButton buttonView,boolean isChecked) {
                 dAdapter.filterIncludeSystem(isChecked);
+                dAdapter.update();
+            }
+        });     
+
+        dCheckBoxIncludeWL.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView,boolean isChecked) {
+                dAdapter.filterIncludeWL(isChecked);
                 dAdapter.update();
             }
         });     

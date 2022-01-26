@@ -69,6 +69,7 @@ public class PerfProfileFragment extends BaseSettingsFragment
     private SwitchPreference mCoreControl;
     private Preference mReset;
     private SeekBarPreferenceCham mEditProfileSchedBoost;
+    private SeekBarPreferenceCham mEditProfileBackBoost;
     private SeekBarPreferenceCham mEditProfileGpuBoost;
 
 
@@ -104,6 +105,7 @@ public class PerfProfileFragment extends BaseSettingsFragment
             mGpuMax = initListPreference("edit_profile_gpu_max","persist.bkp." + mProfileName + "." + "gmax", "baikal.def." + mProfileName + "." + "gmax");
             mCoreControl = initSwitchPreference("edit_profile_corecontrol","persist.bkp." + mProfileName + "." + "cc", "baikal.def." + mProfileName + "." + "cc","baikal.def.cc_on","baikal.def.cc_off");
             mEditProfileSchedBoost = initSeekBarPreference("edit_profile_sched_boost","persist.bkp." + mProfileName + "." + "schboost", "baikal.def." + mProfileName + "." + "schboost");
+            mEditProfileBackBoost = initSeekBarPreference("edit_profile_back_boost","persist.bkp." + mProfileName + "." + "bkboost", "baikal.def." + mProfileName + "." + "bkboost");
             mEditProfileGpuBoost = initSeekBarPreference("edit_profile_gpu_boost","persist.bkp." + mProfileName + "." + "gpuboost", "baikal.def." + mProfileName + "." + "gpuboost");
 
             mReset = (Preference) findPreference("edit_profile_reset");
@@ -257,6 +259,7 @@ public class PerfProfileFragment extends BaseSettingsFragment
         resetListValue(mGpuMax,"persist.bkp." + mProfileName + "." + "gmax", "baikal.def." + mProfileName + "." + "gmax");
         resetSwitchValue(mCoreControl,"persist.bkp." + mProfileName + "." + "cc", "baikal.def." + mProfileName + "." + "cc","baikal.def.cc_on","baikal.def.cc_off");
         resetSeekBarValue(mEditProfileSchedBoost,"persist.bkp." + mProfileName + "." + "schboost", "baikal.def." + mProfileName + "." + "schboost");
+        resetSeekBarValue(mEditProfileBackBoost,"persist.bkp." + mProfileName + "." + "bkboost", "baikal.def." + mProfileName + "." + "bkboost");
         resetSeekBarValue(mEditProfileGpuBoost,"persist.bkp." + mProfileName + "." + "gpuboost", "baikal.def." + mProfileName + "." + "gpuboost");
 
         sendUpdateProfile();
@@ -275,7 +278,7 @@ public class PerfProfileFragment extends BaseSettingsFragment
         String valueOff =  getSystemPropertyString(propertyOff,"-1");
         String valueOn =  getSystemPropertyString(propertyOn,"-1");
         String prop = getSystemPropertyString(defProperty,"-1");
-        if( prop.equals("-1") ) return;
+        if( prop.equals("-1") || valueOn.equals("-1") || valueOff.equals("-1") ) return;
         setSystemPropertyString(systemProperty,prop);
         boolean enabled = prop.equals(valueOn);
         pref.setChecked(enabled);

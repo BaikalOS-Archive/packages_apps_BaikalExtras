@@ -20,6 +20,12 @@
             android:text="@string/app_checkbox_filter_system_title"
             />
 
+        <CheckBox android:id="@+id/app_checkbox_filter_wl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_checkbox_filter_wl_title"
+            />
+
     </LinearLayout>
 
     <RelativeLayout

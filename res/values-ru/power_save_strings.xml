@@ -9,7 +9,7 @@
     <string name="baikal_extreme_saver_enabled_summary">Применяет настройки для носимых устройств с малой батарей</string>
 
     <string name="baikal_stamina_oi_enabled_title">Стамина в режиме сна</string>
-    <string name="baikal_stamina_oi_enabled_summary">Автоматически использовать режим Стамина во время глубокого сна</string>
+    <string name="baikal_stamina_oi_enabled_summary">Автоматически использовать режим Стамина во время глубокого сна. Аварийный режим чтобы дотянуть до розетки.</string>
 
     <string name="default_profiles_title">Профили по умолчанию</string>
     <string name="powersave_hide_idle_title">Скрывать СОН от GMS</string>
@@ -19,7 +19,6 @@
 
     <string name="powersave_gms_title">Google Services</string>
     <string name="powersave_gms_summary">Опции для Google Play Services</string>
-
 
     <string name="powersave_gms_blocked_title">Заблокировать</string>
     <string name="powersave_gms_blocked_summary">Заблокировать запуск Google Play Services. Некоторые приложения могут не работать! Возможны проблемы с уведомлениями!</string>
@@ -31,8 +30,25 @@
     <string name="powersave_gms_stamina_restricted_summary"></string>
     <string name="powersave_gps_restricted_title">Ограничить Play Market</string>
     <string name="powersave_gps_restricted_summary">Ограничить активность Play Market в фоне</string>
+    <string name="powersave_gms_defer_jobs_title">Отложить Задачи</string>
+    <string name="powersave_gms_defer_jobs_summary">Отложить фоновые задачи сервисов гугл до зарядки</string>
 
     <!-- Batery whitelist -->
     <string name="prefs_battery_saver_title">Белый список</string>
     <string name="prefs_battery_saver_summary">Белый список</string>
+
+    <string name="cached_apps_freezer_title">Заморозка кэшированных приложений</string>
+    <string name="cached_apps_freezer_summary">Включает режим заморозки кэшированных приложений</string>
+
+    <string name="extreme_freezer_title">Экстремальный режим фризера</string>
+    <string name="extreme_freezer_summary">Замраживает фоновые приложения с активными сервисами</string>
+
+    <string name="pinned_freezer_title">Замораживать закрепленные</string>
+    <string name="pinned_freezer_summary">Позволяет замораживать неактивные закрепленные приложения</string>
+
+    <string name="gms_freezer_title">Замораживать сервисы Гугл</string>
+    <string name="gms_freezer_summary">Позволяет замораживать некоторые сервисы Гугл</string>
+
+
+
 </resources>

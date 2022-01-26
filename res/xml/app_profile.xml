@@ -41,6 +41,33 @@
             android:defaultValue="default"
             android:summary="%s"/>
 
+        <SwitchPreference
+            android:key="app_profile_disable_wakeup"
+            android:title="@string/app_profile_disable_wakeup_title"
+            android:summary="@string/app_profile_disable_wakeup_summary"
+            android:defaultValue="false" />
+
+        <SwitchPreference
+            android:key="app_profile_freezer"
+            android:title="@string/app_profile_freezer_title"
+            android:summary="@string/app_profile_freezer_summary"
+            android:defaultValue="false" />
+
+        <SwitchPreference
+            android:key="app_profile_idle_network"
+            android:title="@string/app_profile_idle_network_title"
+            android:summary="@string/app_profile_idle_network_summary"
+            android:defaultValue="false" />
+
+        <ListPreference
+            android:key="app_profile_cpu_performance_limit"
+            android:title="@string/app_profile_performance_limit_title"
+            android:entries="@array/cpu_resources_listentries"
+            android:entryValues="@array/cpu_resources_listvalues" 
+            android:defaultValue="default"
+            android:summary="%s"/>
+
+
         <ListPreference
             android:key="app_profile_performance"
             android:title="@string/app_profile_performance_title"
@@ -95,6 +122,22 @@
             android:defaultValue="0"
             android:summary="%s" />
 
+        <ListPreference
+            android:key="app_profile_camera"
+            android:title="@string/app_profile_camera_title"
+            android:entries="@array/camera_listentries"
+            android:entryValues="@array/camera_listvalues"
+            android:defaultValue="0"
+            android:summary="%s" />
+
+        <ListPreference
+            android:key="app_profile_microphone"
+            android:title="@string/app_profile_microphone_title"
+            android:entries="@array/microphone_listentries"
+            android:entryValues="@array/microphone_listvalues"
+            android:defaultValue="0"
+            android:summary="%s" />
+
 
         <ListPreference
             android:key="app_profile_spoof"
@@ -114,6 +157,12 @@
             android:key="app_profile_phka"
             android:title="@string/app_profile_phka_title"
             android:summary="@string/app_profile_phka_summary"
+            android:persistent="false" />
+
+        <SwitchPreference
+            android:key="app_profile_devmode"
+            android:title="@string/app_profile_devmode_title"
+            android:summary="@string/app_profile_devmode_summary"
             android:persistent="false" />
 
 

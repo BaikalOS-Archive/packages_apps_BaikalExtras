@@ -52,6 +52,13 @@
     <string name="boost_title">Performance Boost Level</string>
     <string name="boost_summary">Performance Boost Level. 0 - Disable</string>
 
+    <string name="front_camera_mode_title">Disable Front camera</string>
+    <string name="front_camera_mode_summary">Disable front camera by default. Can be overriden by an app profile.</string>
 
+    <string name="back_camera_mode_title">Disable Back camera</string>
+    <string name="back_camera_mode_summary">Disable back camera by default. Can be overriden by an app profile.</string>
+
+    <string name="microphone_mode_title">Disable Microphone access</string>
+    <string name="microphone_mode_summary">Disable microphone by default. Can be overriden by an app profile.</string>
 
 </resources>

@@ -42,6 +42,28 @@
             android:defaultValue="false"
             android:disableDependentsState="true" / -->
 
+        <com.aicp.gear.preference.GlobalSettingSwitchPreference
+            android:key="baikalos_front_camera_mode"
+            android:title="@string/front_camera_mode_title"
+            android:summary="@string/front_camera_mode_summary"
+            android:defaultValue="false"
+            android:disableDependentsState="true" />
+
+        <com.aicp.gear.preference.GlobalSettingSwitchPreference
+            android:key="baikalos_back_camera_mode"
+            android:title="@string/back_camera_mode_title"
+            android:summary="@string/back_camera_mode_summary"
+            android:defaultValue="false"
+            android:disableDependentsState="true" />
+
+
+        <com.aicp.gear.preference.GlobalSettingSwitchPreference
+            android:key="baikalos_microphone_mode"
+            android:title="@string/microphone_mode_title"
+            android:summary="@string/microphone_mode_summary"
+            android:defaultValue="false"
+            android:disableDependentsState="true" />
+
         <ListPreference
             android:key="default_fps"
             android:title="@string/app_profile_fps_title"
@@ -123,7 +145,6 @@
             android:summary="@string/boost_override_summary"
             android:defaultValue="false"
             android:disableDependentsState="true" />
-
 
     </PreferenceCategory>
 

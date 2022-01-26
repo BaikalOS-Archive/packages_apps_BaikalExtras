@@ -45,6 +45,7 @@ public abstract class AppChooserAdapter extends BaseAdapter implements Filterabl
     boolean hasLauncherFilter = false;
     boolean onlyChanged = false;
     boolean includeSystem = false;
+    boolean includeWL = false;
 
     public AppChooserAdapter(Context context) {
         mContext = context;
@@ -80,9 +81,15 @@ public abstract class AppChooserAdapter extends BaseAdapter implements Filterabl
                     if( !includeSystem &&
                         (info.applicationInfo.flags & (ApplicationInfo.FLAG_SYSTEM | ApplicationInfo.FLAG_UPDATED_SYSTEM_APP)) != 0 ) continue;
 
+                    AppProfile mProfile = mAppSettings.getProfile(info.packageName);
+
                     if( onlyChanged ) {
-                        AppProfile mProfile = mAppSettings.getProfile(info.packageName);
                         if( mProfile == null ) continue;
+                    }
+
+                    if( includeWL ) {
+                        if( mProfile == null ) continue;
+                        if( mProfile.mBackground >= 0 ) continue;
                     }
 
                     if (!hasLauncherFilter || isLauncherApp) {
@@ -218,6 +225,10 @@ public abstract class AppChooserAdapter extends BaseAdapter implements Filterabl
 
     protected void filterIncludeSystem(boolean isChecked) {
         includeSystem = isChecked;
+    }                  
+
+    protected void filterIncludeWL(boolean isChecked) {
+        includeWL = isChecked;
     }                  
 
 }
