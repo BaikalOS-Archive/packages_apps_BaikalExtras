@@ -46,7 +46,7 @@ import java.io.File;
 public class PowerSave extends BaseSettingsFragment {
 
 
-    private static final String TAG = "PowerSave";
+    private static final String TAG = "BaikalExtras";
 
     private static final String SYSTEM_PROPERTY_POWERSAVE_COREC_CTL = "persist.baikal.core_ctl";
     private static final String POWER_SAVE_CORECTL = "powersave_core_ctl_enable";

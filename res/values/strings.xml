@@ -560,4 +560,7 @@
     <string name="corner_fwvals">Use framework values</string>
     <string name="corner_fwvals_summary">Useful if the device actually has rounded corners</string>
 
+    <string name="experimental_title">Experimental</string>
+    <string name="experimental_summary">Experimental features. Can make your system unstable or even not boot.</string>
+
 </resources>

@@ -51,7 +51,7 @@ import com.aicp.gear.preference.SecureSettingSeekBarPreference;
 
 public class Performance extends BaseSettingsFragment {
 
-    private static final String TAG = "Performance";
+    private static final String TAG = "BaikalExtras";
 
     private Context mContext;
 

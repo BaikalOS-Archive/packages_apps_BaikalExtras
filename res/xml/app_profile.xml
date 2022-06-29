@@ -48,6 +48,12 @@
             android:defaultValue="false" />
 
         <SwitchPreference
+            android:key="app_profile_disable_jobs"
+            android:title="@string/app_profile_disable_jobs_title"
+            android:summary="@string/app_profile_disable_jobs_summary"
+            android:defaultValue="false" />
+
+        <SwitchPreference
             android:key="app_profile_freezer"
             android:title="@string/app_profile_freezer_title"
             android:summary="@string/app_profile_freezer_summary"
@@ -101,12 +107,32 @@
             android:summary="%s" />
 
         <ListPreference
+            android:key="app_profile_min_fps"
+            android:title="@string/app_profile_min_fps_title"
+            android:entries="@array/min_fps_listentries"
+            android:entryValues="@array/min_fps_listvalues"
+            android:defaultValue="default"
+            android:summary="%s" />
+
+        <ListPreference
             android:key="app_profile_fps"
             android:title="@string/app_profile_fps_title"
             android:entries="@array/fps_listentries"
             android:entryValues="@array/fps_listvalues"
             android:defaultValue="default"
             android:summary="%s" />
+
+        <SwitchPreference
+            android:key="app_profile_stamina"
+            android:title="@string/app_profile_stamina_title"
+            android:summary="@string/app_profile_stamina_summary"
+            android:defaultValue="false" />
+
+        <SwitchPreference
+            android:key="app_profile_require_gms"
+            android:title="@string/app_profile_require_gms_title"
+            android:summary="@string/app_profile_require_gms_summary"
+            android:defaultValue="false" />
 
         <SwitchPreference
             android:key="app_profile_keep_on"
@@ -138,12 +164,19 @@
             android:defaultValue="0"
             android:summary="%s" />
 
-
         <ListPreference
             android:key="app_profile_spoof"
             android:title="@string/app_profile_spoof_title"
             android:entries="@array/spoof_listentries"
             android:entryValues="@array/spoof_listvalues"
+            android:defaultValue="default"
+            android:summary="%s" />
+
+        <ListPreference
+            android:key="app_profile_language"
+            android:title="@string/app_profile_language_title"
+            android:entries="@array/language_listentries"
+            android:entryValues="@array/language_listvalues"
             android:defaultValue="default"
             android:summary="%s" />
 
@@ -173,15 +206,9 @@
             android:persistent="false" />
 
         <SwitchPreference
-            android:key="app_profile_stamina"
-            android:title="@string/app_profile_stamina_title"
-            android:summary="@string/app_profile_stamina_summary"
-            android:defaultValue="false" />
-
-        <SwitchPreference
-            android:key="app_profile_require_gms"
-            android:title="@string/app_profile_require_gms_title"
-            android:summary="@string/app_profile_require_gms_summary"
+            android:key="app_profile_forced_screenshot"
+            android:title="@string/app_profile_forced_screenshot_title"
+            android:summary="@string/app_profile_forced_screenshot_summary"
             android:defaultValue="false" />
 
         <com.aicp.gear.preference.SeekBarPreferenceCham
@@ -212,6 +239,22 @@
             android:summary="@string/app_profile_force_sonification_summary"
             android:defaultValue="false" />
 
+
+    <PreferenceCategory
+        android:key="app_profile_boot_options"
+        android:title="@string/app_profile_boot_options_title"
+        android:summary="@string/app_profile_boot_options_summary"
+        >
+
+        <ListPreference
+            android:key="file_access"
+            android:title="@string/file_access_title"
+            android:entries="@array/file_access_listentries"
+            android:entryValues="@array/file_access_listvalues"
+            android:defaultValue="default"
+            android:summary="%s" />
+    
+    </PreferenceCategory>
 
         <!-- SwitchPreference
             android:key="app_profile_stamina"

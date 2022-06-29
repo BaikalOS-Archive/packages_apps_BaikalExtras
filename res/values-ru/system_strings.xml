@@ -9,7 +9,7 @@
     <string name="idle_profile_title">Профиль в режиме ожидания</string>
     <string name="idle_therm_profile_title">Температурный Профиль в ожидании</string>
 
-    <string name="edit_perf_profile_title">Редактирование профиля</string>
+    <string name="edit_perf_profile_title">Редактировать профиль</string>
     <string name="reset_perf_profile_title">Сбросить по умолчанию</string>
 
     <string name="assisted_gps_title">"Использовать A-GPS"</string>
@@ -36,5 +36,19 @@
     <string name="microphone_mode_title">Отключить доступ к микрофону</string>
     <string name="microphone_mode_summary">Отключить доступ приложений к микрофону. Отменяется настройкой в профиле приложения</string>
 
+    <string name="mic_cam_toast_title">Показывать Уведомление</string>
+    <string name="mic_cam_toast_summary">Показывать уведомление если доступ заблокирован настройками выше</string>
+
+    <string name="baikalos_fifo_ui_title">FIFO UI</string>
+    <string name="baikalos_fifo_ui_summary">Использовать FIFO планировщик для потоков интерфейса</string>
+
+    <string name="bypass_charging_title">Обходная зарядка</string>
+    <string name="bypass_charging_summary">Запретить заряд батареи при использовании игровых температурных профилей. Телефон будет использовать энергию зарядного устройства. Уменьшает нагрев и износ батареи при использовании телефона подключенного к зарядному устройству</string>
+
+    <string name="bypass_charging_all_title">Полная Обходная зарядка</string>
+    <string name="bypass_charging_all_summary">Запретить заряд батареи при использовании температурных профилей отличных от игровых. Телефон будет использовать энергию зарядного устройства. Уменьшает нагрев и износ батареи при использовании телефона подключенного к зарядному устройству</string>
+
+    <string name="r_secure_title">Неограниченный доступ</string>
+    <string name="r_secure_summary">Отключить введенные Android 11 ограничения на доступ к некоторым папкам внешнего хранилища</string>
 
 </resources>

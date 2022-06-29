@@ -22,6 +22,7 @@ import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.LocaleList;
 import android.os.UserHandle;
 import android.os.UserManager;
 import android.os.Process;
@@ -53,20 +54,29 @@ import com.aicp.gear.preference.SeekBarPreferenceCham;
 
 import java.io.File;
 
+import java.text.Collator;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Locale;
+
+
 public class AppProfileFragment extends BaseSettingsFragment
             implements Preference.OnPreferenceChangeListener {
 
-    private static final String TAG = "ApplicationProfile";
+    private static final String TAG = "BaikalExtras";
 
     private static final String APP_PROFILE_READER = "app_profile_reader";
     private static final String APP_PROFILE_DISABLE_BOOT = "app_profile_disable_boot";
     private static final String APP_PROFILE_DISABLE_WAKEUP = "app_profile_disable_wakeup";
+    private static final String APP_PROFILE_DISABLE_JOBS = "app_profile_disable_jobs";
     private static final String APP_PROFILE_ALLOW_IDLE_NETWORK = "app_profile_idle_network";
     private static final String APP_PROFILE_PERF = "app_profile_performance";
     private static final String APP_PROFILE_THERM = "app_profile_thermal";
     private static final String APP_PROFILE_BRIGHTNESS = "app_profile_brightness";
     private static final String APP_PROFILE_ROTATION = "app_profile_rotation";
     private static final String APP_PROFILE_FPS = "app_profile_fps";
+    private static final String APP_PROFILE_MIN_FPS = "app_profile_min_fps";
     private static final String APP_PROFILE_KEEP_ON = "app_profile_keep_on";
 //    private static final String APP_PROFILE_CAMERA_HAL1 = "app_profile_camera_hal1";
     private static final String APP_PROFILE_PINNED = "app_profile_pinned";
@@ -85,6 +95,7 @@ public class AppProfileFragment extends BaseSettingsFragment
     private static final String APP_PROFILE_FORCE_SONIFICATION = "app_profile_force_sonification";
 
     private static final String APP_PROFILE_SPOOF = "app_profile_spoof";
+    private static final String APP_PROFILE_FILE_ACCESS = "file_access";
     private static final String APP_PROFILE_PHKA = "app_profile_phka";
     private static final String APP_PROFILE_DEVMODE = "app_profile_devmode";
 
@@ -93,6 +104,10 @@ public class AppProfileFragment extends BaseSettingsFragment
     private static final String APP_PROFILE_MICROPHONE = "app_profile_microphone";
 
     private static final String APP_PROFILE_LOWRES = "app_profile_lowres";
+
+    private static final String APP_PROFILE_LANGUAGE = "app_profile_language";
+
+    private static final String APP_PROFILE_FORCED_SCREENSHOT = "app_profile_forced_screenshot";
 
     private String mPackageName;
     private int mUid;
@@ -105,6 +120,7 @@ public class AppProfileFragment extends BaseSettingsFragment
     private SwitchPreference mAppRequireGms;
     private SwitchPreference mAppDisableBoot;
     private SwitchPreference mAppDisableWakeup;
+    private SwitchPreference mAppDisableJobs;
     private SwitchPreference mBlockFocusRecv;
     private SwitchPreference mBlockFocusSend;
     private SwitchPreference mForceSonification;
@@ -113,6 +129,7 @@ public class AppProfileFragment extends BaseSettingsFragment
     private SwitchPreference mAppPhkaProfile;
     private SwitchPreference mAppDevModeProfile;
     private SwitchPreference mAppAllowIdleNetwork;
+    private SwitchPreference mAppForcedScreenshot;
 
     //private SwitchPreference mAppRestricted;
 
@@ -121,12 +138,15 @@ public class AppProfileFragment extends BaseSettingsFragment
     private ListPreference mAppBrightnessProfile;
     private ListPreference mAppRotationProfile;
     private ListPreference mAppFpsProfile;
+    private ListPreference mAppMinFpsProfile;
     private ListPreference mAppBackgroundProfile;
     private ListPreference mAppSpoofProfile;
+    private ListPreference mAppFileAccess;
     private ListPreference mAppLocation;
     private ListPreference mAppCamera;
     private ListPreference mAppMicrophone;
     private ListPreference mPerformanceScale;
+    private ListPreference mAppLanguageProfile;
 
     //private Preference mAppRestore;
 
@@ -251,6 +271,29 @@ public class AppProfileFragment extends BaseSettingsFragment
                             Log.e(TAG, "mAppDisableWakeup: mPackageName=" + mPackageName + ", mDisableWakeup=" + (Boolean)newValue);
                         } catch(Exception re) {
                             Log.e(TAG, "onCreate: mAppDisableWakeup Fatal! exception", re );
+                        }
+                        return true;
+                    }
+                });
+            }
+
+            mAppDisableJobs = (SwitchPreference) findPreference(APP_PROFILE_DISABLE_JOBS);
+            if( mAppDisableJobs != null ) {
+                mAppDisableJobs.setChecked(mProfile.mDisableJobs);
+                Log.e(TAG, "mAppDisableJobs: mPackageName=" + mPackageName + ",mDisableJobs=" + mProfile.mDisableJobs);
+                //mAppRestricted.setChecked(mBaikalService.isAppRestrictedProfile(mPackageName));
+                mAppDisableJobs.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                    public boolean onPreferenceChange(Preference preference, Object newValue) {
+                        //int val = Integer.parseInt(newValue.toString());
+                        //DiracAudioEnhancerService.du.setHeadsetType(mContext, val);
+                        try {
+                            mProfile.mDisableJobs = ((Boolean)newValue);
+                            mAppSettings.updateProfile(mProfile);
+                            mAppSettings.save();
+                            //mBaikalService.setAppPriority(mPackageName, ((Boolean)newValue) ? -1 : 0 );
+                            Log.e(TAG, "mAppDisableJobs: mPackageName=" + mPackageName + ", mDisableJobs=" + (Boolean)newValue);
+                        } catch(Exception re) {
+                            Log.e(TAG, "onCreate: mAppDisableJobs Fatal! exception", re );
                         }
                         return true;
                     }
@@ -438,6 +481,33 @@ public class AppProfileFragment extends BaseSettingsFragment
                 }
             }
 
+            mAppMinFpsProfile = (ListPreference) findPreference(APP_PROFILE_MIN_FPS);
+            if( mAppMinFpsProfile != null ) {
+                if(!variableFps) {
+                    mAppMinFpsProfile.setVisible(false);
+                } else {
+                    int fps = mProfile.mMinFrameRate;
+                    Log.e(TAG, "mAppMinFpsProfile: mPackageName=" + mPackageName + ",fps=" + fps);
+                    mAppMinFpsProfile.setValue(Integer.toString(fps));
+                    mAppMinFpsProfile.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                      public boolean onPreferenceChange(Preference preference, Object newValue) {
+                        try {
+                            int val = Integer.parseInt(newValue.toString());
+                            mProfile.mMinFrameRate = val;
+                            mAppSettings.updateProfile(mProfile);
+                            mAppSettings.save();
+
+                            //mBaikalService.setAppBrightness(mPackageName, val );
+                            Log.e(TAG, "mAppMinFpsProfile: mPackageName=" + mPackageName + ",fps=" + val);
+                        } catch(Exception re) {
+                            Log.e(TAG, "onCreate: mAppMinFpsProfile Fatal! exception", re );
+                        }
+                        return true;
+                      }
+                    });
+                }
+            }
+
 
             mAppKeepOn = (SwitchPreference) findPreference(APP_PROFILE_KEEP_ON);
             if( mAppKeepOn != null ) {
@@ -617,6 +687,30 @@ public class AppProfileFragment extends BaseSettingsFragment
                 });
             }
 
+
+            mAppForcedScreenshot = (SwitchPreference) findPreference(APP_PROFILE_FORCED_SCREENSHOT);
+            if( mAppForcedScreenshot != null ) {
+                boolean forcedScreenshot = mProfile.mForcedScreenshot;
+                Log.e(TAG, "mAppForcedScreenshot: mPackageName=" + mPackageName + ", forcedScreenshot=" + forcedScreenshot);
+                mAppForcedScreenshot.setChecked(mProfile.mForcedScreenshot);
+                mAppForcedScreenshot.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                  public boolean onPreferenceChange(Preference preference, Object newValue) {
+                    try {
+                        mProfile.mForcedScreenshot = ((Boolean)newValue);
+                        mAppSettings.updateProfile(mProfile);
+                        mAppSettings.save();
+
+                        //mBaikalService.setAppBrightness(mPackageName, val );
+                        Log.e(TAG, "mAppForcedScreenshot: mPackageName=" + mPackageName + ", forcedScreenshot=" + mProfile.mForcedScreenshot);
+                    } catch(Exception re) {
+                        Log.e(TAG, "onCreate: mAppForcedScreenshot Fatal! exception", re );
+                    }
+                    return true;
+                  }
+                });
+            }
+
+
             mVolumeScale = (SeekBarPreferenceCham) findPreference(VOLUME_SCALE);
             if( mVolumeScale != null ) {
                 int scale = BaikalSettings.getVolumeScaleInt(mUid);
@@ -787,6 +881,30 @@ public class AppProfileFragment extends BaseSettingsFragment
 
 
 
+            mAppFileAccess = (ListPreference) findPreference(APP_PROFILE_FILE_ACCESS);
+            if( mAppFileAccess != null ) {
+                    int access = mProfile.mFileAccess;
+                    Log.e(TAG, "mAppFileAccess: mPackageName=" + mPackageName + ",mAppFileAccess=" + access);
+                    mAppFileAccess.setValue(Integer.toString(access));
+                    mAppFileAccess.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                      public boolean onPreferenceChange(Preference preference, Object newValue) {
+                        try {
+                            int val = Integer.parseInt(newValue.toString());
+                            mProfile.mFileAccess = val;
+                            mAppSettings.updateProfile(mProfile);
+                            mAppSettings.save();
+
+                            //mBaikalService.setAppBrightness(mPackageName, val );
+                            Log.e(TAG, "mAppFileAccess: mPackageName=" + mPackageName + ",mAppFileAccess=" + val);
+                        } catch(Exception re) {
+                            Log.e(TAG, "onCreate: mAppFileAccess Fatal! exception", re );
+                        }
+                        return true;
+                      }
+                    });
+            }
+
+
             mAppSpoofProfile = (ListPreference) findPreference(APP_PROFILE_SPOOF);
             if( mAppSpoofProfile != null ) {
                     int spoof = mProfile.mSpoofDevice;
@@ -810,6 +928,39 @@ public class AppProfileFragment extends BaseSettingsFragment
                     });
             }
 
+            mAppLanguageProfile = (ListPreference) findPreference(APP_PROFILE_LANGUAGE);
+            if( mAppLanguageProfile != null ) {
+
+                LocaleList locales = getLocales();
+
+                CharSequence entries[] = new String[locales.size()+1];
+                CharSequence entryValues[] = new String[locales.size()+1];
+                entries[0] = "Default";
+                entryValues[0] = "";
+                for (int i=0; i< locales.size(); i++ ) {
+                    entries[i+1] = locales.get(i).getDisplayName();
+                    entryValues[i+1] = locales.get(i).toLanguageTag();
+                }
+                mAppLanguageProfile.setEntries(entries);
+                mAppLanguageProfile.setEntryValues(entryValues);
+
+                    String language = mProfile.mLanguage;
+                    Log.e(TAG, "mAppLanguageProfile: mPackageName=" + mPackageName + ",language=" + language);
+                    mAppLanguageProfile.setValue(language);
+                    mAppLanguageProfile.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                      public boolean onPreferenceChange(Preference preference, Object newValue) {
+                        try {
+                            mProfile.mLanguage = newValue.toString();
+                            mAppSettings.updateProfile(mProfile);
+                            mAppSettings.save();
+                            Log.e(TAG, "mAppLanguageProfile: mPackageName=" + mPackageName + ",language=" + mProfile.mLanguage);
+                        } catch(Exception re) {
+                            Log.e(TAG, "onCreate: setAppSpoof Fatal! exception", re );
+                        }
+                        return true;
+                      }
+                    });
+            }
 
             mAppPhkaProfile = (SwitchPreference) findPreference(APP_PROFILE_PHKA);
             if( mAppPhkaProfile != null ) {
@@ -939,4 +1090,9 @@ public class AppProfileFragment extends BaseSettingsFragment
         }
         return false;
     }
+
+    public static LocaleList getLocales() {
+        return LocaleList.getAdjustedDefault();
+    }
+
 }

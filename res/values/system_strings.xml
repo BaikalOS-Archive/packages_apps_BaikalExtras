@@ -61,4 +61,19 @@
     <string name="microphone_mode_title">Disable Microphone access</string>
     <string name="microphone_mode_summary">Disable microphone by default. Can be overriden by an app profile.</string>
 
+    <string name="mic_cam_toast_title">Show Toast</string>
+    <string name="mic_cam_toast_summary">Show toast if access denied by above settings</string>
+
+    <string name="baikalos_fifo_ui_title">FIFO UI</string>
+    <string name="baikalos_fifo_ui_summary">Use FIFO scheduler for UI thread</string>
+
+    <string name="bypass_charging_title">Bypass Charging</string>
+    <string name="bypass_charging_summary">Disable charging on Gaming thermal profiles. Phone will use charger energy. Reduce heat and battery wearing.</string>
+
+    <string name="bypass_charging_all_title">Full Bypass Charging</string>
+    <string name="bypass_charging_all_summary">Disable charging on thermal profiles other than Gaming. Phone will use charger energy. Reduce heat and battery wearing.</string>
+
+    <string name="r_secure_title">Unrestricted Storage</string>
+    <string name="r_secure_summary">Disable restrictions introduced by Android 11 on access to some External Storage folders</string>
+
 </resources>

@@ -14,6 +14,8 @@ import android.widget.Filter;
 import android.widget.Filterable;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.util.Log;
+
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -29,6 +31,8 @@ import com.android.internal.baikalos.AppProfile;
 import android.content.pm.ApplicationInfo;
 
 public abstract class AppChooserAdapter extends BaseAdapter implements Filterable {
+
+    private static final String TAG = "AppChooserAdapter";
 
     final Context mContext;
     final Handler mHandler;
@@ -66,22 +70,33 @@ public abstract class AppChooserAdapter extends BaseAdapter implements Filterabl
             @Override
             public void run() {
                 isUpdating = true;
+
+                if( mInstalledAppInfo == null ) { 
+                    Log.i(TAG, "add start: loading packages");
+                    mInstalledAppInfo = mPackageManager.getInstalledPackages(/*PackageManager.GET_PERMISSIONS*/0);
+                    mTemporarylist = mInstalledAppInfo;
+                    Log.i(TAG, "add end: loading packages");
+                }
+
                 final List<AppItem> temp = new LinkedList<AppItem>();
                 for (PackageInfo info : mTemporarylist) {
+
+                    Log.i(TAG, "add start: mPackageName=" + info.packageName);
+
                     final AppItem item = new AppItem();
-                    item.title = info.applicationInfo.loadLabel(mPackageManager);
-                    item.icon = info.applicationInfo.loadIcon(mPackageManager);
+                    item.appInfo = info.applicationInfo;
+                    //item.title = info.applicationInfo.loadLabel(mPackageManager);
+                    //item.icon = info.applicationInfo.loadIcon(mPackageManager);
                     item.packageName = info.packageName;
                     item.uid = info.applicationInfo.uid;
-                    final int index = Collections.binarySearch(temp, item);
-                    final boolean isLauncherApp =
-                            mPackageManager.getLaunchIntentForPackage(info.packageName) != null;
-
+                    
 
                     if( !includeSystem &&
                         (info.applicationInfo.flags & (ApplicationInfo.FLAG_SYSTEM | ApplicationInfo.FLAG_UPDATED_SYSTEM_APP)) != 0 ) continue;
 
                     AppProfile mProfile = mAppSettings.getProfile(info.packageName);
+
+                    Log.i(TAG, "add profile: mPackageName=" + info.packageName);
 
                     if( onlyChanged ) {
                         if( mProfile == null ) continue;
@@ -92,13 +107,22 @@ public abstract class AppChooserAdapter extends BaseAdapter implements Filterabl
                         if( mProfile.mBackground >= 0 ) continue;
                     }
 
-                    if (!hasLauncherFilter || isLauncherApp) {
+                    final int index = Collections.binarySearch(temp, item);
+                    //final boolean isLauncherApp =
+                    //        mPackageManager.getLaunchIntentForPackage(info.packageName) != null;
+
+                    Log.i(TAG, "add index: mPackageName=" + info.packageName);
+
+                    //if (!hasLauncherFilter || isLauncherApp) {
                         if (index < 0) {
                             temp.add((-index - 1), item);
                         } else {
                             temp.add((index + 1), item);
                         }
-                    }
+                    //}
+
+                    Log.i(TAG, "add end: mPackageName=" + info.packageName);
+
                 }
                 mHandler.post(new Runnable() {
                     @Override
@@ -124,8 +148,9 @@ public abstract class AppChooserAdapter extends BaseAdapter implements Filterabl
 
     @Override
     public AppItem getItem(int position) {
-        if (position >= mInstalledApps.size()) {
-            return mInstalledApps.get(mInstalledApps.size());
+        if( mInstalledApps.size() == 0 ) return null;
+        if (mInstalledApps.size() > 0 && position >= mInstalledApps.size()) {
+            return mInstalledApps.get(mInstalledApps.size()-1);
         } else if (position < 0) {
             return mInstalledApps.get(0);
         }
@@ -156,10 +181,11 @@ public abstract class AppChooserAdapter extends BaseAdapter implements Filterabl
             convertView.setTag(holder);
         }
         AppItem appInfo = getItem(position);
+        appInfo.loadIfNeeded();
 
-        holder.name.setText(appInfo.title);
         holder.pkg.setText(appInfo.packageName);
-        holder.icon.setImageDrawable(appInfo.icon);
+        if( appInfo.title != null ) holder.name.setText(appInfo.title);
+        if( appInfo.icon != null ) holder.icon.setImageDrawable(appInfo.icon);
         return convertView;
     }
 
@@ -202,9 +228,27 @@ public abstract class AppChooserAdapter extends BaseAdapter implements Filterabl
         public String packageName;
         public Drawable icon;
         public int uid;
+        public ApplicationInfo appInfo;
+
+
+        public void loadIfNeeded() {
+            if( appInfo == null ) return;
+            if( title == null ) { 
+                Log.i(TAG, "loadIfNeeded title start: mPackageName=" + packageName);
+                title = appInfo.loadLabel(mPackageManager);
+                Log.i(TAG, "loadIfNeeded title end: mPackageName=" + packageName);
+            }
+            if( icon == null ) {
+                Log.i(TAG, "loadIfNeeded icon start: mPackageName=" + packageName);
+                icon = appInfo.loadIcon(mPackageManager);
+                Log.i(TAG, "loadIfNeeded icon end: mPackageName=" + packageName);
+            }
+        }
 
         @Override
         public int compareTo(AppItem another) {
+            if( this.title == null ) this.title = this.appInfo.loadLabel(mPackageManager);
+            if( another.title == null ) another.title = another.appInfo.loadLabel(mPackageManager);
             return this.title.toString().compareTo(another.title.toString());
         }
     }

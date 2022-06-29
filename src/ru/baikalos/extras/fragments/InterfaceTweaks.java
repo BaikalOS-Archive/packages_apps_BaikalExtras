@@ -40,13 +40,13 @@ import ru.baikalos.extras.BaseSettingsFragment;
 import ru.baikalos.extras.PerfProfileDetailsActivity;
 import ru.baikalos.extras.R;
 
-import com.aicp.gear.preference.SeekBarPreferenceCham;
+import com.aicp.gear.preference.SeekBarPreference;
 import com.aicp.gear.preference.SecureSettingSeekBarPreference;
 import com.aicp.gear.preference.SystemSettingColorPickerPreference;
 
 public class InterfaceTweaks extends BaseSettingsFragment {
 
-    private static final String TAG = "InterfaceTweaks";
+    private static final String TAG = "BaikalExtras";
 
     private static final String SYSTEM_TWEAKS_SEC_HWC= "system_tweaks_sec_hwc";
     private static final String SYSTEM_PROPERTY_SEC_HWC = "persist.sys.sf.disable_sec_hwc";

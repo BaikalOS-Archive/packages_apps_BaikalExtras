@@ -65,7 +65,7 @@ import java.util.ArrayList;
 
 public class BackupUtil {
 
-    private static final String TAG = "BackupUtil";
+    private static final String TAG = "BaikalExtras";
 
 
     public void systemBackup(String backup, boolean forceAll) {

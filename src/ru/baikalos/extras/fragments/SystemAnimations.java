@@ -70,7 +70,7 @@ import ru.baikalos.extras.utils.Util;
 
 public class SystemAnimations extends BaseSettingsFragment {
 
-    private static final String TAG = SystemAnimations.class.getSimpleName();
+    private static final String TAG = "BaikalExtras";
 
     private static final String PREF_CUSTOM_BOOTANIM = "custom_bootanimation";
 

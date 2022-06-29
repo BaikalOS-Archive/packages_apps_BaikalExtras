@@ -40,8 +40,8 @@
 
     <com.aicp.gear.preference.GlobalSettingSwitchPreference
         android:key="baikalos_aggressive_idle"
-        android:title="@string/device_idle_aggressive_title"
-        android:summary="@string/device_idle_aggressive_summary"
+        android:title="@string/baikal_aggressive_saver_enabled_title"
+        android:summary="@string/baikal_aggressive_saver_enabled_summary"
         android:defaultValue="false"
         android:disableDependentsState="true" />
 
@@ -72,6 +72,14 @@
         android:summary="@string/baikal_extreme_saver_enabled_summary"
         android:defaultValue="false"
         android:disableDependentsState="true" />
+
+    <com.aicp.gear.preference.GlobalSettingSwitchPreference
+        android:key="baikalos_aggressive_device_idle"
+        android:title="@string/device_idle_aggressive_title"
+        android:summary="@string/device_idle_aggressive_summary"
+        android:defaultValue="false"
+        android:disableDependentsState="true" />
+
 
     <com.aicp.gear.preference.GlobalSettingSwitchPreference
         android:key="baikalos_stamina_oi_enabled"
@@ -107,12 +115,6 @@
         android:defaultValue="false"
         android:dependency="baikalos_app_freezer_enabled"/>
 
-    <com.aicp.gear.preference.GlobalSettingSwitchPreference
-        android:key="baikalos_gms_freezer_enabled"
-        android:title="@string/gms_freezer_title"
-        android:summary="@string/gms_freezer_summary"
-        android:defaultValue="false"
-        android:dependency="baikalos_app_freezer_enabled"/>
 
     <PreferenceCategory
         android:key="powersave_gms"
@@ -120,9 +122,24 @@
         android:summary="@string/powersave_gms_summary">
 
         <com.aicp.gear.preference.GlobalSettingSwitchPreference
+            android:key="baikalos_gms_freezer_enabled"
+            android:title="@string/gms_freezer_title"
+            android:summary="@string/gms_freezer_summary"
+            android:defaultValue="false"
+            android:dependency="baikalos_app_freezer_enabled"/>
+
+
+        <com.aicp.gear.preference.GlobalSettingSwitchPreference
             android:key="baikalos_hide_gms"
-            android:title="@string/powersave_hide_idle_title"
-            android:summary="@string/powersave_hide_idle_summary"
+            android:title="@string/powersave_hide_gms_title"
+            android:summary="@string/powersave_hide_gms_summary"
+            android:defaultValue="false"
+            android:disableDependentsState="true" />
+
+        <com.aicp.gear.preference.GlobalSettingSwitchPreference
+            android:key="baikalos_hide_all"
+            android:title="@string/powersave_hide_all_title"
+            android:summary="@string/powersave_hide_all_summary"
             android:defaultValue="false"
             android:disableDependentsState="true" />
 
@@ -180,5 +197,19 @@
 	    <intent android:action="android.settings.APP_OPS_SETTINGS"/>
     </Preference -->
 
+
+    <!-- PreferenceCategory
+        android:key="experimental"
+        android:title="@string/experimental_title"
+        android:summary="@string/experimental_summary">
+
+        <com.aicp.gear.preference.GlobalSettingSwitchPreference
+            android:key="baikalos_gms_disabled"
+            android:title="@string/powersave_gms_disabled_title"
+            android:summary="@string/powersave_gms_disabled_summary"
+            android:defaultValue="false"
+            android:disableDependentsState="true" />
+
+    </PreferenceCategory -->
 
 </PreferenceScreen>

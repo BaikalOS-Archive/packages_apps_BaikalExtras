@@ -3,14 +3,19 @@
     <!-- Power Save -->
     <string name="powersave_title">Power Save</string>
     <string name="powersave_summary">Power Saving Tweaks</string>
-    <string name="device_idle_aggressive_title">Aggressive Idle</string>
-    <string name="device_idle_aggressive_summary">Send device into Idle Mode 1 min after screen off. Ignore movement.</string>
+
+    <string name="baikal_aggressive_saver_enabled_title">Aggressive Idle</string>
+    <string name="baikal_aggressive_saver_enabled_summary">Aggressively restrict background processes. Kill inactive apps after moderate timeout.</string>
 
     <string name="baikal_extreme_saver_enabled_title">Extreme Mode</string>
-    <string name="baikal_extreme_saver_enabled_summary">Treat device as Small Battery Device</string>
+    <string name="baikal_extreme_saver_enabled_summary">Extremely restrict background processes. Kill inactive apps after short timeout.</string>
 
-    <string name="baikal_stamina_oi_enabled_title">Stamina on Idle</string>
-    <string name="baikal_stamina_oi_enabled_summary">Enter stamina mode while idle. An Emergency mode to reach the power plug.</string>
+    <string name="device_idle_aggressive_title">Fast Device Idle</string>
+    <string name="device_idle_aggressive_summary">Enter Device Idle mode 30 seconds after screen off. Ignore movement</string>
+
+    <string name="baikal_stamina_oi_enabled_title">Stamina on Screen Off</string>
+    <string name="baikal_stamina_oi_enabled_summary">Enter stamina mode while screen is off. An Emergency mode to reach the power plug.</string>
+
 
     <string name="default_profiles_title">Default profiles</string>
 
@@ -19,18 +24,31 @@
 
     <string name="powersave_gms_title">Google Services</string>
     <string name="powersave_gms_summary">Options for Google Play Services</string>
-    <string name="powersave_hide_idle_title">Hide Idle from GMS</string>
-    <string name="powersave_hide_idle_summary">Hide Idle state from Google Play Services. Could fix notification problems. Increases battery drain! </string>
+
+    <string name="powersave_hide_gms_title">Hide Idle from GMS</string>
+    <string name="powersave_hide_gms_summary">Hide Idle state from Google Play Services. Could fix notification problems. Increases battery drain! </string>
+
+    <string name="powersave_hide_all_title">Hide Idle from Apps</string>
+    <string name="powersave_hide_all_summary">Hide Idle state from all user apps. Could fix notification problems. Increases battery drain! </string>
+
+    <string name="powersave_gms_disabled_title">Disable Google Services</string>
+    <string name="powersave_gms_disabled_summary">Disable Google Play Services on this device. Some apps may not work!</string>
+
     <string name="powersave_gms_blocked_title">Block Always</string>
     <string name="powersave_gms_blocked_summary">Always block Google Play Services from running. Some apps may not work!</string>
+
     <string name="powersave_gms_restricted_title">Restrict Always</string>
     <string name="powersave_gms_restricted_summary">Always Restrict Google Play Services in background. Some apps may not work!</string>
+
     <string name="powersave_gms_idle_restricted_title">Restrict in Idle</string>
     <string name="powersave_gms_idle_restricted_summary">Always Restrict Google Play Services in Idle Mode</string>
+
     <string name="powersave_gms_stamina_restricted_title">Block in Stamina</string>
     <string name="powersave_gms_stamina_restricted_summary">Always block Google Play Services in Stamina Mode</string>
+
     <string name="powersave_gps_restricted_title">Restrict Play Market</string>
     <string name="powersave_gps_restricted_summary">Restrict Play Market activity in background</string>
+
     <string name="powersave_gms_defer_jobs_title">Defer Jobs</string>
     <string name="powersave_gms_defer_jobs_summary">Defer GMS backgroudn jobs until on charger</string>
 

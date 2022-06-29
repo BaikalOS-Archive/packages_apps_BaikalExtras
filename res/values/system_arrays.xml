@@ -38,6 +38,7 @@
     	<item>incall</item>
     	<item>vr</item>
     </string-array>
+
     <string-array name="default_fps_listentries">
     	<item>30</item>
     	<item>60</item>
@@ -50,7 +51,22 @@
     	<item>3</item>
     	<item>4</item>
     	<item>5</item>
-    	<item>6</item>
+    	<item>10</item>
+    </string-array>
+
+    <string-array name="default_min_fps_listentries">
+    	<item>30</item>
+    	<item>60</item>
+    	<item>90</item>
+    	<item>120</item>
+    	<item>Dynamic</item>
+     </string-array>
+     <string-array name="default_min_fps_listvalues">
+    	<item>1</item>
+    	<item>3</item>
+    	<item>4</item>
+    	<item>5</item>
+    	<item>10</item>
     </string-array>
 
     <string-array name="backup_restore_listentries">

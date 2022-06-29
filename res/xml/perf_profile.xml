@@ -21,6 +21,14 @@
     xmlns:aicpextras="http://schemas.android.com/apk/res-auto"
     android:title="@string/edit_profile_title">
 
+     <ListPreference
+        android:key="edit_profile_cpu_performance_limit"
+        android:title="@string/app_profile_performance_limit_title"
+        android:entries="@array/cpu_resources_listentries"
+        android:entryValues="@array/cpu_resources_listvalues" 
+        android:defaultValue="default"
+        android:summary="%s"/>
+
      <PreferenceCategory
         android:key="edit_profile_silver"
         android:title="@string/edit_profile_silver_title">
@@ -96,29 +104,29 @@
      <com.aicp.gear.preference.SeekBarPreferenceCham
          android:key="edit_profile_sched_boost"
          android:title="@string/edit_profile_sched_boost_title"
-         android:max="100"
-         android:min="-100"
+         android:max="10"
+         android:min="0"
          aicpextras:unitsLeft=""
          aicpextras:unitsRight=""
-         android:defaultValue="0"/>
+         android:defaultValue="-1"/>
 
      <com.aicp.gear.preference.SeekBarPreferenceCham
          android:key="edit_profile_back_boost"
          android:title="@string/edit_profile_back_boost_title"
-         android:max="100"
-         android:min="-100"
+         android:max="10"
+         android:min="0"
          aicpextras:unitsLeft=""
          aicpextras:unitsRight=""
-         android:defaultValue="0"/>
+         android:defaultValue="-1"/>
 
      <com.aicp.gear.preference.SeekBarPreferenceCham
          android:key="edit_profile_gpu_boost"
          android:title="@string/edit_profile_gpu_boost_title"
          android:max="10"
-         android:min="-10"
+         android:min="0"
          aicpextras:unitsLeft=""
          aicpextras:unitsRight=""
-         android:defaultValue="0"/>
+         android:defaultValue="-1"/>
 
      <Preference
          android:key="edit_profile_reset"

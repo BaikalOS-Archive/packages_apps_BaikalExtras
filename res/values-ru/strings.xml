@@ -471,4 +471,7 @@
     <string name="corner_fwvals">По умолчанию</string>
     <string name="corner_fwvals_summary">Полезно, если у устройства скругленные углы</string>
 
+    <string name="experimental_title">Экспериментальные</string>
+    <string name="experimental_summary">Экспериментальные функции. Могут привести к нестабильности или невозможности загрузки.</string>
+
 </resources>

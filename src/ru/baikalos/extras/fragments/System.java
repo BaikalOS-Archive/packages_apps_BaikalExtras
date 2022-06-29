@@ -66,11 +66,15 @@ import java.util.regex.Pattern;
 
 public class System extends BaseSettingsFragment {
 
-    private static final String TAG = "System";
+    private static final String TAG = "BaikalExtras";
 
     private static final String SMART_NFC = "baikalos_smart_nfc";
     private static final String BOOST_OVERRIDE = "baikalos_boost_override";
     private static final String BOOST_ENABLE = "baikalos_boost_enable";
+    private static final String FIFO_UI = "baikalos_fifo_ui";
+
+    private static final String BYPASS_CHARGING = "bypass_charging";
+    private static final String BYPASS_CHARGING_ALL = "bypass_charging_all";
 
 
     private Context mContext;
@@ -85,9 +89,13 @@ public class System extends BaseSettingsFragment {
     private ListPreference mIdleThermProfile;
     private ListPreference mEditPerfProfile;
     private ListPreference mAppFpsProfile;
+    private ListPreference mAppMinFpsProfile;
     private SwitchPreference mSmartNFC;
     private SwitchPreference mBoostOverride;
     private SeekBarPreferenceCham mBoostEnable;
+    private SwitchPreference mFifoUi;
+    private SwitchPreference mBypassChargingAll;
+    private SwitchPreference mBypassCharging;
 
     //private SwitchPreference mBrForceAll;
     //private ListPreference mBrBackup;
@@ -139,6 +147,47 @@ public class System extends BaseSettingsFragment {
 
         try {
 
+            /*
+            mBypassCharging = (SwitchPreference) findPreference(BYPASS_CHARGING);
+            if( mBypassCharging != null ) {
+                boolean fifo_ui = getSystemPropertyBoolean("persist.baikal.bpcharging","0");
+                Log.i(TAG, "mBypassCharging: override=" + fifo_ui);
+                mBypassCharging.setChecked(fifo_ui);
+                mBypassCharging.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                  public boolean onPreferenceChange(Preference preference, Object newValue) {
+                    try {
+                        boolean val = (Boolean)newValue;
+                        setSystemPropertyBoolean("persist.baikal.bpcharging",val);
+                        Log.e(TAG, "mBypassCharging: override=" + val);
+                    } catch(Exception re) {
+                        Log.e(TAG, "onCreate: mBypassCharging Fatal! exception", re );
+                    }
+                    return true;
+                  }
+                });
+            }
+
+
+            mBypassChargingAll = (SwitchPreference) findPreference(BYPASS_CHARGING_ALL);
+            if( mBypassChargingAll != null ) {
+                boolean fifo_ui = getSystemPropertyBoolean("persist.baikal.bpcharging_all","0");
+                Log.i(TAG, "mBypassChargingAll: override=" + fifo_ui);
+                mBypassChargingAll.setChecked(fifo_ui);
+                mBypassChargingAll.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                  public boolean onPreferenceChange(Preference preference, Object newValue) {
+                    try {
+                        boolean val = (Boolean)newValue;
+                        setSystemPropertyBoolean("persist.baikal.bpcharging_all",val);
+                        Log.e(TAG, "mBypassChargingAll: override=" + val);
+                    } catch(Exception re) {
+                        Log.e(TAG, "onCreate: mBypassChargingAll Fatal! exception", re );
+                    }
+                    return true;
+                  }
+                });
+            }
+            */
+
             boolean variableFps  = SystemProperties.get("sys.baikal.var_fps", "1").equals("1");
 
             mAppFpsProfile = (ListPreference) findPreference("default_fps");
@@ -163,6 +212,53 @@ public class System extends BaseSettingsFragment {
                     });
                 }
             }
+
+            mAppMinFpsProfile = (ListPreference) findPreference("default_min_fps");
+            if( mAppMinFpsProfile != null ) {
+                if(!variableFps) {
+                    mAppMinFpsProfile.setVisible(false);
+                } else {
+                    int fps = getSystemPropertyInt("persist.baikal.minfps.default",0);
+                    Log.i(TAG, "mAppMinFpsProfile: fps=" + fps);
+                    mAppMinFpsProfile.setValue(Integer.toString(fps));
+                    mAppMinFpsProfile.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                      public boolean onPreferenceChange(Preference preference, Object newValue) {
+                        try {
+                            int val = Integer.parseInt(newValue.toString());
+                            setSystemPropertyInt("persist.baikal.minfps.default",val);
+                            Log.e(TAG, "mAppMinFpsProfile: fps=" + val);
+                        } catch(Exception re) {
+                            Log.e(TAG, "onCreate: mAppMinFpsProfile Fatal! exception", re );
+                        }
+                        return true;
+                      }
+                    });
+                }
+            }
+
+
+            mFifoUi = (SwitchPreference) findPreference(FIFO_UI);
+            if( mFifoUi != null ) {
+                boolean fifo_ui = getSystemPropertyBoolean("persist.baikal.use_fifo_ui","0");
+                Log.i(TAG, "mFifoUi: override=" + fifo_ui);
+                mFifoUi.setChecked(fifo_ui);
+                mFifoUi.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                  public boolean onPreferenceChange(Preference preference, Object newValue) {
+                    try {
+                        boolean val = (Boolean)newValue;
+                        setSystemPropertyBoolean("persist.baikal.use_fifo_ui",val);
+                        Log.e(TAG, "mFifoUi: override=" + val);
+                    } catch(Exception re) {
+                        Log.e(TAG, "onCreate: mFifoUi Fatal! exception", re );
+                    }
+                    return true;
+                  }
+                });
+            }
+        
+
+
+
 
 
             mBoostOverride = (SwitchPreference) findPreference(BOOST_OVERRIDE);
@@ -298,7 +394,7 @@ public class System extends BaseSettingsFragment {
                 if( !perfProf ) {
                     mScrOffPerfProfile.setVisible(false);
                 } else {
-                    String profile = getSystemPropertyString("persist.baikal.perf.scr_off","limited");
+                    String profile = getSystemPropertyString("persist.baikal.perf.scr_off","balance");
                     Log.e(TAG, "mScrOffPerfProfile: getProfile=" + profile);
                     mScrOffPerfProfile.setValue(profile);
                     mScrOffPerfProfile.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
@@ -321,7 +417,7 @@ public class System extends BaseSettingsFragment {
                 if( !perfProf ) {
                     mIdlePerfProfile.setVisible(false);
                 } else {
-                    String profile = getSystemPropertyString("persist.baikal.perf.idle","limited");
+                    String profile = getSystemPropertyString("persist.baikal.perf.idle","balance");
                     Log.e(TAG, "mIdlePerfProfile: getProfile=" + profile);
                     mIdlePerfProfile.setValue(profile);
                     mIdlePerfProfile.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
@@ -343,7 +439,7 @@ public class System extends BaseSettingsFragment {
                 if( !perfProf ) {
                     mIdleThermProfile.setVisible(false);
                 } else {
-                    String profile = getSystemPropertyString("persist.baikal.therm.idle","cool");
+                    String profile = getSystemPropertyString("persist.baikal.therm.idle","balance");
                     Log.e(TAG, "mIdleThermProfile: getProfile=" + profile);
                     mIdleThermProfile.setValue(profile);
                     mIdleThermProfile.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {

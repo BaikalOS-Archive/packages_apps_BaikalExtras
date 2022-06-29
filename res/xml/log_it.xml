@@ -20,12 +20,7 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     android:title="@string/log_it_title">
 
-    <com.aicp.gear.preference.GlobalSettingSwitchPreference
-            android:key="baikalos_debug"
-            android:title="@string/baikalos_debug_title"
-            android:summary="@string/baikalos_debug_summary"
-            android:defaultValue="false"
-            android:disableDependentsState="true" />
+
 
     <ListPreference
         android:key="baikalos_log_share_type"
@@ -58,5 +53,113 @@
         android:key="baikalos_log_it_now"
         android:title="@string/log_it_now_title"
         android:summary="@string/log_it_now_summary" />
+
+
+    <com.aicp.gear.preference.GlobalSettingSwitchPreference
+            android:key="baikalos_debug"
+            android:title="@string/baikalos_debug_title"
+            android:summary="@string/baikalos_debug_summary"
+            android:defaultValue="false"
+            android:disableDependentsState="true" />
+
+        <SwitchPreference
+            android:key="baikal_debug_sensors"
+            android:title="Sensors"
+            android:defaultValue="false" />
+
+        <SwitchPreference
+            android:key="baikal_debug_torch"
+            android:title="Torch"
+            android:defaultValue="false" />
+
+        <SwitchPreference
+            android:key="baikal_debug_telephony"
+            android:title="Telephony"
+            android:defaultValue="false" />
+
+        <SwitchPreference
+            android:key="baikal_debug_telephony_raw"
+            android:title="Telephony RAW"
+            android:defaultValue="false" />
+
+        <SwitchPreference
+            android:key="baikal_debug_bluetooth"
+            android:title="Bluetooth"
+            android:defaultValue="false" />
+
+        <SwitchPreference
+            android:key="baikal_debug_actions"
+            android:title="Actions"
+            android:defaultValue="false" />
+
+        <SwitchPreference
+            android:key="baikal_debug_app_profile"
+            android:title="App Profile"
+            android:defaultValue="false" />
+
+        <SwitchPreference
+            android:key="baikal_debug_dev_profile"
+            android:title="Dev Profile"
+            android:defaultValue="false" />
+
+        <SwitchPreference
+            android:key="baikal_debug_services"
+            android:title="Services"
+            android:defaultValue="false" />
+
+        <SwitchPreference
+            android:key="baikal_debug_activity"
+            android:title="Activity"
+            android:defaultValue="false" />
+
+        <SwitchPreference
+            android:key="baikal_debug_alarm"
+            android:title="Alarm"
+            android:defaultValue="false" />
+
+        <SwitchPreference
+            android:key="baikal_debug_broadcast"
+            android:title="Broadcast"
+            android:defaultValue="false" />
+
+        <SwitchPreference
+            android:key="baikal_debug_oom"
+            android:title="OOM"
+            android:defaultValue="false" />
+
+        <SwitchPreference
+            android:key="baikal_debug_location"
+            android:title="Location"
+            android:defaultValue="false" />
+
+        <SwitchPreference
+            android:key="baikal_debug_raw"
+            android:title="RAW"
+            android:defaultValue="false" />
+
+        <SwitchPreference
+            android:key="baikal_debug_oom_raw"
+            android:title="OOM RAW"
+            android:defaultValue="false" />
+
+        <SwitchPreference
+            android:key="baikal_debug_freezer"
+            android:title="Freezer"
+            android:defaultValue="false" />
+
+        <SwitchPreference
+            android:key="baikal_debug_power"
+            android:title="Power"
+            android:defaultValue="false" />
+
+        <SwitchPreference
+            android:key="baikal_debug_powerhal"
+            android:title="Power HAL"
+            android:defaultValue="false" />
+
+        <SwitchPreference
+            android:key="baikal_debug_jobs"
+            android:title="Jobs"
+            android:defaultValue="false" />
 
 </PreferenceScreen>

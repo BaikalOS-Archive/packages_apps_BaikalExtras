@@ -59,6 +59,7 @@
     <string name="rotation_180">180</string>
     <string name="rotation_270">270</string>
 
+    <string name="background_restrictions_super">Super</string>
     <string name="background_restrictions_unlimited">Unlimited</string>
     <string name="background_restrictions_default">Default</string>
     <string name="background_restrictions_limited">Limited</string>
@@ -74,13 +75,17 @@
     <string name="app_profile_disable_wakeup_title">Disable Wakeup</string>
     <string name="app_profile_disable_wakeup_summary">Disable app to set wakeup alarms</string>
 
+    <string name="app_profile_disable_jobs_title">Disable Jobs</string>
+    <string name="app_profile_disable_jobs_summary">Disable background jobs while screen is off</string>
+
     <string name="app_profile_disable_twl_title">Disable temp whitelisting</string>
     <string name="app_profile_disable_twl_summary">Disable temp whitelisting on incoming notifications</string>
 
     <string name="app_profile_reader_title">Reader Mode</string>
     <string name="app_profile_reader_summary">Allow CPU to sleep while this app is running</string>
 
-    <string name="app_profile_fps_title">Refresh Rate</string>
+    <string name="app_profile_fps_title">Maximum Refresh Rate</string>
+    <string name="app_profile_min_fps_title">Minimum Refresh Rate</string>
 
     <string name="edit_profile_title">Edit profile</string>
 
@@ -204,5 +209,22 @@
     <string name="app_profile_idle_network_title">Network on Idle</string>
     <string name="app_profile_idle_network_summary">Allow network access in Idle Mode</string>
 
+    <string name="file_access_title">Internal Memory Access</string>
+    <string name="file_access_summary">Override internal memory access level</string>
+
+    <string name="file_access_default">Default</string>
+    <string name="file_access_none">None</string>
+    <string name="file_access_read">Read</string>
+    <string name="file_access_write">Write</string>
+    <string name="file_access_full">Full</string>
+    <string name="file_access_legacy">Legacy</string>
+
+    <string name="app_profile_language_title">Language</string>
+
+    <string name="app_profile_forced_screenshot_title">Unrestricted Screenshot</string>
+    <string name="app_profile_forced_screenshot_summary">Bypass app restrictions to take a screenshot</string>
+
+    <string name="app_profile_boot_options_title">Boot time options</string>
+    <string name="app_profile_boot_options_summary">Options applied on system reboot. Reboot is required for changes to take effect.</string>
 
 </resources>

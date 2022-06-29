@@ -25,9 +25,11 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.StrictMode;
+import android.os.SystemProperties;
 import androidx.preference.CheckBoxPreference;
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
+import androidx.preference.SwitchPreference;
 import android.util.Log;
 import android.widget.Toast;
 
@@ -45,9 +47,11 @@ import ru.baikalos.extras.R;
 import ru.baikalos.extras.utils.Util;
 import ru.baikalos.extras.utils.SuShell;
 
+import com.android.internal.baikalos.BaikalConstants;
+
 public class LogIt extends BaseSettingsFragment implements Preference.OnPreferenceChangeListener {
 
-    private static final String TAG = LogIt.class.getSimpleName();
+    private static final String TAG = "BaikalExtras";
 
     private static final String PREF_LOGCAT = "logcat";
     private static final String PREF_LOGCAT_RADIO = "logcat_radio";
@@ -101,6 +105,30 @@ public class LogIt extends BaseSettingsFragment implements Preference.OnPreferen
     private Preference mBaikalOSLogIt;
     private ListPreference mShareType;
 
+    SwitchPreference mDEBUG_MASK_SENSORS;
+    SwitchPreference mDEBUG_MASK_TORCH;
+    SwitchPreference mDEBUG_MASK_TELEPHONY;
+    SwitchPreference mDEBUG_MASK_TELEPHONY_RAW;
+    SwitchPreference mDEBUG_MASK_BLUETOOTH;
+    SwitchPreference mDEBUG_MASK_ACTIONS;
+    SwitchPreference mDEBUG_MASK_APP_PROFILE;
+    SwitchPreference mDEBUG_MASK_DEV_PROFILE;
+    SwitchPreference mDEBUG_MASK_SERVICES;
+    SwitchPreference mDEBUG_MASK_ACTIVITY;
+    SwitchPreference mDEBUG_MASK_ALARM;
+    SwitchPreference mDEBUG_MASK_BROADCAST;
+    SwitchPreference mDEBUG_MASK_OOM;
+    SwitchPreference mDEBUG_MASK_LOCATION;
+
+    SwitchPreference mDEBUG_MASK_RAW;
+    SwitchPreference mDEBUG_MASK_OOM_RAW;
+
+    SwitchPreference mDEBUG_MASK_FREEZER;
+    SwitchPreference mDEBUG_MASK_POWERHAL;
+
+    SwitchPreference mDEBUG_MASK_POWER;
+    SwitchPreference mDEBUG_MASK_JOBS;
+
     private String sharingIntentString;
 
     private boolean shareHaste = false;
@@ -127,7 +155,63 @@ public class LogIt extends BaseSettingsFragment implements Preference.OnPreferen
         mShareType = (ListPreference) findPreference(PREF_SHARE_TYPE);
         mShareType.setOnPreferenceChangeListener(this);
 
+        try {
+            mDEBUG_MASK_SENSORS=initDebugPref("BAIKAL_DEBUG_SENSORS", BaikalConstants.DEBUG_MASK_SENSORS);
+            mDEBUG_MASK_TORCH=initDebugPref("BAIKAL_DEBUG_TORCH", BaikalConstants.DEBUG_MASK_TORCH);
+            mDEBUG_MASK_TELEPHONY=initDebugPref("BAIKAL_DEBUG_TELEPHONY", BaikalConstants.DEBUG_MASK_TELEPHONY);
+            mDEBUG_MASK_TELEPHONY_RAW=initDebugPref("BAIKAL_DEBUG_TELEPHONY_RAW", BaikalConstants.DEBUG_MASK_TELEPHONY_RAW);
+            mDEBUG_MASK_BLUETOOTH=initDebugPref("BAIKAL_DEBUG_BLUETOOTH", BaikalConstants.DEBUG_MASK_BLUETOOTH);
+            mDEBUG_MASK_ACTIONS=initDebugPref("BAIKAL_DEBUG_ACTIONS", BaikalConstants.DEBUG_MASK_ACTIONS);
+            mDEBUG_MASK_APP_PROFILE=initDebugPref("BAIKAL_DEBUG_APP_PROFILE", BaikalConstants.DEBUG_MASK_APP_PROFILE);
+            mDEBUG_MASK_DEV_PROFILE=initDebugPref("BAIKAL_DEBUG_DEV_PROFILE", BaikalConstants.DEBUG_MASK_DEV_PROFILE);
+            mDEBUG_MASK_SERVICES=initDebugPref("BAIKAL_DEBUG_SERVICES", BaikalConstants.DEBUG_MASK_SERVICES);
+            mDEBUG_MASK_ACTIVITY=initDebugPref("BAIKAL_DEBUG_ACTIVITY", BaikalConstants.DEBUG_MASK_ACTIVITY);
+            mDEBUG_MASK_ALARM=initDebugPref("BAIKAL_DEBUG_ALARM", BaikalConstants.DEBUG_MASK_ALARM);
+            mDEBUG_MASK_BROADCAST=initDebugPref("BAIKAL_DEBUG_BROADCAST", BaikalConstants.DEBUG_MASK_BROADCAST);
+            mDEBUG_MASK_OOM=initDebugPref("BAIKAL_DEBUG_OOM", BaikalConstants.DEBUG_MASK_OOM);
+            mDEBUG_MASK_LOCATION=initDebugPref("BAIKAL_DEBUG_LOCATION", BaikalConstants.DEBUG_MASK_LOCATION);
+            mDEBUG_MASK_RAW=initDebugPref("BAIKAL_DEBUG_RAW", BaikalConstants.DEBUG_MASK_RAW);
+            mDEBUG_MASK_OOM_RAW=initDebugPref("BAIKAL_DEBUG_OOM_RAW", BaikalConstants.DEBUG_MASK_OOM_RAW);
+            mDEBUG_MASK_FREEZER=initDebugPref("BAIKAL_DEBUG_FREEZER", BaikalConstants.DEBUG_MASK_FREEZER);
+            mDEBUG_MASK_POWERHAL=initDebugPref("BAIKAL_DEBUG_POWERHAL", BaikalConstants.DEBUG_MASK_POWERHAL);
+            mDEBUG_MASK_POWER=initDebugPref("BAIKAL_DEBUG_POWER", BaikalConstants.DEBUG_MASK_POWER);
+            mDEBUG_MASK_JOBS=initDebugPref("BAIKAL_DEBUG_JOBS", BaikalConstants.DEBUG_MASK_JOBS);
+        } catch(Exception re) {
+            Log.e(TAG, "onCreate: Fatal! exception", re );
+        }
+
         resetValues();
+    }
+
+
+    private SwitchPreference initDebugPref( String name, int mask ) {
+
+        int debugMask = Integer.parseInt(SystemProperties.get("persist.baikal.debug_mask","1"),16);
+
+        SwitchPreference mLogPref = (SwitchPreference) findPreference( name.toLowerCase() );
+        if( mLogPref != null ) { 
+            mLogPref.setChecked( (debugMask & mask) != 0 );
+            mLogPref.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                public boolean onPreferenceChange(Preference preference, Object newValue) {
+                    try {
+
+                        int debug = Integer.parseInt(SystemProperties.get("persist.baikal.debug_mask","1"),16);
+
+                        ((SwitchPreference)preference).setChecked((Boolean) newValue);
+                        if( (Boolean) newValue ) debug |= mask;
+                        else debug &= ~mask;
+                        Log.e(TAG, "set persist.baikal.debug_mask="+ String.format("%X",debug));
+                        SystemProperties.set("persist.baikal.debug_mask", String.format("%X",debug));
+                    } catch(Exception re) {
+                        Log.e(TAG, "onCreate: mLogPref Fatal! exception", re );
+                    }
+                    return true;
+                }
+            });
+        } else {
+            Log.e(TAG, "onCreate: mLogPref null for " + name + "!");
+        }
+        return mLogPref;
     }
 
     @Override

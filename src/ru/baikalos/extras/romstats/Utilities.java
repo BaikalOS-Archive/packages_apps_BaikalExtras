@@ -1980,34 +1980,6 @@ public class Utilities {
 	 * 	true: opt out cookie present, disable and close
 	 */
 	public static boolean persistentOptOut(Context context) {
-		SharedPreferences prefs = AnonymousStats.getPreferences(context);
-
-		Log.d(Const.TAG, "[checkPersistentOptOut] Check prefs exist: " + prefs.contains(Const.ANONYMOUS_OPT_IN));
-		if (!prefs.contains(Const.ANONYMOUS_OPT_IN)) {
-			Log.d(Const.TAG, "[checkPersistentOptOut] New install, check for 'Persistent cookie'");
-
-			File sdCard = Environment.getExternalStorageDirectory();
-			File dir = new File (sdCard.getAbsolutePath() + "/.bstats");
-			File cookieFile = new File(dir, "optout");
-
-			if (cookieFile.exists()) {
-				// if cookie exists, disable everything by setting:
-				//   OPT_IN = false
-				//   FIRST_BOOT = false
-				Log.d(Const.TAG, "[checkPersistentOptOut] Persistent cookie exists -> Disable everything");
-
-				prefs.edit().putBoolean(Const.ANONYMOUS_OPT_IN, false).apply();
-				prefs.edit().putBoolean(Const.ANONYMOUS_FIRST_BOOT, false).apply();
-
-				SharedPreferences mainPrefs = PreferenceManager.getDefaultSharedPreferences(context);
-				mainPrefs.edit().putBoolean(Const.ANONYMOUS_OPT_IN, false).apply();
-				mainPrefs.edit().putBoolean(Const.ANONYMOUS_OPT_OUT_PERSIST, true).apply();
-
-				return true;
-			} else {
-				Log.d(Const.TAG, "[checkPersistentOptOut] No persistent cookie found");
-			}
-		};
 
 		return false;
 	}

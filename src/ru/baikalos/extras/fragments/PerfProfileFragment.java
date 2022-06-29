@@ -55,11 +55,14 @@ import com.aicp.gear.preference.SeekBarPreferenceCham;
 public class PerfProfileFragment extends BaseSettingsFragment
             implements Preference.OnPreferenceChangeListener {
 
-    private static final String TAG = "PerformanceProfile";
+    private static final String TAG = "BaikalExtras";
+
+    private static final String APP_PROFILE_PERFORMANCE_SCALE = "app_profile_cpu_performance_limit";
 
     private String mProfileName;
     private Context mContext;
 
+    private ListPreference mPerformance;
     private ListPreference mCpuSilverMin;
     private ListPreference mCpuSilverMax;
     private ListPreference mCpuGoldMin;
@@ -97,12 +100,13 @@ public class PerfProfileFragment extends BaseSettingsFragment
         if( mProfileName == null || mProfileName.equals("") ) return;
 
         try {
-            mCpuSilverMin = initListPreference("edit_profile_silver_min","persist.bkp." + mProfileName + "." + "csmin", "baikal.def." + mProfileName + "." + "csmin" );
+            mPerformance = initListPreference("edit_profile_cpu_performance_limit","persist.bkp." + mProfileName + "." + "cpulimit", "baikal.def." + mProfileName + "." + "cpulimit");
+            mCpuSilverMin = initListPreferenceFreq("edit_profile_silver_min","persist.bkp." + mProfileName + "." + "csmin", "baikal.def." + mProfileName + "." + "csmin" );
             mCpuSilverMax = initListPreference("edit_profile_silver_max","persist.bkp." + mProfileName + "." + "csmax", "baikal.def." + mProfileName + "." + "csmax");
-            mCpuGoldMin = initListPreference("edit_profile_gold_min","persist.bkp." + mProfileName + "." + "cgmin", "baikal.def." + mProfileName + "." + "cgmin");
-            mCpuGoldMax = initListPreference("edit_profile_gold_max","persist.bkp." + mProfileName + "." + "cgmax", "baikal.def." + mProfileName + "." + "cgmax");
-            mGpuMin = initListPreference("edit_profile_gpu_min","persist.bkp." + mProfileName + "." + "gmin", "baikal.def." + mProfileName + "." + "gmin");
-            mGpuMax = initListPreference("edit_profile_gpu_max","persist.bkp." + mProfileName + "." + "gmax", "baikal.def." + mProfileName + "." + "gmax");
+            mCpuGoldMin = initListPreferenceFreq("edit_profile_gold_min","persist.bkp." + mProfileName + "." + "cgmin", "baikal.def." + mProfileName + "." + "cgmin");
+            mCpuGoldMax = initListPreferenceFreq("edit_profile_gold_max","persist.bkp." + mProfileName + "." + "cgmax", "baikal.def." + mProfileName + "." + "cgmax");
+            mGpuMin = initListPreferenceFreq("edit_profile_gpu_min","persist.bkp." + mProfileName + "." + "gmin", "baikal.def." + mProfileName + "." + "gmin");
+            mGpuMax = initListPreferenceFreq("edit_profile_gpu_max","persist.bkp." + mProfileName + "." + "gmax", "baikal.def." + mProfileName + "." + "gmax");
             mCoreControl = initSwitchPreference("edit_profile_corecontrol","persist.bkp." + mProfileName + "." + "cc", "baikal.def." + mProfileName + "." + "cc","baikal.def.cc_on","baikal.def.cc_off");
             mEditProfileSchedBoost = initSeekBarPreference("edit_profile_sched_boost","persist.bkp." + mProfileName + "." + "schboost", "baikal.def." + mProfileName + "." + "schboost");
             mEditProfileBackBoost = initSeekBarPreference("edit_profile_back_boost","persist.bkp." + mProfileName + "." + "bkboost", "baikal.def." + mProfileName + "." + "bkboost");
@@ -122,14 +126,12 @@ public class PerfProfileFragment extends BaseSettingsFragment
             ListPreference pref = (ListPreference) findPreference(prefName);
             if( pref != null ) { 
                 String freq = getPerfPropertyString(systemProperty,defProperty);
-                Log.e(TAG, prefName + ": freq=" + freq);
-                if( !freq.equals("0") ) {
-                    pref.setValue(freq);
-                }
+                Log.e(TAG, prefName + ": value=" + freq);
+                pref.setValue(freq);
                 pref.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
                     public boolean onPreferenceChange(Preference preference, Object newValue) {
                         try {
-                            Log.e(TAG, prefName + ": set freq=" + newValue.toString());
+                            Log.e(TAG, prefName + ": set value=" + newValue.toString());
     	                    setSystemPerfProfile(systemProperty,newValue.toString());
                         } catch(Exception re) {
                             Log.e(TAG, "onCreate: " + prefName + " Fatal! exception", re );
@@ -141,6 +143,33 @@ public class PerfProfileFragment extends BaseSettingsFragment
             return pref;
        
     }
+
+    private ListPreference initListPreferenceFreq(String prefName, String systemProperty, String defProperty)
+    {
+
+            ListPreference pref = (ListPreference) findPreference(prefName);
+            if( pref != null ) { 
+                String freq = getPerfPropertyString(systemProperty,defProperty);
+                Log.e(TAG, prefName + ": value=" + freq);
+                if( !freq.equals("0") ) {
+                    pref.setValue(freq);
+                }
+                pref.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                    public boolean onPreferenceChange(Preference preference, Object newValue) {
+                        try {
+                            Log.e(TAG, prefName + ": set value=" + newValue.toString());
+    	                    setSystemPerfProfile(systemProperty,newValue.toString());
+                        } catch(Exception re) {
+                            Log.e(TAG, "onCreate: " + prefName + " Fatal! exception", re );
+                        }
+                        return true;
+                    }
+                });
+            }
+            return pref;
+       
+    }
+
 
     private SwitchPreference initSwitchPreference(String prefName, String systemProperty, String defProperty, String propertyOn, String propertyOff)
     {
@@ -183,13 +212,12 @@ public class PerfProfileFragment extends BaseSettingsFragment
 
             SeekBarPreferenceCham pref = (SeekBarPreferenceCham) findPreference(prefName);
             if( pref != null ) { 
-                String defValue =  getSystemPropertyString(defProperty,"-1");
+                String defValue =  getSystemPropertyString(defProperty,"-200");
 
-                if( defValue == null || defValue.equals("-1") ) {
+                if( defValue == null || defValue.equals("-200") ) {
                     pref.setVisible(false);
                     return null;
                 }
-
 
                 String propValue = getPerfPropertyString(systemProperty,defProperty);
                 int val = Integer.parseInt(propValue);
@@ -207,6 +235,8 @@ public class PerfProfileFragment extends BaseSettingsFragment
                         return true;
                     }
                 });
+            } else {
+                Log.e(TAG, "onCreate: failed " + prefName);
             }
             return pref;
        
@@ -251,6 +281,7 @@ public class PerfProfileFragment extends BaseSettingsFragment
 
     private void resetDefaults() {
 
+        resetListValue(mPerformance,"persist.bkp." + mProfileName + "." + "cpulimit", "baikal.def." + mProfileName + "." + "cpulimit" );
         resetListValue(mCpuSilverMin,"persist.bkp." + mProfileName + "." + "csmin", "baikal.def." + mProfileName + "." + "csmin" );
         resetListValue(mCpuSilverMax,"persist.bkp." + mProfileName + "." + "csmax", "baikal.def." + mProfileName + "." + "csmax");
         resetListValue(mCpuGoldMin,"persist.bkp." + mProfileName + "." + "cgmin", "baikal.def." + mProfileName + "." + "cgmin");

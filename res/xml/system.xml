@@ -64,6 +64,35 @@
             android:defaultValue="false"
             android:disableDependentsState="true" />
 
+        <com.aicp.gear.preference.GlobalSettingSwitchPreference
+            android:key="baikalos_show_mic_cam_toast"
+            android:title="@string/mic_cam_toast_title"
+            android:summary="@string/mic_cam_toast_summary"
+            android:defaultValue="true"
+            android:disableDependentsState="true" />
+
+        <com.aicp.gear.preference.GlobalSettingSwitchPreference
+            android:key="baikalos_bpcharge_game"
+            android:title="@string/bypass_charging_title"
+            android:summary="@string/bypass_charging_summary"
+            android:defaultValue="false"
+            android:disableDependentsState="true" />
+
+        <com.aicp.gear.preference.GlobalSettingSwitchPreference
+            android:key="baikalos_bpcharge_all"
+            android:title="@string/bypass_charging_all_title"
+            android:summary="@string/bypass_charging_all_summary"
+            android:defaultValue="false"
+            android:disableDependentsState="true" />
+
+        <ListPreference
+            android:key="default_min_fps"
+            android:title="@string/app_profile_min_fps_title"
+            android:entries="@array/default_min_fps_listentries"
+            android:entryValues="@array/default_min_fps_listvalues"
+            android:defaultValue="0"
+            android:summary="%s" />
+
         <ListPreference
             android:key="default_fps"
             android:title="@string/app_profile_fps_title"
@@ -71,6 +100,13 @@
             android:entryValues="@array/default_fps_listvalues"
             android:defaultValue="0"
             android:summary="%s" />
+
+        <SwitchPreference
+            android:key="baikalos_fifo_ui"
+            android:title="@string/baikalos_fifo_ui_title"
+            android:summary="@string/baikalos_fifo_ui_summary"
+            android:defaultValue="false"
+            android:disableDependentsState="true" />
 
         <ListPreference
             android:key="default_location_mode"
@@ -137,7 +173,7 @@
             android:min="0"
             aicpextras:unitsLeft=""
             aicpextras:unitsRight=""
-            android:defaultValue="0"/>
+            android:defaultValue="-1"/>
 
         <SwitchPreference
             android:key="baikalos_boost_override"
@@ -151,6 +187,13 @@
     <PreferenceCategory
        android:key="system_other"
        android:title="@string/other_category">
+
+        <com.aicp.gear.preference.GlobalSettingSwitchPreference
+            android:key="baikalos_r_secure"
+            android:title="@string/r_secure_title"
+            android:summary="@string/r_secure_summary"
+            android:defaultValue="false"
+            android:disableDependentsState="true" />
 
         <com.aicp.gear.preference.GlobalSettingSwitchPreference
             android:key="baikalos_smart_nfc"

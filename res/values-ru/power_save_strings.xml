@@ -3,17 +3,24 @@
     <!-- Power Save -->
     <string name="powersave_title">Энергосбережение</string>
     <string name="powersave_summary">Энергосбережение</string>
-    <string name="device_idle_aggressive_title">Агрессивный сон</string>
-    <string name="device_idle_aggressive_summary">Переходить в режим сна через 1 минуту после отключения экрана. Игнорировать движение.</string>
+
+    <string name="baikal_aggressive_saver_enabled_title">Агрессивный сон</string>
+    <string name="baikal_aggressive_saver_enabled_summary">Агрессивно ограничивать фоновую активность. Закрывать приложения через среднее время.</string>
+
     <string name="baikal_extreme_saver_enabled_title">Экстремальный режим</string>
-    <string name="baikal_extreme_saver_enabled_summary">Применяет настройки для носимых устройств с малой батарей</string>
+    <string name="baikal_extreme_saver_enabled_summary">Экстремально ограничивать фоновую активность. Закрывать приложения через короткое время.</string>
+
+    <string name="device_idle_aggressive_title">Быстрый Глубокий Сон</string>
+    <string name="device_idle_aggressive_summary">Переходить в режим глубокого сна через 30 секунд после отключения экрана. Игнорировать движение</string>
 
     <string name="baikal_stamina_oi_enabled_title">Стамина в режиме сна</string>
     <string name="baikal_stamina_oi_enabled_summary">Автоматически использовать режим Стамина во время глубокого сна. Аварийный режим чтобы дотянуть до розетки.</string>
 
     <string name="default_profiles_title">Профили по умолчанию</string>
-    <string name="powersave_hide_idle_title">Скрывать СОН от GMS</string>
-    <string name="powersave_hide_idle_summary">Скрывать режим глубокого сна от Google Play Services. Помогает от некоторых проблем с уведомлениями во сне. Увеличивает потребление батареи!</string>
+    <string name="powersave_hide_gms_title">Скрывать СОН от GMS</string>
+    <string name="powersave_hide_gms_summary">Скрывать режим глубокого сна от Google Play Services. Помогает от некоторых проблем с уведомлениями во сне. Увеличивает потребление батареи!</string>
+    <string name="powersave_hide_all_title">Скрывать СОН от Приложений</string>
+    <string name="powersave_hide_all_summary">Скрывать режим глубокого сна от всех пользовтельских приложений. Помогает от некоторых проблем с уведомлениями во сне. Увеличивает потребление батареи!</string>
     <string name="powersave_unrestricted_network_title">Не ограничивать сеть</string>
     <string name="powersave_unrestricted_network_summary">Не ограничивать доступ приложений к сети в режиме сна. Помогает решить проблемы с уведомлениями и повышенным потреблением энергии некоторыми приложениями.</string>
 
@@ -22,6 +29,9 @@
 
     <string name="powersave_gms_blocked_title">Заблокировать</string>
     <string name="powersave_gms_blocked_summary">Заблокировать запуск Google Play Services. Некоторые приложения могут не работать! Возможны проблемы с уведомлениями!</string>
+    <string name="powersave_gms_disabled_title">Отключить Google Services</string>
+    <string name="powersave_gms_disabled_summary">Полностью оключитьт Google Play Services на этом устройстве. Некоторые приложения могут не работать! Возможны проблемы с уведомлениями!</string>
+
     <string name="powersave_gms_restricted_title">Ограничивать всегда</string>
     <string name="powersave_gms_restricted_summary">Ограничить активность Google Play Services. Некоторые приложения могут не работать! Возможны проблемы с уведомлениями!</string>
     <string name="powersave_gms_idle_restricted_title">Ограничивать в режиме ожидания</string>
@@ -41,7 +51,7 @@
     <string name="cached_apps_freezer_summary">Включает режим заморозки кэшированных приложений</string>
 
     <string name="extreme_freezer_title">Экстремальный режим фризера</string>
-    <string name="extreme_freezer_summary">Замраживает фоновые приложения с активными сервисами</string>
+    <string name="extreme_freezer_summary">Замораживает фоновые приложения с активными сервисами</string>
 
     <string name="pinned_freezer_title">Замораживать закрепленные</string>
     <string name="pinned_freezer_summary">Позволяет замораживать неактивные закрепленные приложения</string>

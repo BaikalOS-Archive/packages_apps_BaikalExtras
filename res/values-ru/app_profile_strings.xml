@@ -46,6 +46,7 @@
     <string name="brightness_90">90\%</string>
     <string name="rotation_default">По умолчанию</string>
     <string name="rotation_auto">Автоматически</string>
+    <string name="background_restrictions_super">Супер</string>
     <string name="background_restrictions_unlimited">Неограниченный</string>
     <string name="background_restrictions_default">По умолчанию</string>
     <string name="background_restrictions_limited">Ограниченный</string>
@@ -61,17 +62,21 @@
     <string name="app_profile_disable_wakeup_title">Запретить пробуждения</string>
     <string name="app_profile_disable_wakeup_summary">Запретить приложению устанавливать пробуждающие таймеры</string>
 
+    <string name="app_profile_disable_jobs_title">Запретить фоновые задания</string>
+    <string name="app_profile_disable_jobs_summary">Запретить выполнение фоновых заданий при выключенном экране</string>
+
     <string name="app_profile_disable_twl_title">Отключить временный белый список</string>
     <string name="app_profile_disable_twl_summary">Не помещать приложение в белый список по получению уведомлений для экономии энергии</string>
     <string name="app_profile_reader_title">Режим чтения</string>
     <string name="app_profile_reader_summary">Разрешить ЦП переходить в режим глубокого сна во время работы этого приложения</string>
 
-    <string name="app_profile_fps_title">Частота обновления экрана</string>
+    <string name="app_profile_fps_title">Максимальная частота обновления экрана</string>
+    <string name="app_profile_min_fps_title">Минимальная частота обновления экрана</string>
 
     <string name="edit_profile_title">Редактировать профиль</string>
 
-    <string name="edit_profile_silver_title">CPU - Silver</string>
-    <string name="edit_profile_gold_title">CPU - Gold</string>
+    <string name="edit_profile_silver_title">CPU - Малые ядра</string>
+    <string name="edit_profile_gold_title">CPU - Большие ядра</string>
     <string name="edit_profile_gpu_title">GPU</string>
 
     <string name="edit_profile_max_title">MAX</string>
@@ -173,5 +178,21 @@
 
     <string name="app_profile_idle_network_title">Сеть во сне</string>
     <string name="app_profile_idle_network_summary">Разрешить доступ к сети в режиме глубокого сна</string>
+
+    <string name="file_access_title">Доступ к памяти</string>
+    <string name="file_access_summary">Переопределить уровень доступа к памяти устройства</string>
+
+    <string name="file_access_default">По умолчанию</string>
+    <string name="file_access_none">Нет</string>
+    <string name="file_access_read">Чтение</string>
+    <string name="file_access_write">Запись</string>
+    <string name="file_access_full">Полный</string>
+    <string name="file_access_legacy">Устаревший</string>
+
+    <string name="app_profile_forced_screenshot_title">Скриншот без ограничений</string>
+    <string name="app_profile_forced_screenshot_summary">Обход ограничений приложения, чтобы сделать снимок экрана</string>
+
+    <string name="app_profile_boot_options_title">Опции загрузки</string>
+    <string name="app_profile_boot_options_summary">Опции применяемые при загрузке устройства. Требуется перезагрузка чтоб ищменения вступили в силу.</string>
 
 </resources>

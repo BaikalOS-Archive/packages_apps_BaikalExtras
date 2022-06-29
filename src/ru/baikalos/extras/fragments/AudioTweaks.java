@@ -28,6 +28,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Looper;
 import android.os.UserHandle;
 import android.os.UserManager;
 import android.os.SystemProperties;
@@ -48,6 +50,7 @@ import static android.content.pm.PackageManager.COMPONENT_ENABLED_STATE_DISABLED
 
 import android.content.res.Resources;
 
+import ru.baikalos.extras.dirac.DiracUtils;
 import ru.baikalos.extras.BaseSettingsFragment;
 import ru.baikalos.extras.R;
 import com.aicp.gear.preference.SeekBarPreferenceCham;
@@ -55,7 +58,7 @@ import com.aicp.gear.preference.SeekBarPreferenceCham;
 public class AudioTweaks extends BaseSettingsFragment
             implements Preference.OnPreferenceChangeListener, Preference.OnPreferenceClickListener {
 
-    private static final String TAG = "AudioTweaks";
+    private static final String TAG = "BaikalExtras";
 
     private static final String AUDIO_TWEAKS_SUSPEND_PLAY = "audio_tweaks_suspend_play";
     private static final String AUDIO_TWEAKS_AUDIO_HQ = "audio_tweaks_hq_policy";
@@ -400,6 +403,8 @@ public class AudioTweaks extends BaseSettingsFragment
             ((SwitchPreference)preference).setChecked((Boolean) newValue);
             setSystemPropertyBoolean(SYSTEM_PROPERTY_AUDIO_HQ, (Boolean) newValue);
             Log.e(TAG, "onPreferenceChange: mEnableAudioHq key=" + SYSTEM_PROPERTY_AUDIO_HQ + ", value=" + (Boolean)newValue);
+            updateMiSoundIfNeeded();
+
         } else if (preference == mEnableSuspendPlay) {
             ((SwitchPreference)preference).setChecked((Boolean) newValue);
             setSystemPropertyBoolean(SYSTEM_PROPERTY_SUSPEND_PLAY, (Boolean) newValue);
@@ -465,15 +470,21 @@ public class AudioTweaks extends BaseSettingsFragment
             ((SwitchPreference)preference).setChecked((Boolean) newValue);
             setSystemPropertyBoolean(SYSTEM_PROPERTY_EFFECTS_SYSTEM, (Boolean) newValue);
             updateEffectsConfiguration((Boolean)newValue);
+            updateMiSoundIfNeeded();
+
         } else if (preference == mEffectsQc) {
             Log.e(TAG, "onPreferenceChange: mEffectsQc key=" + SYSTEM_PROPERTY_EFFECTS_QC + ", value=" + (Boolean)newValue);
             ((SwitchPreference)preference).setChecked((Boolean) newValue);
             setSystemPropertyBoolean(SYSTEM_PROPERTY_EFFECTS_QC, (Boolean) newValue);
+            updateMiSoundIfNeeded();
+
         } else if (preference == mEffectsDolby) {
             Log.e(TAG, "onPreferenceChange: mEffectsDolby key=" + SYSTEM_PROPERTY_EFFECTS_DOLBY + ", value=" + (Boolean)newValue);
             ((SwitchPreference)preference).setChecked((Boolean) newValue);
             setSystemPropertyBoolean(SYSTEM_PROPERTY_EFFECTS_DOLBY, (Boolean) newValue);
             updateDolbyConfiguration((Boolean)newValue);
+            updateMiSoundIfNeeded();
+
         } else if (preference == mEffectsViper) {
             Log.e(TAG, "onPreferenceChange: mEffectsViper key=" + SYSTEM_PROPERTY_EFFECTS_VIPER + ", value=" + (Boolean)newValue);
             ((SwitchPreference)preference).setChecked((Boolean) newValue);
@@ -497,14 +508,19 @@ public class AudioTweaks extends BaseSettingsFragment
                     mEnableAudioHq.setEnabled(true);
                 }
             }
+            updateMiSoundIfNeeded();
+
         } else if (preference == mEffectsViperForce) {
             Log.e(TAG, "onPreferenceChange: mEffectsViperForce key=" + SYSTEM_PROPERTY_EFFECTS_VIPER_FORCE + ", value=" + (Boolean)newValue);
             ((SwitchPreference)preference).setChecked((Boolean) newValue);
             setSystemPropertyBoolean(SYSTEM_PROPERTY_EFFECTS_VIPER_FORCE, (Boolean) newValue);
+            updateMiSoundIfNeeded();
+
         } else if (preference == mEffectsMiSound) {
             Log.e(TAG, "onPreferenceChange: mEffectsMiSound key=" + SYSTEM_PROPERTY_EFFECTS_MISOUND + ", value=" + (Boolean)newValue);
             ((SwitchPreference)preference).setChecked((Boolean) newValue);
             setSystemPropertyBoolean(SYSTEM_PROPERTY_EFFECTS_MISOUND, (Boolean) newValue);
+            updateMiSoundIfNeeded();
         }
         return true;
     }
@@ -579,6 +595,23 @@ public class AudioTweaks extends BaseSettingsFragment
 
     private boolean isHqModeAvaialable() {
         return (new File(HQ_AUDIO_SYSTEM_PATH).exists());
+    }
+
+    private void updateMiSoundIfNeeded() {
+        if( SystemProperties.getBoolean(SYSTEM_PROPERTY_EFFECTS_MISOUND, false) ) {
+            final Handler handler = new Handler(Looper.getMainLooper());
+                handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    try {
+                        DiracUtils.initialize(getActivity());
+                        DiracUtils.restore();
+                    } catch (Exception x) {
+                        Log.e(TAG, "MiSound can't initialize:", x);
+                    }
+                }
+                }, 5000);
+        }
     }
 
 }
