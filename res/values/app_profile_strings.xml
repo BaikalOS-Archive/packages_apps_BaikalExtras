@@ -103,6 +103,15 @@
     <string name="edit_profile_back_boost_title">Background tasks boost</string>
     <string name="edit_profile_gpu_boost_title">GPU boost</string>
 
+    <string name="edit_profile_prefer_idle_title">Prefer Idle</string>
+    <string name="edit_profile_prefer_idle_summary">Prefer Idle Cores for top app</string>
+
+    <string name="edit_profile_prefer_highcap_title">Prefer High Capacity</string>
+    <string name="edit_profile_prefer_highcap_summary">Prefer High Capacity Cores for top app</string>
+
+    <string name="edit_profile_downmigrate_title">Down Migrate</string>
+    <string name="edit_profile_upmigrate_title">Up Migrate</string>
+
     <string name="app_checkbox_filter_changed_title">With profiles</string>
     <string name="app_checkbox_filter_system_title">System</string>
     <string name="app_checkbox_filter_wl_title">Whitelisted</string>
@@ -226,5 +235,11 @@
 
     <string name="app_profile_boot_options_title">Boot time options</string>
     <string name="app_profile_boot_options_summary">Options applied on system reboot. Reboot is required for changes to take effect.</string>
+
+    <string name="app_profile_override_fonts_title">Override Fonts</string>
+    <string name="app_profile_override_fonts_summary">Override application fonts with system default</string>
+
+    <string name="app_profile_full_screen_title">Full Screen</string>
+    <string name="app_profile_full_screen_summary">Force full screen mode</string>
 
 </resources>

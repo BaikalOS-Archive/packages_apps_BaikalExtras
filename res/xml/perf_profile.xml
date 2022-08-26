@@ -101,32 +101,73 @@
          android:summary="@string/edit_profile_corecontrol_summary"
          android:defaultValue="false" />
 
+     <SwitchPreference
+         android:key="edit_profile_prefer_idle"
+         android:title="@string/edit_profile_prefer_idle_title"
+         android:summary="@string/edit_profile_prefer_idle_summary"
+         android:defaultValue="false" />
+
+     <SwitchPreference
+         android:key="edit_profile_prefer_highcap"
+         android:title="@string/edit_profile_prefer_highcap_title"
+         android:summary="@string/edit_profile_prefer_highcap_summary"
+         android:defaultValue="false" />
+
+
+
      <com.aicp.gear.preference.SeekBarPreferenceCham
-         android:key="edit_profile_sched_boost"
-         android:title="@string/edit_profile_sched_boost_title"
-         android:max="10"
+         android:key="edit_profile_downmigrate"
+         android:title="@string/edit_profile_downmigrate_title"
+         android:max="100"
          android:min="0"
          aicpextras:unitsLeft=""
          aicpextras:unitsRight=""
-         android:defaultValue="-1"/>
+         android:defaultValue="-99999"/>
+
+     <com.aicp.gear.preference.SeekBarPreferenceCham
+         android:key="edit_profile_upmigrate"
+         android:title="@string/edit_profile_upmigrate_title"
+         android:max="100"
+         android:min="0"
+         aicpextras:unitsLeft=""
+         aicpextras:unitsRight=""
+         android:defaultValue="-99999"/>
+
+     <com.aicp.gear.preference.SeekBarPreferenceCham
+         android:key="edit_profile_sched_boost"
+         android:title="@string/edit_profile_sched_boost_title"
+         android:max="100"
+         android:min="-100"
+         aicpextras:unitsLeft=""
+         aicpextras:unitsRight=""
+         android:defaultValue="-99999"/>
+
+     <com.aicp.gear.preference.SeekBarPreferenceCham
+         android:key="edit_profile_sched_boost"
+         android:title="@string/edit_profile_sched_boost_title"
+         android:max="100"
+         android:min="-100"
+         aicpextras:unitsLeft=""
+         aicpextras:unitsRight=""
+         android:defaultValue="-99999"/>
 
      <com.aicp.gear.preference.SeekBarPreferenceCham
          android:key="edit_profile_back_boost"
          android:title="@string/edit_profile_back_boost_title"
-         android:max="10"
-         android:min="0"
+         android:max="100"
+         android:min="-100"
          aicpextras:unitsLeft=""
          aicpextras:unitsRight=""
-         android:defaultValue="-1"/>
+         android:defaultValue="-99999"/>
 
      <com.aicp.gear.preference.SeekBarPreferenceCham
          android:key="edit_profile_gpu_boost"
          android:title="@string/edit_profile_gpu_boost_title"
          android:max="10"
-         android:min="0"
+         android:min="-10"
          aicpextras:unitsLeft=""
          aicpextras:unitsRight=""
-         android:defaultValue="-1"/>
+         android:defaultValue="-99999"/>
 
      <Preference
          android:key="edit_profile_reset"

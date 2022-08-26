@@ -26,8 +26,8 @@
     <string name="audio_settings_title">Общий</string>
     <string name="audio_bluetooth_title">Bluetooth</string>
     <string name="audio_bluetooth_summary">Требуется перезапуск Bluetooth, чтобы изменения вступили в силу!</string>
-    <string name="audio_tweaks_hq_policy_title">Использовать движок HQ по умолчанию</string>
-    <string name="audio_tweaks_hq_policy_summary">Используйте настройки HQ для воспроизведения музыки по умолчанию. Требуется перезагрузка!</string>
+    <string name="audio_tweaks_hq_policy_title">Движок HQ</string>
+    <string name="audio_tweaks_hq_policy_summary">Использовать HQ движок для проводных наушников. JamesDSP не будет работать с проводными наушниками. Требуется перезагрузка!</string>
     <string name="baikalos_disable_hp_detect_title">Отключить обнаружение наушников</string>
     <string name="baikalos_disable_hp_detect_summary">Отключить определение проводных наушников</string>
     <string name="audio_tweaks_a2dp_sbc_disable_title">Отключить SBC</string>
@@ -57,8 +57,8 @@
 
     <string name="audio_effects_title">Эффекты</string>
     <string name="audio_effects_summary">ТРЕБУЕТСЯ ПЕРЕЗАГРУЗКА!</string>
-    <string name="audio_effects_system_title">Отключить системные эффекты</string>
-    <string name="audio_effects_system_summary">Отключить встроенные AOSP звуковые фильтры</string>
+    <string name="audio_effects_system_title">Отключить звуковые эффекты</string>
+    <string name="audio_effects_system_summary">Отключить ВСЕ звуковые фильтры</string>
     <string name="audio_effects_qc_title">Отключить эффекты Qualcomm</string>
     <string name="audio_effects_qc_summary">Отключить расширенные звуковые фильтры Qualcomm</string>
     <string name="audio_effects_dolby_title">Включить Dolby</string>
@@ -68,6 +68,9 @@
     <string name="audio_effects_viper_summary">Включить аудио-фильтры ViperFX</string>
     <string name="audio_effects_misound_title">Включить MiSound</string>
     <string name="audio_effects_misound_summary">Включить эффекты MiSound</string>
+    <string name="audio_effects_jdsp_title">Включить JamesDSP</string>
+    <string name="audio_effects_jdsp_summary">Включить эффекты JamesDSP</string>
+
 
     <string name="app_profile_volume_scale_title">Масштабировать Громкость</string>
 

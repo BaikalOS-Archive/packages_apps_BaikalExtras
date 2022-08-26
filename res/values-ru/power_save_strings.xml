@@ -20,7 +20,7 @@
     <string name="powersave_hide_gms_title">Скрывать СОН от GMS</string>
     <string name="powersave_hide_gms_summary">Скрывать режим глубокого сна от Google Play Services. Помогает от некоторых проблем с уведомлениями во сне. Увеличивает потребление батареи!</string>
     <string name="powersave_hide_all_title">Скрывать СОН от Приложений</string>
-    <string name="powersave_hide_all_summary">Скрывать режим глубокого сна от всех пользовтельских приложений. Помогает от некоторых проблем с уведомлениями во сне. Увеличивает потребление батареи!</string>
+    <string name="powersave_hide_all_summary">Скрывать режим глубокого сна от всех пользовательских приложений. Помогает от некоторых проблем с уведомлениями во сне. Увеличивает потребление батареи!</string>
     <string name="powersave_unrestricted_network_title">Не ограничивать сеть</string>
     <string name="powersave_unrestricted_network_summary">Не ограничивать доступ приложений к сети в режиме сна. Помогает решить проблемы с уведомлениями и повышенным потреблением энергии некоторыми приложениями.</string>
 
@@ -59,6 +59,7 @@
     <string name="gms_freezer_title">Замораживать сервисы Гугл</string>
     <string name="gms_freezer_summary">Позволяет замораживать некоторые сервисы Гугл</string>
 
-
+    <string name="keep_freezed_title">Удерживать замороженные</string>
+    <string name="keep_freezed_summary">Не закрывать замороженные фоновые приложения по таймауту</string>
 
 </resources>

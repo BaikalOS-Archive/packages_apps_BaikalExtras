@@ -106,6 +106,12 @@
             android:defaultValue="default"
             android:summary="%s" />
 
+        <SwitchPreference
+            android:key="app_profile_full_screen"
+            android:title="@string/app_profile_full_screen_title"
+            android:summary="@string/app_profile_full_screen_summary"
+            android:defaultValue="false" />
+
         <ListPreference
             android:key="app_profile_min_fps"
             android:title="@string/app_profile_min_fps_title"
@@ -180,6 +186,12 @@
             android:defaultValue="default"
             android:summary="%s" />
 
+        <SwitchPreference
+            android:key="app_profile_override_fonts"
+            android:title="@string/app_profile_override_fonts_title"
+            android:summary="@string/app_profile_override_fonts_summary"
+            android:defaultValue="false" />
+
         <!-- SwitchPreference
             android:key="app_profile_lowres"
             android:title="@string/app_profile_lowres_title"
@@ -218,7 +230,7 @@
             android:min="-1"
             aicpextras:unitsLeft=""
             aicpextras:unitsRight=""
-            android:defaultValue="-1"/>
+            android:defaultValue="-99999"/>
 
 
         <SwitchPreference

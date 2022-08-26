@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+
+    <string name="smart_trust_title">Smart Trust</string>
+    <string name="smart_trust_summary">Настройки режимов Smart Trust</string>
+
+    <string name="trust_enable_title">Smart Trust</string>
+    <string name="trust_enable_summary">Включить BaikalOS Smart Trust</string>
+
+    <string name="trust_always_title">Доверять всегда</string>
+    <string name="trust_always_summary">Удерживать устройство разблокированным до ручной блокировки или таймаута 4 часа</string>
+
+    <string name="trust_bt_dev_title">Устройства Bluetooth</string>
+    <string name="trust_bt_dev_summary">Устройства Bluetooth при соединении с которыми устройство будет оставаться разблокированным</string>
+
+</resources>

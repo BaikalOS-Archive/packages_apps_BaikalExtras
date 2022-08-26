@@ -69,5 +69,7 @@
     <string name="gms_freezer_title">Google Services Freezer</string>
     <string name="gms_freezer_summary">Freeze unimportant Google Play Services</string>
 
+    <string name="keep_freezed_title">Keep Freezed</string>
+    <string name="keep_freezed_summary">Don\'t force close freezed apps on timeout</string>
 
 </resources>

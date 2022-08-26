@@ -39,8 +39,8 @@
     <string name="audio_bluetooth_title">Bluetooth</string>
     <string name="audio_bluetooth_summary">Bluetooth restart required for changes to take active!</string>
 
-    <string name="audio_tweaks_hq_policy_title">Use HQ engine by default</string>
-    <string name="audio_tweaks_hq_policy_summary">Use HQ settings for music playback by default. Reboot required!</string>
+    <string name="audio_tweaks_hq_policy_title">Wired HQ engine</string>
+    <string name="audio_tweaks_hq_policy_summary">Use HQ settings for wired headset by default. JamesDSP will not work on wired headset. Reboot required! </string>
 
     <string name="baikalos_disable_hp_detect_title">Disable Headphones detect</string>
     <string name="baikalos_disable_hp_detect_summary">Disable detection of wired headphones</string>
@@ -85,8 +85,8 @@
 
     <string name="audio_effects_title">Effects</string>
     <string name="audio_effects_summary">REBOOT REQUIRED!</string>
-    <string name="audio_effects_system_title">Disable System Effects</string>
-    <string name="audio_effects_system_summary">Disable common AOSP audio effects</string>
+    <string name="audio_effects_system_title">Disable Audio Effects</string>
+    <string name="audio_effects_system_summary">Disable ALL audio effects</string>
     <string name="audio_effects_qc_title">Disable Qualcomm Effects</string>
     <string name="audio_effects_qc_summary">Disable qualcomm enhanced hardware effects</string>
     <string name="audio_effects_dolby_title">Enable Dolby</string>
@@ -95,6 +95,9 @@
     <string name="audio_effects_viper_summary">Enable systemwide ViperFX effect</string>
     <string name="audio_effects_misound_title">Enable MiSound</string>
     <string name="audio_effects_misound_summary">Enable MiSound enhancer</string>
+    <string name="audio_effects_jdsp_title">Enable JamesDSP</string>
+    <string name="audio_effects_jdsp_summary">Enable JamesDSP enhancer</string>
+
 
     <string name="audio_effects_viper_force_title">Force ViperFX</string>
     <string name="audio_effects_viper_force_summary">Force ViperFX effect on all streams</string>

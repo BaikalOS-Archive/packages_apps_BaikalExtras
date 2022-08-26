@@ -75,9 +75,12 @@ public class PerfProfileFragment extends BaseSettingsFragment
     private SeekBarPreferenceCham mEditProfileBackBoost;
     private SeekBarPreferenceCham mEditProfileGpuBoost;
 
+    private SwitchPreference mPreferIdle;
+    private SwitchPreference mPreferHighCap;
+    private SeekBarPreferenceCham mDownmigrateBoosted;
+    private SeekBarPreferenceCham mUpmigrateBoosted;
 
-
-     public PerfProfileFragment(String profileName) {
+    public PerfProfileFragment(String profileName) {
         mProfileName = profileName; 
     }
 
@@ -108,9 +111,16 @@ public class PerfProfileFragment extends BaseSettingsFragment
             mGpuMin = initListPreferenceFreq("edit_profile_gpu_min","persist.bkp." + mProfileName + "." + "gmin", "baikal.def." + mProfileName + "." + "gmin");
             mGpuMax = initListPreferenceFreq("edit_profile_gpu_max","persist.bkp." + mProfileName + "." + "gmax", "baikal.def." + mProfileName + "." + "gmax");
             mCoreControl = initSwitchPreference("edit_profile_corecontrol","persist.bkp." + mProfileName + "." + "cc", "baikal.def." + mProfileName + "." + "cc","baikal.def.cc_on","baikal.def.cc_off");
+
+            mPreferIdle = initSwitchPreference("edit_profile_prefer_idle","persist.bkp." + mProfileName + "." + "p_idle", "baikal.def." + mProfileName + "." + "p_idle", null, null);
+            mPreferHighCap = initSwitchPreference("edit_profile_prefer_highcap","persist.bkp." + mProfileName + "." + "p_hc", "baikal.def." + mProfileName + "." + "p_hc", null, null);
+            mDownmigrateBoosted = initSeekBarPreference("edit_profile_downmigrate","persist.bkp." + mProfileName + "." + "downmigrate", "baikal.def." + mProfileName + "." + "downmigrate");
+            mUpmigrateBoosted = initSeekBarPreference("edit_profile_upmigrate","persist.bkp." + mProfileName + "." + "upmigrate", "baikal.def." + mProfileName + "." + "upmigrate");
+
             mEditProfileSchedBoost = initSeekBarPreference("edit_profile_sched_boost","persist.bkp." + mProfileName + "." + "schboost", "baikal.def." + mProfileName + "." + "schboost");
             mEditProfileBackBoost = initSeekBarPreference("edit_profile_back_boost","persist.bkp." + mProfileName + "." + "bkboost", "baikal.def." + mProfileName + "." + "bkboost");
             mEditProfileGpuBoost = initSeekBarPreference("edit_profile_gpu_boost","persist.bkp." + mProfileName + "." + "gpuboost", "baikal.def." + mProfileName + "." + "gpuboost");
+
 
             mReset = (Preference) findPreference("edit_profile_reset");
 
@@ -125,6 +135,12 @@ public class PerfProfileFragment extends BaseSettingsFragment
 
             ListPreference pref = (ListPreference) findPreference(prefName);
             if( pref != null ) { 
+                if( !isPropertyAvailable(defProperty) ) {
+                    pref.setEnabled(false);
+                    pref.setVisible(false);
+                    return pref;
+                }
+
                 String freq = getPerfPropertyString(systemProperty,defProperty);
                 Log.e(TAG, prefName + ": value=" + freq);
                 pref.setValue(freq);
@@ -149,6 +165,13 @@ public class PerfProfileFragment extends BaseSettingsFragment
 
             ListPreference pref = (ListPreference) findPreference(prefName);
             if( pref != null ) { 
+
+                if( !isPropertyAvailable(defProperty) ) {
+                    pref.setEnabled(false);
+                    pref.setVisible(false);
+                    return pref;
+                }
+
                 String freq = getPerfPropertyString(systemProperty,defProperty);
                 Log.e(TAG, prefName + ": value=" + freq);
                 if( !freq.equals("0") ) {
@@ -176,11 +199,18 @@ public class PerfProfileFragment extends BaseSettingsFragment
 
             SwitchPreference pref = (SwitchPreference) findPreference(prefName);
             if( pref != null ) { 
-                String valueOff =  getSystemPropertyString(propertyOff,"-1");
-                String valueOn =  getSystemPropertyString(propertyOn,"-1");
+
+                if( !isPropertyAvailable(defProperty) ) {
+                    pref.setEnabled(false);
+                    pref.setVisible(false);
+                    return pref;
+                }
+
+                String valueOff =  getSystemPropertyString(propertyOff,"0");
+                String valueOn =  getSystemPropertyString(propertyOn,"1");
                 if( valueOff == null || valueOn == null || propertyOn.equals("-1") || propertyOn.equals("-1") ) {
                     pref.setVisible(false);
-                    return null;
+                    return pref;
                 }
 
                 boolean enabled = getPerfPropertyString(systemProperty,defProperty).equals(valueOn);
@@ -212,11 +242,18 @@ public class PerfProfileFragment extends BaseSettingsFragment
 
             SeekBarPreferenceCham pref = (SeekBarPreferenceCham) findPreference(prefName);
             if( pref != null ) { 
-                String defValue =  getSystemPropertyString(defProperty,"-200");
 
-                if( defValue == null || defValue.equals("-200") ) {
+                if( !isPropertyAvailable(defProperty) ) {
+                    pref.setEnabled(false);
                     pref.setVisible(false);
-                    return null;
+                    return pref;
+                }
+
+                String defValue =  getSystemPropertyString(defProperty,"-99999");
+
+                if( defValue == null || defValue.equals("-99999") ) {
+                    pref.setVisible(false);
+                    return pref;
                 }
 
                 String propValue = getPerfPropertyString(systemProperty,defProperty);
@@ -289,6 +326,13 @@ public class PerfProfileFragment extends BaseSettingsFragment
         resetListValue(mGpuMin,"persist.bkp." + mProfileName + "." + "gmin", "baikal.def." + mProfileName + "." + "gmin");
         resetListValue(mGpuMax,"persist.bkp." + mProfileName + "." + "gmax", "baikal.def." + mProfileName + "." + "gmax");
         resetSwitchValue(mCoreControl,"persist.bkp." + mProfileName + "." + "cc", "baikal.def." + mProfileName + "." + "cc","baikal.def.cc_on","baikal.def.cc_off");
+
+        resetSwitchValue(mPreferIdle,"persist.bkp." + mProfileName + "." + "p_idle", "baikal.def." + mProfileName + "." + "p_idle", null, null);
+        resetSwitchValue(mPreferHighCap,"persist.bkp." + mProfileName + "." + "p_hc", "baikal.def." + mProfileName + "." + "p_hc", null, null);
+
+        resetSeekBarValue(mDownmigrateBoosted,"persist.bkp." + mProfileName + "." + "downmigrate", "baikal.def." + mProfileName + "." + "downmigrate");
+        resetSeekBarValue(mUpmigrateBoosted,"persist.bkp." + mProfileName + "." + "upmigrate", "baikal.def." + mProfileName + "." + "upmigrate");
+
         resetSeekBarValue(mEditProfileSchedBoost,"persist.bkp." + mProfileName + "." + "schboost", "baikal.def." + mProfileName + "." + "schboost");
         resetSeekBarValue(mEditProfileBackBoost,"persist.bkp." + mProfileName + "." + "bkboost", "baikal.def." + mProfileName + "." + "bkboost");
         resetSeekBarValue(mEditProfileGpuBoost,"persist.bkp." + mProfileName + "." + "gpuboost", "baikal.def." + mProfileName + "." + "gpuboost");
@@ -298,6 +342,7 @@ public class PerfProfileFragment extends BaseSettingsFragment
 
     private void resetListValue(ListPreference pref, String systemProperty, String defProperty)
     {
+        if( !isPropertyAvailable(defProperty)  ) return;
         String prop = getSystemPropertyString(defProperty,"-1");
         if( prop.equals("-1") ) return;
         setSystemPropertyString(systemProperty,prop);
@@ -306,10 +351,11 @@ public class PerfProfileFragment extends BaseSettingsFragment
 
     private void resetSwitchValue(SwitchPreference pref, String systemProperty, String defProperty, String propertyOn, String propertyOff)
     {
-        String valueOff =  getSystemPropertyString(propertyOff,"-1");
-        String valueOn =  getSystemPropertyString(propertyOn,"-1");
-        String prop = getSystemPropertyString(defProperty,"-1");
-        if( prop.equals("-1") || valueOn.equals("-1") || valueOff.equals("-1") ) return;
+        if( !isPropertyAvailable(defProperty)  ) return;
+        String valueOff =  getSystemPropertyString(propertyOff,"0");
+        String valueOn =  getSystemPropertyString(propertyOn,"1");
+        String prop = getSystemPropertyString(defProperty,"-99999");
+        if( prop.equals("-99999") || valueOn.equals("-99999") || valueOff.equals("-99999") ) return;
         setSystemPropertyString(systemProperty,prop);
         boolean enabled = prop.equals(valueOn);
         pref.setChecked(enabled);
@@ -317,14 +363,21 @@ public class PerfProfileFragment extends BaseSettingsFragment
 
     private void resetSeekBarValue(SeekBarPreferenceCham pref, String systemProperty, String defProperty)
     {
-        String prop = getSystemPropertyString(defProperty,"-1");
-        if( prop.equals("-1") ) return;
+        if( !isPropertyAvailable(defProperty)  ) return;
+        String prop = getSystemPropertyString(defProperty,"-99999");
+        if( prop.equals("-99999") ) return;
         setSystemPropertyString(systemProperty,prop);
         pref.setValue(Integer.parseInt(prop));
     }
     
 
+    private boolean isPropertyAvailable(String def) {
+        String prop = getSystemPropertyString(def,"-99999");
+        return ! "-99999".equals(prop);
+    }
+
     private String getPerfPropertyString(String key, String def) {
+        if( key == null ) return def;
         String prop = getSystemPropertyString(key,"-1");
         if( prop.equals("-1") ) {
             prop = getSystemPropertyString(def,"0");

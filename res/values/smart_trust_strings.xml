@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<resources>
+
+    <string name="smart_trust_title">Smart Trust</string>
+    <string name="smart_trust_summary">BaikalOS Smart Trust Settings</string>
+
+    <string name="trust_enable_title">Smart Trust</string>
+    <string name="trust_enable_summary">Enable BaikalOS Smart Trust</string>
+
+    <string name="trust_always_title">Always Trust</string>
+    <string name="trust_always_summary">Keep device unlocked until manually locked or Trust timeout (4 hours)</string>
+
+    <string name="trust_bt_dev_title">Bluetooth Devices</string>
+    <string name="trust_bt_dev_summary">Bluetooth Devices to keep device unlocked</string>
+
+</resources>

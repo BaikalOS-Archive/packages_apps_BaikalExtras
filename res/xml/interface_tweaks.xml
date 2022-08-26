@@ -109,7 +109,6 @@
             android:dependency="sysui_rounded_fwvals" />
     </PreferenceCategory -->
 
-
     <PreferenceCategory
         android:key="ambient_light"
         android:title="@string/pulse_ambient_light_enable_title">
@@ -184,6 +183,8 @@
             aicpextras:unitsRight="px"
             android:defaultValue="125"
             android:dependency="pulse_ambient_light" />
+
+
     </PreferenceCategory>
 
 </PreferenceScreen>

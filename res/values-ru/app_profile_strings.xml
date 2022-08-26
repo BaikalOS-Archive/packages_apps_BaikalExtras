@@ -84,6 +84,17 @@
 
     <string name="edit_profile_corecontrol_title">Управление ядрами</string>
     <string name="edit_profile_corecontrol_summary">Разрешить отключение/изоляцию неиспользуемых ядер</string>
+
+    <string name="edit_profile_prefer_idle_title">Предпочитать простаивающие</string>
+    <string name="edit_profile_prefer_idle_summary">Предпочитать простаивающие ядра для активного приложения (prefer idle)</string>
+
+    <string name="edit_profile_prefer_highcap_title">Пердпочитать Большие Ядра</string>
+    <string name="edit_profile_prefer_highcap_summary">Предпочитать большие ядра для активного приложения (prefer high cap)</string>
+
+    <string name="edit_profile_downmigrate_title">Down Migrate</string>
+    <string name="edit_profile_upmigrate_title">Up Migrate</string>
+
+
     <string name="app_checkbox_filter_changed_title">Только с профилем</string>
     <string name="app_checkbox_filter_system_title">Системные</string>
     <string name="app_checkbox_filter_wl_title">Неограниченные</string>
@@ -194,5 +205,11 @@
 
     <string name="app_profile_boot_options_title">Опции загрузки</string>
     <string name="app_profile_boot_options_summary">Опции применяемые при загрузке устройства. Требуется перезагрузка чтоб ищменения вступили в силу.</string>
+
+    <string name="app_profile_override_fonts_title">Переопределять шрифт</string>
+    <string name="app_profile_override_fonts_summary">Форсировать использование системного шрифта в приложении</string>
+
+    <string name="app_profile_full_screen_title">Полный экран</string>
+    <string name="app_profile_full_screen_summary">Форсировать полноэкранный режим</string>
 
 </resources>

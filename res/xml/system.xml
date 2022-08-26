@@ -173,7 +173,7 @@
             android:min="0"
             aicpextras:unitsLeft=""
             aicpextras:unitsRight=""
-            android:defaultValue="-1"/>
+            android:defaultValue="-99999"/>
 
         <SwitchPreference
             android:key="baikalos_boost_override"

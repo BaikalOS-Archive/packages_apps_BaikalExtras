@@ -36,6 +36,7 @@ import android.util.Log;
 
 import android.content.res.Resources;
 
+import ru.baikalos.extras.preference.BluetoothDevicePreference;
 import ru.baikalos.extras.BaseSettingsFragment;
 import ru.baikalos.extras.PerfProfileDetailsActivity;
 import ru.baikalos.extras.R;
@@ -48,7 +49,7 @@ public class InterfaceTweaks extends BaseSettingsFragment {
 
     private static final String TAG = "BaikalExtras";
 
-    private static final String SYSTEM_TWEAKS_SEC_HWC= "system_tweaks_sec_hwc";
+    private static final String SYSTEM_TWEAKS_SEC_HWC = "system_tweaks_sec_hwc";
     private static final String SYSTEM_PROPERTY_SEC_HWC = "persist.sys.sf.disable_sec_hwc";
     private static final String SYSTEM_TWEAKS_DLSB = "baikalos_dlsb_enabled";
 
@@ -73,6 +74,7 @@ public class InterfaceTweaks extends BaseSettingsFragment {
     private SwitchPreference mEdgeLightEnabledPref;
     private SystemSettingColorPickerPreference mEdgeLightColorPref;
     private ListPreference mEdgeLightColorModePref;
+
 
     @Override
     protected int getPreferenceResource() {

@@ -96,6 +96,12 @@
             android:icon="@drawable/ic_settings_ui"
             android:fragment="ru.baikalos.extras.fragments.InterfaceTweaks" />
 
+        <PreferenceScreen
+            android:title="@string/smart_trust_title"
+            android:summary="@string/smart_trust_summary"
+            android:icon="@drawable/ic_settings_trust"
+            android:fragment="ru.baikalos.extras.fragments.SmartTrust" />
+
         <!-- PreferenceScreen
             android:title="@string/torch_title"
             android:summary="@string/torch_summary"

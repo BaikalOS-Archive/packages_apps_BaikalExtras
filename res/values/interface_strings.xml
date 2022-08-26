@@ -31,4 +31,13 @@
     <string name="baikalos_keep_pinned_in_recents_title">Keep pinned in recents</string>
     <string name="baikalos_keep_pinned_in_recents_summary">Keep pinned apps in recents list</string>
 
+    <string name="trust_enable_title">Smart Trust</string>
+    <string name="trust_enable_summary">Enable BaikalOS Smart Trust</string>
+
+    <string name="trust_always_title">Always Trust</string>
+    <string name="trust_always_summary">Keep device unlocked until manually locked or Trust timeout (4 hours)</string>
+
+    <string name="trust_bt_dev_title">Bluetooth Devices</string>
+    <string name="trust_bt_dev_summary">Bluetooth Devices to keep device unlocked</string>
+
 </resources>

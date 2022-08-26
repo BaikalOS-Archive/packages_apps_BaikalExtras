@@ -78,6 +78,8 @@ public class AppProfileFragment extends BaseSettingsFragment
     private static final String APP_PROFILE_FPS = "app_profile_fps";
     private static final String APP_PROFILE_MIN_FPS = "app_profile_min_fps";
     private static final String APP_PROFILE_KEEP_ON = "app_profile_keep_on";
+    private static final String APP_PROFILE_FULL_SCREEN = "app_profile_full_screen";
+    private static final String APP_PROFILE_OVERRIDE_FONTS = "app_profile_override_fonts";
 //    private static final String APP_PROFILE_CAMERA_HAL1 = "app_profile_camera_hal1";
     private static final String APP_PROFILE_PINNED = "app_profile_pinned";
     private static final String APP_PROFILE_STAMINA = "app_profile_stamina";
@@ -125,6 +127,8 @@ public class AppProfileFragment extends BaseSettingsFragment
     private SwitchPreference mBlockFocusSend;
     private SwitchPreference mForceSonification;
     private SwitchPreference mAppKeepOn;
+    private SwitchPreference mAppFullScreen;
+    private SwitchPreference mAppOverrideFonts;
     private SwitchPreference mLowRes;
     private SwitchPreference mAppPhkaProfile;
     private SwitchPreference mAppDevModeProfile;
@@ -512,20 +516,54 @@ public class AppProfileFragment extends BaseSettingsFragment
             mAppKeepOn = (SwitchPreference) findPreference(APP_PROFILE_KEEP_ON);
             if( mAppKeepOn != null ) {
                 mAppKeepOn.setChecked(mProfile.mKeepOn);
-                //mAppRestricted.setChecked(mBaikalService.isAppRestrictedProfile(mPackageName));
                 Log.e(TAG, "mAppKeepOn: mPackageName=" + mPackageName + ",mKeepOn=" + mProfile.mKeepOn);
                 mAppKeepOn.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
                     public boolean onPreferenceChange(Preference preference, Object newValue) {
-                        //int val = Integer.parseInt(newValue.toString());
-                        //DiracAudioEnhancerService.du.setHeadsetType(mContext, val);
                         try {
                             mProfile.mKeepOn = ((Boolean)newValue);
                             mAppSettings.updateProfile(mProfile);
                             mAppSettings.save();
-                            //mBaikalService.setAppPriority(mPackageName, ((Boolean)newValue) ? -1 : 0 );
                             Log.e(TAG, "mAppKeepOn: mPackageName=" + mPackageName + ",mKeepOn=" + (Boolean)newValue);
                         } catch(Exception re) {
                             Log.e(TAG, "onCreate: mAppKeepOn Fatal! exception", re );
+                        }
+                        return true;
+                    }
+                });
+            }
+
+            mAppFullScreen = (SwitchPreference) findPreference(APP_PROFILE_FULL_SCREEN);
+            if( mAppFullScreen != null ) {
+                mAppFullScreen.setChecked(mProfile.mFullScreen);
+                Log.e(TAG, "mAppFullScreen: mPackageName=" + mPackageName + ",mAppFullScreen=" + mProfile.mFullScreen);
+                mAppFullScreen.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                    public boolean onPreferenceChange(Preference preference, Object newValue) {
+                        try {
+                            mProfile.mFullScreen = ((Boolean)newValue);
+                            mAppSettings.updateProfile(mProfile);
+                            mAppSettings.save();
+                            Log.e(TAG, "mAppFullScreen: mPackageName=" + mPackageName + ",mAppFullScreen=" + (Boolean)newValue);
+                        } catch(Exception re) {
+                            Log.e(TAG, "onCreate: mAppFullScreen Fatal! exception", re );
+                        }
+                        return true;
+                    }
+                });
+            }
+
+            mAppOverrideFonts = (SwitchPreference) findPreference(APP_PROFILE_OVERRIDE_FONTS);
+            if( mAppOverrideFonts != null ) {
+                mAppOverrideFonts.setChecked(mProfile.mOverrideFonts);
+                Log.e(TAG, "mAppOverrideFonts: mPackageName=" + mPackageName + ",mOverrideFonts=" + mProfile.mOverrideFonts);
+                mAppOverrideFonts.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
+                    public boolean onPreferenceChange(Preference preference, Object newValue) {
+                        try {
+                            mProfile.mOverrideFonts = ((Boolean)newValue);
+                            mAppSettings.updateProfile(mProfile);
+                            mAppSettings.save();
+                            Log.e(TAG, "mAppOverrideFonts: mPackageName=" + mPackageName + ",mOverrideFonts=" + (Boolean)newValue);
+                        } catch(Exception re) {
+                            Log.e(TAG, "onCreate: mAppOverrideFonts Fatal! exception", re );
                         }
                         return true;
                     }
@@ -536,7 +574,7 @@ public class AppProfileFragment extends BaseSettingsFragment
             mAppPinned = (SwitchPreference) findPreference(APP_PROFILE_PINNED);
             if( mAppPinned != null ) {
                 mAppPinned.setChecked(mProfile.mPinned);
-                Log.e(TAG, "mAppPinned: mPackageName=" + mPackageName + ",mKeepOn=" + mProfile.mPinned);
+                Log.e(TAG, "mAppPinned: mPackageName=" + mPackageName + ",mPinned=" + mProfile.mPinned);
                 mAppPinned.setOnPreferenceChangeListener(new Preference.OnPreferenceChangeListener() {
                     public boolean onPreferenceChange(Preference preference, Object newValue) {
                         try {
